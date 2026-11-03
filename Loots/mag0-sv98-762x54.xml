@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Loots/mag0-sv98-762x54.xml" pos="11.6 0.0 0.0" rot="0.0 0.0 0.0">
+		<body name="SV-98 Mag" tags="Loot=mag0-sv98-762x54_SV-98_10_10_7.62x54R interact=SV-98 unbreakable" pos="0.0 0.05 0.0" dynamic="true">
+			<voxbox pos="-0.05 -0.05 -0.1" size="1 1 2" color=".12 .12 .12"/>
+		</body>
+	</group>
+</prefab>
+

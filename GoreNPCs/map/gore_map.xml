@@ -1,0 +1,17 @@
+<scene version="1.2.0" shadowVolume="200 20 200">
+	<group name="map" pos="0.0 -1.5 0.0">
+		<environment template="sunny" skybox="sunset_in_the_chalk_quarry_2k.dds" skyboxtint="1.0 0.66 0.46" sunDir="90 90 90" skyboxbrightness="3" fogColor="0.52 0.35 0.14" fogParams="0 0 0 0"  sunBrightness="5" sunColorTint="0.15 0.26 1.0" sunSpread="1"/>
+
+		<!-- <voxscript tags="unbreakable" pos="-200.0 0 -200.0" file="MOD/scripts/ground.lua"> -->
+			<!-- <parameters file="MOD/img/ground.png" scale="2"/> -->
+		<!-- </voxscript> -->
+		<voxbox pos="-100.0 0.2 -100.0" texture="11" size="2000 1 2000" color="0.27 0.27 0.27"/>
+		<script file="MOD/scripts/Game/script.lua"/>
+		<script pos="0.0 1.5 0.0" file="MOD/main.lua"/>
+		<script pos="0.0 1.5 0.0" file="MOD/sandbox.lua"/>
+		<script pos="0.0 1.5 0.0" file="MOD/GoreNPCs/map/gore_map.lua"/>
+		<spawnpoint pos="10 1 10" rot="0.0 0.0 0.0"/>
+	</group>
+	<instance pos="0 0 0" file="MOD/level_scripts.xml"/>
+	<instance pos="0 0 0" file="MOD/prefabs/spawnables/enemies/millitary/Ragdollmil1.xml"/>
+</scene>

@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/script/Weapons/M4-offensive.xml" pos="-0.55 4.5 -0.15" rot="0.0 0.0 0.0">
+		<group pos="0.5 -1.5 0.1" prop0="file=MOD/vox/ar15offensive.vox">
+			<instance pos="-0.5 1.5 -0.1" rot="0.0 0.0 0.0" file="MOD/script/Weapons/M4 Base.xml"/>
+		</group>
+	</group>
+</prefab>
+

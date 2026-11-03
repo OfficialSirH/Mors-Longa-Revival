@@ -1,0 +1,24 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/vox/trees/grass.xml" pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0">
+		<group pos="0.0 0.0 0.0" prop0="collide=false">
+			<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4"/>
+			<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1"/>
+			<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2"/>
+			<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3"/>
+			<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3"/>
+			<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3"/>
+		</group>
+	</group>
+</prefab>
+

@@ -1,0 +1,51 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/supplydrops/Drop1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<script pos="-557.99994 22.1 10.7" rot="-1 -90" file="MOD/scripts/Game/AC130.lua">
+			<body tags="plane" pos="19.6 14.5 8.9" dynamic="true">
+				<group pos="-20.75 -9.9 -39.89999" rot="0 180">
+					<vox tags="planeShape_engine explosive=1.4" pos="-0.1 1.3 4.0" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="nose"/>
+					<vox tags="planeShape_wing_right" pos="-13.1 3.4 -6.1" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="wing_r"/>
+					<vox tags="planeShape_wing_left" pos="12.9 3.4 -6.1" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="wing_l"/>
+					<vox tags="planeShape_tail" pos="-0.1 2.7 -18.2" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="tail">
+						<light tags="spawnpos" pos="-0.0 -6.50003 2.70003"/>
+					</vox>
+					<vox tags="planeShape_tail" pos="1.7 1.4 -7.2" rot="0.0 -180.0 0.0" texture="9" density="100" strength="20" file="MOD/vox/AC130.vox" object="fuselage"/>
+					<vox tags="planeShape_elevators" pos="5.1 6.0 -19.6" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="elevator_l"/>
+					<vox tags="planeShape_elevators" pos="-5.3 5.4 -19.6" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="elevator_r"/>
+					<vox tags="planeShape_rudder" pos="-0.1 6.6 -17.5" rot="0.0 -180.0 0.0" texture="9" density="100" strength="3" file="MOD/vox/AC130.vox" object="rudder"/>
+					<group name="Wheels" pos="-0.1 0.0 -0.2" rot="0.0 -180.0 0.0"/>
+					<body tags="prop" pos="-11.2 3.4 -0.9" dynamic="true">
+						<script pos="0.0 0.0 0.1" file="MOD/scripts/engineprops.lua">
+							<vox tags="planeShape_rudder" pos="0.046 0.0 -0.10002" rot="0.0 -180.0 0.0" texture="9" density="0.0001" strength="3" collide="true" prop="false" file="MOD/vox/AC130.vox" object="propeller">
+								<joint tags="engine" pos="-0.0 2.3 0.69998" rot="0.0 0.0 0.0" type="hinge" collide="true" limits="0 0"/>
+							</vox>
+						</script>
+					</body>
+					<body tags="prop" pos="-5.7 3.4 -0.9" dynamic="true">
+						<script pos="0.0 0.0 0.1" file="MOD/scripts/engineprops.lua">
+							<vox tags="planeShape_rudder" pos="0.046 0.0 -0.10002" rot="0.0 -180.0 0.0" texture="9" density="0.0001" strength="3" collide="true" prop="false" file="MOD/vox/AC130.vox" object="propeller">
+								<joint tags="engine" pos="-0.0 2.3 0.69998" rot="0.0 0.0 0.0" type="hinge" collide="true" limits="0 0"/>
+							</vox>
+						</script>
+					</body>
+					<body tags="prop" pos="5.6 3.4 -0.9" dynamic="true">
+						<script pos="0.0 0.0 0.1" file="MOD/scripts/engineprops.lua">
+							<vox tags="planeShape_rudder" pos="0.046 0.0 -0.10002" rot="0.0 -180.0 0.0" texture="9" density="0.0001" strength="3" collide="true" prop="false" file="MOD/vox/AC130.vox" object="propeller">
+								<joint tags="engine" pos="-0.0 2.3 0.69998" rot="0.0 0.0 0.0" type="hinge" collide="true" limits="0 0"/>
+							</vox>
+						</script>
+					</body>
+					<body tags="prop" pos="11.1 3.4 -0.9" dynamic="true">
+						<script pos="0.0 0.0 0.1" file="MOD/scripts/engineprops.lua">
+							<vox tags="planeShape_rudder" pos="0.046 0.0 -0.10002" rot="0.0 -180.0 0.0" texture="9" density="0.0001" strength="3" collide="true" prop="false" file="MOD/vox/AC130.vox" object="propeller">
+								<joint tags="engine" pos="-0.0 2.3 0.69998" rot="0.0 0.0 0.0" type="hinge" collide="true" limits="0 0"/>
+							</vox>
+						</script>
+					</body>
+				</group>
+			</body>
+			<trigger tags="helisnd" pos="-12.9 7.9 -31.8" size="30" sound="MOD/helisound.ogg"/>
+		</script>
+		<voxbox pos="-232.89996 -37.0 0.0" size="1 1 1"/>
+	</group>
+</prefab>

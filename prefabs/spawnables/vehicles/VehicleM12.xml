@@ -1,0 +1,12 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/spawnables/vehicles/VehicleM12.xml" pos="20.0 0.5 20.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/T-54 55/T-55A Desert.xml"/>
+		<instance pos="0.6 1.9 -1.8" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+		<instance pos="3.2 0.0 2.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="4.4 0.0 -5.3" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="-3.2 0.0 -6.2" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="-4.2 0.0 1.3" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="-0.2 0.0 6.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+	</group>
+</prefab>
+

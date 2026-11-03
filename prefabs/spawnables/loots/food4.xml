@@ -1,0 +1,25 @@
+<prefab version="1.3.0">
+	<group>
+		<body tags="Loot=food4_Beans_20_15 interact=Beans" pos="0 .1" dynamic="true">
+			<group pos="0 -.05" prop0="size=1 2 1" prop1="color=.16 .11 .11">
+				<voxbox pos="-.05 -.05 -.1">
+					<voxbox pos="0 .11 .1" size="1 1 1" color=".16 .16 .16"/>
+					<voxbox pos=".1" rot="0 -45">
+						<voxbox pos=".1" rot="0 -45">
+							<voxbox pos=".1" rot="0 -45">
+								<voxbox pos=".1" rot="0 -45">
+									<voxbox pos=".1" rot="0 -45">
+										<voxbox pos=".1" rot="0 -45">
+											<voxbox pos=".1" rot="0 -45"/>
+										</voxbox>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+

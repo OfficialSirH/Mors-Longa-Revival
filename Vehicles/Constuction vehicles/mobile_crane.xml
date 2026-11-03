@@ -1,0 +1,65 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/Constuction vehicles/mobile_crane.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="Mobile Crane" tags="crane reversebeep" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="excavator 0.9" damping="2" topspeed="15" acceleration="0.07" strength="4" difflock="1" steerassist="1">
+			<body pos="-0.05 0.8 0" dynamic="true">
+				<vox tags="unbreakable" pos="-0.05 -0.8 0.1" texture="8 0.5" blendtexture="5 .4" density="6" collide="false" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="base2"/>
+				<vox pos="-0.05 0.2 0" texture="8 0.5" blendtexture="5 .4" density="6" strength="4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="body">
+					<location tags="exhaust" pos="0.05 1.6 1.2"/>
+					<location tags="vital" pos="0.2 0.6 0.3"/>
+					<location tags="player" pos="-0.45 1.2 -1.15"/>
+					<light pos="-0.1 0.15 -1.6" rot="0 180 0" type="area" scale="8" size="0.2 0.1" fogscale="0.1" glare="0.2"/>
+					<light pos="-0.8 0.15 -1.6" rot="0 180 0" type="area" scale="8" size="0.2 0.1" fogscale="0.1" glare="0.2"/>
+					<vox pos="-0.9 0.4 -1.1" texture="8 0.5" blendtexture="5 .4" prop="true" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="door">
+						<joint tags="door" pos="0.0 0.4 -0.4" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 80"/>
+						<joint pos="0.0 1.0 -0.4" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 80"/>
+					</vox>
+					<location name="exit" tags="exit" pos="-1.25 1.15 -1.0" rot="0.0 180.0 0.0"/>
+				</vox>
+				<wheel name="bl" pos="-0.85 -0.45 2.05" drive="1" steer="-0.5">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_l"/>
+				</wheel>
+				<wheel name="bl" pos="-0.85 -0.45 1.05" drive="1" steer="-0.25">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_l"/>
+				</wheel>
+				<wheel name="bl" pos="-0.85 -0.45 0.05" drive="1">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_l"/>
+				</wheel>
+				<wheel name="bl" pos="-0.85 -0.45 -0.95" drive="1" steer="0.25">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_l"/>
+				</wheel>
+				<wheel name="bl" pos="-0.85 -0.45 -1.95" drive="1" steer="0.5">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_l"/>
+				</wheel>
+				<wheel name="br" pos="0.85 -0.45 2.05" drive="1" steer="-0.5">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_r"/>
+				</wheel>
+				<wheel name="br" pos="0.85 -0.45 1.05" drive="1" steer="-0.25">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_r"/>
+				</wheel>
+				<wheel name="br" pos="0.85 -0.45 0.05" drive="1">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_r"/>
+				</wheel>
+				<wheel name="br" pos="0.85 -0.45 -0.95" drive="1" steer="0.25">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_r"/>
+				</wheel>
+				<wheel name="br" pos="0.85 -0.45 -1.95" drive="1" steer="0.5">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="wheel_r"/>
+				</wheel>
+			</body>
+			<body pos="-0.2 4 -5.3" dynamic="true">
+				<vox tags="hook unbreakable" texture="8 0.5" density="4" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="hook"/>
+				<rope pos="0.05 0.8 -0.05" strength="100">
+					<location/>
+					<location pos="0 2.05 0"/>
+				</rope>
+			</body>
+			<body pos="-0.1 4.4 -2.5" rot="40 0 0" dynamic="true">
+				<vox pos="0 0 0.1" texture="8 0.5" density="3" strength="6" file="MOD/Vehicles/Constuction vehicles/crane.vox" object="arm">
+					<joint pos="0.1 0.65 3.95" rot="0 90 0" type="hinge" rotspring="0" limits="-40 30"/>
+					<light pos="0.05 0 -4" rot="90 0 0" type="cone" scale="10" angle="150" penumbra="50" size="0.25" glare="0.2"/>
+				</vox>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

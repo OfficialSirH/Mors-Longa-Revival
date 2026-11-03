@@ -1,0 +1,65 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/avf/prefabs/T-54 55/T-54-2 Destroyed Alashya.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vox tags="component=chassis RHA=45" pos="0.0 0.3 -1.4" rot="0.0 0.0 2.5" texture="8" blendtexture="5 " density="25" strength="5" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="hull T-54_2">
+			<group name="Plates" pos="-0.0 0.0 2.5">
+				<group name="Front" pos="0.1 0.3 0.0">
+					<vox tags="nocull RHA=90" pos="-0.1 0.326 0.021" rot="30.0 0.0 0.0" texture="8" blendtexture="5 " strength="5" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="front.5"/>
+					<vox tags="nocull RHA=90" pos="-0.1 -0.075 0.415" rot="47.0 -180.0 0.0" texture="8" blendtexture="5 " strength="5" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="front2.5"/>
+				</group>
+			</group>
+			<vox name="Engine" tags="engine" pos="0.1 0.1 -1.3" rot="0.0 0.0 0.0" texture="4 0.8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55.vox" object="engine"/>
+			<group name="Fuel Tanks" pos="1.1 0.9 1.1">
+				<vox tags="fuel_tank 0.5" pos="-1.7 -0.8 1.4" rot="0.0 0.0 0.0" blendtexture="5 " strength="1000000" file="MOD/avf/prefabs/T-54 55/T-54 55.vox" object="fuel_tank"/>
+			</group>
+			<group name="Hatches" pos="-0.0 0.8 -2.6">
+				<vox name="engine Hatch" tags="nocull RHA=20" pos="0.0 0.1 0.6" texture="8" blendtexture="5 " prop="true" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="engine_hatch">
+					<joint pos="-0.2 0.2 0.3" rot="0.0 90.0 0.0" type="hinge" size="0.1" rotstrength="0.01" rotspring="0.0" limits="0 120" sound="true"/>
+					<joint pos="0.2 0.2 0.3" rot="0.0 90.0 0.0" type="hinge" size="0.1" rotstrength="0.01" rotspring="0.0" limits="0 120" sound="true"/>
+				</vox>
+			</group>
+			<vox tags="nocull" pos="0.7 1.0 1.8" rot="0.0 0.0 0.0" texture="8 0.5" blendtexture="5 " prop="true" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="drivers_hatch">
+				<joint pos="0.1 0.1 -0.35" rot="-90.0 80.0 0.0" type="hinge" size="0.15" rotstrength="0.02" rotspring="0.0" limits="0 100" sound="true" autodisable="false"/>
+			</vox>
+			<vox pos="0.6 1.92 -0.4" rot="0.0 0.0 0.0" texture="8" blendtexture="5 " prop="true" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="commanders_hatch">
+				<joint pos="0.05 0.05 0.25" rot="180.0 90.0 0.0" type="hinge" size="0.2" rotstrength="0.01" rotspring="0.0" limits="0 95" sound="true"/>
+			</vox>
+			<script pos="-0.3 0.8 1.5" rot="0.0 180.0 0.0" file="fx.lua">
+				<vox pos="0.0 0.0 -0.1" rot="0.0 180.0 0.0" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55.vox" object="gas_tank"/>
+			</script>
+			<script pos="-0.6 0.8 1.5" rot="0.0 -180.0 0.0" file="fx.lua">
+				<vox pos="0.0 0.0 -0.1" rot="0.0 180.0 0.0" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55.vox" object="gas_tank"/>
+			</script>
+		</vox>
+		<body name="Turret" pos="0.00872 0.10019 0.8" rot="0.0 0.0 2.5" dynamic="true">
+			<vox tags="nocull RHA=90 component=turret turretGroup=mainTurret" pos="0.0 0.3 -1.9" rot="0.0 0.0 0.0" texture="8" blendtexture="5 " density="10" strength="5" prop="true" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="turret2">
+				<vox tags="nocull RHA=120 component=gun weaponType=customcannon group=primary mainCannon commander coax=COAXMG avf_barrel_coords_true" pos="-0.2 0.8 0.35" rot="0 0 0" texture="8" blendtexture="5 " density="10" strength="5" prop="true" file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="gun/breach">
+					<joint name="gunJoint" tags="component=gunJoint" pos="0.4 0.55 0.65" rot="0 90 0" type="hinge" size=".1" rotstrength="0" rotspring="0.0" collide="false" limits="-17 4" sound="true"/>
+					<joint pos="-0.1 0.55 0.65" rot="0 90 0" type="hinge" size=".1" rotstrength="0" rotspring="0.0" collide="false" limits="-17 4" sound="true"/>
+					<group name="Barrel" pos="0.15 0.445 3.4">
+						<vox pos="0.033 0.04 0.0" rot="0.5 -0.5" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="barrel"/>
+						<vox pos="0.033 -0.03 0.0" rot="-0.5 -0.5 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="barrel"/>
+						<vox pos="-0.033 -0.03 0.0" rot="-0.5 0.5 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="barrel"/>
+						<vox pos="-0.033 0.04 0.0" rot="0.5 0.5 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="barrel"/>
+					</group>
+				</vox>
+			</vox>
+		</body>
+		<group name="Left Wheels" pos="0.06304 0.00247 -1.3" rot="0.0 -180.0 -2.5">
+			<vox pos="-1.3 0.4 2.5" rot="0.0 -180.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="fl_sprocket"/>
+			<vox pos="-1.3 0.0 -2.0" rot="0.0 180.0 10.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="l_wheel1"/>
+			<vox pos="-1.3 0.0 0.0" rot="0.0 -180.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="l_wheel1"/>
+			<vox pos="-1.6 0.2 0.9" rot="0.0 180.0 -90.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="l_wheel1"/>
+			<vox pos="-1.3 0.0 1.8" rot="0.0 -140.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="l_wheel1"/>
+		</group>
+		<group name="Right Wheels" pos="-1.33563 -0.0586 -1.3" rot="0.0 -180.0 -2.5">
+			<vox pos="0.1 0.4 -2.8" rot="0.0 180.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="fr_sprocket"/>
+			<vox pos="0.1 0.3 2.5" rot="0.0 -180.0 90.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="fr_sprocket"/>
+			<vox pos="0.1 0.0 -2.0" rot="0.0 160.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="r_wheel1"/>
+			<vox pos="0.1 0.0 -0.9" rot="0.0 -180.0 0.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="r_wheel1"/>
+			<vox pos="0.0 0.3 0.0" rot="0.0 -180.0 90.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="r_wheel1"/>
+			<vox pos="0.1 0.0 1.8" rot="0.0 160.0 -10.0" texture="8" blendtexture="5 " file="MOD/avf/prefabs/T-54 55/T-54 55 Alashya.vox" object="r_wheel1"/>
+		</group>
+		<vox tags="nocull unbreakable" pos="1.42111 -0.03833 -1.2" rot="0.0 0.0 2.5" texture="8" blendtexture="5 " density="1.89" strength="2" collide="false" file="MOD/avf/prefabs/T-54 55/T-54 55.vox" object="tracks"/>
+	</group>
+</prefab>
+

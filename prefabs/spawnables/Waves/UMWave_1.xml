@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group>
+		<instance pos="-15.3 0.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum1.xml"/>
+		<instance pos="12.8 0.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml"/>
+		<instance pos="-0.6 0.0 -5.7" file="MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml"/>
+	</group>
+</prefab>
+

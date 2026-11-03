@@ -1,0 +1,33 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body name="Torso" pos="0.0 0.8 0.0" rot="0.0 0.0 0.0" dynamic="true">
+			<vox tags="bodypart" pos="0.05 0.0 0.025" rot="0 180 " object="body"/>
+			<vox tags="bodypart" pos="0.05 0.0 -0.025" rot="0 180 " object="body"/>
+			<instance pos="0.0 0.15 0.05" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ribs.xml"/>
+		</body>
+		<group tags=" " pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" prop0="tags=">
+			<group name="Head">
+				<body tags="Head bodypart" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.05 0.0 0.0" rot="0 180" density="5" object="head">
+						<voxbox tags="eye" pos="0.1 0.1 0.1" prop="false" size="1 1 1" material="plaster" color="0"/>
+						<voxbox tags="eye" pos="-0.1 0.1 0.1" prop="false" size="1 1 1" material="plaster" color="0"/>
+						<vox tags="jaw" pos="-0.0 0.0 0.1" rot="0.0 0.0 0.0" prop="true" object="jaw">
+							<joint tags="jaw" pos="0.2 0.1 -0.2" rot="180.0 -90.0 0.0" type="hinge" limits="0 20"/>
+							<joint tags="jaw" pos="-0.1 0.1 -0.2" rot="180.0 -90.0 0.0" type="hinge" limits="0 20"/>
+						</vox>
+						<joint tags="head" pos="0.05 0.0 0.0" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" limits="-45 45"/>
+					</vox>
+				</body>
+			</group>
+			<group name="Arms">
+				<instance pos="-0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm L.xml"/>
+				<instance pos="0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm R.xml"/>
+			</group>
+			<group name="Legs">
+				<instance pos="-0.15 0.9 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Leg L.xml"/>
+				<instance pos="0.15 0.9 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Leg R.xml"/>
+			</group>
+		</group>
+	</group>
+</prefab>
+

@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=meds-bleed-bandage_Bandage_1_1 interact=Bandage" pos="0 .05" rot="-90.0 -180.0" dynamic="true">
+			<voxbox pos="-.15 -.05 -.05" size="3 1 1" color=".76 .76 .72"/>
+		</body>
+	</group>
+</prefab>
+

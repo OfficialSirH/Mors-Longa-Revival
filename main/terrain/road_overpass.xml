@@ -1,0 +1,1702 @@
+<prefab version="1.0.0">
+	<group name="overpass" pos="0.0 -0.2 0.0">
+		<group name="overpass long" pos="9.6 -9.8 50.9">
+			<group name="segments" pos="0.1 18.1 -30.3" prop0="rotstrength=3" prop1="density=10" prop2="rotspring=0.1">
+				<group name="left1" pos="0.0 0.0 19.0">
+					<group name="segment" pos="0.0 0.0 -0.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -4.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -8.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -12.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -16.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+				</group>
+				<group name="left2" pos="0.0 0.0 58.9">
+					<group name="hook segment" pos="0.0 0.0 20.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 16.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 12.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 8.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 4.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 0.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -3.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -7.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -11.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -16.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -20.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -24.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -28.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -32.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -36.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 2.2 1.0"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+						</vox>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+				</group>
+				<group name="middle" pos="0.0 0.0 -20.9">
+					<group name="hook segment" pos="0.0 0.0 19.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 1.0"/>
+							<joint pos="3.1 0.2 1.0"/>
+							<joint pos="5.1 0.2 1.0"/>
+							<joint pos="-1.9 0.2 1.0"/>
+							<joint pos="-2.9 0.2 1.0"/>
+							<joint pos="-3.9 0.2 1.0"/>
+							<joint pos="-0.9 0.2 1.0"/>
+							<joint pos="11.1 0.2 1.0"/>
+							<joint pos="12.1 0.2 1.0"/>
+							<joint pos="10.1 0.2 1.0"/>
+							<joint pos="9.1 0.2 1.0"/>
+							<joint pos="4.1 0.6 1.0"/>
+							<joint pos="3.1 0.6 1.0"/>
+							<joint pos="5.1 0.6 1.0"/>
+							<joint pos="-1.9 0.6 1.0"/>
+							<joint pos="-2.9 0.6 1.0"/>
+							<joint pos="-3.9 0.6 1.0"/>
+							<joint pos="-0.9 0.6 1.0"/>
+							<joint pos="11.1 0.6 1.0"/>
+							<joint pos="12.1 0.6 1.0"/>
+							<joint pos="10.1 0.6 1.0"/>
+							<joint pos="9.1 0.6 1.0"/>
+						</vox>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-3.9 0.2 -2.0"/>
+							<joint pos="-4.9 0.2 -2.0"/>
+							<joint pos="-2.9 0.2 -2.0"/>
+							<joint pos="-9.9 0.2 -2.0"/>
+							<joint pos="-10.90001 0.2 -2.0"/>
+							<joint pos="-11.90001 0.2 -2.0"/>
+							<joint pos="-8.9 0.2 -2.0"/>
+							<joint pos="3.1 0.2 -2.0"/>
+							<joint pos="4.1 0.2 -2.0"/>
+							<joint pos="2.1 0.2 -2.0"/>
+							<joint pos="1.1 0.2 -2.0"/>
+							<joint pos="-3.9 0.6 -2.0"/>
+							<joint pos="-4.9 0.6 -2.0"/>
+							<joint pos="-2.9 0.6 -2.0"/>
+							<joint pos="-9.9 0.6 -2.0"/>
+							<joint pos="-10.90001 0.6 -2.0"/>
+							<joint pos="-11.90001 0.6 -2.0"/>
+							<joint pos="-8.9 0.6 -2.0"/>
+							<joint pos="3.1 0.6 -2.0"/>
+							<joint pos="4.1 0.6 -2.0"/>
+							<joint pos="2.1 0.6 -2.0"/>
+							<joint pos="1.1 0.6 -2.0"/>
+							<vox pos="-4.0 -1.0 0.1" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 2.2 1.0"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+						</vox>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" prop="true" size="5 27 19" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.4 0.0 1.7"/>
+							<joint pos="0.4 0.3 1.9"/>
+							<joint pos="0.4 0.7 1.9"/>
+							<joint pos="0.4 2.2 1.9"/>
+							<joint pos="0.4 0.0 0.1"/>
+						</voxbox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" prop="true" size="5 27 19" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="0.1 0.0 1.7"/>
+							<joint pos="0.1 0.0 0.1"/>
+							<joint pos="0.1 0.3 1.9"/>
+							<joint pos="0.1 0.7 1.9"/>
+							<joint pos="0.1 2.2 1.9"/>
+						</voxbox>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -19.99999">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+						</vox>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<vox pos="-4.0 -1.0 -0.5" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+							<joint pos="-0.1 2.2 -1.0"/>
+							<joint pos="-0.1 0.3 -1.0"/>
+							<joint pos="-0.1 0.7 -1.0"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 2.2 -1.0"/>
+							<joint pos="0.2 0.3 -1.0"/>
+							<joint pos="0.2 0.7 -1.0"/>
+						</vox>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 15.9">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<joint pos="4.1 0.2 -1.9"/>
+							<joint pos="3.1 0.2 -1.9"/>
+							<joint pos="5.1 0.2 -1.9"/>
+							<joint pos="-1.9 0.2 -1.9"/>
+							<joint pos="-2.9 0.2 -1.9"/>
+							<joint pos="-3.9 0.2 -1.9"/>
+							<joint pos="-0.9 0.2 -1.9"/>
+							<joint pos="11.1 0.2 -1.9"/>
+							<joint pos="12.1 0.2 -1.9"/>
+							<joint pos="10.1 0.2 -1.9"/>
+							<joint pos="9.1 0.2 -1.9"/>
+							<joint pos="4.1 0.6 -1.9"/>
+							<joint pos="3.1 0.6 -1.9"/>
+							<joint pos="5.1 0.6 -1.9"/>
+							<joint pos="-1.9 0.6 -1.9"/>
+							<joint pos="-2.9 0.6 -1.9"/>
+							<joint pos="-3.9 0.6 -1.9"/>
+							<joint pos="-0.9 0.6 -1.9"/>
+							<joint pos="11.1 0.6 -1.9"/>
+							<joint pos="12.1 0.6 -1.9"/>
+							<joint pos="10.1 0.6 -1.9"/>
+							<joint pos="9.1 0.6 -1.9"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 11.9">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 7.9">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 3.9">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -0.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -4.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -8.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -12.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -16.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+						</vox>
+					</group>
+				</group>
+				<group name="right1" pos="0.0 0.0 -44.9">
+					<group name="segment" pos="0.0 0.0 -0.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -4.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -8.1">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -12.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<joint pos="4.1 0.2 2.0"/>
+							<joint pos="3.1 0.2 2.0"/>
+							<joint pos="5.1 0.2 2.0"/>
+							<joint pos="-1.9 0.2 2.0"/>
+							<joint pos="-2.9 0.2 2.0"/>
+							<joint pos="-3.9 0.2 2.0"/>
+							<joint pos="-0.9 0.2 2.0"/>
+							<joint pos="11.1 0.2 2.0"/>
+							<joint pos="12.1 0.2 2.0"/>
+							<joint pos="10.1 0.2 2.0"/>
+							<joint pos="9.1 0.2 2.0"/>
+							<joint pos="4.1 0.6 2.0"/>
+							<joint pos="3.1 0.6 2.0"/>
+							<joint pos="5.1 0.6 2.0"/>
+							<joint pos="-1.9 0.6 2.0"/>
+							<joint pos="-2.9 0.6 2.0"/>
+							<joint pos="-3.9 0.6 2.0"/>
+							<joint pos="-0.9 0.6 2.0"/>
+							<joint pos="11.1 0.6 2.0"/>
+							<joint pos="12.1 0.6 2.0"/>
+							<joint pos="10.1 0.6 2.0"/>
+							<joint pos="9.1 0.6 2.0"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -16.10002">
+						<vox pos="-4.0 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<joint pos="-4.0 0.5 1.5"/>
+							<joint pos="-4.0 0.7 1.5"/>
+							<joint pos="-4.0 0.7 -1.7"/>
+							<joint pos="-4.0 0.5 -1.7"/>
+							<joint pos="-4.0 0.7 -0.4"/>
+							<joint pos="-4.0 0.5 -0.4"/>
+							<joint pos="-4.0 0.7 0.3"/>
+							<joint pos="-4.0 0.5 0.3"/>
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<voxbox pos="-4.0 -1.0 -1.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+							<joint pos="0.2 0.0 -0.8"/>
+						</vox>
+						<vox pos="-7.8 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.0 0.8"/>
+							<joint pos="0.2 0.0 -0.8"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 1.1" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+						<vox pos="7.9 1.928 -0.9" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 0.0 0.8"/>
+							<joint pos="-0.1 0.0 -0.8"/>
+							<joint pos="-0.1 2.2 1.0"/>
+						</vox>
+					</group>
+				</group>
+				<group name="right2" pos="0.0 0.0 -81.0">
+					<group name="hook segment" pos="0.0 0.0 12.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 16.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 8.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 4.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 0.1">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -3.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -7.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -11.9">
+						<vox pos="4.1 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.0" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 -0.5" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.0" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -1.0" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.0" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -16.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -20.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -24.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -28.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -32.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -36.8">
+						<vox pos="4.1 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 1.028 0.9" rot="0.0 180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 0.028 0.4" rot="0.0 180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<joint pos="-0.1 2.2 1.0"/>
+							<joint pos="-0.1 0.3 1.0"/>
+							<joint pos="-0.1 0.7 1.0"/>
+						</vox>
+						<voxbox pos="-7.6 1.928 2.9" rot="0.0 180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="-7.8 1.928 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<joint pos="0.2 0.3 1.0"/>
+							<joint pos="0.2 0.7 1.0"/>
+							<joint pos="0.2 2.2 1.0"/>
+						</vox>
+						<voxbox pos="8.1 1.928 2.9" rot="0.0 -180.0 0.0" size="5 27 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+				</group>
+			</group>
+		</group>
+		<group name="support pillars" pos="9.7 0.4 0.1" prop0="texture=16">
+			<voxbox pos="5.9 -0.07 -0.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 -0.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 -0.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 -0.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 -24.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 -24.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 -24.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 -24.9" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 23.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 23.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 23.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 23.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 42.10001" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 42.10001" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 42.10001" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 42.10001" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 66.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 66.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 66.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 66.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 90.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 90.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 90.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 90.00002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-7.9 -0.07 97.90002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="5.9 -0.07 97.90002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="1.4 -0.07 97.90002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-3.4 -0.07 97.90002" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="7.9 -0.07 -43.89999" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-5.90002 -0.07 -43.89999" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-1.40001 -0.07 -43.89999" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="3.39999 -0.07 -43.89999" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="7.89999 -0.07 -67.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-5.90002 -0.07 -67.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-1.40001 -0.07 -67.9" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="3.39999 -0.07 -67.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="7.89999 -0.07 -91.90003" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-5.90002 -0.07 -91.9" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-1.40002 -0.07 -91.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="3.39998 -0.07 -91.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="7.89999 -0.07 -95.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-5.90003 -0.07 -95.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="-1.40003 -0.07 -95.90002" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			<voxbox pos="3.39997 -0.07 -95.90003" rot="0.0 -180.0 0.0" size="20 80 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+		</group>
+	</group>
+</prefab>
+

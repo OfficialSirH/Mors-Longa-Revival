@@ -1,0 +1,1292 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/main/terrain/train_track_overpass.xml" pos="79.0 0.3 -1.3" rot="0.0 0.0 0.0">
+		<group name="overpass long" pos="9.6 -9.8 50.9">
+			<group name="segments" pos="0.1 18.1 -30.3" prop0="rotstrength=3" prop1="density=10" prop2="rotspring=0.1">
+				<group name="real" pos="-0.8 0.0 -20.5" prop0="prop=false">
+					<group name="segment" pos="0.4 -7.9 -2.8" rot="0.0 -10.0 0.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 -180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.7 -1.0 -2.0" rot="0.0 -70.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" rot="0.0 -10.0 0.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" rot="0.0 -20.0 -40.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" prop="false" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" prop="false" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 -7.9 2.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -0.2" rot="0.0 -150.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="0.2 -1.0 -5.3" rot="0.0 -120.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.9 1.0" rot="0.0 20.0 -50.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 -0.9 10.5" rot="20.0 90.0 60.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-5.4 0.8 2.4" rot="0.0 -40.0 15.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.4 0.8 0.6" rot="0.0 -20.0 15.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.2 0.8 -1.2" rot="0.0 10.0 15.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" rot="0.0 0.0 -30.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 -140.0 0.0" prop="false" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" prop="false" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="-1.3 -3.3 -8.0" rot="40.0 0.0 -30.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 -180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.60001 1.1 2.0" rot="0.0 180.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="4.4 2.70001 3.79999" rot="-25.0 170.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 -0.7 -14.4" rot="10.0 0.0 -5.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 -180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.30002 1.5 2.4" rot="0.0 180.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.8 1.3 2.3" rot="-5.0 170.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 -1.6 -11.0" rot="25.0 0.0 -10.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 -180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="0.1 1.59999 2.79999" rot="0.0 180.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="2.9 1.5 2.7" rot="-20.0 170.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 -0.1 -18.2" rot="5.0 0.0 0.0">
+						<vox pos="4.1 1.0 0.1" rot="0.0 -180.0 5.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.09999 0.8 1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.40001 1.5 2.00001" rot="0.0 180.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.0 2.0" rot="-5.0 170.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.4 18.0" rot="10.0 0.0 0.0">
+						<vox pos="4.1 -0.3 0.0" rot="0.0 -180.0 -20.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+						<group pos="4.1 0.028 -1.3" rot="0.0 180.0 0.0">
+							<voxbox pos="-3.0 0.0 -3.4" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="-3.0 -0.0 0.5" rot="0.0 -100.0 10.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -7.9 -3.40002" rot="0.0 50.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -9.6 4.89998" rot="0.0 -30.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</group>
+					</group>
+					<group name="segment" pos="-0.00004 0.0 9.99966">
+						<voxbox pos="0.0 -1.8 -0.7" rot="0.0 90.0 -60.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+					</group>
+					<group name="segment" pos="0.0 -7.6 5.9" rot="-10.0 0.0 0.0">
+						<vox pos="4.1 1.3 0.7" rot="20.0 -180.0 30.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+						<group pos="1.2 -3.972 -1.3" rot="0.0 180.0 0.0">
+							<voxbox pos="1.2 6.0 -3.10002" rot="0.0 -90.0 -30.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="15.7 0.3 -6.40001" rot="20.0 90.0 60.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-16.5 2.6 -2.4" rot="50.0 90.0 60.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-11.8 6.8 5.39998" rot="70.0 90.0 60.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="6.0 2.6 -2.4" rot="20.0 90.0 60.0" prop="true" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-6.0 6.3 1.1" rot="-12.0 -140.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="-1.8 6.1 0.2" rot="-70.0 180.0 0.0" prop="true" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</group>
+					</group>
+				</group>
+				<group name="unreal" pos="3.4 0.0 -80.4">
+					<group pos="-0.1 0.0 0.0">
+						<voxbox pos="4.2 1.0 39.9" rot="0.0 -180.0 0.0" size="84 11 800" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+						<voxbox pos="-1.1 2.1 36.0" rot="5.0 0.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						<voxbox pos="-0.8 2.1 36.0" rot="0.0 -180.0 0.0" size="3 4 761" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						<voxbox pos="-4.2 1.8 -40.1" rot="0.0 0.0 0.0" size="3 15 801" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+						<voxbox pos="3.9 1.8 -40.1" rot="0.0 0.0 0.0" size="3 15 801" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+						<voxbox pos="0.9 2.1 40.0" rot="0.0 -180.0 0.0" size="3 4 801" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						<voxbox pos="-4.1 0.0 40.0" rot="0.0 90.0 0.0" size="801 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="3.0 0.0 40.0" rot="0.0 90.0 0.0" size="801 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+					</group>
+					<group pos="-0.1 0.0 138.89999">
+						<voxbox pos="4.2 1.0 25.1" rot="0.0 180.0 0.0" size="84 11 840" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+						<voxbox pos="-4.2 1.8 -46.9" rot="0.0 0.0 0.0" size="3 15 720" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence">
+							<voxbox pos="0.3 0.0 0.0" rot="0.0 -170.0 0.0" size="3 15 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence" offset="0 0 -1">
+								<voxbox pos="0.0 0.0 2.0" rot="0.0 20.0 0.0" size="3 15 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence" offset="0 0 -1">
+									<group pos="0.3 0.0 2.0" rot="-1.0 -20.0 0.0">
+										<voxbox pos="-0.3 -0.0 -0.0" rot="0.0 0.0 0.0" size="3 15 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+										<voxbox pos="-0.3 0.0 2.0" rot="-1.0 10.0 0.0" size="3 15 20" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence">
+											<group pos="0.3 0.0 2.0" rot="0.0 -40.0 0.0">
+												<voxbox pos="-0.3 0.0 0.0" size="3 15 9" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+											</group>
+										</voxbox>
+									</group>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+						<voxbox pos="3.9 1.8 -58.9" rot="0.0 0.0 0.0" size="3 15 840" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+						<voxbox pos="-3.1 0.0 -58.9" rot="0.0 -90.0 0.0" size="840 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="4.0 0.0 -58.9" rot="0.0 -90.0 0.0" size="840 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="0.59999 2.1 -50.9002" rot="0.0 0.0 0.0" size="3 4 760" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail">
+							<group pos="0.0 0.0 0.0" rot="0.0 170.0 0.0">
+								<voxbox pos="-0.3 0.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+								<group pos="0.0 0.0 4.0" rot="0.0 -10.0 0.0">
+									<voxbox pos="-0.3 0.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+								</group>
+							</group>
+						</voxbox>
+						<voxbox pos="-1.10003 2.1 -46.90028" rot="0.0 0.0 0.0" size="3 4 720" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail">
+							<voxbox pos="0.3 0.0 0.0" rot="0.0 -160.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail">
+								<voxbox pos="0.0 0.0 4.0" rot="0.0 20.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail">
+									<voxbox pos="-0.0 0.0 4.0" rot="0.0 10.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</group>
+				</group>
+			</group>
+		</group>
+		<group name="support pillars" pos="9.7 0.4 0.1" prop0="texture=16">
+			<voxbox pos="8.5 -0.1 -0.9" rot="0.0 190.0 22.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 -0.9" rot="0.0 0.0 10.0" size="11 41 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 20.3" rot="2.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 20.3" rot="5.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 42.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 42.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 64.60001" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 64.60001" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 86.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 86.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 -22.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 -22.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 -44.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 -44.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 -66.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 -66.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.1 -88.89999" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.1 -88.89999" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+		</group>
+		<body pos="12.9 10.2 -8.3">
+			<group name="train" pos="-6.15 -4.6 71.5" prop0="dynamic=false">
+				<group name="Motorized train (nondescript)" pos="6.0 5.0 -9.65" rot="0.0 90.0 0.0" prop0="texture=8 0.5">
+					<group name="full wagon" pos="0.0 3.4 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=1" pos="0.0 -3.1 -0.1">
+							<vox tags="locomotiveShape" pos="0.1 0.4 0.2" rot="0.0 180.0 0.0" file="MOD/vox/locomotive2_bt.vox" object="locomotive">
+								<vox pos="7.6 2.2 1.2" prop="true" file="MOD/vox/locomotive2.vox" object="door_a">
+									<joint pos="0.0 1.4 -0.4" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+									<joint pos="0.0 0.2 -0.4" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+								</vox>
+								<vox pos="7.6 2.2 -1.3" prop="true" file="MOD/vox/locomotive2.vox" object="door_b">
+									<joint pos="-0.0 1.4 0.4" rot="90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+									<joint pos="-0.0 0.2 0.4" rot="90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+								</vox>
+								<vox pos="5.4 2.2 -1.3" prop="true" file="MOD/vox/locomotive2.vox" object="door_c">
+									<joint pos="-0.0 1.4 0.4" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+									<joint pos="-0.0 0.2 0.4" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+								</vox>
+								<vox pos="5.4 2.2 1.2" prop="true" file="MOD/vox/locomotive2.vox" object="door_d">
+									<joint pos="0.0 1.4 -0.4" rot="90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+									<joint pos="0.0 0.2 -0.4" rot="90.0 0.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 90"/>
+								</vox>
+								<group pos="8.7 2.95 -0.05" prop0="scale=50" prop1="angle=60" prop2="penumbra=35">
+									<light pos="0.1 0.0 0.0" rot="0.0 90.0 0.0" type="cone" color="1.0 1.0 1.0" scale="200" angle="45" size="0.2 0.2" unshadowed="1" fogscale="0.1" fogiter="5"/>
+								</group>
+							</vox>
+							<group name="undercarriage" pos="-6.1 -0.4 0.3" prop0="drive=1">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0" prop0="drive=1">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="6.1 -0.4 0.3" prop0="drive=1">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0" prop0="drive=1">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+										<group name="wheels" pos="0.1 0.3 -0.15" rot="0.0 90.0 0.0" prop0="drive=1"/>
+									</group>
+								</vox>
+							</group>
+						</body>
+						<group name="Nav Computers">
+							<vox pos="-6.0 -0.7 -0.2" rot="0.0 -4.0 0.0" prop="true" file="MOD/vox/BT_train_interior/lee_filing_cabinet.vox">
+								<rope pos="-0.4 0.1 -0.6" maxstretch="0.05">
+									<location/>
+									<location pos="-0.73421 0.0 0.45745" rot="0.0 -14.0 0.0"/>
+								</rope>
+							</vox>
+							<vox pos="-5.6 1.0 0.6" rot="0 -90" file="MOD/vox/BT_train_interior/objective_communication_terminal.vox"/>
+							<vox pos="-6.0 -0.7 0.6" rot="0.0 -80.0 0.0" prop="true" file="MOD/vox/BT_train_interior/hollowrock_filing_cabinet.vox"/>
+							<vox pos="-6.06 0.1 0.69" rot="0.0 -50.0 0.0" prop="true" file="MOD/vox/BT_train_interior/hollowrock_TV_2.vox">
+								<rope pos="-0.5 0.2 -0.1" color="0 0.1 0" slack="0.2" maxstretch="0.1">
+									<location/>
+									<location pos="0.15979 -0.4 -0.0672" rot="0.0 -30.0 0.0"/>
+								</rope>
+							</vox>
+							<vox pos="-7.09 -0.7 0.83" rot="0.0 -170.0 0.0" prop="true" file="MOD/vox/BT_train_interior/lee_lab_chair.vox">
+								<vox pos="-0.13 0.74 0.06" rot="0.0 -90.0 55.0" prop="true" file="MOD/vox/BT_train_interior/lee_keyboard.vox"/>
+								<vox pos="-0.86001 0.8 -0.09" rot="0.0 99.0 0.0" prop="true" file="MOD/vox/BT_train_interior/hollowrock_mouse.vox"/>
+							</vox>
+							<vox pos="-7.15 -0.7 -0.01" rot="0.0 -18.0 0.0" prop="true" file="MOD/vox/BT_train_interior/hollowrock_disc_cutter.vox"/>
+						</group>
+					</group>
+					<rope pos="9.7 1.15 0.15" strength="1000" maxstretch="1">
+						<location/>
+						<location pos="0.4 0.0 -0.0"/>
+					</rope>
+				</group>
+				<group name="Cargo wagon" pos="6.1 5.0 -22.05" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
+					<group name="full wagon" pos="6.9 0.1 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=4" pos="0.0 0.2 -0.1">
+							<vox pos="0.1 0.7 0.2" rot="0.0 180.0 0.0" file="MOD/vox/cargo_wagon.vox" object="wagon">
+								<vox pos="4.9 4.4 0.0" file="MOD/assets/industrial/lamps.vox" object="ceiling-fixed">
+									<light pos="0.0 0.0 -0.05" rot="90.0 0.0 0.0" type="area" color="0.61 0.76 1.0" scale="3" size="1.4 .1"/>
+								</vox>
+								<vox pos="-4.9 4.4 0.0" file="MOD/assets/industrial/lamps.vox" object="ceiling-fixed">
+									<light pos="0.0 0.0 -0.05" rot="90.0 0.0 0.0" type="area" color="0.61 0.76 1.0" scale="3" size="1.4 .1"/>
+								</vox>
+							</vox>
+							<group name="undercarriage" pos="6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="-6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br r" pos="0.5 0.65 0.05"/>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr r" pos="0.5 0.65 0.05"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<vox pos="1.1 4.0 -0.75" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/industrial/lamps.vox" object="ceiling-fixed">
+								<light pos="0.0 0.0 -0.05" rot="90.0 0.0 0.0" type="area" color="1.0 0.93 0.68" scale="3" size="1.4 .1"/>
+								<rope pos="-0.6 0.2 -0.05">
+									<location/>
+									<location pos="0.0 0.9 0.0"/>
+								</rope>
+								<rope pos="0.6 0.2 -0.05">
+									<location/>
+									<location pos="0.0 0.9 0.0"/>
+								</rope>
+							</vox>
+						</body>
+						<instance pos="-8.0 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-7.6 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-6.9 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-6.3 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.9 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.5 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.1 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-4.7 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-4.2 2.2 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-4.2 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.0 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.4 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.0 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.0 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<instance pos="-5.0 2.6 0.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+						<vox pos="-5.5 1.5 0.3" file="MOD/vox/container_blue.vox"/>
+					</group>
+					<rope pos="9.0 1.15 0.15" strength="1000" maxstretch="1">
+						<location/>
+						<location pos="0.8 0.0 0.0"/>
+					</rope>
+				</group>
+				<group name="BT wagon" pos="6.1 5.0 -140.45001" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
+					<script pos="0.1 0.1 0.1" file="MOD/script/BT_tank.lua">
+						<group name="full wagon" pos="-0.1 0.0 -0.1" prop0="travel=-0.25 0.0">
+							<body tags="train=7 decouplable" pos="0.0 0.2 -0.1">
+								<vox pos="0.1 0.7 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">
+									<vox tags="nocull" pos="-8.9 1.2 -1.4" desc="flammable" file="MOD/vox/danger.vox" object="flammable2"/>
+									<vox tags="tank" pos="0.0 1.0 0.0" strength="10" file="MOD/vox/vehicle_train_bt.vox" object="tank"/>
+									<vox pos="0.7 -0.2 1.3" file="MOD/vox/vehicle_train_bt.vox" object="ladder"/>
+									<vox tags="nocull" pos="-8.9 0.8 -1.0" desc="corrosive" file="MOD/vox/danger.vox" object="corrosive"/>
+									<vox tags="nocull" pos="-8.9 1.2 -0.6" desc="organic peroxide" file="MOD/vox/danger.vox" object="organic peroxide"/>
+									<vox tags="nocull" pos="-8.9 1.6 -1.0" file="MOD/vox/danger.vox" object="none"/>
+								</vox>
+								<group name="undercarriage" pos="6.1 -0.4 0.2">
+									<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+										<group pos="0.0 -1.0 -0.1">
+											<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+											<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+												<group name="back left group" pos="-1.4 0.3 1.2">
+													<wheel name="bl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="bl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="back right group" pos="0.4 0.3 1.2">
+													<wheel name="br l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front left group" pos="-1.4 0.3 -1.5">
+													<wheel name="fl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front right group" pos="0.4 0.3 -1.5">
+													<wheel name="fr l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+											</group>
+										</group>
+									</vox>
+								</group>
+								<group name="undercarriage" pos="-6.1 -0.4 0.2">
+									<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+										<group pos="0.0 -1.0 -0.1">
+											<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+											<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+												<group name="back left group" pos="-1.4 0.3 1.2">
+													<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+													<wheel name="bl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="bl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="back right group" pos="0.4 0.3 1.2">
+													<wheel name="br l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br r" pos="0.5 0.65 0.05"/>
+												</group>
+												<group name="front left group" pos="-1.4 0.3 -1.5">
+													<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+													<wheel name="fl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front right group" pos="0.4 0.3 -1.5">
+													<wheel name="fr l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr r" pos="0.5 0.65 0.05"/>
+												</group>
+											</group>
+										</group>
+									</vox>
+								</group>
+							</body>
+						</group>
+					</script>
+					<rope pos="9.0 1.15 0.15" strength="1000" maxstretch="1">
+						<location/>
+						<location pos="0.8 0.0 0.0"/>
+					</rope>
+				</group>
+				<group name="BT wagon" pos="6.1 5.0 -121.84999" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
+					<script pos="0.1 0.1 0.0" file="MOD/script/BT_tank.lua">
+						<group name="full wagon" pos="-0.1 0.0 0.0" prop0="travel=-0.25 0.0">
+							<body tags="train=8 decouplable" pos="0.0 0.2 -0.1">
+								<vox pos="0.1 0.7 0.0" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">
+									<vox tags="tank" pos="0.0 1.0 0.0" strength="10" file="MOD/vox/vehicle_train_bt.vox" object="tank"/>
+									<vox pos="0.7 -0.2 1.3" file="MOD/vox/vehicle_train_bt.vox" object="ladder"/>
+									<vox tags="nocull" pos="-8.9 0.8 -1.0" desc="corrosive" file="MOD/vox/danger.vox" object="corrosive"/>
+									<vox tags="nocull" pos="-8.9 1.2 -0.6" desc="organic peroxide" file="MOD/vox/danger.vox" object="organic peroxide"/>
+									<vox tags="nocull" pos="-8.9 1.6 -1.0" file="MOD/vox/danger.vox" object="none"/>
+									<vox tags="nocull" pos="-8.9 1.2 -1.4" desc="flammable" file="MOD/vox/danger.vox" object="flammable2"/>
+								</vox>
+								<group name="undercarriage" pos="6.1 -0.4 0.2">
+									<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+										<group pos="0.0 -1.0 -0.1">
+											<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+											<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+												<group name="back left group" pos="-1.4 0.3 1.2">
+													<wheel name="bl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="bl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="back right group" pos="0.4 0.3 1.2">
+													<wheel name="br l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front left group" pos="-1.4 0.3 -1.5">
+													<wheel name="fl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front right group" pos="0.4 0.3 -1.5">
+													<wheel name="fr l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+											</group>
+										</group>
+									</vox>
+								</group>
+								<group name="undercarriage" pos="-6.1 -0.4 0.2">
+									<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+										<group pos="0.0 -1.0 -0.1">
+											<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+											<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+												<group name="back left group" pos="-1.4 0.3 1.2">
+													<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+													<wheel name="bl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="bl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="back right group" pos="0.4 0.3 1.2">
+													<wheel name="br l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="br r" pos="0.5 0.65 0.05"/>
+												</group>
+												<group name="front left group" pos="-1.4 0.3 -1.5">
+													<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+													<wheel name="fl m" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fl r" pos="0.2 0.65 0.05">
+														<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+												</group>
+												<group name="front right group" pos="0.4 0.3 -1.5">
+													<wheel name="fr l" pos="-0.1 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr m" pos="0.20001 0.65 0.05">
+														<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+													</wheel>
+													<wheel name="fr r" pos="0.5 0.65 0.05"/>
+												</group>
+											</group>
+										</group>
+									</vox>
+								</group>
+							</body>
+						</group>
+					</script>
+					<rope pos="9.0 1.15 0.15" strength="1000" maxstretch="1">
+						<location/>
+						<location pos="0.8 0.0 0.0"/>
+					</rope>
+				</group>
+				<group name="Flatbed" pos="6.1 4.9 -84.65" rot="0.0 90.0 5.0" prop0="texture=8 0.33">
+					<group name="full wagon" pos="0.0 0.1 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=9 decouplable" pos="0.0 0.2 -0.1">
+							<vox pos="0.1 0.6 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_flatbed.vox" object="wagon"/>
+							<group name="undercarriage" pos="6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="-6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br r" pos="0.5 0.65 0.05"/>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr r" pos="0.5 0.65 0.05"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+						</body>
+					</group>
+				</group>
+				<group name="Flatbed" pos="6.1 5.0 -103.24999" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
+					<group name="full wagon" pos="0.0 0.1 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=9 decouplable" pos="0.0 0.2 -0.1">
+							<vox pos="0.1 0.6 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_flatbed.vox" object="wagon"/>
+							<group name="undercarriage" pos="6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="-6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br r" pos="0.5 0.65 0.05"/>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr r" pos="0.5 0.65 0.05"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+						</body>
+					</group>
+				</group>
+				<group name="Flatbed" pos="6.1 1.7 -47.85" rot="0.0 90.0 -50.0" prop0="texture=8 0.33">
+					<group name="full wagon" pos="0.0 0.1 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=9 decouplable" pos="0.0 0.2 -0.1">
+							<vox pos="0.1 0.6 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_flatbed.vox" object="wagon"/>
+							<group name="undercarriage" pos="6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="-6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br r" pos="0.5 0.65 0.05"/>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr r" pos="0.5 0.65 0.05"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+						</body>
+					</group>
+				</group>
+				<group name="Flatbed" pos="6.1 0.3 -68.15" rot="0.0 90.0 25.0" prop0="texture=8 0.33">
+					<group name="full wagon" pos="0.0 0.1 0.0" prop0="travel=-0.25 0.0">
+						<body tags="train=9 decouplable" pos="0.0 0.2 -0.1">
+							<vox pos="0.1 0.6 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_flatbed.vox" object="wagon"/>
+							<group name="undercarriage" pos="6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="undercarriage" pos="-6.1 -0.4 0.2">
+								<vox tags="unbreakable" pos="0.0 0.6 0.0" density="10" file="MOD/vox/cargo_wagon.vox" object="undercarriage">
+									<group pos="0.0 -1.0 -0.1">
+										<joint tags="boggiejoint" pos="0.06 2.0 0.04" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+										<group name="wheels" pos="0.1 0.3 -0.45" rot="0.0 90.0 0.0">
+											<group name="back left group" pos="-1.4 0.3 1.2">
+												<wheel name="bl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="bl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="bl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="back right group" pos="0.4 0.3 1.2">
+												<wheel name="br l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="br r" pos="0.5 0.65 0.05"/>
+											</group>
+											<group name="front left group" pos="-1.4 0.3 -1.5">
+												<wheel name="fl l" pos="-0.4 0.65 0.05"/>
+												<wheel name="fl m" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fl r" pos="0.2 0.65 0.05">
+													<vox pos="-0.05 -0.55 -0.05" rot="0.0 -90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+											</group>
+											<group name="front right group" pos="0.4 0.3 -1.5">
+												<wheel name="fr l" pos="-0.1 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr m" pos="0.20001 0.65 0.05">
+													<vox pos="-0.05 -0.55 0.05" rot="0.0 90.0 0.0" file="MOD/vox/cargo_wagon_wheel.vox"/>
+												</wheel>
+												<wheel name="fr r" pos="0.5 0.65 0.05"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</group>
+						</body>
+					</group>
+				</group>
+				<instance pos="6.1 3.7 -49.1" rot="50.0 -180.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef8.xml"/>
+				<instance pos="6.2 1.9 -66.3" rot="-30.0 180" file="MOD/prefabs/spawnables/vehicles/Vehiclef8.xml"/>
+				<instance pos="6.2 6.8 -84.2" rot="0.0 180" file="MOD/prefabs/spawnables/vehicles/Vehiclef8.xml"/>
+				<group pos="6.15 6.8 -102.8">
+					<group name="General" pos="-0.05 -0.1 0.0" prop0="tags=nocull" prop1="density=2" prop2="strength=3">
+						<body name="Cabin" tags="HeliMainBod" pos="0.05 2.4 1.45" dynamic="true">
+							<compound pos="-0.05 -1.6 1.05">
+								<vox file="MOD/main/AS350/fuselage/AS350.vox" object="body: cabin segment">
+									<group name="Weapons" pos="0.05 0.5 -0.95">
+										<vox pos="0.95 0.0 0.05" prop="false" file="MOD/main/AS350/fuselage/AS350.vox" object="door: fuel L">
+											<vox pos="0.60001 0.1 0.0" prop="false" file="MOD/main/AS350/fuselage/AS350.vox" object="PylonL"/>
+										</vox>
+										<vox pos="-1.05 0.0 0.05" prop="false" file="MOD/main/AS350/fuselage/AS350.vox" object="door: fuel R">
+											<vox pos="-0.6 0.1 0.0" prop="false" file="MOD/main/AS350/fuselage/AS350.vox" object="pylonR"/>
+										</vox>
+									</group>
+								</vox>
+							</compound>
+							<voxbox pos="-0.45 -1.0 -0.668" size="1 1 15" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="-0.45 -1.05 -0.802" rot="-20.0 0.0 0.0" size="1 1 17" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="-0.45 -0.45 -0.668" rot="20.0 0.0 0.0" size="1 1 17" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="0.35 -1.0 -0.668" size="1 1 15" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="0.35 -0.5 -0.668" size="1 1 14" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="0.35 -0.45 -0.668" rot="20.0 0.0 0.0" size="1 1 17" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="0.35 -1.05 -0.802" rot="-20.0 0.0 0.0" size="1 1 17" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<voxbox pos="-0.45 -0.5 -0.668" size="1 1 14" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
+							<group name="Main Engine">
+								<vox pos="-0.15 -0.1 -0.55" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: Main Engine">
+									<script pos="0.3 0.0 0.0" file="MOD/main/AS350/script/fuel.lua">
+										<vox tags="F_LINE fuel=fuel_lines strength=95" file="MOD/main/AS350/fuselage/AS350.vox" object="Systems: Fuel Lines"/>
+									</script>
+									<vox tags="O_LINE nocull" pos="0.2 0.0 0.3" file="MOD/main/AS350/fuselage/AS350.vox" object="Systems: Oil Lines"/>
+									<script pos="0.4 -1.0 0.6" file="MOD/main/AS350/script/fuel.lua">
+										<vox tags="FUEL nocull fuel=fuel_tank strength=85" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: fuel tank"/>
+									</script>
+									<group name="rotors" pos="0.1 0.2 -3.7">
+										<group name="Main Rotor (MROT)" pos="-0.2 -0.5 -0.5">
+											<body pos="0.25 1.5 4.75" dynamic="true">
+												<vox pos="-0.05 -0.6 0.05" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: Main Rotor Shaft">
+													<vox pos="0.1 0.3 0.1" file="MOD/main/AS350/fuselage/AS350.vox" object="sensors: RPM sensor"/>
+													<group pos="0.05 0.5 -0.05">
+														<compound pos="-0.05 0.0 0.25">
+															<vox file="MOD/main/AS350/fuselage/AS350.vox" object="rotor"/>
+														</compound>
+														<compound pos="0.1 0.45 3.65">
+															<vox pos="-0.6 -3.75 0.0" file="MOD/main/AS350/fuselage/AS350.vox" object="mainblade"/>
+															<vox pos="0.6 -3.75 0.0" file="MOD/main/AS350/fuselage/AS350.vox" object="mainblade"/>
+															<vox pos="0.0 -3.75 0.0" file="MOD/main/AS350/fuselage/AS350.vox" object="mainblade"/>
+														</compound>
+													</group>
+													<group pos="0.05 0.5 -0.05" rot="0.0 120.0 0.0">
+														<compound pos="-0.05 0.0 0.25">
+															<vox file="MOD/main/AS350/fuselage/AS350.vox" object="rotor"/>
+														</compound>
+														<compound pos="0.1 0.45 3.65"/>
+													</group>
+													<group pos="0.05 0.5 -0.05" rot="0.0 -120.0 0.0">
+														<compound pos="-0.05 0.0 0.25">
+															<vox file="MOD/main/AS350/fuselage/AS350.vox" object="rotor"/>
+														</compound>
+														<compound pos="0.1 0.45 3.65"/>
+													</group>
+													<joint tags="MainRotor" pos="0.05 0.0 -0.05" rot="90.0 0.0 0.0" type="hinge" rotspring="0" limits="-200 200"/>
+												</vox>
+											</body>
+										</group>
+										<group name="Anti Torque (ATRQ)" pos="-2.5 0.0 -4.1">
+											<vox pos="2.5 0.1 3.4" prop="true" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: Rear Rotor Shaft">
+												<joint pos="0.05 0.05 3.2" type="hinge" limits="-180 180"/>
+											</vox>
+											<compound pos="2.3 -1.1 0.3" prop="true">
+												<vox file="MOD/main/AS350/fuselage/AS350.vox" object="tailblade">
+													<joint pos="0.1 1.2 0.0" rot="0.0 90.0 0.0" type="hinge" rotspring="0" limits="-180 180"/>
+												</vox>
+											</compound>
+										</group>
+									</group>
+								</vox>
+							</group>
+							<group name="Extras">
+								<group name="outer sensors" pos="0.0 -1.4 1.65">
+									<vox tags="altitude nocull" pos="-0.45 -0.4 -0.1" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 1"/>
+									<vox tags="airspeed nocull" pos="0.35 -0.4 -0.1" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 1"/>
+									<vox pos="0.35 -0.2 1.4" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 2"/>
+									<vox tags="nocull" pos="-0.45 -0.2 1.4" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 2"/>
+									<vox tags="gyroscope nocull" pos="0.0 -0.3 -0.7" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 3"/>
+									<vox tags="autopilot nocull" pos="0.0 -0.2 -1.4" file="MOD/main/AS350/fuselage/AS350.vox" object="sensor: 3"/>
+								</group>
+								<group name="radar" pos="-0.1 -1.3 1.7">
+									<vox tags="traffic nocull" pos="-0.05 -0.1 0.05" file="MOD/main/AS350/fuselage/AS350.vox" object="radar: traffic system"/>
+									<vox tags="missileradar nocull" pos="0.05 1.9 0.05" file="MOD/main/AS350/fuselage/AS350.vox" object="misc1"/>
+									<vox tags="weaponsystem nocull" pos="0.65 1.9 0.25" file="MOD/main/AS350/fuselage/AS350.vox" object="radar1"/>
+								</group>
+							</group>
+						</body>
+						<body name="Tail" pos="0.0 2.4 -4.2" dynamic="true">
+							<compound pos="0.0 -1.4 0.0">
+								<vox file="MOD/main/AS350/fuselage/AS350.vox" object="body: tail segment"/>
+							</compound>
+							<compound pos="0.0 -1.1 -1.9">
+								<vox file="MOD/main/AS350/fuselage/AS350.vox" object="tail guard"/>
+							</compound>
+							<group name="connection" pos="0.0 -1.0 3.6" prop0="rotstrength=5" prop1="tags=TailJointBreak">
+								<joint pos="0.05 0.15 0.2"/>
+								<joint pos="0.15 0.15 0.2"/>
+								<joint pos="0.35 0.35 0.2"/>
+								<joint pos="0.35 0.55 0.2"/>
+								<joint pos="0.35 0.75 0.2"/>
+								<joint pos="0.35 0.95 0.2"/>
+								<joint pos="0.25 1.05 0.1"/>
+								<joint pos="-0.15 1.05 0.1"/>
+								<joint pos="-0.05 1.15 0.0"/>
+								<joint pos="0.15 1.15 0.0"/>
+								<joint pos="0.05 1.35 0.0"/>
+								<joint pos="-0.05 0.15 0.2"/>
+								<joint pos="-0.25 0.35 0.2"/>
+								<joint pos="-0.25 0.55 0.2"/>
+								<joint pos="-0.25 0.75 0.2"/>
+								<joint pos="-0.25 0.95 0.2"/>
+								<joint pos="0.05 0.95 0.2"/>
+							</group>
+							<group name="radar" pos="0.0 -1.0 2.5">
+								<vox tags="traffic_incoming nocull" pos="0.0 0.1 0.8" file="MOD/main/AS350/fuselage/AS350.vox" object="radar: traffic receive"/>
+								<vox tags="traffic_outgoing nocull" pos="0.1 0.3 -0.5" file="MOD/main/AS350/fuselage/AS350.vox" object="radar: traffic send"/>
+							</group>
+						</body>
+						<group name="Doors" pos="0.05 1.3 2.5" prop0="prop=true">
+							<group name="top side engine" pos="0.0 1.0 -1.1">
+								<compound pos="-0.75 0.0 0.1">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: top R">
+										<group pos="0.3 0.5 0.05" rot="20.0 180.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 75">
+											<joint pos="0.0 0.0 0.3"/>
+											<joint pos="0.0 0.0 -0.3"/>
+										</group>
+									</vox>
+								</compound>
+								<compound pos="0.75 0.0 0.1">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: top L">
+										<group pos="-0.3 0.5 0.05" rot="-20.0 0.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 75">
+											<joint pos="0.0 0.0 0.3"/>
+											<joint pos="0.0 0.0 -0.3"/>
+										</group>
+									</vox>
+								</compound>
+							</group>
+							<group name="engine bay" pos="0.0 2.05 -1.4">
+								<compound pos="-0.05 -0.85 -0.7">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: top">
+										<group pos="0.05 0.85 0.7" rot="0.0 90.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 75">
+											<joint pos="0.0 0.0 0.3"/>
+											<joint pos="0.0 0.0 -0.3"/>
+										</group>
+									</vox>
+								</compound>
+							</group>
+							<group name="cargo" pos="0.0 0.2 -2.35">
+								<compound pos="0.65 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: rear compartment L">
+										<group rot="0.0 -135.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 165">
+											<joint pos="0.0 0.0 0.3" rotstrength="0.2"/>
+											<joint pos="0.0 0.0 -0.3" rotstrength="0.2"/>
+										</group>
+									</vox>
+								</compound>
+								<compound pos="-0.75 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: rear compartment R">
+										<group pos="0.1 0.0 0.0" rot="0.0 -45.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 165">
+											<joint pos="0.0 0.0 0.3" rotstrength="0.2"/>
+											<joint pos="0.0 0.0 -0.3" rotstrength="0.2"/>
+										</group>
+									</vox>
+								</compound>
+							</group>
+							<group name="side doors" pos="0.0 0.0 0.35">
+								<compound pos="1.05 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: slide L">
+										<group pos="0.0 0.65 0.4" rot="0.0 -180.0 0.0" prop0="type=prismatic" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 1.2">
+											<joint pos="0.0 -0.65 -0.1" rot="0.0 -10.0 0.0"/>
+											<joint pos="0.0 0.65 0.1" rot="0.0 -10.0 0.0"/>
+										</group>
+									</vox>
+								</compound>
+								<compound pos="-1.05 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: slide R">
+										<group pos="0.0 0.65 0.4" rot="0.0 -180.0 0.0" prop0="type=prismatic" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 1">
+											<joint pos="0.0 -0.65 -0.1" rot="0.0 10.0 0.0"/>
+											<joint pos="-0.0 0.65 0.1" rot="0.0 10.0 0.0"/>
+										</group>
+									</vox>
+								</compound>
+							</group>
+							<group name="front doors" pos="0.0 0.0 1.45">
+								<compound pos="1.05 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: left">
+										<group pos="0.05 0.7 0.3" rot="65.0 0.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 165">
+											<joint pos="-0.05 0.0 0.4"/>
+											<joint pos="0.0 0.0 -0.4"/>
+										</group>
+									</vox>
+								</compound>
+								<compound pos="-1.05 0.0 0.05">
+									<vox file="MOD/main/AS350/fuselage/AS350.vox" object="door: right">
+										<group pos="-0.05 0.7 0.3" rot="-65.0 180.0 0.0" prop0="type=hinge" prop1="rotstrength=0.1" prop2="rotspring=0" prop3="limits=0 165">
+											<joint pos="0.0 0.0 0.4"/>
+											<joint pos="-0.05 0.0 -0.4"/>
+										</group>
+									</vox>
+								</compound>
+							</group>
+						</group>
+						<group name="landing gear" pos="0.05 0.1 2.1" prop0="prop=true" prop1="density=10" prop2="strength=10">
+							<vox pos="-0.95 0.0 0.1" file="MOD/main/AS350/fuselage/AS350.vox" object="landing_gear_2_R">
+								<group pos="0.1 0.85 1.45" prop0="type=ball" prop1="rotstrength=2" prop2="rotspring=1" prop3="limits=">
+									<joint pos="0.0 0.0 -1.4" rotstrength="5"/>
+									<joint pos="0.5 0.2 -2.9" rotstrength="5"/>
+								</group>
+							</vox>
+							<vox pos="0.95 0.0 0.1" file="MOD/main/AS350/fuselage/AS350.vox" object="landing_gear_2_L">
+								<group pos="-0.1 0.85 1.45" prop0="type=ball" prop1="rotstrength=2" prop2="rotspring=1" prop3="limits=">
+									<joint pos="0.0 0.0 -1.4" rotstrength="5"/>
+									<joint pos="-0.5 0.2 -2.9" rotstrength="5"/>
+								</group>
+							</vox>
+						</group>
+					</group>
+				</group>
+			</group>
+		</body>
+		<group name="nonphysical" prop0="collide=false">
+			<voxbox pos="8.89999 0.3 -110.99998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -110.99998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -133.19998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -133.19998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -155.39998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -155.39998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="17.2 9.3 -99.9" rot="0.0 180.0 0.0" size="84 11 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+			<voxbox pos="8.9 8.3 -99.9" rot="0.0 90.0 0.0" size="1013 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="16.0 8.3 -99.9" rot="0.0 90.0 0.0" size="1012 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="12.2 10.4 -99.9" rot="0.0 180.0 0.0" size="3 4 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="13.9 10.4 -99.9" rot="0.0 180.0 0.0" size="3 4 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="16.9 10.1 -201.10002" rot="0.0 0.0 0.0" size="3 15 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="8.8 10.1 -201.2" rot="0.0 0.0 0.0" size="3 15 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="8.89999 0.3 109.00002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 109.00002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 131.20004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 131.20004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="12.2 10.4 203.7" rot="0.0 180.0 0.0" size="3 4 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="16.9 10.1 104.2" rot="0.0 0.0 0.0" size="3 15 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="13.9 10.4 203.7" rot="0.0 -180.0 0.0" size="3 4 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="8.8 10.1 104.2" rot="0.0 0.0 0.0" size="3 15 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="17.2 9.3 203.7" rot="0.0 -180.0 0.0" size="84 11 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+			<voxbox pos="16.0 8.3 203.7" rot="0.0 90.0 0.0" size="995 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="8.9 8.3 203.69997" rot="0.0 90.0 0.0" size="995 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="15.89999 0.3 -199.79999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -177.59999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -177.59999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -199.79999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 131.20003" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 153.40004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 175.60005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 153.40002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 175.60005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 197.80005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 197.80005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+		</group>
+	</group>
+</prefab>
+

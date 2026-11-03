@@ -1,0 +1,9 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/Waves/UMWave3.xml" pos="0.0 0.0 -7.7" rot="0.0 0.0 0.0">
+		<instance pos="8.0 0.0 -10.3" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml"/>
+		<instance pos="-54.9 0.0 -10.3" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollumofficer1.xml"/>
+		<instance pos="-15.8 0.0 38.6" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml"/>
+		<instance pos="-34.6 0.0 10.7" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollumofficer3.xml"/>
+	</group>
+</prefab>
+

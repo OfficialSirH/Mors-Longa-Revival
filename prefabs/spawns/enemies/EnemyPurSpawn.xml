@@ -1,0 +1,5 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" pos="23.8 0.7 -33.8" rot="0.0 80.0 0.0">
+		<location tags="RandomRagdoll type=um chance=75 cover"/>
+	</group>
+</prefab>

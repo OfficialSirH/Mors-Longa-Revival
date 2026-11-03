@@ -1,0 +1,12 @@
+<prefab version="1.3.0">
+	<group>
+		<body tags="Loot=general-gpu_NMD-GPU interact=NMD-GPU" pos="0 .05" dynamic="true">
+			<voxbox pos="-.1 -.05 -.25" rot="0 0" size="2 1 5" color=".3 .3 .3"/>
+			<voxbox pos="-.01 -.045 -.24" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+			<voxbox pos="-.09 -.045 -.24" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+			<voxbox pos="-.01 -.045 .04" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+			<voxbox pos="-.09 -.045 .04" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+		</body>
+	</group>
+</prefab>
+

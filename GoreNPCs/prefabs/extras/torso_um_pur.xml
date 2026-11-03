@@ -1,0 +1,17 @@
+<prefab version="1.4.0">
+	<group pos="0.0 0.3 -0.1">
+		<group pos="0.05 -0.01 0.01" rot="0.0 0.0 0.0">
+			<vox pos="-0.05 0.2 -0.17" rot="20.0 180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extension"/>
+			<vox pos="0.2 0.2 0.03" rot="0.0 180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionside"/>
+			<vox pos="0.2 0.2 0.03" rot="0.0 180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionside"/>
+			<vox pos="-0.2 0.2 0.03" rot="0.0 180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionside"/>
+			<vox pos="0.0 0.57 -0.35" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionhead"/>
+			<vox pos="0.0 0.57 -0.3" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionhead2"/>
+			<vox pos="0.0 0.97 0.0" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionheadtop"/>
+			<vox pos="0.0 0.72 0.25" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionheadback"/>
+			<vox pos="0.0 0.72 0.35" rot="140.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="body_extensionheadback"/>
+			<vox pos="0.0 0.0 0.2" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" object="backpack"/>
+		</group>
+	</group>
+</prefab>
+

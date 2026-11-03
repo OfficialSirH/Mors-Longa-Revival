@@ -1,0 +1,41 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/cadillacsd80/Cadlilac Destroyed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body name="Body" pos="0.0 0.25 -0.15" dynamic="true">
+			<vox pos="0.0 -0.25 0.15" rot="0.0 180.0 -0.9" texture="8" blendtexture="5 " density="3.0" strength="3" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="body2" pbr="0 0 0 -64">
+				<group name="Doors">
+					<vox pos="1.4 0.08 0.5" rot="0.0 10.0 40.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="frontdoor2_l"/>
+					<vox pos="-0.9 0.3 0.4" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="frontdoor2_r">
+						<joint pos="0.1 0.2 0.6" rot="-90.0 90.0 0.0" type="ball" rotstrength="0.0" rotspring="0.0" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="0.9 0.3 -0.6" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="reardoor2_l">
+						<joint pos="-0.1 0.2 0.4" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="-1.2 -0.0 -0.6" rot="0.0 0.0 -10.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="reardoor2_r"/>
+					<vox pos="-0.6 0.4 2.9" rot="43.6 -15.3 6.6" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="hood"/>
+					<vox pos="0.0 0.5 -2.3" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="boot2" pbr="0 0 0 -64">
+						<joint pos="0.0 0.5 0.4" rot="0.0 90.0 0.0" type="ball" rotstrength="0" rotspring="0.0" collide="true" limits="0 70" sound="true"/>
+					</vox>
+				</group>
+			</vox>
+			<vox pos="-0.5 -0.15 -1.85" rot="0.0 -160.0 -80.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="wheel_fl"/>
+			<vox pos="0.9 -0.25 -1.75" rot="0.0 180.0 -10.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="wheel_fr"/>
+			<vox pos="-1.1 -0.15 1.45" rot="0.0 140.0 90.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="wheel_bl"/>
+			<vox pos="0.8 -0.25 1.55" rot="0.0 -180.0 0.0" texture="8" blendtexture="5 " prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="wheel_br"/>
+			<group name="Steering Wheel" pos="-0.45 0.6 -0.4" rot="-10.0 0.0 0.0">
+				<body name="Steering Wheel" pos="0.0 0.0 0.1" dynamic="true">
+					<vox name="steer" tags="steer=4.5" pos="0.05 -0.25 -0.05" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 " density="2" strength="3" prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="steer">
+						<joint pos="0.05 0.25 0.0" type="hinge"/>
+					</vox>
+				</body>
+			</group>
+			<group name="Belt" pos="0.0 -0.85 -3.45" rot="0.0 180.0 0.0">
+				<body name="Belt" pos="0.0 2.05 0.1" dynamic="true">
+					<vox name="drive" tags="drive" pos="0.05 -1.05 -1.7" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 " density="2" strength="3" prop="true" file="MOD/Vehicles/cadillacsd80/cadillacsd80.vox" object="belt">
+						<joint name="drive" tags="drive" pos="0.05 0.25 0.0" type="hinge"/>
+					</vox>
+				</body>
+			</group>
+		</body>
+	</group>
+</prefab>
+

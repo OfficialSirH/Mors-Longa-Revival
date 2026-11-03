@@ -1,0 +1,8 @@
+<prefab version="1.2.0">
+	<group>
+		<body tags="Loot=material-steel_Steel_1 interact=Steel" pos="0 .15" dynamic="true">
+			<vox pos="0 -.15 .05" file="MOD/vox/Loots/Materials.vox" object="Steel"/>
+		</body>
+	</group>
+</prefab>
+

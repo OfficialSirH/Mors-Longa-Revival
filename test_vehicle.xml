@@ -1,0 +1,340 @@
+<scene version="1.4.0" shadowVolume="200 15 200">
+	<group name="MAP">
+		<voxbox tags="unbreakable" pos="-100.0 -0.1 -100.0" texture="11" size="2000 1 2000" material="metal" color="0.27 0.27 0.27"/>
+		<spawnpoint pos="1.4 0.0 0.0" rot="0.0 -180.0 0.0"/>
+		<script file="sandbox.lua"/>
+	</group>
+	<group name="SCRIPTS" layer="SCRIPTS">
+		<instance file="MOD/level_scripts.xml"/>
+	</group>
+	<group layer="enemyvehicle">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD1.xml"/>
+		<instance pos="0.0 0.0 -7.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD2.xml"/>
+		<instance pos="0.0 0.0 -15.5" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD3.xml"/>
+		<instance pos="0.0 0.0 -23.3" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD4.xml"/>
+		<instance pos="0.0 0.0 -31.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD5.xml"/>
+		<instance pos="0.0 0.0 -39.4" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD6.xml"/>
+		<instance pos="0.0 0.0 -47.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD7.xml"/>
+		<instance pos="0.1 0.0 -54.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/VehicleD8.xml"/>
+		<instance pos="4.5 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Enemy Car/SUV Enemy.xml"/>
+	</group>
+	<group name="layer" pos="-3.6 0.0 -3.6" rot="0.0 0.0 0.0" layer="heli">
+		<instance pos="2.4 0.0 -11.00001" rot="0.0 0.0 0.0" file="MOD/main/AS350/AS350_MILITARY.xml"/>
+		<instance pos="3.1 0.0 6.19999" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM5.xml"/>
+	</group>
+	<group pos="-20.0 0.0 0.0" rot="0.0 0.0 0.0" layer="vehicles1">
+		<group name="bmp" pos="0.0 0.0 90.0" rot="0.0 0.0 0.0">
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM21.xml"/>
+			<instance pos="-9.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM18.xml"/>
+			<instance pos="-9.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM19.xml"/>
+			<instance pos="-9.0 15.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM20.xml"/>
+			<instance pos="-13.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef36.xml"/>
+			<instance pos="-13.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef37.xml"/>
+		</group>
+		<group name="T72" pos="0.0 0.0 80.0" rot="0.0 0.0 0.0">
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM3.xml"/>
+			<instance pos="-9.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM17.xml"/>
+			<instance pos="-9.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM14.xml"/>
+			<instance pos="-9.0 15.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM15.xml"/>
+			<instance pos="-9.0 20.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM16.xml"/>
+			<instance pos="-14.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef8.xml"/>
+		</group>
+		<group name="T-54" pos="0.0 0.0 70.0" rot="0.0 0.0 0.0">
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM10.xml"/>
+			<instance pos="-9.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM11.xml"/>
+			<instance pos="-9.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM12.xml"/>
+			<instance pos="-9.0 15.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM13.xml"/>
+			<instance pos="-13.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef24.xml"/>
+			<instance pos="-13.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef34.xml"/>
+		</group>
+		<group name="M51 Super Sherman" pos="0.0 0.0 60.0" rot="0.0 0.0 0.0">
+			<instance pos="-13.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef22.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM8.xml"/>
+		</group>
+		<group name="T-34" pos="0.0 0.0 50.0" rot="0.0 0.0 0.0">
+			<instance pos="-13.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef23.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM9.xml"/>
+		</group>
+		<group name="brdm wip" pos="0.0 0.0 40.0" rot="0.0 0.0 0.0">
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/brdm/brdm.xml"/>
+			<instance pos="-13.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/brdm/brdmwrecked.xml"/>
+		</group>
+		<group name="ZIS-151" pos="0.0 0.0 30.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg28.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb26.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM2.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef7.xml"/>
+			<instance pos="-12.8 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef33.xml"/>
+		</group>
+		<group name="ural" pos="0.0 0.0 20.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg14.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb3.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef17.xml"/>
+		</group>
+		<group name="mili truc" pos="0.0 0.0 10.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/military_truck/Milltary_Truck.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/military_truck/Milltary_Truck Damaged.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/military_truck/Milltary_Truck_UM Damaged.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/military_truck/Millitary Truck Destroyed.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/military_truck/Millitary_Truck_UM Destroyed.xml"/>
+		</group>
+		<group name="ZIL-131" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg33.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM25.xml"/>
+		</group>
+		<group name="humvee" pos="0.0 0.0 -10.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg29.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg30.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM1.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef35.xml"/>
+		</group>
+		<group name="SUV" pos="0.0 0.0 -20.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg10.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg31.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM22.xml"/>
+			<instance pos="-9.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM23.xml"/>
+		</group>
+		<group name="technical" pos="0.0 0.0 -30.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg1.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg12.xml"/>
+			<instance pos="0.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg13.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM4.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef1.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef2.xml"/>
+			<instance pos="-12.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef3.xml"/>
+			<instance pos="-12.0 15.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef4.xml"/>
+			<instance pos="-12.0 20.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef5.xml"/>
+			<instance pos="-12.0 25.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef6.xml"/>
+			<instance pos="-12.0 30.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef14.xml"/>
+			<instance pos="-3.3 0.0 0.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb34.xml"/>
+		</group>
+	</group>
+	<group pos="10.0 0.0 0.0" layer="vehicles2">
+		<group name="semi" pos="0.0 0.0 80.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg2.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb1.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb15.xml"/>
+			<group pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<group name="loot">
+					<instance pos="-0.05 2.0 2.95" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 4.25" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 5.45" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 6.65" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 11.55" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 7.85" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 9.15" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 10.35" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 12.65" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 8.95" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 10.25" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
+					<instance pos="-0.05 2.0 11.45" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+				</group>
+				<instance file="MOD/Vehicles/semitruck-us/Semi Special.xml"/>
+				<instance pos="-0.2 1.6 5.0" file="MOD/prefabs/spawns/enemies/EnemyCultSpawn.xml"/>
+				<instance pos="0.0 5.5 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-us/Semi Special.xml"/>
+			</group>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef19.xml"/>
+		</group>
+		<group name="semi-flathead" pos="0.0 0.0 50.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-flathead/Semi.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-flathead/Semi Damaged.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-flathead/Semi Mod.xml"/>
+		</group>
+		<group name="bus" pos="0.0 0.0 35.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg27.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb24.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb25.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef32.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS8.xml"/>
+		</group>
+		<group name="Truck" pos="0.0 0.0 20.0" rot="0.0 0.0 0.0">
+			<instance pos="0.1 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg43.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg44.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb31.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb32.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleF44.xml"/>
+		</group>
+		<group name="RVMethLab" pos="0.0 0.0 10.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg26.xml"/>
+		</group>
+		<group name="Paz 3205" pos="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg35.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb28.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleF40.xml"/>
+		</group>
+		<group name="ZIL-131" pos="0.0 0.0 -10.0">
+			<instance pos="0.0 -0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg32.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleF38.xml"/>
+		</group>
+		<group name="dump" pos="0.0 0.0 -20.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg11.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb2.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef18.xml"/>
+		</group>
+		<group name="van yellow" pos="0.0 0.0 -30.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg8.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb4.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM6.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef15.xml"/>
+		</group>
+		<group name="Uaz452" pos="0.0 0.0 -40.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg34.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg36.xml"/>
+			<instance pos="0.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg47.xml"/>
+			<instance pos="0.0 15.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg48.xml"/>
+			<instance pos="-3.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb27.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleF39.xml"/>
+		</group>
+		<group name="cadillacfbl80" pos="0.0 0.0 -50.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg7.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb7.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb8.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef13.xml"/>
+		</group>
+		<group name="cadillacsd80" pos="0.0 0.0 -60.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg6.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb9.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb10.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef12.xml"/>
+		</group>
+		<group name="Plymouth Fury" pos="0.0 0.0 -70.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg5.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb12.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb13.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef11.xml"/>
+		</group>
+		<group name="1974 Dodge Monaco" pos="0.0 0.0 -80.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg19.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg20.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb17.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb18.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef28.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef29.xml"/>
+		</group>
+		<group name="1973 Ford Falcon XB GT" pos="0.0 0.0 -90.0" rot="0.0 0.0 0.0">
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS2.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef20.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef31.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb19.xml"/>
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg21.xml"/>
+		</group>
+		<group name="Gaz 24" pos="20.0 0.0 90.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg16.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg17.xml"/>
+			<instance pos="0.0 10.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg18.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb16.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef45.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef46.xml"/>
+		</group>
+		<group name="bugzilla" pos="20.0 0.0 80.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS1.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef21.xml"/>
+		</group>
+		<group name="Beatle" pos="20.0 0.0 70.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg3.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb5.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb14.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef9.xml"/>
+		</group>
+		<group name="salooncar" pos="20.0 0.0 60.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg23.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg24.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb21.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb22.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef25.xml"/>
+			<instance pos="-12.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef26.xml"/>
+		</group>
+		<group name="Minivan 1" pos="20.0 0.0 50.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg15.xml"/>
+		</group>
+		<group name="stationwagon" pos="20.0 0.0 40.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg25.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb23.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef27.xml"/>
+		</group>
+		<group name="1992 Jeep Wrangler" pos="20.0 0.0 30.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg22.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb20.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef30.xml"/>
+		</group>
+		<group name="Willy Jeep not fixed" pos="20.0 0.0 20.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg9.xml"/>
+			<instance pos="-9.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleM7.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef16.xml"/>
+		</group>
+		<group name="Mini" pos="20.0 0.0 10.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg4.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb6.xml"/>
+			<instance pos="-3.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb11.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef10.xml"/>
+		</group>
+		<group name="SportsCar" pos="20.0 0.0 0.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg37.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb29.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS4.xml"/>
+			<instance pos="-6.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS5.xml"/>
+			<instance pos="-11.8 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef41.xml"/>
+		</group>
+		<group name="Micriocar" pos="20.0 0.0 -10.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg38.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb30.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS7.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef42.xml"/>
+		</group>
+		<group name="SUV" pos="20.0 0.0 -20.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg39.xml"/>
+			<instance pos="-3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewb33.xml"/>
+			<instance pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef43.xml"/>
+		</group>
+		<group name="GolfCart" pos="20.0 0.0 -30.0" rot="0.0 0.0 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg45.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS6.xml"/>
+		</group>
+	</group>
+	<group pos="50.0 0.0 0.0" layer="vehicles3">
+		<group name="wheeledcockpit" pos="-5.8 0.0 90.0">
+			<instance pos="-0.2 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/vehicleS10.xml"/>
+		</group>
+		<group name="cement_truck" pos="0.0 0.0 80.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg42.xml"/>
+		</group>
+		<group name="mobile_crane" pos="0.0 0.0 70.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/mobile_crane.xml"/>
+		</group>
+		<group name="bulldozer" pos="0.0 0.0 60.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/bulldozer.xml"/>
+		</group>
+		<group name="small_excavator" pos="0.0 0.0 50.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/small_excavator.xml"/>
+		</group>
+		<group name="backhoe" pos="0.0 0.0 40.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/backhoe.xml"/>
+		</group>
+		<group name="skid-loader" pos="0.0 0.0 30.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/skid-loader.xml"/>
+		</group>
+		<group name="Tractor" pos="0.0 0.0 20.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg40.xml"/>
+			<instance pos="0.0 5.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclewg41.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/VehicleS9.xml"/>
+		</group>
+		<group name="Driveable buildings!" pos="0.6 0.0 11.6">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/vehicleS12.xml"/>
+			<instance pos="-4.3 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/vehicleS11.xml"/>
+		</group>
+		<group name="Boats">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/vehicleS13.xml"/>
+			<instance pos="-6.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/vehicles/vehicleS14.xml"/>
+		</group>
+	</group>
+	<group layer="-noVehicleScript -SCRIPTS">
+		<script file="MOD/scripts/door_global.lua"/>
+		<script file="MOD/scripts/Game/PlayerVehicleSeat/PlayerVehicleSeat.lua"/>
+		<script file="MOD/scripts/Game/Fuel.lua"/>
+		<instance pos="-6.0 1.25 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/player.xml"/>
+	</group>
+	<group name="anti vehicle lag" layer="-noAntiVehicleLag">
+		<script file="MOD/scripts/vehicle_checker.lua"/>
+	</group>
+</scene>
+

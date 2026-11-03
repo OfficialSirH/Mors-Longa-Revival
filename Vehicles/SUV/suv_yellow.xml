@@ -1,0 +1,58 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/SUV/suv_yellow.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="SUV (Yellow)" tags="Door DoAlarm" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="suv3 0.9" spring="1" damping="2" topspeed="150" acceleration="0.12" strength="4" antispin="0" antiroll="0" steerassist="0.6" friction="1.0">
+			<body pos="0.0 0.5 -0.45" dynamic="true">
+				<vox pos="-0.05 -0.3 0.45" texture="8 0.5" blendtexture="5 .2" strength="2" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="body">
+					<light pos="-0.7 0.85 2.2" type="area" color="1 0.1 0.1" size="0.2 0.1" unshadowed="0.3" glare="0.2"/>
+					<light pos="-0.65 0.75 2.2" type="area" size="0.1 0.1" unshadowed="0.3"/>
+					<light pos="0.75 0.75 2.2" type="area" size="0.1 0.1" unshadowed="0.3"/>
+					<light pos="0.8 0.85 2.2" type="area" color="1 0.1 0.1" size="0.2 0.1" unshadowed="0.3" glare="0.2"/>
+					<light pos="-0.7 0.55 -2.2" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="50" penumbra="30" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+					<light pos="0.8 0.55 -2.2" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="50" penumbra="30" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+					<location tags="exhaust" pos="-0.5 0 2.3"/>
+					<location tags="vital" pos="0.05 0.55 -1.5"/>
+					<location tags="player" pos="-0.25 1.25 0.1"/>
+					<vox pos="-0.7 0.1 0.7" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="door_rl">
+						<joint tags="door" pos="-0.1 0.1 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+						<joint pos="-0.1 0.8 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+					</vox>
+					<vox pos="-0.9 0.1 -0.2" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="door_fl">
+						<joint tags="door" pos="0.1 0.4 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+						<joint pos="0.1 0.8 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+					</vox>
+					<vox pos="0.9 0.1 -0.2" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="door_fr">
+						<joint tags="door" pos="-0.0 0.4 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+						<joint pos="-0.0 0.8 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+					</vox>
+					<vox pos="0.8 0.1 0.7" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="door_rr">
+						<joint tags="door" pos="0.1 0.1 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+						<joint pos="0.1 0.8 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
+					</vox>
+					<vox pos="0.0 0.5 2.1" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="boot">
+						<joint tags="door" pos="0.5 1.0 -0.2" rot="0.0 -90.0 -90.0" type="hinge" rotstrength="0.1" rotspring="0" limits="0 90"/>
+						<joint tags="door" pos="-0.4 1.0 -0.2" rot="0.0 -90.0 -90.0" type="hinge" rotstrength="0.1" rotspring="0" limits="0 90"/>
+					</vox>
+					<vox pos="0.0 0.8 -1.7" texture="8 0.5" blendtexture="5 .2" prop="true" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="hood">
+						<joint tags="door" pos="0.7 0.2 0.5" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+						<joint tags="door" pos="-0.6 0.2 0.5" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+					</vox>
+					<location name="exit" tags="exit" pos="-1.15 0.5 0.0"/>
+					<location name="camera" tags="camera" pos="0.05 1.5 0.0"/>
+				</vox>
+				<wheel name="fr" pos="0.75 -0.15 -1.2" drive="1" steer="1">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .2" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="wheel_fr"/>
+				</wheel>
+				<wheel name="fl" pos="-0.75 -0.15 -1.2" drive="1" steer="1">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .2" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="br" pos="0.75 -0.15 1.7" drive="1">
+					<vox pos="0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .2" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="wheel_br"/>
+				</wheel>
+				<wheel name="bl" pos="-0.75 -0.15 1.7" drive="1">
+					<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .2" file="MOD/Vehicles/SUV/suv1_yellow.vox" object="wheel_bl"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

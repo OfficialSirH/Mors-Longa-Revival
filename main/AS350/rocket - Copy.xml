@@ -1,0 +1,10 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/main/AS350/rocket.xml" pos="-147.90001 10.1 -1.5" rot="0.0 0.0 0.0">
+		<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/main/AS350/script/rocket.lua">
+			<body tags="rocket" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" dynamic="true">
+				<vox tags="rocket" pos="0.0 -0.1 1.5" strength="0.1" file="MOD/main/AS350/rocket.vox" object="rocket"/>
+			</body>
+		</script>
+	</group>
+</prefab>
+

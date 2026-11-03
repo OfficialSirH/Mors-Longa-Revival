@@ -1,0 +1,44 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/gun-ppsh41.xml" pos="4.0" rot="0">
+		<body name="PPSh" tags="Loot=gun-ppsh41_PPSh-41_mag0-ppsh-762x25_PPSh-Mag_35_35_7.62x25 interact=PPSh-41 unbreakable" pos="0 .35" dynamic="true">
+			<group name="Wood" prop0="color=.3 .19 .11" prop1="material=wood">
+				<group name="Stock" pos="-.05 -.08 -.25">
+					<voxbox pos=".01001 0 .04" size="1 1 2">
+						<voxbox pos="0 .1" rot="135.0" size="1 1 2">
+							<voxbox pos="0 .1 .2" rot="125.0" size="1 2 1">
+								<voxbox pos="0 .2 .1" rot="96.0" size="1 1 2"/>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+					<voxbox pos="-.01 0 .04" size="1 1 2">
+						<voxbox pos="0 .1" rot="135.0" size="1 1 2">
+							<voxbox pos="0 .1 .2" rot="125.0" size="1 2 1">
+								<voxbox pos="0 .2 .1" rot="96.0" size="1 1 2"/>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</group>
+			</group>
+			<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<voxbox name="Grip" tags="Grip" pos="-.05 0 -.12" rot="140.0" size="1 1 1">
+					<light tags="handle" pos=".05 .05 .04999" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+				</voxbox>
+				<voxbox pos="-.05 -.05 -.2" size="1 1 6">
+					<voxbox pos="0 -.03 .15" size="1 1 2"/>
+				</voxbox>
+				<voxbox name="Barrel" tags="barrel range=30 magsize=35 damage=2 firerate=.05 gun=ppsh roundsize=2" pos="-.05 -.05 .4" size="1 1 1"/>
+			</group>
+			<group name="Magazine" pos="0 -.08" prop0="color=.39 .39 .39" prop1="material=metal">
+				<group pos="-.05" rot="-10.0">
+					<voxbox pos="0 -.1" size="1 1 1"/>
+					<group pos="0 -.1 -0" rot="-10.0">
+						<voxbox pos="0 -.1" size="1 1 1"/>
+						<group pos="0 -.1 -0" rot="-10.0">
+							<voxbox pos="0 -.1" size="1 1 1"/>
+						</group>
+					</group>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>

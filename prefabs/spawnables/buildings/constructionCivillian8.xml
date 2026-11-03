@@ -1,0 +1,345 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/buildings/constructionCivillian8.xml" pos="-67.5 2.5 70.9" rot="0.0 0.0 0.0">
+		<group name="Structure" prop0="texture=7 .5">
+			<group name="gas pump">
+				<vox name="ground" pos="0 0 -7.3" file="MOD/main/gas station/gas station.vox" object="ground"/>
+				<vox name="gas pump" tags="explosive=2" pos="2.1 0.1 -7.2" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+					<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" strength=".1" file="MOD/main/gas station/gas station.vox" object="little thing">
+						<rope pos="0 .1 -.2" slack=".5">
+							<location/>
+							<location pos="-.1 1.1 .1"/>
+						</rope>
+					</vox>
+					<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" strength=".1" file="MOD/main/gas station/gas station.vox" object="little thing">
+						<rope pos="0 .1 -.2" slack=".5">
+							<location/>
+							<location pos="-.1 1.1 .1"/>
+						</rope>
+					</vox>
+				</vox>
+				<vox name="gas pump" tags="explosive=2" pos="-2.1 0.1 -7.2" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+					<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" strength=".1" file="MOD/main/gas station/gas station.vox" object="little thing">
+						<rope pos="0 .1 -.2" slack=".5">
+							<location/>
+							<location pos="-.1 1.1 .1"/>
+						</rope>
+					</vox>
+					<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" strength=".1" file="MOD/main/gas station/gas station.vox" object="little thing">
+						<rope pos="0 .1 -.2" slack=".5">
+							<location/>
+							<location pos="-.1 1.1 .1"/>
+						</rope>
+					</vox>
+				</vox>
+				<vox name="fence" pos="4.3 0 -7.3" texture="7 .9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				<vox name="fence" pos="-4.3 0 -7.3" texture="7 .9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				<group>
+					<vox name="pillar" pos="3.6 0 -7.25" file="MOD/main/gas station/gas station.vox" object="pillar"/>
+					<vox name="pillar" pos="-3.6 0 -7.25" file="MOD/main/gas station/gas station.vox" object="pillar"/>
+				</group>
+				<group>
+					<body pos="-2.1 4.3 -7.3" dynamic="true">
+						<instance pos=".05 -.1 -.05" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<rope pos=".65 .2">
+							<location/>
+							<location pos="0 .4"/>
+						</rope>
+						<rope pos="-.55 .2">
+							<location/>
+							<location pos="0 .4"/>
+						</rope>
+					</body>
+					<body pos="2.1 4.3 -7.3" dynamic="true">
+						<instance pos=".05 -.1 -.05" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<rope pos=".65 .2">
+							<location/>
+							<location pos="0 .4"/>
+						</rope>
+						<rope pos="-.55 .2">
+							<location/>
+							<location pos="0 .4"/>
+						</rope>
+					</body>
+				</group>
+				<body dynamic="true">
+					<group prop0="material=masonry">
+						<compound>
+							<voxbox pos="5.10001 5.20001 -11.30002" rot="90 -90" size="100 100 2" brush="MOD/assets/industrial/wall-metal-blue.vox" object="metal-blue"/>
+							<voxbox pos="5.10001 4.90001 -11.30001" rot="0 -90" size="100 1 100"/>
+							<voxbox pos="-4.9 4.7 -11.4" rot="0 -90" size="102 5 1" color="0 .4 1"/>
+							<voxbox pos="5.1 4.7 -1.3" rot="0 -90" size="1 5 100" color="0 .4 1"/>
+							<voxbox pos="5.1 4.7 -11.4" rot="0 -90" size="1 5 100" color="0 .4 1"/>
+							<voxbox pos="5.2 4.7 -11.4" rot="0 -90" size="102 5 1" color="0 .4 1"/>
+						</compound>
+						<group prop0="rotstrength=1" prop1="rotspring=.1" prop2="sound=true">
+							<joint pos="-4.9 5 -1.2"/>
+							<joint pos="5.1 5 -1.2"/>
+							<joint pos="3.1 5 -1.2"/>
+							<joint pos="1.1 5 -1.2"/>
+							<joint pos="-.9 5 -1.2"/>
+							<joint pos="-2.9 5 -1.2"/>
+							<joint pos="3.65 4.9 -7.3"/>
+							<joint pos="-3.55 4.9 -7.3"/>
+						</group>
+					</group>
+					<group>
+						<vox name="light" tags="nocull" pos="0.0 4.6 -9.4" file="MOD/main/gas station/gas station.vox" object="light">
+							<light tags="night fxflicker=3" rot="90" type="cone" color="1.0 0.82 0.43" scale="30" angle="140" penumbra="10" reach="6" fogscale="0.1" glare="0.4"/>
+						</vox>
+						<vox name="light" tags="nocull" pos="0.0 4.6 -5.3" file="MOD/main/gas station/gas station.vox" object="light">
+							<light tags="night" rot="90" type="cone" color="1.0 0.82 0.43" scale="30" angle="140" penumbra="10" reach="6" fogscale="0.1" glare="0.4"/>
+						</vox>
+					</group>
+				</body>
+				<group name="ground main tank access" pos="-5.6 -0.1 -7.4" rot="0.0 0.0 0.0">
+					<body tags="GasCan RNDfuelLevel=40 fuelLevelMAX=1000" pos="0.1 0.2 0.0" dynamic="true">
+						<vox name="ground" pos="-0.1 0.1 0.0" rot="0.0 -90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access_cover">
+							<joint pos="0.05 0.0 -0.5" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.001" limits="-100 0"/>
+						</vox>
+					</body>
+					<vox name="ground" pos="0.1 0.2 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access"/>
+					<vox name="ground" tags="explosive=3" pos="0.1 0.14 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="fuel_ground"/>
+					<vox name="ground" pos="0.1 0.1 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access_ground"/>
+					<instance pos="-1.2 0.1 0.2" rot="0.0 70.0 0.0" file="MOD/prefabs/spawnables/loots/General GASCAN.xml"/>
+				</group>
+			</group>
+			<group name="Store">
+				<group name="Walls" prop0="material=masonry">
+					<compound pos="-5 4.7 -1.2">
+						<voxbox pos="14.9 0 .1" rot="0 -90" size="57 1 148">
+							<voxbox pos="-.1 .5 14.8" rot="80 90" size="148 59 2" brush="MOD/assets/industrial/wall-metal-blue.vox" object="metal-blue">
+								<voxbox pos="-.1" rot="0 90 90" size="59 5 1" color="0 .4 1"/>
+								<voxbox pos="14.8" rot="0 90 90" size="59 5 1" color="0 .4 1"/>
+							</voxbox>
+							<voxbox pos="-.1 0 -.1" size="58 5 1" color="0 .4 1"/>
+							<voxbox pos="2.8 .5 14.8" size="29 5 1" color="0 .4 1"/>
+							<voxbox pos="2.8 .5 -.1" size="29 5 1" color="0 .4 1"/>
+							<voxbox pos="-.1 0 14.8" size="58 5 1" color="0 .4 1"/>
+							<voxbox pos="5.7 0 14.9" rot="0 90" size="150 15 1" color="0 .4 1"/>
+							<voxbox pos="-.1 0 14.9" rot="0 90" size="149 5 1" color="0 .4 1"/>
+						</voxbox>
+					</compound>
+					<compound pos="0 0 -1.2">
+						<voxbox pos="-5" size="150 2 59"/>
+						<voxbox pos="-4.7 .1 5.6" rot="0 90" size="53 1 144" brush="MOD/assets/industrial/innerceilings.vox" object="plaster-tiles-small"/>
+					</compound>
+					<compound pos="0 0 .8">
+						<voxbox pos="-5 .2 -2" size="5 45 3"/>
+						<voxbox pos="-4.5 3.8 -2" size="108 9 3"/>
+						<voxbox pos="6.3 .2 -2" size="37 45 3"/>
+						<group name="glass" pos="-4.4 .2 -2" prop0="material=glass" prop1="color=0 0 0 .9" prop2="pbr=1 1">
+							<voxbox pos="-0 2.9 .1" size="22 6 1"/>
+							<voxbox pos="2.3 2.9 0.1" size="83 6 1"/>
+						</group>
+						<group name="frame" pos="-4.4 .2 -2" prop0="material=metal" prop1="color=.4 .4 .4" prop2="pbr=.1 .1">
+							<voxbox pos="-.1" size="1 36 3"/>
+							<voxbox pos="2.2" size="1 36 3"/>
+							<voxbox pos="10.6" size="1 36 3"/>
+							<voxbox pos="4.3" size="1 36 3"/>
+							<voxbox pos="6.4" size="1 36 3"/>
+							<voxbox pos="8.5" size="1 36 3"/>
+							<voxbox pos="2.3" size="83 1 3"/>
+							<voxbox pos="-.1 3.5" size="107 1 3"/>
+							<voxbox pos="-.1 2.8" size="107 1 3"/>
+						</group>
+					</compound>
+					<voxbox pos="-5 .2 4.4" size="150 45 3"/>
+					<voxbox pos="-5 .2 -.9" size="3 45 53">
+						<vox tags="window big" pos="10.2 0.1 -0.1" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass">
+							<light tags="spawn" pos="1.0 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+						</vox>
+						<vox tags="window big" pos="8.1 0.1 -0.1" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass">
+							<light tags="spawn" pos="1.0 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+						</vox>
+						<vox tags="window big" pos="6.0 0.1 -0.1" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass">
+							<light tags="spawn" pos="1.0 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+						</vox>
+						<vox tags="window big" pos="3.9 0.1 -0.1" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass">
+							<light tags="spawn" pos="1.0 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+						</vox>
+					</voxbox>
+					<voxbox pos="9.7 .2 -.9" size="3 45 53"/>
+				</group>
+				<group name="Props">
+					<group name="Desk">
+						<vox name="desk" pos="-3 .2 2.5" texture="7 .5" file="MOD/main/gas station/gas station props.vox" object="desk"/>
+						<vox name="monitor" pos="-2.9 1.2 1.9" rot="0 170" texture="7 .3" prop="true" file="MOD/main/gas station/gas station props.vox" object="monitor">
+							<screen tags="name=voxbox amount=1 " pos="0 .6 -.1" rot="0 180" size="1.06 .65" bulge="0" resolution="2048 1536" enabled="true" interactive="false" emissive=".2">
+								<light type="area" color=".04 0 1" scale="1" size="1.06 .65" fogscale="0" fogiter="0"/>
+							</screen>
+						</vox>
+						<vox name="pc" pos="-2.6 .2 2.2" rot="0 -10" desc="pc" prop="true" file="MOD/main/gas station/gas station props.vox" object="computer">
+							<rope pos="0 .1" maxstretch=".5">
+								<location/>
+								<location pos=".41424 -.1 -.38"/>
+							</rope>
+							<rope pos="0 .1" maxstretch="1">
+								<location/>
+								<location pos="-.3 .9 -.3"/>
+							</rope>
+						</vox>
+						<vox name="cash registor" pos="-1.8 1.2 2.7" rot="0 -180" prop="true" file="MOD/main/first stores building/store building.vox" object="cash register"/>
+					</group>
+					<group name="CCTV" pos="-4.7 4.15 -.05" rot="-20 -130">
+						<vox name="cctv" pos="0 -.35 -.3" texture="7 .3" prop="false" file="MOD/main/gas station/gas station props.vox" object="cctv">
+							<screen tags="name=cctv amount=1 " pos="0 .4 -.4" rot="0 180" size="1.06 .65" bulge="0" resolution="1261 712" enabled="true" interactive="false" emissive=".2"/>
+						</vox>
+					</group>
+					<group name="Security Cams">
+						<joint pos="-4.7 4.9 -11.1" rot="-40 -130" rotstrength=".5">
+							<vox pos="-.04999 -.25 -.3" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam"/>
+						</joint>
+						<joint pos="9.5 4.7 4.2" rot="-30 70" rotstrength=".5">
+							<vox pos="-.04999 -.25 -.3" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam"/>
+						</joint>
+						<joint pos="-4.7 4.6 -.7" rot="-30 -100" rotstrength=".5">
+							<vox pos="-.04999 -.25 -.3" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam"/>
+						</joint>
+					</group>
+					<group name="Shelfs">
+						<compound pos="3.8 .2 1.85" prop="true">
+							<voxbox pos="0 0 -.3" size="33 20 7" brush="MOD/main/gas station/gas station props.vox" object="display side" offset="11"/>
+							<voxbox pos="0 0 .4" rot="0 180" size="33 20 7" brush="MOD/main/gas station/gas station props.vox" object="display side" offset="11"/>
+						</compound>
+						<compound pos="3.8 .2 4.2">
+							<voxbox pos="-4.05 0 -.2" size="80 20 4" brush="MOD/main/gas station/gas station props.vox" object="display"/>
+						</compound>
+					</group>
+					<group name="Refrigerator" prop0="type=hinge" prop1="rotstrength=0.005" prop2="rotspring=0.0" prop3="limits=0 160">
+						<vox name="refrigerator" pos="9.3 0.2 2.1" rot="0 -180" density="3" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="kit kat empty">
+							<vox name="door" pos=".4 .1 1.5" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-.1 .4 -.7" rot="-90 -90"/>
+								<joint pos="-.1 1.5 -.7" rot="-90 -90"/>
+							</vox>
+							<vox name="door" pos=".4 .1" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-.1 .4 -.7" rot="-90 -90" type="hinge" rotstrength=".01" limits="0 160"/>
+								<joint pos="-.1 1.5 -.7" rot="-90 -90" type="hinge" rotstrength=".01" limits="0 160"/>
+							</vox>
+							<vox name="door" pos=".4 .1 -1.5" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-.1 .4 -.7" rot="-90 -90" type="hinge" rotstrength=".01" limits="0 160"/>
+								<joint pos="-.1 1.5 -.7" rot="-90 -90" type="hinge" rotstrength=".01" limits="0 160"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="-4.3 0.2 0.65" density="3" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="pepsi empty">
+							<vox name="door" pos=".4 .2" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="poosi door">
+								<joint pos="-.1 1.5 -.5" rot="-90 -90"/>
+								<joint pos="-.1 .4 -.5" rot="-90 -90"/>
+							</vox>
+						</vox>
+					</group>
+					<group name="Lights" prop0="type=hinge" prop1="rotstrength=.01" prop2="rotspring=.1" prop3="limits=0 160">
+						<instance pos="3.1 3.9 -1.5" rot="0 180" file="MOD/assets/industrial/lamp-wall-fluorecent-short.xml"/>
+						<instance pos="7.3 3.9 -1.5" rot="0 180" file="MOD/assets/industrial/lamp-wall-fluorecent-short.xml"/>
+						<instance pos="-1.1 3.9 -1.5" rot="0 180" file="MOD/assets/industrial/lamp-wall-fluorecent-short.xml"/>
+						<instance pos="7.75 4.4 3.3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos="7.75 4.4 .3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos="4.25 4.4 3.3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos="4.25 4.4 .3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos=".75 4.4 3.3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos=".75 4.4 .3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos="-2.75 4.4 3.3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+						<instance pos="-2.75 4.4 .3" rot="0 180" file="MOD/assets/industrial/lamp-ceiling-fixed.xml"/>
+					</group>
+					<group name="Junk">
+						<vox pos="-6.628 0 .649" rot="0 80" density="2" prop="true" file="MOD/vox/Tux/Props/Evertides Mall/evertides_porta_potty.vox" object="Potty">
+							<vox pos="-.1 .5 -.5" prop="true" file="MOD/vox/Tux/Props/Evertides Mall/evertides_porta_potty.vox" object="Door">
+								<joint pos="0.5 0.6 -0.1" rotstrength="0.005" collide="true"/>
+								<joint pos="0.5 1.6 -0.1" rotstrength="0.005" collide="true"/>
+							</vox>
+						</vox>
+						<vox pos="-6.4 0 3.4" rot="0 90" density="2" prop="true" file="MOD/vox/Tux/Props/Evertides Mall/evertides_porta_potty.vox" object="Potty">
+							<vox pos="-.1 .5 -.5" prop="true" file="MOD/vox/Tux/Props/Evertides Mall/evertides_porta_potty.vox" object="Door">
+								<joint pos="0.5 0.6 -0.1" rotstrength="0.005" collide="true"/>
+								<joint pos="0.5 1.6 -0.1" rotstrength="0.005" collide="true"/>
+							</vox>
+						</vox>
+					</group>
+				</group>
+			</group>
+			<group name="Lights">
+				<vox name="light" pos="-2.3 4.6 1.8" file="MOD/main/gas station/gas station store.vox" object="light">
+					<light tags="lamp2" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+				</vox>
+				<vox name="light" pos="7.5 4.6 1.8" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="light">
+					<light tags="lamp2 " rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+				</vox>
+				<vox name="light" pos="2.5 4.6 1.8" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="light">
+					<light tags="lamp2 fxflicker=4" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+				</vox>
+			</group>
+		</group>
+		<group name="Spawning">
+			<group name="Loot">
+				<group name="Hidden Loot">
+					<instance pos=".2 5.4 -5.3" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+					<instance pos=".2 6.3 2.4" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+					<location tags="RandomLoot chance=50 type=civWeapon" pos="-3.4 .4 2.2"/>
+				</group>
+				<group name="Display Food Loot">
+					<group name="shelf" pos="3.8 .7 3">
+						<instance pos="-2.3 1.1 -1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-8.1 2.3 -2.3" file="MOD/prefabs/spawns/loots/EasterEggLootSpawn.xml"/>
+						<instance pos="-.6 .6 -1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-1.4 .1 -1.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.5 1.1 -1.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.8 .1 -1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-2.3 1.1 -1" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-0.6 0.6 -1.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+						<instance pos="-1.4 .1 -.9" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.5 1.1 -.9" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.8 .1 -1" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-2.3 1.1 1.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-.6 .6 1.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-1.4 .1 1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.5 1.1 1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="1.8 0.1 1.2" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+						<instance pos="-5.6 0.5 -0.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+						<instance pos="-5.7 -0.5 -0.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+						<instance pos="3.2 .6 -1.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-3.2 .1 -1.1" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+					</group>
+					<group name="shelf" pos="3.8 1.2 3">
+						<instance pos="5.4 .7 -2.4" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="5.4 .2 -2.4" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="5.4 -.3 -.8" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="5.4 .7 -.8" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="5.4 .2 .7" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="5.4 .7 .7" rot="0 90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-8 .2 -2.4" rot="0 -90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+						<instance pos="-8 .7 -2.4" rot="0 -90" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+					</group>
+				</group>
+				<group name="Gas Pump Loot">
+					<instance pos=".6 .1 -7.1" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+					<instance pos="-.7 .1 -7.1" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				</group>
+				<group name="Car">
+					<location tags="RandomVehicle Chance=20 Loc=.1 Rot=5" pos="-.1 0 -10.15" rot="0 -90"/>
+				</group>
+			</group>
+			<group name="Enemy">
+				<instance pos="-4.214 1.3 -4.608" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+				<instance pos="9.986 1.3 -4.608" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+				<instance pos="7.386 1.3 -14.008" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+				<instance pos="3.186 1.3 .492" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+				<instance pos="9.386 1.3 8.992" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+				<instance pos="-9.614 1.3 8.992" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			</group>
+		</group>
+		<group name="Others">
+			<trigger tags="vegRemove" type="polygon" size="2">
+				<vertex pos="-10.8 2.8"/>
+				<vertex pos="-10.8 -5.4"/>
+				<vertex pos="-16.0 -9.2"/>
+				<vertex pos="-13.9 -16.4"/>
+				<vertex pos="-7.9 -14.0"/>
+				<vertex pos="14.2 -14.0"/>
+				<vertex pos="16.5 -7.2"/>
+				<vertex pos="10.0 -1.2"/>
+				<vertex pos="10.0 4.7"/>
+				<vertex pos="-7.8 4.7"/>
+			</trigger>
+		</group>
+	</group>
+</prefab>
+

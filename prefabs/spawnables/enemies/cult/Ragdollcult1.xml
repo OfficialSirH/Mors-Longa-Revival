@@ -1,0 +1,15 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/enemies/cult/Ragdollcult1.xml" pos="-13.0 0.0 3.0" rot="0.0 0.0 0.0">
+		<script pos="0.0 0.0 0.1" file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll" pos="0.0 0.0 -0.1" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/cultist1.vox" prop1="tags=Torso Attack bodypart spawn_team=cult">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml"/>
+			</group>
+			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS"/>
+			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/eyes_red.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/hood_cultist_white.xml"/>
+			</group>
+		</script>
+	</group>
+</prefab>
+

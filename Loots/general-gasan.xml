@@ -1,0 +1,10 @@
+<prefab version="1.3.0">
+	<group>
+		<body tags="Loot=general-gasan_Gas-Analyzer interact=Gas-Analyzer" pos="0 .05" dynamic="true">
+			<voxbox pos="-.1 -.05 -.2" rot="0 0" size="2 1 4" color=".91 .8"/>
+			<voxbox pos="-.01 -.04 -.19" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+			<voxbox pos="-.09 -.04 -.19" rot="0 0" size="1 1 2" color=".21 .21 .21"/>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/GoreNPCs/prefabs/weapons/riot_shield.xml" pos="2.0 0.5 -0.5" rot="0.0 0.0 0.0">
+		<body name="riot_shield" pos="-0.0 0.5 0.1" dynamic="true">
+			<vox pos="-0.05 -0.05 0.0" rot="-90.0 0.0 0.0" file="MOD/GoreNPCs/vox/riot_shield.vox"/>
+		</body>
+	</group>
+</prefab>
+

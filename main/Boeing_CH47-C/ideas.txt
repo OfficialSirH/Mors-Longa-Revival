@@ -1,0 +1,125 @@
+local min, max = GetBodyBounds(body)
+related to size of target
+local boundsSize = VecSub(max, min)
+local center = VecLerp(min, max, 0.5)
+
+Due to pushing rotor, it shakes
+
+confirm noise with graph
+
+Better rotor physics:
+speed is independent of collective, collective can allow force downward
+ideally collective could be shown, but it's likely too hard
+
+once rotor is not connected, power applies to rotor
+
+rope should be cut, not deleted
+
+
+there could be a minimum rotor speed for warm up and visual, and only above that rotor speed affects performance
+
+Issue with sideways movement as the part where velocity is checked and applied are not the same so it's swinging side to side
+
+The rotor going slower could be more systemic with the fuel running out and fuel could be better
+
+Maybe add a special cable and some instruments
+
+pilot dead, take over quick.
+
+
+What if you could try to counteract control issues?
+
+Tried reducing the roll with applying force to rotor at a lower place but didn't work. There could be a separate contorl for it
+
+
+Could note when the wheels are on ground(get there when rotor speed and vel is low) and check if wheel is still on ground( height changed and adjust something then so it won't go back
+
+
+Later could make the control slowly become more powerful, but with going back slowly, fine control is already possible
+
+rope fall from both
+
+Out of bounds?
+
+just sideways force to reach in a few seconds compared to heli tr
+Player control is a bit different, in some ways easier
+
+transformtolocal vec to heli facing could help with the direction
+
+Control: slowly increasing acceleration while holding button and decreasing while not
+It was easier using the mouse in game
+Q/ E didn't do much
+
+It turns by twisting the body and increasing thrust
+By default it returns thrust to hovering amount
+
+Maybe bit of damage to motor reduces power
+fuel loss reduces time of flight
+
+separately could check velocity toward point along the direction of the point and sideways and adjust each separately
+
+-different sounds would be good but I can't do that. annoying trumpet noise all the time, better speed up slow down noise with rotor
+-Adding a rope ladder.
+-Attaching cargo.
+-Rocket evasive maneuvres.
+-shared force for rotor
+
+
+
+
+slower wearing down type of things would be good 
+drops a bit too quick
+often rotation axis is tilted
+
+
+
+Extra realism
+the "boosters" are actually motors and losing them could mean a loss of power
+separate collective and speed
+turning the blades, not the body
+hard coded connection between rotor and body: then you can turn them and better transfer force between the 2
+
+
+mayube different control later
+ladder or rope
+carry something?
+Maybe different sounds
+
+--rocket evasive maneuvres?
+
+--wheel can be pushed in, apply force to chassis when pushed in (at wheel, in up direction compared to chassis) although then it could still move sideways
+maybe guess building top by looking up from below
+
+
+why is up and down vibration? confirm with instantaneous velocity
+
+could lean with acceleration / speed instead of booster
+rotor health to calc separately --why? what to use it for?
+offset could affect the rotor speed earlier --could be a bit louder and faster on one end when needing more power, but not too important
+
+XML changes
+-deleted the triggers
+-instance is centered where body is, maybe not facing right way
+-renamed tags used
+trn-panel_liftoff
+control - take_control
+cringo-ramp
+buffon-ramp_button
+
+changed rotor so it's facing right at the back
+Centered rotor correctly
+completely different trigger for the inside, other triggers deleted
+
+option to control either version
+maybe nicer movement and improvement to stuff
+multiple lua
+
+
+RemoveTag(MainPanel, "interact")
+RemoveTag(TargetSelectPanel, "interact")
+RemoveTag(ThirdPersonPanel, "interact")
+
+
+	ForwardOffset = 0
+	ForwardOffsetAcceleration = 0.03
+	ForwardOffsetPredictionAmount = 1

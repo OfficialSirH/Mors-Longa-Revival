@@ -1,0 +1,55 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsigns/roadsign2.xml" pos="-63.8 2.5 -73.2" rot="0.0 -90.0 0.0">
+		<vox name="quandale RatRiv: normal" pos="0.7 6.5 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+			<joint pos="10.0 1.5 0.4" rot="0.0 180.0 0.0" rotstrength="5"/>
+			<joint pos="-9.9 1.5 0.4" rotstrength="5"/>
+			<vox pos="-5.0 1.4 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign2: ratriv">
+				<joint pos="2.94 3.0 0.1"/>
+				<joint pos="2.95 0.1 0.1"/>
+				<joint pos="-2.86 3.1 0.1"/>
+				<joint pos="-2.86 0.2 0.1"/>
+			</vox>
+			<vox pos="3.0 0.9 -0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: quandale">
+				<joint pos="4.44 3.5 0.1"/>
+				<joint pos="4.45 0.6 0.1"/>
+				<joint pos="-4.36 3.6 0.1"/>
+				<joint pos="-4.36 0.7 0.1"/>
+			</vox>
+			<vox pos="10.0 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+				<joint rotstrength="20"/>
+			</vox>
+			<vox pos="-9.9 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+				<joint rotstrength="20"/>
+			</vox>
+			<vox pos="5.1 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+			</vox>
+			<vox pos="3.1 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+			<vox pos="1.1 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+			<vox pos="-0.9 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+			<vox pos="-2.9 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+			<vox pos="-4.9 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.5"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+			<vox pos="-6.9 0.4 -0.6" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<joint pos="0.05 0.0 -0.05" rotstrength="0.6"/>
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="2" size="0.3" glare="0.2"/>
+			</vox>
+		</vox>
+	</group>
+</prefab>
+

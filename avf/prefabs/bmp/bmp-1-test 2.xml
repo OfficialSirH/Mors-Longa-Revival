@@ -1,0 +1,317 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/avf/prefabs/bmp-1-test 2.xml" pos="2.0 0.3 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0" prop0="texture=7 0.5">
+			<script pos="-0.05 -0.025 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/bmp/2A82.lua">
+				<script pos="0.0 0.0 0.0" file="MOD/avf/scripts/Immersive_Tank.lua">
+					<script pos="0.0 0.0 0.0" file="MOD/avf/prefabs/bmp/TankControl.lua" param0="debug=true">
+						<vehicle name="bmp-1" tags="cfg=vehicle boat tank brokenthreshold=0.5 sinkthreshold=0.9" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="tank1" antiroll="0.2" steerassist="1">
+							<body name="bmp-1" tags="component=body body" pos="0.0 0.7 0.2" dynamic="true">
+								<group pos="0.0 -0.4 -0.2">
+									<vox tags="component=chassis" pos="-0.05 0.1 0.0" rot="0.0 0.0 0.0" texture="7 0.5" density="3" strength="1" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="1"/>
+									<vox pos="-1.35 -0.3 0.4" rot="0.0 0.0 0.0" texture="7 0.5" collide="false" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="tracks bmp 1-2"/>
+									<vox pos="1.35 -0.3 0.4" rot="0.0 0.0 0.0" texture="7 0.5" collide="false" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="tracks bmp 1-2"/>
+									<group name="driver hatch" pos="-0.45 1.4 -1.0" rot="0.0 0.0 0.0">
+										<vox pos="-0.1 0.025 0.5" texture="7 0.5" density="10" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="frontHatch bmp1-2">
+											<joint pos="0.048 0.1 -0.3" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0" limits="0 90"/>
+										</vox>
+										<vox pos="-0.1 0.1 -0.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="driverHatch bmp1-2"/>
+									</group>
+									<group name="hatchl" pos="-0.05 1.4 2.6" rot="0.0 0.0 0.0">
+										<vox pos="-0.35 0.1 0.5" rot="0 5 0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="hatchL bmp-1[left]">
+											<joint pos="0.3 0.0 0.2" rot="0.0 -180.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+											<joint pos="0.3 0.0 -0.2" rot="0.0 -180.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+										</vox>
+										<vox pos="-0.38 0.1 -0.4" rot="0 5 0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="hatchL bmp-1[left]">
+											<joint pos="0.3 0.0 0.2" rot="0.0 -180.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+											<joint pos="0.3 0.0 -0.2" rot="0.0 -180.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+										</vox>
+										<vox pos="0.45 0.1 0.5" rot="0 -5 0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="hatchL bmp-1[right]">
+											<joint pos="-0.3 0.0 0.2" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+											<joint pos="-0.3 0.0 -0.2" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+										</vox>
+										<vox pos="0.48 0.1 -0.4" rot="0 -5 0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="hatchL bmp-1[right]">
+											<joint pos="-0.3 0.0 -0.2" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+											<joint pos="-0.3 0.0 0.2" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+										</vox>
+									</group>
+									<group name="reardoor" pos="-0.05 0.7 3.6" rot="0.0 0.0 0.0">
+										<vox pos="-0.5 -0.41 0.2" rot="5 0 0" texture="7 0.5" density="1" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reardoorR left">
+											<joint pos="-0.4 0.8 -0.1" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.06" rotspring="0" limits="0 90"/>
+											<joint pos="-0.4 0.25 -0.1" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.06" rotspring="0" limits="0 90"/>
+											<vox name="fuel_tank" tags="fuel_tank" pos="0.1 0.2 -0.0" rot="0 0 0" texture="1.6" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="l-fu"/>
+										</vox>
+										<vox pos="0.5 -0.41 0.2" rot="5 0 0" texture="7 0.5" density="1" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reardoorR right">
+											<joint pos="0.5 0.25 -0.1" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.06" rotspring="0" limits="0 90"/>
+											<joint pos="0.5 0.8 -0.1" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.06" rotspring="0" limits="0 90"/>
+											<vox name="fuel_tank" tags="fuel_tank" pos="0.0 0.2 0.0" rot="0 0 0" texture="1.6" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="l-fu"/>
+										</vox>
+									</group>
+									<vox pos="0.55 1.4 -1.6" rot="0.0 0.0 0.0" texture="7 0.5" density="15" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="maintenance cover bmp1-2">
+										<joint pos="0.3 0.1 0.2" rot="0 90 0" type="hinge" rotstrength="0.05" rotspring="0" limits="0 110"/>
+										<joint pos="-0.2 0.1 0.2" rot="0 90 0" type="hinge" rotstrength="0.05" rotspring="0" limits="0 110"/>
+									</vox>
+									<vox pos="-0.05 1.32 -2.57" rot="-10.0 0.0 0.0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch">
+										<vox pos="0.0 0.01 -0.53" rot="45.0 0.0 0.0" texture="7 0,5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 1"/>
+										<vox pos="0.0 0.01 -0.35" rot="45.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 2"/>
+										<vox pos="0.0 0.01 -0.15" rot="45.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 2"/>
+										<vox pos="0.0 0.01 0.05" rot="45.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 3"/>
+										<vox pos="0.0 0.01 0.44" rot="45.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 4"/>
+										<joint pos="-0.6 0.1 -0.6" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 140"/>
+										<joint pos="0.7 0.1 -0.6" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 140"/>
+										<vox pos="0.0 0.01 0.25" rot="45.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="engine_hatch 3"/>
+									</vox>
+									<group name="reinfore" pos="0.05 0.0 0.0" rot="0.0 0.0 0.0">
+										<vox pos="-1.38 1.16 -3.19" rot="-12.0 0.0 15.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 2">
+											<vox pos="-0.1 -0.05 -0.3" rot="10.2 1.8 -9.8" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="light">
+												<light pos="0.05 0.275 -0.05001" rot="0.0 180.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+											</vox>
+											<vox pos="0.14 0.0 0.2" rot="0.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="1.28 1.16 -3.18" rot="-12.0 0.0 -15.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 2r">
+											<vox pos="0.0 -0.05 -0.3" rot="10.2 -1.8 9.8" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="light">
+												<light pos="0.05 0.275 -0.05001" rot="0.0 180.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+											</vox>
+											<vox pos="-0.05 0.0 0.2" rot="0.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="-1.36 1.41 -0.5" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 1">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 1"/>
+										</vox>
+										<vox pos="1.26 1.42 -1.6" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="1.26 1.42 0.2" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="1.26 1.42 0.5" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="1.16 1.42 1.4" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="1.16 1.42 2.0" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.26 1.41 1.5" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4 2"/>
+										</vox>
+										<vox pos="-1.26 1.41 1.895" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.16 1.41 2.095" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.16 1.41 2.295" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.16 1.41 2.495" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.16 1.41 2.595" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.06 1.41 2.795" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.06 1.41 2.895" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-0.96 1.41 3.495" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.06 1.42 2.1" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.06 1.42 2.3" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.06 1.42 2.6" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.06 1.42 2.5" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="0.96 1.42 2.9" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="0.86 1.42 3.5" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="0.96 1.42 2.8" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-0.96 1.41 3.695" rot="-30.0 90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="0.86 1.42 3.7" rot="-30.0 -90.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-0.1 1.23 -3.06" rot="-10 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 1">
+											<vox pos="0.0 0.025 -0.595" rot="3.0 0.0 0.0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="wave board bmp 1-2">
+												<joint pos="-0.45 0.05 -0.293" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 140"/>
+												<joint pos="0.65 0.05 -0.293" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 140"/>
+											</vox>
+										</vox>
+										<vox pos="1.4 0.6 -3.3" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce3"/>
+										<vox pos="-0.1 0.475 -3.265" rot="35.0 0.0 0.0" texture="7 0.5" density="1" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce"/>
+										<vox pos="-1.6 0.6 -3.3" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce3"/>
+										<vox pos="-0.1 0.2 3.69" rot="5.0 0.0 0.0" texture="7 0.5" density="1" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="l1"/>
+										<vox pos="-1.4 1.4 0.0" rot="0.0 90.0 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce d"/>
+										<vox pos="-1.36 1.41 -2.175" rot="-30.0 90.0 -10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.36 1.38 -2.33" rot="-30.0 90.0 -10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="-1.36 1.34 -2.52" rot="-30.0 90.0 -10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.26 1.38 -2.36" rot="-30.0 -90.0 10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.26 1.34 -2.55" rot="-30.0 -90.0 10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+										<vox pos="1.26 1.41 -2.18" rot="-30.0 -90.0 10.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4">
+											<vox pos="0.0 -0.04 -0.07" rot="30.0 0.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="reinforce 4"/>
+										</vox>
+									</group>
+									<group name="locations" pos="0.5 0.8 -1.6">
+										<location tags="exhaust" pos="1.0 0.7 1.05" rot="-90.0 0.0 -50.0"/>
+										<location tags="exhaust" pos="1.0 0.7 0.75" rot="-90.0 0.0 -50.0"/>
+										<location tags="vital" pos="-0.05 0.1 -1.0" rot="0.0 0.0 0.0"/>
+										<location tags="player" pos="-1.0 0.95 0.2" rot="0.0 0.0 0.0"/>
+										<location tags="camera" pos="-0.5 0.15 1.9" rot="0.0 0.0 0.0"/>
+									</group>
+									<group name="immersive_elements" pos="-0.05 0.1 0.2" prop0="strength=12">
+										<vox name="engine" tags="engine" pos="0.4 0.4 -2.8" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="engine bmp 1-2"/>
+									</group>
+								</group>
+								<group name="turrers" pos="-0.05 1.8 -0.2">
+									<vox tags="component=turret turretGroup=mainTurret RHA=100" pos="0.1 -1.8 0.8" rot="0.0 180.0 0.0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="turretbmp-1">
+										<joint tags="component=turretJoint" pos="0.05 0.0 0.05" rot="90.0 0.0 0.0" type="hinge" size="0.1" rotspring="0" sound="true"/>
+										<vox name="ammo" tags="ammo_rack=0.01" pos="-0.0 0.1 0.0" strength="15" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="ammo BMP-1"/>
+										<vox name="2a28" tags="mainCannon component=gun weaponType=customcannon group=primary avf_barrel_coords_true interact=mountedgun commander coax=9M133" pos="0.0 1.1 1.0" rot="0.0 0.0 0.0" texture="7 0.5" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm/pkT">
+											<vox pos="0.05 0.15 1.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm 2"/>
+											<vox pos="0.08 0.15 1.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm 2"/>
+											<vox pos="0.05 0.18 1.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm 2"/>
+											<vox pos="0.02 0.15 1.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm 2"/>
+											<vox pos="0.05 0.12 1.4" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2A28 73mm 2"/>
+											<joint name="gunJoint" tags="component=gunJoint" pos="0.3 0.2 -0.3" rot="0.0 90.0 0.0" type="hinge" size=".1" rotspring="0" limits="-10 1" sound="true"/>
+											<joint name="gunJoint2" pos="-0.2 0.2 -0.3" rot="0.0 90.0 0.0" type="hinge" size=".1" rotspring="0" limits="-10 1" sound="true"/>
+											<vox pos="0.05 0.3 0.6" density="15" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="baby f">
+												<vox pos="0.0 0.13 -0.24" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="[baby]">
+													<vox pos="0.0 0.08 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="[baby] 2"/>
+													<vox pos="-0.02 0.1 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="[baby] 2"/>
+													<vox pos="0.0 0.12 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="[baby] 2"/>
+													<vox pos="0.02 0.1 0.0" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="[baby] 2"/>
+												</vox>
+											</vox>
+										</vox>
+										<vox pos="0.3 1.475 -0.1" texture="7 0.5" density="15" prop="true" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="hatchL bmp -1"/>
+										<joint pos="0.348 1.5 0.1" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0" limits="0 90"/>
+									</vox>
+								</group>
+							</body>
+							<group pos="0.0 0.1 0.3" prop0="antispin=0.9" prop1="difflock=1" prop2="friction=1" prop3="damping=1.2">
+								<group pos="0.0 0.0 0.0" prop0="spring=12" prop1="acceleration=1.1" prop2="topspeed=90" prop3="strength=6">
+									<vehicle tags="tank_steering_r_track nodrive" pos="0.0 -0.1 -0.1" sound=" ">
+										<body tags="body" pos="1.25 0.4 0.1" rot="0 180" dynamic="true">
+											<vox pos="0.1 -0.1 -0.5" rot="0.0 180.0 0.0" texture="7 0.5" density="2" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="3"/>
+											<group pos="0.1 0.0 -0.1" rot="0.0 -180.0 0.0">
+												<joint pos="-0.1 0.1 -2.6" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.6 0.0" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.6 -1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.1 -1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.6 1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.1 1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.1 3.0" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.55 3.3" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.35 3.3" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.5 -2.6" rot="0.0 0.0 0.0"/>
+											</group>
+											<group name="wheels" pos="0.1 0.4 -0.1" prop0="drive=1" prop1="travel=-0.2 0.1">
+												<wheel pos="-0.05 -0.35 -1.2" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 -0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.05 -0.35 -0.4" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 -0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.05 -0.35 0.4" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 -0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.05 -0.35 1.2" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.05 -0.35 -2.1" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.05 -0.35 2.0" rot="0.0 180.0 0.0" drive="1">
+													<vox pos="0.2 -0.3 -0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="-0.125 0.15 2.8" rot="0.0 180.0 0.0" drive="0" travel="0 0">
+													<vox pos="0.2 -0.4 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl C1"/>
+												</wheel>
+												<wheel pos="-0.1 0.0 -2.8" rot="0.0 180.0 0.0" drive="0" travel="0 0">
+													<vox pos="0.2 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl C2"/>
+												</wheel>
+											</group>
+										</body>
+									</vehicle>
+									<vehicle tags="tank_steering_l_track nodrive" pos="0.0 -0.1 -0.1" sound=" ">
+										<body tags="body" pos="-1.25 0.4 0.1" rot="0 180" dynamic="true">
+											<vox pos="-0.1 -0.1 -0.5" rot="0.0 180.0 0.0" texture="7 0.5" density="2" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="2"/>
+											<group pos="-0.2 0.0 -0.1" rot="0.0 -180.0 0.0">
+												<joint pos="0.0 0.1 -2.6" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.6 0.0" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.1 0.0" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.6 -1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.1 -1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.6 1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="-0.1 0.1 1.5" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.1 3.0" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.55 3.3" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.35 3.3" rot="0.0 0.0 0.0"/>
+												<joint pos="0.0 0.5 -2.6" rot="0.0 0.0 0.0"/>
+											</group>
+											<group name="wheels" pos="-0.1 0.4 -0.1" prop0="drive=1" prop1="travel=-0.2 0.1">
+												<wheel pos="0.05 -0.35 1.2" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.05 -0.35 0.4" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.05 -0.35 -0.4" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 -0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.05 -0.35 -1.2" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.05 -0.35 2.0" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.05 -0.35 -2.0" rot="0 180" drive="1">
+													<vox pos="-0.2 -0.3 -0.0" texture="7 0.8" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl  s r"/>
+												</wheel>
+												<wheel pos="0.1 0.0 -2.8" rot="0.0 180.0 0.0" drive="0" travel="0 0">
+													<vox pos="-0.1 -0.3 -0.0" rot="0.0 -180.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl C2 l"/>
+												</wheel>
+												<wheel pos="0.125 0.15 2.8" rot="0.0 180.0 0.0" drive="0" travel="0 0">
+													<vox name="driving wheel l" pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/avf/prefabs/bmp/bmp1 1AM 2 2M d.vox" object="whl C1 l"/>
+												</wheel>
+											</group>
+										</body>
+									</vehicle>
+								</group>
+							</group>
+						</vehicle>
+						<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="-0.055 1.985 -2.114" rot="0.0 90.0 0.0"/>
+						<location name="mainCannon_coax_emitter" tags="mainCannon_coax_emitter" pos="-0.04386 2.375 -0.88808" rot="0.0 -90.0 0.0"/>
+						<location name="mainCannon_sight" tags="mainCannon_sight" pos="-0.39427 2.275 -0.67991" rot="0.0 0.0 0.0"/>
+					</script>
+				</script>
+			</script>
+		</group>
+	</group>
+</prefab>
+

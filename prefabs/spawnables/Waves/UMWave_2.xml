@@ -1,0 +1,7 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/Waves/UMWave2.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<instance pos="-15.3 0.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum1.xml"/>
+		<instance pos="12.8 0.0 0.0" file="MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml"/>
+	</group>
+</prefab>
+

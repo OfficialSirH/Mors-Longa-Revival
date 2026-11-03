@@ -1,0 +1,46 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/PerkMachine.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<script file="MOD/scripts/Game/PerkMachine.lua">
+			<group prop0="material=metal" prop1="texture=7 0.3" prop2="pbr=0 .1 0 0">
+				<body tags="PerkMachine safezone=perk unbreakable" pos="0.0 1.4 0.0" dynamic="true">
+					<compound pos="0.0 -1.4 0.0" density="2">
+						<voxbox pos="-0.39999 1.1 -0.4" size="1 4 4" color="0.42 0.42 0.42"/>
+						<voxbox pos="-0.4 0.0 -0.5" size="8 1 10" color="0.15 0.15 0.15"/>
+						<voxbox pos="-0.4 1.9 -0.5" size="8 1 10" color="0.15 0.15 0.15"/>
+						<voxbox pos="-0.4 0.1 -0.5" size="8 18 1" color="0.27 0.27 0.27"/>
+						<voxbox pos="-0.4 0.1 0.4" size="8 18 1" color="0.27 0.27 0.27"/>
+						<voxbox pos="0.3 0.1 -0.4" size="1 18 8" color="0.27 0.27 0.27"/>
+						<voxbox pos="-0.40003 0.7 -0.4" size="1 1 8" color="0.15 0.15 0.15"/>
+						<voxbox pos="-0.40001 0.8 -0.4" size="1 3 8" color="0.42 0.42 0.42"/>
+						<voxbox pos="-0.4 1.5 -0.4" size="1 4 8" color="0.42 0.42 0.42"/>
+					</compound>
+					<voxbox pos="-0.35 -0.15 0.0" size="1 1 4" color="0.0 0.0 0.0"/>
+					<voxbox pos="-0.4 -0.3 0.0" rot="0.0 0.0 -40.0" collide="false" size="1 2 4" color="0.0 0.0 0.0"/>
+					<voxbox pos="-0.4 0.1 0.0" rot="0.0 0.0 -50.0" collide="false" size="2 1 4" color="0.0 0.0 0.0"/>
+					<voxbox tags="screen interact=BuyPerk" pos="-0.42 -0.2 -0.305" size="1 3 3" color="0.13 0.12 0.12"/>
+					<voxbox pos="-0.4 -1.3 -0.4" rot="0.0 0.0 -60.0" size="1 8 8" color="0.67 0.67 0.67" pbr="1 1 1 0"/>
+					<body tags="unbreakable" pos="-0.3 -0.1 0.05" dynamic="true">
+						<voxbox pos="-0.1 -0.05 -0.05" collide="false" size="2 1 1" color="0.87 0.87 0.87"/>
+						<voxbox pos="-0.05 -0.1 -0.05" density="2" size="1 2 1" color="0.12 0.12 0.12"/>
+						<joint tags="rjoint" pos="0.0 0.0 0.0" type="hinge" rotspring="0"/>
+					</body>
+					<body tags="unbreakable" pos="-0.3 -0.1 0.15" dynamic="true">
+						<voxbox pos="-0.1 -0.05 -0.05" collide="false" size="2 1 1" color="0.87 0.87 0.87"/>
+						<voxbox pos="-0.05 -0.1 -0.05" density="2" size="1 2 1" color="0.12 0.12 0.12"/>
+						<joint tags="rjoint" pos="0.0 0.0 0.0" type="hinge" rotspring="0"/>
+					</body>
+					<body tags="unbreakable" pos="-0.3 -0.1 0.25" dynamic="true">
+						<voxbox pos="-0.1 -0.05 -0.05" collide="false" size="2 1 1" color="0.87 0.87 0.87"/>
+						<voxbox pos="-0.05 -0.1 -0.05" density="2" size="1 2 1" color="0.12 0.12 0.12"/>
+						<joint tags="rjoint" pos="0.0 0.0 0.0" type="hinge" rotspring="0"/>
+					</body>
+					<body tags="unbreakable" pos="-0.3 -0.1 0.35" dynamic="true">
+						<voxbox pos="-0.1 -0.05 -0.05" collide="false" size="2 1 1" color="0.87 0.87 0.87"/>
+						<voxbox pos="-0.05 -0.1 -0.05" density="2" size="1 2 1" color="0.12 0.12 0.12"/>
+						<joint tags="rjoint" pos="0.0 0.0 0.0" type="hinge" rotspring="0"/>
+					</body>
+				</body>
+			</group>
+		</script>
+	</group>
+</prefab>

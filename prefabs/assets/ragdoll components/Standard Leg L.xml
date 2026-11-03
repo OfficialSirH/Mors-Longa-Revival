@@ -1,0 +1,18 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Leg L.xml" pos="-0.15 0.9 0.0" rot="0.0 0.0 0.0">
+		<body name="foot_L" tags="LLLEG bodypart" pos="0.0 -0.9 0.0" dynamic="true">
+			<vox pos="0.0 0.0 -0.1" rot="0 180" density="2" object="foot_L">
+				<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" limits="-100 0"/>
+			</vox>
+			<voxbox name="bone" tags="bone" pos="-0.05 0.1 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+		</body>
+		<body name="Leg_L" tags="LLEG bodypart" pos="0.0 -0.0 0.0" dynamic="true">
+			<vox pos="0.0 -0.4 0.0" rot="0 180" object="Leg_L"/>
+			<group pos="0.0 -0.4 0.0" rot="0.0 -180.0 0.0">
+				<joint tags="hip" pos="0.0 0.4 0.0" rot="0 90" type="hinge" rotspring="0" limits="-90 30"/>
+				<voxbox name="bone" tags="bone" pos="-0.05 0.0 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

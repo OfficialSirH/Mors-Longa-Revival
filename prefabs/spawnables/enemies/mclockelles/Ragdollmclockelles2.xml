@@ -1,0 +1,14 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/enemies/mclockelles/Ragdollmclockelles2.xml" pos="0.2 0.0 5.0" rot="0.0 0.0 0.0">
+		<script pos="0.0 0.0 0.0" rot="0 0 0" file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll (prop0)" pos="0.0 0.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/mcklockelles2.vox" prop1="tags=Torso Attack bodypart spawn_team=civ">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml"/>
+			</group>
+			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS"/>
+			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/hat_mclockelles_grey.xml"/>
+			</group>
+		</script>
+	</group>
+</prefab>
+

@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" pos="11.2 5.0 3.6" rot="0.0 0.0 0.0">
+		<location tags="RandomLoot chance=25 type=civFood"/>
+	</group>
+</prefab>
+

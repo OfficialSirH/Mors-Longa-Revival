@@ -1,0 +1,14 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=meds-surgery-cms_CMS_5_5 interact=CMS" pos="0 .1" dynamic="true">
+			<voxbox pos="-.1 -.04 -.04" size="2 1 1"/>
+			<group prop0="color=.76 .36 .32">
+				<voxbox pos="-.2 -.05 -.05" size="4 1 1"/>
+				<voxbox pos="-.2 -.1 -.1" size="4 1 2"/>
+				<voxbox pos="-.2 -.1 .05" size="4 1 1"/>
+				<voxbox pos="-.2 -.05 -.1" size="4 1 1"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

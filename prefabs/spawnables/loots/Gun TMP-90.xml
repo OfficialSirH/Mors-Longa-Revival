@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gun TMP-90.xml" pos="-4.5 0.6 -0.4" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/gun-p90.xml"/>
+	</group>
+</prefab>
+

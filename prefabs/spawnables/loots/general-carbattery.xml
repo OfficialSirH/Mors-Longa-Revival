@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/general-carbattery.xml" pos="-1.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/general-carbattery.xml"/>
+	</group>
+</prefab>
+

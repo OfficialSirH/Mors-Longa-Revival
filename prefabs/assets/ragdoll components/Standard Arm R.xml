@@ -1,0 +1,9 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm R.xml" pos="0.25 1.4 0.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm RU.xml"/>
+		<group pos="0.1 -0.3 0.0">
+			<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm RL.xml"/>
+		</group>
+	</group>
+</prefab>
+

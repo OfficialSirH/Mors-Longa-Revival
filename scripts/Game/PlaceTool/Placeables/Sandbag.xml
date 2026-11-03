@@ -1,0 +1,8 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/scripts/Game/PlaceTool/Placeables/Sandbag.xml" pos="4.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 0.0" dynamic="true">
+			<vox pos="-0.05 0.2 0.45" rot="-90.0 0.0 0.0" density="0.5" file="MOD/vox/SandBag.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

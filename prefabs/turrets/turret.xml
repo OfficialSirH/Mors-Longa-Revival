@@ -1,0 +1,20 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/turrets/turret.xml" pos="0.0 3.0 -4.4" rot="0.0 -90.0 0.0">
+		<script pos="0.2 -0.2 -0.1" rot="0.0 0.0 0.0" file="MOD/scripts/turret_init.lua">
+			<body tags="turretBase" pos="-0.2 0.1 0.1" dynamic="false"/>
+			<body tags="turretArm" pos="0.0 0.2 0.1" dynamic="true">
+				<vox density="10" file="MOD/prefabs/turrets/turret.vox" object="turret_arm">
+					<joint tags="gunH" pos="0.05 0.0 -0.05" rot="-90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0.5"/>
+				</vox>
+			</body>
+			<body tags="interact turretGun" pos="0.1 1.1 0.1" rot="0.0 90.0 0.0" dynamic="true" desc="Turret">
+				<vox pos="0.0 0.0 0.0" rot="0.0 -90.0 0.0" file="MOD/prefabs/turrets/turret.vox" object="turret_gun">
+					<joint tags="gunV" pos="-0.05 0.0 -0.05" type="hinge" rotspring="0.5" limits="-220 220"/>
+					<location name="shootLocation" tags="shootLocation" pos="-1.3 0.35 -0.05" rot="0.0 90.0 0.0"/>
+					<location name="headLocation" tags="headLocation" pos="1.4 0.5 -0.05" rot="0.0 90.0 0.0"/>
+				</vox>
+			</body>
+		</script>
+	</group>
+</prefab>
+

@@ -1,0 +1,134 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/enemies/survior/Ragdollsurvior1.xml" pos="-37.6 1.2 5.3" rot="0.0 0.0 0.0">
+		<script file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+
+				<body name="foot_R" tags="RRLEG bodypart" pos="-0.3 0.5 -0.1" dynamic="true">
+					<vox tags="RRLEG nocull" pos="0.2 -0.4 0.1" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="foot_R">
+						<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" limits="-90 0"/>
+					</vox>
+				</body>
+				<body name="Head" tags="Head bodypart" pos="0.0 1.7 0.1" dynamic="true">
+					<vox pos="0.0 -0.1 -0.2" density="15" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="head">
+						<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="true" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0">
+							<joint tags="eye" pos="0.05 0.05" type="hinge" rotstrength="1"/>
+							<joint tags="eye" pos="0.05 0.05" rot="90" type="hinge" rotstrength="1"/>
+						</voxbox>
+						<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="true" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0">
+							<joint tags="eye" pos="0.05 0.05" type="hinge" rotstrength="1"/>
+							<joint tags="eye" pos="0.05 0.05" rot="90" type="hinge" rotstrength="1"/>
+						</voxbox>
+						<vox tags="jaw" pos="0.0 0.0 0.1" prop="true" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="jaw">
+							<joint tags="jaw" pos="0.2 0.1 -0.2" rot="0 90" type="hinge" limits="0 20"/>
+							<joint tags="jaw" pos="-0.1 0.1 -0.2" rot="0 90" type="hinge" limits="0 20"/>
+						</vox>
+					</vox>
+					<vox pos="0.05 -0.02 -0.19" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="bloods5"/>
+				</body>
+				<body name="Torso" tags="Torso spawn_team=none bodypart" pos="0.0 1.3 -0.1" rot="0 180" dynamic="true">
+					<vox pos="0.0 -0.4 0.0" rot="0 180 " density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="body">
+						<joint tags="hip" pos="-0.1 0.1 0.0" rot="0.0 90.0 0.0" type="hinge" rotspring="0" collide="false" limits="-90 30"/>
+						<group name="skeleton" pos="0.0 0.1 -0.05">
+							<voxbox tags="unbreakable" pos="0.0 0.05 0.0" texture="7" size="1 5 1" material="masonry" color="0.43 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.15 0.4 0.0" texture="7" size="4 1 1" material="masonry" color="0.43 0.0 0."/>
+							<voxbox tags="unbreakable" pos="-0.15 0.2 0.0" texture="7" size="4 1 1" material="masonry" color="0.43 0.0 0."/>
+						</group>
+						<body tags="Loot=grenade_RGD-5 interact=RGD-5-Frag " pos="-0.075 0.525 0.175" rot="0.0 0.0 0.0" dynamic="true">
+							<group prop0="color=.14 .25 .14" prop1="material=plastic" prop2="density=2">
+								<voxbox pos="-.075 -.1 -.05" size="1 1 1"/>
+								<voxbox pos="-.025 -.1 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.125 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.1 -.025" size="1 1 1"/>
+								<voxbox pos="-.05 -.1 -.075" size="1 1 1"/>
+								<voxbox pos="-.05 -.05 -.075" size="1 1 1"/>
+								<voxbox pos="-.075 -.05 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.05 -.025" size="1 1 1"/>
+								<voxbox pos="-.025 -.05 -.05" size="1 1 1"/>
+							</group>
+							<group prop0="color=.4 .4 .4" prop1="material=metal">
+								<voxbox pos="-.05 .05 -.05" rot="0" size="1 1 1"/>
+							</group>
+							<joint pos="0.0 -0.025 -0.075" type="hinge" rotstrength="111111"/>
+						</body>
+						<body tags="Loot=grenade_RGD-5 interact=RGD-5-Frag " pos="0.075 0.35 0.175" rot="0.0 0.0 0.0" dynamic="true">
+							<group prop0="color=.14 .25 .14" prop1="material=plastic" prop2="density=2">
+								<voxbox pos="-.075 -.1 -.05" size="1 1 1"/>
+								<voxbox pos="-.025 -.1 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.125 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.1 -.025" size="1 1 1"/>
+								<voxbox pos="-.05 -.1 -.075" size="1 1 1"/>
+								<voxbox pos="-.05 -.05 -.075" size="1 1 1"/>
+								<voxbox pos="-.075 -.05 -.05" size="1 1 1"/>
+								<voxbox pos="-.05 -.05 -.025" size="1 1 1"/>
+								<voxbox pos="-.025 -.05 -.05" size="1 1 1"/>
+							</group>
+							<group prop0="color=.4 .4 .4" prop1="material=metal">
+								<voxbox pos="-.05 .05 -.05" rot="0" size="1 1 1"/>
+							</group>
+							<joint pos="0.0 -0.025 -0.075" type="hinge" rotstrength="111111"/>
+						</body>
+					</vox>
+					<joint tags="neck" pos="-0.05 0.3 -0.0" rot="90 -45" type="hinge" rotstrength="0.01" collide="false" limits="0 90"/>
+					<vox pos="-0.05 -0.25 0.05" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="bloods"/>
+				</body>
+				<group pos="0.4 0.8 -0.1">
+					<body name="UArm_L" tags="LARM bodypart" pos="0.1 0.8 0.0" dynamic="true">
+						<vox pos="-0.1 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="Uarm_L">
+							<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+						</vox>
+						<joint pos="-0.2 -0.1 0.0" rot="0 90" type="hinge" collide="false" limits="-70 0"/>
+					</body>
+					<body name="LArm_R" tags="LLARM bodypart" pos="0.0 0.0 0.0" dynamic="true">
+						<vox pos="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="larm_L">
+							<joint tags="hand1" pos="0.0 0.4 0.0" rot="0 90" type="hinge" collide="false" limits="-90 0"/>
+						</vox>
+					</body>
+				</group>
+				<group pos="-0.2 0.8 -0.1">
+					<body name="UArm_R" tags="RARM bodypart" pos="0.0 0.8 0.0" dynamic="true">
+						<vox pos="-0.1 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="Uarm_L">
+							<joint tags="shoulder" pos="0.1 0.3 0.0" rot="0 90" type="hinge" collide="false" limits="-90 0"/>
+							<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+						</vox>
+					</body>
+					<body name="LArm_R" tags="RRARM bodypart" pos="0.0 0.3 0.0" dynamic="true">
+						<vox pos="-0.1 -0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="larm_L">
+							<joint tags="hand1" pos="0.0 0.4 0.0" rot="0 90" type="hinge" collide="false" limits="0 90"/>
+						</vox>
+					</body>
+				</group>
+				<body name="foot_L" tags="LLLEG bodypart" pos="0.0 0.5 -0.1" dynamic="true">
+					<vox tags="LLLEG nocull" pos="0.2 -0.4 0.1" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="foot_L">
+						<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" limits="-90 0"/>
+					</vox>
+				</body>
+				<body name="Leg_L" tags="LLEG bodypart" pos="0.0 1.0 -0.1" dynamic="true">
+					<vox pos="0.2 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="Leg_L">
+						<joint tags="hip" pos="0.0 0.4 0.0" rot="0 90" type="hinge" rotspring="0" collide="false" limits="-90 30"/>
+					</vox>
+				</body>
+				<body name="Leg_R" tags="RLEG bodypart" pos="-0.3 1.0 -0.1" dynamic="true">
+					<vox pos="0.2 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="Leg_R"/>
+				</body>
+				<body name="Ammo" tags="Loot=bullets-545_5.45_60 interact=5.45 unbreakable" pos="0.3 1.2 -0.3" rot="0.0 0.0 90.0" dynamic="true">
+					<vox tags="Loot=bullets-545_5.45_60 interact=5.45 unbreakable" pos="-0.1 0.3 -0.0" rot="0.0 0.0 -90.0" texture="7 0.4" density="0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Survivor.vox" object="BackPack">
+						<group name="instance=MOD/Loots/food3.xml" pos="0.0 0.0 -0.15" rot="0.0 0.0 0.0">
+							<body name="mre" tags="Loot=food3_MRE_70_-25 interact=MRE" pos="0 .25" dynamic="true"/>
+						</group>
+					</vox>
+					<joint tags="gun" pos="0.2 0.1 0.1"/>
+					<joint tags="gun" pos="0.2 0.4 0.1"/>
+					<joint tags="gun" pos="-0.1 0.3 0.1"/>
+					<joint tags="gun" pos="-0.1 0.4 0.0"/>
+					<body tags="Loot=food5_Water_0_40 interact=Water" pos="0.175 0.25 -0.2" rot="0.0 0.0 -90.0" dynamic="true">
+						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
+						</vox>
+						<joint pos="0.0 0.05 0.1" type="hinge" collide="true"/>
+						<joint pos="0.0 -0.15 0.1" type="hinge" collide="true"/>
+					</body>
+				</body>
+
+		</script>
+	</group>
+</prefab>
+

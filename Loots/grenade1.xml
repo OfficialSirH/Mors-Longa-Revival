@@ -1,0 +1,21 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/Loots/grenade1.xml" pos="0.1 0.5 -6.5" rot="0.0 0.0 0.0">
+		<body tags="Loot=grenade1_Type-67 interact=Type-67-Frag explosive=.5" pos="0.0 -0.05 0.0" dynamic="true">
+			<group pos="0.0 0.0 0.0" prop0="color=.14 .25 .14" prop1="material=plastic" prop2="density=2">
+				<voxbox pos="-0.075 0.0 -0.05" size="1 2 1" color="0.33 0.25 0.16"/>
+				<voxbox pos="-0.075 0.04 -0.05" size="1 2 1" color="0.33 0.25 0.16"/>
+				<voxbox pos="-0.075 0.3 -0.05" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="-0.075 0.24 -0.05" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="-0.095 0.28 -0.05" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="-0.075 0.28 -0.03" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="0.025 0.28 0.03" rot="0.0 180.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="0.045 0.28 0.05" rot="0.0 180.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="0.045 0.31 0.05" rot="0.0 180.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="-0.075 0.31 -0.03" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="0.025 0.31 0.03" rot="0.0 180.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+				<voxbox pos="-0.095 0.31 -0.05" rot="0.0 0.0 0.0" size="1 1 1" color="0.23 0.23 0.23"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

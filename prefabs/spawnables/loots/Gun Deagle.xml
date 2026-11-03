@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gun Deagle.xml" pos="-22.187 0.6 -1.4" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/gun-deagle.xml"/>
+	</group>
+</prefab>
+

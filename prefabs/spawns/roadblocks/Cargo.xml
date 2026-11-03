@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawns/roadblocks/Cargo.xml" pos="16.1 62.6 -30.0" rot="0.0 -90.0 0.0">
+		<location tags="RandomSupplyDrop chance=20 rotation=180" pos="-81.1 0.2 0.0"/>
+	</group>
+</prefab>
+

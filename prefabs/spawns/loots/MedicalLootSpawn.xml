@@ -1,0 +1,6 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawns/loots/MedicalLootSpawn.xml" pos="-6.4 0.8 6.5" rot="0.0 80.0 0.0">
+		<location tags="RandomLoot chance=25 type=medical"/>
+	</group>
+</prefab>
+

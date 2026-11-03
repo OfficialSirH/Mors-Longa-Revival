@@ -1,0 +1,29 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/military_truck/Millitary Truck Destroyed.xml" pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group prop0="texture=8">
+			<body pos="0.0 0.675 -0.7" rot="-1.0 -0.3 12.5" dynamic="true">
+				<vox pos="0.0 -0.5 0.7" blendtexture="5 " density="3" strength="4" file="MOD/Vehicles/military_truck/military_truck.vox" object="body2" pbr="0 0 0 -64">
+					<vox pos="-1.41393 0.34566 -2.98964" rot="-42.6 88.6 69.0" blendtexture="5 " density="1.5" strength="2" prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="door2_l"/>
+					<vox pos="1.2 0.6 -2.6" blendtexture="5 " density="1.5" strength="2" prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="door2_r">
+						<joint pos="-0.1 0.9 -0.5" rot="-90.0 -90.0 0.0" type="ball" rotstrength="0.01" rotspring="0.0" collide="true" limits="0 70"/>
+					</vox>
+					<vox pos="-2.26854 0.38635 -0.78139" rot="-16.4 119.6 7.1" blendtexture="5 " prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="wheel"/>
+					<vox pos="0.04615 0.33095 -3.37908" rot="12.2 -1.4 12.0" blendtexture="5 " density="1.5" strength="2" prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="bumper2">
+						<joint pos="0.95 0.15 0.1" rotstrength=".5" rotspring=".8" collide="true"/>
+					</vox>
+					<vox pos="0.0 0.9 3.3" blendtexture="5 " density="1.5" strength="2" prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="gate2">
+						<joint tags="door" pos="-0.75 0.0 0.0" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 130"/>
+						<joint pos="0.85 0.0 0.0" rot="0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 130"/>
+					</vox>
+					<joint pos="0.9 0.15 1.95" rot="0.0 -90.0 40.0" type="hinge" rotstrength="0" rotspring="0" sound="true">
+						<vox pos="-0.05 -0.65 -0.2" rot="0 -90" blendtexture="5 " prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="wheel"/>
+					</joint>
+				</vox>
+				<vox pos="1.542 -0.902 -1.209" rot="19.4 -173.9 -20.2" blendtexture="5 " prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="wheel"/>
+				<vox pos="-1.77102 -0.15069 3.20274" rot="-1.8 34.8 -82.4" blendtexture="5 " prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="wheel"/>
+				<vox pos="-1.966 -0.021 -1.733" rot="-108.3 175.4 -77.5" blendtexture="5 " prop="true" file="MOD/Vehicles/military_truck/military_truck.vox" object="wheel"/>
+			</body>
+		</group>
+	</group>
+</prefab>
+

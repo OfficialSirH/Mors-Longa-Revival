@@ -1,0 +1,19 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/mag0-ar-556.xml" pos="1.6" rot="0">
+		<body tags="Loot=mag0-ar-556_STANAG-30_30_30_5.56 interact=STANAG-30 unbreakable" pos="0 .15" dynamic="true">
+			<group prop0="color=.14 .14 .14" prop1="material=metal">
+				<voxbox pos="-.05 -.15 -.075" size="1 1 1"/>
+				<voxbox pos="-.05 -.15 -.025" size="1 1 1"/>
+				<group pos=".05 -.05 -.075" rot="10">
+					<voxbox pos="-.1" size="1 1 1"/>
+					<voxbox pos="-.1 0 .05" size="1 1 1"/>
+					<group pos="0 .1" rot="10">
+						<voxbox pos="-.1 0 .05" size="1 1 1"/>
+						<voxbox pos="-.1" size="1 1 1"/>
+					</group>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gun N4A1.xml" pos="-7.9 0.8 -3.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/gun-ar15.xml"/>
+	</group>
+</prefab>
+

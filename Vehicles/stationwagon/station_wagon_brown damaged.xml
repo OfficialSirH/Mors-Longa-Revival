@@ -1,0 +1,56 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/stationwagon/station_wagon_brown damaged.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="Station Wagon (Brown)" tags="Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="stationwagon1" spring="0.5" damping="0.3" topspeed="155" acceleration="0.2" strength="2.5" friction="1.0">
+			<body pos="0 0.4 -0.3" dynamic="true">
+				<vox pos="0.05 -0.2 0.4" texture="8 0.7" blendtexture="5 .4" density="2.5" strength="2" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="body2">
+					<light pos="0.55 0.65 2.2" type="area" color="1 0.1 0.1" scale=".5" size="0.1 0.1" unshadowed="0.2" glare="0.2"/>
+					<light pos="-0.7 0.65 2.2" type="area" color="1 0.1 0.1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+					<light pos="-0.55 0.5 -2.2" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="20" penumbra="30" unshadowed="0.2" fogscale="0.1" glare="0.1"/>
+					<light pos="-0.65 0.55 2.2" type="area" color="1 0.8 0.7" scale=".5" size="0.1 0.1" unshadowed="0.2"/>
+					<location tags="player" pos="-0.45 1.05 -0.2"/>
+					<location tags="vital" pos="-0.05 0.6 -1.6"/>
+					<location tags="exhaust" pos="-0.4 0.0 2.0"/>
+					<body pos="-0.1 0.4 1.9" dynamic="true">
+						<vox pos="0.0 0.0 0.1" rot="0.0 0.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="boot2">
+							<joint pos="-0.4 0.8 -0.3" rot="0.0 -90.0 -40.0" type="ball" rotstrength="0.0" rotspring="0.0" collide="true" limits="0 90"/>
+							<joint pos="0.5 0.8 -0.3" rot="0.0 -90.0 -40.0" type="hinge" rotstrength="0.05" rotspring="0.0" limits="0 90"/>
+						</vox>
+					</body>
+					<vox pos="-0.8 0.2 -0.3" texture="8 0.7" blendtexture="5 .4" prop="true" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="door_fl2">
+						<joint pos="0.0 0.5 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.4" rotspring="0.0" limits="0 60"/>
+						<joint pos="0.0 0.1 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+					</vox>
+					<vox pos="-0.8 0.2 0.7" texture="8 0.7" blendtexture="5 .4" prop="true" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="door_rl2">
+						<joint pos="0.0 0.5 -0.4" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 60"/>
+						<joint pos="0.0 0.1 -0.4" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+					</vox>
+					<vox pos="0.7 0.2 -0.3" texture="8 0.7" blendtexture="5 .4" prop="true" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="door_fr2">
+						<joint pos="0.0 0.5 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 60"/>
+						<joint pos="0.0 0.1 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+					</vox>
+					<vox pos="0.7 0.2 0.7" texture="8 0.7" blendtexture="5 .4" prop="true" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="door_rr2">
+						<joint pos="0.0 0.5 -0.4" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="1.0" rotspring="0.0" limits="0 60"/>
+						<joint pos="0.0 0.1 -0.4" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+					</vox>
+					<vox pos="-0.1 0.6 -1.6" texture="8 0.7" blendtexture="5 .4" prop="true" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="hood2">
+						<joint pos="-0.5 0.1 0.5" rot="0.0 90.0 0.0" type="ball" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+						<joint pos="0.6 0.1 0.5" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 60"/>
+					</vox>
+				</vox>
+				<wheel name="fr" pos="0.65 -0.1 -1.2" drive="1" steer="1" travel="-0.2 0.1">
+					<vox pos="0.1 -0.3 0.0" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="wheel2"/>
+				</wheel>
+				<wheel name="fl" pos="-0.65 -0.1 -1.2" drive="1" steer="1" travel="-0.2 0.1">
+					<vox pos="-0.1 -0.3 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="wheel2"/>
+				</wheel>
+				<wheel name="br" pos="0.65 -0.1 1.5" travel="-0.2 0.1">
+					<vox pos="0.1 -0.3 0.0" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="wheel"/>
+				</wheel>
+				<wheel name="bl" pos="-0.65 -0.1 1.5" travel="-0.2 0.1">
+					<vox pos="-0.1 -0.3 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/stationwagon/stationwagon_brown.vox" object="wheel2"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

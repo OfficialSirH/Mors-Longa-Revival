@@ -1,0 +1,68 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/assets/vehicle/trucks/terminator.xml" pos="4.3 0.2 6.6" rot="0.0 -90.0 0.0">
+		<group rot="0.0 0.0 0.0" prop0="texture=5 0.22">
+			<vehicle pos="-0.1 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="semitruck" spring="0.5" damping="0.5" topspeed="70" acceleration="1" strength="7" antispin="1" antiroll="0.6" difflock="0.5" steerassist="0.2">
+				<body pos="0.1 0.8 -0.4" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.05 -0.5 0.1" rot="180.0 0.0 180.0" density="1" strength="3" file="MOD/vox/terminator.vox" object="body">
+						<light pos="-0.9 1.0 3.0" type="cone" color="1 .9 .8" scale="30" angle="90" penumbra="30" size="0.1" unshadowed="0.2" glare="0.4"/>
+						<light pos="1.0 1.0 3.0" type="cone" color="1 .9 .8" scale="30" angle="90" penumbra="30" size="0.1" unshadowed="0.2" glare="0.4"/>
+						<location tags="player" pos="0.55 2.1 2.2" rot="0.0 0.0 0.0"/>
+						<light pos="0.25 0.25 -3.2" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.3 0.1" unshadowed="0.2" glare="0.2"/>
+						<light pos="-0.15 0.25 -3.2" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.3 0.1" unshadowed="0.2" glare="0.2"/>
+						<light pos="-0.35 1.85 1.05" color="0.68 0.59 0.4" size="0.05" unshadowed="0.2"/>
+					</vox>
+					<group pos="0.15 0.2 0.0">
+						<wheel name="br2" pos="0.6 -0.55 1.55" drive="0.7" travel="-0.1 0.1">
+							<vox pos="0.3 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_br"/>
+						</wheel>
+						<wheel name="bl1" pos="-0.9 -0.55 1.55" drive="0.7" travel="-0.1 0.1">
+							<vox pos="-0.2 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_bl"/>
+						</wheel>
+						<wheel name="fl" pos="-1.0 -0.55 -2.35" steer="1" travel="-0.1 0.1">
+							<vox pos="-0.1 -0.45 -0.05" rot="0.0 180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_fl"/>
+						</wheel>
+						<wheel name="fr" pos="0.7 -0.55 -2.35" steer="1" travel="-0.1 0.1">
+							<vox pos="0.2 -0.45 -0.05" rot="0 180 0" file="MOD/vox/terminator.vox" object="wheel_fr"/>
+						</wheel>
+						<wheel name="br2" pos="0.6 -0.55 2.65" drive="0.7" travel="-0.1 0.1">
+							<vox pos="0.3 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_br"/>
+						</wheel>
+						<wheel name="bl1" pos="-0.9 -0.55 2.65" drive="0.7" travel="-0.1 0.1">
+							<vox pos="-0.2 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_bl"/>
+						</wheel>
+					</group>
+				</body>
+				<location tags="exhaust" pos="0.85 3.3 -0.8" rot="-90.0 0.0 0.0"/>
+				<location tags="vital" pos="0.1 1.0 -2.7" rot="-90.0 0.0 0.0"/>
+				<location tags="camera" pos="0.05 2.0 -1.5" rot="-90.0 0.0 0.0"/>
+				<location tags="exhaust" pos="-0.65 3.3 -0.8" rot="-90.0 0.0 0.0"/>
+				<body pos="0.15 1.5 5.9" dynamic="true">
+					<vox pos="0.0 -1.2 0.0" rot="0 180 0" file="MOD/vox/terminator.vox" object="trailer">
+						<joint pos="0.05 0.4 4.7" rot="-90.0 -90.0 0.0" type="hinge" limits="-70 70"/>
+						<light pos="0.85 0.5 -6.2" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.3 0.2" unshadowed="0.2" glare="0.2"/>
+						<light pos="-0.75 0.5 -6.2" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.3 0.2" unshadowed="0.2" glare="0.2"/>
+					</vox>
+					<wheel pos="0.5 -1.05 4.05" travel="-0.1 0.1">
+						<vox pos="0.3 -0.45 -0.05" rot="0.0 180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_br"/>
+					</wheel>
+					<wheel pos="0.5 -1.05 2.95" travel="-0.1 0.1">
+						<vox pos="0.3 -0.45 -0.05" rot="0.0 180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_br"/>
+					</wheel>
+					<wheel pos="0.5 -1.05 1.85" travel="-0.1 0.1">
+						<vox pos="0.3 -0.45 -0.05" rot="0.0 180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_br"/>
+					</wheel>
+					<wheel pos="-0.6 -1.05 4.05" travel="-0.1 0.1">
+						<vox pos="-0.2 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_bl"/>
+					</wheel>
+					<wheel pos="-0.6 -1.05 2.95" travel="-0.1 0.1">
+						<vox pos="-0.2 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_bl"/>
+					</wheel>
+					<wheel pos="-0.6 -1.05 1.85" travel="-0.1 0.1">
+						<vox pos="-0.2 -0.45 -0.05" rot="0.0 -180.0 0.0" file="MOD/vox/terminator.vox" object="wheel_bl"/>
+					</wheel>
+				</body>
+			</vehicle>
+		</group>
+	</group>
+</prefab>
+

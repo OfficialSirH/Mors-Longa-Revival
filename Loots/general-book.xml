@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group>
+		<body tags="Loot=general-book_Book interact=Book" pos="0 .05" dynamic="true">
+			<voxbox pos="-.15 -.05 -.2" texture="7 .5" size="3 1 4" color=".24 .23 .14"/>
+		</body>
+	</group>
+</prefab>
+

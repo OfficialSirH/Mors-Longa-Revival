@@ -1,0 +1,53 @@
+<prefab version="0.9.5">
+	<group name="abandoned_2" pos="19.1 0.0 0.0">
+		<group name="wall" pos="0.0 0.4 9.9" prop0="texture=1 0.9" prop1="tags=nocull">
+			<voxbox name="out" pos="-3.4 -0.2 -7.2" rot="0.0 180.0 0.0" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window_filled"/>
+			<voxbox name="out" pos="5.6 -0.2 -7.2" rot="0.0 -180.0 0.0" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window_filled"/>
+			<voxbox name="out" pos="5.6 -0.2 -12.2" rot="0.0 -90.0 0.0" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+			<voxbox name="out" pos="5.6 -0.2 -19.5" rot="0.0 -90.0 0.0" size="20 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in"/>
+			<voxbox name="out" pos="-3.7 -0.2 -15.2" rot="0.0 90.0 0.0" size="45 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+			<voxbox name="out" pos="-3.2 -0.2 -15.5" rot="0.0 -90.0 0.0" size="29 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in"/>
+			<voxbox name="out" pos="-3.4 -0.2 -12.6" rot="0.0 180.0 0.0" size="44 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in"/>
+			<voxbox name="out" pos="5.6 -0.2 -14.0" rot="0.0 -90.0 0.0" size="20 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in"/>
+			<voxbox name="out" pos="5.1 -0.2 -13.7" rot="0.0 90.0 0.0" size="38 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+			<voxbox name="out" pos="10.1 -0.2 -11.7" rot="0.0 -180.0 0.0" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window_filled"/>
+			<voxbox name="out" pos="12.4 -0.2 -11.7" rot="0.0 -180.0 0.0" size="25 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+			<voxbox name="out" pos="12.4 -0.2 -16.8" rot="0.0 -90.0 0.0" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window_filled"/>
+			<voxbox name="out" pos="12.4 -0.2 -19.9" rot="0.0 -90.0 0.0" size="32 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+			<voxbox name="out" pos="7.3 -0.2 -19.9" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+			<voxbox name="out" pos="2.8 -0.2 -19.9" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-1.7 -0.2 -19.9" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window"/>
+			<voxbox name="out" pos="-3.7 -0.2 -7.7" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door_filled"/>
+			<voxbox name="out" pos="-6.2 -0.2 -19.9" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 -0.2 -19.9" size="22 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 -0.2 -17.6" rot="0.0 90.0 0.0" size="20 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 -0.2 -12.6" rot="0.0 90.0 0.0" size="52 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 -0.2 -11.3" rot="0.0 90.0 0.0" size="20 23 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 2.23329 -11.56208" rot="0.0 90.0 -61.0" size="1 12 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-8.2 1.98329 -10.46208" rot="0.0 90.0 -77.0" size="1 12 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-8.1 1.9827 -10.1962" rot="180.0 -90.0 -27.0" size="1 9 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-8.1 1.57961 -8.8116" rot="180.0 -90.0 -57.0" size="1 7 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.93 0.99961 -8.6616" rot="21.2 108.8 -61.3" size="1 7 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.9 1.7354 -10.33239" rot="-180.0 -90.0 -27.0" size="1 6 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.9 1.99616 -9.79188" rot="180.0 -90.0 -64.0" size="1 6 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.0 -0.1 -9.462" rot="0.0 104.0 -90.0" size="1 12 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.4 -0.1 -7.962" rot="0.0 62.0 -90.0" size="1 12 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.66 -0.1 -8.712" rot="0.0 33.0 -90.0" size="1 7 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-7.68 -0.11 -7.782" rot="0.0 33.0 -73.0" size="1 7 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall brush"/>
+			<voxbox name="out" pos="-8.2 -0.2 -9.5" rot="0.0 90.0 0.0" size="20 14 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+			<voxbox name="out" pos="-8.2 -0.2 -7.4" rot="0.0 90.0 0.0" size="23 14 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+		</group>
+		<group name="floor" pos="0.0 0.0 -3.6" prop0="texture=1 0.9" prop1="tags=nocull">
+			<voxbox name="floor" pos="-8.2 0.0 -6.4" size="138 2 127" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="floor"/>
+			<voxbox name="floor" pos="5.6 0.0 -6.4" size="68 2 82" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="floor"/>
+			<voxbox name="floor" pos="-6.77634 0.2 3.67537" rot="0.0 -90.0 0.0" size="14 1 10" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris"/>
+			<voxbox name="floor" pos="-5.11634 0.2 2.68537" rot="0.0 -90.0 0.0" size="33 1 15" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris"/>
+			<voxbox name="floor" pos="-3.68634 0.2 -2.86463" rot="0.0 -90.0 0.0" size="33 1 27" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris"/>
+			<voxbox name="floor" pos="-7.7 3.2 0.4" rot="57.0 90.0 0.0" size="34 3 36" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling"/>
+			<voxbox name="floor" pos="-7.7 3.2 -3.0" rot="49.0 90.0 0.0" size="29 3 40" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling"/>
+			<voxbox name="floor" pos="-3.686 0.2 -6.055" rot="0.0 -90.0 0.0" size="33 1 27" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris2"/>
+			<voxbox name="floor" pos="-8.17756 0.0 2.94024" rot="0.0 -94.0 0.0" size="33 1 20" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris"/>
+		</group>
+	</group>
+</prefab>
+

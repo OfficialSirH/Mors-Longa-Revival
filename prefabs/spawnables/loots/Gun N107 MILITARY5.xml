@@ -1,0 +1,113 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gun N107 MILITARY5.xml" pos="0.3 0.1 6.4" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/Loots/gun-m107.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+			<body name="M107" tags="Loot=gun-m107_N107_mag0-m107-127x99_N107-Mag_10_10_.50BMG_scope--muzzle2---------- interact=N107 unbreakable" pos="0.0 0.3 -0.1" dynamic="true">
+				<group name="Metal1" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
+					<voxbox pos="-0.05 -0.05 -0.35" rot="0.0 0.0 0.0" size="1 1 15">
+						<voxbox name="Barrel" tags="barrel range=70 magsize=1 damage=25 firerate=1 gun=ak roundsize=3" pos="0.0 0.0 1.5" rot="0.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+				</group>
+				<group name="Metal2" pos="0.0 0.0 0.0" prop0="color=.13 .13 .13" prop1="material=metal">
+					<group pos="0.0 -0.11 -0.18">
+						<voxbox pos="-0.055 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.07" size="1 1 2"/>
+							<voxbox pos="0.0 -0.08 0.07" size="1 1 2"/>
+						</voxbox>
+						<voxbox pos="-0.045 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.07" size="1 1 2"/>
+							<voxbox pos="0.0 -0.08 0.07" size="1 1 2"/>
+						</voxbox>
+						<group pos="0.0 -0.1 0.0">
+							<voxbox pos="-0.055 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+								<voxbox pos="0.0 0.0 0.07" rot="-5" size="1 1 2"/>
+							</voxbox>
+							<voxbox pos="-0.045 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+								<voxbox pos="0.0 0.0 0.07" rot="-5" size="1 1 2"/>
+							</voxbox>
+						</group>
+					</group>
+					<voxbox pos="-0.05 0.03 -0.37" rot="0.0 0.0 0.0" size="1 1 9">
+						<group pos="0.0 0.1 0.35" prop0="color=.1 .1 .1">
+							<voxbox pos="0.0 0.03 -0.2" texture="11" size="1 1 5"/>
+							<voxbox pos="0.0 0.0 0.1" texture="11" size="1 1 1"/>
+							<voxbox pos="0.0 0.0 -0.15" texture="11" size="1 1 1"/>
+							<voxbox pos="-0.01 0.02 -0.4" texture="11" size="1 1 2"/>
+							<voxbox pos="-0.01 0.04 -0.4" texture="11" size="1 1 2"/>
+							<voxbox pos="0.01 0.04 -0.4" texture="11" size="1 1 2"/>
+							<voxbox pos="0.01 0.02 -0.4" texture="11" size="1 1 2"/>
+							<voxbox pos="-0.01 0.04 0.2" texture="11" size="1 1 3"/>
+							<voxbox pos="-0.01 0.02 0.2" texture="11" size="1 1 3"/>
+							<voxbox pos="0.01 0.02 0.2" texture="11" size="1 1 3"/>
+							<voxbox pos="0.01 0.04 0.2" texture="11" size="1 1 3"/>
+						</group>
+					</voxbox>
+					<group pos="-0.06 -0.06 0.53">
+						<voxbox pos="0.0 0.0 -0.1" size="1 1 1"/>
+						<voxbox pos="0.0 0.0 -0.22" size="1 1 1"/>
+						<voxbox pos="0.0 0.0 -0.34" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.1" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.22" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.34" size="1 1 1"/>
+					</group>
+					<group pos="-0.04 -0.06 0.53">
+						<voxbox pos="0.0 0.0 -0.1" size="1 1 1"/>
+						<voxbox pos="0.0 0.0 -0.22" size="1 1 1"/>
+						<voxbox pos="0.0 0.0 -0.34" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.1" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.22" size="1 1 1"/>
+						<voxbox pos="0.0 0.05 -0.34" size="1 1 1"/>
+					</group>
+				</group>
+				<group name="Metal3" pos="0.0 0.0 0.0" prop0="color=.1 .1 .1" prop1="material=metal">
+					<voxbox pos="0.045 -0.12 -0.2" rot="0.0 180.0 0.0" size="1 1 3" color=".1 .1 .1">
+						<voxbox pos="-0.01 0.0 0.0" rot="0 0 0" size="1 1 3" color=".1 .1 .1"/>
+					</voxbox>
+					<group pos="0.0 -0.3 -0.42" rot="0.0 0.0 0.0">
+						<voxbox pos="-0.055 0.03 -0.06" rot="12.0 0.0 0.0" size="1 2 1"/>
+						<voxbox pos="-0.045 0.03 -0.06" rot="12.0 0.0 0.0" size="1 2 1"/>
+					</group>
+					<group name="Stock" pos="0.0 0.0 -0.42" rot="0.0 0.0 0.0">
+						<voxbox pos="-0.05 0.07 -0.56" rot="90.0 0.0 0.0" size="1 1 3">
+							<voxbox pos="0.0 0.1 0.3" rot="-93.0 0.0 0.0" size="1 1 2">
+								<voxbox pos="0.0 0.0 0.2" rot="-80.0 0.0 0.0" size="1 1 2"/>
+							</voxbox>
+						</voxbox>
+					</group>
+				</group>
+				<group name="Metal4" prop0="color=.4 .4 .4" prop1="material=metal">
+					<voxbox pos="-0.05 -0.2 -0.3" rot="-70.0 0.0 0.0" size="1 1 1">
+						<light tags="handle" pos="0.05 0.1 -0.05" rot="82.0 0.0 0.0" scale="0" angle="0" penumbra="0" size="0.05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+					</voxbox>
+					<voxbox pos="-0.06 -0.01 -0.23" rot="0.0 0.0 0.0" size="1 1 3" color=".4 .4 .4"/>
+				</group>
+				<group name="Furniture" prop0="color=.4 .35 .3" prop1="material=plastic">
+					<voxbox pos="-0.05 -0.082 -0.93" size="1 1 15"/>
+					<group pos="0.0 -0.13 -0.1">
+						<voxbox pos="0.06 0.0 0.2" rot="-30.0 180.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.0" rot="40.0 0.0 0.0" size="1 1 3">
+								<voxbox pos="-0.0 0.1 0.3" rot="-100.0 0.0 0.0" size="1 3 1"/>
+							</voxbox>
+							<voxbox pos="0.0 0.05 0.0" rot="0.0 0.0 0.0" size="1 1 1"/>
+						</voxbox>
+						<voxbox pos="0.04 0.0 0.2" rot="-30.0 180.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.0" rot="40.0 0.0 0.0" size="1 1 3">
+								<voxbox pos="-0.0 0.1 0.3" rot="-100.0 0.0 0.0" size="1 3 1"/>
+							</voxbox>
+							<voxbox pos="0.0 0.05 0.0" rot="0.0 0.0 0.0" size="1 1 1"/>
+						</voxbox>
+					</group>
+					<voxbox pos="-0.05 0.015 -0.93" rot="0.0 0.0 0.0" size="1 1 15">
+						<voxbox pos="0.0 0.1 0.0" rot="-180.0 -180.0 -80.0" size="1 1 7">
+							<voxbox pos="0.1 -0.0 0.0" rot="0.0 0.0 20.0" size="1 1 15"/>
+							<voxbox pos="-0.0 -0.0 1.0" rot="0.0 0.0 0.0" size="1 1 5"/>
+							<voxbox pos="0.0 0.0 0.7" rot="0.0 0.0 5" size="1 1 3"/>
+						</voxbox>
+						<voxbox pos="0.1 0.1 0.0" rot="0.0 0.0 -170.0" size="1 1 15">
+							<voxbox pos="-0.0 0.1 0.0" rot="0.0 0.0 -20.0" size="1 1 15"/>
+						</voxbox>
+					</voxbox>
+				</group>
+			</body>
+		</group>
+	</group>
+</prefab>

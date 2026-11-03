@@ -1,0 +1,13 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=meds-fracture-splint_Splint_1_1 interact=Splint" pos="0 .075" dynamic="true">
+			<group prop0="color=.8 .8 .72">
+				<voxbox pos="-.15 -.025 -.075" size="3 1 1"/>
+				<voxbox pos="-.15 -.025 -.025" size="3 1 1"/>
+				<voxbox pos="-.15 -.075 -.025" size="3 1 1"/>
+				<voxbox pos="-.15 -.075 -.075" size="3 1 1"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,85 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/Gaz24/volgawhiteDestroyed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" prop0="file=MOD/Vehicles/Gaz24/volgawhite.vox" prop1="brush=MOD/Vehicles/Gaz24/volgawhite.vox">
+			<body pos="0 .5 -.15" dynamic="true">
+				<vox pos="0.05 -0.3 0.15" rot="0 180" texture="8" blendtexture="5 " density="2" strength="10" file="MOD/Vehicles/Gaz24/volgawhite.vox" object="body2" pbr="0 0 0 -64">
+					<group name="fascia" pos="-.1 .2 2.3" prop0="tags=nocull">
+						<vox pos=".1 .201 .1" texture="8" blendtexture="5 " strength="10" object="fascia">
+							<voxbox pos="-.6 .2 .016" rot="-175" texture="8" blendtexture="5 " strength="10" size="13 2 1" object="grille">
+								<voxbox rot="73" texture="8" blendtexture="5 " strength="10" size="13 1 1" object="grille"/>
+							</voxbox>
+						</vox>
+					</group>
+					<group name="hood section" pos="0 .7 1.7" prop0="tags=nocull">
+						<group name="l_base_pivot" pos=".9 .1 -.7" rot="2 0 -3.3">
+							<vox pos="-.4 0 .7" rot="0 0 180" texture="8" blendtexture="5 " strength="10" object="hood"/>
+						</group>
+						<group name="r_base_pivot" pos="-.8 .1 -.7" rot="2 0 3.3">
+							<vox pos=".4 -.1 .7" texture="8" blendtexture="5 " strength="10" object="hood"/>
+						</group>
+					</group>
+					<group name="trunk section" pos=".05 .7 -1.8" prop0="tags=nocull">
+						<group name="r_base_pivot" pos="-.85 .1 .6" rot="-2 0 1">
+							<vox pos=".4 -.1 -.5" texture="8" blendtexture="5 " strength="10" object="trunk">
+								<vox pos=".4 .1 .4" rot="0 0 -91" texture="8" blendtexture="5 " strength="10" object="trunk_center"/>
+							</vox>
+						</group>
+						<group name="l_base_pivot" pos=".85 .1 .6" rot="-2 0 -1">
+							<vox pos="-.4 0 -.5" rot="0 0 180" texture="8" blendtexture="5 " strength="10" object="trunk"/>
+						</group>
+						<vox pos="-.05 -.1 -.5" texture="8" blendtexture="5 " prop="true" object="trunk_bot">
+							<group name="r_top_pivot" pos="-.8 .2 1.1" rot="-2 0 1">
+								<vox pos=".5 -.1 -.6" texture="8" blendtexture="5 " strength="10" object="trunk_door_top">
+									<vox pos=".3 .1" rot="0 0 -91" texture="8" blendtexture="5 " strength="10" object="trunk_door_center"/>
+								</vox>
+							</group>
+							<group name="l_top_pivot" pos=".9 .2 1.1" rot="-2 0 -1">
+								<vox pos="-.5 0 -.6" rot="0 0 180" texture="8" blendtexture="5 " strength="10" object="trunk_door_top"/>
+							</group>
+							<joint pos=".7 .2 .9" rot="0 90" type="hinge" rotstrength=".02" rotspring="0" limits="0 100" sound="true">
+								<joint pos="0 0 -1.3" type="hinge" rotstrength=".02" rotspring="0" limits="0 100" sound="true"/>
+							</joint>
+							<vox pos="0 .06 .5" texture="8" blendtexture="5 " object="trunk_base"/>
+						</vox>
+					</group>
+					<vox pos="-.73 .9 -.85" rot="30" texture="8" blendtexture="5 " strength="10" object="vent"/>
+					<vox pos=".73 .9 -.85" rot="30" texture="8" blendtexture="5 " strength="10" object="vent"/>
+					<vox pos="-.2 -.05" texture="8" blendtexture="5 " object="exhaust">
+						<location tags="exhaust" pos="-.05 .15 -2" rot="180"/>
+					</vox>
+					<vox tags="fxbreak=l1brown" pos="0 .05 -1.7" texture="8" blendtexture="5 " object="tank"/>
+					<vox tags="fxbreak=g9" pos="0 .39 2.2" texture="8" blendtexture="5 " strength="20" object="radiator"/>
+					<vox pos="0.8 0.1 -0.5" rot="0.0 0.0 0.0" texture="8" blendtexture="5 " prop="true" object="doorslr">
+						<joint tags="door" pos="0.1 0.1 0.4" rot="90.0 90.0 0.0" type="hinge" rotstrength=".06" rotspring="0.0" limits="0 70"/>
+						<joint pos=".1 .6 .4" rotstrength=".06" rotspring="0.0"/>
+					</vox>
+					<vox pos="-0.8 0.1 0.5" rot="0.0 0.0 0.0" texture="8" blendtexture="5 " prop="true" object="doorsrf">
+						<joint tags="door" pos="0.0 0.1 0.5" rot="-90.0 90.0 0.0" type="hinge" rotstrength=".06" rotspring="0.0" limits="0 70"/>
+						<joint pos="0.0 0.6 0.5" rotstrength=".06" rotspring="0.0"/>
+					</vox>
+					<vox pos=".7 .2 .1" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos=".7 .2 -.7" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos="-.7 .2 .1" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos="-.7 .2 -.7" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos=".7 .7 -.8" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos="-.7 .7 -.8" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos=".7 .6 .1" texture="8" blendtexture="5 " object="filler1"/>
+					<vox pos="-.7 .6 .1" texture="8" blendtexture="5 " object="filler1"/>
+				</vox>
+				<wheel name="bl" pos="-0.75 -0.15 1.4" rot="0.0 0.0 -10.0" drive="1" travel="-.1 .1">
+					<vox pos="-.1 -.35 -.05" rot="0 180" texture="8" blendtexture="5 " object="wheel"/>
+				</wheel>
+				<wheel name="br" pos=".65 -.15 1.4" drive="1" travel="-.1 .1">
+					<vox pos=".1 -.35 .05" texture="8" blendtexture="5 " object="wheel"/>
+				</wheel>
+				<wheel name="fl" pos="-0.65 -0.15 -1.5" rot="0.0 10.0 0.0" steer="1" travel="-.1 .1">
+					<vox pos="-.1 -.35 -.05" rot="0 180" texture="8" blendtexture="5 " object="wheel"/>
+				</wheel>
+				<wheel name="fr" pos="0.65 -0.3 -1.5" rot="0.0 0.0 -90.0" steer="1" travel="-.1 .1">
+					<vox pos=".1 -.35 .05" texture="8" blendtexture="5 " object="wheel"/>
+				</wheel>
+			</body>
+		</group>
+	</group>
+</prefab>
+

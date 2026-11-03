@@ -1,0 +1,64 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/enemy vehicles/VehicleC2.xml" pos="-1.0 0.0 2.1" rot="0.0 0.0 0.0">
+		<script rot="0.0 0.0 0.0" file="MOD/scripts/ConvoyOperatorTransport.lua">
+			<script rot="0.0 0.0 0.0" file="MOD/Vehicles/!library/scripts/door.lua">
+				<vehicle name="paz 3205" tags="Door reversebeep" driven="false" sound="van 0.8" spring="0.25" damping="1" topspeed="90" acceleration="0.07" strength="4" antiroll="0.3" difflock="1" friction="1.0">
+					<body pos="0.0 0.7 -0.5" dynamic="true">
+						<vox pos="0.05 -0.4 0.5" rot="0 180 0" texture="8 .5" density="1.5" strength="5" file="MOD/vehicles/Soviet Vehicles/paz 3205.vox" object="body">
+							<light pos="-0.75 0.65 -3.4" rot="-180.0 0.0 -180.0" type="area" color="1.0 1.0 1.0" scale="0.3" size=".1 .1" unshadowed="0.2" glare="0.2"/>
+							<light pos="0.85 0.65 -3.4" rot="-180.0 0.0 -180.0" type="area" color="1.0 1.0 1.0" scale="0.3" size=".1 .1" unshadowed="0.2" glare="0.2"/>
+							<light pos="0.95 0.65 -3.4" rot="180.0 0.0 180.0" type="area" color="1.0 0.21 0.21" scale="0.3" size=".1 .1" unshadowed="0.2" glare="0.2"/>
+							<location tags="exhaust=2" pos="0.75 0.15 -3.4" rot="180"/>
+							<location tags="vital" pos="0.05 0.7 2.85"/>
+							<location tags="player" pos="0.7 1.7 2.35" rot="0.0 0.0 0.0"/>
+							<light pos="-0.7 0.5 3.4" rot="0.0 0.0 0.0" type="cone" color="1 1 1" scale="50" size=".1 .1" unshadowed="0.2" glare="0.3"/>
+							<light pos="0.8 0.5 3.4" rot="0.0 0.0 0.0" type="cone" color="1 1 1" scale="50" size=".1 .1" unshadowed="0.2" glare="0.3"/>
+							<light pos="-0.85 0.65 -3.4" rot="0.0 180.0 0.0" type="area" color="0.98 0.15 0.15" scale="0.3" size=".1 .1" unshadowed="0.2" glare="0.2"/>
+							<group name="doors" pos="0.0 0.6 0.1">
+								<vox pos="1.2 0.1 2.5" texture="8 .5" prop="true" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="door">
+									<joint tags="door" pos="0.0 0.1 0.4" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 80"/>
+								</vox>
+								<vox pos="0.0 -0.2 3.3" rot="0.0 0.0 0.0" texture="8 .5" prop="true" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="hood">
+									<joint tags="door" pos="0.45 0.7 0.0" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 80"/>
+									<joint tags="door" pos="-0.35 0.7 -0.0" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 80"/>
+								</vox>
+								<vox pos="0.65 0.0 2.8" rot="-10.0 0.0 0.0" texture="8 .5" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="steer"/>
+								<vox pos="-1.1 -0.0 -2.5" rot="0.0 0.0 0.0" texture="8 .5" prop="true" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="door rear">
+									<joint tags="door" pos="-0.1 0.1 0.3" rot="-90.0 90.0 0.0" type="hinge" size="0.15" rotstrength="0.01" rotspring="0.0" limits="0 90"/>
+								</vox>
+								<vox pos="-1.0 -0.5 0.8" rot="0.0 0.0 0.0" texture="8 .5" prop="true" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="door0.1">
+									<joint tags="door" pos="0.05 0.0 -0.15" rot="90.0 -90.0 0.0" type="hinge" size="0.15" rotstrength="0.01" rotspring="0.0" limits="0 90"/>
+								</vox>
+								<vox pos="-1.0 -0.5 1.1" rot="0.0 0.0 0.0" texture="8 .5" prop="true" file="MOD/Vehicles/Soviet Vehicles/paz 3205.vox" object="door0.2">
+									<joint tags="door" pos="0.05 0.0 0.15" rot="-90.0 90.0 0.0" type="hinge" size="0.15" rotstrength="0.01" rotspring="0.0" limits="0 90"/>
+								</vox>
+							</group>
+							<location tags="exit" pos="1.65 0.5 2.3"/>
+							<location tags="camera" pos="0.05 2.4 0.0"/>
+						</vox>
+						<wheel name="bl" pos="-0.85 -0.25 1.65" drive="1" travel="-0.2 0.1">
+							<vox pos="0.1 -0.45 -0.05" rot="0.0 180.0 0.0" texture="8 .5" file="MOD/vehicles/Soviet Vehicles/paz 3205.vox" object="wheel_b"/>
+						</wheel>
+						<wheel name="br" pos="0.85 -0.25 1.65" drive="1" travel="-0.2 0.1">
+							<vox pos="-0.1 -0.45 0.05" texture="8 .5" file="MOD/vehicles/Soviet Vehicles/paz 3205.vox" object="wheel_b"/>
+						</wheel>
+						<wheel name="fl" pos="-0.85 -0.25 -1.75" rot="0.0 0.0 0.0" drive="0" steer="1" travel="-0.2 0.1">
+							<vox pos="-0.2 -0.45 -0.05" rot="0.0 180.0 0.0" texture="8 .5" file="MOD/vehicles/Soviet Vehicles/paz 3205.vox" object="wheel_f"/>
+						</wheel>
+						<wheel name="fr" pos="0.85 -0.25 -1.75" drive="0" steer="1" travel="-0.2 0.1">
+							<vox pos="0.2 -0.45 0.05" rot="0" texture="8 .5" file="MOD/vehicles/Soviet Vehicles/paz 3205.vox" object="wheel_f"/>
+						</wheel>
+					</body>
+				</vehicle>
+			</script>
+			<location tags="explosionorigin" pos="0.0 0.3 2.75" rot="0.0 0.0 0.0"/>
+			<location tags="locationspawn" pos="2.0 0.7 -0.85" rot="0.0 0.0 0.0"/>
+			<instance pos="-0.5 0.7 -2.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/CivillianD.xml"/>
+			<instance pos="-0.6 0.7 -0.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/CivillianP.xml"/>
+			<instance pos="-0.6 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/CivillianP.xml"/>
+			<instance pos="0.6 0.7 -0.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/CivillianP.xml"/>
+			<instance pos="0.6 0.7 0.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/enemy vehicles/CivillianP.xml"/>
+		</script>
+	</group>
+</prefab>
+

@@ -1,0 +1,109 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/Based Vehicles/sailboat.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<script file="MOD/Vehicles/!library/scripts/drivetrain.lua">
+			<vehicle name="Sailboat" sound="yacht" spring="5" damping="5" topspeed="40" acceleration="0.09" strength="0.5" difflock="1" friction="1">
+				<body tags="boat" pos="0.0 2.0 0.8" dynamic="true">
+					<vox pos="0.05 -1.8 -1.1" rot="0 90 0" texture="8 0.5" blendtexture="5 .4" density="4" strength="3" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="body">
+						<location tags="player" pos="-5.9 3.2 -1.05"/>
+						<location tags="exit" pos="-4.5 2.4 -0.6"/>
+						<location tags="exhaust" pos="-6.2 1.0 -0.05" rot="0 -90 0"/>
+						<location tags="propeller" pos="-6.2 0.8 -0.05" rot="0 -90 0"/>
+						<group pos="-0.1 2.6 -0.1" prop0="color=0.1 0.1 0.1">
+							<rope pos="5.4 0.25 0.55" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.2 0 0.9"/>
+							</rope>
+							<rope pos="3.1 0.25 1.45" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.1 0 0.3"/>
+							</rope>
+							<rope pos="0.9 0.25 1.75" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-1.8 0 0"/>
+							</rope>
+							<rope pos="-1 0.25 1.75" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.5 -0.1 0"/>
+							</rope>
+							<rope pos="-3.6 0.15 1.75" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-1.8 0 0"/>
+							</rope>
+							<rope pos="-3.6 0.15 -1.65" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-1.8 0 0"/>
+							</rope>
+							<rope pos="-1 0.25 -1.65" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.5 -0.1 0"/>
+							</rope>
+							<rope pos="0.9 0.25 -1.65" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-1.8 0 0"/>
+							</rope>
+							<rope pos="3.1 0.25 -1.35" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.1 0 -0.3"/>
+							</rope>
+							<rope pos="5.4 0.25 -0.45" slack="-.5" strength="0" maxstretch="1">
+								<location/>
+								<location pos="-2.2 0 -0.9"/>
+							</rope>
+						</group>
+						<body pos="-6.3 1.7 0.0" rot="0.0 0.0 0.0" dynamic="true">
+							<vox pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.9" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="ladder">
+								<joint pos="0.25 1.15 0.4" rot="0.0 -180.0 -90" type="hinge" rotstrength="0.01" rotspring="0" limits="0 170"/>
+								<joint pos="0.25 1.15 -0.4" rot="0.0 -180.0 -90.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 170"/>
+								<vox pos="-0.4 -1.1 0.0" rot="0.0 0.0 0.0" texture="8 0.9" blendtexture="5 .4" prop="true" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="ladder.5">
+									<joint pos="0.15 1.15 0.3" rot="0.0 -180.0 -90" type="hinge" rotstrength="0.01" rotspring="0" limits="0 170"/>
+									<joint pos="0.15 1.15 -0.3" rot="0.0 -180.0 -90.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 170"/>
+								</vox>
+							</vox>
+						</body>
+						<body pos="-2.8 0.1 -0.05" rot="0.0 0.0 -18" dynamic="true">
+							<vox pos="-0.9 0.0 -0.0" rot="0.0 0.0 0.0" texture="8 0.9" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="axle">
+								<joint pos="0.9 0.1 0.0" rot="0.0 90.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+								<joint tags="drive=100" pos="-0.9 0.1 0.0" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+							</vox>
+						</body>
+					</vox>
+					<vox pos="0.05 1.1 -2.3" rot="0 90 0" texture="8 0.5" blendtexture="5 .4" strength="5" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="mast">
+						<rope pos="0.1 10.35 -0.05" slack="-.5" strength="0" maxstretch="1">
+							<location/>
+							<location pos="1.1 -1.65 -0.0"/>
+						</rope>
+						<rope pos="0 6.9 -1.3" slack="-1" strength="0" maxstretch="1">
+							<location/>
+							<location pos="-0.7 -6.7 0.8"/>
+						</rope>
+						<rope pos="0 6.9 -1.3" slack="-1" strength="0" maxstretch="1">
+							<location/>
+							<location pos="0 3.5 1.2"/>
+						</rope>
+						<rope pos="0 6.9 1.2" slack="-1" strength="0" maxstretch="1">
+							<location/>
+							<location pos="0 3.5 -1.1"/>
+						</rope>
+						<rope pos="0 6.9 1.2" slack="-1" strength="0" maxstretch="1">
+							<location/>
+							<location pos="-0.7 -6.7 -0.8"/>
+						</rope>
+					</vox>
+					<wheel pos="1.85 -1.6 1.5" rot="0.0 0.0 0.0" drive="1" travel="0 0">
+						<vox pos="0.1 -0.4 0.0" rot="0.0 -90.0 0.0" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="wheel"/>
+					</wheel>
+					<wheel pos="1.85 -1.6 -3.4" rot="0.0 0.0 0.0" steer="0.8" travel="0 0">
+						<vox pos="0.1 -0.4 0.0" rot="0.0 -90.0 0.0" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="wheel"/>
+					</wheel>
+					<wheel pos="-1.85 -1.6 1.5" rot="0.0 0.0 0.0" drive="1" travel="0 0">
+						<vox pos="-0.1 -0.4 0.0" rot="0.0 90.0 0.0" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="wheel"/>
+					</wheel>
+					<wheel pos="-1.85 -1.6 -3.4" rot="0.0 0.0 0.0" steer="0.8" travel="0 0">
+						<vox pos="-0.1 -0.4 0.0" rot="0.0 90.0 0.0" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/Based Vehicles/sailboat.vox" object="wheel"/>
+					</wheel>
+				</body>
+			</vehicle>
+		</script>
+	</group>
+</prefab>
+

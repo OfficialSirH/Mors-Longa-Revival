@@ -1,0 +1,11 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm RL.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body name="LArm_R" tags="RRARM bodypart" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" dynamic="true">
+			<vox pos="0.0 -0.4 0.025" rot="0 180" object="larm_R"/>
+			<vox pos="0.0 -0.4 -0.025" rot="0 180" object="larm_R"/>
+			<joint tags="hand1" pos="0.0 0.05 0.0" rot="0.0 90.0 0.0" type="hinge" limits="0 110"/>
+			<voxbox name="bone" tags="bone" pos="0.05 -0.25 0.1" rot="0.0 -180.0 0.0" texture="7" size="1 3 1" material="masonry" color=".43"/>
+		</body>
+	</group>
+</prefab>
+

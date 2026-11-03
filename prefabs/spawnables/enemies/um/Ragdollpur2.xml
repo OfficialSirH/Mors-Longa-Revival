@@ -1,0 +1,16 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/enemies/um/Ragdollpur2.xml" pos="-65.0 0.0 6.0" rot="0.0 0.0 0.0">
+		<script file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll" pos="0.0 0.0 -0.1" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Purifryer.vox" prop1="tags=Torso Attack bodypart spawn_team=um">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml"/>
+			</group>
+			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/helmet_um_pur_suit.xml"/>
+			</group>
+			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS">
+				<instance pos="0.0 0.3 -0.1" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/torso_um_pur.xml"/>
+			</group>
+		</script>
+	</group>
+</prefab>
+

@@ -1,0 +1,6 @@
+<prefab version="1.3.0">
+	<group pos="-1.1 -0.9 -7.7">
+		<vox pos="-0.2 0.9 0.6" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+	</group>
+</prefab>
+

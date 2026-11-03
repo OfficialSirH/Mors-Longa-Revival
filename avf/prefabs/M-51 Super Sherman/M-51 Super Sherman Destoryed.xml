@@ -1,0 +1,85 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman Destoryed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vox name="Body" tags="component=chassis RHA=38" pos="0.0 0.4 0.8" rot="0.0 180.0 0.0" texture="8 0.8" blendtexture="5 " density="30" strength="10" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="body2" pbr="0 0 0 -64">
+			<vox name="front" tags="nocull RHA=63" pos="0.0 0.893 2.407" rot="-45.0 0.0 0.0" texture="8 0.8" blendtexture="5 " density="10" strength="10" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="front.5">
+				<vox tags="nocull RHA=63" pos="0.0 -0.556 0.0" texture="8 0.8" blendtexture="5 " density="10" strength="10" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="front2.5"/>
+			</vox>
+			<group name="Suspension" pos="0.0 -0.2 0.0">
+				<vox tags="nocull" pos="1.08 0.05 1.7" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_l">
+					<vox tags="nocull" pos="0.0 0.5 -0.7" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="small wheel"/>
+				</vox>
+				<vox tags="nocull" pos="1.1 0.05 0.25" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_l">
+					<vox tags="nocull" pos="0.65 -0.2 -0.7" rot="0.0 50.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="small wheel"/>
+				</vox>
+				<vox tags="nocull" pos="1.1 0.05 -1.2" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_l"/>
+				<vox tags="nocull" pos="-1.2 0.05 1.7" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_r">
+					<vox tags="nocull" pos="0.05 0.5 -0.7" rot="0.0 180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="small wheel"/>
+				</vox>
+				<vox tags="nocull" pos="-1.2 0.05 0.25" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_r">
+					<vox tags="nocull" pos="0.05 0.5 -0.75" rot="0.0 180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="small wheel"/>
+				</vox>
+				<vox tags="nocull" pos="-1.2 0.05 -1.2" texture="8 0.8" blendtexture="5 " strength="5" collide="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="suspesion_r"/>
+			</group>
+			<vox name="Engine" tags="engine" pos="0.0 0.3 -1.7" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="engine"/>
+			<vox name="Machine gunners hatch" tags="nocull" pos="-0.6 1.3 1.4" texture="8 0.8" blendtexture="5 " strength="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="machine_gunners_hatch">
+				<joint pos="-0.25 0.25 -0.05" type="hinge" rotstrength="0.01" rotspring="0" limits="0 125"/>
+			</vox>
+			<vox name="Commanders hatch" tags="nocull" pos="-0.5 2.411 -0.2" rot="0.0 0.0 0.0" texture="8 0.4" blendtexture="5 " strength="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="commanders_hatch">
+				<joint pos="-0.25 0.15 -0.05" rot="0.0 -180.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 125"/>
+			</vox>
+			<vox name="Engine hatch" tags="nocull" pos="0.5 1.49 -1.4" texture="8 0.8" blendtexture="5 " density="3" strength="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="engine_hatch1">
+				<joint pos="0.0 0.1 -0.3" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 125"/>
+			</vox>
+			<vox name="Engine hatch" tags="nocull" pos="0.0 1.3 -2.0" texture="8 0.4" blendtexture="5 " density="3" strength="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="engine_hatch3">
+				<joint pos="0.5 0.05 0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 90"/>
+				<joint pos="-0.5 0.05 0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 90"/>
+			</vox>
+			<vox name="Machine gunners hatch" tags="nocull" pos="-0.5 0.0 1.0" blendtexture="5 " strength="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="floor_hatch">
+				<joint pos="0.0 0.05 0.2" rot="-180.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.01" limits="0 125"/>
+			</vox>
+		</vox>
+		<group name="Turret" pos="0.1 0.9 -0.1" rot="0.0 180.0 0.0">
+			<vox name="Turret" tags="nocull RHA=51 component=turret turretGroup=mainTurret" pos="0.1 0.11 -1.3" texture="8 0.8" blendtexture="5 " density="15" strength="10" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="turret2">
+				<vox name="105" tags="nocull RHA=100 component=gun weaponType=customcannon cm KwK Cannon group=primary mainCannon coax=COAXMG" pos="0.0 1.1 1.0" texture="8 0.8" blendtexture="5 " density="5" prop="true" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun/breach">
+					<vox tags="nocull" pos="-0.015 0.17 2.3" rot="-0.2 -0.5" texture="8 0.8" blendtexture="5 " density="5" prop="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun_barrel">
+						<vox tags="nocull" pos="0.0 0.06 0.0" rot="0.8" texture="8 0.8" blendtexture="5 " density="5" prop="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun_barrel"/>
+						<vox tags="nocull" pos="-0.05 0.0 0.0" rot="0 0.5" texture="8 0.8" blendtexture="5 " density="5" prop="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun_barrel"/>
+						<vox tags="nocull" pos="-0.05 0.06 0.0" rot="0.8 0.5 0.0" texture="8 0.8" blendtexture="5 " density="5" prop="false" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun_barrel"/>
+						<vox tags="nocull" pos="-0.02 -0.075 1.6" texture="8 0.8" blendtexture="5 " density="5" file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="muzzle"/>
+					</vox>
+					<joint tags="component=gunJoint" pos="-0.5 0.25 0.4" rot="0.0 90.0 0.0" type="hinge" rotspring="0" limits="-20 8"/>
+					<vox tags="nocull RHA=50" pos="-0.04 0.1 0.8" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gun2" pbr="0 0 0 -64">
+						<rope pos="0.0 0.6 -0.2" rot="0.0 90.0 0.0" size="0.1">
+							<location pos="0.0 0.0 0.05"/>
+							<location pos="0.7 0.0 -0.1"/>
+						</rope>
+					</vox>
+					<joint pos="0.5 0.25 0.4" rot="0.0 90.0 0.0" type="hinge" rotstrength="0" rotspring="0" limits="-20 8"/>
+				</vox>
+				<joint tags="component=turretJoint" pos="0.0 0.0 0.5" rot="90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+			</vox>
+		</group>
+		<vox name="Trackr" tags="nocull" pos="1.22 -0.0 0.75" rot="0.0 180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="track_l"/>
+		<group name="Wheels left" pos="-1.1 -0.0 0.7" rot="0.0 180.0 0.0">
+			<vox pos="0.05 0.05 2.0" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="0.05 0.05 1.1" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="0.45 0.25 0.25" rot="0.0 -120.0 -90.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="0.05 0.05 -0.35" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="0.05 0.05 -0.9" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="0.05 0.05 -1.8" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="-0.001 0.4 -2.549" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gear_rl"/>
+			<vox pos="-0.001 0.35 2.51" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gear_fl"/>
+		</group>
+		<group name="Wheels right" pos="1.1 -0.0 0.7" rot="0.0 180.0 0.0">
+			<vox pos="-0.05 0.05 2.0" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="-0.05 0.05 1.1" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="-0.05 0.05 0.55" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="-0.05 0.05 -0.35" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="-0.05 0.05 -0.9" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l1"/>
+			<vox pos="-0.05 0.05 -1.8" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="wheel_l2"/>
+			<vox pos="-0.101 0.4 -2.549" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gear_rr"/>
+			<vox pos="-0.001 0.35 2.41" rot="0.0 -180.0 0.0" texture="8 0.8" blendtexture="5 " file="MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.vox" object="gear_fl"/>
+		</group>
+	</group>
+</prefab>
+

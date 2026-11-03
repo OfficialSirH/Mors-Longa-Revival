@@ -1,0 +1,9 @@
+<prefab version="0.9.3">
+	<group open_="true" pos="0.2 -0.1 6.8">
+		<body open_="true" dynamic="true">
+			<script open_="true" file="MOD/script/grenade.lua">
+				<vox strength="0.01" tags="grenade" density="1" pos="-0.2 0.1 0.1" prop="true" file="MOD/vox/grenade.vox"/>
+			</script>
+		</body>
+	</group>
+</prefab>

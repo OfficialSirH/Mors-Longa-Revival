@@ -1,0 +1,24 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/vehicle assets/wheelchair/wheelchair.xml" pos="4.0 0.0 -210.10001" rot="0.0 180.0 0.0">
+		<vehicle pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound=" " spring="5" topspeed="10" acceleration="1" strength=".2" difflock="1" friction="1">
+			<body pos="0.0 0.7 -0.1" rot="0.0 0.0 0.0" dynamic="true">
+				<vox pos="0.0 -0.5 0.1" rot="0.0 180.0 0.0" file="MOD/vehicle assets/wheelchair/wheelchair.vox" object="body">
+					<location tags="player" pos="0.0 1.1 0.1" rot="0.0 0.0 0.0"/>
+				</vox>
+				<wheel name="bl" pos="-0.3 -0.35 0.25" rot="0.0 0.0 0.0" drive="1" travel="0.0 0.05">
+					<vox pos="-0.0 -0.35 -0.05" rot="0.0 180.0 0.0" file="MOD/vehicle assets/wheelchair/wheelchair.vox" object="wheel_b"/>
+				</wheel>
+				<wheel name="br" pos="0.3 -0.35 0.25" rot="0.0 0.0 0.0" drive="1" travel="0.0 0.05">
+					<vox pos="0.0 -0.35 0.05" rot="0.0 0.0 0.0" file="MOD/vehicle assets/wheelchair/wheelchair.vox" object="wheel_b"/>
+				</wheel>
+				<wheel name="fl" pos="-0.2 -0.6 -0.3" rot="0.0 0.0 0.0" steer="1" travel="0.0 0.05">
+					<vox pos="0.0 -0.1 0.0" rot="0.0 180.0 0.0" file="MOD/vehicle assets/wheelchair/wheelchair.vox" object="wheel_f"/>
+				</wheel>
+				<wheel name="fr" pos="0.2 -0.6 -0.3" rot="0.0 0.0 0.0" steer="1" travel="0.0 0.05">
+					<vox pos="0.0 -0.1 0.0" rot="0.0 0.0 0.0" file="MOD/vehicle assets/wheelchair/wheelchair.vox" object="wheel_f"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

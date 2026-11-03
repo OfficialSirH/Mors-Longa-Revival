@@ -1,0 +1,11 @@
+<prefab version="1.3.0">
+	<group>
+		<body name="Carbattery" tags="Loot=general-carbattery_Carbattery interact=Carbattery" pos="0 .2" dynamic="true">
+			<voxbox pos="-.25 -.2 -.15" rot="0 0" size="5 3 3" color=".4 .4 .4"/>
+			<voxbox pos="-.2 .1 -.05" rot="0" size="1 1 1" color=".09 .09 .09"/>
+			<voxbox pos=".1 .1 -.05" rot="0" size="1 1 1" color=".72"/>
+			<voxbox pos="-.2 -.15 .055" rot="0" size="4 2 1" color=".81"/>
+		</body>
+	</group>
+</prefab>
+

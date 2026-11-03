@@ -1,0 +1,21 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/gun-tt33.xml" pos="6.0" rot="0">
+		<body name="TT-33" tags="Loot=gun-tt33_TT-33_mag0-tt33-762x25_TT-33_8_8_7.62x25 interact=TT-33 unbreakable" pos="0 .2" dynamic="true">
+			<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.1 .1 .1">
+				<voxbox name="Grip" tags="Grip" pos="-.05 0 -.02" rot="-175.0" size="1 2 1">
+					<light tags="handle" pos=".05 .1 .05" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+				</voxbox>
+				<voxbox name="Grip" tags="Grip" pos="-.05" rot="-175.0" size="1 2 1"/>
+				<voxbox name="Grip" tags="Grip" pos="-.06 0 -.01" rot="-175.0" size="1 2 1" color=".32 .19 .08"/>
+				<voxbox name="Grip" tags="Grip" pos="-.04 0 -.01" rot="-175.0" size="1 2 1" color=".32 .19 .08"/>
+			</group>
+			<group name="Metal2" prop0="color=.1 .1 .1" prop1="pbr=.1 .1 .1">
+				<voxbox pos="-.05 -.05 -.15" size="1 1 2"/>
+				<voxbox pos="-.05 -.05 -.05" size="1 1 2" color=".08 .08 .08"/>
+				<voxbox pos="-.05 -.04 -.05" rot="-100" size="1 1 1" color=".12 .12 .12"/>
+				<voxbox name="Barrel" tags="barrel range=20 magsize=8 damage=3 firerate=.7 gun=g17 roundsize=1" pos="-.05 -.05 .15" size="1 1 1"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,19 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/mag2-glock-9x19.xml" pos="2.4 .7" rot="0">
+		<body tags="Loot=mag2-glock-9x19_P17-Drum_50_50_9x19 interact=P17-Drum unbreakable" pos="0 .1" dynamic="true">
+			<group prop0="color=.08 .08 .08" prop1="material=metal">
+				<voxbox pos="-.05 .1 -.05" size="1 2 1"/>
+				<voxbox pos="-.05 -.1 -.05" size="1 1 1"/>
+				<voxbox pos="-.121 -.029 -.05" size="1 1 1"/>
+				<voxbox pos=".021 -.029 -.05" size="1 1 1"/>
+				<voxbox pos="-.05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+				<voxbox pos=".05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+				<voxbox pos=".05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+				<voxbox pos="-.05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+				<voxbox pos=".05 .142 -.05" rot="180.0 180.0" size="1 1 1"/>
+				<voxbox pos=".05 .071 -.05" rot="180.0 180.0" size="1 1 1"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

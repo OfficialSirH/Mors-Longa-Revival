@@ -1,0 +1,16 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclef19.xml" pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<instance pos="2.11517 1.9 4.26364" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="1.41924 1.9 5.35825" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="1.43132 1.9 6.67918" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="0.67869 1.90001 7.57559" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="0.93228 1.90001 8.81482" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="-0.01855 1.9 9.76793" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="0.11674 1.9 10.90226" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="-0.33099 1.9 12.02678" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="-0.5372 1.90001 13.0696" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-us/Semi Truck Destroyed.xml"/>
+		<instance pos="2.1268 1.6 4.08372" file="MOD/prefabs/spawns/enemies/EnemyCultSpawn.xml"/>
+	</group>
+</prefab>
+

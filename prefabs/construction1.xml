@@ -1,0 +1,21 @@
+<prefab version="0.9.5">
+	<group name="instance=MOD/prefabs/construction1.xml" pos="-36.6 -3.2 22.3">
+		<group name="construction site" pos="-13.1 0.3 13.3">
+			<vox pos="25.9 0.4 -14.5" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="test"/>
+			<vox pos="25.9 0.4 -26.1" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="test"/>
+			<vox pos="10.5 0.4 -14.5" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="test"/>
+			<vox pos="10.5 0.4 -26.1" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="test"/>
+			<vox pos="18.2 10.0 -20.3" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="base"/>
+			<vox pos="12.5 0.4 -16.5" rot="0 180" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="in"/>
+			<vox pos="16.9 0.4 -24.2" rot="0 180" texture="6 0.6" prop="false" file="MOD/main/construction site.vox" object="stairs"/>
+			<vox name="metal" pos="10.3 5.0 -16.9" rot="0 90" texture="7 0.6" prop="false" file="MOD/main/construction site.vox" object="metal"/>
+			<group name="holes"/>
+			<vox name="metal" pos="26.1 0.4 -16.9" rot="0 90" texture="7 0.6" prop="false" file="MOD/main/construction site.vox" object="metal"/>
+			<voxbox pos="10.0 4.5 -26.7" size="165 5 11" brush="LEVEL/construction site.vox"/>
+			<voxbox pos="10.0 4.5 -22.7" size="165 5 87" brush="LEVEL/construction site.vox"/>
+			<voxbox pos="10.0 4.5 -25.7" size="36 5 31" brush="LEVEL/construction site.vox"/>
+			<voxbox pos="18.3 4.5 -25.7" size="82 5 31" brush="LEVEL/construction site.vox"/>
+		</group>
+	</group>
+</prefab>
+

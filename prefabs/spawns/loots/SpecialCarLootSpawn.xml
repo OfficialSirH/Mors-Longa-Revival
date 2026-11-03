@@ -1,0 +1,6 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<location tags="RandomLoot chance=40 type=milGeneral"/>
+	</group>
+</prefab>
+

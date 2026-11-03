@@ -1,0 +1,6 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawns/loots/HighMiliLootSpawn.xml" pos="-154.612 8.666 4.191" rot="0.0 0.0 0.0">
+		<location tags="RandomLoot chance=35 type=milWeapon"/>
+	</group>
+</prefab>
+

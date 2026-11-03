@@ -1,0 +1,69 @@
+prefabs
+    spawnables
+        enemies
+
+
+faction:    mil, insurgent, cultist
+type:       infantry, vehicle
+weapon:     ranged, melee
+name:       (single word)
+
+
+prefabs = {
+    enemies = {
+
+        mil = {
+            infantry = {
+                ranged = {
+                    soldier1,
+                    soldier2,
+                    soldier3,
+                    soldier4,
+                    officer1,
+                    officer2,
+                    sniper1,
+                    sniper2,
+                },
+            },
+            vehicles = {},
+        },
+
+        insurgent = {
+            infantry = {
+                ranged = {
+                    aggressor1,
+                    aggressor2,
+                    aggressor3,
+                    elite1,
+                    elite2,
+                    elite3,
+                    elite4,
+                },
+            },
+            vehicles = {},
+        },
+
+    }
+}
+
+
+-- Military
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_soldier1.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_soldier2.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_soldier3.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_soldier4.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_officer1.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_officer2.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_sniper1.xml
+MOD/prefabs/spawnables/enemies/mil_infantry_ranged_sniper2.xml
+MOD/prefabs/spawnables/enemies/mil_vehicle_turret_ranged.xml
+MOD/prefabs/spawnables/enemies/mil_vehicle_tank_ranged.xml
+
+
+-- Insurgent infantry
+MOD/prefabs/spawnables/enemies/insurgent_infantry_ranged_whatevername_ranged.xml
+MOD/prefabs/spawnables/enemies/insurgent_infantry_ranged_banana_ranged.xml
+MOD/prefabs/spawnables/enemies/insurgent_infantry_ranged_hey_ranged.xml
+MOD/prefabs/spawnables/enemies/insurgent_infantry_ranged_bigboi_ranged.xml
+MOD/prefabs/spawnables/enemies/insurgent_vehicle_ranged_technical.xml
+MOD/prefabs/spawnables/enemies/mil_vehicle_melee_car.xml

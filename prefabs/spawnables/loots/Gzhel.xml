@@ -1,0 +1,6 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gzhel.xml" pos="6.3 0.0 0.0">
+		<instance file="MOD/Loots/vest-gzhel.xml"/>
+	</group>
+</prefab>
+

@@ -1,0 +1,67 @@
+<prefab version="0.9.5">
+	<group id_="108272080" open_="true" name="instance=MOD/assets/vehicle/trucks/tanker.xml" pos="5.7 0.1 -36.3" rot="0.0 0.0 0.0">
+		<vehicle id_="323046656" open_="true" name="zapper" tags="reversebeep" rot="0.0 0.0 0.0" driven="false" sound="semitruck2" spring="0.6" damping="0.6" topspeed="80" acceleration="1.5" strength="5" antiroll="0.5" difflock="1" steerassist="0.1" friction="1.4">
+			<body id_="1097074048" open_="true" pos="0.05 0.35 -0.35" rot="0.0 0.0 0.0" dynamic="true">
+				<vox id_="763147776" open_="true" pos="-0.05 0.05 -0.25" rot="0 180 0" texture="1 1" density="2.7" strength="3" file="MOD/vox/zapper2.vox" object="body">
+					<light id_="531136160" pos="0.8 0.4 2.9" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+					<light id_="401498048" pos="-0.8 0.4 2.9" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+					<location id_="740995264" tags="exhaust" pos="-0.95 2.5 0.85" rot="90.0 360.0 -180.0"/>
+					<location id_="2080370688" tags="vital" pos="0.0 0.3 2.2" rot="-180.0 360.0 -180.0"/>
+					<location id_="467234656" tags="player" pos="0.45 1.8 1.85" rot="0.0 0.0 0.0"/>
+					<location id_="796245440" tags="exhaust" pos="0.95 2.5 0.85" rot="90.0 360.0 -180.0"/>
+					<light id_="2005786112" pos="-0.65 0.25 -3.0" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.1 0.1" unshadowed="0.3" glare="0.2"/>
+					<light id_="1094124800" pos="-0.45 0.25 -3.0" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
+					<light id_="1046083968" pos="0.45 0.25 -3.0" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
+					<light id_="951837440" pos="0.85 0.25 -3.0" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.1 0.1" unshadowed="0.3" glare="0.2"/>
+					<light id_="866766528" pos="-0.85 0.25 -3.0" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.1 0.1" unshadowed="0.3" glare="0.2"/>
+					<light id_="105978184" pos="0.65 0.25 -3.0" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.1 0.1" unshadowed="0.3" glare="0.2"/>
+				</vox>
+				<wheel id_="2129918976" open_="true" name="bl" pos="-0.7 0.1 0.8" drive="0.5" travel="-0.1 0.1">
+					<vox id_="1383221760" pos="-0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel id_="842975488" open_="true" name="bl2" pos="-0.7 0.1 1.9" drive="0.5" travel="-0.1 0.1">
+					<vox id_="212415136" pos="-0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel id_="904189824" open_="true" name="br2" pos="0.7 0.1 1.9" drive="0.5" travel="-0.1 0.1">
+					<vox id_="1592490880" pos="0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_br"/>
+				</wheel>
+				<wheel id_="1260858496" open_="true" name="br" pos="0.7 0.1 0.8" drive="0.5" travel="-0.1 0.1">
+					<vox id_="272384256" pos="0.15 -0.45 -0.05" rot="0 180 0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_br"/>
+				</wheel>
+				<wheel id_="612995648" open_="true" name="fl" pos="-1.0 0.1 -2.2" drive="0.5" steer="0.7" travel="-0.1 0.1">
+					<vox id_="2049632384" pos="-0.05 -0.45 -0.05" rot="0 180 0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel id_="1243752576" open_="true" name="fr" pos="0.9 0.1 -2.2" drive="0.5" steer="0.7" travel="-0.1 0.1">
+					<vox id_="240925040" pos="0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_fr"/>
+				</wheel>
+			</body>
+			<body id_="34801740" open_="true" pos="0.0 0.3 4.4" rot="0.0 0.0 0.0" dynamic="true">
+				<vox id_="1934609664" open_="true" pos="0.0 0.1 1.4" rot="0 180 0" texture="5 0.4" density="2.1" strength="10.0" file="MOD/vox/zapper2.vox" object="trailer">
+					<vox id_="1790290688" tags="explosive=5" pos="0.0 0.8 -2.7" rot="0.0 0.0 0.0" texture="5 0.4" density="2.1" strength="10.0" file="MOD/vox/zapper2.vox" object="part3"/>
+					<vox id_="1839642240" tags="explosive=5" pos="0.0 0.8 1.1" rot="0.0 0.0 0.0" texture="5 0.4" density="2.1" strength="10.0" file="MOD/vox/zapper2.vox" object="part2"/>
+					<vox id_="2071653888" tags="explosive=5" pos="0.0 0.8 4.2" rot="0.0 0.0 0.0" texture="5 0.4" density="2.1" strength="10.0" file="MOD/vox/zapper2.vox" object="part1"/>
+					<joint id_="1587247744" pos="0.0 0.5 4.7" rot="90" type="hinge"/>
+				</vox>
+				<wheel id_="2074406528" open_="true" name="bl" pos="-0.65 0.15 3.05" travel="-0.1 0.1">
+					<vox id_="151331856" pos="-0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel id_="1424053120" open_="true" name="bl2" pos="-0.65 0.15 4.15" travel="-0.1 0.1">
+					<vox id_="750891776" pos="-0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel id_="1819652608" open_="true" name="br2" pos="0.75 0.15 4.15" travel="-0.1 0.1">
+					<vox id_="709077248" pos="0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_br"/>
+				</wheel>
+				<wheel id_="1095763328" open_="true" name="br" pos="0.75 0.15 3.05" travel="-0.1 0.1">
+					<vox id_="1966396672" pos="0.15 -0.45 -0.05" rot="0 180 0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_br"/>
+				</wheel>
+				<wheel id_="1018163904" open_="true" name="bl3" pos="-0.65 0.15 1.95" travel="-0.1 0.1">
+					<vox id_="2131819648" pos="-0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel id_="995552576" open_="true" name="br3" pos="0.75 0.15 1.95" travel="-0.1 0.1">
+					<vox id_="1128402176" pos="0.15 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="1 1" file="MOD/vox/zapper2.vox" object="wheel_br"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

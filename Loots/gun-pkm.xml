@@ -1,0 +1,13 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Loots/gun-pkm.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body name="PKM" tags="Loot=gun-pkm_PKM_mag0-pkm-762x54_PKM_250_250_7.62x54R interact=PKM unbreakable" pos="0.0 0.3" dynamic="true">
+			<vox pos=".025 -.3" rot="0 180.0" file="MOD/vox/grenade_tool.vox" object="launcher" scale=".5">
+				<voxbox tags="barrel range=200 magsize=7 damage=.5 firerate=8 gun=rpg exp=1 expvel=30 expgrav=0  enemy=Insurgent" pos="-.025 0 -.35" size="1 3 1" material="metal" color=".19 .19 .19">
+					<light tags="handle" pos=".05 .1 .05" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+				</voxbox>
+				<voxbox pos="-.025 .275 -1.0" size="1 1 20" material="metal" color="0 0 0 .1"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

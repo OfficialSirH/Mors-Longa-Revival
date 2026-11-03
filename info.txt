@@ -1,0 +1,4 @@
+name = Mors Longa
+author = Overdrive Studios
+tags = Map,Tool,Vehicle,Gameplay
+description =[noupload]You're stuck in Alashya and your task is to escape. Fight your way through insurgents, Alashyan Armed Forces, and cultists while you scavenge for food, water, medical supplies and ammunition. Will you make it out? Or will you succumb to the various dangers in your path?

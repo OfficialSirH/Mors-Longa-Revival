@@ -1,0 +1,12 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/vox/a10_1.xml" pos="-44.85 1.5 22.35" rot="0.0 0.0 0.0">
+		<body name="a10" tags="AirstrikeA10" pos="-0.05 -1.65 -8.3" rot="0.0 180.0 0.0" dynamic="true">
+			<vox file="MOD/vox/airstrike_a10_1.vox">
+				<light pos="-0.05 1.65 -8.35" size="0.05"/>
+			</vox>
+			<body name="engine" tags="A10Engine" pos="-1.55 2.75 4.6" rot="0.0 0.0 0.0" dynamic="false"/>
+			<body name="engine" tags="A10Engine" pos="1.25 2.75 4.6" rot="0.0 0.0 0.0" dynamic="false"/>
+		</body>
+	</group>
+</prefab>
+

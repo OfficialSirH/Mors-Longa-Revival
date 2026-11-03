@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=bullets-57x28_5.7x28_60 interact=5.7x28" pos="0 .2" dynamic="true">
+			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,93 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Gun Drozdov1.xml" pos="-6.6 0.8 -3.0" rot="0.0 0.0 0.0">
+		<body name="Drozdov" tags="Loot=gun-svd_Drozdov_mag0-ak-762x54_Drozdov-Mag_10_10_7.62x54R_-scope-muzzle2--barrel2--modernguard------ interact=Drozdov unbreakable" pos="0.0 0.3 -0.1" rot="0.0 0.0 0.0" dynamic="true">
+			<group name="Metal1" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<voxbox pos="-0.05 -0.05 -0.35" rot="0.0 0.0 0.0" size="1 1 13">
+					<voxbox pos="0.004 -0.03 0.03" rot="-45.0 0.0 0.0" size="1 1 1"/>
+					<voxbox pos="-0.004 -0.03 0.03" rot="-45.0 0.0 0.0" size="1 1 1"/>
+					<group pos="0.0 0.005 0.02">
+						<voxbox pos="0.01 -0.015 0.0" rot="0.0 0.0 0.0" size="1 1 4"/>
+						<voxbox pos="0.01 0.01 0.0" rot="0.0 0.0 0.0" size="1 1 4"/>
+						<voxbox pos="-0.01 0.01 0.0" rot="0.0 0.0 0.0" size="1 1 4"/>
+						<voxbox pos="-0.01 -0.015 0.0" rot="0.0 0.0 0.0" size="1 1 4"/>
+						<group pos="0.1 0.0 0.12">
+							<voxbox pos="-0.08 0.015 -0.1" rot="0.0 0.0 0.0" size="1 1 1" color="0.08 0.08 0.08"/>
+							<voxbox pos="-0.1 0.02 -0.15" rot="0.0 0.0 0.0" size="1 1 4" color="0.08 0.08 0.08"/>
+							<voxbox pos="-0.1 0.1 -0.1" rot=".0 0.0 0.0" size="1 1 2" color="0.08 0.08 0.08"/>
+							<voxbox pos="-0.08 0.015 0.04" rot="0.0 0.0 0.0" size="1 1 1" color="0.08 0.08 0.08"/>
+							<voxbox pos="-0.08 -0.015 -0.08" rot="0.0 0.0 0.0" size="1 1 2" color="0.08 0.08 0.08"/>
+						</group>
+					</group>
+					<voxbox pos="0.0 0.03 0.33" rot="0.0 0.0 0.0" size="1 1 6"/>
+					<voxbox name="Barrel" tags="barrel range=50 magsize=10 damage=20 firerate=1 gun=svd roundsize=3" pos="0.0 0.0 1.25" rot="0.0 0.0 0.0" size="1 1 1"/>
+					<voxbox pos="0.0 0.0 1.22" rot="-28.0 0.0 0.0" size="1 1 1"/>
+				</voxbox>
+			</group>
+			<group name="Metal2" prop0="color=.13 .13 .13" prop1="material=metal">
+				<group pos="0.0 -0.06 -0.18" rot="-5">
+					<voxbox pos="-0.055 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+						<voxbox pos="0.0 0.0 0.07" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.045 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+						<voxbox pos="0.0 0.0 0.07" size="1 1 1"/>
+					</voxbox>
+					<group pos="0.0 -0.1 0.0" rot="-5">
+						<voxbox pos="-0.055 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.07" size="1 1 1"/>
+						</voxbox>
+						<voxbox pos="-0.045 -0.1 0.0" rot="0.0 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.0 0.07" size="1 1 1"/>
+						</voxbox>
+					</group>
+				</group>
+				<voxbox pos="-0.05 -0.08 -0.2" rot="-20.0 0.0 0.0" size="1 1 1" color="0.35 0.35 0.35"/>
+			</group>
+			<group name="Wood" prop0="color=.4 .19 .11" prop1="material=wood">
+				<group pos="-0.05 -0.035 0.07">
+					<voxbox pos="0.015 -0.03 0.0" size="1 1 3">
+						<voxbox pos="0.0 0.0 0.3" rot="-4.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="0.015 0.025 0.0" size="1 1 3" color=".4 .19 .11">
+						<voxbox pos="0.0 0.1 0.3" rot="94.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.015 0.025 0.0" size="1 1 3">
+						<voxbox pos="0.0 0.1 0.3" rot="94.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.015 -0.03 0.0" size="1 1 3">
+						<voxbox pos="0.0 0.0 0.3" rot="-4.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+				</group>
+				<group name="Stock" pos="0.0 -0.03 -0.32" rot="0.0 0.0 0.0">
+					<voxbox pos="-0.045 -0.05 -0.5" rot="0.0 0.0 0.0" size="1 1 5">
+						<voxbox pos="0.0 0.1 -0.06" rot="90.0 0.0 0.0" size="1 1 3">
+							<voxbox pos="0.0 0.1 0.3" rot="-93 0.0 0.0" size="1 1 2">
+								<voxbox pos="0.0 0.0 0.17" rot="0.0 0.0 0.0" size="1 1 1">
+									<voxbox pos="0.0 0.0 0.1" rot="-12.0 0.0 0.0" size="1 1 1">
+										<voxbox pos="0.0 0.0 0.1" rot="-55.0 0.0 0.0" size="1 1 2"/>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+						<voxbox pos="0.0 0.0 0.1" rot="87.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.055 -0.05 -0.5" rot="0.0 0.0 0.0" size="1 1 5">
+						<voxbox pos="0.0 0.1 -0.06" rot="90.0 0.0 0.0" size="1 1 3">
+							<voxbox pos="0.0 0.1 0.3" rot="-93 0.0 0.0" size="1 1 2">
+								<voxbox pos="0.0 0.0 0.17" rot="0.0 0.0 0.0" size="1 1 1">
+									<voxbox pos="0.0 0.0 0.1" rot="-12.0 0.0 0.0" size="1 1 1">
+										<voxbox pos="0.0 0.0 0.1" rot="-55.0 0.0 0.0" size="1 1 2"/>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+						<voxbox pos="0.0 0.0 0.1" rot="87.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.05 -0.09 -0.06" rot="12.0 0.0 0.0" size="1 1 1" color="0.24 0.24 0.24">
+						<light tags="handle" pos="0.05 -0.05 -0.05" scale="0" angle="0" penumbra="0" size="0.05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+					</voxbox>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

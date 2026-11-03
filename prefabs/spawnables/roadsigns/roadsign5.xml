@@ -1,0 +1,55 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsigns/roadsign5.xml" pos="-63.8 2.5 -73.2" rot="0.0 -90.0 0.0">
+		<vox name="quandale infected: damaged" pos="0.05 6.5 -5.62" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support left combat damage">
+			<vox name="quandale dingle: normal" pos="10.8 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support right combat damage"/>
+			<vox pos="12.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="10.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="8.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="6.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="4.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="2.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="0.8 0.4 0.60001" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+				<light pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+				<joint pos="0.05 0.0 -0.05"/>
+			</vox>
+			<vox pos="15.8 -6.5 -0.39999" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+				<joint rotstrength="20"/>
+			</vox>
+			<vox pos="-4.1 -6.5 -0.39999" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+				<joint rotstrength="20"/>
+			</vox>
+			<vox pos="2.9 0.9 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: quandale combat damage 1">
+				<joint pos="4.44 3.5 -0.1"/>
+				<joint pos="4.45 0.6 -0.1"/>
+				<joint pos="-4.36 3.6 -0.1"/>
+				<joint pos="-4.36 0.7 -0.1"/>
+			</vox>
+			<vox pos="10.9 1.4 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign2: infected combat damage">
+				<joint pos="2.94 3.0 -0.1"/>
+				<joint pos="2.95 0.1 -0.1"/>
+				<joint pos="-2.86 0.2 -0.1"/>
+			</vox>
+			<joint pos="15.8 1.5 -0.39999" rot="0.0 -180.0 0.0" rotstrength="5"/>
+			<joint pos="-4.1 1.5 -0.39999" rotstrength="5"/>
+		</vox>
+	</group>
+</prefab>
+

@@ -1,0 +1,20 @@
+<prefab version="1.2.0">
+	<group>
+		<body tags="Loot=melee-CombatKnife_Combat-Knife_150_150 interact=Combat-Knife unbreakable" pos="0 .05" dynamic="true">
+			<group name="Plastic" prop0="color=.5 .3 .1" prop1="material=plastic">
+				<voxbox tags="Grip" pos="-.05 -.05 -.35" rot="0" size="1 1 3"/>
+			</group>
+			<group name="Plastic2" prop0="color=.1 .1 .1" prop1="material=plastic">
+				<voxbox tags="Grip" pos="-.1 -.055 -.05" rot="0" size="2 1 1"/>
+				<voxbox tags="Grip" pos="-.1 -.045 -.05" rot="0" size="2 1 1"/>
+			</group>
+			<group name="Metal" prop0="color=.45 .45 .45" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<voxbox pos="-.03 -.05 -.01" rot="0" size="1 1 4"/>
+				<voxbox pos="-.07 -.05" rot="0" size="1 1 3">
+					<voxbox pos="0 0 .3" rot="0 24.0" size="1 1 1"/>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+

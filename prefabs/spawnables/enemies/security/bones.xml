@@ -1,0 +1,104 @@
+<prefab version="1.5.4">
+	<group pos="-2.0 0.0 -7.1" rot="0.0 180.0 0.0">
+		<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll (prop0)" pos="0.0 0.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security1.vox" prop1="tags=Torso Attack bodypart spawn_team=merc">
+				<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+					<body name="Torso" pos="0.0 0.8 0.0" rot="0.0 0.0 0.0" dynamic="true">
+						<vox tags="internalTorso" pos="0.05 0.0 0.0" rot="0 180 " object="body"/>
+						<vox pos="0.05 0.0 0.03" rot="0 180 " object="body">
+							<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ribs.xml" pos="0.05 0.15 0.0" rot="0.0 0.0 0.0">
+								<voxbox name="bone" tags="bone" pos="-0.05 0.0 -0.05" texture="7" size="1 6 1" material="hardmetal" color=".43"/>
+								<voxbox name="bone" tags="bone" pos="-0.3 0.4 -0.025" texture="7" size="6 1 1" material="masonry" color=".43"/>
+								<voxbox name="bone" tags="bone" pos="-0.2 0.25 -0.05" texture="7" size="4 1 1" material="masonry" color=".43"/>
+								<voxbox name="bone" tags="bone" pos="-0.2 -0.1 -0.05" texture="7" size="4 1 1" material="masonry" color=".43"/>
+							</group>
+						</vox>
+						<vox pos="0.05 0.0 -0.03" rot="0 180 " object="body"/>
+					</body>
+					<group tags=" " pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" prop0="tags=">
+						<group name="Head">
+							<body tags="Head bodypart" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" dynamic="true">
+								<vox pos="0.05 0.0 0.0" rot="0 180" density="5" object="head">
+									<voxbox tags="eye" pos="0.1 0.1 0.1" prop="false" size="1 1 1" material="plaster" color="0"/>
+									<voxbox tags="eye" pos="-0.1 0.1 0.1" prop="false" size="1 1 1" material="plaster" color="0"/>
+									<vox tags="jaw" pos="-0.0 0.0 0.1" rot="0.0 0.0 0.0" prop="true" object="jaw">
+										<joint tags="jaw" pos="0.2 0.1 -0.2" rot="180.0 -90.0 0.0" type="hinge" limits="0 20"/>
+										<joint tags="jaw" pos="-0.1 0.1 -0.2" rot="180.0 -90.0 0.0" type="hinge" limits="0 20"/>
+									</vox>
+									<joint tags="head" pos="0.05 0.0 0.0" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" limits="-45 45"/>
+								</vox>
+							</body>
+						</group>
+						<group name="Arms">
+							<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm L.xml" pos="-0.25 1.4 0.0" rot="0.0 0.0 0.0">
+								<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm LU.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<body name="UArm_L" tags="LARM bodypart" pos="0.0 0.0 0.0" dynamic="true">
+										<vox pos="-0.1 -0.3 0.0" rot="0 180" object="Uarm_L"/>
+										<group pos="-0.1 -0.2 0.0" rot="0.0 -180.0 0.0">
+											<joint tags="shoulder" pos="-0.05 0.2 0.0" rot="0 90" type="hinge" limits="-120 10"/>
+											<voxbox name="bone" tags="bone" pos="-0.05 -0.05 -0.05" texture="7" size="1 3 1" material="masonry" color=".43"/>
+										</group>
+									</body>
+								</group>
+								<group pos="-0.1 -0.3 0.0">
+									<instance file="MOD/prefabs/assets/ragdoll components/Standard Arm LL.xml"/>
+								</group>
+							</group>
+							<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm R.xml" pos="0.25 1.4 0.0" rot="0.0 0.0 0.0">
+								<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Arm RU.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<body name="UArm_R" tags="RARM bodypart" pos="0.0 0.0 0.0" dynamic="true">
+										<vox pos="0.1 -0.3 0.0" rot="0 180" object="Uarm_R"/>
+										<group pos="0.0 -0.2 0.0" rot="0.0 -180.0 0.0">
+											<joint tags="shoulder" pos="0.0 0.2 0.0" rot="0 90" type="hinge" limits="-120 10"/>
+											<voxbox tags="bone" pos="-0.15 -0.05 -0.05" texture="7" size="1 3 1" material="masonry" color=".43"/>
+										</group>
+									</body>
+								</group>
+								<group pos="0.1 -0.3 0.0">
+									<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm RL.xml"/>
+								</group>
+							</group>
+						</group>
+						<group name="Legs">
+							<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Leg L.xml" pos="-0.15 0.9 0.0" rot="0.0 0.0 0.0">
+								<body name="foot_L" tags="LLLEG bodypart" pos="0.0 -0.9 0.0" dynamic="true">
+									<vox pos="0.0 0.0 -0.1" rot="0 180" density="2" object="foot_L">
+										<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" limits="-100 0"/>
+									</vox>
+									<voxbox name="bone" tags="bone" pos="-0.05 0.1 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+								</body>
+								<body name="Leg_L" tags="LLEG bodypart" pos="0.0 -0.0 0.0" dynamic="true">
+									<vox pos="0.0 -0.4 0.0" rot="0 180" object="Leg_L"/>
+									<group pos="0.0 -0.4 0.0" rot="0.0 -180.0 0.0">
+										<joint tags="hip" pos="0.0 0.4 0.0" rot="0 90" type="hinge" rotspring="0" limits="-90 30"/>
+										<voxbox name="bone" tags="bone" pos="-0.05 0.0 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+									</group>
+								</body>
+							</group>
+							<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Leg R.xml" pos="0.15 0.9 0.0" rot="0.0 0.0 0.0">
+								<body name="foot_R" tags="RRLEG bodypart" pos="0.0 -0.9 0.0" dynamic="true">
+									<vox pos="0.0 0.0 -0.1" rot="0 180" density="2" object="foot_R"/>
+									<group pos="0.0 0.1 0.0" rot="0.0 -180.0 0.0">
+										<joint tags="knee" pos="0.0 0.4 0.0" rot="0 90" type="hinge" rotspring="0" limits="-100 0"/>
+										<voxbox name="bone" tags="bone" pos="-0.05 0.0 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+									</group>
+								</body>
+								<body name="Leg_R" tags="RLEG bodypart" pos="-0.0 -0.0 0.0" dynamic="true">
+									<vox pos="0.0 -0.4 0.0" rot="0 180" object="Leg_R">
+										<joint tags="hip" pos="0.0 0.4 0.0" rot="0 90" type="hinge" rotspring="0" limits="-90 30"/>
+										<voxbox name="bone" tags="bone" pos="-0.05 0.0 -0.05" texture="7" size="1 4 1" material="masonry" color=".43"/>
+									</vox>
+								</body>
+							</group>
+						</group>
+					</group>
+				</group>
+			</group>
+			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS"/>
+			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/headwear_security_hair_brown.xml"/>
+			</group>
+		</script>
+	</group>
+</prefab>
+

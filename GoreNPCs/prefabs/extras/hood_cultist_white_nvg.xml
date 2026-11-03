@@ -1,0 +1,8 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/GoreNPCs/prefabs/extras/hood_cultist_white_nvg.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body dynamic="true">
+			<vox pos="0.05 0.0 -0.17" rot="0 180" density="5" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/cultist2.vox" object="head_extra"/>
+		</body>
+	</group>
+</prefab>
+

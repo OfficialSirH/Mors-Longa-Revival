@@ -1,0 +1,20 @@
+<prefab version="0.9.5">
+	<group name="instance=MOD/DeceasedBurnt1.xml" pos="-137.39999 2.0 42.9">
+		<vox pos="-0.20003 0.7 -0.2" file="MOD/vox/gore/ashen remains.vox" object="body">
+			<vox pos="0.0 0.7 0.1" file="MOD/vox/gore/ashen remains.vox" object="head_3"/>
+			<vox open_="true" pos="-0.3 0.2 0.0" rot="-30.0 -30.0 0.0" file="MOD/vox/gore/ashen remains.vox" object="Uarm_R">
+				<vox pos="0.0 -0.1 0.4" rot="-69" file="MOD/vox/gore/ashen remains.vox" object="larm_R"/>
+			</vox>
+			<vox open_="true" pos="0.4 0.5 0.3" rot="-100" file="MOD/vox/gore/ashen remains.vox" object="Uarm_L">
+				<vox pos="-0.2 -0.4 0.0" rot="0.0 0.0 -30.0" file="MOD/vox/gore/ashen remains.vox" object="larm_L"/>
+			</vox>
+			<vox pos="0.2 -0.3 0.0" file="MOD/vox/gore/ashen remains.vox" object="Leg_L">
+				<vox pos="-0.1 -0.3 0.0" file="MOD/vox/gore/ashen remains.vox" object="foot_L"/>
+			</vox>
+			<vox open_="true" pos="-0.2 -0.1 0.2" rot="-90.0 -40.0 0.0" file="MOD/vox/gore/ashen remains.vox" object="Leg_R">
+				<vox pos="0.0 -0.1 -0.6" rot="90" file="MOD/vox/gore/ashen remains.vox" object="foot_R"/>
+			</vox>
+		</vox>
+	</group>
+</prefab>
+

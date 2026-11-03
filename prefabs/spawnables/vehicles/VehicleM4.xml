@@ -1,0 +1,12 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/spawnables/vehicles/VehicleM4.xml" pos="30.0 0.5 10.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/technicals/technical_SPG9.xml"/>
+		<instance pos="0.3 1.5 1.3" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml"/>
+		<instance pos="-2.8 0.5 -2.8" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="-2.8 0.5 2.9" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="3.0 0.5 3.4" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="3.2 0.5 -2.8" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+		<instance pos="-0.1 0.5 -5.3" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
+	</group>
+</prefab>
+

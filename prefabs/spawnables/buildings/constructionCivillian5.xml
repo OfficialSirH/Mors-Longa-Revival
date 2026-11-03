@@ -1,0 +1,391 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/buildings/constructionCivillian5.xml" pos="-40.0 0.0 70.0" rot="0.0 0.0 0.0">
+		<group name="gas station" pos="0.4 0.0 -5.7" prop0="texture=7">
+			<group name="station store" pos="0.9 0.0 10.1">
+				<group name="static" pos="0.0 0.0 10.6">
+					<vox name="billboard" pos="-11.0 0.0 -5.0" file="MOD/main/gas station/gas station store.vox" object="billboardD"/>
+					<vox name="signboard" pos="1.8 3.5 -5.0" file="MOD/main/gas station/gas station store.vox" object="signboardD"/>
+					<group name="walls" pos="0.0 0.0 0.0">
+						<vox name="floor" pos="0.2 0.0 0.1" file="MOD/main/gas station/gas station store.vox" object="ground"/>
+						<vox name="basic" pos="-12.6 0.0 0.4" file="MOD/main/gas station/gas station store.vox" object="right wall"/>
+						<vox name="basic" pos="12.5 0.2 0.4" file="MOD/main/gas station/gas station store.vox" object="left wall"/>
+						<vox name="basic" pos="10.5 0.2 -3.9" file="MOD/main/gas station/gas station store.vox" object="entrance"/>
+						<vox name="ceilling" pos="0.0 4.5 0.4" texture="14" file="MOD/main/gas station/gas station store.vox" object="roof"/>
+						<vox name="basic" pos="11.0 0.2 1.8" file="MOD/main/gas station/gas station store.vox" object="bathroom front"/>
+						<vox name="basic" pos="9.7 0.2 3.4" file="MOD/main/gas station/gas station store.vox" object="bathroom side"/>
+						<vox name="basic" pos="0.0 0.2 4.9" file="MOD/main/gas station/gas station store.vox" object="wall back"/>
+						<vox name="basic" pos="0.0 0.0 -4.6" file="MOD/main/gas station/gas station store.vox" object="front wall">
+							<vox tags="window big" pos="1.1 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass">
+								<light tags="spawn" pos="1.0 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window vsmall" pos="8.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass2">
+								<light tags="spawn" pos="0.7 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window small" pos="6.4 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass3">
+								<light tags="spawn" pos="0.8 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window small" pos="3.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass3">
+								<light tags="spawn" pos="0.8 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window small" pos="-3.1 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass3">
+								<light tags="spawn" pos="0.8 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window small" pos="-4.8 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass3">
+								<light tags="spawn" pos="0.8 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+							<vox tags="window small" pos="-6.5 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station store.vox" object="glass3">
+								<light tags="spawn" pos="0.8 0.0 0.0" rot="0.0 0.0 0.0" color="0 0 0"/>
+							</vox>
+						</vox>
+						<vox name="r" pos="0.0 4.9 0.1" file="MOD/main/gas station/gas station store.vox" object="roof1"/>
+					</group>
+					<group name="lights" pos="0.0 0.0 0.0">
+						<group name="row" pos="-0.1 4.4 0.0">
+							<vox name="light" pos="0.1 0.0 2.7" file="MOD/main/gas station/gas station store.vox" object="lightD"/>
+							<vox name="light" pos="0.1 0.0 -2.5" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 fxflicker=3" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+							<vox name="light" pos="-5.1 0.0 2.7" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 fxflicker=4" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+							<vox name="light" pos="-5.1 0.0 -2.5" file="MOD/main/gas station/gas station store.vox" object="lightD"/>
+							<vox name="light" pos="-10.3 0.0 2.7" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 fxflicker=6" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+							<vox name="light" pos="-10.3 0.0 -2.5" file="MOD/main/gas station/gas station store.vox" object="lightD"/>
+							<vox name="light" pos="5.3 0.0 2.7" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 fxflicker=5" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+							<vox name="light" pos="5.3 0.0 -2.5" file="MOD/main/gas station/gas station store.vox" object="lightD"/>
+							<vox name="light" pos="9.2 0.0 -2.5" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 fxflicker=7" rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+							<vox name="light" pos="11.1 0.0 3.3" file="MOD/main/gas station/gas station store.vox" object="light">
+								<light tags="lamp2 " rot="90" type="area" scale="4" size=".6 .6" fogscale="0"/>
+							</vox>
+						</group>
+					</group>
+					<group/>
+				</group>
+				<group name="props" pos="-0.1 0.2 10.8">
+					<group name="blue lights" pos="0.1 4.2 -4.6">
+						<vox pos="0.0 0.0 0.1" prop="false" file="MOD/main/gas station/gas station store.vox" object="blight1"/>
+						<vox pos="12.2 0.0 3.0" prop="false" file="MOD/main/gas station/gas station store.vox" object="blight2"/>
+						<vox pos="10.9 0.0 6.1" rot="0 " prop="false" file="MOD/main/gas station/gas station store.vox" object="blight3"/>
+						<vox pos="9.5 0.0 7.5" rot="0 " prop="false" file="MOD/main/gas station/gas station store.vox" object="blight4"/>
+						<vox pos="-1.3 0.0 9.0" prop="false" file="MOD/main/gas station/gas station store.vox" object="blight5"/>
+						<vox pos="-12.3 0.0 4.5" prop="false" file="MOD/main/gas station/gas station store.vox" object="blight6"/>
+					</group>
+					<group pos="7.4 -0.1 2.8">
+						<vox name="desk" pos="0.0 0.1 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="desk"/>
+						<vox name="monitor" pos="0.1 1.3 -0.6" rot="-100.0 180.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="monitor"/>
+						<vox name="pc" pos="0.4 0.1 -0.3" rot="0.0 -10.0 0.0" desc="pc" prop="true" file="MOD/main/gas station/gas station props.vox" object="computer">
+							<rope pos="0.0 0.1 0.0" maxstretch="0.5">
+								<location/>
+								<location pos="-0.00001 0.0 1.99999"/>
+							</rope>
+							<rope pos="0.0 0.1 0.0" maxstretch="1">
+								<location/>
+								<location pos="-0.3 1.0 -0.2" rot="0.0 0.0 0.0"/>
+							</rope>
+						</vox>
+					</group>
+					<vox name="cash registor" pos="8.6 1.0 3.0" rot="0.0 -140.0 0.0" prop="true" file="MOD/main/first stores building/store building.vox" object="cash register"/>
+					<vox name="cctv" pos="9.5 3.5 4.2" rot="-25 45" prop="false" file="MOD/main/gas station/gas station props.vox" object="cctv"/>
+					<group name="security cams" pos="-12.0 3.6 4.0">
+						<vox name="cam" pos="0.0 0.2 0.1" rot="-23 -45" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam">
+							<joint pos="0.1 0.1 0.3" size="0.13" rotstrength="0.5"/>
+						</vox>
+						<vox name="cam2" pos="0.0 0.2 -8.5" rot="-23 -135" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam">
+							<joint pos="0.0 0.2 0.3" rotstrength="0.5"/>
+						</vox>
+					</group>
+					<group name="displays" pos="-0.4 -0.1 -0.5">
+						<vox name="display side" pos="2.2 0.1 1.8" rot="0.0 0.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display side"/>
+						<vox name="display side" pos="6.24 0.4 -2.4" rot="90.0 -10.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display side"/>
+						<vox name="display side" pos="-7.23 0.1 -1.8" rot="0.0 -160.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display side"/>
+						<vox name="display side" pos="-6.23 0.1 1.7" rot="0.0 170.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display side"/>
+						<vox name="display" pos="2.0 0.1 -1.7" prop="true" file="MOD/main/gas station/gas station props.vox" object="display"/>
+						<vox name="display" pos="-2.02 0.4 1.6" rot="90.0 -170.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display"/>
+						<vox name="display" pos="-2.02 0.1 -2.0" rot="0.0 170.0 0.0" prop="true" file="MOD/main/gas station/gas station props.vox" object="display"/>
+					</group>
+					<group name="toilet" pos="11.0 0.2 1.6">
+						<vox name="toilet door" pos="0.1 0.0 -0.04" rot="0 180" prop="true" file="MOD/main/first stores building/store building.vox" object="in door">
+							<joint pos="0.7 0.3 0.0" rot="90 180" type="hinge" rotstrength="0.005" rotspring="0.04" limits="-140 "/>
+							<joint pos="0.7 2.1 0.0" rot="90 180" type="hinge" rotstrength="0.005" rotspring="0.04" limits="-140 "/>
+						</vox>
+						<vox pos="0.7 -0.2 2.6" rot="0 180" file="MOD/main/gas station/gas station props.vox" object="toilet thing"/>
+						<vox pos="0.35 0.55 2.55" rot="0 180" prop="true" file="MOD/main/gas station/gas station props.vox" object="small thing"/>
+					</group>
+					<group name="refrigerator" pos="-4.0 0.0 0.2" rot="0 90" prop0="type=hinge" prop1="rotstrength=.01" prop2="rotspring=0.00" prop3="limits=0 160">
+						<vox name="refrigerator" pos="-1.8 0.0 -7.8" rot="0 -90" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="purpsmall empty"/>
+						<vox name="refrigerator" pos="-3.8 0.0 -3.8" rot="0.0 0.0 0.0" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="purp empty">
+							<vox name="door" pos="0.4 0.2 0.0" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="purp door">
+								<joint pos="-0.1 1.5 -0.9" rot="-90 -90"/>
+								<joint pos="-0.1 0.4 -0.9" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="-3.8 0.5 -6.1" rot="0.0 -10.0 -90.0" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="coco empty">
+							<vox name="door" pos="0.4 0.2 0.6" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="poosi door">
+								<joint pos="-0.1 1.5 -0.5" rot="-90 -90"/>
+								<joint pos="-0.1 0.4 -0.5" rot="-90 -90"/>
+							</vox>
+							<vox name="door" pos="0.4 0.2 -0.6" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="poosi door">
+								<joint pos="-0.1 1.5 -0.5" rot="-90 -90"/>
+								<joint pos="-0.1 0.4 -0.5" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="-3.8 0.0 -2.0" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="pepsi empty"/>
+						<vox name="refrigerator" pos="-3.8 0.0 0.3" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="laymoon empty">
+							<vox name="door" pos="0.4 0.2 0.8" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+							<vox name="door" pos="0.4 0.2 -0.7" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="-3.2 0.4 2.8" rot="0.0 10.0 -74.0" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide empty">
+							<vox name="door" pos="0.4 0.2 0.0" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="0.8 0.0 -7.8" rot="0 -90" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="laymoon empty">
+							<vox name="door" pos="0.4 0.2 0.8" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+							<vox name="door" pos="0.4 0.2 -0.7" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="2.9 0.3 -7.8" rot="-30.0 -90.0 0.0" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="pepsi empty">
+							<vox name="door" pos="0.4 0.2 -0.0" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="poosi door">
+								<joint pos="-0.1 1.5 -0.5" rot="-90 -90"/>
+								<joint pos="-0.1 0.4 -0.5" rot="-90 -90"/>
+							</vox>
+						</vox>
+						<vox name="refrigerator" pos="-3.8 0.0 5.9" density="10" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="kit kat empty">
+							<vox name="door" pos="0.4 0.1 1.5" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+							<vox name="door" pos="0.4 0.1 -1.5" prop="true" file="MOD/assets/prop guy assets/refrigerators.vox" object="bluetide door">
+								<joint pos="-0.1 0.4 -0.7" rot="-90 -90"/>
+								<joint pos="-0.1 1.5 -0.7" rot="-90 -90"/>
+							</vox>
+						</vox>
+					</group>
+				</group>
+			</group>
+			<group pos="9.8 0.1 0.0" rot="0 0 12.3">
+				<vox name="roof" pos="-8.9 4.6 -1.2" texture="7" prop="false" file="MOD/main/gas station/gas station.vox" object="roof1D">
+					<group name="pillars" pos="9.1 -4.6 6.8">
+						<vox name="pillar" pos="0.0 0.0 -12.9" file="MOD/main/gas station/gas station.vox" object="pillar"/>
+						<vox name="pillar" pos="0.0 0.0 0.1" file="MOD/main/gas station/gas station.vox" object="pillar"/>
+					</group>
+					<vox name="upper roof" pos="0.0 0.5 0.0" texture="7 " file="MOD/main/gas station/gas station.vox" object="upper roof"/>
+					<vox name="logo" pos="12.9 -0.3 -8.2" rot="0 90" file="MOD/main/gas station/gas station.vox" object="logoD"/>
+					<vox name="SIGNBOARD" tags="night" pos="12.8 0.0 -1.4" file="MOD/main/gas station/gas station.vox" object="signboardD"/>
+					<group name="lights" pos="0.0 0.0 -1.0">
+						<vox name="light" tags="nocull" pos="9.2 0.0 -4.2" file="MOD/main/gas station/gas station.vox" object="light"/>
+						<vox name="light" tags="nocull" pos="-0.5 0.0 -4.2" file="MOD/main/gas station/gas station.vox" object="light"/>
+						<vox name="light" tags="nocull" pos="-9.5 0.0 -4.2" file="MOD/main/gas station/gas station.vox" object="light"/>
+						<vox name="light" tags="nocull" pos="9.2 0.0 6.4" file="MOD/main/gas station/gas station.vox" object="light"/>
+						<vox name="light" tags="nocull" pos="-0.5 0.0 6.4" file="MOD/main/gas station/gas station.vox" object="light"/>
+						<vox name="light" tags="nocull" pos="-9.5 0.0 6.4" file="MOD/main/gas station/gas station.vox" object="light"/>
+					</group>
+					<group name="surrounding lights">
+						<vox name="front1" tags="night" pos="12.8 0.0 0.0" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight frontD"/>
+						<vox name="left1" tags="night" pos="0.0 0.0 10.1" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight sideD"/>
+						<vox name="right1" tags="night" pos="0.0 0.0 -10.0" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight sideD"/>
+						<vox name="back1" tags="night" pos="-12.9 0.0 0.0" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight back"/>
+						<vox name="edge" tags="night nocull" pos="-12.9 0.0 -10.0" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight edgeD"/>
+						<vox name="edge" tags="night nocull" pos="-12.9 0.0 10.1" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight edgeD"/>
+						<vox name="edge" tags="night nocull" pos="12.8 0.0 -10.0" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight edgeD"/>
+						<vox name="edge" tags="night nocull" pos="12.8 0.0 10.1" rot="0 " file="MOD/main/gas station/gas station.vox" object="blight edgeD"/>
+					</group>
+				</vox>
+				<group rot="0 0 -12.3">
+					<vox name="pillar" pos="-9.4 0.0 5.7" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="pillarbroke"/>
+					<vox name="pillar" pos="-9.4 0.0 -7.3" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="pillarbroke"/>
+					<vox name="pillar" pos="-12.3 0.2 -9.4" rot="95.0 50.0 0.0" prop="true" file="MOD/main/gas station/gas station.vox" object="pillarbroke"/>
+					<vox name="pillar" pos="-12.8 0.2 7.4" rot="95.0 110.0 0.0" prop="true" file="MOD/main/gas station/gas station.vox" object="pillarbroke"/>
+					<vox name="pillar" pos="-18.2 0.0 -7.3" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="pillarbroke2"/>
+					<vox name="pillar" pos="-18.2 0.0 5.7" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="pillarbroke2"/>
+				</group>
+			</group>
+			<group name="gas pumps" pos="10.1 -0.0 -7.5">
+				<group name="gas pump" pos="-9.7 0.0 0.0">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="fence" pos="0.0 0.0 -3.2" rot="0 90" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+					<vox name="fence" pos="0.0 0.0 3.4" rot="0 90" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="gas pump" pos="-18.6 0.0 0.0">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" file="MOD/main/gas station/gas station.vox" object="gas pump explodey"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" file="MOD/main/gas station/gas station.vox" object="gas pump explodey"/>
+					<vox name="fence" pos="0.0 0.0 -3.2" rot="0.0 100.0 0.0" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="gas pump" pos="0.0 0.0 13.0">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="fence" pos="0.0 0.0 3.4" rot="0.0 100.0 0.0" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="gas pump" pos="-9.7 0.0 13.0">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="fence" pos="0.0 0.2 -3.2" rot="180.0 -90.0 -80.0" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+					<vox name="fence" pos="0.0 0.0 3.4" rot="0.0 90.0 0.0" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="gas pump" pos="-18.6 0.0 13.0">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" file="MOD/main/gas station/gas station.vox" object="gas pump explodey"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" file="MOD/main/gas station/gas station.vox" object="gas pump explodey"/>
+					<vox name="fence" pos="0.0 0.0 -3.2" rot="0 90" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+					<vox name="fence" pos="0.0 0.1 3.2" rot="180.0 -90.0 80.0" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="gas pump">
+					<vox name="ground" pos="0.0 0.0 0.1" rot="0 90" file="MOD/main/gas station/gas station.vox" object="ground"/>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 -1.5" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="0.4 0.5 0.1" rot="0.0 180.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="gas pump" tags="explosive=2" pos="0.0 0.1 1.9" rot="0 90" desc="doesn't seem like it's working, I should look for the ground feed" file="MOD/main/gas station/gas station.vox" object="gas pump">
+						<vox name="pump" pos="-0.3 0.5 -0.3" rot="0.0 0.0 0.0" file="MOD/main/gas station/gas station.vox" object="little thing">
+							<rope pos="0.0 0.1 -0.2" slack="0.5">
+								<location/>
+								<location pos="-0.1 1.1 0.1"/>
+							</rope>
+						</vox>
+					</vox>
+					<vox name="fence" pos="0.0 0.0 3.4" rot="0 90" texture="7 0.9" prop="true" file="MOD/main/gas station/gas station.vox" object="fence"/>
+				</group>
+				<group name="ground main tank access" pos="-24.7 -0.1 24.5">
+					<body tags="GasCan RNDfuelLevel=70 fuelLevelMAX=1000" pos="0.1 0.2 0.0" dynamic="true">
+						<vox name="ground" pos="-0.1 0.1 0.0" rot="0.0 -90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access_cover">
+							<joint pos="0.05 0.0 -0.5" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.001" limits="-100 0"/>
+						</vox>
+					</body>
+					<vox name="ground" pos="0.1 0.2 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access"/>
+					<vox name="ground" tags="explosive=3" pos="0.1 0.14 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="fuel_ground"/>
+					<vox name="ground" pos="0.1 0.1 0.1" rot="0.0 90.0 0.0" file="MOD/main/gas station/gas station.vox" object="main_tank_access_ground"/>
+					<instance pos="0.0 0.1 1.6" rot="0.0 10.0 0.0" file="MOD/prefabs/spawnables/loots/General GASCAN.xml"/>
+				</group>
+			</group>
+		</group>
+		<group name="Loot" pos="0.1 0.9 1.9">
+			<instance pos="6.0 5.4 -7.1" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+			<instance pos="12.2 -0.6 16.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/EasterEggLootSpawn.xml"/>
+			<group name="shelfloot" pos="0.7 0.1 12.6">
+				<instance pos="1.0 -0.1 -1.8" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-1.9 0.9 -1.9" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-6.1 0.9 -1.8" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="7.1 -0.0 -1.3" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-1.0 0.4 -1.4" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-6.1 0.9 1.8" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="2.1 0.9 2.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="9.2 0.3 3.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-5.0 -0.7 1.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-7.9 0.8 1.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-8.3 0.3 -1.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+			</group>
+			<group name="fridge loot" pos="-3.1 0.4 13.5">
+				<instance pos="1.2 0.1 3.7" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-3.7 0.1 3.7" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-7.5 0.1 -0.1" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+			</group>
+			<group name="Cars">
+				<location tags="RandomVehicle Chance=20 Loc=.1 Rot=5" pos="7.8 -0.7 -14.65" rot="0.0 -180.0 0.0"/>
+			</group>
+		</group>
+		<group name="Enemy">
+			<instance pos="11.58631 1.3 9.14249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="-9.11369 1.3 6.84249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="5.68631 1.3 3.24249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="14.68631 1.3 -7.35751" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="7.68631 1.3 -20.45751" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="11.58631 1.3 12.84249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="5.68631 1.3 14.74249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="-2.51369 1.3 14.74249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="3.68631 1.3 11.74249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="7.88631 1.3 18.64249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+			<instance pos="10.38631 1.3 16.24249" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml"/>
+		</group>
+		<group name="others">
+			<trigger tags="vegRemove" pos="1.3 0.0 13.5" type="box" size="25.6 2 10.2"/>
+		</group>
+	</group>
+</prefab>
+

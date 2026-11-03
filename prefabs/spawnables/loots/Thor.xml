@@ -1,0 +1,6 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/prefabs/spawnables/loots/Thor.xml" pos="11.5">
+		<instance file="MOD/Loots/vest-thor.xml"/>
+	</group>
+</prefab>
+

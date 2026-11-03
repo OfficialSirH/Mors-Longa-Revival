@@ -1,0 +1,6 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/prefabs/spawns/roadsigns/NormSignSpawn.xml" pos="84.70001 0.7 0.1">
+		<location tags="RandomRoadSign Chance=100 Loc=15 Rot=360"/>
+	</group>
+</prefab>
+

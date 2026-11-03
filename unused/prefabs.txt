@@ -1,0 +1,468 @@
+/c/Users/Cheejins/Documents/Teardown/mods/Mors Longa 1 - main/prefabs
+./assets/ballistic wall high.xml
+./assets/ballistic wall low.xml
+./assets/hesco.xml
+./construction1.xml
+./construction2.xml
+./construction3.xml
+./construction4.xml
+./grenade.xml
+./MGLgrenade.xml
+./militarybase1.xml
+./mil_old/millitary/Ragdollmil1.xml
+./mil_old/millitary/Ragdollmil10.xml
+./mil_old/millitary/Ragdollmil11.xml
+./mil_old/millitary/Ragdollmil12.xml
+./mil_old/millitary/Ragdollmil13.xml
+./mil_old/millitary/Ragdollmil14.xml
+./mil_old/millitary/Ragdollmil15.xml
+./mil_old/millitary/Ragdollmil16.xml
+./mil_old/millitary/Ragdollmil17.xml
+./mil_old/millitary/Ragdollmil18.xml
+./mil_old/millitary/Ragdollmil19.xml
+./mil_old/millitary/Ragdollmil2.xml
+./mil_old/millitary/Ragdollmil20.xml
+./mil_old/millitary/Ragdollmil21.xml
+./mil_old/millitary/Ragdollmil22.xml
+./mil_old/millitary/Ragdollmil23.xml
+./mil_old/millitary/Ragdollmil24.xml
+./mil_old/millitary/Ragdollmil25.xml
+./mil_old/millitary/Ragdollmil26.xml
+./mil_old/millitary/Ragdollmil27.xml
+./mil_old/millitary/Ragdollmil28.xml
+./mil_old/millitary/Ragdollmil29.xml
+./mil_old/millitary/Ragdollmil3.xml
+./mil_old/millitary/Ragdollmil30.xml
+./mil_old/millitary/Ragdollmil31.xml
+./mil_old/millitary/Ragdollmil32.xml
+./mil_old/millitary/Ragdollmil33.xml
+./mil_old/millitary/Ragdollmil34.xml
+./mil_old/millitary/Ragdollmil35.xml
+./mil_old/millitary/Ragdollmil36.xml
+./mil_old/millitary/Ragdollmil37.xml
+./mil_old/millitary/Ragdollmil38.xml
+./mil_old/millitary/Ragdollmil39.xml
+./mil_old/millitary/Ragdollmil4.xml
+./mil_old/millitary/Ragdollmil40.xml
+./mil_old/millitary/Ragdollmil41.xml
+./mil_old/millitary/Ragdollmil42.xml
+./mil_old/millitary/Ragdollmil43.xml
+./mil_old/millitary/Ragdollmil44.xml
+./mil_old/millitary/Ragdollmil45.xml
+./mil_old/millitary/Ragdollmil46.xml
+./mil_old/millitary/Ragdollmil47.xml
+./mil_old/millitary/Ragdollmil48.xml
+./mil_old/millitary/Ragdollmil49.xml
+./mil_old/millitary/Ragdollmil5.xml
+./mil_old/millitary/Ragdollmil50.xml
+./mil_old/millitary/Ragdollmil51.xml
+./mil_old/millitary/Ragdollmil52.xml
+./mil_old/millitary/Ragdollmil6.xml
+./mil_old/millitary/Ragdollmil7.xml
+./mil_old/millitary/Ragdollmil8.xml
+./mil_old/millitary/Ragdollmil9.xml
+./other/alien.xml
+./other/BossBingus.xml
+./other/BossCultist.xml
+./other/BossDuo.xml
+./other/BossInsurgent.xml
+./other/BossMilitary.xml
+./other/BossQuattuor.xml
+./other/BossTria.xml
+./other/BossUnis.xml
+./other/Credits.xml
+./other/Debri.xml
+./other/Ragdoll1.xml
+./other/Ragdoll2.xml
+./other/Ragdoll3.xml
+./other/Ragdoll4.xml
+./other/TestDummy.xml
+./Perk.xml
+./Perk1.xml
+./Perk2.xml
+./Perk3.xml
+./Perk4.xml
+./Perk5.xml
+./Perk6.xml
+./PerkMachine.xml
+./civilian/Ragdollciv1.xml
+./civilian/Ragdollciv10.xml
+./civilian/Ragdollciv11.xml
+./civilian/Ragdollciv12.xml
+./civilian/Ragdollciv13.xml
+./civilian/Ragdollciv14.xml
+./civilian/Ragdollciv2.xml
+./civilian/Ragdollciv3.xml
+./civilian/Ragdollciv4.xml
+./civilian/Ragdollciv5.xml
+./civilian/Ragdollciv6.xml
+./civilian/Ragdollciv7.xml
+./civilian/Ragdollciv8.xml
+./civilian/Ragdollciv9.xml
+./civilian/RagdollcivDriver.xml
+./civilian/RagdollcivDriverDead.xml
+./civilian/Ragdollcivspec1.xml
+./cult/Ragdollcult1.xml
+./cult/Ragdollcult2.xml
+./millitary/Ragdollmil1.xml
+./millitary/Ragdollmil10.xml
+./millitary/Ragdollmil11.xml
+./millitary/Ragdollmil12.xml
+./millitary/Ragdollmil2.xml
+./millitary/Ragdollmil3.xml
+./millitary/Ragdollmil4.xml
+./millitary/Ragdollmil5.xml
+./millitary/Ragdollmil6.xml
+./millitary/Ragdollmil7.xml
+./millitary/Ragdollmil8.xml
+./millitary/Ragdollmil9.xml
+./millitary/Ragdollmilofficer1.xml
+./millitary/Ragdollmilofficer2.xml
+./millitary/Ragdollmilofficer3.xml
+./millitary/Ragdollmilofficer4.xml
+./millitary/Ragdollmilofficer5.xml
+./millitary/Ragdollmilofficer6.xml
+./millitary/Ragdollmilofficer7.xml
+./millitary/Ragdollmilofficer8.xml
+./millitary/Ragdollmilsand1.xml
+./millitary/Ragdollmilsand10.xml
+./millitary/Ragdollmilsand11.xml
+./millitary/Ragdollmilsand12.xml
+./millitary/Ragdollmilsand2.xml
+./millitary/Ragdollmilsand3.xml
+./millitary/Ragdollmilsand4.xml
+./millitary/Ragdollmilsand5.xml
+./millitary/Ragdollmilsand6.xml
+./millitary/Ragdollmilsand7.xml
+./millitary/Ragdollmilsand8.xml
+./millitary/Ragdollmilsand9.xml
+./spawnables/bridges/8x1_bridge_overpass.xml
+./spawnables/bridges/8x1_bridge_train.xml
+./spawnables/buildings/constructionCivillian1.xml
+./spawnables/buildings/constructionCivillian10.xml
+./spawnables/buildings/constructionCivillian11.xml
+./spawnables/buildings/constructionCivillian2.xml
+./spawnables/buildings/constructionCivillian3.xml
+./spawnables/buildings/constructionCivillian4.xml
+./spawnables/buildings/constructionCivillian5.xml
+./spawnables/buildings/constructionCivillian6.xml
+./spawnables/buildings/constructionCivillian7.xml
+./spawnables/buildings/constructionCivillian8.xml
+./spawnables/buildings/constructionCivillian9.xml
+./spawnables/buildings/constructionSpecial1.xml
+./spawnables/buildings/constructionSpecial2.xml
+./spawnables/buildings/constructionSpecial3.xml
+./spawnables/deceased/DeceasedBurnt1.xml
+./spawnables/deceased/DeceasedBurnt2.xml
+./spawnables/deceased/DeceasedBurnt3.xml
+./spawnables/enemy vehicles/VehicleD1.xml
+./spawnables/enemy vehicles/VehicleD2.xml
+./spawnables/enemy vehicles/VehicleD3.xml
+./spawnables/enemy vehicles/VehicleD4.xml
+./spawnables/enemy vehicles/VehicleD5.xml
+./spawnables/enemy vehicles/VehicleD6.xml
+./spawnables/enemy vehicles/VehicleDD1.xml
+./spawnables/enemy vehicles/VehicleDD2.xml
+./spawnables/enemy vehicles/VehicleDD3.xml
+./spawnables/enemy vehicles/VehicleDD4.xml
+./spawnables/enemy vehicles/VehicleDF1.xml
+./spawnables/loots/Altyn.xml
+./spawnables/loots/Ammo 12GA.xml
+./spawnables/loots/Ammo 5.45.xml
+./spawnables/loots/Ammo 5.56.xml
+./spawnables/loots/Ammo 7.62x25.xml
+./spawnables/loots/Ammo 7.62x39.xml
+./spawnables/loots/Ammo 7.62x51.xml
+./spawnables/loots/Ammo 7.62x54R.xml
+./spawnables/loots/Ammo 9x19.xml
+./spawnables/loots/food1.xml
+./spawnables/loots/food2.xml
+./spawnables/loots/food3.xml
+./spawnables/loots/food4.xml
+./spawnables/loots/food5.xml
+./spawnables/loots/General GASCAN.xml
+./spawnables/loots/General GASCANLARGE.xml
+./spawnables/loots/Grenade.xml
+./spawnables/loots/Gun Advertnus's AK74.xml
+./spawnables/loots/Gun AK105.xml
+./spawnables/loots/Gun AK50.xml
+./spawnables/loots/Gun AK74 MILITARY.xml
+./spawnables/loots/Gun AK74.xml
+./spawnables/loots/Gun AK74M.xml
+./spawnables/loots/Gun Simonov-762.xml
+./spawnables/loots/Gun AKS74U.xml
+./spawnables/loots/Gun Autumnatic's MP43.xml
+./spawnables/loots/Gun Avertnus's AK74.xml
+./spawnables/loots/Gun Cheejin's SKS.xml
+./spawnables/loots/Gun CZ-1012.xml
+./spawnables/loots/Gun G3.xml
+./spawnables/loots/Gun MK36.xml
+./spawnables/loots/Gun Glock17 TAN.xml
+./spawnables/loots/Gun Glock17 TAN1.xml
+./spawnables/loots/Gun Glock17 TAN2.xml
+./spawnables/loots/Gun Glock17 TAN3.xml
+./spawnables/loots/Gun Glock17.xml
+./spawnables/loots/Gun Glock18.xml
+./spawnables/loots/Gun N16 Scope.xml
+./spawnables/loots/Gun N16.xml
+./spawnables/loots/Gun N4A1 SOPMOD.xml
+./spawnables/loots/Gun N4A1 STANDARD.xml
+./spawnables/loots/Gun N4A1.xml
+./spawnables/loots/Gun MGL.xml
+./spawnables/loots/Gun MOSIN MILITARY.xml
+./spawnables/loots/Gun MOSIN SNIPER MILITARY.xml
+./spawnables/loots/Gun MOSIN SNIPER SUPPRESSED MILITARY.xml
+./spawnables/loots/Gun MOSIN SNIPER SUPPRESSED.xml
+./spawnables/loots/Gun MOSIN Sniper.xml
+./spawnables/loots/Gun MOSIN SUPPRESSED MILITARY.xml
+./spawnables/loots/Gun MOSIN SUPPRESSED.xml
+./spawnables/loots/Gun MOSIN.xml
+./spawnables/loots/Gun MP43.xml
+./spawnables/loots/Gun Offensiv's N4A1.xml
+./spawnables/loots/Gun PPSH41.xml
+./spawnables/loots/Gun RPG.xml
+./spawnables/loots/Gun SawedOff.xml
+./spawnables/loots/Gun TCR-308 SNIPER.xml
+./spawnables/loots/Gun TCR-308.xml
+./spawnables/loots/Gun TCR-556.xml
+./spawnables/loots/Gun MK36.xml
+./spawnables/loots/Gun SKS.xml
+./spawnables/loots/Gun Drozdov SNIPER.xml
+./spawnables/loots/Gun Drozdov.xml
+./spawnables/loots/Gun Drozdov1.xml
+./spawnables/loots/Gun Drozdov2.xml
+./spawnables/loots/Gun TT-33.xml
+./spawnables/loots/Gun Vector.xml
+./spawnables/loots/Gzhel.xml
+./spawnables/loots/HexGrid.xml
+./spawnables/loots/Killa-Vest.xml
+./spawnables/loots/LBT-Plate.xml
+./spawnables/loots/Mag AK 5.45 #0.xml
+./spawnables/loots/Mag AK 5.45 #1.xml
+./spawnables/loots/Mag AK 5.45 #2.xml
+./spawnables/loots/Mag AK 5.45 #3.xml
+./spawnables/loots/Mag AK 5.45 #4.xml
+./spawnables/loots/Mag AK 7.62 #0.xml
+./spawnables/loots/Mag AK 7.62 #1.xml
+./spawnables/loots/Mag AR 5.56 #0.xml
+./spawnables/loots/Mag AR 5.56 #1.xml
+./spawnables/loots/Mag AR 5.56 #2.xml
+./spawnables/loots/Mag AR 5.56 #3.xml
+./spawnables/loots/Mag AR 5.56 #4.xml
+./spawnables/loots/Mag AR 5.56 #5.xml
+./spawnables/loots/Mag Glock 9x19 #0.xml
+./spawnables/loots/Mag Glock 9x19 #1.xml
+./spawnables/loots/Mag Glock 9x19 #2.xml
+./spawnables/loots/Mag HK 5.56 #0.xml
+./spawnables/loots/Mag PPSh #0.xml
+./spawnables/loots/Mag TCR 7.62 #0.xml
+./spawnables/loots/Mag Drozdov #0.xml
+./spawnables/loots/Mag TT-33 #0.xml
+./spawnables/loots/Material DRIFTWOOD.xml
+./spawnables/loots/Material EXPLOSIVE.xml
+./spawnables/loots/Material KEVLAR.xml
+./spawnables/loots/Material RUBBER.xml
+./spawnables/loots/Material SCRAP.xml
+./spawnables/loots/Material STEEL.xml
+./spawnables/loots/Meds AI2.xml
+./spawnables/loots/Meds BANDAGE.xml
+./spawnables/loots/Meds CMS.xml
+./spawnables/loots/Meds IFAK.xml
+./spawnables/loots/Meds SPLINT.xml
+./spawnables/loots/Meds STIM ADRENALINE.xml
+./spawnables/loots/Meds STIM MORPHINE.xml
+./spawnables/loots/Meds STIM PZ1.xml
+./spawnables/loots/NFM-Thor.xml
+./spawnables/loots/NVG.xml
+./spawnables/loots/ROCKET.xml
+./spawnables/loots/SIXB2.xml
+./spawnables/loots/sks.xml
+./spawnables/loots/Thor.xml
+./spawnables/loots/ULACH.xml
+./spawnables/loots/Zabralo.xml
+./spawnables/roadblocks/roadblock1.xml
+./spawnables/roadblocks/roadblock2.xml
+./spawnables/roadblocks/roadblock3.xml
+./spawnables/roadblocks/roadblock4.xml
+./spawnables/roadsegments/RoadSegment1.xml
+./spawnables/roadsegments/RoadSegment2.xml
+./spawnables/roadsegments/RoadSegment3.xml
+./spawnables/roadsegments/RoadSegmentF.xml
+./spawnables/roadsegments/RoadSegmentH.xml
+./spawnables/roadsegments/RoadSegmentH2.xml
+./spawnables/roadsegments/RoadSegmentL1.xml
+./spawnables/roadsegments/RoadSegmentM1.xml
+./spawnables/roadsegments/RoadSegmentM2.xml
+./spawnables/roadsegments/RoadSegmentM3.xml
+./spawnables/roadsegments/RoadSegmentM4.xml
+./spawnables/roadsegments/RoadSegmentM5.xml
+./spawnables/roadsegments/RoadSegmentM6.xml
+./spawnables/roadsigns/roadsign1.xml
+./spawnables/roadsigns/roadsign2.xml
+./spawnables/roadsigns/roadsign3.xml
+./spawnables/roadsigns/roadsign4.xml
+./spawnables/roadsigns/roadsign5.xml
+./spawnables/roadsigns/roadsign6.xml
+./spawnables/vehicles/Vehiclef1.xml
+./spawnables/vehicles/Vehiclef10.xml
+./spawnables/vehicles/Vehiclef11.xml
+./spawnables/vehicles/Vehiclef12.xml
+./spawnables/vehicles/Vehiclef13.xml
+./spawnables/vehicles/Vehiclef14.xml
+./spawnables/vehicles/Vehiclef15.xml
+./spawnables/vehicles/Vehiclef16.xml
+./spawnables/vehicles/Vehiclef17.xml
+./spawnables/vehicles/Vehiclef18.xml
+./spawnables/vehicles/Vehiclef19.xml
+./spawnables/vehicles/Vehiclef2.xml
+./spawnables/vehicles/Vehiclef20.xml
+./spawnables/vehicles/Vehiclef21.xml
+./spawnables/vehicles/Vehiclef22.xml
+./spawnables/vehicles/Vehiclef23.xml
+./spawnables/vehicles/Vehiclef24.xml
+./spawnables/vehicles/Vehiclef25.xml
+./spawnables/vehicles/Vehiclef26.xml
+./spawnables/vehicles/Vehiclef27.xml
+./spawnables/vehicles/Vehiclef28.xml
+./spawnables/vehicles/Vehiclef29.xml
+./spawnables/vehicles/Vehiclef3.xml
+./spawnables/vehicles/Vehiclef30.xml
+./spawnables/vehicles/Vehiclef31.xml
+./spawnables/vehicles/Vehiclef32.xml
+./spawnables/vehicles/Vehiclef33.xml
+./spawnables/vehicles/Vehiclef34.xml
+./spawnables/vehicles/Vehiclef35.xml
+./spawnables/vehicles/VehicleF36.xml
+./spawnables/vehicles/VehicleF37.xml
+./spawnables/vehicles/Vehiclef4.xml
+./spawnables/vehicles/Vehiclef5.xml
+./spawnables/vehicles/Vehiclef6.xml
+./spawnables/vehicles/Vehiclef7.xml
+./spawnables/vehicles/Vehiclef8.xml
+./spawnables/vehicles/Vehiclef9.xml
+./spawnables/vehicles/VehicleM1.xml
+./spawnables/vehicles/VehicleM10.xml
+./spawnables/vehicles/VehicleM11.xml
+./spawnables/vehicles/VehicleM12.xml
+./spawnables/vehicles/VehicleM13.xml
+./spawnables/vehicles/VehicleM14.xml
+./spawnables/vehicles/VehicleM15.xml
+./spawnables/vehicles/VehicleM16.xml
+./spawnables/vehicles/VehicleM17.xml
+./spawnables/vehicles/VehicleM18.xml
+./spawnables/vehicles/VehicleM19.xml
+./spawnables/vehicles/VehicleM2.xml
+./spawnables/vehicles/VehicleM20.xml
+./spawnables/vehicles/VehicleM21.xml
+./spawnables/vehicles/VehicleM22.xml
+./spawnables/vehicles/VehicleM23.xml
+./spawnables/vehicles/VehicleM3.xml
+./spawnables/vehicles/VehicleM4.xml
+./spawnables/vehicles/VehicleM5.xml
+./spawnables/vehicles/VehicleM6.xml
+./spawnables/vehicles/VehicleM7.xml
+./spawnables/vehicles/VehicleM8.xml
+./spawnables/vehicles/VehicleM9.xml
+./spawnables/vehicles/VehicleS1.xml
+./spawnables/vehicles/VehicleS2.xml
+./spawnables/vehicles/VehicleS3.xml
+./spawnables/vehicles/Vehiclewb1.xml
+./spawnables/vehicles/Vehiclewb10.xml
+./spawnables/vehicles/Vehiclewb11.xml
+./spawnables/vehicles/Vehiclewb12.xml
+./spawnables/vehicles/Vehiclewb13.xml
+./spawnables/vehicles/Vehiclewb14.xml
+./spawnables/vehicles/Vehiclewb15.xml
+./spawnables/vehicles/Vehiclewb16.xml
+./spawnables/vehicles/Vehiclewb17.xml
+./spawnables/vehicles/Vehiclewb18.xml
+./spawnables/vehicles/Vehiclewb19.xml
+./spawnables/vehicles/Vehiclewb2.xml
+./spawnables/vehicles/Vehiclewb20.xml
+./spawnables/vehicles/Vehiclewb21.xml
+./spawnables/vehicles/Vehiclewb22.xml
+./spawnables/vehicles/Vehiclewb23.xml
+./spawnables/vehicles/Vehiclewb24.xml
+./spawnables/vehicles/Vehiclewb25.xml
+./spawnables/vehicles/Vehiclewb26.xml
+./spawnables/vehicles/Vehiclewb3.xml
+./spawnables/vehicles/Vehiclewb4.xml
+./spawnables/vehicles/Vehiclewb5.xml
+./spawnables/vehicles/Vehiclewb6.xml
+./spawnables/vehicles/Vehiclewb7.xml
+./spawnables/vehicles/Vehiclewb8.xml
+./spawnables/vehicles/Vehiclewb9.xml
+./spawnables/vehicles/Vehiclewg1.xml
+./spawnables/vehicles/Vehiclewg10.xml
+./spawnables/vehicles/Vehiclewg11.xml
+./spawnables/vehicles/Vehiclewg12.xml
+./spawnables/vehicles/Vehiclewg13.xml
+./spawnables/vehicles/Vehiclewg14.xml
+./spawnables/vehicles/Vehiclewg15.xml
+./spawnables/vehicles/Vehiclewg16.xml
+./spawnables/vehicles/Vehiclewg17.xml
+./spawnables/vehicles/Vehiclewg18.xml
+./spawnables/vehicles/Vehiclewg19.xml
+./spawnables/vehicles/Vehiclewg2.xml
+./spawnables/vehicles/Vehiclewg20.xml
+./spawnables/vehicles/Vehiclewg21.xml
+./spawnables/vehicles/Vehiclewg22.xml
+./spawnables/vehicles/Vehiclewg23.xml
+./spawnables/vehicles/Vehiclewg24.xml
+./spawnables/vehicles/Vehiclewg25.xml
+./spawnables/vehicles/Vehiclewg26.xml
+./spawnables/vehicles/Vehiclewg27.xml
+./spawnables/vehicles/Vehiclewg28.xml
+./spawnables/vehicles/Vehiclewg29.xml
+./spawnables/vehicles/Vehiclewg3.xml
+./spawnables/vehicles/Vehiclewg30.xml
+./spawnables/vehicles/Vehiclewg31.xml
+./spawnables/vehicles/Vehiclewg4.xml
+./spawnables/vehicles/Vehiclewg5.xml
+./spawnables/vehicles/Vehiclewg6.xml
+./spawnables/vehicles/Vehiclewg7.xml
+./spawnables/vehicles/Vehiclewg8.xml
+./spawnables/vehicles/Vehiclewg9.xml
+./spawns/buildings/NormBuilding180Spawn.xml
+./spawns/buildings/NormBuildingSpawn.xml
+./spawns/deceased/NormDeceasedSpawn.xml
+./spawns/enemies/EnemyCivSpawn.xml
+./spawns/enemies/EnemyCultSpawn.xml
+./spawns/enemies/EnemyDuoSpawn.xml
+./spawns/enemies/EnemyNoxSpawn.xml
+./spawns/enemies/EnemyQuattuorSpawn.xml
+./spawns/enemies/EnemyRoadblockCivSpawn.xml
+./spawns/enemies/EnemyRoadblockMilSpawn.xml
+./spawns/enemies/EnemySpesSpawn.xml
+./spawns/enemies/EnemyTriaSpawn.xml
+./spawns/enemies/EnemyUnisSpawn.xml
+./spawns/enemies/EnemyViresSpawn.xml
+./spawns/enemy vehicles/EnemyCarSpawn.xml
+./spawns/loots/BrokenCarLootSpawn.xml
+./spawns/loots/EasterEggLootSpawn.xml
+./spawns/loots/GiftFromGod.xml
+./spawns/loots/HiddenFoodLootSpawn.xml
+./spawns/loots/HiddenLootSpawn.xml
+./spawns/loots/HiddenMiliLootSpawn.xml
+./spawns/loots/HighFoodLootSpawn.xml
+./spawns/loots/HighMiliLootSpawn.xml
+./spawns/loots/MilitaryCarLootSpawn.xml
+./spawns/loots/NormFoodLootSpawn.xml
+./spawns/loots/NormGeneralLootSpawn.xml
+./spawns/loots/NormMiliLootSpawn.xml
+./spawns/loots/SpecialCarLootSpawn.xml
+./spawns/loots/SuperHighMiliLootSpawn.xml
+./spawns/loots/TrainGeneral.xml
+./spawns/loots/WorkingBCarLootSpawn.xml
+./spawns/loots/WorkingGCarLootSpawn.xml
+./spawns/roadblocks/RoadBlockSpawn.xml
+./spawns/roadsigns/NormSignSpawn.xml
+./spawns/roadsigns/NormSignSpawnLeft.xml
+./spawns/roadsigns/NormSignSpawnRight.xml
+./spawns/vehicles/MilCarSpawn.xml
+./spawns/vehicles/NormCarSpawn.xml
+./Supply Drop.xml
+./tiles/1x1_desert.xml
+./tiles/1x1_road_left.xml
+./tiles/1x1_road_right.xml
+./tiles/2x1_lights_highway.xml

@@ -1,0 +1,6 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" pos="5.7 0.1 11.8" rot="0.0 0.0 0.0">
+		<location tags="RandomLoot chance=15 type=banditWeapon"/>
+	</group>
+</prefab>
+

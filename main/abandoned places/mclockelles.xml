@@ -1,0 +1,797 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/main/abandoned places/mclockelles.xml" pos="0.0 0.0 -20.6" rot="0.0 0.0 0.0">
+		<group name="mclockelle" pos="0.1 0.1 0.1" prop0="texture=1 0.9">
+			<group name="Ground" pos="1.6 -0.1 -0.2">
+				<vox pos="-0.3 0.1 -1.5" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/floor.vox"/>
+				<vox pos="-11.5 0.1 11.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="-5.3 0.1 11.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="0.9 0.1 11.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="7.1 0.1 11.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="10.1 0.1 11.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="13.1 0.1 7.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="13.1 0.1 9.4" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="13.1 0.1 1.4" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="13.1 0.1 -4.8" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="13.1 0.1 -9.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="11.3 0.1 -12.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="5.3 0.1 -12.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="-0.7 0.1 -12.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="-6.7 0.1 -12.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="-10.3 0.1 -12.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/sidewalk.vox"/>
+				<vox pos="2.5 0.1 12.8" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="3.0 0.1 12.8" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="3.0 0.1 12.4" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="2.5 0.1 12.4" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.4 0.1 -9.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.7 0.1 -9.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.4 0.1 -3.2" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.7 0.1 -3.2" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.4 0.1 3.0" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.7 0.1 3.0" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.4 0.1 6.5" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+				<vox pos="-14.7 0.1 6.5" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/s_w1.vox"/>
+			</group>
+			<group name="roof" pos="-4.4 4.3 4.7">
+				<group name="inner lights" pos="5.9 -3.9 -5.7" prop0="tags=fxflicker=7.4">
+					<group pos="0.2 3.5 -0.1" prop0="tags=fxflicker=5.6">
+						<vox pos="8.9 -1.2 10.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="-9.0 -1.2 -2.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+						</vox>
+						<vox pos="-0.7 -1.2 4.7" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+						</vox>
+						<vox pos="5.7 -1.2 -8.4" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="9.2 -1.2 6.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+						</vox>
+						<vox pos="9.2 -1.2 -4.7" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="5.4 -1.2 4.7" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+						</vox>
+						<vox pos="9.2 -1.2 0.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="-1.15 -1.9 -8.2" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="5.4 -1.2 1.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						</vox>
+						<vox pos="-0.7 -1.2 -4.2" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+							<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+							<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+								<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+							</vox>
+						</vox>
+					</group>
+					<vox pos="5.6 2.3 10.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="9.5 2.3 -8.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="3.2 2.3 -8.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+					<vox pos="2.5 2.3 4.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="-0.5 2.3 -1.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="5.6 2.3 -1.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="2.5 2.3 -1.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="2.5 2.3 1.8" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="-5.2 2.3 8.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+					<vox pos="-5.2 2.3 1.8" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+					<vox pos="-5.2 2.3 -3.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="-5.2 2.3 -6.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+					<vox pos="-8.8 2.3 -6.9" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+					<vox pos="-9.3 2.3 2.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="-9.3 2.3 8.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="9.4 2.3 -2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+					</vox>
+					<vox pos="9.4 2.3 3.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+						<vox pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+						<vox pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+						<vox pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+							<light name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+						</vox>
+					</vox>
+				</group>
+				<vox pos="1.5 -3.9 -16.6" rot="0.0 0.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wbs.vox"/>
+				<vox pos="-9.9 -0.9 -4.5" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+				<vox pos="5.8 -0.9 8.5" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+				<vox pos="-3.1 -0.9 8.5" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+				<vox pos="-9.9 -0.9 4.4" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+				<vox pos="-9.0 -1.6 2.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+				<vox pos="-5.0 -1.6 -18.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+				<vox pos="19.2 -1.6 -14.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+				<vox pos="15.2 -1.6 6.6" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+				<vox pos="-0.8 -1.6 2.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main2.vox"/>
+				<vox pos="10.8 -1.6 -14.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main2.vox"/>
+				<vox pos="10.8 -1.6 -12.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main3.vox"/>
+				<vox pos="0.0 2.7 -7.2" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+				<vox pos="12.5 2.7 -7.0" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+				<vox pos="4.0 2.7 -2.4" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+				<vox pos="8.5 2.7 -15.4" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+				<vox pos="-4.3 2.7 1.4" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+				<vox pos="14.0 2.7 -0.2" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+				<vox pos="14.6 2.7 -13.0" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+				<vox pos="-4.0 2.7 -13.0" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+				<group name="ceiling ventilation" pos="7.9 -2.3 -4.7" rot="0.0 0.0 0.0">
+					<vox pos="3.8 3.6 -8.7" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+					<vox pos="-6.5 3.6 -9.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+					<vox pos="-6.5 3.6 -4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+					<vox pos="-10.2 3.6 4.3" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+					<vox pos="4.2 3.5 6.9" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-cross-plain"/>
+					<vox pos="-8.3 3.5 -9.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-8.3 3.5 -4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="4.1 3.5 8.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="4.1 3.6 -10.8" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="6.3 3.5 7.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-12.3 3.6 4.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-14.2 3.6 4.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-10.2 3.6 5.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-10.2 3.6 7.3" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-10.2 3.6 8.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-6.2 3.6 -10.7" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-6.2 3.6 -2.2" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="-6.2 3.6 -0.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="8.3 3.5 6.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="8.8 3.5 6.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+					<vox pos="4.6 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="5.9 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="7.2 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="8.5 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="3.4 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="2.1 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="0.8 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-0.5 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -5.7" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -7.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -8.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -9.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -10.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 2.3 -10.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-3.1 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-4.4 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-4.9 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -3.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -1.9" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 -0.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 0.7" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 2.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 3.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 4.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-3.1 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-4.4 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-5.7 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-7.0 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 5.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-1.8 3.4 7.1" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="-0.5 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="0.8 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="2.1 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="3.0 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+					<vox pos="4.5 3.4 -6.3" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+					<vox pos="-6.3 3.4 -6.6" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+					<vox pos="-8.4 3.4 4.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+					<vox pos="4.1 3.4 4.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+					<vox pos="0.4 3.5 -2.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-4.0 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-7.3 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-10.6 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-13.4 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="4.6 3.5 0.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="8.0 3.5 0.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 -2.4" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-4.0 3.5 -1.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-4.0 3.5 -4.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-9.9 3.5 -1.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-9.9 3.5 -5.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-9.9 3.5 -7.3" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-9.9 3.5 -10.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-4.0 3.5 6.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="-4.0 3.5 8.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 0.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 -6.7" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 -10.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 6.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="2.4 3.5 7.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+					<vox pos="5.7 3.2 -4.6" rot="0.0 -90.0 0.0" desc="THIS BUILDING WAS MADE BY OFFENSIVEPDF" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/3272021.vox"/>
+					<vox pos="-10.1 3.3 -4.1" rot="0.0 -90.0 0.0" desc="THIS BUILDING WAS MADE BY OFFENSIVEPDF" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/3272021.vox"/>
+				</group>
+			</group>
+			<group name="Main Logo" pos="3.7 0.3 13.5">
+				<vox pos="0.3 3.9 0.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/mc_r2.vox">
+					<group name="Logo Lights" pos="0.2 6.0 -0.3" rot="0.0 0.0 0.0">
+						<light name="logo light" tags="fxflicker=2.5" pos="0.04 0.1 0.0" rot="80.0 0.0 0.0" type="area" color="1.0 0.4 0.0" scale="10" size="6.67" reach="7"/>
+					</group>
+				</vox>
+				<vox pos="2.7 0.1 -0.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/mc_r1.vox"/>
+				<vox pos="0.15 4.4 -0.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/mc_r3.vox"/>
+				<vox pos="-16.35 3.1 -6.2" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/mc_r4.vox"/>
+			</group>
+			<group name="outer lights" pos="9.7 3.5 10.3" prop0="tags=fxflicker=5">
+				<vox pos="0.09999 -0.3 -0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l1.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.42 0.26" rot="90.0 180.0 0.0" type="area" color="1.0 0.99 0.85" scale="7" size="0.1" reach="5"/>
+				</vox>
+				<vox pos="-13.00001 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+				</vox>
+				<vox pos="-9.10001 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+				</vox>
+				<vox pos="-5.10001 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+				</vox>
+				<vox pos="-17.00001 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+				</vox>
+				<vox pos="-21.00001 0.7 2.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+				<vox pos="-23.00001 0.7 0.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+				<vox pos="-23.00001 0.7 -4.0" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+				<vox pos="-23.00001 0.7 -6.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox"/>
+				<vox pos="-23.00001 0.7 -10.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+					<light name="ad light" tags="night" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+				</vox>
+			</group>
+			<group name="outer walls" pos="0.7 0.3 11.7">
+				<vox pos="3.29999 0.1 1.5" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_glass.vox"/>
+				<vox pos="9.40002 0.1 -1.89999" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_gc.vox"/>
+				<vox pos="-2.69999 0.1 -1.9" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_gp.vox"/>
+				<vox pos="-9.29998 0.1 -1.89999" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_ww.vox"/>
+			</group>
+			<group name="placeholders" pos="-11.2 0.3 6.9" rot="0.0 0.0 0.0">
+				<vox pos="-0.69996 0.1 1.20001" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="-0.69996 0.1 -4.39999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="-0.69996 0.1 -15.59999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="0.90004 0.1 -18.79999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="3.10004 0.1 -18.79999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="10.30004 0.1 -18.79999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="15.90004 0.1 -18.79999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="21.20004 0.1 -18.79999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="24.50004 0.1 -5.89999" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="24.50004 0.1 -11.49999" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="24.50004 0.1 -17.09999" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="24.50004 0.1 -0.29999" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_wb.vox"/>
+				<vox pos="-0.69996 0.1 -9.99999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_dt.vox"/>
+				<vox pos="-0.7 0.1 -10.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/dt_window.vox">
+					<joint pos="1.5 1.5 0.0" rot="0.0 90.0 0.0" type="prismatic" limits="-1 0"/>
+				</vox>
+			</group>
+			<group name="inner walls" pos="1.6 0.4 2.7">
+				<vox pos="-14.59996 0.0 -8.99999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_ws.vox"/>
+				<vox pos="-14.59996 0.0 -3.99999" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_ws.vox"/>
+				<voxbox pos="-2.09996 -0.0 -11.19999" rot="0.0 0.0 0.0" size="10 46 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-0.89996 0.0 -10.69999" rot="0.0 180.0 0.0" size="2 46 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="0.30004 0.0 -11.19999" rot="0.0 0.0 0.0" size="8 46 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-0.89996 2.8 -11.19999" rot="0.0 0.0 0.0" size="12 18 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-0.89996 2.8 -11.19999" rot="0.0 0.0 -90.0" size="1 12 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="1.50004 0.0 -9.59999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="1.50004 0.0 -10.89999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -1.69999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -4.19999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -6.69999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -7.39999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="1.50004 0.7 -10.89999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="1.50004 0.7 -9.59999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.7 -9.59999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.7 -10.99999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -10.99999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<vox pos="-1.99996 0.0 -10.09999" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-1.89996 2.8 -0.89999" rot="0.0 -90.0 -90.0" size="1 12 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-1.9 0.00005 -2.79995" rot="0.0 -90.0 0.0" size="17 39 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-2.39996 0.00002 -0.89997" rot="0.0 90.0 0.0" size="2 39 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-4.59996 0.00002 -14.99997" rot="0.0 0.0 0.0" size="1 27 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-6.09996 0.00002 -14.99997" rot="0.0 0.0 0.0" size="1 27 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-5.99996 2.70002 -14.99997" rot="0.0 0.0 -90.0" size="1 14 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-2.39996 0.00002 2.30003" rot="0.0 90.0 0.0" size="2 39 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-1.89996 0.00003 0.30001" rot="0.0 -90.0 0.0" size="18 39 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+				<voxbox pos="-1.89996 2.8 -0.89999" rot="0.0 -90.0 0.0" size="12 11 5" brush="MOD/main/abandoned places/MCLockelles/inner walls/in_wss.vox"/>
+			</group>
+			<vox pos="-8.8 7.6 -9.6" rot="0.0 130.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/antenna.vox"/>
+			<vox pos="0.2 7.6 -0.4" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/antenna_2.vox"/>
+			<group name="fridges" pos="-4.4 0.3 -11.3">
+				<body name="fridge" pos="-5.2 0.0 -0.1">
+					<vox pos="0.0 0.1 0.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fridge.vox"/>
+					<vox pos="-0.7 0.12 0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fg_dl.vox">
+						<joint pos="-0.5 0.2 -0.2" rot="-90.0 -90.0 0.0" type="hinge" limits="-90 0"/>
+						<joint pos="-0.5 2.0 -0.2" rot="-90.0 -90.0 0.0" type="hinge" limits="-90 0"/>
+					</vox>
+					<vox pos="0.6 0.12 0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fg_dr.vox">
+						<joint pos="0.6 0.2 -0.2" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+						<joint pos="0.6 2.0 -0.2" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+					</vox>
+				</body>
+				<body name="fridge" pos="-2.4 0.0 -0.1">
+					<vox pos="0.0 0.1 0.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fridge.vox"/>
+					<vox pos="-0.7 0.12 0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fg_dl.vox">
+						<joint pos="-0.5 0.2 -0.2" rot="-90.0 -90.0 0.0" type="hinge" limits="-90 0"/>
+						<joint pos="-0.5 2.0 -0.2" rot="-90.0 -90.0 0.0" type="hinge" limits="-90 0"/>
+					</vox>
+					<vox pos="0.6 0.12 0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/fg_dr.vox">
+						<joint pos="0.6 0.2 -0.2" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+						<joint pos="0.6 2.0 -0.2" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+					</vox>
+				</body>
+			</group>
+			<group name="tables" pos="11.5 0.3 8.4">
+				<vox pos="-1.2 0.1 -0.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="1.2 0.1 0.2" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.0 0.3 0.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="-4.6 0.1 -0.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="-2.2 0.1 0.2" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="-3.4 0.3 0.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="1.2 0.1 -6.4" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="1.2 0.1 -9.2" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.0 0.3 -9.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="0.0 0.3 -6.4" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="1.2 0.1 -12.0" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.0 0.3 -12.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="1.2 0.1 -14.8" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.0 0.3 -14.8" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="0.2 0.1 -17.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.6 0.1 -19.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.2 0.3 -18.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="1.2 0.1 -3.6" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="0.0 0.3 -3.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="-3.0 0.1 -19.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="-3.4 0.3 -18.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="-6.0 0.1 -19.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_couch.vox"/>
+				<vox pos="-6.4 0.3 -18.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_table.vox"/>
+				<vox pos="-7.3 0.1 -5.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-7.3 0.1 -8.5" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-7.3 0.1 -11.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-6.2 0.1 -5.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-3.5 0.1 -5.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-3.5 0.1 -8.5" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-3.5 0.1 -11.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-6.2 0.1 -8.5" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-6.2 0.1 -11.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/table_2.vox"/>
+				<vox pos="-5.9 0.4 -9.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-3.2 0.4 -10.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.1 0.4 -9.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.9 0.4 -12.4" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-6.7 0.4 -12.4" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-4.1 0.4 -12.4" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-5.9 0.4 -7.6" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-3.2 0.4 -7.5" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.1 0.4 -7.6" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.9 0.4 -9.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-6.7 0.4 -9.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-4.0 0.4 -9.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-5.9 0.4 -4.8" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-3.2 0.4 -4.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.1 0.4 -4.8" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-20.0 0.4 1.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-18.6 0.4 1.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-17.1 0.4 1.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-7.9 0.4 -6.8" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-6.7 0.4 -6.8" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-4.0 0.4 -6.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair.vox"/>
+				<vox pos="-1.2 0.0 -2.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -3.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -5.6" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -6.6" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -8.4" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -9.4" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -11.3" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -12.3" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -14.1" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-1.2 0.0 -15.1" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-2.3 0.0 -17.3" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-3.3 0.0 -17.3" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-5.4 0.0 -17.3" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+				<vox pos="-6.4 0.0 -17.3" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/mc_chair2.vox"/>
+			</group>
+			<group name="props" pos="-11.4 0.3 2.6">
+				<vox pos="0.1 1.3 -3.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/microwave.vox">
+					<vox pos="-0.1 0.1 0.3" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/microwave_door.vox">
+						<joint pos="-0.2 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+					</vox>
+				</vox>
+				<vox pos="0.1 1.3 -4.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/j_machine.vox"/>
+				<vox pos="0.8 1.3 -5.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/coffee_machine.vox"/>
+				<vox pos="0.2 0.1 6.3" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/vending_machine.vox"/>
+				<vox pos="0.2 0.1 5.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/vending_machine.vox"/>
+				<vox pos="4.8 -0.2 1.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/f_counter.vox"/>
+				<vox pos="4.8 2.45 -0.4" rot="0.0 0.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/menu.vox">
+					<rope pos="2.0 2.3 -0.4" slack="-3" strength="2">
+						<location pos="1.0 -0.3 0.0" rot="0.0 0.0 0.0"/>
+						<location pos="1.0 1.8 0.0" rot="0.0 0.0 0.0"/>
+					</rope>
+					<rope pos="-0.2 2.3 -0.4" slack="-3" strength="2">
+						<location pos="1.0 -0.3 0.0" rot="0.0 0.0 0.0"/>
+						<location pos="1.0 1.8 0.0" rot="0.0 0.0 0.0"/>
+					</rope>
+					<rope pos="-2.2 2.3 -0.4" slack="-3" strength="2">
+						<location pos="1.0 -0.3 0.0" rot="0.0 0.0 0.0"/>
+						<location pos="1.0 1.8 0.0" rot="0.0 0.0 0.0"/>
+					</rope>
+					<rope pos="-4.4 2.3 -0.4" slack="-3" strength="2">
+						<location pos="1.0 -0.3 0.0" rot="0.0 0.0 0.0"/>
+						<location pos="1.0 1.8 0.0" rot="0.0 0.0 0.0"/>
+					</rope>
+				</vox>
+				<vox pos="-0.9 5.15 -11.1" rot="0.0 -90.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/dt_signs.vox" object="dt_sign4"/>
+				<vox pos="-0.9 5.15 -13.2" rot="0.0 -90.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/dt_signs.vox" object="dt_sign"/>
+				<vox pos="-3.5 3.25 -5.5" rot="0.0 -180.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/dt_signs.vox" object="dt_sign3"/>
+				<vox pos="-1.8 3.25 -5.5" rot="0.0 -180.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/dt_signs.vox" object="dt_sign2"/>
+				<group name="Kitchen props" pos="5.1 -0.3 -7.4">
+					<vox pos="4.1 0.9 0.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.1 0.9 1.8" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.1 0.9 2.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.6 0.4 1.8" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="deepfry"/>
+					<vox pos="4.5 3.4 -1.4" rot="0.0 0.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="vent"/>
+					<vox pos="4.6 0.4 -4.3" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="range1"/>
+					<vox pos="4.6 0.4 -1.3" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="range1"/>
+					<group name="counters" pos="0.1 0.3 -2.3">
+						<vox pos="1.4 0.2 -0.5" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2"/>
+						<vox pos="-0.4 0.2 -0.5" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+							<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-2.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.7 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-0.7 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-2.1 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+						</vox>
+						<vox pos="-1.2 0.2 -0.5" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.6 0.2 -0.5" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.1 0.1 0.0" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="counter1"/>
+						<vox pos="1.4 0.2 2.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2"/>
+						<vox pos="-0.4 0.2 2.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+							<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-2.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.7 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-0.7 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-2.1 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+						</vox>
+						<vox pos="-1.2 0.2 2.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.6 0.2 2.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.1 0.1 2.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="counter1"/>
+						<vox pos="-5.1 0.1 7.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="counter_sink"/>
+						<vox pos="-4.6 0.2 9.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor4">
+							<joint pos="1.5 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.5 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="2.9 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="2.9 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="1.1 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+						</vox>
+						<vox pos="-4.6 0.2 7.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor4"/>
+						<vox pos="-4.6 0.2 8.2" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor3"/>
+						<vox pos="-4.6 0.2 6.4" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor3"/>
+						<vox pos="-4.3 0.2 4.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+							<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+						</vox>
+						<vox pos="-5.1 0.2 4.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="-5.2 0.2 1.9" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+							<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+						</vox>
+						<vox pos="-4.4 0.2 1.9" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="1.4 0.2 6.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2"/>
+						<vox pos="-0.4 0.2 6.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+							<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-2.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							<joint pos="-0.7 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="1.1 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-0.7 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+							<joint pos="-2.1 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+						</vox>
+						<vox pos="-1.2 0.2 6.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.6 0.2 6.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						<vox pos="0.1 0.1 6.6" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="counter1"/>
+					</group>
+					<vox pos="-4.9 0.4 -3.8" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="kitchenShelves"/>
+					<vox pos="-4.9 2.1 -3.8" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="kitchenShelves"/>
+					<vox pos="4.8 5.8 -4.2" rot="-90.0 90.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="duct"/>
+					<vox pos="4.8 6.5 -4.2" rot="-90.0 90.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="duct"/>
+					<vox pos="4.5 3.4 -4.2" rot="0.0 0.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="vent"/>
+					<vox pos="0.2 0.4 1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="kitchenShelves"/>
+					<vox pos="0.2 2.1 1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="kitchenShelves"/>
+					<vox pos="4.1 0.9 3.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.1 0.9 4.8" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.1 0.9 5.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="basket"/>
+					<vox pos="4.6 0.4 4.8" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="deepfry"/>
+					<vox pos="-3.4 0.4 2.5" rot="0.0 180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/dt_count.vox"/>
+					<vox pos="-5.9 0.4 -1.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/dt_count.vox"/>
+					<vox pos="-1.6 1.1 8.4" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="mouse"/>
+					<vox pos="-0.9 1.1 8.3" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="cash_register"/>
+					<vox pos="-0.9 1.5 9.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="monitor"/>
+					<vox pos="-4.8 1.6 -0.8" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="dt_register"/>
+					<group name="custom counters" pos="0.1 0.3 5.3">
+						<vox pos="0.9 0.05 0.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="counter2">
+							<vox pos="-2.1 0.1 0.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2"/>
+							<vox pos="-0.4 0.1 0.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor2">
+								<joint pos="-0.3 0.1 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+								<joint pos="-0.3 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+								<joint pos="-2.0 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+								<joint pos="-0.6 0.8 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+								<joint pos="1.2 0.8 -0.1" rot="-90.0 180.0 0.0" type="hinge" limits="0 90"/>
+								<joint pos="1.2 0.1 -0.1" rot="-90.0 180.0 0.0" type="hinge" limits="0 90"/>
+								<joint pos="-0.6 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="-90 0"/>
+								<joint pos="-2.0 0.0 -0.1" rot="-90.0 90.0 0.0" type="hinge" limits="0 90"/>
+							</vox>
+							<vox pos="0.4 0.1 0.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+							<vox pos="-1.3 0.1 0.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/kitchen.vox" object="cupboardDoor1"/>
+						</vox>
+						<vox pos="-0.8 0.05 0.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="counter1"/>
+					</group>
+					<vox pos="0.3 1.1 8.4" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="mouse"/>
+					<vox pos="1.0 1.1 8.3" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="cash_register"/>
+					<vox pos="1.0 1.5 9.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="monitor"/>
+					<vox pos="2.1 1.1 8.4" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="mouse"/>
+					<vox pos="2.8 1.1 8.3" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="cash_register"/>
+					<vox pos="2.8 1.5 9.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="monitor"/>
+					<vox pos="-3.6 1.1 8.4" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="mouse"/>
+					<vox pos="-2.9 1.1 8.3" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="cash_register"/>
+					<vox pos="-2.9 1.5 9.1" rot="0.0 -180.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/assets/custom_kitch.vox" object="monitor"/>
+					<vox pos="14.7 1.4 -7.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/advertisements.vox" object="ad1"/>
+					<vox pos="19.5 1.4 2.4" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/advertisements.vox" object="ad2"/>
+					<group name="doors" pos="8.0 1.4 24.8">
+						<vox pos="2.0 -1.0 -10.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/doors.vox" object="f_frame"/>
+					</group>
+					<vox pos="8.6 0.4 -5.1" rot="0.0 -180.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/mod_toilet.vox" object="sink"/>
+					<vox pos="6.9 0.4 -6.7" rot="0.0 -90.0 0.0" prop="false" file="MOD/main/abandoned places/MCLockelles/assets/mod_toilet.vox" object="toilet"/>
+				</group>
+			</group>
+			<group name="enemy spawn" pos="4.5 1.6 6.1">
+				<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-2.4 0.1 -7.1" rot="0.0 -180.0 0.0"/>
+				<location tags="RandomRagdoll Type=civ chance=75 cover" pos="4.3 0.1 -12.8" rot="0.0 -180.0 0.0"/>
+				<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-0.5 0.1 9.3" rot="0.0 -180.0 0.0"/>
+				<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-5.6 0.1 1.1" rot="0.0 180.0 0.0"/>
+				<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-8.4 0.1 1.1" rot="0.0 180.0 0.0"/>
+			</group>
+			<group name="Loot" pos="-9.0 0.4 23.7" rot="0.0 -180.0 0.0">
+				<instance pos="2.2 1.3 21.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="2.2 1.3 22.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-1.6 1.3 23.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-3.8 1.3 23.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-3.8 1.6 27.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-2.1 1.6 27.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-3.1 0.7 27.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-2.8 2.4 27.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-2.8 1.3 30.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-3.9 1.3 30.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-12.9 1.0 23.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-13.5 1.0 21.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-16.6 1.0 21.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-16.6 1.0 24.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-16.6 1.0 26.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-14.1 1.0 26.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-13.1 1.0 26.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-14.7 1.0 33.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+				<instance pos="-13.6 1.0 33.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-16.3 1.0 33.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-17.2 1.0 33.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+				<instance pos="-20.0 1.0 33.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/CivWeaponLootSpawn.xml"/>
+				<instance pos="-20.3 1.0 21.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/CivWeaponLootSpawn.xml"/>
+				<instance pos="-10.2 0.1 33.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/EasterEggLootSpawn.xml"/>
+				<instance pos="-0.4 0.1 17.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="1.7 0.1 27.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="2.1 0.7 32.6" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="2.1 0.7 31.3" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="2.1 0.7 33.4" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="2.1 1.6 33.4" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="2.1 1.6 31.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="-4.6 4.7 11.9" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+			</group>
+		</group>
+		<instance pos="1.5 0.5 -13.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/trashcan-big.xml"/>
+		<instance pos="3.3 0.5 -13.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/trashcan-big.xml"/>
+		<instance pos="5.1 0.5 -13.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/trashcan-big.xml"/>
+	</group>
+</prefab>
+

@@ -1,0 +1,8 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/Perk12.xml" pos="-1.6 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 -0.2 0.0" tags="PerkObject=762x39 interact=7.62x39" dynamic="true">
+			<vox pos="0.1 0.0 0.0" rot="0.0 90.0 0.0" file="MOD/vox/Perk.vox"/>
+		</body>
+	</group>
+</prefab>
+

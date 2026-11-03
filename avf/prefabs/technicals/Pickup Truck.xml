@@ -1,0 +1,57 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/avf/prefabs/technicals/Pickup Truck.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle tags="Door DoAlarm" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="suv2" spring="0.6" damping="0.6" topspeed="105" acceleration="0.15" strength="4" antispin="0" antiroll="0.2" difflock="0.5" steerassist="0.0" friction="1">
+			<body pos="0.0 0.6 -0.35" dynamic="true">
+				<vox pos="0.05 -0.2 0.25" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" density="2" strength="3" file="MOD/avf/prefabs/technicals/technical.vox" object="bodyturret">
+					<group name="immersive_elements">
+						<vox name="engine" tags="engine" pos="-0.1 0.4 1.7" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="engine"/>
+						<vox name="fuel_tank" tags="fuel_tank" pos="0.2 0.3 -0.50001" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="fuel_tank"/>
+						<group name="ammo_rack" pos="-0.2 0.4 -0.4" prop0="tags=ammo_rack=0"/>
+					</group>
+					<group name="hinged_eleements">
+						<vox pos="-1.0 0.2 0.4" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/avf/prefabs/technicals/technical.vox" object="door_r">
+							<joint tags="door" pos="0.1 0.2 0.6" rot="-90.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="true" limits="0 70"/>
+							<joint pos="0.1 0.7 0.59999" rotspring="0" collide="true"/>
+						</vox>
+						<vox pos="0.0 0.4 -2.7" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/avf/prefabs/technicals/technical.vox" object="boot">
+							<joint tags="door" pos="0.6 0.0 -0.1" rot="0.0 270.0 90.0" type="hinge" rotstrength=".05" rotspring="0" collide="false" limits="0 100"/>
+							<joint tags="door" pos="-0.5 0.0 -0.1" rot="0.0 270.0 90.0" type="hinge" rotstrength=".05" rotspring="0" collide="false" limits="0 100"/>
+						</vox>
+						<vox pos="1.0 0.2 0.4" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/avf/prefabs/technicals/technical.vox" object="door_l">
+							<joint tags="door" pos="0.0 0.2 0.6" rot="90.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="true" limits="0 70"/>
+							<joint pos="0.0 0.7 0.59999" rotspring="0" collide="true"/>
+						</vox>
+						<vox pos="0.0 0.9 1.7" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/avf/prefabs/technicals/technical.vox" object="bonnet">
+							<joint pos="0.7 0.2 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+							<joint pos="-0.6 0.2 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+						</vox>
+					</group>
+					<group name="base_vehicle_parts">
+						<location name="exit" tags="exit" pos="1.45 1.25 0.3" rot="0.0 -180.0 0.0"/>
+						<location tags="vital" pos="0.05 0.6 1.4" rot="0.0 180.0 0.0"/>
+						<location tags="exhaust" pos="0.5 0.1 -2.65" rot="0.0 180.0 0.0"/>
+						<light pos="-0.65 0.75 2.35" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="50" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.35"/>
+						<light pos="0.75 0.75 2.35" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="50" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.35"/>
+						<light pos="-0.65 0.75 -2.7" rot="0.0 180.0 0.0" type="area" color="1.0 0.1 0.1" size="0.1 0.1" reach="1.5" unshadowed="0.3"/>
+						<light pos="0.75 0.75 -2.7" rot="0.0 180.0 0.0" type="area" color="1.0 0.1 0.1" size="0.1 0.1" reach="2" unshadowed="0.3"/>
+						<location tags="camera" pos="0.05 1.5 -0.2" rot="0.0 0.0 0.0"/>
+						<location tags="player" pos="0.5 1.3 0.15" rot="0.0 0.0 0.0"/>
+					</group>
+				</vox>
+				<wheel name="bl" pos="-0.7 -0.15 1.9" drive="1" travel="-0.1 0.2">
+					<vox pos="-0.1 -0.45 -0.05" rot="0.0 -180.0 0.0" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel name="br" pos="0.7 -0.15 1.9" drive="1" travel="-0.1 0.2">
+					<vox pos="0.1 -0.45 -0.05" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_br"/>
+				</wheel>
+				<wheel name="fl" pos="-0.7 -0.15 -1.3" drive="1" steer="0.8" travel="-0.1 0.2">
+					<vox pos="-0.1 -0.45 -0.05" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="fr" pos="0.7 -0.15 -1.3" drive="1" steer="0.8" travel="-0.1 0.2">
+					<vox pos="0.1 -0.45 -0.05" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_fr"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

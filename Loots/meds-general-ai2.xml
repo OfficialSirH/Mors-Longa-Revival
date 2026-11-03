@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=meds-general-ai2_AI-2_100_100 interact=AI2" pos="0 .05" dynamic="true">
+			<voxbox pos="-.15 -.05 -.15" size="3 1 3" color=".73 .56 .32"/>
+		</body>
+	</group>
+</prefab>
+

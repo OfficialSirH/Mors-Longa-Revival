@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<script pos="0.1 0.3 -0.8" file="MOD/script/MGLgrenade.lua">
+			<vox tags="grenade" density="300" strength="0.1" prop="true" file="MOD/vox/MGLgrenade.vox"/>
+		</script>
+	</group>
+</prefab>
+

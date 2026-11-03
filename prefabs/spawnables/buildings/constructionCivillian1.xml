@@ -1,0 +1,264 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/buildings/constructionCivillian1.xml" pos="80.0 0.0 80.0" rot="0.0 0.0 0.0">
+		<group pos="1.4 0.0 -1.9" rot="0 180">
+			<group name="wall" pos="1.0 0.4 12.8" rot="0.0 0.0 0.0" prop0="texture=1 0.9" prop1="tags=nocull">
+				<compound pos="-1.5 -0.2 -7.1">
+					<voxbox name="out" pos="-2.2 0.0 -0.3" texture="21 .9" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+					<voxbox name="out" pos="6.9 0.0 0.2" rot="0.0 180.0 0.0" texture="21 .9" size="44 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window" offset="1"/>
+					<voxbox name="out" pos="-1.9 0.0 0.2" rot="0.0 -180.0 0.0" texture="21 .9" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window"/>
+				</compound>
+				<voxbox name="out" pos="0.3 -0.2 -13.6" rot="0.0 90.0 0.0" size="60 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+				<compound pos="5.4 -0.2 -13.4">
+					<voxbox name="filled" pos="0.3 0.0 -2.0" rot="0.0 -90.0 0.0" blendtexture="3 .5" size="40 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+					<voxbox name="filled" pos="0.3 0.0 -6.5" rot="0.0 -90.0 0.0" blendtexture="8 .5" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+					<voxbox name="out" pos="-0.2 0.0 6.5" rot="0.0 90.0 0.0" size="48 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door_filled"/>
+				</compound>
+				<compound pos="2.9 -0.2 -15.3">
+					<voxbox name="in" pos="-2.6 0.0 1.5" blendtexture="6 .5" size="37 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+					<voxbox name="in" pos="0.8 0.0 1.5" size="17 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled" offset="3"/>
+				</compound>
+				<voxbox name="in" pos="-8.0 -0.2 -11.9" size="46 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in" offset="1"/>
+				<compound pos="-3.5 -0.2 -13.6">
+					<voxbox name="in" pos="0.2 0.0 -2.7" rot="0.0 -90.0 0.0" size="45 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_in"/>
+					<voxbox name="out" pos="-0.3 0.0 6.4" rot="0.0 90.0 0.0" size="46 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+					<voxbox name="out" pos="-0.3 0.0 -1.5" rot="0.0 90.0 0.0" size="47 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_door"/>
+				</compound>
+				<compound pos="-1.3 -0.2 -19.6">
+					<voxbox name="out" pos="-6.7 0.0 -0.3" size="45 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_window" offset="1"/>
+					<voxbox name="out" pos="-2.2 0.0 -0.3" size="43 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_out"/>
+					<voxbox name="out" pos="2.0 0.0 -0.3" blendtexture="7 .5" size="46 30 5" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+				</compound>
+				<compound pos="-8.1 -0.2 -13.4">
+					<voxbox name="filled" pos="-0.2 0.0 2.0" rot="0.0 90.0 0.0" size="46 30 4" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+					<voxbox name="filled" pos="-0.2 0.0 -2.6" rot="0.0 90.0 0.0" size="39 30 4" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled" offset="9"/>
+					<voxbox name="filled" pos="-0.2 0.0 6.5" rot="0.0 90.0 0.0" size="46 30 4" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="wall_filled"/>
+				</compound>
+			</group>
+			<group name="floor" pos="1.0 0.0 -0.7" rot="0.0 0.0 0.0" prop0="texture=1 0.9" prop1="tags=nocull">
+				<voxbox name="floor" pos="-8.2 0.0 -6.4" texture="24 .7" blendtexture="8 .6" size="138 2 130" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="floor"/>
+				<voxbox name="floor" pos="-8.3 3.1 1.7" rot="0.0 0.0 0.0" texture="21 .7" blendtexture="6 .9" size="49 2 49" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling"/>
+				<voxbox name="floor" pos="1.3 0.2 3.7" rot="0.0 34.0 0.0" size="33 1 30" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris"/>
+			</group>
+		</group>
+		<group name="Enemies">
+			<location tags="RandomRagdoll Type=civ chance=75 cover" pos="1.0 0.3 -0.1"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="5.9 2.5 2.8"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-2.8 0.6 -4.5"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover" pos="2.4 0.6 -3.85"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="-2.2 0.6 2.8"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="-2.2 0.6 0.7"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover" pos="6.2 0.6 1.5"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="6.6 0.6 -2.1"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="5.5 0.6 -5.0"/>
+			<location tags="RandomRagdoll Type=civ chance=75 outside" pos="5.5 0.6 -19.6"/>
+			<location tags="RandomRagdoll Type=civ chance=75 outside" pos="-5.9 0.6 -13.6"/>
+			<location tags="RandomRagdoll Type=civ chance=75 outside" pos="-5.25 0.6 -16.25"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover ranged stationary" pos="0.0 0.6 -14.7" rot="0.0 100.0 0.0"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover stationary" pos="3.5 0.6 -15.3" rot="0.0 100.0 0.0"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover ranged stationary" pos="10.1 2.6 -6.6" rot="0.0 100.0 0.0"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover ranged stationary" pos="6.1 3.3 -6.6" rot="0.0 100.0 0.0"/>
+			<location tags="RandomRagdoll Type=civ chance=75 cover ranged " pos="10.8 2.6 -3.7" rot="0.0 100.0 0.0"/>
+		</group>
+		<group name="others">
+			<trigger tags="vegRemove" pos="1.7 0.0 -1.3" type="box" size="13.8 2 13.0"/>
+		</group>
+		<group name="props" prop0="tags=detail">
+			<vox pos="0.7 0.2 4.1" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="7.8 0.2 -4.6" rot="0.0 -90.0 0.0" texture="13 .5" density="22" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="5.5 0.2 -6.7" rot="0.0 178.0 0.0" texture="8 .2" density="22" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="1.5 0.0 -12.7" rot="0.0 -46.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="12.2 0.0 -7.4" rot="0.0 114.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="11.50767 0.0 -6.37497" rot="0.0 154.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="2.2 0.0 -14.2" rot="0.0 29.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox tags="pdfwashere" pos="-4.4 0.2 -2.3" rot="0.0 94.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="4.6 0.2 -0.2" rot="0.0 91.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="6.3 0.3 -0.2" rot="0.0 -8.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
+			<vox pos="-1.75 0.2 -1.75" rot="0.0 177.0 0.0" texture="8 .8" prop="false" file="MOD/vox/airbasevox/airbase_shelf.vox" object="metal"/>
+			<vox tags="pdfwashere" pos="9.7 -0.2 -4.6" rot="0.0 91.0 0.0" texture="8 .8" prop="false" file="MOD/vox/airbasevox/airbase_shipping_darkgreen.vox">
+				<vox tags="pdfwashere" pos="-1.6 0.2 1.9" rot="0.0 180.0 0.0" file="MOD/vox/stairs.vox" object="stairs2"/>
+				<voxbox tags="pdfwashere" pos="0.7 0.2 1.2" rot="0.0 0.0 0.0" size="24 35 15" brush="MOD/vox/stairs.vox" object="stairs2"/>
+			</vox>
+			<vox pos="4.6 0.2 1.2" rot="0.0 90.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="4.6 0.0 -8.7" rot="0.0 87.0 0.0" texture="8 .8" blendtexture="7" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="6.3 0.0 -8.7" rot="0.0 89.0 0.0" texture="8 .8" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="8.0 0.0 -8.7" rot="0.0 85.0 0.0" texture="12 .8" blendtexture="6" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox tags="pdfwashere" pos="7.5 1.6 -8.7" rot="0.0 90.0 0.0" texture="9 .8" blendtexture="8" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox pos="4.6 0.3 1.2" rot="0.0 84.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+			<vox pos="5.9 0.4 0.3" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+			<vox pos="6.2 0.4 -0.8" rot="0.0 -27.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+			<vox pos="6.0 0.4 -0.3" rot="0.0 -25.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+			<vox pos="6.7 0.4 -0.2" rot="0.0 -102.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+			<vox pos="6.3 0.8 -0.5" rot="0.0 -32.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
+			<vox pos="6.0 0.8 0.1" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+			<vox pos="4.6 1.0 -0.3" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+			<vox tags="pdfwashere" pos="4.6 0.2 -1.6" rot="0.0 87.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="-4.4 0.2 -3.7" rot="0.0 87.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="-0.55 0.2 -3.25" rot="0.0 -128.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="0.65 0.2 -4.0" rot="0.0 172.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="fxbreak=l2black detail" pos="3.1 0.2 -0.2" rot="0.0 -140.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black" pos="4.65 0.2 -4.05" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_toolcart.vox"/>
+			<vox tags="fxbreak=l2black detail" pos="7.8 0.2 -0.2" rot="0.0 -170.0 0.0" texture="18 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black detail" pos="7.8 0.2 0.9" rot="0.0 157.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black detail" pos="7.8 0.2 2.1" rot="0.0 111.0 0.0" texture="11 .5" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="pdfwashere" pos="0.2 0.2 -6.7" rot="0.0 -86.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
+			<vox pos="-4.4 0.7 0.8" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
+			<vox pos="-4.4 0.7 4.1" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
+			<vox tags="pdfwashere" pos="-2.2 0.7 4.1" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
+			<vox tags="pdfwashere" pos="2.8 0.6 3.8" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
+			<vox pos="-1.8 0.6 -6.5" rot="0.0 -85.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox tags="pdfwashere" pos="9.2 2.8 -4.8" rot="0.0 -5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox pos="9.2 3.6 -3.3" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox pos="9.2 2.8 -2.4" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox tags="pdfwashere" pos="2.8 1.4 3.8" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
+			<vox pos="-1.2 0.7 4.1" rot="0.0 -87.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
+			<vox pos="-4.4 1.8 0.1" rot="0.0 -74.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
+			<vox pos="-4.0 0.7 -0.4" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
+			<vox tags="pdfwashere" pos="-1.4 0.5 -0.6" rot="0.0 176.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
+			<vox tags="pdfwashere" pos="-1.4 1.2 -0.6" rot="0.0 -177.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
+			<vox tags="pdfwashere" pos="-1.6 0.0 -8.1" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox tags="pdfwashere" pos="-4.7 0.0 -8.1" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox tags="pdfwashere randomdelete chance=35" pos="-5.5 0.0 -2.7" rot="0.0 85.0 0.0" texture="11" blendtexture="8 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox tags="pdfwashere randomdelete chance=45" pos="-5.4 0.0 -5.2" rot="0.0 90.0 0.0" texture="11 .3" blendtexture="7 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox pos="0.8 1.5 -6.7" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="0.0 1.5 -7.2" rot="0.0 -170.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="0.6 1.7 -6.7" rot="0.0 -93.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox tags="explosive=1 detail" pos="3.1 0.2 0.8" rot="0.0 170.0 0.0" texture="22 .6" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
+			<vox tags="explosive=1 detail" pos="3.3 1.5 0.35" rot="0.0 170.0 0.0" texture="16 .6" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
+			<instance tags="pdfwashere" pos="-2.1 0.0 -15.4" rot="0.0 -145.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
+			<instance tags="pdfwashere" pos="-2.4 0.0 -15.4" rot="0.0 105.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
+			<instance tags="pdfwashere" pos="-0.5 0.0 -16.5" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
+			<vox tags="fxbreak=l2black" pos="3.4 0.0 -16.6" rot="0.0 57.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black randomdelete chance=50 explosive=5" pos="-6.382 -0.1 2.392" rot="0.0 1.0 0.0" texture="7 .8" blendtexture="6 .7" prop="false" file="MOD/vox/airbasevox/airbase_fuel_tank.vox"/>
+			<vox tags="fxbreak=l2black" pos="4.28329 0.0 -16.30899" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="pdfwashere" pos="1.4 2.9 -13.8" rot="0.0 180.0 0.0" texture="17 .7" blendtexture="9 .1" density="9" prop="true" file="MOD/vox/tents.vox" object="tent7_dynamic">
+				<vox tags="pdfwashere" pos="4.8 -2.9 3.1" rot="0.0 -90.0 0.0" texture="17 .7" blendtexture="9 .1" density="12" prop="true" file="MOD/vox/tents.vox" object="tent7_dynamic_2">
+					<joint pos="0.0 0.0 0.0" rotstrength="100"/>
+					<joint pos="0.0 3.4 0.0" rotstrength="10"/>
+				</vox>
+				<vox tags="pdfwashere" pos="4.8 -2.9 -3.2" rot="0.0 -90.0 0.0" texture="17 .7" blendtexture="9 .1" density="12" prop="true" file="MOD/vox/tents.vox" object="tent7_dynamic_2">
+					<joint pos="0.0 0.0 0.0" rotstrength="100"/>
+					<joint pos="0.0 3.4 0.0" rotstrength="10"/>
+				</vox>
+				<vox tags="pdfwashere" pos="-4.8 -2.9 3.1" rot="0.0 90.0 0.0" texture="17 .7" blendtexture="9 .1" density="12" prop="true" file="MOD/vox/tents.vox" object="tent7_dynamic_2">
+					<joint pos="0.0 3.4 0.0" rotstrength="10"/>
+					<joint pos="0.0 0.0 0.0" rotstrength="100"/>
+				</vox>
+				<vox tags="pdfwashere" pos="-4.8 -2.9 -3.2" rot="0.0 90.0 0.0" texture="17 .7" blendtexture="9 .1" density="12" prop="true" file="MOD/vox/tents.vox" object="tent7_dynamic_2">
+					<joint pos="0.0 3.4 0.0" rotstrength="10"/>
+					<joint pos="0.0 0.0 0.0" rotstrength="100"/>
+				</vox>
+			</vox>
+			<vox tags="pdfwashere" pos="9.2 1.6 -8.7" rot="0.0 90.0 0.0" desc="6" texture="8 1" blendtexture="12" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="9.7 0.0 -8.7" rot="0.0 85.0 0.0" desc="8" texture="7 .8" blendtexture="3" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="10.9 1.6 -8.7" rot="0.0 90.0 0.0" desc="5" texture="5 .5" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="11.4 0.0 -8.7" rot="0.0 85.0 0.0" desc="8" texture="13 .8" blendtexture="3 2" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox tags="pdfwashere" pos="12.6 1.6 -8.7" rot="0.0 90.0 0.0" texture="7 .6" blendtexture="7" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="13.1 0.0 -8.7" rot="0.0 85.0 0.0" texture="11 .9" blendtexture="5" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="11.5 2.5 -6.7" rot="0.0 -86.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
+			<vox tags="pdfwashere" pos="0.5 0.2 -2.4" rot="0.0 -86.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
+			<vox pos="12.1 3.8 -6.7" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="11.9 4.0 -6.7" rot="0.0 -93.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="11.3 3.8 -7.2" rot="0.0 -170.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="6.0 3.6 -7.4" rot="0.0 -95.0 0.0" texture="2 .7" blendtexture="7 .5" strength="8" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox pos="4.3 3.6 -6.5" rot="0.0 -10.0 0.0" texture="5 .5" blendtexture="5 .5" strength="8" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox pos="4.6 3.6 -4.0" rot="0.0 15.0 0.0" texture="12 .3" blendtexture="6 .7" strength="8" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox pos="4.4 4.3 -4.9" rot="0.0 10.0 0.0" texture="14 .9" blendtexture="6 .7" strength="8" prop="false" file="MOD/vox/crate_10.vox"/>
+			<vox tags="pdfwashere" pos="11.3 0.0 -4.9" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="11.3 0.8 -3.6" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+			<vox tags="pdfwashere" pos="11.3 0.0 -3.5" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="-8.07654 0.26 -16.87354" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.87654 0.01 -17.07354" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-8.27654 0.01 -16.22354" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.42539 0.56 -19.3822" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-5.88345 -0.04 -19.8088" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.42728 -0.04 -19.28526" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.14326 0.26 -19.6588" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.60779 0.26 -18.91456" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.86491 0.56 -18.60814" rot="0.0 150.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.25589 0.56 -17.8967" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.04542 0.26 -18.23745" rot="0.0 150.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.9292 -0.04 -18.53155" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.36682 -0.04 -17.85443" rot="0.0 150.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.49803 0.26 -17.56299" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.8344 0.56 -17.20726" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-5.79685 0.56 -19.8588" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-5.45045 0.26 -20.0588" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-5.15403 -0.04 -20.34541" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-4.90403 -0.04 -20.74541" rot="0.0 125.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-4.87654 0.26 -20.67354" rot="0.0 135.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-4.47654 0.26 -20.92354" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-4.22654 0.01 -20.92354" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-1.49346 0.56 -21.27122" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-0.81831 -0.04 -21.13029" rot="0.0 70.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-1.56893 -0.04 -21.21036" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-1.10022 0.26 -21.23289" rot="0.0 70.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-1.96893 0.26 -21.11036" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-2.36894 0.56 -21.11036" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-3.16525 0.56 -20.95256" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-2.76893 0.26 -21.01036" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-2.46893 -0.04 -21.11038" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-3.26894 -0.04 -21.01037" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-3.57653 0.26 -20.92355" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-4.06525 0.56 -20.95256" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-0.72434 0.56 -21.09608" rot="0.0 70.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-0.34847 0.26 -20.95929" rot="0.0 70.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="0.06162 -0.04 -20.91644" rot="0.0 70.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-6.42539 0.86 -19.3822" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-7.25589 0.86 -17.8967" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-3.16525 0.86 -20.95256" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="-1.49346 0.86 -21.27122" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="0.93107 -0.04 -20.61036" rot="0.0 65.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="0.52628 0.26 -20.68877" rot="0.0 65.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="0.16375 0.56 -20.85783" rot="0.0 75.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="1.57752 -0.04 -20.22056" rot="0.0 45.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="1.02519 0.56 -20.63362" rot="0.0 65.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="1.36539 0.26 -20.43269" rot="0.0 45.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="1.02519 0.86 -20.63362" rot="0.0 65.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+		</group>
+		<group name="Loot">
+			<instance pos="1.85001 0.3 3.9" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+			<instance pos="1.25 0.3 3.4" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml"/>
+			<instance pos="2.75001 1.9 3.4" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+			<instance pos="3.25 1.9 4.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="10.15 2.5 -4.9" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="9.25 3.3 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="-2.15 1.4 4.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="-1.35 1.7 1.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="4.15 1.4 -16.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="3.15 1.4 -16.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="2.25 1.4 -16.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="0.25 0.1 -15.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.15 0.3 -3.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.15 1.7 -3.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.15 1.7 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.15 0.9 -5.2" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml"/>
+			<instance pos="11.15 0.2 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.25 3.9 -6.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="11.25 3.9 -6.6" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml"/>
+			<instance pos="6.45 0.4 3.1" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="5.85 0.4 1.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="4.45 0.4 -1.7" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml"/>
+			<instance pos="4.45 1.9 -0.3" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="4.45 1.9 -1.8" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+			<instance pos="-4.35 1.9 -1.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			<instance pos="-4.35 1.1 -1.8" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+			<instance pos="-4.45 1.1 -0.1" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml"/>
+			<instance pos="0.25 1.5 -6.6" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+			<instance pos="-0.25 1.5 -6.5" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml"/>
+			<instance pos="0.05 0.3 -5.7" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
+			<instance pos="9.6 1.5 -3.7" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+			<instance pos="9.6 1.5 -4.3" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+			<instance pos="9.6 1.5 -4.9" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+			<instance pos="9.6 1.5 -5.5" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
+		</group>
+		<group name="Lights">
+			<vox tags="explosive=.3" pos="3.2 1.7 3.9" rot="0.0 -90.0 0.0" texture="9 1" blendtexture="3 .6" prop="true" file="MOD/Vox/lantern.vox">
+				<light tags="night" pos="-0.05 0.45 0.25" size="0.2"/>
+			</vox>
+			<vox tags="explosive=.3" pos="0.3 1.5 -6.4" rot="0.0 -90.0 0.0" texture="9 .7" prop="true" file="MOD/Vox/lantern.vox">
+				<light tags="night" pos="-0.05 0.45 0.25" size="0.2"/>
+			</vox>
+		</group>
+	</group>
+</prefab>
+

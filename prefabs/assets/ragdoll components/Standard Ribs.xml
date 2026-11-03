@@ -1,0 +1,9 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ribs.xml" pos="0.0 0.15 0.05" rot="0.0 180.0 0.0">
+		<voxbox name="bone" tags="bone" pos="-0.2 -0.1 0.0" rot="0.0 0.0 0.0" texture="7" strength="3" size="4 1 1" material="hardmetal" color=".43"/>
+		<voxbox name="bone" tags="bone" pos="-0.2 0.2 0.0" rot="0.0 0.0 0.0" texture="7" strength="3" size="4 1 1" material="hardmetal" color=".43"/>
+		<voxbox name="bone" tags="bone" pos="-0.3 0.4 0.0" rot="0.0 0.0 0.0" texture="7" strength="3" size="6 1 1" material="hardmetal" color=".43"/>
+		<voxbox name="bone" tags="bone" pos="-0.05 0.0 0.0" rot="0.0 0.0 0.0" texture="7" strength="3" size="1 6 1" material="hardmetal" color=".43"/>
+	</group>
+</prefab>
+

@@ -1,0 +1,27 @@
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv1.xml                   : [ML] - NPCs - Insurgents/Insurgent 1
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv2.xml                   : [ML] - NPCs - Insurgents/Insurgent 2
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv3.xml                   : [ML] - NPCs - Insurgents/Insurgent 3
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv4.xml                   : [ML] - NPCs - Insurgents/Insurgent 4
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv5.xml                   : [ML] - NPCs - Insurgents/Insurgent 5
+MOD/prefabs/spawnables/enemies/civilian/Ragdollciv6.xml                   : [ML] - NPCs - Insurgents/Insurgent 6
+
+
+MOD/prefabs/spawnables/enemies/cult/Ragdollcult1.xml                      : [ML] - NPCs - Cultists/Cultist 1
+MOD/prefabs/spawnables/enemies/cult/Ragdollcult2.xml                      : [ML] - NPCs - Cultists/Cultist 2
+MOD/prefabs/spawnables/enemies/cult/Ragdollcult3.xml                      : [ML] - NPCs - Cultists/Cultist 3
+MOD/prefabs/spawnables/enemies/cult/Ragdollcult4.xml                      : [ML] - NPCs - Cultists/Cultist 4
+
+
+MOD/prefabs/spawnables/enemies/millitary/Ragdollmil1.xml                  : [ML] - NPCs - AAF/Alashyan Soldier 1
+MOD/prefabs/spawnables/enemies/millitary/Ragdollmil2.xml                  : [ML] - NPCs - AAF/Alashyan Soldier 2
+MOD/prefabs/spawnables/enemies/millitary/Ragdollmil3.xml                  : [ML] - NPCs - AAF/Alashyan Soldier 3
+MOD/prefabs/spawnables/enemies/millitary/Ragdollmilofficer1.xml           : [ML] - NPCs - AAF/Alashyan Officer 1
+MOD/prefabs/spawnables/enemies/millitary/Ragdollmilofficer2.xml           : [ML] - NPCs - AAF/Alashyan Officer 2
+
+
+MOD/prefabs/spawnables/enemies/um/Ragdollum1.xml                          : [ML] - NPCs - UM/United Mates Soldier 1
+MOD/prefabs/spawnables/enemies/um/Ragdollum3.xml                          : [ML] - NPCs - UM/United Mates Soldier 2
+MOD/prefabs/spawnables/enemies/um/Ragdollpur1.xml                         : [ML] - NPCs - UM/United Mates Purifryer 1
+MOD/prefabs/spawnables/enemies/um/Ragdollpur2.xml                         : [ML] - NPCs - UM/United Mates Purifryer 2
+MOD/prefabs/spawnables/enemies/um/Ragdollumofficer1.xml                   : [ML] - NPCs - UM/United Mates Officer 1
+MOD/prefabs/spawnables/enemies/um/Ragdollumofficer2.xml                   : [ML] - NPCs - UM/United Mates Officer 2

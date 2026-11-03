@@ -1,0 +1,63 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/gun-ak50.xml" pos="0" rot="0">
+		<body name="Jalaad" tags="Loot=gun-ak50_Jalaad_mag0-m107-127x99_N107-Mag_10_10_.50BMG interact=Jalaad unbreakable" pos="0 .3 -.1" dynamic="true">
+			<group name="Metal1" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<voxbox pos="-.05 -.05 -.35" rot="0" size="1 1 13">
+					<voxbox pos=".004 -.03 .03" rot="-45.0" size="1 1 1"/>
+					<group pos="0 .005 -.28">
+						<voxbox pos=".02 -.015" rot="0" size="1 1 8"/>
+						<voxbox pos=".02 .01" rot="0" size="1 1 8"/>
+						<voxbox pos="-.02 .01" rot="0" size="1 1 8"/>
+						<voxbox pos="-.02 -.015" rot="0" size="1 1 8"/>
+					</group>
+					<voxbox pos="0 .05 .53" rot="0" size="1 1 5"/>
+					<voxbox pos="0 .05 -.27" rot="0" size="1 1 1" color=".12 .12 .12"/>
+					<voxbox pos="0 .03 .13" rot="0" size="1 1 3" color=".4 .4 .4"/>
+					<voxbox pos="0 .05 .43" rot="0" size="1 1 1" color=".12 .12 .12"/>
+					<voxbox name="Barrel" tags="barrel range=70 magsize=10 damage=50 firerate=.6 gun=ak roundsize=3" pos="0 0 1.3" rot="0" size="1 1 1" color=".1 .1 .1"/>
+				</voxbox>
+			</group>
+			<group name="Metal2" prop0="color=.13 .13 .13" prop1="material=metal">
+				<group pos="0 -.06 -.18">
+					<voxbox pos="-.055 -.1" rot="0" size="1 1 1">
+						<voxbox pos="0 0 .07" size="1 1 2"/>
+						<voxbox pos="0 -.08 .07" size="1 1 2"/>
+					</voxbox>
+					<voxbox pos="-.045 -.1" rot="0" size="1 1 1">
+						<voxbox pos="0 0 .07" size="1 1 2"/>
+						<voxbox pos="0 -.08 .07" size="1 1 2"/>
+					</voxbox>
+					<group pos="0 -.1">
+						<voxbox pos="-.055 -.1" rot="0" size="1 1 1">
+							<voxbox pos="0 0 .07" rot="-5" size="1 1 2"/>
+						</voxbox>
+						<voxbox pos="-.045 -.1" rot="0" size="1 1 1">
+							<voxbox pos="0 0 .07" rot="-5" size="1 1 2"/>
+						</voxbox>
+					</group>
+				</group>
+				<voxbox pos="-.05 -.08 -.2" rot="-20.0" size="1 1 1" color=".35 .35 .35"/>
+			</group>
+			<group name="Wood" prop0="color=.4 .19 .11" prop1="material=wood">
+				<group name="Stock" pos="0 -.03 -.32" rot="0">
+					<voxbox pos="-.045 -.03 -.5" rot="0" size="1 1 2">
+						<voxbox pos="0 .1 -.06" rot="90.0" size="1 1 3">
+							<voxbox pos="0 .1 .3" rot="-93" size="1 1 2"/>
+						</voxbox>
+						<voxbox pos="0 0 .1" rot="87.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-.055 -.03 -.5" rot="0" size="1 1 2">
+						<voxbox pos="0 .1 -.06" rot="90.0" size="1 1 3">
+							<voxbox pos="0 .1 .3" rot="-93" size="1 1 2"/>
+						</voxbox>
+						<voxbox pos="0 0 .1" rot="87.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-.05 -.19 -.06" rot="12.0" size="1 2 1">
+						<light tags="handle" pos=".05 .05 .05" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+					</voxbox>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

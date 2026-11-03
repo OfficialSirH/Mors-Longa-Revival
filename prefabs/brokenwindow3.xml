@@ -1,0 +1,11 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/brokenwindow3.xml" pos="-0.2 1.4 76.6" rot="0.0 0.0 0.0">
+		<vox pos="-1.6 2.0 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_7"/>
+		<vox pos="-1.0 1.3 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_8"/>
+		<vox pos="-1.1 1.6 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_9"/>
+		<vox pos="-0.5 1.2 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_10"/>
+		<vox pos="-1.0 0.0 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_11"/>
+		<vox pos="-1.4 0.0 0.0" prop="true" file="MOD/main/gas station/gas station store.vox" object="glass1_12"/>
+	</group>
+</prefab>
+

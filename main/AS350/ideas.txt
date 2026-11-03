@@ -1,0 +1,17 @@
+Next:
+AI: notice player when player shoots (or at least investigate)
+AI: try to go behind cover (choose from many random angles of attack to player see which has line of sight)
+AI: Choose from many random positions the best one
+AI: Avoid obstacles (for now just goes really high)
+AI: Reduced visibility at night / in snow storm
+Player flight: player is very vulnerable when flying heli (transform is next to heli) but not expecting to fly much
+Player flight: Hard to aim gun while player controlling as it's a really weird system. However propbably won't use it much so it's fine for now. Laz: could be better by "aiming through fixed point"
+AI: Should the heli lead shots? Laz knows a way but it's a bit fiddly.
+Balance: It's a bit too easy to just stand out in the open and shoot the heli. Perhaps heli damage to player could be increased to force use of cover.
+Player flight: Doesn't work with the Mors Longa Fuel system, but it's probably fine for now
+
+issues
+Bug: Crash sound when heli is deleted (maybe fixed, can't reproduce)
+not lagging gunshots when hitting player - Tess to work on proper bullets
+Pilot bit easy to kill, maybe could have 2 pilots or different gore script. Adding a second pilot somehow got it messed up the gore script so left it as one for now.
+AI: multiple helis don't know to avoid each other (although I think 1 at a time is enough)

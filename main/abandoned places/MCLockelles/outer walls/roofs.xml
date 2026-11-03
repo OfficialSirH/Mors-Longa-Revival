@@ -1,0 +1,977 @@
+<prefab version="0.6.2">
+	<group id_="58986000" open_="true" name="roof" pos="-6.0 4.3 -3.4">
+		<vox id_="1150423680" open_="true" pos="11.5 -2.3 4.3" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="593137024" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1398623616" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="516258592" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="154281152" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="755545088" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="289359104" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2147287040" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1176115328" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1276063744" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="243939872" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="2051533056" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1750704512" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="14484340" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1304639232" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1400327680" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="744796544" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="367810496" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="621646912" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1517316480" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2687140" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1962660864" open_="true" pos="15.4 -2.3 -14.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="160572992" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="690005120" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1533570432" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1458854912" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="496662112" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="208679360" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1803267584" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="803979200" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1365067136" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="644454848" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="705996864" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1238181632" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="284050368" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="357913952" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1420317312" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1666092288" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="2063199232" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="751874880" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="565216960" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="84677680" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="934338240" open_="true" pos="11.8 -2.3 -14.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="471035968" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1817686400" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="28772060" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1942540032" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="2028790656" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1102186240" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1614512384" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1438668544" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="247741200" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="808042688" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1527999616" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="263995120" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1770038784" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1831122048" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="115022704" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="91952624" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="959702208" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="376658368" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1072431040" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1082851840" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1913571328" open_="true" pos="9.1 -2.3 -14.2" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="782088832" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1131941376" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1429755136" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1597930752" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="852151104" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="351425472" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="50269180" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="980937152" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="296109728" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1275473920" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1930677376" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2040522368" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="944890176" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1960956800" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1177360512" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="713992768" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1829745664" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="760001856" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="289817888" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="57085340" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="818987840" open_="true" pos="4.95 -2.3 -14.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="166995920" open_="true" pos="0.0 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1173821440" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2115500160" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="166864832" open_="true" pos="0.0 2.1 0.2" slack="-1" strength="2">
+				<location id_="529956448" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1898890368" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1246964096" open_="true" pos="2.0 2.1 -2.1" slack="-1" strength="2">
+				<location id_="81335136" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="877646144" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="905893888" open_="true" pos="2.0 2.1 0.2" slack="-1" strength="2">
+				<location id_="958981248" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="767211264" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1372145408" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="746435072" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="590384320" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1482252672" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="604868672" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="446065248" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="410018240" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1865661696" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="115153776" open_="true" pos="8.4 -2.3 -1.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="2059856640" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1138167680" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="398089952" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1987828224" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="1407340416" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1944571776" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1000009344" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1004793728" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="147530544" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2096821248" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="53218480" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="772520000" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="66654180" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="297748224" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1076887680" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1514498304" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1438996224" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="406348000" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="997453248" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="900912832" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="944824640" open_="true" pos="5.4 -2.3 -1.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="521436224" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="283198336" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="383933312" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1234577024" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="512588352" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1726192512" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1289368448" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1610448896" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="296306336" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1289040768" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="913693120" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1159402624" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="532840192" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="7668180" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1057356800" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="155919664" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1624081152" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="515799808" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="557089984" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="132128640" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="618763136" open_="true" pos="5.4 -2.3 -6.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1405177600" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1859959680" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1201086080" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="464481984" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="791985344" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="86512800" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1375094784" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1057160192" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2133720192" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1672056448" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="1450662400" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="800571072" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="396648064" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="717007616" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1594653696" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1321941760" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="423126240" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1843181440" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="291063136" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1260006528" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="2103047552" open_="true" pos="5.4 -2.3 -10.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="361715264" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="267665360" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1482449280" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="374430016" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="488469632" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1948635264" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1686147584" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="1275670528" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1623950080" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="551322496" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="72290624" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1391479680" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="274219360" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1605336704" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="279528096" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1068957376" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1338261248" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1584691712" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1921894912" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1068760768" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1729862784" open_="true" pos="11.5 -2.3 -1.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1851701632" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="805289984" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1925892864" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="696952384" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="89593184" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="964093376" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="796442112" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="461598208" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="496989824" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1934150912" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="306792736" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2038556160" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1251093120" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="149824448" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="672899200" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="788249600" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1402359424" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1187322624" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1680838784" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="423322848" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1902888320" open_="true" pos="11.5 -2.3 -3.9" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="745320896" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="930733568" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="226899488" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1668713984" open_="true" pos="-0.3 2.1 -0.1" slack="-1" strength="2">
+				<location id_="1616544128" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="415851296" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="546406976" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="2057366144" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1245325568" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1817030912" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="350114688" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1786227200" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1219764992" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1780525184" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="98703240" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1429230720" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1467637248" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="943448320" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1988745728" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="328748640" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1734843776" open_="true" pos="11.5 -2.3 -6.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="809419008" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1280127232" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2035606912" pos="0.0 1.4 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2144993152" open_="true" pos="-0.3 2.1 0.4" slack="-1" strength="2">
+				<location id_="1341210624" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1331969408" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1908983552" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="412246592" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1774364416" pos="0.0 0.8 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="389045440" pos="1.6 2.1 0.5" slack="-1" strength="2">
+				<location id_="383408992" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2133523584" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1388595968" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="722578496" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="2126707456" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="739553344" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="811975040" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="776517888" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1158222848" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2092757760" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="240662880" open_="true" pos="8.4 -2.3 -6.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="606441600" open_="true" pos="-0.3 2.1 -2.0" slack="-1" strength="2">
+				<location id_="75371000" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="715434624" pos="0.0 1.4 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="492139872" open_="true" pos="-0.3 2.1 0.5" slack="-1" strength="2">
+				<location id_="633902848" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2064444416" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1054604160" open_="true" pos="1.6 2.1 -2.0" slack="-1" strength="2">
+				<location id_="978446656" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2117073024" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="789298240" open_="true" pos="1.6 2.1 0.5" slack="-1" strength="2">
+				<location id_="159524352" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1269051008" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="111352464" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="799850176" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1273114496" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="17040400" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="357324096" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="177220160" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1826796416" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="910416128" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="612667904" open_="true" pos="8.4 -2.3 -3.9" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="7012780" open_="true" pos="-0.3 2.1 -2.1" slack="-1" strength="2">
+				<location id_="1957942016" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="651664192" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="783006400" open_="true" pos="-0.3 2.1 0.5" slack="-1" strength="2">
+				<location id_="449932096" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1881981056" pos="0.0 2.9 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1957548672" open_="true" pos="1.6 2.1 -2.1" slack="-1" strength="2">
+				<location id_="598904512" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1114769920" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2121005440" open_="true" pos="1.6 2.1 -0.1" slack="-1" strength="2">
+				<location id_="1859042048" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="703637440" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="672702592" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1637779072" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="285623328" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1192434816" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="260521504" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="269041696" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1943326592" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2142699264" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="643996032" open_="true" pos="15.3 -2.3 0.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="403595328" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1921501696" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1239099264" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1880604800" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="392846752" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="927325440" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="710846848" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1552314880" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1500341632" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1201086080" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="833210048" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1814802560" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1328626944" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="946987456" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="669425536" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1901118720" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1097336192" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="823379008" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1399278976" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="617911104" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="2009325312" open_="true" pos="0.7 -2.3 2.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="82645936" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1814671488" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1920190976" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="857001024" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="543326592" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="231421744" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="482636544" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1152389760" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2132933760" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1730452608" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="524451072" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1138560896" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1457216384" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="610832768" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1297757568" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1848359040" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="125509104" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="472740032" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="6029680" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1617789312" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1986713984" open_="true" pos="0.7 -2.3 -3.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="613782080" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="666803968" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="669753280" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="844745088" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="979560832" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="331239168" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1022686144" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1147015552" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2083516544" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="621319168" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1246177536" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="152839280" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1461410944" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1259219968" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="488272992" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="104011984" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="844745088" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="671326208" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="123870600" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1545629824" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1531604224" open_="true" pos="0.7 -2.3 -8.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="2081157120" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="240728416" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="795262336" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1665174784" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1709741952" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="432432928" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1196760448" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="756790400" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="312298112" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="922868736" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1053555520" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="763278848" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1616806272" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1464425728" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1587706496" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1949749504" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="550470464" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1114835456" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1491624832" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="240990576" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="611357120" open_="true" pos="0.7 -2.3 -12.6" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1873919744" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="556893376" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="471691392" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1635812864" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="26805860" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1484284416" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1451973120" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="465465088" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="2005523968" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1693356928" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1369654912" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="122035480" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1673432832" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1143083136" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="936173376" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2075455232" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="2063395840" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1696371840" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1409568768" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="266420096" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1648199936" open_="true" pos="-2.9 -2.3 -12.6" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="261963376" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1839183488" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="165881744" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="405364896" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1917307136" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="177416784" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1836168704" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="578718208" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="127082064" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="872796160" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="575375680" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="681157248" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1585216000" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1843640192" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1245391104" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2088497664" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="453995584" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1036252928" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1057094656" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="287655072" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1806872320" open_="true" pos="-2.9 -2.3 -8.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1577285632" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1598061824" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1194007680" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="804437952" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="699311808" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="523271360" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1505126144" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1333280256" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1525902336" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="472740032" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1873526400" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="689218624" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="887411584" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="775796992" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1560638464" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1823388288" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1684443520" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1494574208" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="934469312" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="893506816" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="362174048" open_="true" pos="-3.4 -2.3 -3.7" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="482898720" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1997659136" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1724881664" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1900135680" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="77009504" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="864013824" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="691053760" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1230448000" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="199634848" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="656383104" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="149496736" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1956631168" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1005776832" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1300837888" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="222508304" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="789298240" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="729263552" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1121454976" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="16385000" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2067655936" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="461663744" open_="true" pos="-3.4 -2.3 2.9" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="2125593344" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="300042112" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="31393660" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1444763776" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1240868864" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1160582272" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="368203712" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1213342080" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1062206784" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2071064064" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="1097598336" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="659791168" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="423716096" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="922278912" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="671064064" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1213669760" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1463639296" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1010626816" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1943392128" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="104274144" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="223753568" open_="true" pos="7.0 -2.3 2.4" rot="0.0 90.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1734385024" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1418416640" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="509835648" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1127877888" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1783212288" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="509049184" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="145302176" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1873067648" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1553232512" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="891147392" open_="true" pos="1.6 2.1 0.2" slack="-1" strength="2">
+				<location id_="2124479104" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1428837504" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1930480640" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1153635072" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1571124864" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2021253632" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="155460880" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1040054272" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="161949344" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1268330112" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1741463296" open_="true" pos="15.3 -2.3 -10.5" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="236075072" open_="true" pos="-0.3 2.1 -1.4" slack="-1" strength="2">
+				<location id_="455699616" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1133448704" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="756397120" open_="true" pos="-0.3 2.1 0.4" slack="-1" strength="2">
+				<location id_="323833152" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1466719616" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1227891840" open_="true" pos="2.0 2.1 -1.9" slack="-1" strength="2">
+				<location id_="305744096" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="302925888" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="535396256" open_="true" pos="2.0 2.1 0.2" slack="-1" strength="2">
+				<location id_="867618496" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1340030848" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="94967456" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1387612928" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="952099584" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="365254432" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="758166720" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="128392864" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1368147456" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1975047936" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="130686760" open_="true" pos="15.3 -2.3 -7.7" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="860015872" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1802939904" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="620270592" pos="0.0 1.3 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1548448000" open_="true" pos="-0.3 2.1 -0.2" slack="-1" strength="2">
+				<location id_="741847232" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="913693120" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1452890752" open_="true" pos="2.0 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1926023936" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1020392256" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="93001264" open_="true" pos="1.9 2.1 0.2" slack="-1" strength="2">
+				<location id_="1860680576" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="7143860" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1518692864" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2045765504" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1167136256" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="205140192" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="100472816" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="270680192" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="693544256" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="486437888" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="392584608" open_="true" pos="15.3 -2.3 -4.9" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1946865664" open_="true" pos="0.0 2.1 -1.9" slack="-1" strength="2">
+				<location id_="984148608" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1637975680" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="183380928" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1213604224" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1750573440" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="857853056" open_="true" pos="1.9 2.1 -1.9" slack="-1" strength="2">
+				<location id_="2013978624" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="141304240" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="220345472" open_="true" pos="2.0 2.1 0.2" slack="-1" strength="2">
+				<location id_="601001792" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1576564736" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="785890112" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="276578816" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="942923968" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1053752128" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1185684096" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1564046592" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1268067968" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1965610112" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="155591968" open_="true" pos="15.3 -2.3 -2.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="228734592" open_="true" pos="-0.3 2.1 -1.9" slack="-1" strength="2">
+				<location id_="925162624" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="193932864" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="2104554880" open_="true" pos="-0.3 2.1 0.2" slack="-1" strength="2">
+				<location id_="1956500096" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="438069376" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1949749504" open_="true" pos="2.0 2.1 -1.9" slack="-1" strength="2">
+				<location id_="51055660" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="1213735296" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="125246944" open_="true" pos="2.0 2.1 0.2" slack="-1" strength="2">
+				<location id_="800636672" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="235026432" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="372267200" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1542877184" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1500276096" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="2007883392" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="271401152" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="122559800" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1353663104" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1446467840" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="1216094720" open_="true" pos="15.0 -2.3 4.3" rot="0.0 0.0 0.0" prop="true" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_imain.vox">
+			<rope id_="1627816960" open_="true" pos="0.1 2.1 -1.9" slack="-1" strength="2">
+				<location id_="649763584" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="692954432" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1634698624" open_="true" pos="0.1 2.1 0.2" slack="-1" strength="2">
+				<location id_="145629888" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="913824192" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1261382784" open_="true" pos="1.6 2.1 -1.9" slack="-1" strength="2">
+				<location id_="1489462016" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="452291552" pos="0.0 1.6 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<rope id_="1760863232" open_="true" pos="1.6 2.1 0.3" slack="-1" strength="2">
+				<location id_="17105940" pos="0.0 0.1 0.0" rot="0.0 0.0 0.0"/>
+				<location id_="865914496" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0"/>
+			</rope>
+			<vox id_="1755423360" open_="true" pos="0.0 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1806675584" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="585534336" open_="true" pos="0.0 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="134619168" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="343691776" open_="true" pos="1.5 1.96 0.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="1729010688" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+			<vox id_="1160778880" open_="true" pos="1.5 1.96 -1.5" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/out_l2.vox">
+				<light id_="809222400" name="ad light" pos="-0.06 0.02 -0.04" rot="90.0 -180.0 0.0" type="cone" color="1.0 0.99 0.85" scale="6" size="0.1" reach="5"/>
+			</vox>
+		</vox>
+		<vox id_="40831420" pos="-9.9 -0.9 -4.5" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+		<vox id_="1105397632" pos="5.8 -0.9 8.5" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+		<vox id_="1269182080" pos="-3.1 -0.9 8.5" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+		<vox id_="1670090240" pos="-9.9 -0.9 4.4" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_mi.vox"/>
+		<vox id_="1430738176" pos="-9.0 -1.6 2.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+		<vox id_="1337802496" pos="-5.0 -1.6 -18.1" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+		<vox id_="434530208" pos="19.2 -1.6 -14.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+		<vox id_="1659734912" pos="15.2 -1.6 6.6" rot="0.0 -180.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main.vox"/>
+		<vox id_="778287488" pos="-0.8 -1.6 2.6" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main2.vox"/>
+		<vox id_="1081410048" pos="10.8 -1.6 -14.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main2.vox"/>
+		<vox id_="1010757888" pos="10.8 -1.6 -12.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/outer walls/roofs/r_main3.vox"/>
+		<vox id_="77337200" pos="0.0 2.7 -7.2" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+		<vox id_="1454463744" pos="12.5 2.7 -7.0" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+		<vox id_="870240128" pos="4.0 2.7 -2.4" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+		<vox id_="847759872" pos="8.5 2.7 -15.4" rot="-180.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_Unit.vox"/>
+		<vox id_="44042880" pos="-4.3 2.7 1.4" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+		<vox id_="1107953664" pos="14.0 2.7 -0.2" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+		<vox id_="2028397440" pos="14.6 2.7 -13.0" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+		<vox id_="679387648" pos="-4.0 2.7 -13.0" rot="-180.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/AC_unit2.vox"/>
+		<group id_="2122709504" open_="true" name="ceiling ventilation" pos="7.9 -2.3 -4.7" rot="0.0 0.0 0.0">
+			<vox id_="2068704512" pos="3.8 3.6 -8.7" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+			<vox id_="1156453248" pos="-6.5 3.6 -9.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+			<vox id_="1628472320" pos="-6.5 3.6 -4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+			<vox id_="919526208" pos="-10.2 3.6 4.3" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-tjunction-plain"/>
+			<vox id_="932306496" pos="4.2 3.5 6.9" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-cross-plain"/>
+			<vox id_="1845016576" pos="-8.3 3.5 -9.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="614830720" pos="-8.3 3.5 -4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="657169600" pos="4.1 3.5 8.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1330986368" pos="4.1 3.6 -10.8" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="492533088" pos="6.3 3.5 7.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="514751168" pos="-12.3 3.6 4.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1538354944" pos="-14.2 3.6 4.0" rot="0.0 90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="405364896" pos="-10.2 3.6 5.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="619746240" pos="-10.2 3.6 7.3" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="569870272" pos="-10.2 3.6 8.6" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1124273152" pos="-6.2 3.6 -10.7" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1358119936" pos="-6.2 3.6 -2.2" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1738448512" pos="-6.2 3.6 -0.9" rot="0.0 0.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1729666176" pos="8.3 3.5 6.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="1332297088" pos="8.8 3.5 6.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+			<vox id_="245709456" pos="4.6 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="588287040" pos="5.9 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="2136407424" pos="7.2 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="774158464" pos="8.5 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1716623616" pos="3.4 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="28509900" pos="2.1 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1858583296" pos="0.8 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="151266320" pos="-0.5 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="2019287424" pos="-1.8 3.4 -4.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="148644720" pos="-1.8 3.4 -5.7" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="834062016" pos="-1.8 3.4 -7.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1276915840" pos="-1.8 3.4 -8.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1596161152" pos="-1.8 3.4 -9.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="94705296" pos="-1.8 3.4 -10.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1379485952" pos="-1.8 2.3 -10.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="104077520" pos="-3.1 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1091306496" pos="-4.4 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="927325440" pos="-4.9 3.4 -6.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="826918208" pos="-1.8 3.4 -3.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="2052581760" pos="-1.8 3.4 -1.9" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1380927744" pos="-1.8 3.4 -0.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1740414720" pos="-1.8 3.4 0.7" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1801694592" pos="-1.8 3.4 2.0" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="13894480" pos="-1.8 3.4 3.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1521969920" pos="-1.8 3.4 4.6" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1276850304" pos="-3.1 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1371883264" pos="-4.4 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1853274624" pos="-5.7 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="499152640" pos="-7.0 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="343429600" pos="-1.8 3.4 5.8" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="611881472" pos="-1.8 3.4 7.1" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1378896000" pos="-0.5 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1096353152" pos="0.8 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="379673216" pos="2.1 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="1265577344" pos="3.0 3.4 4.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-corner-plain"/>
+			<vox id_="2017386752" pos="4.5 3.4 -6.3" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+			<vox id_="345920128" pos="-6.3 3.4 -6.6" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+			<vox id_="163850000" pos="-8.4 3.4 4.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+			<vox id_="1936248192" pos="4.1 3.4 4.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+			<vox id_="594644416" pos="0.4 3.5 -2.4" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="870961088" pos="-4.0 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="711698880" pos="-7.3 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1913833600" pos="-10.6 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1892401920" pos="-13.4 3.5 0.2" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="772585536" pos="4.6 3.5 0.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1521576704" pos="8.0 3.5 0.3" rot="0.0 180.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="896849344" pos="2.4 3.5 -2.4" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="424240416" pos="-4.0 3.5 -1.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="249117536" pos="-4.0 3.5 -4.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="313412288" pos="-9.9 3.5 -1.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1116670464" pos="-9.9 3.5 -5.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="100734976" pos="-9.9 3.5 -7.3" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1927662464" pos="-9.9 3.5 -10.1" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="892851392" pos="-4.0 3.5 6.5" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="121249000" pos="-4.0 3.5 8.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1785702784" pos="2.4 3.5 0.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="143270432" pos="2.4 3.5 -6.7" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="482702112" pos="2.4 3.5 -10.0" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="56036700" pos="2.4 3.5 4.2" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="1493722112" pos="2.4 3.5 6.8" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			<vox id_="573671616" pos="2.4 3.5 7.9" rot="0.0 -90.0 0.0" file="MOD/main/abandoned places/MCLockelles/assets/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+		</group>
+	</group>
+</prefab>
+

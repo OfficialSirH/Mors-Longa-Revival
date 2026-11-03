@@ -1,0 +1,51 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/1963 VW Beetle BugZilla/BugZilla.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="1963 VW Beetle (BugZllia)" tags="Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="musclecar 1.0" spring="0.6" damping="1" topspeed="116" acceleration="0.4" strength="5" antiroll="0.2" difflock="1" steerassist="0.4" friction="1.5">
+			<body pos="0.0 0.6 -0.15" dynamic="true">
+				<vox name="Body" pos="0.05 -0.2 0.15" rot="0 180" texture="8" blendtexture="5 .3" density="6" strength="7" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="body">
+					<location tags="exhaust" pos="0.55 0.35 -1.9" rot="180"/>
+					<location tags="exhaust" pos="-0.45 0.35 -1.9" rot="180"/>
+					<location tags="vital" pos="0.05 0.65 -1.45"/>
+					<location tags="player" pos="0.35 1.2 -0.05"/>
+					<location tags="camera" pos="0.05 1.35 0.0"/>
+					<location tags="exit" pos="1.25 0.5 0.1"/>
+					<vox name="Bull Bar" tags="nocull" pos="0.0 0.2 1.8" rot="20.0 0.0 0.0" blendtexture="5 .3" density="1.0" strength="15.0" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="Bullbar"/>
+					<vox name="hood" tags="Latch=Structure nocull" pos="0.0 0.5 1.3" texture="8" blendtexture="5 .3" density="2.5" strength="5" prop="true" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="Hood">
+						<joint pos="0.4 0.5 -0.5" rot="0.0 -90.0 -60.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 60" sound="true">
+							<joint pos="0.0 0.0 0.7" rot="0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 60" sound="true"/>
+						</joint>
+					</vox>
+					<vox name="Door" pos="0.6 0.5 0.2" texture="8" blendtexture="5 .3" density="3" prop="true" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="door">
+						<joint tags="door" pos="0.05 0.1 0.4" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.03" rotspring="0.0" limits="0 70" sound="true"/>
+						<joint pos="0.05 0.5 0.4" rot="0.0 90.0 0.0" type="ball" rotspring="0.0" collide="true" sound="false"/>
+					</vox>
+					<vox name="Door" pos="-0.6 0.5 0.2" texture="8" blendtexture="5 .3" density="3" prop="true" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="door">
+						<joint tags="door" pos="0.05 0.1 0.4" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.03" rotspring="0.0" limits="0 70" sound="true"/>
+						<joint pos="0.05 0.4 0.4" rot="90.0 90.0 0.0" type="ball" rotspring="0.0" collide="true"/>
+					</vox>
+				</vox>
+				<wheel name="bl" pos="-0.65 -0.15 1.35" drive="1" travel="-0.15 0.2">
+					<vox pos="-0.2 -0.47 -0.05" rot="0.0 180.0 0.0" blendtexture="5 .3" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1.05"/>
+				</wheel>
+				<wheel name="br" pos="0.65 -0.15 1.35" drive="1" travel="-0.15 0.2">
+					<vox pos="0.2 -0.47 0.05" blendtexture="5 .3" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1.05"/>
+				</wheel>
+				<wheel name="fl" pos="-0.65 -0.15 -1.1" steer="1.0" travel="-0.15 0.2">
+					<vox pos="-0.2 -0.47 -0.05" rot="0.0 180.0 0.0" blendtexture="5 .3" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1.05"/>
+				</wheel>
+				<wheel name="fr" pos="0.65 -0.15 -1.1" steer="1.0" travel="-0.15 0.2">
+					<vox pos="0.2 -0.47 0.05" blendtexture="5 .3" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1.05"/>
+				</wheel>
+			</body>
+		</vehicle>
+		<body tags="fuelLevel=0 RNDfuelLevel=10 GasCan fuelLevelMAX=50 explosive=0.2" pos="-0.05 1.3 0.9" rot="0.0 -180.0 0.0" dynamic="true">
+			<vox tags="explosive=1" pos="0.0 -0.4 0.0" texture="8 0.9" density="5" strength="3" file="MOD/Vehicles/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="fuel_tank">
+				<joint pos="-0.5 0.0 0.0" rot="90.0 0.0 0.0" type="hinge" collide="true" limits="0"/>
+				<joint pos="0.4 0.0 0.0" rot="90.0 0.0 0.0" type="hinge" collide="true" limits="0"/>
+				<joint pos="0.4 0.2 -0.2" rot="90.0 0.0 0.0" type="hinge" collide="true" limits="0"/>
+				<joint pos="-0.5 0.2 -0.2" rot="90.0 0.0 0.0" type="hinge" collide="true" limits="0"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

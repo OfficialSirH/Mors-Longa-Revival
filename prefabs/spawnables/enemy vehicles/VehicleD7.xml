@@ -1,0 +1,227 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/enemy vehicles/VehicleD7.xml" pos="33.7 0.0 0.0" rot="0.0 0.0 0.0">
+		<script pos="0.0 0.0 0.0" file="MOD/scripts/chaseOperatorTransport.lua">
+			<script pos="-0.25 1.0 -1.65" rot="0.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/scripts/fakegore.lua">
+				<body dynamic="true">
+					<vox tags="bodypart TORSOD TORSO ragdollname=Soldier4Sitting" pos="-0.05 0.4 -0.1" density="1" strength="1" prop="true" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.0" density="8" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="head3">
+							<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart" pos="0.0 0.0 0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="jaw"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.6 0.3" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<joint pos="0.05 0.0 0.0"/>
+						<joint pos="-0.15 0.6 -0.1"/>
+						<joint pos="0.25 0.6 -0.1"/>
+					</vox>
+				</body>
+			</script>
+			<location tags="explosionorigin" pos="0.0 0.7 0.35" rot="0.0 0.0 0.0"/>
+			<location tags="locationspawn" pos="0.0 0.7 3.95" rot="0.0 0.0 0.0"/>
+			<script pos="-0.45 1.0 -0.6" rot="0.0 90.0 0.0" file="MOD/main/GoreRagdolls2/scripts/fakegore.lua">
+				<body dynamic="true">
+					<vox tags="bodypart TORSO ragdollname=Soldier5Sitting" pos="-0.05 0.4 -0.1" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.0" density="8" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="head2">
+							<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart" pos="0.0 -0.1 0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="jaw1"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<joint pos="0.05 0.0 0.0"/>
+						<joint pos="0.25 0.6 -0.1"/>
+						<joint pos="-0.15 0.6 -0.1"/>
+					</vox>
+				</body>
+			</script>
+			<script pos="-0.45 1.0 0.7" rot="0.0 90.0 0.0" file="MOD/main/GoreRagdolls2/scripts/fakegore.lua">
+				<body dynamic="true">
+					<vox tags="bodypart TORSO ragdollname=Soldier5Sitting" pos="-0.05 0.4 -0.1" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.0" density="8" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="head2">
+							<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart" pos="0.0 -0.1 0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="jaw1"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<joint pos="0.05 0.0 0.0"/>
+						<joint pos="0.25 0.6 -0.1"/>
+						<joint pos="-0.15 0.6 -0.1"/>
+					</vox>
+				</body>
+			</script>
+			<script pos="0.45 1.0 0.7" rot="0.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/scripts/fakegore.lua">
+				<body dynamic="true">
+					<vox tags="bodypart TORSO ragdollname=Soldier5Sitting" pos="-0.05 0.4 -0.1" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.0" density="8" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="head2">
+							<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart" pos="0.0 -0.1 0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="jaw1"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<joint pos="0.05 0.0 0.0"/>
+						<joint pos="0.25 0.6 -0.1"/>
+						<joint pos="-0.15 0.6 -0.1"/>
+					</vox>
+				</body>
+			</script>
+			<script pos="0.45 1.0 -0.6" rot="0.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/scripts/fakegore.lua">
+				<body dynamic="true">
+					<vox tags="bodypart TORSO ragdollname=Soldier5Sitting" pos="-0.05 0.4 -0.1" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.0" density="8" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="head2">
+							<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart" pos="0.0 -0.1 0.1" prop="false" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox" object="jaw1"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L">
+								<joint pos="0.0 0.0 -0.1"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" density="1" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L">
+								<joint pos="-0.0 0.0 0.0"/>
+							</vox>
+						</vox>
+						<joint pos="0.05 0.0 0.0"/>
+						<joint pos="0.25 0.6 -0.1"/>
+						<joint pos="-0.15 0.6 -0.1"/>
+					</vox>
+				</body>
+			</script>
+			<group name="instance=MOD/Vehicles/BRDM/brdm.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<script file="MOD/Vehicles/!library/scripts/door.lua">
+					<vehicle name="BRDM2" tags="Door ragdoll1" sound="dumptruck .7" spring="0.6" damping="1.0" topspeed="80" acceleration="0.1" strength="5" antiroll="0.0" difflock="1" steerassist=".1" friction="1.3">
+						<body pos="0.0 1.0 0.15" rot="0.0 0.0 0.0" dynamic="true">
+							<vox tags="component=body" pos="0.05 -0.5 -0.25" rot="0.0 -179.99998 0.0" texture="8 .35" blendtexture="3 .1" density="3" strength="5" file="MOD/Vehicles/brdm/brdm.vox" object="body">
+								<light pos="1.15 1.35 3.05" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="10" angle="90" penumbra="30" unshadowed=".2" glare=".3"/>
+								<light pos=".95 1.45 3.05" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="10" angle="90" penumbra="30" unshadowed=".2" glare=".3"/>
+								<light pos="-.85 1.45 3.05" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="10" angle="90" penumbra="30" unshadowed=".2" glare=".3"/>
+								<light pos="-1.05 1.35 3.05" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="10" angle="90" penumbra="30" unshadowed=".2" glare=".3"/>
+								<location tags="exhaust" pos="0.85 1.75 -3.5" rot="180"/>
+								<location tags="exhaust" pos="-0.75 1.75 -3.5" rot="-180"/>
+								<location tags="vital" pos="0.05 1.2 2.4"/>
+								<location tags="player" pos="0.35 1.6 1.7"/>
+								<location tags="exit" pos="0.05 0.5 -3.9"/>
+								<location tags="camera" pos="0.05 1.95 0.0" rot="0.0 0.0 0.0"/>
+								<light pos="1.2 .65 -3.5" rot="-179.99998 0.0 0.0" type="area" color=".6 .13" size=".2 .1"/>
+								<light pos="-1.1 .65 -3.5" rot="-179.99998 0.0 0.0" type="area" color=".6 .13" size=".2 .1"/>
+								<light pos="1.2 1.7 -3.3" rot="-179.99998 0.0 0.0" type="area" color=".41 .09" size=".2 .2"/>
+								<light pos="-1.1 1.7 -3.3" rot="-179.99998 0.0 0.0" type="area" color=".41 .09" size=".2 .2"/>
+								<light name="exitPos" tags="exitPos" pos="2.1 0.0 -4.9" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="0.6 0.0 -5.4" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="-0.6 0.0 -5.4" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="-2.1 0.0 -4.9" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="-1.0 0.0 -4.3" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="1.0 0.0 -4.3" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+								<light name="exitPos" tags="exitPos" pos="-0.0 0.0 -4.1" color="0 0 0" scale="0" angle="0" penumbra="0" size="0.1" reach="0" unshadowed="0" fogscale="0" fogiter="0"/>
+							</vox>
+							<vox pos="0.05 0.0 3.15" rot="0.0 -179.99998 0.0" texture="8 .35" blendtexture="3 .1" density="3" strength="5" prop="true" file="MOD/Vehicles/brdm/brdm.vox" object="trunk">
+								<joint tags="doorr door" pos="-0.5 0.05 0.1" rot="0 -90" type="hinge" rotstrength=".1" rotspring="0" limits="0 160" sound="true"/>
+								<joint tags="doorr door" pos="0.6 0.05 0.1" rot="0 -90" type="hinge" rotstrength=".1" rotspring="0" limits="0 160" sound="true"/>
+							</vox>
+							<wheel name="fl" pos="-1.05 -0.3 -1.55" rot="0.0 0.0 0.0" drive="1" steer="1">
+								<vox pos="-0.2 -0.7 0.0" rot="0.0 -179.99998 0.0" blendtexture="3 .45" file="MOD/Vehicles/brdm/brdm.vox" object="wheel"/>
+							</wheel>
+							<wheel name="fr" pos="1.05 -0.3 -1.55" rot="0.0 0.0 0.0" drive="1" steer="1">
+								<vox pos="0.2 -0.7 0.0" rot="0.0 0.0 0.0" blendtexture="3 .45" file="MOD/Vehicles/brdm/brdm.vox" object="wheel"/>
+							</wheel>
+							<wheel name="bl" pos="-1.05 -0.3 1.65" rot="0.0 0.0 0.0" drive="1">
+								<vox pos="-0.2 -0.7 0.0" rot="0.0 -179.99998 0.0" blendtexture="3 .45" file="MOD/Vehicles/brdm/brdm.vox" object="wheel"/>
+							</wheel>
+							<wheel name="br" pos="1.05 -0.3 1.65" rot="0.0 0.0 0.0" drive="1">
+								<vox pos="0.2 -0.7 0.0" rot="0.0 0.0 0.0" blendtexture="3 .45" file="MOD/Vehicles/brdm/brdm.vox" object="wheel"/>
+							</wheel>
+						</body>
+					</vehicle>
+				</script>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawnVehicle.xml"/>
+			</group>
+		</script>
+	</group>
+</prefab>
+

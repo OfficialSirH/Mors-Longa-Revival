@@ -1,0 +1,4 @@
+<scene version="1.6.0" shadowVolume="400 25 200">
+	<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/level_instance.xml"/>
+</scene>
+

@@ -1,0 +1,277 @@
+<prefab version="1.1.0">
+	<group name="2x2_roadblock" pos="0.0 0.0 0.0" rot="0.0 90.0 0.0">
+		<group name="roadblock" pos="1.30009 0.0 -15.30007" rot="0.0 -90.0 0.0">
+			<vox pos="7.4 -0.1 1.7" rot="0.0 5.0 0.0" prop="false" file="MOD/vox/container_red.vox">
+				<vox pos="-0.1 2.6 -0.1" rot="0.0 -90.0 0.0" file="MOD/vox/tents.vox" object="tent3"/>
+				<vox pos="14.0 2.6 -0.5" rot="0.0 -85.0 0.0" file="MOD/vox/tents.vox" object="tent3"/>
+				<vox pos="-0.1 -0.1 9.0" rot="0.0 -90.0 0.0" file="MOD/vox/tents.vox" object="tent4"/>
+				<vox pos="2.1 1.3 1.85" rot="0.0 -90.0 -60.0" prop="true" file="MOD/vox/stairs.vox" object="ladder1"/>
+			</vox>
+			<vox pos="24.5 0.0 -0.5" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/container_blue.vox">
+				<voxbox pos="-12.2 0.1 -1.3" rot="0.0 85.0 0.0" size="2 22 16" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="5.1 -0.0 -1.4" rot="0.0 90.0 0.0" size="2 35 16" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="5.1 0.0 3.6" rot="0.0 90.0 0.0" size="2 35 16" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="6.9 0.0 3.6" rot="0.0 -180.0 0.0" size="2 35 52" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="-4.8 0.0 1.2" rot="0.0 90.0 0.0" size="2 23 19" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="-4.8 0.0 -1.1" rot="0.0 90.0 0.0" size="2 23 19" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="3.0 0.1 4.5" rot="0.0 90.0 0.0" size="2 24 22" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="-13.8 0.1 -1.5" rot="0.0 85.0 0.0" size="2 22 16" brush="MOD/vox/corrugated_metal.vox" object="beam1"/>
+				<voxbox pos="-15.4 0.1 -1.6" rot="0.0 85.0 0.0" size="2 22 16" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="-2.9 2.3 -1.49999" rot="0.0 0.0 90.0" prop="false" size="2 51 28" brush="MOD/vox/corrugated_metal.vox"/>
+				<voxbox pos="-7.7 2.3 -1.5" rot="0.0 -5.0 90.0" prop="false" size="2 66 28" brush="MOD/vox/corrugated_metal.vox"/>
+				<vox pos="-1.8 0.0 1.79999" rot="0.0 180.0 0.0" file="MOD/vox/stairs.vox" object="stairs2"/>
+				<voxbox pos="0.5 0.0 1.1" rot="0.0 0.0 0.0" size="24 35 15" brush="MOD/vox/stairs.vox" object="stairs2"/>
+				<voxbox pos="5.2 0.0 1.00001" rot="0.0 90.0 0.0" size="24 35 15" brush="MOD/vox/stairs.vox" object="stairs2"/>
+				<voxbox pos="5.2 0.0 3.40001" rot="0.0 90.0 0.0" size="24 35 15" brush="MOD/vox/stairs.vox" object="stairs2"/>
+			</vox>
+			<vox pos="17.0 -0.1 0.9" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/container_blue.vox"/>
+			<vox pos="28.7 0.0 0.4" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/container_red.vox">
+				<vox pos="-0.1 2.5 -0.09999" rot="0.0 -90.0 0.0" file="MOD/vox/tents.vox" object="tent3"/>
+			</vox>
+			<vox pos="18.3 0.1 -2.8" rot="44.0 -160.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="22.2 0.1 -2.8" rot="44.0 -70.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="24.2 0.1 -4.0" rot="44.0 150.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="28.4 0.1 -5.5" rot="44.0 70.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="15.00125 0.0 -0.64484" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="13.32708 0.0 -0.54964" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="11.6529 0.0 -0.35444" rot="0.0 -167.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="9.96137 0.0 -0.15772" rot="0.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="11.06202 0.8 -0.25025" rot="0.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="12.83468 0.8 -0.46282" rot="0.0 -176.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="14.607 0.8 -0.575" rot="0.0 -162.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="13.721 1.6 -0.41909" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_red"/>
+			<vox pos="11.93098 1.6 -0.50501" rot="0.0 2.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="10.14096 1.6 -0.29093" rot="0.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="8.29885 0.0 -0.57228" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="9.39901 0.8 -0.27179" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_green"/>
+			<vox pos="1.03488 0.8 3.01648" rot="0.0 50.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="2.20809 0.0 2.12366" rot="0.0 32.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="3.0545 0.8 1.45764" rot="0.0 -147.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_red"/>
+			<vox pos="3.6143 0.0 1.08802" rot="0.0 -136.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_green"/>
+			<vox pos="0.92507 0.0 3.3459" rot="0.0 50.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="5.11555 0.0 -6.40299" rot="0.0 23.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="1.99967 0.0 -4.8393" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="3.56317 0.0 -5.66129" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="6.74692 0.0 -6.89011" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="8.4218 0.0 -6.96745" rot="0.0 -180.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="10.14099 0.0 -7.03697" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="11.84104 0.0 -6.53718" rot="0.0 -28.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="0.45841 0.0 -4.17789" rot="0.0 23.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="-1.33875 0.0 -4.01753" rot="0.0 -180.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<group name="props" pos="10.6 2.7 -0.3" rot="0.0 0.0 0.0" prop0="prop=true">
+				<vox pos="-4.999 -0.24 1.24" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-4.199 -0.24 1.14" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-3.299 -0.24 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="2.37591 -2.8 11.23516" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="17.1 -2.7 5.6" rot="0.0 -160.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="18.3366 -2.7 7.54186" rot="0.0 50.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="2.87281 -2.8 10.28561" rot="0.0 -130.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
+				<vox pos="-10.1 -2.7 5.4" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
+				<vox pos="-9.8 -2.7 6.9" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
+				<vox pos="1.06 -2.8 10.423" rot="0.0 -130.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="barrel1"/>
+				<vox pos="4.16541 -2.8 10.11477" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
+				<vox pos="19.28564 -1.4 6.18564" rot="0.0 -150.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
+				<vox pos="13.235 -1.6 1.77" rot="0.0 -100.0 0.0" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="13.835 -2.7 1.67" rot="0.0 90.0 0.0" file="MOD/vox/small_props.vox" object="barrel1"/>
+				<vox pos="12.735 -2.7 1.67" rot="0.0 90.0 0.0" file="MOD/vox/small_props.vox" object="barrel1"/>
+				<vox pos="13.135 -2.7 2.67" rot="0.0 110.0 0.0" file="MOD/vox/small_props.vox" object="barrel1"/>
+				<vox pos="16.182 -2.7 3.298" rot="0.0 160.0 0.0" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="16.282 -1.8 3.198" rot="0.0 160.0 0.0" file="MOD/vox/crates.vox" object="tiny"/>
+				<vox pos="14.882 -2.7 2.698" rot="0.0 160.0 0.0" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="18.282 -0.1 2.298" rot="0.0 130.0 0.0" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="11.782 -2.7 2.298" rot="0.0 110.0 0.0" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="19.38564 -2.7 6.35885" rot="0.0 -50.0 0.0" prop="false" file="MOD/vox/crates.vox" object="large"/>
+				<vox pos="16.1 -2.7 1.6" rot="0.0 150.0 0.0" file="MOD/vox/small_props.vox" object="box3"/>
+				<vox pos="18.33564 -2.7 4.5402" rot="0.0 -150.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box3"/>
+				<vox pos="-3.3 -2.6 3.5" rot="0.0 -85.0 0.0" density="16" file="MOD/vox/small_props.vox" object="shelf2">
+					<vox pos="0.249 0.0 -0.261" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+					<vox pos="0.145 0.0 0.33" rot="0.0 -110.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
+					<vox pos="0.058 0.0 0.823" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="0.058 0.8 0.823" rot="0.0 -10.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
+					<vox pos="0.012 1.3 0.51" rot="0.0 -90.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.232 1.3 0.162" rot="0.0 -70.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/vox/small_boxes.vox" object="box5"/>
+					<vox pos="-0.058 1.8 0.904" rot="0.0 -140.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+				</vox>
+				<vox pos="-3.7 -2.7 13.9" rot="0.0 -85.0 0.0" density="16" file="MOD/vox/small_props.vox" object="shelf2">
+					<vox pos="0.249 0.0 -0.261" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+					<vox pos="0.012 1.3 0.51" rot="0.0 -90.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.232 1.3 0.162" rot="0.0 -70.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/vox/small_boxes.vox" object="box5"/>
+					<vox pos="-0.058 1.8 0.904" rot="0.0 -140.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+				</vox>
+				<vox pos="-5.4 -2.7 11.5" rot="0.0 -155.0 0.0" density="16" file="MOD/vox/small_props.vox" object="shelf2">
+					<vox pos="0.249 0.0 -0.261" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+					<vox pos="0.058 0.0 0.823" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="0.058 0.8 0.823" rot="0.0 -10.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
+					<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/vox/small_boxes.vox" object="box5"/>
+				</vox>
+				<vox pos="6.6 -2.6 2.8" rot="0.0 -78.0 0.0" density="16" file="MOD/vox/small_props.vox" object="shelf2">
+					<vox pos="0.349 0.0 -0.961" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+					<vox pos="0.145 0.0 0.33" rot="0.0 -110.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
+					<vox pos="0.058 0.0 0.823" rot="0.0 -100.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="0.158 0.8 0.123" rot="0.0 -10.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
+					<vox pos="0.012 1.3 0.51" rot="0.0 -90.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.132 1.3 -0.538" rot="0.0 -70.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
+					<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/vox/small_boxes.vox" object="box5"/>
+					<vox pos="-0.058 1.8 0.904" rot="0.0 -140.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+				</vox>
+				<vox pos="2.37591 -2.1 11.23516" rot="0.0 115.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="-5.8 -0.2 2.2" rot="0.0 5.0 0.0" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="14.7 -0.3 -1.2" rot="0.0 95.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="14.8 -0.3 -0.5" rot="0.0 95.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="14.6 0.3 -0.8" rot="0.0 -75.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="2.0 -0.2 0.5" rot="0.0 -85.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="-4.8 -2.9 1.65" rot="0.0 -175.0 0.0" texture="8 .2" prop="false" file="MOD/vox/airbasevox/airbase_bed.vox"/>
+				<vox pos="-2.6 -2.9 1.45" rot="0.0 -175.0 0.0" texture="8 .2" prop="false" file="MOD/vox/airbasevox/airbase_bed.vox"/>
+				<vox pos="-1.599 -0.24 0.94" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-2.499 -0.24 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-4.499 0.06 1.24" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-3.699 0.06 1.14" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-2.799 0.06 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-1.999 0.06 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-2.399 0.36 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-4.099 0.36 1.14" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-3.199 0.36 1.04" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-5.0 -0.3 2.3" rot="0.0 -142.0 0.0" texture="8 .6" prop="false" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+				<vox pos="20.1 -0.3 1.7" rot="0.0 -22.0 0.0" texture="8 .6" prop="false" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
+				<vox pos="3.701 -0.34 0.34" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="4.1934 -0.04 0.25317" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="4.56996 0.26 0.08523" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="4.96389 -0.04 0.01578" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="5.4042 0.26 -0.2252" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="4.47148 -0.34 0.1026" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="5.34045 -0.34 -0.15216" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="5.79812 -0.04 -0.25575" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="6.19205 0.26 -0.18629" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="6.58597 -0.04 -0.11683" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="6.09356 -0.34 -0.20365" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="6.99725 -0.34 -0.14585" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="9.801 -0.34 -0.86" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="11.06389 -0.04 -1.18422" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="10.2934 -0.04 -0.94683" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="10.57148 -0.34 -1.0974" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="10.66996 0.26 -1.11477" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="11.5042 0.26 -1.4252" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="11.44045 -0.34 -1.35216" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="12.19356 -0.34 -1.40365" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="11.89812 -0.04 -1.45575" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="13.09725 -0.34 -1.34585" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="12.68597 -0.04 -1.31683" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="12.29205 0.26 -1.38629" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="8.901 -0.34 -0.66" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="9.401 -0.04 -0.66001" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="8.001 -0.34 -0.46" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="8.501 -0.04 -0.46001" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="7.601 -0.04 -0.26001" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-3.6 -2.7 8.3" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
+				<vox pos="-5.16404 -2.7 8.53193" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="-5.06556 -1.7 8.5493" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/crates.vox" object="medium"/>
+				<vox pos="-6.76281 -2.7 8.96083" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box3"/>
+				<vox pos="-8.31519 -2.7 9.70253" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
+				<vox pos="-9.60139 -2.7 8.35877" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
+				<vox pos="16.16308 -0.24 -1.55047" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="16.65548 0.06 -1.63729" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="16.93356 -0.24 -1.78787" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="17.03204 0.36 -1.80523" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="17.901 0.36 -2.06" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="17.42596 0.06 -1.87469" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="17.80252 -0.24 -2.04263" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="18.29492 0.06 -2.12946" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="18.59037 -0.24 -2.18155" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			</group>
+			<vox pos="19.901 0.0 -1.545" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="21.50125 0.0 -1.84484" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="21.107 0.8 -1.775" rot="0.0 -162.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="24.80125 0.0 -2.44484" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="24.407 0.8 -2.275" rot="0.0 -172.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="23.521 1.6 -2.019" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="21.921 1.6 -1.719" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="22.807 0.8 -2.075" rot="0.0 -162.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_green"/>
+			<vox pos="23.201 0.0 -2.145" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="26.6 0.1 -6.3" rot="44.0 10.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="22.759 0.1 -6.977" rot="44.0 100.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="20.581 0.1 -6.143" rot="44.0 -40.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="21.585 0.1 -6.495" rot="44.0 -120.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="22.759 0.1 -10.177" rot="44.0 100.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="24.2 0.1 -7.2" rot="44.0 150.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="26.6 0.1 -9.5" rot="44.0 10.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="28.4 0.1 -8.7" rot="44.0 70.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<group name="Enemies" pos="5.40004 0.9 0.40001" rot="0.0 -90.0 0.0">
+				<instance pos="-5.2 1.8 -5.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockCivSpawn.xml"/>
+				<instance pos="-2.6 1.8 -5.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockCivSpawn.xml"/>
+				<instance pos="-4.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockCivSpawn.xml"/>
+				<instance pos="5.1 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockCivSpawn.xml"/>
+				<instance pos="-3.5 0.0 5.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockCivSpawn.xml"/>
+			</group>
+			<vox pos="-1.3 0.1 -7.1" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="2.57673 0.1 -10.16843" rot="44.0 -130.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="3.81659 0.1 -10.43925" rot="44.0 90.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="5.27442 0.1 -10.40863" rot="44.0 140.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="7.48168 0.1 -9.10555" rot="44.0 0.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="9.67109 0.1 -11.15652" rot="44.0 60.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="8.03735 0.1 -12.25693" rot="44.0 0.0 36.0" density="15" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+		</group>
+		<group name="loot" pos="-4.6 0.5 -9.8" rot="0.0 -90.0 0.0">
+			<group name="35mili" pos="11.5 3.4 -4.1">
+				<instance pos="-0.0 -1.4 0.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighMiliLootSpawn.xml"/>
+				<instance pos="12.0 -2.4 2.7" rot="0.0 10.0 0.0" file="MOD/prefabs/spawns/loots/HighMiliLootSpawn.xml"/>
+				<instance pos="11.9 -0.3 0.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighMiliLootSpawn.xml"/>
+				<instance pos="-4.4 -0.7 -1.7" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+				<instance pos="-9.3 -3.2 -0.8" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+				<instance pos="-10.9 -2.0 -0.8" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+				<instance pos="12.8 -1.5 4.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml"/>
+			</group>
+			<group name="35food" pos="12.1 0.5 -3.0">
+				<instance pos="7.5 2.7 -4.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="8.4 2.7 -4.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="7.9 2.1 -3.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-9.3 0.0 0.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-10.5 0.0 0.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-11.3 0.5 0.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-9.9 0.5 0.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-0.1 -0.9 -0.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-0.5 0.5 -0.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-1.5 0.5 -0.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-1.2 0.0 -0.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="0.3 0.0 -0.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="0.3 1.0 -0.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="-0.9 1.0 -0.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="7.9 0.0 -0.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="8.9 0.5 -1.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="6.0 0.2 -0.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="7.8 0.0 -0.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="8.5 0.1 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="9.3 0.6 0.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+				<instance pos="10.3 -0.3 2.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HighFoodLootSpawn.xml"/>
+			</group>
+			<group name="25general" pos="4.9 0.0 -0.7">
+				<instance pos="-5.2 0.4 5.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="-5.2 0.2 -3.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="-3.1 2.0 -1.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="6.8 2.0 -2.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="-2.9 1.4 -3.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="-4.6 0.2 -3.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+				<instance pos="20.4 2.6 -3.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
+			</group>
+		</group>
+		<group name="Enemies" pos="-5.09996 0.9 -3.89999" rot="0.0 -90.0 0.0">
+			<group name="instance=MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<location tags="RandomRagdoll Type=civillian chance=75 inside" pos="0.0 -0.8 0.0"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 inside" pos="-5.4 -0.8 0.0"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 inside" pos="-5.4 -0.8 5.2"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 inside" pos="10.7 -0.8 0.0"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 stationary" pos="8.0 1.7 -6.6"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 stationary" pos="12.0 1.7 -6.6"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 stationary" pos="17.7 1.7 -7.2"/>
+				<location tags="RandomRagdoll Type=civillian chance=75" pos="-0.4 -0.8 -5.3"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 stationary" pos="-4.1 1.7 -5.3"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 outside" pos="-4.1 -0.8 -10.3"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 outside" pos="3.6 -0.8 -10.3"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 outside" pos="3.6 -0.8 -15.8"/>
+				<location tags="RandomRagdoll Type=civillian chance=75 outside" pos="-15.3 -0.8 -15.8"/>
+			</group>
+		</group>
+	</group>
+</prefab>
+

@@ -1,0 +1,86 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/level_scripts.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<script file="sandbox.lua"/>
+		<group name="MorsLonga" layer="-MorsLonga">
+			<script file="MOD/Config.lua"/>
+			<script file="MOD/scripts/newLeveltoLEVEL.lua"/>
+			<script file="MOD/scripts/Game/Blood/bloodpool.lua"/>
+			<script file="MOD/scripts/Radio.lua"/>
+			<script file="MOD/script/Airstrike.lua"/>
+			<script file="MOD/scripts/Game/mine.lua"/>
+			<script file="MOD/scripts/pauseMenu.lua"/>
+			<script file="MOD/scripts/Game/script.lua"/>
+			<script file="MOD/scripts/window.lua"/>
+			<script file="MOD/script/Thermals.lua"/>
+			<script file="MOD/scripts/UI/SpawnMenu.lua"/>
+			<script file="MOD/scripts/UI/MainMenu/ingame_settings.lua"/>
+			<script file="MOD/scripts/Game/CarAlarm.lua"/>
+			<script file="MOD/scripts/game/daynight/script/daynight_main.lua"/>
+			<script file="MOD/HealthSystem/Die.lua"/>
+			<script file="MOD/scripts/UI/Book.lua"/>
+			<script file="MOD/scripts/Game/Fuel.lua"/>
+			<script file="MOD/scripts/Gamerule.lua"/>
+			<script file="MOD/scripts/Game/randomdelete.lua"/>
+			<script file="MOD/scripts/Game/PlayerVehicleSeat/PlayerVehicleSeat.lua"/>
+			<script file="MOD/scripts/door_global.lua"/>
+			<script file="MOD/scripts/Game/ShootFromCar.lua"/>
+			<script file="MOD/scripts/Game/ToolManager.lua"/>
+			<script file="MOD/script/Lean.lua"/>
+			<script file="MOD/scripts/Cultist Spawner.lua"/>
+		</group>
+		<group name="ToolsAndWeapons" layer="-ToolsAndWeapons">
+			<script file="MOD/scripts/Game/PlaceTool/PlaceTool.lua"/>
+			<script file="MOD/script/Weld.lua"/>
+			<script file="MOD/scripts/Grenades.lua"/>
+		</group>
+		<group name="ProceduralGeneration" layer="-ProceduralGeneration">
+			<script pos="292.9 8.8 -1.8" file="MOD/Procedural/ReturnToShadowVolume.lua">
+				<location name="pointOreturn" tags="pointOreturn nodelete"/>
+				<location name="followroad" tags="followroad nodelete" pos="-100.1 0.0 0.0"/>
+			</script>
+			<script file="MOD/Procedural/GenerateRoad.lua"/>
+			<script file="MOD/Procedural/WaterMover.lua"/>
+			<script file="MOD/Procedural/RemoveRoad.lua"/>
+			<script file="MOD/Procedural/RandomVehicle.lua"/>
+			<script file="MOD/Procedural/BuildingGrassRemover.lua"/>
+			<script file="MOD/Procedural/RandomBuilding.lua"/>
+			<script file="MOD/Procedural/RandomDeceasedBurnt.lua"/>
+			<script file="MOD/Procedural/RandomLoot.lua"/>
+			<script file="MOD/Procedural/RandomRoadSign.lua"/>
+			<script file="MOD/script/randomloot.lua"/>
+		</group>
+		<group name="PlayerBody" layer="-PlayerBody">
+			<script file="MOD/HealthSystem/AdvancedHealthScript.lua">
+				<trigger tags="hitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
+				<trigger tags="hitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=LLEG QueriedDamage=0 LLEG" pos="0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=RARM QueriedDamage=0" pos="-0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=RLEG QueriedDamage=0 RLEG" pos="-0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=TORSO QueriedDamage=0 TORSO" pos="0.0 0.8 0.0" type="box" size=".5 .6 .3"/>
+			</script>
+		</group>
+		<group name="InventoryMod">
+			<script file="MOD/script/inventory.lua"/>
+			<group name="MeleeWeapons">
+				<script file="MOD/scripts/Weapons/Melee/BaseballBat.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/Scythe.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/CombatKnife.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/Crowbar.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/FireAxe.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/Katana.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/Pipe.lua"/>
+				<script file="MOD/scripts/Weapons/Melee/Tomahawk.lua"/>
+			</group>
+			<group name="Consumables">
+				<script file="MOD/script/meds.lua"/>
+			</group>
+		</group>
+		<group name="NPCs" layer="-NPCs">
+			<script file="MOD/Procedural/RandomEnemy.lua"/>
+			<script file="MOD/Procedural/RandomVehicleEnemy.lua"/>
+		</group>
+		<script file="MOD/scripts/Tools/RegistryWatcher/script/reg.lua"/>
+		<script file="MOD/scripts/masterScriptRemover.lua"/>
+		<script file="MOD/script/PlayerID.lua"/>
+	</group>
+</prefab>

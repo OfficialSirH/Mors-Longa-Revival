@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=vest-gzhel_Gzhel_65_65 interact=Gzhel" pos="0 .5" dynamic="true">
+			<vox pos="-.05 -.5" file="MOD/vox/Armor/Gzhel.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

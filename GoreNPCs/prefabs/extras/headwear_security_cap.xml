@@ -1,0 +1,11 @@
+<prefab version="1.4.0">
+	<group>
+		<body dynamic="true">
+			<group pos="0.1 0.0 0.01">
+				<vox pos="-0.06 0.01 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security1.vox" object="head4"/>
+				<vox pos="-0.04 0.01 -0.1" rot="0.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security1.vox" object="head4"/>
+			</group>
+		</body>
+	</group>
+</prefab>
+

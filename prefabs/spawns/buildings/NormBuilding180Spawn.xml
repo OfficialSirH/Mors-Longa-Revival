@@ -1,0 +1,6 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/prefabs/NormBuilding180Spawn.xml" pos="106.3 0.0 -56.7">
+		<location tags="RandomBuilding chance=15 rotation=180"/>
+	</group>
+</prefab>
+

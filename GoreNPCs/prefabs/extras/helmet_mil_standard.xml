@@ -1,0 +1,16 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/GoreNPCs/prefabs/extras/helmet_mil_standard.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 0.0" dynamic="false">
+			<vox pos="0.05 0.26 0.0" rot="0.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmet_top">
+				<vox pos="0.0 -0.15 -0.134" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_back"/>
+				<vox pos="-0.15 -0.15 0.0" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_side"/>
+				<vox pos="0.15 -0.15 0.0" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_side"/>
+				<vox pos="0.1 -0.25 0.15" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_front"/>
+				<vox pos="0.05 -0.15 0.0" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="bloods5"/>
+				<vox pos="-0.15 -0.15 0.2" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_frontglass"/>
+				<vox pos="0.15 -0.15 0.2" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alashyan Forces.vox" object="helmot_frontglass"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

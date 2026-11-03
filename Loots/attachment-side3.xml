@@ -1,0 +1,10 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/Loots/attachment-side3.xml" pos="7.9 0.1 -4.1" rot="0.0 0.0 0.0">
+		<body tags="Loot=attachment-side3_Red-Laser interact=Red-Laser unbreakable" pos="-0.05 0.05 0.0" dynamic="true">
+			<voxbox pos="-0.05 -0.02 -0.07" rot="0.0 0.0 0.0" size="1 1 2" color=".1 .1 .1">
+				<voxbox pos="0.0 0.0 -0.1" size="1 1 1" color="1.0 0.0 0.0" pbr="0 0 0 10"/>
+			</voxbox>
+		</body>
+	</group>
+</prefab>
+

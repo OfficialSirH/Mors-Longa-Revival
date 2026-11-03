@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=vest-hexgrid_HexGrid_50_50 interact=HexGrid" pos="0 .4" dynamic="true">
+			<vox pos="-.05 -.4 -0" file="MOD/vox/Armor/Hexgrid.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

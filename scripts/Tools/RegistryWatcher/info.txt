@@ -1,0 +1,4 @@
+name = Registry Watcher 
+author = AUTUMNATIC 
+description = [noupload]Yet another Registry Explorer esque mod. This one works pretty similar but it will track if keys are deleted, and show them anyway. F2 to toggle between disabled, enabled with mouse, and floating. Left click on a key to increase it's scan depth, right click to decrease.
+tags = Gameplay, Asset

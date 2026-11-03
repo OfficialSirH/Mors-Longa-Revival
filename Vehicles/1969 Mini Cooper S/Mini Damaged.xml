@@ -1,0 +1,52 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/Vehicles/1969 Mini Cooper S/Mini Damaged.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="1969 Mini Cooper S" driven="false" sound="classic2 " spring="1.0" damping="0.4" topspeed="115" acceleration="0.4" strength="1.5" antiroll="0.0" difflock="0" steerassist="0.0" friction="0.7">
+			<body pos="0.0 0.5 -0.15" dynamic="true">
+				<vox pos="0.0 -0.3 0.15" rot="0 180 0" texture="8 0.7" blendtexture="5 .4" density="2.3" strength="3.5" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="body2">
+					<location tags="exhaust" pos="0.25 0.05 -1.5" rot="180"/>
+					<location tags="vital" pos="0.0 0.45 0.95"/>
+					<location tags="player" pos="-0.25 0.9 -0.05"/>
+					<vox tags="nocull" pos="0.5 0.399 1.45" texture="8 0.7" blendtexture="5 .4" density="2.5" strength="3.5" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Front_lights">
+						<light pos="0.0 0.1 0.0" type="cone" color="1 .9 .8" scale="15" angle="90" penumbra="30" size="0.2" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+					</vox>
+					<vox tags="Latch=Structure nocull" pos="0.0 0.5 1.1" texture="8 0.7" blendtexture="5 .4" density="2.5" strength="3.5" prop="true" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="bonnet">
+						<joint pos="-0.4 0.2 -0.3" rot="0.0 -90.0 -60.0" type="hinge" limits="0 60" sound="true"/>
+						<joint pos="0.4 0.2 -0.3" rot="0.0 -90.0 -60.0" type="hinge" limits="0 60" sound="true"/>
+					</vox>
+					<vox tags="nocull" pos="0.399 0.2 -1.35" blendtexture="5 .4" density="1.0" strength="3.0" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Rear"/>
+					<vox tags="nocull" pos="-0.499 0.2 -1.35" blendtexture="5 .4" density="1.0" strength="3.0" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Rear"/>
+					<vox tags="Latch=Structure nocull" pos="0.0 0.2 -1.37" texture="8 0.7" blendtexture="5 .4" density="2.0" strength="3.5" prop="true" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Boot">
+						<joint pos="0.0 0.0 -0.1" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.5" rotspring="0.0" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="0.0 1.05 -0.3" texture="8 0.7" blendtexture="5 .4" density="2.0" strength="3.5" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Roof"/>
+					<vox pos="-0.6 0.3 -1.35" blendtexture="5 .4" density="2.0" strength="3.5" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="Rear_lights">
+						<light pos="0.05 0.05 -0.1" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" scale="1" angle="90" penumbra="10" size="0.1 0.1" reach="1" unshadowed="0.3" glare="0.2"/>
+					</vox>
+					<vox pos="0.6 0.2 0.2" texture="8 0.7" blendtexture="5 .4" density="2" prop="true" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="door_l2">
+						<joint pos="0.0 0.0 0.3" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 70" sound="true"/>
+						<joint pos="0.0 0.4 0.3" rot="0.0 90.0 0.0" type="ball" rotspring="0.0" collide="true" sound="false"/>
+					</vox>
+					<vox pos="-0.6 0.2 0.2" texture="8 0.7" blendtexture="5 .4" density="2" prop="true" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="door_r2">
+						<joint pos="0.0 0.0 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 70" sound="true"/>
+						<joint pos="0.0 0.4 0.3" rot="0.0 90.0 0.0" type="ball" rotspring="0.0" collide="true" sound="false"/>
+					</vox>
+					<location name="exit" tags="exit" pos="-0.95 0.5 0.1"/>
+					<location tags="camera" pos="0.0 1.05 0.0"/>
+				</vox>
+				<wheel name="bl" pos="-0.5 -0.25 1.1" drive="1" travel="-0.05 0.1">
+					<vox pos="-0.1 -0.25 -0.05" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel name="br" pos="0.5 -0.25 1.1" drive="1" travel="-0.05 0.1">
+					<vox pos="0.1 -0.25 -0.05" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="wheel_br"/>
+				</wheel>
+				<wheel name="fl" pos="-0.5 -0.25 -0.8" drive="0" steer="1.2" travel="-0.07 0.1">
+					<vox pos="-0.1 -0.25 -0.05" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="fr" pos="0.5 -0.25 -0.8" drive="0" steer="1.2" travel="-0.07 0.1">
+					<vox pos="0.1 -0.25 -0.05" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/Vehicles/1969 Mini Cooper S/1969 Mini Cooper S.vox" object="wheel_fr"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

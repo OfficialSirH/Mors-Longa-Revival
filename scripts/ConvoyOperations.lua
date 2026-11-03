@@ -1,0 +1,390 @@
+#include "masterScriptRemoverAPI.lua"
+--debug toggle
+debug = false
+
+detectRange = 2.5--3
+
+detectPoints = {
+	[1] = Vec(0,0,-detectRange*2),
+	[2] = Vec(detectRange,0,-detectRange),
+	[3] = Vec(-detectRange,0,-detectRange),
+	[4] = Vec(-detectRange,0,0),
+	[5] = Vec(detectRange,0,0),
+	[6] = Vec(0,0,detectRange),
+
+}
+
+costs = {}
+
+weights = {
+
+	[1] = 0.85,
+	[2] = 0.85,
+	[3] = 0.85,
+	[4] = 0.5,
+	[5] = 0.5,
+	[6] = 0.25,
+
+}
+
+addheight = 1
+
+targetMoves = {
+	list        = {},
+	target      = Vec(0,0,0),
+	targetIndex = 1
+}
+
+goalPos = Vec(0,0,0)
+
+drivePower = 1.5
+
+function costFunc(testPos,hit,key)
+	local cost = 100
+	if(not hit) then
+		cost = VecLength(VecSub(testPos,goalPos))*(1-weights[key])
+	end
+	return cost
+end
+
+function GetBestCost()
+	local vhtrans = GetVehicleTransform(vehicle)
+	vhtrans.pos[2] = vhtrans.pos[2] + addheight
+	local bestCost = {key = 0, val = 1000, target = Vec(0,0,0)}
+	for key,detect in ipairs(detectPoints) do
+		QueryRejectVehicle(vehicle)
+		local fwdPos = TransformToParentPoint(vhtrans,detect)
+		local direction = VecSub(fwdPos,vhtrans.pos)
+		hit, dist = QueryRaycast(vhtrans.pos, direction, VecLength(direction)/1,0.25)
+		costs[key] = costFunc(fwdPos,hit,key)
+		if costs[key] < bestCost.val  then
+			bestCost.key = key
+			bestCost.val = costs[key]
+			bestCost.target = detect
+		end
+	end
+	return bestCost
+end
+
+function MAV(targetCost)
+	targetMoves.targetIndex = (targetMoves.targetIndex % #targetMoves.list)+1
+	targetMoves.target = VecSub(targetMoves.target,targetMoves.list[targetMoves.targetIndex])
+	targetMoves.target = VecAdd(targetMoves.target,targetCost)
+	targetMoves.list[targetMoves.targetIndex] = targetCost
+	return VecScale(targetMoves.target,(#targetMoves.list/100))
+end
+
+function controlVehicle(targetCost, vehicleid)
+	if(VecLength(goalPos)> 0.5) and undercontrol then
+		local targetMove = VecNormalize(targetCost.target)
+
+		if(VecLength(VecSub(GetVehicleTransform(vehicleid).pos,goalPos))>0) then
+			-- if(targetMove[1] ~= 0 and targetMove[3] ==0) then
+			-- 	targetMove[3] = 1
+			-- 	targetMove[1] = -targetMove[1]
+			-- end
+			brakes = false
+			vehicleB = GetVehicleBody(vehicle)
+			VehicleSpeed = VecLength(GetBodyVelocity(vehicleB))
+			if targetMove[1] > 0.7 and VehicleSpeed > 15 or targetMove[1] < -0.7 and VehicleSpeed > 15 then
+				brakes = true
+			end
+			DriveVehicle(vehicleid, -targetMove[3]*drivePower,-targetMove[1], brakes)
+			DebugPrint(targetMove[1])
+			--DebugPrint(targetMove[1])
+		else
+			DriveVehicle(vehicleid, 0,0, true)
+		end
+	end
+	if not undercontrol and dead < 15 then
+		DriveVehicle(vehicleid, math.random(-1,1),math.random(-1,1), true)
+	end
+end
+
+function lookatcarnage()
+	PPos = GetPlayerTransform().pos
+	VPos = GetVehicleTransform(vehicle).pos
+	DistToTarget = VecLength(VecSub(VPos, PPos))
+	if DistToTarget < 45 then
+		rot = QuatLookAt(PPos, Vec(VPos[1], VPos[2] - 1, VPos[3]))
+		--SetCameraTransform(Transform(Vec(PPos[1], PPos[2] + 3, PPos[3]), rot))
+		--SetCameraFov(120 - DistToTarget*1.4)
+		SetCameraDof(DistToTarget)
+		SetTimeScale(0.3)
+	end
+end
+
+function init()
+	Rock = LoadLoop("MOD/snd/Music/Vehicle/MUS_Radio_Vehicle0.ogg")
+	tillblo = 0
+	for i=1,10 do
+		targetMoves.list[i] = Vec(0,0,0)
+	end
+
+	lights = FindShapes("blink", false)
+	communicator = FindBody("chasecar", false)
+	vehicle = FindVehicle("chasecar", false)
+	--init shared values with manager script
+	SetTag(communicator, "lightson", "0")
+	--check for master script
+	if not GetBool("azc.hasmaster") then
+		--DebugPrint("AZ-CHASE: Master script not present, please download \"[AZC] Artzert\'s Chase Controller\"")
+	end
+	--assign sirens
+	siren1 = LoadLoop("MOD/snd/police.ogg")
+	siren2 = LoadLoop("MOD/snd/police2.ogg")
+	sirenchangeinterval = math.random(3600,18000)
+	sirentick = 0
+	toplay = (math.random(0,1)==1) and siren1 or siren2
+	dead = 0
+	CB = LoadSound("MOD/snd/Vehicles/Shared/Destruction/CarGoBoom.ogg")
+	CBD = LoadSound("MOD/snd/Vehicles/Shared/Destruction/CarGoBoomDist.ogg")
+	undercontrol = true
+	minhp = 0.7
+	completestop = false
+	targetfound = false
+end
+
+function tick(dt)
+	if not completestop then
+		if vehicle ~= 0 then
+			vehicleB = GetVehicleBody(vehicle)
+			vBT = GetBodyTransform(vehicleB)
+			pT = GetPlayerTransform()
+			if vBT.pos[1] < pT.pos[1] then
+				targetfound = true
+			end
+
+			if targetfound then
+				health = GetVehicleHealth(vehicle)
+
+				if dead > 15 then
+					completestop = true
+				end
+				VehicleSpeed = VecLength(GetBodyVelocity(vehicleB))
+				if health < 0.9 and not vehiclebroke then
+					smokedmg()
+				end
+
+
+				if health < minhp and not vehiclebroke then
+					tillblo = tillblo + dt
+					smokebefo()
+					if not preplode then
+						ApplyBodyImpulse(vehicleB, GetVehicleTransform(vehicle).pos, Vec(math.random(-VehicleSpeed * 4500,VehicleSpeed * 4500),VehicleSpeed * 3000,math.random(-VehicleSpeed * 4500,VehicleSpeed * 4500)))
+						preplode = true
+					end
+					alljoints = FindJoints()
+					for i=1,#alljoints do
+						Delete(alljoints[i])
+					end
+					if tillblo > 1 then
+						--ApplyBodyImpulse(vehicleB, GetVehicleTransform(vehicle).pos, Vec(math.random(-VehicleSpeed * 1000,VehicleSpeed * 1000),VehicleSpeed * 5000,math.random(-VehicleSpeed * 1000,VehicleSpeed * 1000)))
+						vehiclebroke = true
+						--DebugPrint("YEEET")
+						V = GetVehicleTransform(vehicle)
+						Explosion(V.pos, 2)
+						for i=1,10 do
+							Spawn("MOD/prefabs/Debri.xml", Transform(Vec(V.pos[1] + math.random(-100,100)/100, V.pos[2] + math.random(-100,100)/100, V.pos[3] + math.random(-100,100)/100)))
+						end
+						PlaySound(CB, GetVehicleTransform(vehicle).pos, 15)
+						disttoplayer = VecLength(VecSub(GetVehicleTransform(vehicle).pos, GetPlayerCameraTransform().pos))
+						PlaySound(CBD, GetPlayerCameraTransform().pos, disttoplayer/10)
+						sparks()
+						debri()
+						--for i=1,190 do
+						v = GetVehicleTransform(vehicle).pos
+						--rndvec = Vec(v[1] + math.random(-100,100)/100, v[2] + math.random(-100,100)/100, v[3] + math.random(-100,100)/100)
+						Paint(v, 3, "explosion")
+						--end
+					end
+				end
+				if health < minhp and dead < 3 and vehiclebroke and VehicleSpeed > 10 then
+					smoke()
+					PointLight(GetVehicleTransform(vehicle).pos, 1, 0.75, 0.25, 20)
+					AllBodies = FindBodies("")
+					--DebugPrint("All bodies: "..#AllBodies)
+					for i=1,#AllBodies do
+						DrawBodyOutline(AllBodies[i])
+						B = GetBodyTransform(AllBodies[i])
+						smokeall()
+					end
+				end
+
+				--vehicleB = GetVehicleBody(vehicle)
+				--VehicleSpeed = VecLength(GetBodyVelocity(vehicleB))
+				--DebugPrint(VehicleSpeed * 2000)
+
+				bodyparts = FindShapes("TORSO")
+				if #bodyparts > 0 and health > minhp and not vehiclebroke then
+					--PlayLoop(Rock, GetVehicleTransform(vehicle).pos, 20)
+					undercontrol = true
+				else
+					undercontrol = false
+					dead = dead + dt
+				end
+				--DebugPrint(#bodyparts)
+				if (GetVehicleHealth(vehicle) > minhp) then
+					--make car drive to player
+					targetCost = GetBestCost()
+					if debug then
+						DebugWatch("targetDir:",targetCost.key)
+					end
+					targetCost.target = MAV(targetCost.target)
+					controlVehicle(targetCost, vehicle)
+				else
+					DriveVehicle(vehicle, 0,0, true)
+				end
+			end
+		else
+			queueRemoval()
+		end
+	else
+		queueRemoval()
+	end
+end
+
+function update()
+	if not completestop then
+		if vehicle and vehicle~=0 then
+			RemoveTag(GetVehicleBody(vehicle), "bounded")
+		end
+		if targetfound then
+			targetlocation = FindLocation("followroad", true)
+			goalPos = VecAdd(GetLocationTransform(targetlocation).pos, Vec(0,1,0))
+
+			sirentick = sirentick +1
+
+			if health < minhp and dead < 3 then
+				lookatcarnage()
+			end
+		end
+	end
+end
+
+function draw()
+	local vhtrans = GetVehicleTransform(vehicle)
+	vhtrans.pos[2] = vhtrans.pos[2] + addheight
+	if debug then
+		for key,detect in ipairs(detectPoints) do
+			lineColour = {costs[key]/100,(100-costs[key])/100,0}
+			DebugLine(vhtrans.pos, TransformToParentPoint(vhtrans,detect), lineColour[1], lineColour[2], lineColour[3])
+		end
+		DebugWatch("Siren",sirentick.."/"..sirenchangeinterval)
+	end
+
+	if (GetTagValue(communicator, "lightson") == "1") and (GetVehicleHealth(vehicle) > 0.2) then
+		if sirentick > sirenchangeinterval then
+			if toplay == siren1 then
+				toplay = siren2
+			else
+				toplay = siren1
+			end
+			sirentick = 0
+			sirenchangeinterval = math.random(3600,18000)
+		end
+		if GetVehicleHealth(vehicle) > 0.5 then
+			PlayLoop(toplay, vhtrans.pos, 0.4)
+		end
+		for i=1, #lights do
+			local l = lights[i]
+			local p = tonumber(GetTagValue(l, "blink"))
+			if p then
+				local s = math.sin((GetTime()+i) * p)
+				SetShapeEmissiveScale(l, s > 0 and 1 or 0)
+			end
+		end
+	else
+		for i=1, #lights do
+			SetShapeEmissiveScale(lights[i], 0)
+		end
+	end
+end
+
+function smoke()
+	ParticleColor(1,0.6,0.3,0.1,0.1,0.1,"linear",0,0.5)
+	ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(1,0)
+	ParticleAlpha(1.0,0.0)
+	ParticleCollide(0)
+	ParticleGravity(0,-2)
+	SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-100,100)/50, math.random(-100,100)/50, math.random(-100,100)/50), 2)
+	ParticleReset()
+	ParticleColor(0.3,0.3,0.3)
+	--ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(1.75,3,"linear",0.2,1)
+	ParticleAlpha(0.5,0.0)
+	ParticleCollide(0)
+	ParticleGravity(1)
+	SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-100,100)/50, math.random(-100,100)/50, math.random(-100,100)/50), 12)
+	ParticleReset()
+end
+
+function smokedmg()
+	ParticleColor(0.3,0.3,0.3)
+	--ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(1,0)
+	ParticleAlpha(0.5,0.0)
+	ParticleCollide(0)
+	ParticleGravity(3,0)
+	ParticleDrag(0.6)
+	SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-100,100)/150, math.random(-100,100)/150, math.random(-100,100)/150), 6)
+	ParticleReset()
+end
+
+function smokebefo()
+	ParticleColor(1,0.6,0.3,0.1,0.1,0.1,"linear",0,0.5)
+	ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(0.5,0)
+	ParticleAlpha(1.0,0.0)
+	ParticleCollide(0)
+	ParticleGravity(0,-2)
+	SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-100,100)/50, math.random(-100,100)/50, math.random(-100,100)/50), 2)
+	ParticleReset()
+end
+
+function smokeall()
+	ParticleColor(1,0.6,0.3,0.1,0.1,0.1,"linear",0,0.5)
+	ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(0.2,0)
+	ParticleAlpha(1.0,0.0)
+	ParticleCollide(0)
+	ParticleGravity(0,-2)
+	SpawnParticle(B.pos, Vec(math.random(-100,100)/50, math.random(-100,100)/50, math.random(-100,100)/50), 2)
+	ParticleReset()
+end
+
+function sparks()
+	ParticleColor(1,0.6,0.4,0.1,0.1,0.1,"linear",0,0.5)
+	ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleRadius(0.02)
+	ParticleCollide(1)
+	ParticleAlpha(1.0,0.0)
+	ParticleCollide(1)
+	ParticleGravity(-4)
+	ParticleStretch(5)
+	ParticleDrag(0)
+	for i=1,152 do
+		SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-800,800)/90, math.random(-800,800)/90, math.random(-800,800)/90), 5)
+	end
+	ParticleReset()
+end
+
+function debri()
+	ParticleReset()
+	--ParticleEmissive(2,0,"linear",0,0.5)
+	ParticleTile(6)
+	ParticleRadius(0.2)
+	ParticleCollide(1)
+	ParticleAlpha(1.0,0.0)
+	ParticleCollide(1)
+	ParticleGravity(-5)
+	--sParticleStretch(5)
+	ParticleDrag(0)
+	for i=1,152 do
+		b = math.random(1,70)/100
+		ParticleColor(b, b, b)
+		SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-18,18), math.random(-18,18), math.random(-18,18), 15))
+	end
+	ParticleReset()
+end

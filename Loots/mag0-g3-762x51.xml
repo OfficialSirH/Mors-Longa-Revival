@@ -1,0 +1,15 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/Loots/mag0-g3-762x51.xml" pos="3.2 0 -.1" rot="0">
+		<body tags="Loot=mag0-g3-762x51_MC308-Mag_20_20_7.62x51 interact=MC308-Mag unbreakable" pos="0 .1" dynamic="true">
+			<group name="Magazine" pos="-.05 .15 -.09" prop0="color=.1 .1 .1" prop1="material=metal">
+				<voxbox pos="0 -.2" rot="0" size="1 2 1">
+					<voxbox pos="0 0 .08" size="1 2 1"/>
+					<voxbox pos="0 -.05" rot="0" size="1 1 1">
+						<voxbox pos="0 0 .08" size="1 1 1"/>
+					</voxbox>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+
