@@ -1,4 +1,8 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns the death ragdoll. Reads the v1 health system's registry flag, host only for now
+-- (per-player health is Phase 2).
+function server.init()
 	restart = true
 	dead = false
 	FakeDead = false
@@ -7,7 +11,7 @@ function init()
 	--deadeded = LoadSound("MOD/deathsnd.ogg")
 	ragdoll = GetString("savegame.mod.difficulty")
 end
-function tick()
+function server.tick()
 	--DebugPrint("massive")
 	playerhealth = GetPlayerHealth()
 	--DebugPrint("Chosen: "..ragdoll)

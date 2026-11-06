@@ -1,12 +1,15 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: deletes what is far behind the REARMOST player (nothing near any player), never a car a player is in.
+function server.init()
 	deletionDist = 250
 	vList = {} -- no easy way to get all vehicle body, so this will have to do
 end
 
-function update()
+function server.update()
 	if GetBool("level.roadgen") then
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------TRASH  REMOVE----------")end
-		local playerPos = GetPlayerTransform().pos
+		local playerPos = Vec(RearmostPlayerX(), 0, 0) -- (v2) rearmost player, x only is used below
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." player at: "..VecStr(playerPos))end
 
 		local shapes = FindShapes(nil,true)
@@ -51,7 +54,7 @@ function update()
 					end
 				end
 				if willDel then
-					if GetPlayerVehicle()~=vehicle then
+					if not IsAnyPlayerVehicle(vehicle) then
 						Delete(vehicle)
 					else
 						if GetBool('Level.Debug') then
@@ -92,6 +95,17 @@ function update()
 		
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------TRASH REMOVED----------")end
 	end
+end
+
+function RearmostPlayerX()
+	local x = math.huge
+	for p in Players() do x = math.min(x, GetPlayerTransform(p).pos[1]) end
+	return x
+end
+
+function IsAnyPlayerVehicle(vehicle)
+	for p in Players() do if GetPlayerVehicle(p) == vehicle then return true end end
+	return false
 end
 
 function isBodyValid(b)

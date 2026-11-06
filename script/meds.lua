@@ -1,8 +1,14 @@
+#version 2
+#include "script/include/player.lua"
 #include "gunfunctions.lua"
 
-function init()
+function server.init()
 	RegisterTool("ai2", "AI2", "MOD/vox/ai2.vox")
 	RegisterTool("cms", "CMS", "MOD/vox/cms.vox")
+end
+
+-- (v2) client: animation only; the inventory does the healing.
+function client.init()
 
 	hidePos = Vec(0, -200, 0)
 	hideTrans = Transform(hidePos,QuatEuler())
@@ -57,12 +63,12 @@ function init()
 	recoilTimer = 0
 end
 
-function tick(dt)
+function client.tick(dt)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
 
 	-- AI2 animations
-	if GetString("game.player.tool") == "ai2" and GetBool("game.tool.ai2.enabled") then
+	if GetPlayerTool() == "ai2" and IsToolEnabled("ai2") then
 
 		local medtimer = GetFloat("inventory.medtimer")
 		local medtimermax = GetFloat("inventory.medtimermax")
@@ -196,7 +202,7 @@ function tick(dt)
 		end
 	end
 	-- CMS animations
-	if GetString("game.player.tool") == "cms" and GetBool("game.tool.cms.enabled") then
+	if GetPlayerTool() == "cms" and IsToolEnabled("cms") then
 
 		local medtimer = GetFloat("inventory.medtimer")
 		local medtimermax = GetFloat("inventory.medtimermax")

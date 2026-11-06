@@ -1,5 +1,8 @@
+#version 2
+#include "script/include/player.lua"
 
-function init()
+-- (v2) camera tilt only: client
+function client.init()
 	leanAngle = 15
 	leanAmount = 0.5
 	curangle = 0
@@ -13,7 +16,7 @@ function init()
 	leangrowth = 0.05
 end
 
-function tick(dt)
+function client.tick(dt)
 	local moving = GetPlayerVelocity()[1] > 0 or GetPlayerVelocity()[3] > 0
 	local Sprinting = InputDown("shift")
 	local walking = not InputDown("shift")

@@ -1,3 +1,4 @@
+-- (v2) server: storm state, fog/wind/snow (SetEnvironmentProperty is server-only). Client: initSandstormSounds/tickSandstormSounds.
 function initSandstorm()
 
 	f1, f2, f3, f4 = GetEnvironmentProperty("fogParams")
@@ -8,8 +9,6 @@ function initSandstorm()
 	nf3 = f3
 	nf4 = f4
 	sandstorm = false
-	wind = LoadLoop("MOD/snd/World/Shared/Ambience/Exterior/Wind.ogg")
-	sandhit = LoadLoop("MOD/snd/World/Shared/AmbientSpots/Hail.ogg")
 	schance = 100000
 	chance = schance
 	eschance = 55000
@@ -47,17 +46,11 @@ function tickSandstorm()
 	-- 	DebugWatch("fog" .. index, value)
 	-- end
 
-	SetBool("level.IsSandstorm", sandstorm)
+	SetBool("level.IsSandstorm", sandstorm, true) -- (v2) synced: clients play the storm sound
 	local sandstormOverride = GetBool("savegame.mod.config.daynight.run_sandstorm")
 
 	if sandstorm or sandstormOverride then
 
-		if GetPlayerVehicle() == 0 then
-			PlayLoop(wind, GetPlayerCameraTransform().pos, 5)
-		else
-			PlayLoop(sandhit, GetPlayerCameraTransform().pos, 5)
-			PlayLoop(wind, GetPlayerCameraTransform().pos, 0.4)
-		end
 		if nf2 > targetfog[2] then
 			add = (targetfog[2] - nf2) / 20
 			nf2 = nf2 + add
@@ -104,6 +97,23 @@ function tickSandstorm()
 
 		end
 
+	end
+end
+
+-- (v2) client: storm sound at the local player's camera
+function initSandstormSounds()
+	wind = LoadLoop("MOD/snd/World/Shared/Ambience/Exterior/Wind.ogg")
+	sandhit = LoadLoop("MOD/snd/World/Shared/AmbientSpots/Hail.ogg")
+end
+
+function tickSandstormSounds()
+	if GetBool("level.IsSandstorm") or GetBool("savegame.mod.config.daynight.run_sandstorm") then
+		if GetPlayerVehicle() == 0 then
+			PlayLoop(wind, GetPlayerCameraTransform().pos, 5)
+		else
+			PlayLoop(sandhit, GetPlayerCameraTransform().pos, 5)
+			PlayLoop(wind, GetPlayerCameraTransform().pos, 0.4)
+		end
 	end
 end
 

@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: water volumes follow their sources; removed when far from the NEAREST player.
 WATERPROPERTIES = {
 	--type = {"box"},
 	size = {1000,1000},
@@ -9,13 +12,13 @@ WATERPROPERTIES = {
 	color = {0.01,0.01,0.01},
 }
 debug = false
-function init()
+function server.init()
 	deletionDist = 500
 	
 	waterSourcesList = {}
 end
 
-function tick()
+function server.tick()
 	if GetBool("level.roadgen") then
 		ProcessNewWaterSources()
 	end
@@ -34,13 +37,12 @@ function ProcessNewWaterSources()
 	end
 end
 function HandleWaterSources()
-	local playerTransform = GetPlayerTransform()
 
 	for waterSource, waterSourceInfo in pairs(waterSourcesList) do
 		if IsHandleValid(waterSource) then
 			local waterSourceTransform = GetTriggerTransform(waterSource)
 	
-			if VecDist(waterSourceTransform.pos, playerTransform.pos) > deletionDist then
+			if NearestPlayerDist(waterSourceTransform.pos) > deletionDist then
 				if debug then DebugPrint('Removing water source for too far: '..waterSource) end
 				RemoveWaterSource(waterSource)
 			else
@@ -109,6 +111,11 @@ function tableStringToNumber(t)
 	return t
 end
 function VecDist(a,b) return VecLength(VecSub(a,b))end
+function NearestPlayerDist(pos)
+	local d = math.huge
+	for p in Players() do d = math.min(d, VecDist(pos, GetPlayerTransform(p).pos)) end
+	return d
+end
 function Split(s, delimiter)
     local result = {}
     for match in (s..delimiter):gmatch("(.-)"..delimiter) do

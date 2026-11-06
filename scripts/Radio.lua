@@ -1,9 +1,12 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) sound only: runs on every client
+function client.init()
 	RadioMusic = LoadLoop("MOD/snd/Music/Shop/MUS_Radio_Shop0.ogg")
 	Radios = FindShapes("Radio", true)
 	radtim = 0
 end
-function tick(dt)
+function client.tick(dt)
 	radtim = radtim + dt
 	if radtim > 10 then
 	Radios = FindShapes("Radio", true)

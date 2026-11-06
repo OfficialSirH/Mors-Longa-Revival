@@ -6,7 +6,9 @@
 ]]
 
 
-function init()
+-- (v2) Config.lua is a library (many scripts include it). The level-script callbacks below are called from
+-- scripts/ConfigMenu.lua (client) under new names, so they no longer leak into every including script.
+function ConfigMenu_Init()
 
     Init_Settings()
     init_update_log_data()
@@ -125,7 +127,7 @@ function init_config()
 end
 
 
-function tick()
+function ConfigMenu_Tick()
 
     if InputPressed("backspace") then
         ShowDebugMod = not ShowDebugMod
@@ -157,7 +159,7 @@ function tick()
 
 end
 
-function draw()
+function ConfigMenu_Draw()
 
     UiFont("regular.ttf", 20)
 
@@ -930,7 +932,7 @@ function spawn_npc_at_hitpos(xml, tags)
         local tagDataString = table.concat(tags, ",")
         SetString("level.torsoData."..torsoInt, tagDataString) -- Find tags string by torso.
 
-        Spawn(xml, Transform(pos))
+        ConfigSpawn(xml, Transform(pos))
 
         SetInt("level.torsoInt", GetInt("level.torsoInt") + 1)
 
@@ -943,7 +945,7 @@ function Spawn_Loot_Single(path)
     local hit, pos = RaycastFromTransform(GetCameraTransform())
 
     if hit then
-        Spawn(path, Transform(pos), true, true)
+        ConfigSpawn(path, Transform(pos), true)
     end
 
 end
@@ -962,12 +964,7 @@ function Spawn_Loot(loots_prefabs)
             local z = 1
             for index, prefab in ipairs(loots_prefabs.xmls) do
 
-                local entities = Spawn(prefab, Transform(VecAdd(pos, Vec(x * 3, 0, z * 3)), QuatEuler(0, 0, 0)), true, true)
-                for _, entity in ipairs(entities) do
-                    if GetEntityType(entity) == "body" then
-                        SetBodyDynamic(entity, false)
-                    end
-                end
+                ConfigSpawn(prefab, Transform(VecAdd(pos, Vec(x * 3, 0, z * 3)), QuatEuler(0, 0, 0)), true, true)
 
                 if x >= 20 then
                    x   = 1
@@ -997,13 +994,7 @@ function Spawn_Loot_All()
 
             for index, prefab in ipairs(prefab_category.xmls) do
 
-                local entities = Spawn(prefab, Transform(VecAdd(pos, Vec(x*2.5, 0, index)), QuatEuler(0, 90, 0)), true, true)
-
-                for _, entity in ipairs(entities) do
-                    if GetEntityType(entity) == "body" then
-                        SetBodyDynamic(entity, false)
-                    end
-                end
+                ConfigSpawn(prefab, Transform(VecAdd(pos, Vec(x*2.5, 0, index)), QuatEuler(0, 90, 0)), true, true)
 
             end
 
@@ -1282,12 +1273,27 @@ function CheejinsShortcuts()
 
 end
 
-function handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then
-			init()
+			ConfigMenu_Init()
 		end
 		break
 	end
+end
+
+-- (v2) Spawn for the debug menu: in a v2 script the client asks the server (server.configSpawn in
+-- scripts/ConfigMenu.lua), so the object is a real, shared one. v1 includers have no ServerCall: spawn directly.
+-- allowStatic: Spawn(..., true, true) as before; makeStatic: make the spawned bodies static (loot grids).
+function ConfigSpawn(xml, transform, allowStatic, makeStatic)
+    if ServerCall and client then
+        ServerCall("server.configSpawn", xml, transform, allowStatic or false, makeStatic or false)
+        return
+    end
+    local entities = allowStatic and Spawn(xml, transform, true, true) or Spawn(xml, transform)
+    if makeStatic then
+        for _, entity in ipairs(entities) do
+            if GetEntityType(entity) == "body" then SetBodyDynamic(entity, false) end
+        end
+    end
 end

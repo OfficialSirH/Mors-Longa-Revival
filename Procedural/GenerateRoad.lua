@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: road generation, world shift (moves ALL players), distance; registry keys read by clients are synced.
 --[[
 #include "../Automatic.lua"
 #include "../Settings.lua"
@@ -10,7 +13,7 @@
 reg_map_move_vec = "level.map_move_vec" -- concatenated vec string
 
 
-function init()
+function server.init()
 
 	Init_Settings()
 
@@ -41,8 +44,8 @@ function init()
 
 	point = FindLocation("pointOreturn", true)
 
-	PlayerZ = GetPlayerTransform().pos[1]
-	PlayerZStart = GetPlayerTransform().pos[1] - GetFloat("savegame.mod.distanceProgressed")
+	PlayerZ = GetGenerationPlayerPos()[1]
+	PlayerZStart = GetGenerationPlayerPos()[1] - GetFloat("savegame.mod.distanceProgressed")
 	Returns = 0
 	DistanceProgressed = GetFloat("savegame.mod.distanceProgressed")
 
@@ -60,7 +63,7 @@ function init()
 	TICK = 1
 end
 
-function update(dt)
+function server.update(dt)
 
 	TICK = TICK + 1
 
@@ -85,7 +88,7 @@ function update(dt)
 	if not GetBool("level.roadgen")then
 		for i=1, #NewRoads do
 			local NewRoadTrans = GetTriggerTransform(NewRoads[1])
-			local DistToPlayer = NewRoadTrans.pos[1] - GetPlayerTransform().pos[1]
+			local DistToPlayer = NewRoadTrans.pos[1] - GetGenerationPlayerPos()[1]
 			if DistToPlayer < Distfornewroad then
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------SPAWNING SEGMENT----------")end
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." player at: "..VecStr(playerPos))end
@@ -120,7 +123,7 @@ function update(dt)
 					end
 				else
 					spawnedEntities = Spawn("MOD/prefabs/spawnables/roadsegments/RoadSegmentH.xml", NewRoadTrans, true)
-					SetBool("inventory.refreshshop", true)
+					SetBool("inventory.refreshshop", true, true)
 					ManageVegDeleting(spawnedEntities)
 					Roadsegmentz = 0
 					if GetString("savegame.mod.difficulty") == "hardcore" then
@@ -164,8 +167,8 @@ function update(dt)
 		end
 	end
 
-	SetInt("level.distancetraveled",RoadSegments)
-	SetInt("level.difficultycoef",difficultycoef)
+	SetInt("level.distancetraveled",RoadSegments, true)
+	SetInt("level.difficultycoef",difficultycoef, true)
 	--DebugPrint("Difficulty: "..difficultycoef)
 	--DebugPrint("RoadSegments: "..RoadSegments)
 
@@ -213,18 +216,18 @@ end
 function ReturnToShadowVolume()
 
 	local pointTrans = GetLocationTransform(point)
-	local disttopoint = pointTrans.pos[1] - GetPlayerTransform().pos[1]
+	local disttopoint = pointTrans.pos[1] - GetGenerationPlayerPos()[1]
 
 	local shiftDist = 200
 	if disttopoint < shiftDist then
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------RETURN  SHADOW  VOLUME----------")end
-		if GetBool('Level.Debug')then DebugPrint(GetTime().." player at: "..VecStr(GetPlayerTransform().pos))end
+		if GetBool('Level.Debug')then DebugPrint(GetTime().." player at: "..VecStr(GetGenerationPlayerPos()))end
 
-		SetFloat(reg_map_move_vec .. ".1", -shiftDist)
-		SetFloat(reg_map_move_vec .. ".2", 0)
-		SetFloat(reg_map_move_vec .. ".3", 0)
+		SetFloat(reg_map_move_vec .. ".1", -shiftDist, true)
+		SetFloat(reg_map_move_vec .. ".2", 0, true)
+		SetFloat(reg_map_move_vec .. ".3", 0, true)
 
-		SetBool("level.map_moved", true)
+		SetBool("level.map_moved", true, true)
 		local bodies = FindBodies("",true)
 		for i=1, #bodies do
 			local body = bodies[i]
@@ -241,45 +244,54 @@ function ReturnToShadowVolume()
 			SetTriggerTransform(trigger, triggerT)
 		end
 
-		if GetPlayerVehicle()==0 then
-			local playerT = GetPlayerTransform(true)
-			local playerVel = GetPlayerVelocity()
-			playerT.pos[1] = playerT.pos[1]-shiftDist
-			SetPlayerTransform(playerT, true)
-			SetPlayerVelocity(playerVel)
-			if GetBool('Level.Debug')then DebugPrint(GetTime().." player not in vehicle, teleported")end
-		else
-			if GetBool('Level.Debug')then DebugPrint(GetTime().." player in vehicle, vehicle should be teleported with player")end
+		-- (v2) every player is shifted with the world (agreed co-op design); players in a vehicle move with it
+		for p in Players() do
+			if GetPlayerVehicle(p)==0 then
+				local playerT = GetPlayerTransformWithPitch(p)
+				local playerVel = GetPlayerVelocity(p)
+				playerT.pos[1] = playerT.pos[1]-shiftDist
+				SetPlayerTransformWithPitch(playerT, p)
+				SetPlayerVelocity(playerVel, p)
+				if GetBool('Level.Debug')then DebugPrint(GetTime().." player "..p.." not in vehicle, teleported")end
+			else
+				if GetBool('Level.Debug')then DebugPrint(GetTime().." player "..p.." in vehicle, vehicle should be teleported with player")end
+			end
 		end
 		Returns = Returns + 1
 
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." teleported everything by: "..shiftDist)end
-		if GetBool('Level.Debug')then DebugPrint(GetTime().." player now at: "..VecStr(GetPlayerTransform().pos))end
+		if GetBool('Level.Debug')then DebugPrint(GetTime().." player now at: "..VecStr(GetGenerationPlayerPos()))end
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------RETURNED SHADOW VOLUME----------")end
 	else
-		SetBool("level.map_moved", false)
+		SetBool("level.map_moved", false, true)
 
-		SetFloat(reg_map_move_vec .. ".1", 0)
-		SetFloat(reg_map_move_vec .. ".2", 0)
-		SetFloat(reg_map_move_vec .. ".3", 0)
+		SetFloat(reg_map_move_vec .. ".1", 0, true)
+		SetFloat(reg_map_move_vec .. ".2", 0, true)
+		SetFloat(reg_map_move_vec .. ".3", 0, true)
 	end
 
 
-	local PlayerZ = GetPlayerTransform().pos[1]
+	local PlayerZ = GetGenerationPlayerPos()[1]
 	local totalReturnDist = Returns * shiftDist
 	DistanceProgressed = clamp(PlayerZ - PlayerZStart + totalReturnDist, 0, math.huge)
 
 	if GetBool("level.reset_distanceProgressed") then
-		PlayerZStart = GetPlayerTransform().pos[1]
+		PlayerZStart = GetGenerationPlayerPos()[1]
 		Returns = 0
 	end
 
-	SetFloat("savegame.mod.distanceProgressed", ternary(GetBool("level.reset_distanceProgressed"), 0, DistanceProgressed))
+	SetFloat("savegame.mod.distanceProgressed", ternary(GetBool("level.reset_distanceProgressed"), 0, DistanceProgressed), true)
 
 	SetBool("level.reset_distanceProgressed", false)
 
 end
 
+
+-- (v2) The player whose position drives road generation, the world shift and the distance counter.
+-- For now the host. Phase 3: the furthest player, with stragglers teleported.
+function GetGenerationPlayerPos()
+	return GetPlayerTransform(0).pos
+end
 
 -- Check and delete shapes tagged "veg" after spawning a road segement.
 function ManageVegDeleting(spawed_entities)
@@ -304,7 +316,7 @@ function ManageVegDeleting(spawed_entities)
 		end
 	end
 end
-function handleCommand(cmd) HandleQuickload(cmd) end
+function server.handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then

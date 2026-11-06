@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns NPCs at generated locations.
 #include "../scripts/TDSU/tdsu.lua"
 
 local disable_spawning = "savegame.mod.procedural.disable.spawn_enemies"
@@ -16,7 +19,7 @@ SafeStartDist = -1
 Poses = {}
 torsos = {}
 
-function init()
+function server.init()
 
 	EnemySpawnsPerBuildingPhases = {
 		{ dist = 0, spawnCount = 2 },
@@ -59,7 +62,7 @@ function init()
 
 end
 
-function tick()
+function server.tick()
 
 	if GetBool(disable_spawning) then
 		return

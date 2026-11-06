@@ -1,4 +1,7 @@
-function tick()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: removes grass inside buildings.
+function server.tick()
 
 	local triggers = FindTriggers("vegRemove",true)
 

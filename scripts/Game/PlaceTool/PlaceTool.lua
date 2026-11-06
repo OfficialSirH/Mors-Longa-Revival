@@ -1,11 +1,32 @@
+#version 2
+#include "script/include/player.lua"
 #include "../../../Settings.lua"
 #include "shape_utils.lua"
 
-function init()
-	Init_Settings()
+-- (v2) Split: the client shows the menu and a local (client-spawned) see-through preview body and
+-- sends the placement to the server, which spawns and attaches the real object.
 
+function server.init()
 	RegisterTool("placer", "Place Tool", "MOD/vox/placer.vox", 4)
-	SetBool("game.tool.placer.enabled", true)
+	for p in Players() do SetToolEnabled("placer", true, p) end
+end
+
+function server.tick(dt)
+	for p in PlayersAdded() do SetToolEnabled("placer", true, p) end
+	for p in Players() do
+		if GetPlayerTool(p) == "placer" then ReleasePlayerGrab(p) end -- server-only in v2
+	end
+end
+
+function server.placeAt(path, pos, shape, rot)
+	if shape == 0 or not IsHandleValid(shape) then return end
+	SpawnAtPos(path, pos, shape, rot)
+end
+
+function client.init()
+	Init_Settings()
+	PlaceTool_Interactive = false
+	PlaceTool_UiSound = false
 	
 	Rotation = 0
 	
@@ -188,11 +209,14 @@ function init()
 	scroll = false
 end
 
-function draw()
+function client.draw()
+	-- (v2) Ui* calls only work in draw: tick sets these flags
+	if PlaceTool_Interactive then UiMakeInteractive() end
+	if PlaceTool_UiSound then UiSound("clickup.ogg") PlaceTool_UiSound = false end
 
 	UiTranslate(390, -10)
 
-	if GetString("game.player.tool") == "placer" then
+	if GetPlayerTool() == "placer" then
 		drawMenu()
 	end
 end
@@ -335,20 +359,21 @@ function EditPalette(shape, Stats)
 	SetShapePaletteContent(shape,Table)
 end
 
-function tick(dt)
-	if GetString("game.player.tool") == "placer" then
+function client.tick(dt)
+	PlaceTool_Interactive = false
+	if GetPlayerTool() == "placer" then
 		if KeybindDown(Settings.keybinds.player.placetool_Scroll) then
-		UiMakeInteractive()
+		PlaceTool_Interactive = true
 		if InputValue("mousewheel") ~= 0 then
 			if InputValue("mousewheel") > 0 then
 				CurrentModelIndex = CurrentModelIndex - 1
 				scroll = true
-				UiSound("clickup.ogg")
+				PlaceTool_UiSound = true
 			end
 			if InputValue("mousewheel") < 0 then
 				CurrentModelIndex = CurrentModelIndex + 1
 				scroll = true
-				UiSound("clickup.ogg")
+				PlaceTool_UiSound = true
 			end
 			if CurrentModelIndex > #models then
 				CurrentModelIndex = 1
@@ -362,7 +387,7 @@ function tick(dt)
 	end
 
 	if KeybindReleased(Settings.keybinds.player.placetool_Scroll) and not scroll then
-		UiSound("clickup.ogg")
+		PlaceTool_UiSound = true
 		CurrentModelIndex = CurrentModelIndex + 1
 		if CurrentModelIndex > #models then
 			CurrentModelIndex = 1
@@ -377,7 +402,7 @@ function tick(dt)
 		
 		
 		
-		ReleasePlayerGrab()
+		-- (v2) ReleasePlayerGrab() is done by server.tick
 		local PreviewShapes = GetBodyShapes(PreviewBody)
 		for i=1,#PreviewShapes do 
 			SetShapeCollisionFilter(PreviewShapes[i], 0, 0)
@@ -394,8 +419,8 @@ function tick(dt)
 		
 		local shapes = { GetAimPos() }
 		DrawBodyOutline(GetShapeBody(shapes[2]),1,1,1,1)
-		if InputPressed("lmb") and checkPlaceable(CurrentModelIndex) then
-			SpawnAtPos(shapes[1],shapes[2],shapes[3])
+		if InputPressed("lmb") and checkPlaceable(CurrentModelIndex) and shapes[1] then
+			ServerCall("server.placeAt", CurrentModel.path, shapes[1], shapes[2], shapes[3])
 			SetString(
 				"inventory.removematerials",
 				CurrentModel.amountrubber .. "_" ..
@@ -416,8 +441,9 @@ function BackGroundTick(dt)
 	SetBodyTransform(PreviewBody, Transform(Vec(0,-900,0)))
 end
 
-function SpawnAtPos(pos, shape, rot)
-	local entity = Spawn(CurrentModel.path,Transform(pos, rot))	
+-- (v2) server only (called from server.placeAt)
+function SpawnAtPos(path, pos, shape, rot)
+	local entity = Spawn(path,Transform(pos, rot))	
 	local Table = {
 		shapes = {},
 		lights = {},

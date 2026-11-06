@@ -867,6 +867,7 @@ local gunScriptLookUp = {
 	["gun-sawedoff"] = "Sawed Off",
 	["gun-tt33"] = "TT33",
 	["gun-m9"] = "M9",
+	["gun-pkm"] = "PKM", -- (v2 fix) was missing: picking up a PKM crashed tick() (scriptName nil)
 }
 function GetDimensions(item)
 	local itemInfos = Split(item, "_") -- Gets item info by splitting it.
@@ -955,7 +956,7 @@ function InitInventory()
 
 	gunslist = {"gun-ak74m", "gun-ak101", "gun-ak74", "gun-ak12", "gun-ak50", "gun-akm", "gun-pp19", "gun-ar15", "gun-m16", "gun-m107", "gun-scarl", "gun-scarlg", "gun-scarh", "gun-scarhg", "gun-vector", "gun-mosin", "gun-mosinm", "gun-sks", "gun-mp43", "gun-rpg", "gun-ppsh41", "gun-mgl", "gun-ks23", "gun-svd", "gun-cz1012", "gun-g36k", "gun-sg553", "gun-g3", "gun-mp5", "gun-m870", "gun-p90", "gun-sv98", "gun-pkm"}
 	gunslist2 = {"gun-g17", "gun-mp443", "gun-deagle", "gun-tt33", "gun-m9", "gun-sawedoff", "gun-g18", "gun-fiveseven"}
-	meleelist = {"melee-BaseballBat", "melee-CombatKnife", "melee-FireAxe", "melee-Katana", "melee-Pipe", "melee-Tomahawk", "melee-DamnedScythe"}
+	meleelist = {"melee-BaseballBat", "melee-CombatKnife", "melee-FireAxe", "melee-Katana", "melee-Pipe", "melee-Tomahawk", "melee-DamnedScythe", "melee-Crowbar"} -- (v2 fix) Crowbar was missing
 
 	hololist = {"gun-ak74m", "gun-ak101", "gun-ak74", "gun-ak12", "gun-akm", "gun-pp19", "gun-ar15", "gun-m16", "gun-m107", "gun-scarl", "gun-scarlg", "gun-scarh", "gun-scarhg", "gun-vector", "gun-mosinm", "gun-sks", "gun-mp43", "gun-svd", "gun-cz1012", "gun-g36k", "gun-sg553", "gun-g3", "gun-mp5", "gun-m870", "gun-p90", "gun-sv98", "gun-g17", "gun-deagle", "gun-tt33", "gun-m9", "gun-g18", "gun-fiveseven"}
 
@@ -1598,7 +1599,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 	end
 	
 	if i < 1 or j < 1 or i > invSizeX or j > invSizeY then -- early termination
-		if invSlot.rotation % 2 == 1 then -- use slot's original rotation when putting item back to where its from
+		if (invSlot.rotation or 0) % 2 == 1 then -- use slot's original rotation when putting item back to where its from
 			w, h = itemH, itemW
 		else
 			w, h = itemW, itemH
@@ -2183,7 +2184,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 				origInvSlot[1] = IDBuilder(origItemInfos)
 				return
 			else
-				if invSlot.rotation % 2 == 1 then -- use slot's original rotation when putting item back to where its from
+				if (invSlot.rotation or 0) % 2 == 1 then -- use slot's original rotation when putting item back to where its from
 					w, h = itemH, itemW
 				else
 					w, h = itemW, itemH
@@ -2224,7 +2225,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 			origInvSlot[1] = IDBuilder(origItemInfos)
 			return
 		else
-			if invSlot.rotation % 2 == 1 then -- use slot's original rotation when putting item back to where its from
+			if (invSlot.rotation or 0) % 2 == 1 then -- use slot's original rotation when putting item back to where its from
 				w, h = itemH, itemW
 			else
 				w, h = itemW, itemH
@@ -3188,8 +3189,10 @@ function tick(dt)
 			if not alreadySpawned then
 				local id = gunslist[i]
 				local scriptName = gunScriptLookUp[id]
-				local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
-				table.insert(scripts, 1, {id,entities[1]})
+				if scriptName then -- (v2 fix) ids without a script (gun-mgl, gun-ak12, gun-mp443) crashed tick()
+					local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
+					table.insert(scripts, 1, {id,entities[1]})
+				end
 			end
 		end
 	end
@@ -3206,8 +3209,10 @@ function tick(dt)
 			if not alreadySpawned then
 				local id = gunslist2[i]
 				local scriptName = gunScriptLookUp[id]
-				local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
-				table.insert(scripts, 1, {id,entities[1]})
+				if scriptName then -- (v2 fix) ids without a script (gun-mgl, gun-ak12, gun-mp443) crashed tick()
+					local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
+					table.insert(scripts, 1, {id,entities[1]})
+				end
 			end
 		end
 	end
@@ -3318,19 +3323,17 @@ function tick(dt)
 								local w, h = GetDimensions(item)
 								clearItem(backpack, {{"", {0, 0}, w, h}, i, j, backpack})
 								backpack[i][j] = {"", {0, 0}, 1, 1}
-								if amountLeft < 0 then
-									materialRemoveAmounts[i] = -amountLeft
-								else
-									materialRemoveAmounts[i] = nil
-								end
+								-- (v2 fix) original used the backpack column [i] as key, so the material's amount was
+								-- never reduced: every stack lost the full amount and the loop never finished early
+								materialRemoveAmounts[itemType] = math.max(0, -amountLeft)
 							else
 								itemInfos[3] = amountLeft
 								backpack[i][j][1] = IDBuilder(itemInfos)
-								materialRemoveAmounts[i] = nil
+								materialRemoveAmounts[itemType] = 0
 							end
 						end
 						haveMaterialToRemove = false
-						for _,_ in pairs(materialRemoveAmounts)do haveMaterialToRemove=true break end
+						for _,v in pairs(materialRemoveAmounts) do if v > 0 then haveMaterialToRemove=true break end end
 					end
 				end
 				haveRemoveRequest = haveAmmoToRemove or haveMaterialToRemove or haveGrenadeToRemove or haveGrenade1ToRemove
@@ -3339,6 +3342,9 @@ function tick(dt)
 			if not haveRemoveRequest then break end
 		end
 		
+		-- (v2 fix) a partly used stack doesn't go through clearItem, so the counts (inventory.count_*,
+		-- ammocount_*) were not recalculated: Place Tool allowed builds with stale counts, UI lagged.
+		invChanged = true
 		SetString("inventory.removeammo", "")
 		SetString("inventory.removematerials", "")
 		SetBool("inventory.removegrenade", false)

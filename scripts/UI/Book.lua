@@ -1,3 +1,5 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include "../../Automatic.lua"
 #include "../../scripts/TDSU/tdsu.lua"
@@ -37,7 +39,8 @@ local function AutoButton(name, fontsize, bg_color, paddingwidth, paddingheight,
 	return pressed, data
 end
 
-function init()
+-- (v2) client only: the Instructions book (pause menu button)
+function client.init()
     --[[ ToolCatagory = 5
     RegisterTool('manual', 'Instructions', nil, ToolCatagory)
     SetBool('game.tool.manual.enabled', true) ]]
@@ -57,7 +60,7 @@ function init()
 
 end
 
-function tick(dt)
+function client.tick(dt)
 
     Walking = InputDown("up") or InputDown("down") or InputDown("left") or InputDown("right")
 
@@ -92,7 +95,7 @@ function bump()
     Rotation = 0
 end
 
-function draw(dt)
+function client.draw(dt)
 
     if --[[ GetString('game.player.tool') == 'manual' ]] true then
 

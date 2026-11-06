@@ -1,9 +1,32 @@
+#version 2
+#include "script/include/player.lua"
+
+-- (v2) client: fuel, aim dots, sparks, sound, HUD. server: spawns the weld joints, deletes picked-up fuel.
+
 WELD_RADIUS = 0.25
 grabbing = false
 gmod = false
 HIDE_TEXT = false
 
-function init()
+function server.init()
+    RegisterTool("welder", "Welding Tool", "MOD/vox/Weld.vox", 4)
+    for p in Players() do SetToolEnabled("welder", true, p) end
+end
+
+function server.tick(dt)
+    for p in PlayersAdded() do SetToolEnabled("welder", true, p) end
+end
+
+function server.weld(pos)
+    local xml = '<joint size="0.25" rotstrength="999" rotspring="0.8" collide="true"/>'
+    Spawn(xml, Transform(pos), false, true)
+end
+
+function server.weldTakeFuel(body)
+    if body ~= 0 and IsHandleValid(body) and HasTag(body, "weldfuel") then Delete(body) end
+end
+
+function client.init()
 
     WELD_RADIUS = GetInt("savegame.mod.weld_radius")
     if WELD_RADIUS == 0 then
@@ -14,8 +37,7 @@ function init()
     HIDE_TEXT = GetBool("savegame.mod.hide_text")
 
 
-    RegisterTool("welder", "Welding Tool", "MOD/vox/Weld.vox", 4)
-    SetBool("game.tool.welder.enabled", true)
+    -- (v2) RegisterTool + enabling moved to server.init()
     loop = LoadLoop("tools/blowtorch-hit-loop.ogg", 1)
     maxfuel = 200
     fuel = maxfuel/4
@@ -48,17 +70,17 @@ freeze_anim_time = 0
 
 frozen_shapes = {}
 
-function tick(dt)
+function client.tick(dt)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
 
 
     if HasTag(GetPlayerInteractBody(), "weldfuel") and InputPressed("interact") and fuel < maxfuel then
         fuel = math.min(fuel+math.random(maxfuel/8,maxfuel/4),maxfuel)
-        Delete(GetPlayerInteractBody())
+        ServerCall("server.weldTakeFuel", GetPlayerInteractBody())
     end
 
-    if GetString("game.player.tool") == "welder" and not menuOpen and GetPlayerVehicle() == 0 then
+    if GetPlayerTool() == "welder" and not menuOpen and GetPlayerVehicle() == 0 then
         -- if fuel < 0 or fuel == 0 then
         --     if GetInt("inventory.count_slag") >= 1 then
         --         fuel = maxfuel
@@ -98,8 +120,7 @@ function tick(dt)
 
                 if last_placed <= 0 then
                     last_placed = 0.1
-                    xml = '<joint size="0.25" rotstrength="999" rotspring="0.8" collide="true"/>'
-                    local entities = Spawn(xml, Transform(pos), false, true)
+                    ServerCall("server.weld", pos)
 
                     -- for _, entity in ipairs(entities) do
                     --     if GetEntityType(entity) == "joint" then
@@ -141,9 +162,9 @@ function tick(dt)
     end
 end
 
-function draw()
+function client.draw()
 
-    if GetString("game.player.tool") == "welder" and not menuOpen and GetPlayerVehicle() == 0 then
+    if GetPlayerTool() == "welder" and not menuOpen and GetPlayerVehicle() == 0 then
 
         UiTranslate(UiCenter(), UiHeight() - 60)
         UiFont("bold.ttf", 32)

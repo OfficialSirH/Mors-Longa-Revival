@@ -1,0 +1,5 @@
+<prefab version="1.5.2">
+	<group name="instance=MOD/prefabs/spawnables/loots/PNV-10T.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/eyewear-pnv10t.xml"/>
+	</group>
+</prefab>

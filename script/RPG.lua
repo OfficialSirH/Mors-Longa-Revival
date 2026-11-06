@@ -1,4 +1,7 @@
+#version 2
+#include "script/include/player.lua"
 #include "gunfunctions.lua"
+#include "gunnet.lua"
 #include "../Settings.lua"
 
 Init_Settings()
@@ -23,9 +26,19 @@ zoomMultiplier = 1.5
 fuze_time = 4
 fuze_reliability = 0.25
 
-function init()
-	--Register tool and enable it
-	RegisterTool("gun-rpg", "RPG-7", "MOD/vox/grenade_tool.vox",1)
+function server.init()
+	RegisterTool("gun-rpg", "RPG-7", "MOD/vox/grenade_tool.vox", 1)
+	for p in Players() do SetToolEnabled("gun-rpg", true, p) end
+	GunNet_ServerInit()
+end
+
+function server.tick(dt)
+	for p in PlayersAdded() do SetToolEnabled("gun-rpg", true, p) end
+	GunNet_ServerTick(dt)
+end
+
+function client.init()
+	-- (v2) RegisterTool moved to server.init()
 
 	--Laser gun has 60 seconds of ammo.
 	--If played in sandbox mode, the sandbox script will make it infinite automatically
@@ -108,12 +121,13 @@ function rnd(mi, ma)
 end
 
 
-function tick(dt)
+function client.tick(dt)
+	GunNet_ClientTick(dt)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
     checkUnlimitedBulletsValid()
 
-	if GetBool("game.tool.gun-rpg.enabled") then
+	if IsToolEnabled("gun-rpg") then
 
 	if inventoryenabled and not reloading then
 		reserveammo = GetInt("inventory.ammocount_rocket")
@@ -152,7 +166,7 @@ function tick(dt)
 
 	if inventoryenabled and reloading then
 		SetBool("inventory.reloading", true)
-		SetString("game.player.tool","gun-rpg")
+		GunNet_SetTool("gun-rpg")
 	end
 
 	end
@@ -163,8 +177,8 @@ function tick(dt)
 		reload_value = 0
 	end
 	-- DebugPrint(ammo)
-	if GetString("game.player.tool") == "gun-rpg" then
-		if GetBool("game.player.canusetool")then
+	if GetPlayerTool() == "gun-rpg" then
+		if GetPlayerCanUseTool()then
 			if GetPlayerGrabShape() == 0 and InputPressed("usetool") then
 				if ammo > 0 then
 					local rocketname = "PG-7V"
@@ -195,31 +209,18 @@ function tick(dt)
 			          	SpawnParticle(exaust_pos, VecAdd(exaust_vec,VecScale(Vec(math.random()-0.5,math.random()-0.5,math.random()-0.5),6)), math.random()*8)
 			        end
 
-			        MakeHole(exaust_pos,1)
+			        GunNet_MakeHole(exaust_pos, 1) -- (v2) backblast hole on the server
 
 					local player_pos =  GetPlayerCameraTransform()
 					local grenade_pos = TransformToParentPoint(GetBodyTransform(GetToolBody()),Vec(0.225,-0.475,-2))
 					throw_force = max_throw
 					--Generate XML for one banana and spawn it at spawn position
 					local xml = "MOD/prefabs/grenade.xml"
-					local entities = Spawn(xml, Transform(grenade_pos,GetBodyTransform(GetToolBody()).rot))
-		
-					--Set velocity on spawned bodies (only one in this case)
+					-- (v2) the rocket is spawned and launched on the server (gunnet.lua)
 					local fwd = VecSub(TransformToParentPoint(player_pos,Vec(0,0,-1)),player_pos.pos)
 					local norm = VecNormalize(fwd)
-					local current_throw_deviation =throw_force*throw_deviation
 					local vel = VecScale(norm,120)
-					for i=1, #entities do
-						if GetEntityType(entities[i]) == "body" then
-								-- local t = GetBodyTransform(entities[i])
-								-- t.rot = QuatLookAt(fwd,VecAdd(fwd,VecScale(vel,1)))
-								-- -- DebugWatch("t",t)
-								-- SetBodyTransform(entities[i],t)
-
-								SetBodyVelocity(entities[i], vel)
-							-- SetBodyAngularVelocity(entities[i], Vec(rnd(-spin_speed,spin_speed), rnd(-spin_speed,spin_speed), rnd(-spin_speed,spin_speed)))
-						end
-					end
+					GunNet_SpawnCasing(xml, Transform(grenade_pos,GetBodyTransform(GetToolBody()).rot), vel)
 					reload_value = 0
 					throw_force = 0.5
 					cook_time = 0
@@ -406,8 +407,9 @@ function tick(dt)
 	end
 end
 
-function draw(dt)
-	if GetString("game.player.tool") == "gun-rpg" and GetBool("game.player.canusetool") then
+function client.draw(dt)
+	GunNet_DebugParts()
+	if GetPlayerTool() == "gun-rpg" and GetPlayerCanUseTool() then
 
 		SetBool("hud.aimdot",false)
 		UiAlign("center middle")

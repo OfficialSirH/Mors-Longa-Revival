@@ -1,4 +1,4 @@
-#include "umf.lua"
+#include "../scripts/TDSU/compat.lua"
 #include "table.lua"
 #include "../scripts/Game/Blood/Blood.lua"
 #include "../Settings.lua"
@@ -9,15 +9,22 @@
 
 Init_Settings()
 
-dirtimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_dirt_0.ogg")
-foliageimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_foliage_0.ogg")
-glassimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_glass_auto_0.ogg")
-gravelimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_gravel_0.ogg")
-masonryimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_masonry_0.ogg")
-softmetalimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_metal_auto_0.ogg")
-hardmetalimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_metal_thick_0.ogg")
-woodimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_wood_0.ogg")
-ricochetsound = LoadSound("MOD/snd/Projectiles/Impacts/Ricochets/blt_ricco_0.ogg")
+-- Impact sounds are loaded on first use: v2 scripts may not call engine
+-- functions such as LoadSound while the file is loading (before init).
+local gunImpactSoundsLoaded = false
+function GunFunctions_LoadSounds()
+	if gunImpactSoundsLoaded then return end
+	gunImpactSoundsLoaded = true
+	dirtimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_dirt_0.ogg")
+	foliageimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_foliage_0.ogg")
+	glassimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_glass_auto_0.ogg")
+	gravelimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_gravel_0.ogg")
+	masonryimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_masonry_0.ogg")
+	softmetalimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_metal_auto_0.ogg")
+	hardmetalimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_metal_thick_0.ogg")
+	woodimpact = LoadSound("MOD/snd/Projectiles/Impacts/materials/blt_imp_wood_0.ogg")
+	ricochetsound = LoadSound("MOD/snd/Projectiles/Impacts/Ricochets/blt_ricco_0.ogg")
+end
 Done = nil
 FlashLight = nil
 ------SHOOTING OPERATIONS AND FUNCTIONS------
@@ -179,8 +186,47 @@ function GetAimPos()
 	return forwardPos, hit, distance
 end
 
+-- Raycast for gun projectiles that ignores weapon models. In v2 a tool prefab is
+-- a real body in the world, so a bullet starting inside the gun would otherwise
+-- hit (and MakeHole) the gun itself. Tool prefab parts carry the tag
+-- "ml_toolpart" (tools/porting/make_tool_prefab.py); v1 tools have no such tag.
+-- Query filters reset after every query, so they are re-applied each attempt.
+function GunRaycast(origin, dir, maxDist, toolBody, bulletShape)
+	local skip = {}
+	for _ = 1, 8 do
+		if toolBody and toolBody ~= 0 then QueryRejectBody(toolBody) end
+		if bulletShape then QueryRejectBody(bulletShape) end
+		if #skip > 0 then QueryRejectShapes(skip) end
+		local hit, dist, normal, shape = QueryRaycast(origin, dir, maxDist)
+		if not (hit and HasTag(shape, "ml_toolpart")) then
+			return hit, dist, normal, shape
+		end
+		skip[#skip + 1] = shape
+	end
+	return false, 0, Vec(0, 0, 0), 0
+end
+
 function ProjectileOperations(projectile)
-	
+
+	-- v2: this simulation runs on the server for world effects (doFx = false)
+	-- and on clients for visuals/sound (doWorld = false); see gunnet.lua.
+	-- v1 scripts leave both flags unset, so everything runs as before.
+	local doWorld = projectile.doWorld ~= false
+	local doFx = projectile.doFx ~= false
+	if doFx then GunFunctions_LoadSounds() end
+	local function noop() end
+	local PlaySound = doFx and PlaySound or noop
+	local SpawnParticle = doFx and SpawnParticle or noop
+	local PointLight = doFx and PointLight or noop
+	local DrawLine = doFx and DrawLine or noop
+	local MakeHole = doWorld and MakeHole or noop
+	local Explosion = doWorld and Explosion or noop
+	local SpawnFire = doWorld and SpawnFire or noop
+	local ApplyBodyImpulse = doWorld and ApplyBodyImpulse or noop
+	local Blood_Pop = doWorld and Blood_Pop or noop
+	local SetFloat = doWorld and SetFloat or noop
+	local toolBody = projectile.owner and GetToolBody(projectile.owner) or GetToolBody()
+
 	local lvl1armor = projectile.armor[1] or 1
 	local lvl2armor = projectile.armor[2] or 1
 	local lvl3armor = projectile.armor[3] or 1
@@ -202,11 +248,9 @@ function ProjectileOperations(projectile)
 	projectile.predictedBulletVelocity = VecAdd(projectile.predictedBulletVelocity, (VecScale(gravity, GetTimeStep())))
 	local point2 = VecAdd(projectile.pos, VecScale(projectile.predictedBulletVelocity, GetTimeStep()))
 	local dir = VecNormalize(VecSub(point2, projectile.pos))
-	local factor = barrelFactordamage or 1
+	local factor = projectile.factor or barrelFactordamage or 1
 	local didHitNpc = false
-	QueryRejectBody(GetToolBody())
-	QueryRejectBody(BulletShape)
-	local hit, dist, normal, shape = QueryRaycast(projectile.pos, dir, VecLength(VecSub(point2, projectile.pos)))
+	local hit, dist, normal, shape = GunRaycast(projectile.pos, dir, VecLength(VecSub(point2, projectile.pos)), toolBody, BulletShape)
 	if hit then
 		hitPos = VecAdd(projectile.pos, VecScale(VecNormalize(VecSub(point2, projectile.pos)), dist))
 		point2 = hitPos
@@ -442,7 +486,7 @@ function ProjectileOperations(projectile)
 	else
 		point2 = VecAdd(projectile.pos, VecScale(projectile.predictedBulletVelocity, GetTimeStep()))
 		if tracer then DrawLine(projectile.pos, point2, 0.9, 0.8, 0.7, 0.8) end
-		SetBodyTransform(BulletShape, Transform(point2, GetBodyTransform(BulletShape).rot))
+		if BulletShape then SetBodyTransform(BulletShape, Transform(point2, GetBodyTransform(BulletShape).rot)) end
 	end
 
 	if projectile.momentum < 0.1 or projectile.pos[2] < -50 then
@@ -450,7 +494,7 @@ function ProjectileOperations(projectile)
 	end
 
 	
-	if not projectile.active then
+	if not projectile.active and BulletShape then
 		local allshapes = GetBodyShapes(BulletShape)
 		for i=1,#allshapes do 
 			Delete(allshapes[i])
@@ -626,17 +670,19 @@ end
 
 
 function GrenadeOperations(projectile)
+	local doWorld = projectile.doWorld ~= false
+	local doFx = projectile.doFx ~= false
+	local toolBody = projectile.owner and GetToolBody(projectile.owner) or GetToolBody()
 	projectile.predictedBulletVelocity = VecAdd(projectile.predictedBulletVelocity, (VecScale(gravity, GetTimeStep())))
 	local point2 = VecAdd(projectile.pos, VecScale(projectile.predictedBulletVelocity, GetTimeStep()))
 	local dir = VecNormalize(VecSub(point2, projectile.pos))
-	QueryRejectBody(GetToolBody())
-	local hit, dist, normal, shape = QueryRaycast(projectile.pos, dir, VecLength(VecSub(point2, projectile.pos)))
+	local hit, dist, normal, shape = GunRaycast(projectile.pos, dir, VecLength(VecSub(point2, projectile.pos)), toolBody)
 	if hit then
 		hitPos = VecAdd(projectile.pos, VecScale(VecNormalize(VecSub(point2, projectile.pos)), dist))
-		Explosion(hitPos, 1)
+		if doWorld then Explosion(hitPos, 1) end
 	else
 		point2 = VecAdd(projectile.pos, VecScale(projectile.predictedBulletVelocity, GetTimeStep()))
-		DrawLine(projectile.pos, point2)
+		if doFx then DrawLine(projectile.pos, point2) end
 	end
 	
 	if hit then
@@ -1237,7 +1283,7 @@ function LoadTool(body, prefab)
 	--DebugPrint(BodyTrans)
  	for i=1,#entities do 
 		--DebugPrint(i)
-		SetShapeBody(entities[i], GetToolBody(), TransformToLocalTransform(baseTransform, GetShapeWorldTransform(entities[i])))
+		SetShapeBody(entities[i], body, TransformToLocalTransform(baseTransform, GetShapeWorldTransform(entities[i])))
 	end
 	
 end
@@ -1251,6 +1297,9 @@ function math.clamp(n, low, high) return math.min(math.max(n, low), high) end
 
 function Split(s, delimiter)
     local result = {};
+    -- (v2 fix) gun scripts read fields of whatever gun is in the primary slot at init;
+    -- a missing field (e.g. RPG / empty slot has no field 10) used to crash client.init.
+    if s == nil then return result end
     for match in (s..delimiter):gmatch("(.-)"..delimiter) do
         table.insert(result, match);
     end

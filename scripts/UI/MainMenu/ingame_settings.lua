@@ -1,6 +1,9 @@
+#version 2
+#include "script/include/player.lua"
 #include "menu_main.lua"
 
-function init()
+-- (v2) UI only: client
+function client.init()
 
     init_config()
 	Init_Settings()
@@ -10,13 +13,13 @@ function init()
 
 end
 
-function tick()
+function client.tick()
     if PauseMenuButton("MorsLonga Settings") then
         ShowSettings = true
     end
 end
 
-function draw()
+function client.draw()
 
     if not Menu_Initialized then
 		Init_Main_Menu()

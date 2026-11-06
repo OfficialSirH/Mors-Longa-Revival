@@ -1227,7 +1227,9 @@ function draw_combat_details()
 
             UiTranslate(UiWidth() - w, 0)
 
-            if npc.Gun and npc.ai.targeting.target then
+            -- (v2 fix) lookPos/shootPos can be nil (seen in-game: Automatic.lua:308 'index local v');
+            -- these values only feed the commented-out debug UI below.
+            if npc.Gun and npc.ai.targeting.target and npc.ai.lookPos and npc.ai.shootPos then
 
                 local gun_tr = GetBodyTransform(npc.Gun.body)
 

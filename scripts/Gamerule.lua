@@ -1,10 +1,13 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include "../Config.lua"
 #include "perkTable.lua"
 ]]
 
 
-function init()
+-- (v2) server: savegame bookkeeping, permadeath restart (StartLevel is server-only). Host health for now.
+function server.init()
 
 	init_config()
 
@@ -40,7 +43,7 @@ function init()
 
 	SetInt("level.distancetraveled",0)
 end
-function tick(dt)
+function server.tick(dt)
 	--wDebugPrint("Distance traveled: "..GetInt("level.distancetraveled"))
 	--DebugPrint("fuelthief perk level: "..GetInt("savegame.mod.perks.fuelthief"))
 	if permadeath and GetPlayerHealth() == 0 then

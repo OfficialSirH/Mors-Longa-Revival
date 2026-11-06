@@ -1,4 +1,13 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: alarm triggers (broken body, nearby explosion via GetEvent, entering the car) and timers;
+-- the list of sounding cars is in shared.carAlarms. Clients play the loop and blink the light.
+function server.init()
+	shared.carAlarms = {}
+end
+
+function client.init()
+	alarmSeen = {}
 	local i = 0
 	alarms = {}
 	alarmVariations = 0
@@ -14,11 +23,15 @@ function init()
 	end
 end
 
-function tick(dt)
+function server.tick(dt)
 
 	AllVehicles = FindVehicles("DoAlarm", true)
+	local count = GetEventCount("explosion") -- (v2) replaces the v1 "explosion" handleCommand
+	for i = 1, count do
+		local pos, str = GetEvent("explosion", i)
+		hitByExplosion(str, pos)
+	end
 	for i = 1, #AllVehicles do
-		DebugPrint(Vehicle)
 		local Vehicle = AllVehicles[i]
 		if IsBodyBroken(GetVehicleBody(Vehicle)) and not HasTag(Vehicle, "AlarmStart") and HasTag(Vehicle, "DoAlarm") and not HasTag(Vehicle, "hadalarm") and not HasTag(Vehicle, "chasecar") then
 			SetTag(Vehicle, "AlarmStart", 0)
@@ -28,13 +41,12 @@ function tick(dt)
 			local timer = tonumber(GetTagValue(Vehicle,"AlarmStart")) or 0
 
 			if timer < 20 then
-				local VehiclePos = GetVehicleTransform(Vehicle).pos
-				VehiclePos[2] = VehiclePos[2] + 1
-				PlayLoop(alarms[tonumber(GetTagValue(Vehicle, "Alarm")) or 1], VehiclePos, 2)
+				if not shared.carAlarms[tostring(Vehicle)] then
+					shared.carAlarms[tostring(Vehicle)] = tonumber(GetTagValue(Vehicle, "Alarm")) or 1
+				end
 
 				local vehicleShapes = GetBodyShapes(GetVehicleBody(Vehicle))
 				if timer%2 < 1 then
-					PointLight(VehiclePos, 1, 1, 1, 3)
 					for j=1,#vehicleShapes do
 						SetShapeEmissiveScale(vehicleShapes[j],1)
 					end
@@ -46,15 +58,19 @@ function tick(dt)
 				timer = timer + dt
 				SetTag(Vehicle,"AlarmStart",timer)
 
-				if GetPlayerVehicle() == Vehicle then
-					RemoveTag(Vehicle, "AlarmStart")
-					SetTag(Vehicle, "hadalarm")
+				for p in Players() do
+					if GetPlayerVehicle(p) == Vehicle then
+						RemoveTag(Vehicle, "AlarmStart")
+						SetTag(Vehicle, "hadalarm")
+						shared.carAlarms[tostring(Vehicle)] = nil
+					end
 				end
 			end
 
 			if timer >= 20 then
 				RemoveTag(Vehicle, "AlarmStart")
 				SetTag(Vehicle, "hadalarm")
+				shared.carAlarms[tostring(Vehicle)] = nil
 			end
 		end
 	end
@@ -72,16 +88,21 @@ function hitByExplosion(strength, pos)
 
 end
 
-function handleCommand(cmd)
-	words = splitString(cmd, " ")
-	if #words == 5 then
-		if words[1] == "explosion" then
-			local strength = tonumber(words[2])
-			local x = tonumber(words[3])
-			local y = tonumber(words[4])
-			local z = tonumber(words[5])
-			hitByExplosion(strength, Vec(x,y,z))
+function client.tick(dt)
+	for key, alarm in pairs(shared.carAlarms or {}) do
+		local Vehicle = tonumber(key)
+		alarmSeen[key] = (alarmSeen[key] or 0) + dt
+		if IsHandleValid(Vehicle) then
+			local VehiclePos = GetVehicleTransform(Vehicle).pos
+			VehiclePos[2] = VehiclePos[2] + 1
+			PlayLoop(alarms[alarm] or alarms[1], VehiclePos, 2)
+			if alarmSeen[key] % 2 < 1 then
+				PointLight(VehiclePos, 1, 1, 1, 3)
+			end
 		end
+	end
+	for key in pairs(alarmSeen) do
+		if not (shared.carAlarms or {})[key] then alarmSeen[key] = nil end
 	end
 end
 

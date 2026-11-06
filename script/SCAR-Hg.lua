@@ -1,15 +1,29 @@
+#version 2
+#include "script/include/player.lua"
 #include "gunfunctions.lua"
 #include "gunperks.lua"
 #include "gunstats.lua"
+#include "gunnet.lua"
 
 
 
-function init()
+function server.init()
+	RegisterTool("gun-scarhg", "TCR-308", "MOD/vox/scargrey.vox", 1)
+	for p in Players() do SetToolEnabled("gun-scarhg", true, p) end
+	GunNet_ServerInit()
+end
+
+function server.tick(dt)
+	for p in PlayersAdded() do SetToolEnabled("gun-scarhg", true, p) end
+	GunNet_ServerTick(dt)
+end
+
+function client.init()
 	--ammotype = GetString("savegame.mod.ammotype")
 	ammotype = "308"
 
-	RegisterTool("gun-scarhg", "TCR-308", "MOD/vox/scargrey.vox", 1)
-	SetBool("game.tool.gun-scarhg.enabled", true)
+	-- (v2) RegisterTool moved to server.init()
+	-- (v2) tool enabled per player in server.init()/server.tick()
 	vox = ("MOD/vox/scargrey.vox")
 	GunName = "ScarH"
 	Cartridge = "762x51"
@@ -364,10 +378,10 @@ function init()
 	
 	if camo == "snakey" then
 	vox = "MOD/vox/scarsnakey.vox"
-	RegisterTool("gun-scarhg", "TCR-308", vox, 1)
+	-- (v2) RegisterTool moved to server.init()
 	elseif camo == "grey" then
 	vox = "MOD/vox/scargrey.vox"
-	RegisterTool("gun-scarhg", "TCR-308", vox, 1)
+	-- (v2) RegisterTool moved to server.init()
 	end
 	-------------------------
 	holocolors = {"red","green"}
@@ -376,7 +390,7 @@ function init()
 	currentholoreticle = 1
 end
 
-function Shoot(Type)
+function FireRound(Type)
 	local perk = "762x51"
 	local perktable=gunperks[perk][Type]
 	local damage = perktable["damage"]
@@ -438,6 +452,9 @@ function Shoot(Type)
 	projectileHandler.shellNum = (projectileHandler.shellNum%#projectileHandler.shells) + 1
 
 	loadedShell.predictedBulletVelocity = VecAdd(loadedShell.predictedBulletVelocity, Vec((math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2))
+	loadedShell.factor = barrelFactordamage or 1
+	loadedShell.active = false -- simulated by gunnet.lua (client visuals + server world)
+	GunNet_Fire(loadedShell, muzzle == "muzzle1" and "MOD/snd/Weapons/scar/scarh_sup_0.ogg" or "MOD/snd/Weapons/scar/scarh_0.ogg", 0.7)
 
 	local barrelend = barrellength + muzzlelength
 	SpawnParticle("smoke", TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(0.25, -0.5, -2.4-barrelend*4/3)), VecAdd(VecScale(dir, 2), GetPlayerVelocity()), 0.2, 0.3)
@@ -506,7 +523,7 @@ function Shoot(Type)
 	end
 
 	local pvel = GetPlayerVelocity()
-	local prot = QuatToEuler(GetPlayerTransform(true).rot)
+	local prot = QuatToEuler(GetPlayerTransformWithPitch().rot)
 	local ppos = GetPlayerTransform().pos
 	local camrot = QuatToEuler(GetPlayerCameraTransform().rot)
 	local ppos2 = Transform()
@@ -547,6 +564,8 @@ function ShootGrenade()
 	loadedShell.pos = gunpos
 	loadedShell.predictedBulletVelocity = VecScale(dir, 0.35*(300/distance))
 	grenadeHandler.shellNum = (grenadeHandler.shellNum%#grenadeHandler.shells) + 1
+	loadedShell.active = false -- simulated by gunnet.lua
+	GunNet_FireGrenade(loadedShell)
 
 	SpawnParticle("fire", gunpos, Vec(0, 1.0+math.random(1,10)*0.1, 0), 0.3, 0.1)
 	PlaySound(grenadelaunchersound, GetPlayerTransform().pos, 0.75, false)
@@ -619,8 +638,7 @@ function SpentCasing()
 	local casingpos = TransformToParentPoint(gt, Vec(0.55, -0.45, -1.3))
 	local fwdpos = TransformToParentPoint(gt, Vec(6+math.random()*4, -0.45+math.random()*4, -0.8+math.random()*4))
 	local direction = VecAdd(GetPlayerVelocity(), VecSub(fwdpos, casingpos))
-	casing = Spawn("MOD/vox/riflecasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))))
-	SetBodyVelocity(casing[1], direction)
+	GunNet_SpawnCasing("MOD/vox/riflecasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))), direction)
 end
 
 function Laser(active)
@@ -674,7 +692,8 @@ function Rangefinder(active)
 		end
 end
 
-function tick(dt)
+function client.tick(dt)
+	GunNet_ClientTick(dt)
 	WeaponBackgroundTick(dt)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
@@ -696,7 +715,7 @@ function tick(dt)
 	elseif camo == "grey" then
 	vox = "MOD/vox/scargrey.vox"
 	end
-	RegisterTool("gun-scarhg", "TCR-308", vox, 1)
+	-- (v2) RegisterTool moved to server.init()
 
 	if inventoryenabled and not reloading then
 		item = GetString("inventory.guns."..GetInt("inventory.curprimary")..".item")
@@ -712,7 +731,7 @@ function tick(dt)
 		end
 	end
 
-	if GetBool("game.tool.gun-scarhg.enabled") then
+	if IsToolEnabled("gun-scarhg") then
 	
 	if inventoryenabled then
 
@@ -739,12 +758,12 @@ function tick(dt)
 
 	if inventoryenabled and reloading then
 		SetBool("inventory.reloading", true)
-		SetString("game.player.tool", "gun-scarhg")
+		GunNet_SetTool("gun-scarhg")
 	end
 
 	end
 
-	if GetString("game.player.tool") == "gun-scarhg" and GetPlayerVehicle() == 0 then
+	if GetPlayerTool() == "gun-scarhg" and GetPlayerVehicle() == 0 then
 		SetBool("hud.aimdot", false)
 		WeaponTick(dt)
 
@@ -770,20 +789,20 @@ function tick(dt)
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 then
-				Shoot(tostring(bullettable[ammo]))
+				FireRound(tostring(bullettable[ammo]))
 			end
 		elseif InputPressed("usetool") and not reloading and selectfire == 1 and not selectattachments and not selectmag and selectfireTimer == 0 and GetPlayerGrabShape() == 0 and inspectTimer <= 0 and magcheckTimer == 0 and not jammed and jamclearTimer == 0 then
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 then
-				Shoot(tostring(bullettable[ammo]))
+				FireRound(tostring(bullettable[ammo]))
 				shootTimer = 0.11
 			end
 		end
 
 		if GetBool("guns.accidental.shoot") and selectfire ~= 0 then
 			--DebugPrint("Accidental Shoot")
-			Shoot(tostring(bullettable[ammo]))
+			FireRound(tostring(bullettable[ammo]))
 			SetBool("guns.accidental.shoot", false)
 		end
 
@@ -854,7 +873,7 @@ function tick(dt)
 				PlaySound(inspectsound)
 				selectattachmentsTimer = 0.5
 			end
-			UiMakeInteractive()
+			gunWantsInteractive = true
 			selectattachments = true
 			ironsight = false
 			inspectTimer = 0
@@ -888,7 +907,7 @@ function tick(dt)
 
 		if KeybindDown(Settings.keybinds.player.reload) and not reloading and selectfire > 0 and selectfireTimer <= 0 and not KeybindDown(Settings.keybinds.player.sprint) and magcheckTimer == 0 and not jammed and jamclearTimer == 0 then heldrTimer = heldrTimer + dt end
 		if KeybindDown(Settings.keybinds.player.reload) and realistic and not reloading and selectfire > 0 and selectfireTimer <= 0 and not KeybindDown(Settings.keybinds.player.sprint) and magcheckTimer == 0 and not jammed and jamclearTimer == 0 and heldrTimer > 0.2 then
-			UiMakeInteractive()
+			gunWantsInteractive = true
 			selectmag = true
 			ironsight = false
 		else
@@ -957,15 +976,14 @@ function tick(dt)
 
 		if ironsight and not (q or e) and not reloading and toprail == "sight4" then
 			local pvel = GetPlayerVelocity()
-			local prot = QuatToEuler(GetPlayerTransform(true).rot)
+			local prot = QuatToEuler(GetPlayerTransformWithPitch().rot)
 			local ppos = GetPlayerTransform().pos
 			local camrot = QuatToEuler(GetPlayerCameraTransform().rot)
 			local ppos2 = Transform()
 			ppos2.rot = QuatEuler(prot[1], camrot[2], camrot[3])
 			ppos2.rot = QuatRotateQuat(ppos2.rot, QuatEuler(InputValue("mousedy")*GetFloat("options.input.sensitivity")*0.001, InputValue("mousedx")*GetFloat("options.input.sensitivity")*0.001*math.cos(camrot[1]*0.01745329), 0))
 			ppos2.pos = ppos
-			SetPlayerTransform(ppos2, true)
-			SetPlayerVelocity(pvel)
+			-- (v2) scope look tweak disabled: SetPlayerTransform/SetPlayerVelocity are server-only. TODO: SetToolAllowedZoom
 		end
 
 
@@ -1309,9 +1327,9 @@ function tick(dt)
 					stockPos = TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(0, -0.5, -0.65))
 					if meleeTimer > 0.55 then
 						if GetShapeMaterialAtPosition(shape, stockPos) == "glass" and math.random() > 0.8 then
-							MakeHole(stockPos, 1)
+							GunNet_MakeHole(stockPos, 1)
 						else
-							MakeHole(stockPos, 0.3)
+							GunNet_MakeHole(stockPos, 0.3)
 						end
 					end
 				else
@@ -2303,8 +2321,10 @@ function tick(dt)
 	end
 end
 
-function draw()
-	if GetString("game.player.tool") == "gun-scarhg" and GetPlayerVehicle() == 0 then
+function client.draw()
+	if gunWantsInteractive then UiMakeInteractive() gunWantsInteractive = false end
+	GunNet_DebugParts()
+	if GetPlayerTool() == "gun-scarhg" and GetPlayerVehicle() == 0 then
 
 
 	if not GetBool("level.killcam.active") then
@@ -2425,7 +2445,7 @@ function draw()
 			
 
 		------IN-GAME UI------
-		if not realistic and not GetBool("level.optionstriggered") or inventoryenabled and GetString("game.player.tool") == "gun-scarhg" and GetPlayerVehicle() == 0 then
+		if not realistic and not GetBool("level.optionstriggered") or inventoryenabled and GetPlayerTool() == "gun-scarhg" and GetPlayerVehicle() == 0 then
 		if not unlimitedammo then
 			UiPush()
 				UiTranslate(UiCenter(), UiHeight()-60)
@@ -2439,7 +2459,7 @@ function draw()
 					UiText(grenadelauncherammo.."/1 - Grenade")
 				else
 					if realistic then
-						UiText(ammo.."/"..magtable2[curmagslot][3].." - "..selectfireText.." - "..bullettable[ammo])
+						UiText(ammo.."/"..magtable2[curmagslot][3].." - "..selectfireText..(bullettable[ammo] and " - "..bullettable[ammo] or ""))
 					else
 						UiText(ammo.."/"..magsize.." - "..selectfireText)
 					end
@@ -2497,14 +2517,14 @@ function draw()
 		end
 		end
 	end
-	if GetString("game.player.tool") == "gun-scarhg" and grenadelauncher and not selectattachments then
+	if GetPlayerTool() == "gun-scarhg" and grenadelauncher and not selectattachments then
 		UiPush()
 			UiTranslate(UiCenter(), UiMiddle())
 			UiAlign("center middle")
 			UiImage("ui/hud/crosshair-launcher.png")
 		UiPop()
 	end
-	if GetString("game.player.tool") == "gun-scarhg" and sideattachment and side == "side3" then
+	if GetPlayerTool() == "gun-scarhg" and sideattachment and side == "side3" then
 		UiPush()
 			local x,y,dist = UiWorldToPixel(sideattachpoint)
 			UiTranslate(x, y)
@@ -2516,7 +2536,7 @@ function draw()
 		UiPop()
 	end
 
-	if realistic and selectmag and GetString("game.player.tool") == "gun-scarhg" then
+	if realistic and selectmag and GetPlayerTool() == "gun-scarhg" then
 		hoverindex=0
 		UiPush()
 			local x,y,dist=UiWorldToPixel(magattachpoint2)
@@ -2538,7 +2558,7 @@ function draw()
 
 	------ATTACHMENTS MENU------
 	if not realistic or GetBool("level.optionstriggered") then
-	if selectattachments and GetString("game.player.tool") == "gun-scarhg" and GetPlayerVehicle() == 0 then
+	if selectattachments and GetPlayerTool() == "gun-scarhg" and GetPlayerVehicle() == 0 then
 	hoverindex=0
 		UiPush()
 			local x,y,dist=UiWorldToPixel(sightattachpoint)
@@ -2685,7 +2705,7 @@ function draw()
 		UiPop()
 	end
 	end
-	if selectattachments and GetString("game.player.tool") == "gun-scarhg" and GetPlayerVehicle() == 0 or GetBool("level.optionstriggered") and GetString("game.player.tool") == "gun-scarhg" then
+	if selectattachments and GetPlayerTool() == "gun-scarhg" and GetPlayerVehicle() == 0 or GetBool("level.optionstriggered") and GetPlayerTool() == "gun-scarhg" then
 	hoverindex=0
 	UiPush()
 		local x,y,dist=UiWorldToPixel(stockattachpoint)
@@ -2706,7 +2726,7 @@ function draw()
 
 
 	------OPTIONS UI------
-	if GetBool("level.optionstriggered") and GetString("game.player.tool") == "gun-scarhg" then
+	if GetBool("level.optionstriggered") and GetPlayerTool() == "gun-scarhg" then
 	UiPush()
 		UiAlign("center middle")
 		UiTranslate(UiCenter(), 70)
@@ -2715,7 +2735,7 @@ function draw()
 	UiPop()
 	end
 	
-	if GetBool("level.optionstriggered") and GetString("game.player.tool") == "gun-scarhg" then
+	if GetBool("level.optionstriggered") and GetPlayerTool() == "gun-scarhg" then
 
 	UiAlign("center middle")
 	UiTranslate(300, 250)

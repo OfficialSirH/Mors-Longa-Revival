@@ -1,62 +1,83 @@
+#version 2
+#include "script/include/player.lua"
 #include "../../Settings.lua"
 
-function init()
+-- (v2) Split. Server, per player: keeps the vehicle driving while the player is out of it (drive-by),
+-- positions the player next to the driver seat (DriveVehicle/SetPlayerVehicle/SetPlayerTransform are server-only),
+-- puts them back in when the key is released. The drive-by key is the player's own keybind setting, so the
+-- client reports it (server.setDriveBy). Client: forced 1st-person camera, fuel bar of the driven car.
+
+---------------------------------------------------------------- server
+
+function server.init()
 	Init_Settings()
-	mouseXtotal = 0
-	mouseYtotal = 0
-	turn = 0
-	drive = 0
-	brake = false
+	DriveBy = {}         -- [player] = drive-by key held (reported by the client)
+	DriveState = {}      -- [player] = { vehicle = handle, driving = bool, cycled = bool }
+	shared.driveByVehicle = {}
 end
-function tick(dt)
 
-	if GetPlayerVehicle() ~= 0 and not Driving then
-		RegisteredVehicle = GetPlayerVehicle()
-		Driving = true
-		cycled = false
-		mouseYtotal = 0
-		mouseXtotal = 0
+function server.setDriveBy(p, down)
+	DriveBy[p] = down
+end
+
+function server.tick(dt)
+	for p in Players() do
+		DriveByTick(p, dt)
+	end
+	for p in PlayersRemoved() do
+		DriveBy[p] = nil
+		DriveState[p] = nil
+		shared.driveByVehicle[p] = nil
+	end
+end
+
+function DriveByTick(p, dt)
+	local s = DriveState[p]
+	if not s then s = { vehicle = 0, driving = false, cycled = false } DriveState[p] = s end
+	local playerVehicle = GetPlayerVehicle(p)
+
+	if playerVehicle ~= 0 and not s.driving then
+		s.vehicle = playerVehicle
+		s.driving = true
+		s.cycled = false
 	end
 
-	if GetPlayerVehicle() == 0 and not Driving then
-		RegisteredVehicle = 0
+	if playerVehicle == 0 and not s.driving then
+		s.vehicle = 0
 	end
 
-	if RegisteredVehicle ~= 0 and not IsHandleValid(RegisteredVehicle) then
-		RegisteredVehicle = 0
-		Driving = false
+	if s.vehicle ~= 0 and not IsHandleValid(s.vehicle) then
+		s.vehicle = 0
+		s.driving = false
 	end
 
-	if Driving then
-		if not HasTag(RegisteredVehicle, "cfg") and GetPlayerVehicle() ~= 0 then
-			--SetCameraTransform(Transform(GetPlayerTransform().pos))
+	local outside = false
+	if s.driving then
+		local keyDown = DriveBy[p] == true
+		if GetPlayerHealth(p) <= 0 or InputPressed("interact", p) and s.cycled and not keyDown then
+			RemoveTag(GetVehicleBody(s.vehicle), "bounded")
+			s.vehicle = 0
+			s.driving = false
 		end
+		s.cycled = true
 
-		if GetPlayerHealth() <= 0 or InputPressed("interact") and cycled and not KeybindDown(Settings.keybinds.vehicles.drive_by_shooting) then
-			RemoveTag(GetVehicleBody(RegisteredVehicle), "bounded")
-			RegisteredVehicle = 0
-			Driving = false
-		end
-		cycled = true
-
-		if KeybindDown(Settings.keybinds.vehicles.drive_by_shooting) and not HasTag(RegisteredVehicle, "cfg") and not HasTag(RegisteredVehicle, "planeVehicle") then
-			local drive = InputValue("up") - InputValue("down")
-			local turn = InputValue("left") - InputValue("right")
-			local brake = InputDown("Space")
+		if keyDown and s.vehicle ~= 0 and not HasTag(s.vehicle, "cfg") and not HasTag(s.vehicle, "planeVehicle") then
+			local RegisteredVehicle = s.vehicle
+			local drive = InputValue("up", p) - InputValue("down", p)
+			local turn = InputValue("left", p) - InputValue("right", p)
+			local brake = InputDown("Space", p)
 			if (tonumber(GetTagValue(RegisteredVehicle, "fuelLevel")) or 0) > 0 then
 				DriveVehicle(RegisteredVehicle, drive, turn, brake)
 			end
 			SetTag(RegisteredVehicle, "drive", drive)
 			SetTag(RegisteredVehicle, "turn", turn)
 			SetTag(RegisteredVehicle, "brake", brake and 1 or 0)
-			SetInt('FuelScript.vehicleToDraw',RegisteredVehicle)
+			outside = true
 
-			SetPlayerVehicle(0)
-			mouseYtotal = 0
-			mouseXtotal = 0
+			SetPlayerVehicle(0, p)
 			local driverPos = GetVehicleDriverPos(RegisteredVehicle)
 			local t = GetVehicleTransform(RegisteredVehicle)
-			local CurrentPlayerTrans = GetPlayerTransform(true)
+			local CurrentPlayerTrans = GetPlayerTransformWithPitch(p)
 			local driverWorldPos = TransformToParentPoint(t, VecAdd(driverPos, Vec(-1.5,-1.2,0)))
 			local upVec = QuatRotateVec(QuatRotateQuat(t.rot, QuatEuler(0,0,30)), Vec(0,1))
 			if driverPos[1] > 0 then
@@ -64,21 +85,51 @@ function tick(dt)
 				upVec = QuatRotateVec(QuatRotateQuat(t.rot, QuatEuler(0,0,-30)), Vec(0,1))
 			end
 
-
 			local dirVec = QuatRotateVec(CurrentPlayerTrans.rot, Vec(0,0,-1))
 			local driverWorldQuat = UMF_VecToQuatLookAt(dirVec, upVec)
-			SetPlayerTransform(Transform(driverWorldPos,driverWorldQuat),true)
+			SetPlayerTransformWithPitch(Transform(driverWorldPos,driverWorldQuat), p)
 		else
-			SetPlayerVehicle(RegisteredVehicle)
+			SetPlayerVehicle(s.vehicle, p) -- as v1: right after leaving (vehicle = 0) this puts the player out
 		end
-		--SetBool("level.map_moved", true)
+	end
+	local shown = outside and s.vehicle or 0
+	if shared.driveByVehicle[p] ~= shown then shared.driveByVehicle[p] = shown end
+end
 
-		if Settings.game.forced_1st_person_driving.value then
-			if not HasTag(RegisteredVehicle, "cfg") and GetPlayerVehicle() ~= 0 then
-				mouseupdate(dt)
-			end
+---------------------------------------------------------------- client
+
+function client.init()
+	Init_Settings()
+	mouseXtotal = 0
+	mouseYtotal = 0
+	lastDriveByDown = false
+	lastClientVehicle = 0
+end
+
+function client.tick(dt)
+	local down = KeybindDown(Settings.keybinds.vehicles.drive_by_shooting) and true or false
+	if down ~= lastDriveByDown then
+		lastDriveByDown = down
+		ServerCall("server.setDriveBy", GetLocalPlayer(), down)
+	end
+
+	local v = (shared.driveByVehicle or {})[GetLocalPlayer()] or 0
+	if v ~= 0 then
+		SetInt('FuelScript.vehicleToDraw', v)
+		mouseYtotal = 0
+		mouseXtotal = 0
+	end
+
+	local playerVehicle = GetPlayerVehicle()
+	if playerVehicle ~= lastClientVehicle then -- v1 reset the mouse totals when entering a car
+		lastClientVehicle = playerVehicle
+		mouseYtotal = 0
+		mouseXtotal = 0
+	end
+	if Settings.game.forced_1st_person_driving.value then
+		if playerVehicle ~= 0 and not HasTag(playerVehicle, "cfg") then
+			mouseupdate(dt)
 		end
-
 	end
 end
 
@@ -96,6 +147,7 @@ function mouseupdate(dt)
 	mouseYtotal = mouseYtotal + mouseY
 	SetCameraTransform(Transform(GetPlayerTransform().pos, QuatEuler(vehicleX - mouseYtotal/13,vehicleY - mouseXtotal/13,0)))
 end
+
 function TransformToParentQuat(pT,q)
 	return TransformToParentTransform(pT,Transform(Vec(),q)).rot
 end
@@ -137,7 +189,7 @@ function UMF_VecToQuatLookAt(vec, up)
 	  end
 	end
   end
-  function handleCommand(cmd) HandleQuickload(cmd) end
+  function server.handleCommand(cmd) HandleQuickload(cmd) end
   function HandleQuickload(cmd)
 	  for _, word in ipairs(splitString(cmd, " ")) do
 		  if word == "quickload" then

@@ -1,3 +1,5 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include "../../../../Config.lua"
 #include "../../../../script/utility.lua"
@@ -7,7 +9,9 @@
 #include "uiTools.lua"
 ]]
 
-function init()
+-- (v2) server: clock, environment blending, sandstorm, campfire/bed time skip (any player).
+-- Client: storm sound, campfire particles, the clock text while sleeping. level.daynight.* keys are synced.
+function server.init()
 
     init_config()
 
@@ -57,7 +61,7 @@ function init()
 	-- AddTime24(0,0,0,math.random())
 end
 
-function tick()
+function server.tick()
 
     ExternalOverride = GetBool("level.daynight.override")
 
@@ -77,14 +81,22 @@ function tick()
 
     Campfires = FindLights("Campfire", true)
     for i=1,#Campfires do
-        PlayerPos = GetPlayerTransform().pos
         CampfirePos = GetLightTransform(Campfires[i]).pos
-        DistToPlayer = VecLength(VecSub(PlayerPos,CampfirePos))
-        if DistToPlayer < 10 then
-            AddTime24(20,0,0,0)
-            TryEndSandStorm(20/CFG.timeScale*60)
-            smoke()
-            fire()
+        for p in Players() do
+            if VecLength(VecSub(GetPlayerTransform(p).pos,CampfirePos)) < 10 then
+                AddTime24(20,0,0,0)
+                TryEndSandStorm(20/CFG.timeScale*60)
+                break
+            end
+        end
+    end
+
+    -- Sleeping in a bed (was in draw in v1): any player holding interact on a "Bed" body skips time.
+    for p in Players() do
+        if InputDown("interact", p) and HasTag(GetPlayerInteractBody(p), "Bed") then
+            AddTime24(0,0,0.05,0)
+            TryEndSandStorm(HoursToSeconds(0.1)/CFG.timeScale*60)
+            break
         end
     end
 
@@ -96,10 +108,10 @@ function tick()
     tickSandstorm()
 
 
-    SetInt("level.daynight.seconds", Seconds)
-    SetString("level.dayphase", GetDayPhaseTitle())
-    SetFloat("level.daynight.days", Days)
-    SetString("level.daynight.time_formatted", GetTimeFormatted12H(Seconds))
+    SetInt("level.daynight.seconds", Seconds, true)
+    SetString("level.dayphase", GetDayPhaseTitle(), true)
+    SetFloat("level.daynight.days", Days, true)
+    SetString("level.daynight.time_formatted", GetTimeFormatted12H(Seconds), true)
 
 
     -- Update daynight from other scripts through registry.
@@ -113,19 +125,31 @@ function tick()
 
 end
 
-function draw()
+function client.init()
+    initSandstormSounds()
+end
+
+function client.tick()
+    tickSandstormSounds()
+    for _, light in ipairs(FindLights("Campfire", true)) do
+        CampfirePos = GetLightTransform(light).pos -- global read by smoke()/fire()
+        if VecLength(VecSub(GetPlayerTransform().pos, CampfirePos)) < 10 then
+            smoke()
+            fire()
+        end
+    end
+end
+
+function client.draw()
 
     if InputDown("interact") and HasTag(GetPlayerInteractBody(), "Bed") then
-
-        AddTime24(0,0,0.05,0)
-        TryEndSandStorm(HoursToSeconds(0.1)/CFG.timeScale*60)
 
         UiPush()
         UiTranslate(UiCenter(), UiMiddle() - 100)
             UiFont("regular.ttf", 100)
             UiAlign("center middle")
             UiTextShadow(0, 0, 0, 1, 1, 1)
-            UiText(GetTimeFormatted12H(Seconds))
+            UiText(GetString("level.daynight.time_formatted"))
         UiPop()
 
     end

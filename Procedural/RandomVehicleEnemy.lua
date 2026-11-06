@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: timed enemy/civilian/refugee/helicopter vehicle spawns.
 --[[
 #include "../scripts/TDSU/tdsu.lua"
 #include "../Settings.lua"
@@ -7,7 +10,7 @@
 local disable_spawning = "savegame.mod.procedural.disable.spawn_roadblocks"
 
 
-function init()
+function server.init()
 
 	Init_Settings()
 	DistanceProgressed = GetFloat("savegame.mod.distanceProgressed")
@@ -62,7 +65,7 @@ function init()
 end
 
 
-function tick(dt)
+function server.tick(dt)
 	if GetBool(disable_spawning) or GetTime() < 1 then
 		return
 	end
@@ -115,19 +118,25 @@ function tick(dt)
 		MaxTime_aaf = RandomSpreadPercent(math.random(TimerRange_aaf[1],  TimerRange_aaf[2])) * 60
 		SpawnTimer_AAF = TimerCreateSeconds(MaxTime_aaf)
 
-		if DistanceProgressed > 5000 then
-			whichone = "AAF2" -- jeep
-		elseif DistanceProgressed > 8000 then
+		-- (v2 fix) original left the global 'whichone' unset below 5000 m (crash at the concat
+		-- before any civ spawn, otherwise it re-spawned the last civ vehicle). No AAF spawn before 5000 m.
+		local whichone = nil
+		-- (v2 fix) 8000 m checked first; the original order made the truck branch unreachable.
+		if DistanceProgressed > 8000 then
 			if math.random() * timerDiv > 0.7 then
 				whichone = "AAF1" -- truck
 			else
 				whichone = "AAF2" -- jeep
 			end
+		elseif DistanceProgressed > 5000 then
+			whichone = "AAF2" -- jeep
 		end
 
-		local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" .. whichone ..".xml"
-		entities = Spawn(xml, Transform(Vec(-300, 4.5, 3), QuatEuler(0,-90,0)))
-		addSpawnedVehicleXMLToRegistry(entities, xml)
+		if whichone then
+			local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" .. whichone ..".xml"
+			entities = Spawn(xml, Transform(Vec(-300, 4.5, 3), QuatEuler(0,-90,0)))
+			addSpawnedVehicleXMLToRegistry(entities, xml)
+		end
 	end
 
 
@@ -193,17 +202,18 @@ function SpawnRandomEnemyVehicle(opt_pos)
 
 		whichone = "D" .. math.random(1, differentDvehicles)
 
-		if dist > 4000 then
-
-			whichone = "AAF2" -- jeep
-
-		elseif dist > 8000 then
+		-- (v2 fix) 8000 m checked first; the original order made the truck branch unreachable.
+		if dist > 8000 then
 
 			if math.random() > 0.7 then
 				whichone = "AAF1" -- truck
 			else
 				whichone = "AAF2" -- jeep
 			end
+
+		elseif dist > 4000 then
+
+			whichone = "AAF2" -- jeep
 
 		end
 
@@ -224,7 +234,7 @@ function randomFloat(min,max)
 	max = tonumber(max) or 1
 	return math.random()*(max-min)+min
 end
-function handleCommand(cmd) HandleQuickload(cmd) end
+function server.handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then

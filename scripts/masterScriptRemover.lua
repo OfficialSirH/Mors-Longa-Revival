@@ -1,4 +1,7 @@
-function tick(dt)
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: deletes scripts queued for removal by other scripts (level.script_remover.queue).
+function server.tick(dt)
 	handleDeletionQueue()
 end
 

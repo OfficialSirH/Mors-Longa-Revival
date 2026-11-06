@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns random vehicles at generated road locations.
 --[[
 #include "../scripts/TDSU/tdsu.lua"
 ]]
@@ -7,7 +10,7 @@ local disable_spawning = "savegame.mod.procedural.disable.spawn_vehicles"
 
 
 
-function init()
+function server.init()
 
 	DebugSpawnAll = false --##
 	DebugSpawnGoodCondition = false
@@ -35,7 +38,7 @@ function init()
 	end
 
 end
-function tick()
+function server.tick()
 
 	if GetBool(disable_spawning) then
 		return

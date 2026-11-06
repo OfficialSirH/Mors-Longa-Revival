@@ -12,7 +12,7 @@
 			<script file="MOD/scripts/pauseMenu.lua"/>
 			<script file="MOD/scripts/Game/script.lua"/>
 			<script file="MOD/scripts/window.lua"/>
-			<script file="MOD/Config.lua"/>
+			<script file="MOD/scripts/ConfigMenu.lua"/>
 			<script file="MOD/scripts/UI/SpawnMenu.lua"/>
 			<script file="MOD/scripts/Game/CarAlarm.lua"/>
 			<script file="MOD/scripts/game/daynight/script/daynight_main.lua"/>

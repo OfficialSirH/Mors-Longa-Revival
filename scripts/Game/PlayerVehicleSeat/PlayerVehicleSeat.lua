@@ -1,10 +1,14 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include ../../TDSU/tdsu.lua
 ]]
 
 local player_body_tag = "PlayerVehicleBody"
 
-function init()
+-- (v2) client: a local (client-spawned) copy of the player model sits in the driver seat when the camera is
+-- outside the car. Other players' models in seats: Phase 3 (vehicle seats).
+function client.init()
 	PlayerBody = 0
 	UPDATE = 1
 end
@@ -42,7 +46,7 @@ function spawnPlayerRagdoll()
 	end
 
 end
-function update()
+function client.update()
 	if not IsHandleValid(PlayerBody) then
 		spawnPlayerRagdoll()
 	end

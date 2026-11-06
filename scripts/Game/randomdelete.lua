@@ -1,4 +1,7 @@
-function tick()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: deletes/keeps tagged level entities once per generated road piece
+function server.tick()
 	if GetBool("level.roadgen") then
 		local shapes = FindShapes("randomdelete", true)
 		for i=1,#shapes do

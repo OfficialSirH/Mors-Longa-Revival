@@ -10,7 +10,7 @@
 			<script file="MOD/scripts/Game/script.lua"/>
 			<script file="MOD/scripts/window.lua"/>
 			<script file="MOD/script/Thermals.lua"/>
-			<script file="MOD/Config.lua"/>
+			<script file="MOD/scripts/ConfigMenu.lua"/>
 			<script file="MOD/scripts/UI/SpawnMenu.lua"/>
 			<script file="MOD/scripts/UI/MainMenu/ingame_settings.lua"/>
 			<script file="MOD/scripts/Game/CarAlarm.lua"/>

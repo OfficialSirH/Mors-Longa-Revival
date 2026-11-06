@@ -1,4 +1,8 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server. Uses the host's position for now (Phase 3: pick a player).
+-- (v2 fix, user OK'd) original compared the function itself (GetPlayerVehicle without ()), so no ambush ever happened.
+function server.init()
 	AmbushTime = math.random(5*60,27*60)+math.random()
 	AmbushFaction = nil
 	AmbushFactions = {"cult","insurgent"}
@@ -27,10 +31,10 @@ function init()
 
 end
 
-function tick(dt)
+function server.tick(dt)
 	AmbushTime = AmbushTime - dt
 	local number = math.random()
-	if AmbushTime < 0 and GetPlayerVehicle == 0 and (number <= 0.5 or TimeWithoutAmbush >= 3) then
+	if AmbushTime < 0 and GetPlayerVehicle() == 0 and (number <= 0.5 or TimeWithoutAmbush >= 3) then
 		TimeWithoutAmbush = 0
 		if GetString("level.dayphase") == "Night" then
 			AmbushFaction = AmbushFactions[1]
@@ -52,7 +56,7 @@ function tick(dt)
 			end
 		end
 		AmbushTime = math.random(14*60,32*60)+math.random()
-	elseif AmbushTime < 0 and GetPlayerVehicle == 0 and number > 0.5 then
+	elseif AmbushTime < 0 and GetPlayerVehicle() == 0 and number > 0.5 then
 		AmbushTime = math.random(3*60,7*60)+math.random()
 		TimeWithoutAmbush= TimeWithoutAmbush + 1
 	end

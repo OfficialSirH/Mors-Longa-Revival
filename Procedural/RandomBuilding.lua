@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns random buildings at generated road locations.
 --[[
 #include "EnemySpawnsProcessor.lua"
 #include "../Settings.lua"
@@ -8,7 +11,7 @@
 local disable_spawning = "savegame.mod.procedural.disable.spawn_buildings"
 
 
-function init()
+function server.init()
 
 	Init_Settings()
 
@@ -48,7 +51,7 @@ function init()
 
 end
 
-function tick()
+function server.tick()
 
 	DistanceProgressed = GetFloat("savegame.mod.distanceProgressed")
 	LastSpawnedWarehouseDist = GetFloat("savegame.mod.LastSpawnedWarehouseDist")

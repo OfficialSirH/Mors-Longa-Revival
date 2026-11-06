@@ -2,7 +2,7 @@
 	<group name="instance=MOD/level_scripts.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 		<script file="sandbox.lua"/>
 		<group name="MorsLonga" layer="-MorsLonga">
-			<script file="MOD/Config.lua"/>
+			<script file="MOD/scripts/ConfigMenu.lua"/>
 			<script file="MOD/scripts/newLeveltoLEVEL.lua"/>
 			<script file="MOD/scripts/Game/Blood/bloodpool.lua"/>
 			<script file="MOD/scripts/Radio.lua"/>
