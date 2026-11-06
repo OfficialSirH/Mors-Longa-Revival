@@ -12,6 +12,17 @@ Init_Settings()
 -- Impact sounds are loaded on first use: v2 scripts may not call engine
 -- functions such as LoadSound while the file is loading (before init).
 local gunImpactSoundsLoaded = false
+-- (v2, Phase 2) gun scripts are static now (always loaded): a gun only runs its tool logic / HUD while it is in one
+-- of this player's inventory slots. v1 deleted the script when the gun left its slot; without this the HUD read the
+-- wrong slot's data for the few frames until the server switched the tool away.
+function GunInInventory(id)
+	for i = 1, 4 do
+		local item = GetString("inventory.guns." .. i .. ".item")
+		if item == id or item:sub(1, #id + 1) == id .. "_" then return true end
+	end
+	return false
+end
+
 function GunFunctions_LoadSounds()
 	if gunImpactSoundsLoaded then return end
 	gunImpactSoundsLoaded = true

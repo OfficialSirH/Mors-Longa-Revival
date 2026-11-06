@@ -1,3 +1,5 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include "script/common.lua"
 #include "UiHealthOverlay_Draw.lua"
@@ -14,13 +16,19 @@
 -- }
 
 
-function init()
+function client.init()
 
 	TICK = 0
 
 	Init_Settings()
 
-	Hitboxes = FindTriggers("hitbox")
+	-- (v2) this machine's own (client-spawned, local) copies of the six hitboxes. They hold the per-limb state
+	-- tags (QueriedDamage, S, Bleed, Fracture, CurrentHealth) that this script, the inventory and the guns read
+	-- and write. They carry the "localhitbox" tag only, so NPC code never sees them; the real hit triggers per
+	-- player are server-side (scripts/PlayerHitboxes.lua), which forwards damage to "health.incoming.*".
+	for _, old in ipairs(FindTriggers("localhitbox", true)) do Delete(old) end
+	Spawn(LOCAL_HITBOX_XML, GetPlayerTransform())
+	Hitboxes = FindTriggers("localhitbox", true)
 	init_health()
 	init_armor()
 
@@ -292,7 +300,30 @@ end
 
 
 
-function tick(dt)
+function client.tick(dt)
+
+	-- (v2) "health.status.dead" is a one-tick pulse read by the inventory (drops items on death). v1 relied on
+	-- Die.lua clearing it; that script now runs on the server, so the health script clears its own flag here.
+	if GetBool("health.status.dead") then SetBool("health.status.dead", false) end
+	HealthNet_Update()
+
+	-- (v2) damage the server forwarded from this player's hit triggers
+	for _, Hitbox in ipairs(Hitboxes) do
+		local key = "health.incoming." .. GetTagValue(Hitbox, "localhitbox")
+		local incoming = GetFloat(key)
+		if incoming ~= 0 then
+			SetFloat(key, 0)
+			SetTag(Hitbox, "QueriedDamage", (tonumber(GetTagValue(Hitbox, "QueriedDamage")) or 0) + incoming)
+		end
+	end
+	-- (v2) explosions relayed by the server (v1: handleCommand "explosion ...")
+	local explosions = GetString("health.explosions")
+	if explosions ~= "" then
+		SetString("health.explosions", "")
+		for s, x, y, z in explosions:gmatch("(%S+) (%S+) (%S+) (%S+);") do
+			HealthExplosion(tonumber(s), tonumber(x), tonumber(y), tonumber(z))
+		end
+	end
 
 	-- -- Match player vel to vehicle vel upon vehicle exit.
 	-- PlayerExitedVehicle = GetPlayerVehicle() ~= LastPlayerVehicleVel
@@ -392,12 +423,12 @@ function tick(dt)
 	end
 
 	TotalHealth = 0
-	if GetPlayerHealth() > 0 then
+	if GetPlayerHealth() > 0 and not HealthNet_Dying() then -- (v2) not while the server applies our death
 		DeathPlayed = false
 		if dead then
 			for i = 1, #Hitboxes do
 				Hitbox = Hitboxes[i]
-				CurrentBodypart = GetTagValue(Hitbox, "hitbox")
+				CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 				Health[CurrentBodypart]["CurrentHealth"] = Health[CurrentBodypart]["MaxHP"] -- this reheals the player and removes all effects after they die
 				RemoveTag(Hitbox, "Fracture")
 				RemoveTag(Hitbox, "Bleed")
@@ -408,7 +439,7 @@ function tick(dt)
 	end
 
 	if not dead then
-		SetPlayerHealth(1)
+		HealthNet_SetPlayerHealth(1)
 		SetFloat("game.player.health", 1)
 	end
 
@@ -451,12 +482,12 @@ function tick(dt)
 	--	Armor[2]["Active"] = false
 	--end
 	TotalHealth = 0
-	if GetPlayerHealth() > 0 then
+	if GetPlayerHealth() > 0 and not HealthNet_Dying() then -- (v2) not while the server applies our death
 		DeathPlayed = false
 		if dead then
 			for i = 1, #Hitboxes do
 				Hitbox = Hitboxes[i]
-				CurrentBodypart = GetTagValue(Hitbox, "hitbox")
+				CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 				Health[CurrentBodypart]["CurrentHealth"] = Health[CurrentBodypart]["MaxHP"] -- this reheals the player and removes all effects after they die
 				RemoveTag(Hitbox, "Fracture")
 				RemoveTag(Hitbox, "Bleed")
@@ -468,19 +499,19 @@ function tick(dt)
 	local BASE_PLAYER_WALK_SPEED = 7
 	--local WF = (2-GetInt("inventory.weight")/159)/2
 	if PlayerSlow and not Numbing then
-		SetPlayerWalkingSpeed(BASE_PLAYER_WALK_SPEED * .5 * CurWalkingMode/WalkingModes)
+		HealthNet_SetWalkingSpeed(BASE_PLAYER_WALK_SPEED * .5 * CurWalkingMode/WalkingModes)
 	else
 		if KeybindDown(Settings.keybinds.player.sprint) then
 			if Athletic then
-				SetPlayerWalkingSpeed(BASE_PLAYER_WALK_SPEED*1.5)
+				HealthNet_SetWalkingSpeed(BASE_PLAYER_WALK_SPEED*1.5)
 			else
-				SetPlayerWalkingSpeed(BASE_PLAYER_WALK_SPEED*1.25)
+				HealthNet_SetWalkingSpeed(BASE_PLAYER_WALK_SPEED*1.25)
 			end
 			if PlayerSlow then
 				BLDMG = BLDMG + dt
 			end
 		else
-			SetPlayerWalkingSpeed(BASE_PLAYER_WALK_SPEED * .8 * CurWalkingMode/WalkingModes)
+			HealthNet_SetWalkingSpeed(BASE_PLAYER_WALK_SPEED * .8 * CurWalkingMode/WalkingModes)
 		end
 	end
 	if GetString("savegame.mod.difficulty") == "hardcore" then
@@ -490,8 +521,8 @@ function tick(dt)
 	end
 	InPain = false
 
-	RLEGL = FindTrigger("RLEG")
-	LLEGL = FindTrigger("LLEG")
+	RLEGL = FindTrigger("localRLEG", true)
+	LLEGL = FindTrigger("localLLEG", true)
 
 
 	-- local inHeli = false
@@ -513,9 +544,9 @@ function tick(dt)
 	--DebugPrint("EXPECTED FALL DAMAGE = "..Falling)
 	if markedforfalldamage and Plv[2] > -0.5 then
 		--DebugPrint("Fall damage executed")
-		RLEGL = FindTrigger("RLEG")
-		LLEGL = FindTrigger("LLEG")
-		TORSO = FindTrigger("TORSO")
+		RLEGL = FindTrigger("localRLEG", true)
+		LLEGL = FindTrigger("localLLEG", true)
+		TORSO = FindTrigger("localTORSO", true)
 		SetTag(RLEGL, "QueriedDamage", Falling*FallDamage)
 		SetTag(RLEGL, "S", 1)
 		SetTag(LLEGL, "QueriedDamage", Falling*FallDamage)
@@ -554,7 +585,7 @@ function tick(dt)
 
 		-- DebugWatch(CurrentBodypart, Health[CurrentBodypart]["CurrentHealth"])
 
-		if GetTagValue(Hitbox, "hitbox") == "HEAD" then
+		if GetTagValue(Hitbox, "localhitbox") == "HEAD" then
 			RemoveTag(Hitbox, "Bleed")
 			SetTag(Hitbox, "S", 0)
 		end
@@ -569,7 +600,7 @@ function tick(dt)
 		end
 
 		Pen = tonumber(GetTagValue(Hitbox, "S"))
-		CurrentBodypart = GetTagValue(Hitbox, "hitbox")
+		CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 		TotalHealth = TotalHealth + Health[CurrentBodypart]["CurrentHealth"]
 		CHP = tonumber(Health[CurrentBodypart]["CurrentHealth"]) -- health for bodypart
 		CAL = tonumber(Health[CurrentBodypart]["Armor"]) or 0 -- armor level for bodypart
@@ -793,7 +824,7 @@ function tick(dt)
 						Hitbox2 = Hitboxes[z]
 						if not HasTag(Hitbox2, "BlackOut") then
 							DDMG = QueriedDamage / (#Hitboxes - #BlackOuts)
-							CurrentBodypart2 = GetTagValue(Hitbox2, "hitbox")
+							CurrentBodypart2 = GetTagValue(Hitbox2, "localhitbox")
 							CHP2 = tonumber(Health[CurrentBodypart2]["CurrentHealth"])
 							if not Godmode then
 								Health[CurrentBodypart2]["CurrentHealth"] = CHP2 - DDMG / (1 + CAL / 3)
@@ -818,7 +849,7 @@ function tick(dt)
 
 		if CurrentBodypart == "HEAD" or CurrentBodypart == "TORSO" then
 			if tonumber(Health[CurrentBodypart]["CurrentHealth"]) <= 0 then -- Kills player if health is 0 for head or torso
-				SetPlayerHealth(0)
+				HealthNet_SetPlayerHealth(0) -- (v2) also requests the death ragdoll, once per death
 				SetBool("health.status.dead", true)
 				dead = true
 				if not DeathPlayed then
@@ -891,7 +922,7 @@ end
 
 function reset_hitboxes(dt)
 	for _, Hitbox in ipairs(Hitboxes) do
-		CurrentBodypart = GetTagValue(Hitbox, "hitbox")
+		CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 		Health[CurrentBodypart]["CurrentHealth"] = Health[CurrentBodypart]["MaxHP"] -- this reheals the player and removes all effects after they die
 		RemoveTag(Hitbox, "Fracture")
 		RemoveTag(Hitbox, "Bleed")
@@ -905,7 +936,7 @@ function SetHitboxes(dt)
 	minused = 2.3
 	rad = 0.01
 
-	if GetTagValue(Hitbox, "hitbox") == "HEAD" then
+	if GetTagValue(Hitbox, "localhitbox") == "HEAD" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = TransformToParentTransform(PCT, Transform(Vec(0, 2.2 - minused, 0)))
 		if GetPlayerVehicle() ~= 0 then
@@ -917,7 +948,7 @@ function SetHitboxes(dt)
 		--VisualizePoint(B.pos, 0.3, 1,1,1)
 	end
 
-	if GetTagValue(Hitbox, "hitbox") == "TORSO" then
+	if GetTagValue(Hitbox, "localhitbox") == "TORSO" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = TransformToParentTransform(PCT, Transform(Vec(0, 1.8 - minused, 0)))
 		if GetPlayerVehicle() ~= 0 then
@@ -929,7 +960,7 @@ function SetHitboxes(dt)
 		--VisualizePoint(B.pos, 0.6, 0.5,0.5,0.5)
 	end
 
-	if GetTagValue(Hitbox, "hitbox") == "LARM" then
+	if GetTagValue(Hitbox, "localhitbox") == "LARM" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = ternary(
 			GetPlayerVehicle() ~= 0, TransformToParentTransform(PCT, Transform(Vec(0, 1.6 - minused, 0))),
@@ -944,7 +975,7 @@ function SetHitboxes(dt)
 		--VisualizePoint(B.pos, 0.8, 0,1,0)
 	end
 
-	if GetTagValue(Hitbox, "hitbox") == "RARM" then
+	if GetTagValue(Hitbox, "localhitbox") == "RARM" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = ternary(
 			GetPlayerVehicle() ~= 0, TransformToParentTransform(PCT, Transform(Vec(0, 1.6 - minused, 0))),
@@ -959,7 +990,7 @@ function SetHitboxes(dt)
 		--VisualizePoint(B.pos, 0.8, 1,0,0)
 	end
 
-	if GetTagValue(Hitbox, "hitbox") == "LLEG" then
+	if GetTagValue(Hitbox, "localhitbox") == "LLEG" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = ternary(
 			GetPlayerVehicle() ~= 0, TransformToParentTransform(PCT, Transform(Vec(0, 1.6 - minused, 0))),
@@ -973,7 +1004,7 @@ function SetHitboxes(dt)
 		--SpawnParticle(hbox.pos,Vec(0,0,0),1)
 		--VisualizePoint(B.pos, 0.8, 0,1,0)
 	end
-	if GetTagValue(Hitbox, "hitbox") == "RLEG" then
+	if GetTagValue(Hitbox, "localhitbox") == "RLEG" then
 		hbox = GetTriggerTransform(Hitbox)
 		B = ternary(
 			GetPlayerVehicle() ~= 0, TransformToParentTransform(PCT, Transform(Vec(0, 1.6 - minused, 0))),
@@ -1011,7 +1042,7 @@ function UpdateHealthState(dt)
 	local Injured = false
 	for i, hitBox in pairs(Hitboxes) do
 
-		local CurrentBodypart = GetTagValue(hitBox, "hitbox")
+		local CurrentBodypart = GetTagValue(hitBox, "localhitbox")
 
 		local Bleed = HasTag(hitBox, "Bleed")
 		local LastBleed = LastBodyState[CurrentBodypart]["Bleed"]
@@ -1159,7 +1190,7 @@ function health_debug(dt)
 	-- Die
 	if GetBool("savegame.mod.config.game.die") then
 		dead = true
-		SetPlayerHealth(0)
+		HealthNet_SetPlayerHealth(0)
 		SetBool("savegame.mod.config.game.die", false)
 	end
 
@@ -1326,7 +1357,7 @@ function process_drugs(dt)
 end
 
 
-function draw(dt)
+function client.draw(dt)
 	
 	
 	
@@ -1426,7 +1457,7 @@ end
 function drawAPH(dt)
 	for i = 1, #Hitboxes do
 		Hitbox = Hitboxes[i]
-		CurrentBodypart = GetTagValue(Hitbox, "hitbox")
+		CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 		ColorValue = Health[CurrentBodypart]["CurrentHealth"] / Health[CurrentBodypart]["MaxHP"]
 		UiColor(1, ColorValue, 0, 1)
 		if ColorValue == 0 then
@@ -1554,15 +1585,19 @@ function hitByExplosion(strength, pos)
 	end
 
 end
-function handleCommand(cmd)
+function client.handleCommand(cmd)
     local words = splitString(cmd, " ")
     if #words == 5 then
         if words[1] == "explosion" then
-            local strength = tonumber(words[2])
-            local x = tonumber(words[3])
-            local y = tonumber(words[4])
-            local z = tonumber(words[5])
+            HealthExplosion(tonumber(words[2]), tonumber(words[3]), tonumber(words[4]), tonumber(words[5]))
+        end
+    end
+end
 
+-- explosion near this player: line-of-sight check, then hitByExplosion (unchanged v1 logic)
+function HealthExplosion(strength, x, y, z)
+    do
+        do
 			local pos = Vec(x, y + 0.1, z)
 
 			lastEXPPos=pos
@@ -1680,7 +1715,7 @@ function process_hit_voice()
 
 	-- Why must more jank come from jank </3
 	for _, Hitbox in ipairs(Hitboxes) do
-		local currentBodypart = GetTagValue(Hitbox, "hitbox")
+		local currentBodypart = GetTagValue(Hitbox, "localhitbox")
 		local currentHealth = tonumber(Health[currentBodypart]["CurrentHealth"])
 		if currentHealth == 0 then
 			return
@@ -1690,7 +1725,7 @@ function process_hit_voice()
 	-- Check for damaged limbs.
 	for _, Hitbox in ipairs(Hitboxes) do
 
-		local currentBodypart = GetTagValue(Hitbox, "hitbox")
+		local currentBodypart = GetTagValue(Hitbox, "localhitbox")
 		local currentHealth = tonumber(Health[currentBodypart]["CurrentHealth"])
 
 		-- DebugWatch(currentBodypart, currentHealth)
@@ -1711,7 +1746,7 @@ function process_hit_voice()
 	-- Update limb data for next tick.
 	for _, Hitbox in ipairs(Hitboxes) do
 
-		local currentBodypart = GetTagValue(Hitbox, "hitbox")
+		local currentBodypart = GetTagValue(Hitbox, "localhitbox")
 		local currentHealth = tonumber(Health[currentBodypart]["CurrentHealth"])
 		HealthPreviousTick[currentBodypart] = currentHealth
 
@@ -1742,3 +1777,93 @@ function create_random_fracture()
 		break
 	end
 end
+
+
+-------------------------------------------------------------------------------------------------------------
+-- (v2) Networking
+-------------------------------------------------------------------------------------------------------------
+
+LOCAL_HITBOX_XML = [[
+<prefab version="1.5.0">
+	<group>
+		<trigger tags="localhitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
+		<trigger tags="localhitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+		<trigger tags="localhitbox=LLEG QueriedDamage=0 localLLEG" pos="0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+		<trigger tags="localhitbox=RARM QueriedDamage=0" pos="-0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+		<trigger tags="localhitbox=RLEG QueriedDamage=0 localRLEG" pos="-0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+		<trigger tags="localhitbox=TORSO QueriedDamage=0 localTORSO" pos="0.0 0.8 0.0" type="box" size=".5 .6 .3"/>
+	</group>
+</prefab>
+]]
+
+-- SetPlayerHealth is server-only, so it takes a few frames to arrive. This script keeps the engine health at 1
+-- while alive (its own per-limb health decides death); that keep-alive is only sent when the engine value differs,
+-- at most 10 times per second.
+-- Death is a state: the first death request goes out immediately (with the ragdoll request), and until the engine
+-- health has actually reached 0 and come back (respawn) no keep-alive is sent and the "alive again -> reheal"
+-- branch is skipped. v1 applied SetPlayerHealth(0) instantly; without this the reheal ran in the frames before the
+-- server applied it, and the death branch spawned a ragdoll every tick.
+local healthNetLastSend = -1
+local healthNetDying = false        -- we asked the server to kill us
+local healthNetDeathApplied = false -- the engine health has reached 0 since
+local healthNetDyingSince = 0
+function HealthNet_Dying()
+	return healthNetDying
+end
+function HealthNet_Update()
+	if not healthNetDying then return end
+	if GetPlayerHealth() <= 0 then
+		healthNetDeathApplied = true
+	elseif healthNetDeathApplied then
+		-- respawned: back to normal
+		healthNetDying = false
+		healthNetDeathApplied = false
+	elseif GetTime() - healthNetDyingSince > 2 then
+		-- the request got lost: ask again
+		healthNetDyingSince = GetTime()
+		ServerCall("server.healthSetPlayerHealth", GetLocalPlayer(), 0)
+	end
+end
+function HealthNet_SetPlayerHealth(h)
+	if h <= 0 then
+		if not healthNetDying then
+			healthNetDying = true
+			healthNetDeathApplied = false
+			healthNetDyingSince = GetTime()
+			ServerCall("server.healthSetPlayerHealth", GetLocalPlayer(), 0)
+			ServerCall("server.healthDied", GetLocalPlayer()) -- death ragdoll (was Die.lua), once per death
+		end
+		return
+	end
+	if healthNetDying then return end
+	if math.abs(GetPlayerHealth() - h) > 0.001 and GetTime() - healthNetLastSend > 0.1 then
+		healthNetLastSend = GetTime()
+		ServerCall("server.healthSetPlayerHealth", GetLocalPlayer(), h)
+	end
+end
+
+local healthNetWalkingSpeed = nil
+function HealthNet_SetWalkingSpeed(s)
+	if s ~= healthNetWalkingSpeed then
+		healthNetWalkingSpeed = s
+		ServerCall("server.healthSetWalkingSpeed", GetLocalPlayer(), s)
+	end
+end
+
+function server.healthSetPlayerHealth(p, h)
+	SetPlayerHealth(h, p)
+end
+
+function server.healthSetWalkingSpeed(p, s)
+	SetPlayerWalkingSpeed(s, p)
+end
+
+-- Death ragdoll for player p (moved here from HealthSystem/Die.lua, which only saw the host).
+function server.healthDied(p)
+	local pltrans = GetPlayerTransform(p)
+	local x, y, z = GetQuatEuler(pltrans.rot)
+	pltrans.rot = QuatEuler(x, y, z)
+	pltrans.pos = Vec(pltrans.pos[1], pltrans.pos[2] + 1, pltrans.pos[3])
+	Spawn("MOD/HealthSystem/prefab/" .. GetString("savegame.mod.difficulty") .. ".xml", pltrans)
+end
+

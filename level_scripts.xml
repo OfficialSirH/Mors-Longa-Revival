@@ -50,6 +50,7 @@
 			<script file="MOD/script/randomloot.lua"/>
 		</group>
 		<group name="PlayerBody" layer="-PlayerBody">
+			<script file="MOD/scripts/PlayerHitboxes.lua"/>
 			<script file="MOD/HealthSystem/AdvancedHealthScript.lua">
 				<trigger tags="hitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
 				<trigger tags="hitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
@@ -61,6 +62,45 @@
 		</group>
 		<group name="InventoryMod">
 			<script file="MOD/script/inventory.lua"/>
+			<group name="GunScripts">
+				<!-- (v2, Phase 2) all gun scripts load with the level; the inventory used to spawn them per slot. PKM and SG553 (Bauer-553) are shelved/unfinished and not loaded. -->
+				<script file="MOD/script/AK50.lua"/>
+				<script file="MOD/script/AK74.lua"/>
+				<script file="MOD/script/AK101.lua"/>
+				<script file="MOD/script/AK74M.lua"/>
+				<script file="MOD/script/AKM.lua"/>
+				<script file="MOD/script/CZ-1012.lua"/>
+				<script file="MOD/script/G3.lua"/>
+				<script file="MOD/script/G36.lua"/>
+				<script file="MOD/script/M4A1.lua"/>
+				<script file="MOD/script/M16.lua"/>
+				<script file="MOD/script/M107.lua"/>
+				<script file="MOD/script/M870.lua"/>
+				<script file="MOD/script/KS23.lua"/>
+				<script file="MOD/script/MosinNagant.lua"/>
+				<script file="MOD/script/MosinNagantM.lua"/>
+				<script file="MOD/script/MP5.lua"/>
+				<script file="MOD/script/MP43.lua"/>
+				<script file="MOD/script/P90.lua"/>
+				<script file="MOD/script/PP19.lua"/>
+				<script file="MOD/script/PPSh.lua"/>
+				<script file="MOD/script/RPG.lua"/>
+				<script file="MOD/script/SCAR-H.lua"/>
+				<script file="MOD/script/SCAR-Hg.lua"/>
+				<script file="MOD/script/SCAR-L.lua"/>
+				<script file="MOD/script/SCAR-Lg.lua"/>
+				<script file="MOD/script/SKS.lua"/>
+				<script file="MOD/script/SV98.lua"/>
+				<script file="MOD/script/SVD.lua"/>
+				<script file="MOD/script/VECTOR.lua"/>
+				<script file="MOD/script/FiveSeven.lua"/>
+				<script file="MOD/script/G17.lua"/>
+				<script file="MOD/script/Dessert Eagle.lua"/>
+				<script file="MOD/script/G18.lua"/>
+				<script file="MOD/script/Sawed Off.lua"/>
+				<script file="MOD/script/TT33.lua"/>
+				<script file="MOD/script/M9.lua"/>
+			</group>
 			<group name="MeleeWeapons">
 				<script file="MOD/scripts/Weapons/Melee/BaseballBat.lua"/>
 				<script file="MOD/scripts/Weapons/Melee/Scythe.lua"/>

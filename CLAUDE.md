@@ -13,6 +13,10 @@ Read next, in this order:
 ## Agreed decisions
 
 * Co-op only, ≤4 players. Client is trusted with its own gun/inventory state (no anti-cheat).
+* Phase 2 (2026-11-06): **health and inventory both run on each player's client** (client-trusted). Each player
+  gets their own hitbox triggers placed by the server, so NPC damage code (`QueriedDamage` tags) works unchanged;
+  the server forwards a player's hitbox damage to that client. The server only does world ops: pickups (it
+  arbitrates, so two players can't take the same item), drops, tool enabling, SetPlayerHealth/walking speed.
 * Procedural highway: the furthest player drives generation; **stragglers are teleported**; the
   world-shift in `Procedural/GenerateRoad.lua` must move all players.
 * AVF (Armed Vehicles Framework) has no MP update and TABS is not a fit: write our own v2 mounted-gun
@@ -35,7 +39,8 @@ Read next, in this order:
 
 * Repo on the user's PC: `C:\Projects\Mors Longa` (device shell: `$HOME/mnt/Mors Longa`). Also
   connected: Teardown install (`$HOME/mnt/Teardown`) and Workshop mods (`$HOME/mnt/1167630`).
-* Device shell has python3/node but **no Lua** and no package registry access. The cloud container
+* Device shell has python3/node but **no Lua** and no package registry access. If the container has no network either, `texlua`
+  (TeX Live, Lua 5.3) runs `check`-style syntax checks and `toplevel.lua`. The cloud container
   builds Lua 5.1 from GitHub (`git clone https://github.com/lua/lua; git checkout v5.1.1;
   gcc -O1 -w -DLUA_USE_POSIX -o lua51 $(ls *.c | grep -vE '^(luac|print)\.c$') -lm`).
 * PC → container: tar into `.git/claude-xfer/` (never committed), then `device_stage_files`.
@@ -45,32 +50,42 @@ Read next, in this order:
 * The online API page truncates in WebFetch; use `Teardown/data/script_defs.lua` (757 functions) and
   the official example mods `Teardown/mods/minigun`, `lasergun` instead.
 
-## Current state (2026-11-04)
+## Current state (2026-11-06)
 
-* UMF removed (`scripts/TDSU/compat.lua`). `script/gunfunctions.lua` has the world/fx projectile split,
-  lazy sounds, `GunRaycast` (skips `ml_toolpart`). `script/gunnet.lua` = gun networking + debug overlays
-  (Ctrl+O part labels, Ctrl+L part table) + `GunNet_FixToolParts` (24 m grid lanes, per part).
-* **All 38 gun scripts are v2.** AK74 ("Simonov-545") verified in-game (model, fire, reload). The other
-  37 are converted but **untested**; the user has the test list (TT-33 fix of the lane guard + missing
-  `file=` attributes is the latest change, awaiting test).
-* 18 generated tool prefabs `script/Weapons/<GUN> Tool[-camo].xml` for the 8 LoadTool guns + AK74.
-* Original-mod bugs fixed: empty-mag HUD concat (32 guns), inventory `invSlot.rotation` nil (3 places),
-  Sawed Off checking MP43's enabled flag.
-* Everything else (inventory, health, NPCs/Gore AI, procedural gen, vehicles, UI, ~180 scripts) is still v1.
+* **Phase 1 done** for all 55 level scripts (`level_scripts.xml`); every step verified in-game. Guns: all work except
+  PKM, M9, Bauer-553 (SG553), shelved as unfinished by the original devs (not loaded).
+* **Phase 2 first pass done and verified in-game** (single-player): health + inventory per player on the client
+  (`HealthSystem/AdvancedHealthScript.lua`, `script/inventory.lua`), per-player hit triggers on the server
+  (`scripts/PlayerHitboxes.lua`), static gun scripts (group `GunScripts` in the 4 level xmls), per-player tool
+  enabling in inventory's server.tick (ToolManager is a no-op). Details + pitfalls: TECHNICAL_REFERENCE status log.
+* Original-mod bugs fixed along the way (all logged): Split(nil) crash, empty-mag HUD, military truck never
+  spawning, missing 4GA ammo / broken loot-table entries, PKM script lookup, material removal, pause button
+  ("main_bottom" is never drawn by data/ui/hud.lua), Cultist ambushes never firing (now on), thermals only
+  highlighting heads, own grenades not hurting the player (now they do - new behaviour).
+* Spawn menu category **Weapons → Testing** (`debugTest` in Procedural/SpawnRefrenceTable.lua) holds items that were
+  only in test.xml (PKM, Bauer, M9, melee, Type-67, PVS-14, PNV-10T, all ammo types, missing mags).
+* Still v1 (111 scripts referenced from xml, ~21k lines + includes): GoreNPCs (12k lines incl. includes), boss AIs,
+  chase/convoy operators, vehicles/AVF (42), helicopters, ~20 small prefab scripts, tutorial scripts.
 
 ## Open items / next steps
 
-1. Process the user's gun test results (fix per gun; Ctrl+L tables are the best evidence).
-2. Unverified: can gun melee / first bullet raycast damage engine-built **vox** guns (not tagged
-   unbreakable)? If yes, tag their shapes or skip them in `GunRaycast`.
-3. Disabled for now: scope look tweak (`SetPlayerTransform(ppos2,true)`) in several rifles → re-do with
-   `SetToolAllowedZoom`. Camo variants are generated but not registered (tool model is global per id).
-4. Remote players: gun parts are only animated for the local player; inventory still toggles tools via v1
-   registry keys (`game.tool.<id>.enabled`, `game.player.tool`) and spawns gun scripts dynamically – both
-   belong to the Phase 2 inventory redesign (all gun scripts static, per-player tool enabling on the server).
-5. RPG rocket prefab runs `script/grenade.lua` (still v1).
-6. Continue Phase 1 with the non-gun scripts: map them with `tools/porting/sides.py` (list of reachable
-   scripts: see TECHNICAL_REFERENCE §7), fix the 91 `Get/SetPlayerTransform(…, true)` pitch calls.
+1. **Phase 3 - GoreNPCs → v2** (decided: keep GoreNPCs, not GYMP; targeting = nearest visible player; effects may
+   stay on the server - official v2 scripts call PlaySound/SpawnParticle/PointLight from server callbacks).
+   Shape: `goreai_main.lua` = one manager script for all NPCs (tick/update = AI → server; draw = UI → client;
+   v1 `handleCommand` explosions → `GetEventCount("explosion")`); each of 152 NPC prefabs has
+   `goreai_initializer.lua` (per-NPC pathfinding via registry `level.goreai.nav_api.<id>`). Client-only parts to
+   split: killcam camera, controller (possession) UI/input, music, hitmarkers, sounds that use the camera.
+   `PlayerPos` (host) → per-NPC target player; `init_player_hitboxes` must map each player's set
+   (`hitbox_player=<id>`, see PlayerHitboxes.lua). `tick()` spawns "MOD/Config.lua" if `level.configScriptSpawned`
+   is unset - should be scripts/ConfigMenu.lua.
+2. Phase 3 rest: generation player = furthest player + straggler teleport (`GetGenerationPlayerPos` in
+   GenerateRoad.lua); chase/convoy operators (DriveVehicle server); seat models for other players; small prefab
+   scripts (doors, parachute, debris, tutorial).
+3. Known gaps: money from selling fuel is written on the server (host registry); saves are per machine (MP
+   behaviour unverified); camo variants of LoadTool guns not registered; scope zoom tweak disabled in some rifles.
+4. Phase 4 vehicles + own mounted-gun script (AVF tags), helicopters last; Phase 5 private Workshop upload for MP.
+5. MP test list (needs Phase 5 upload): pause button primary slot, server-side effects visible on clients,
+   per-player tools/hitboxes, client savegame.
 
 ## Tool inventory (`tools/porting/`, details in its README)
 
@@ -81,6 +96,7 @@ Read next, in this order:
 | `sides.py` | per-function server-only / client-only / UI / registry call report (how to split a script) |
 | `patches/convert_gun.py` | v1 gun → v2 converter; asserts on template deviations; per-gun FIXUPS table |
 | `patches/gunfunctions.py` | the projectile world/fx split as applied to gunfunctions.lua (history) |
+| `patches/convert_melee.py`, `patches/convert_server.py` | melee / world-script v1 → v2 converters |
 | `make_tool_prefab.py` | builds `<GUN> Tool.xml` tool prefabs (reverse part order, tags, missing `file=`, lane grid) |
 | `vox.py`, `render_gun.py` | MagicaVoxel reader + offline labelled render of a gun model (matplotlib) |
 | `tests/test_compat.lua`, `tests/test_gunnet.lua` | mock-engine tests (run from repo root) |

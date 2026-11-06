@@ -25,3 +25,5 @@ See `docs/PORTING.md` for the rules they implement and `CLAUDE.md` / `docs/TECHN
 * No Lua 5.1 and no network? `texlua` (TeX Live's Lua 5.3) runs `toplevel.lua` and syntax checks: `texlua tools/porting/toplevel.lua . scripts/Grenades.lua`.
 * `patches/convert_server.py` – mechanical v1 → v2 for world/server-only scripts (callbacks → `server.*`,
   plus per-file asserted edits in its EDITS table); importable: `from convert_server import convert`.
+* `toplevel.lua` only follows quoted includes (`#include "x.lua"`). Teardown also accepts unquoted ones
+  (`#include x.lua`, e.g. RegistryWatcher's reg.lua) - run `toplevel.lua` on those files directly.

@@ -1,3 +1,5 @@
+#version 2
+#include "script/include/player.lua"
 #include "inv-desc.lua"
 #include "weapon_wheel.lua"
 #include "shop.lua"
@@ -1163,7 +1165,7 @@ function PlayHealingSound(healtype)
     end
 end
 
-function init()
+function client.init()
 	economytimer = math.random(60*math.random(3,7),60*math.random(15,33))+math.random()
 	inflation = 1.00
 	economy = {}
@@ -1247,20 +1249,20 @@ function init()
 	currentmedbodypart = 0
 	lastPlayerTool=""
 
-	local parts0 = FindTriggers("hitbox",true)
+	local parts0 = FindTriggers("localhitbox",true) -- (v2) this player's local hitbox copies
 	parts = {}
 	for i = 1, 6 do
-		if GetTagValue(parts0[i], "hitbox") == "HEAD" then
+		if GetTagValue(parts0[i], "localhitbox") == "HEAD" then
 			parts[1] = parts0[i]
-		elseif GetTagValue(parts0[i], "hitbox") == "TORSO" then
+		elseif GetTagValue(parts0[i], "localhitbox") == "TORSO" then
 			parts[2] = parts0[i]
-		elseif GetTagValue(parts0[i], "hitbox") == "LARM" then
+		elseif GetTagValue(parts0[i], "localhitbox") == "LARM" then
 			parts[3] = parts0[i]
-		elseif GetTagValue(parts0[i], "hitbox") == "RARM" then
+		elseif GetTagValue(parts0[i], "localhitbox") == "RARM" then
 			parts[4] = parts0[i]
-		elseif GetTagValue(parts0[i], "hitbox") == "RLEG" then
+		elseif GetTagValue(parts0[i], "localhitbox") == "RLEG" then
 			parts[5] = parts0[i]
-		elseif GetTagValue(parts0[i], "hitbox") == "LLEG" then
+		elseif GetTagValue(parts0[i], "localhitbox") == "LLEG" then
 			parts[6] = parts0[i]
 		end
 	end
@@ -2409,7 +2411,7 @@ function checkattachmentCompatibility(attachment, gun)
 	return false
 end
 
-function update(dt)
+function client.update(dt)
 	if not GetBool("level.gamerule.nhat") then
 		if InputDown("shift") and GetPlayerVehicle() == 0 then
 			SprintMultiplier = 2.5
@@ -2453,7 +2455,8 @@ function PlaceItemFromXML(Path, Amount)
 	end
 end
 
-function tick(dt)	
+function client.tick(dt)
+	InvInteractive = false
 	if InputDown("e") and InputDown("r") and InputPressed("o") then
 		LETITERROR = not LETITERROR
 	end
@@ -2656,7 +2659,7 @@ function tick(dt)
 	end
 
 	if GetBool("inventory.givestarterweapons") then
-		SetPlayerHealth(0)
+		ServerCall("server.invSetPlayerHealth", GetLocalPlayer(), 0)
 	end
 
 	--[[ if GetPlayerHealth() < 0.5 then
@@ -2856,26 +2859,9 @@ function tick(dt)
 	if InputPressed("interact") then
 		local playerInteractBody = GetPlayerInteractBody()
 		if IsHandleValid(playerInteractBody) then
-			if HasTag(playerInteractBody,"Loot") and not _invOn then
-				local item = GetTagValue(playerInteractBody, "Loot")
-				local itemInfos = Split(item, "_")
-				local interactName = GetTagValue(playerInteractBody,"interact")
-				if #Split(interactName, "_")==1 then
-					itemInfos[2] = interactName
-					SetString("inventory.pickup", IDBuilder(itemInfos))
-				else
-					SetString("inventory.pickup", item)
-				end
-				Delete(playerInteractBody)
-				-- PlayBackpackSound()
-			elseif HasTag(playerInteractBody,"MultiLoot") and not _invOn then
-				local item = GetTagValue(playerInteractBody, "MultiLoot")
-				local items = Split(item, "|")
-				for i=1,#items do
-					table.insert(pickupqueue, items[i])
-				end
-				Delete(playerInteractBody)
-				-- PlayBackpackSound()
+			if (HasTag(playerInteractBody,"Loot") or HasTag(playerInteractBody,"MultiLoot")) and not _invOn then
+				-- (v2) the server deletes the item and sends it back (client.invTaken), so two players can't both get it
+				ServerCall("server.invTake", GetLocalPlayer(), playerInteractBody)
 			elseif HasTag(playerInteractBody,"Stash") then
 				--SetInt("inventory.stashing", Inventory)
 				--PlayBackpackSound()
@@ -2887,18 +2873,7 @@ function tick(dt)
 				_invOn = true
 				_invState = "shop"	
 			elseif HasTag(playerInteractBody,"Money") then
-				local item = GetTagValue(playerInteractBody, "Money")
-				local itemInfos = Split(item, "_")
-				local MinMoney = itemInfos[1]
-				local AmountMoney = tonumber(itemInfos[2])
-				local MaxMoney = itemInfos[3]
-				local Money = GetInt("savegame.mod.player.money")
-				if not AmountMoney then 
-					AmountMoney = math.random(MinMoney,MaxMoney)
-				end
-				SetInt("savegame.mod.player.money", Money + AmountMoney)
-				Delete(playerInteractBody)
-				PlayBackpackSound()
+				ServerCall("server.invTake", GetLocalPlayer(), playerInteractBody) -- (v2) see client.invTaken
 			elseif HasTag(playerInteractBody,"Crate") then
 				SetInt("inventory.looting", playerInteractBody)
 				--PlayBackpackSound()
@@ -2922,9 +2897,7 @@ function tick(dt)
 					end
 				end
 			elseif HasTag(playerInteractBody,"PerkObject") then
-				perkUpgrade(GetTagValue(playerInteractBody,"PerkObject"))
-				PlaySound(SOUNDS.perkPickup)
-				Delete(playerInteractBody)
+				ServerCall("server.invTake", GetLocalPlayer(), playerInteractBody) -- (v2) see client.invTaken
 			end
 			
 		end
@@ -2976,7 +2949,7 @@ function tick(dt)
 		_invOn = false
 	end
 	if _invOn and medtimer <= 0 then
-		UiMakeInteractive()
+		InvInteractive = true
 		SetBool("game.disablepause", true)
 		if uitimer < 0.2 then uitimer = uitimer + dt end
 	else
@@ -2986,10 +2959,10 @@ function tick(dt)
 
 	if currentmed ~= "" then
 		if medtimer > 0 then
-			if lastPlayerTool=="" then lastPlayerTool = GetString("game.player.tool")end
+			if lastPlayerTool=="" then lastPlayerTool = GetPlayerTool()end
 
-			SetBool("game.tool."..currentmed..".enabled", true)
-			SetString("game.player.tool",currentmed)
+			InvToolEnable(currentmed, true)
+			InvSetTool(currentmed)
 			SetFloat("inventory.medtimer", medtimer)
 			SetFloat("inventory.medtimermax", medtimermax)
 			medtimer = medtimer - dt
@@ -2998,8 +2971,8 @@ function tick(dt)
 			-- if currentmed == "meds-surgery" then
 			-- 	SetTag(currentmedbodypart, "QueriedDamage", -1)
 			-- end
-			SetBool("game.tool."..currentmed..".enabled", false)
-			SetString("game.player.tool",lastPlayerTool)
+			InvToolEnable(currentmed, false)
+			InvSetTool(lastPlayerTool)
 			SetFloat("inventory.medtimer", 0)
 			SetFloat("inventory.medtimermax", 0)
 			currentmed = ""
@@ -3081,80 +3054,80 @@ function tick(dt)
 		SetString("level.weapon_wheel.gun4", gun4) -- Reset weapon wheel item
 
 		for i = 1, #gunslist do
-			SetBool("game.tool."..gunslist[i]..".enabled", false)
+			InvToolEnable(gunslist[i], false)
 		end
 		for i = 1, #gunslist2 do
-			SetBool("game.tool."..gunslist2[i]..".enabled", false)
+			InvToolEnable(gunslist2[i], false)
 		end
 		for i = 1, #meleelist do
-			SetBool("game.tool."..meleelist[i]..".enabled", false)
+			InvToolEnable(meleelist[i], false)
 		end
 
-		local curtool = GetString("game.player.tool")
+		local curtool = GetPlayerTool()
 		if InputPressed("1") and cantoggleprimary then toggleprimary = not toggleprimary PlaySound(SOUNDS.gunequip) equipTimer = 1 SetBool("inventory.update_guns1", true) SetBool("inventory.update_guns4", true) end
 		if gun1 == "" then toggleprimary = true SetBool("inventory.update_guns1", true) SetBool("inventory.update_guns4", true) end
 		if gun4 == "" then toggleprimary = false SetBool("inventory.update_guns1", true) SetBool("inventory.update_guns4", true) end
 		
 
 		if toggleprimary then
-			SetBool("game.tool."..gun4..".enabled", true)
+			InvToolEnable(gun4, true)
 			SetInt("inventory.curprimary", 4)
 			if InputPressed("1") then
-				SetString("game.player.tool",gun4)
+				InvSetTool(gun4)
 			end
 		else
-			SetBool("game.tool."..gun1..".enabled", true)
+			InvToolEnable(gun1, true)
 			SetInt("inventory.curprimary", 1)
 			if InputPressed("1") then
-				SetString("game.player.tool",gun1)
+				InvSetTool(gun1)
 			end
 		end
-		SetBool("game.tool."..gun2..".enabled", true)
-		SetBool("game.tool."..melee..".enabled", true)
+		InvToolEnable(gun2, true)
+		InvToolEnable(melee, true)
 
 
 		for i = 1,#gunslist do
 			if gunslist[i] ~= gun1 and gunslist[i] ~= gun4 then
-				SetBool("game.tool."..gunslist[i]..".enabled", false)
-				if GetString("game.player.tool") == gunslist[i] then
-					SetString("game.player.tool","")
+				InvToolEnable(gunslist[i], false)
+				if GetPlayerTool() == gunslist[i] then
+					InvSetTool("")
 				end
 			end
 		end
 		for i = 1,#gunslist2 do
 			if gunslist2[i] ~= gun2 then
-				SetBool("game.tool."..gunslist2[i]..".enabled", false)
-				if GetString("game.player.tool") == gunslist2[i] then
-					SetString("game.player.tool","")
+				InvToolEnable(gunslist2[i], false)
+				if GetPlayerTool() == gunslist2[i] then
+					InvSetTool("")
 				end
 			end
 		end
 		for i = 1,#meleelist do
 			if meleelist[i] ~= melee then
-				SetBool("game.tool."..meleelist[i]..".enabled", false)
-				if GetString("game.player.tool") == meleelist[i] then
-					SetString("game.player.tool","")
+				InvToolEnable(meleelist[i], false)
+				if GetPlayerTool() == meleelist[i] then
+					InvSetTool("")
 				end
 			end
 		end
 
 		-- if equipTimer > 0 then
-		-- 	if lastPlayerTool=="" then lastPlayerTool = GetString("game.player.tool")end
-		-- 	SetBool("game.tool."..gun1..".enabled", false)
-		-- 	SetBool("game.tool."..gun2..".enabled", false)
-		-- 	SetBool("game.tool."..melee..".enabled", false)
-		-- 	SetBool("game.tool."..gun4..".enabled", false)
-		-- 	if GetString("game.player.tool") == gun1 or GetString("game.player.tool") == gun2 or GetString("game.player.tool") == melee or GetString("game.player.tool") == gun4 then
-		-- 		SetString("game.player.tool", "")
+		-- 	if lastPlayerTool=="" then lastPlayerTool = GetPlayerTool()end
+		-- 	InvToolEnable(gun1, false)
+		-- 	InvToolEnable(gun2, false)
+		-- 	InvToolEnable(melee, false)
+		-- 	InvToolEnable(gun4, false)
+		-- 	if GetPlayerTool() == gun1 or GetPlayerTool() == gun2 or GetPlayerTool() == melee or GetPlayerTool() == gun4 then
+		-- 		InvSetTool("")
 		-- 	end
 
 		-- 	equipTimer = equipTimer - dt
 		-- elseif equipTimer < 0 then
-		-- 	SetBool("game.tool."..gun1..".enabled", true)
-		-- 	SetBool("game.tool."..gun2..".enabled", true)
-		-- 	SetBool("game.tool."..melee..".enabled", true)
-		-- 	SetBool("game.tool."..gun4..".enabled", true)
-		-- 	SetString("game.player.tool",lastPlayerTool)
+		-- 	InvToolEnable(gun1, true)
+		-- 	InvToolEnable(gun2, true)
+		-- 	InvToolEnable(melee, true)
+		-- 	InvToolEnable(gun4, true)
+		-- 	InvSetTool(lastPlayerTool)
 		-- 	lastPlayerTool = ""
 
 		-- 	equipTimer = 0
@@ -3163,59 +3136,8 @@ function tick(dt)
 		cantoggleprimary = (curtool == gun1 or curtool == gun4) and not GetBool("inventory.reloading") and not KeybindPressed(Settings.keybinds.player.reload)
 		
 	-- end	
-	for i = 1, #scripts do
-		local guns1 = Split(guns[1][1][1], "_")[1] or ""
-		local guns2 = Split(guns[1][2][1], "_")[1] or ""
-		local guns4 = Split(guns[1][4][1], "_")[1] or ""	
-		
-		
-
-		if not (scripts[i][1] == guns1 or scripts[i][1] == guns2 or scripts[i][1] == guns4) then
-			Delete(scripts[i][2])
-			table.remove(scripts, i)
-			break
-		end
-	end
-	for i = 1, #gunslist do
-		if (gunslist[i] == Split(guns[1][1][1], "_")[1] and guns[1][1][1] ~= "") or (gunslist[i] == Split(guns[1][4][1], "_")[1] and guns[1][4][1] ~= "") then
-			local alreadySpawned = false
-
-			for j = 1, #scripts do
-				if scripts[j][1] == gunslist[i] then
-					alreadySpawned = true
-				end
-			end
-
-			if not alreadySpawned then
-				local id = gunslist[i]
-				local scriptName = gunScriptLookUp[id]
-				if scriptName then -- (v2 fix) ids without a script (gun-mgl, gun-ak12, gun-mp443) crashed tick()
-					local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
-					table.insert(scripts, 1, {id,entities[1]})
-				end
-			end
-		end
-	end
-	for i = 1, #gunslist2 do
-		if (gunslist2[i] == Split(guns[1][2][1], "_")[1] and guns[1][2][1] ~= "") then
-			local alreadySpawned = false
-
-			for j = 1, #scripts do
-				if scripts[j][1] == gunslist2[i] then
-					alreadySpawned = true
-				end
-			end
-
-			if not alreadySpawned then
-				local id = gunslist2[i]
-				local scriptName = gunScriptLookUp[id]
-				if scriptName then -- (v2 fix) ids without a script (gun-mgl, gun-ak12, gun-mp443) crashed tick()
-					local entities = Spawn('<script file="MOD/script/'..scriptName..'.lua"/>', Transform())
-					table.insert(scripts, 1, {id,entities[1]})
-				end
-			end
-		end
-	end
+	-- (v2) the gun scripts are loaded statically by the level (level_scripts.xml, group "GunScripts");
+	-- they used to be spawned/deleted here when a gun entered/left a slot.
 
 	-- if not GetBool("level.optionstriggered") then
 
@@ -3662,7 +3584,8 @@ function drawInv(invTable, w, h)
 	UiPop()
 end
 
-function draw()
+function client.draw()
+	if InvInteractive then UiMakeInteractive() end -- (v2) Ui* only works in draw; tick sets the flag
 	UiAlign("left top")
 
 	if _invState == "shop" and _invOn then
@@ -5347,19 +5270,15 @@ function spawnItem(item,t)
 		customXML, spawnXML = gunXMLBuilder(item)
 	end
 	if HasFile(spawnXML) or customXML then
-		local entities = Spawn(spawnXML, t)
-		SetTag(entities[1], "Loot", item)
-		SetTag(entities[1], "interact", displayName)
-		return entities
+		ServerCall("server.invSpawnItem", spawnXML, t, item, displayName) -- (v2) world object: server
+		return {}
 	else
 		DebugPrint(id .. " does not exist in: " .. spawnXML)
 		DebugPrint("please screenshot this error message and report this in MORS LONGA discord #bugs channel.")
 		print(id .. " does not exist in: " .. spawnXML)
 		print("please screenshot this error message and report this in MORS LONGA discord #bugs channel.")
-		local entities = Spawn("MOD/Loots/unknownitem.xml", t)
-		SetTag(entities[1], "Loot", item)
-		SetTag(entities[1], "interact", displayName)
-		return entities
+		ServerCall("server.invSpawnItem", "MOD/Loots/unknownitem.xml", t, item, displayName)
+		return {}
 	end
 end
 function IDBuilder(t)
@@ -5731,12 +5650,160 @@ end
 function SmoothTransition(f)
 	return .5-math.cos(f*math.pi)/2
 end
-function handleCommand(cmd) HandleQuickload(cmd) end
+function client.handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then
 			Init_Settings()
 		end
 		break
+	end
+end
+
+
+-------------------------------------------------------------------------------------------------------------
+-- (v2, Phase 2) Networking. The inventory runs on each player's client (their own items, UI, saves in the local
+-- registry). The server only does world operations and the per-player tool list.
+-------------------------------------------------------------------------------------------------------------
+
+-- Tools that are always available (taken over from scripts/Game/ToolManager.lua, which no longer manages tools).
+INV_ALWAYS_ALLOWED = { manual = true, physgun = true, welder = true, placer = true, extinguisher = true }
+
+---------------------------------------------------------------- client
+
+-- v1 wrote game.tool.<id>.enabled / game.player.tool several times per tick (disable all, then enable the slots).
+-- Now the tick only records the final wish; client.postUpdate sends the changes once per frame.
+InvToolWanted = {}
+InvToolSent = {}
+InvToolSelect = nil
+
+function InvToolEnable(id, on)
+	if id and id ~= "" then InvToolWanted[id] = on end
+end
+
+function InvSetTool(id)
+	InvToolSelect = id or ""
+end
+
+function client.postUpdate()
+	local changes = nil
+	for id, on in pairs(InvToolWanted) do
+		if InvToolSent[id] ~= on then
+			changes = changes or {}
+			changes[id] = on
+			InvToolSent[id] = on
+		end
+	end
+	if changes then ServerCall("server.invTools", GetLocalPlayer(), changes) end
+	if InvToolSelect ~= nil then
+		if InvToolSelect ~= GetPlayerTool() then ServerCall("server.invSetTool", GetLocalPlayer(), InvToolSelect) end
+		InvToolSelect = nil
+	end
+end
+
+-- The server took the item for us (server.invTake). Same handling as the v1 pickup code.
+function client.invTaken(kind, value, interactName)
+	if kind == "Loot" then
+		local itemInfos = Split(value, "_")
+		if #Split(interactName, "_")==1 then
+			itemInfos[2] = interactName
+			SetString("inventory.pickup", IDBuilder(itemInfos))
+		else
+			SetString("inventory.pickup", value)
+		end
+	elseif kind == "MultiLoot" then
+		local items = Split(value, "|")
+		for i=1,#items do
+			table.insert(pickupqueue, items[i])
+		end
+	elseif kind == "Money" then
+		local itemInfos = Split(value, "_")
+		local MinMoney = itemInfos[1]
+		local AmountMoney = tonumber(itemInfos[2])
+		local MaxMoney = itemInfos[3]
+		local Money = GetInt("savegame.mod.player.money")
+		if not AmountMoney then
+			AmountMoney = math.random(MinMoney,MaxMoney)
+		end
+		SetInt("savegame.mod.player.money", Money + AmountMoney)
+		PlayBackpackSound()
+	elseif kind == "PerkObject" then
+		perkUpgrade(value)
+		PlaySound(SOUNDS.perkPickup)
+	end
+end
+
+---------------------------------------------------------------- server
+
+function server.init()
+	Init_Settings()
+	InvWanted = {}   -- [player][tool] = enabled, as reported by that player's inventory
+	InvApplied = {}  -- [player][tool] = what this script last applied with SetToolEnabled
+end
+
+-- Pickup arbitration: the first request wins, the item is deleted and only that player gets it.
+function server.invTake(p, body)
+	if body == 0 or not IsHandleValid(body) then return end
+	for _, kind in ipairs({ "Loot", "MultiLoot", "Money", "PerkObject" }) do
+		if HasTag(body, kind) then
+			local value = GetTagValue(body, kind)
+			local interactName = GetTagValue(body, "interact")
+			Delete(body)
+			ClientCall(p, "client.invTaken", kind, value, interactName)
+			return
+		end
+	end
+end
+
+function server.invSpawnItem(xml, transform, item, displayName)
+	local entities = Spawn(xml, transform)
+	if entities[1] then
+		SetTag(entities[1], "Loot", item)
+		SetTag(entities[1], "interact", displayName)
+	end
+end
+
+function server.invSetPlayerHealth(p, h)
+	SetPlayerHealth(h, p)
+end
+
+function server.invTools(p, changes)
+	InvWanted[p] = InvWanted[p] or {}
+	for id, on in pairs(changes) do InvWanted[p][id] = on end
+end
+
+function server.invSetTool(p, id)
+	SetPlayerTool(id, p)
+end
+
+-- Per player: tool enabled = "enable all tools" setting, or always-allowed (not in the tutorial), or wanted by
+-- that player's inventory. Applied with SetToolEnabled only when it changes.
+function server.tick(dt)
+	SetInt("game.tool.extinguisher.index", 4) -- as ToolManager did
+	local all = Settings.game.enable_tools.value
+	local tutorial = GetBool("level.tutorial")
+	-- Every tool we know of: the engine's tool list, plus every tool any inventory has asked about, plus the
+	-- always-allowed ones. (The melee tools are not in ListKeys("game.tool") [seen in-game], so a loop over that
+	-- list alone never enabled them.)
+	local tools, known = {}, {}
+	local function addTool(id) if id and id ~= "" and not known[id] then known[id] = true tools[#tools + 1] = id end end
+	for _, id in ipairs(ListKeys("game.tool")) do addTool(id) end
+	for id in pairs(INV_ALWAYS_ALLOWED) do addTool(id) end
+	for _, wanted in pairs(InvWanted) do for id in pairs(wanted) do addTool(id) end end
+	for p in Players() do
+		local wanted = InvWanted[p] or {}
+		local applied = InvApplied[p] or {}
+		InvApplied[p] = applied
+		for _, id in ipairs(tools) do
+			local on = (all or (not tutorial and INV_ALWAYS_ALLOWED[id]) or wanted[id] == true) and true or false
+			if applied[id] ~= on then
+				applied[id] = on
+				SetToolEnabled(id, on, p)
+			end
+		end
+	end
+	for p in PlayersRemoved() do
+		InvWanted[p] = nil
+		InvApplied[p] = nil
 	end
 end

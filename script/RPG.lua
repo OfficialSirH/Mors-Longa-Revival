@@ -28,12 +28,12 @@ fuze_reliability = 0.25
 
 function server.init()
 	RegisterTool("gun-rpg", "RPG-7", "MOD/vox/grenade_tool.vox", 1)
-	for p in Players() do SetToolEnabled("gun-rpg", true, p) end
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerInit()
 end
 
 function server.tick(dt)
-	for p in PlayersAdded() do SetToolEnabled("gun-rpg", true, p) end
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerTick(dt)
 end
 
@@ -127,7 +127,7 @@ function client.tick(dt)
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
     checkUnlimitedBulletsValid()
 
-	if IsToolEnabled("gun-rpg") then
+	if IsToolEnabled("gun-rpg") and GunInInventory("gun-rpg") then
 
 	if inventoryenabled and not reloading then
 		reserveammo = GetInt("inventory.ammocount_rocket")

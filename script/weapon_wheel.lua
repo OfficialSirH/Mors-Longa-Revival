@@ -56,7 +56,7 @@ function draw_WeaponWheelItem(tool_id, active, x,y, w,h, slot)
             end
 
             if active and mouse_in_rect then
-                SetString("game.player.tool", tool_id)
+                InvSetTool(tool_id) -- (v2) see inventory.lua
             end
 
             UiTranslate(0, ih*scale/2)

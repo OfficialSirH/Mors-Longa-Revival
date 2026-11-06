@@ -9,12 +9,12 @@
 
 function server.init()
 	RegisterTool("gun-vector", "SCALAR", "MOD/vox/vector.vox", 1)
-	for p in Players() do SetToolEnabled("gun-vector", true, p) end
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerInit()
 end
 
 function server.tick(dt)
-	for p in PlayersAdded() do SetToolEnabled("gun-vector", true, p) end
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerTick(dt)
 end
 
@@ -310,7 +310,7 @@ function client.init()
 	pdamage = 3
 	dmgsnd = LoadSound("MOD/snd/dmge.ogg")
 	DrawHitmark = 0
-	parts = FindTriggers("hitbox",true)
+	parts = FindTriggers("localhitbox",true)
 	magdrillFactor = 1
 	if GetBool("inventory.magdrills") then
 		magdrillFactor = 1.5
@@ -692,7 +692,7 @@ function client.tick(dt)
 		end
 	end
 
-	if IsToolEnabled("gun-vector") then
+	if IsToolEnabled("gun-vector") and GunInInventory("gun-vector") then
 	
 	if inventoryenabled then
 
@@ -1179,7 +1179,7 @@ function client.tick(dt)
 
 			local injuredarms = false
 			for i = 1, 6 do
-				if GetTagValue(parts[i], "hitbox") == "LARM" or GetTagValue(parts[i], "hitbox") == "RARM" then
+				if GetTagValue(parts[i], "localhitbox") == "LARM" or GetTagValue(parts[i], "localhitbox") == "RARM" then
 					if tonumber(GetTagValue(parts[i], "CurrentHealth")) == 0 or HasTag(parts[i], "Fracture") then
 						injuredarms = true
 					end
@@ -2248,6 +2248,7 @@ function client.tick(dt)
 end
 
 function client.draw()
+	if not GunInInventory("gun-vector") then return end -- (v2, Phase 2) see gunfunctions.lua
 	if gunWantsInteractive then UiMakeInteractive() gunWantsInteractive = false end
 	GunNet_DebugParts()
 	if GetPlayerTool() == "gun-vector" and GetPlayerVehicle() == 0 then

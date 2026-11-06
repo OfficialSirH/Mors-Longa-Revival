@@ -9,12 +9,12 @@
 
 function server.init()
 	RegisterTool("gun-pkm", "PKM", "MOD/vox/pkm.vox", 1)
-	for p in Players() do SetToolEnabled("gun-pkm", true, p) SetToolAmmo("gun-pkm", 101, p) end
+	for p in Players() do SetToolAmmo("gun-pkm", 101, p) end -- (v2, Phase 2) enabling: inventory.lua
 	GunNet_ServerInit()
 end
 
 function server.tick(dt)
-	for p in PlayersAdded() do SetToolEnabled("gun-pkm", true, p) SetToolAmmo("gun-pkm", 101, p) end
+	for p in PlayersAdded() do SetToolAmmo("gun-pkm", 101, p) end -- (v2, Phase 2) enabling: inventory.lua
 	GunNet_ServerTick(dt)
 end
 

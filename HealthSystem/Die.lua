@@ -15,21 +15,16 @@ function server.tick()
 	--DebugPrint("massive")
 	playerhealth = GetPlayerHealth()
 	--DebugPrint("Chosen: "..ragdoll)
+	-- (v2) the flag is cleared by AdvancedHealthScript.lua itself now (client pulse for the inventory)
 	if GetBool("health.status.dead") then
 		dead = true
-		SetBool("health.status.dead", false)
 	else
 		dead = false
 		restart = true
 	end
+	-- (v2, Phase 2) the death ragdoll is now spawned by AdvancedHealthScript.lua (server.healthDied) for the player
+	-- who died; this script only saw the host and would spawn a second ragdoll in single-player.
 	if dead and restart then
-		--PlaySound(deadeded)
-		pltrans = GetPlayerTransform()
-		x,y,z = GetQuatEuler(pltrans.rot)
-		y = y
-		pltrans.rot = QuatEuler(x,y,z)
-		pltrans.pos = Vec(pltrans.pos[1],pltrans.pos[2] + 1,pltrans.pos[3])
-		Spawn("MOD/HealthSystem/prefab/"..ragdoll..".xml", pltrans)
 		restart = false
 	end
 	if secretfeatureon then

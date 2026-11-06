@@ -10,6 +10,9 @@ function server.init()
 end
 
 function server.tick()
+    -- (v2, Phase 2) tools are now enabled per player by script/inventory.lua (server.tick), using the same rules
+    -- (always-allowed list, tutorial, "enable all tools" setting). Running this too would fight it.
+    do return end
 
     SetInt("game.tool.extinguisher.index", 4)
 

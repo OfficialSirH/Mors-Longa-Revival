@@ -243,6 +243,11 @@ end
 
 function client.grenadeExplode(species, pos)
 	Species = species
+	-- (v2) the player's own grenades never fed the limb-health system in v1 (no Explosion() call; the health script
+	-- only reacted to engine explosions). Queue it like PlayerHitboxes.lua does for engine explosions, with the
+	-- grenade's ExplosionDamage as strength; AdvancedHealthScript.lua applies its own distance/line-of-sight rules.
+	SetString("health.explosions", GetString("health.explosions") ..
+		string.format("%f %f %f %f;", Devices[Species]["ExplosionDamage"] or 1, pos[1], pos[2], pos[3]))
 	SplosionFx(pos, Devices[Species]["Violence"], Devices[Species]["ParticleAmount"], Devices[Species]["ExplosionDamage"], Devices[Species]["ParticleSize"])
 	PlaySound(LoadSound("MOD/snd/"..Devices[Species]["Name"]))
 	PlaySound(LoadSound("MOD/snd/Explosions/frag_sand_0.ogg"), pos, 8)
