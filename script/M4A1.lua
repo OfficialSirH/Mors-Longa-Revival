@@ -393,7 +393,7 @@ function client.init()
 	dotreticles = {"reticle4_1","reticle4_2","reticle4_3"}
 	currentdotreticle = 1
 	
-	--local weaponPrefab = "MOD/script/Weapons/M4-"..camo..".xml"
+	--local weaponPrefab = "MOD/script/Weapons/M4-"..(camo or "")..".xml"
 	--DebugPrint(weaponPrefab)
 	--LoadTool(b, weaponPrefab)
 end
@@ -402,7 +402,7 @@ end
 ------SHOOT OPERATIONS AND FUNCTIONS------
 function FireRound(Type)
 	local perk = "556"
-	local perktable=gunperks[perk][Type]
+	local perktable=GunPerkFor(perk, Type) -- (v2 fix) missing bullet type -> calibre default
 	local damage = perktable["damage"]
 	local pdamage = perktable["pdamage"]
 	local explosive = perktable["explosive"]
@@ -1751,7 +1751,7 @@ function client.tick(dt)
 
 			------ATTACHMENT TRANSFORMS------
 			if body ~= b or InputPressed("1") then
-				local weaponPrefab = "MOD/script/Weapons/M4-"..camo..".xml" or "MOD/script/Weapons/M4-.xml"
+				local weaponPrefab = "MOD/script/Weapons/M4-"..(camo or "")..".xml" or "MOD/script/Weapons/M4-.xml"
 				body = b
 				gunToolShapesPending = true
 				end

@@ -2256,9 +2256,13 @@ function clearItem(invtable, grabinfo)
 	if invtable ~= guns and invtable ~= armor then
 		for a = 1, w do
 			for b = 1, h do
-				if (origx+a-1)>0 and (origy+b-1)>0 then
-					invtable[origx+a-1][origy+b-1][2] = {0, 0}
-					invtable[origx+a-1][origy+b-1][3], invtable[origx+a-1][origy+b-1][4]= 1, 1
+				-- (v2 fix 2026-11-07) also skip cells outside the grid: dying while a med was being applied flushed the
+				-- inventory and a stale grab then cleared past the edge ("attempt to index field '?'" at this line)
+				local col = (origx+a-1)>0 and (origy+b-1)>0 and invtable[origx+a-1]
+				local cell = col and col[origy+b-1]
+				if cell then
+					cell[2] = {0, 0}
+					cell[3], cell[4] = 1, 1
 				end
 			end
 		end

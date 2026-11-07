@@ -87,7 +87,7 @@ function tick_spawners()
         CamTr          = CamTr or Transform()
         LastCamTr      = LastCamTr or Transform()
 
-        if InputPressed("v") then
+        if false and InputPressed("v") then -- (v2 goreai) spectator cameras (gore test map) need the client; disabled
             ViewCam = not ViewCam
             SetBool("level.ViewCam", ViewCam)
         end

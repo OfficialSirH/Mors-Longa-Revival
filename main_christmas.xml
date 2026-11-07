@@ -743,7 +743,7 @@
 			</body>
 		</script>
 	</group>
-	<script file="MOD/scripts/UI/MainMenu/menu_main.lua"/>
+	<script file="MOD/scripts/UI/MainMenu/main_menu.lua"/>
 	<script file="MOD/scripts/UI/MainMenu/menu_select_difficulty.lua">
 		<body tags="cam" pos="-3.1 6.9 -10.15" rot="0.0 0.0 0.0" dynamic="false"/>
 		<location tags="camdest=1" pos="-0.65 4.85 -4.1">

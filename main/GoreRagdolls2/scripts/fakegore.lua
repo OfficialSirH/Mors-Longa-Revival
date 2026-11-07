@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: vehicle crew ragdoll (neck motor; full ragdoll spawned when a body part breaks).
 LAYER_A = 1 -- Default
 LAYER_B = 2
 LAYER_C = 4
@@ -8,7 +11,7 @@ LAYER_G = 64
 LAYER_H = 128
 LAYER_ALL = 255
 
-function init()
+function server.init()
 	TORSO = FindShape("TORSO")
 	Neck = FindJoint("neck")
 	if IsHandleValid(TORSO) then
@@ -35,7 +38,7 @@ function removeEverything()
 		Delete(joints[i])
 	end
 end
-function tick()
+function server.tick()
 		
 		
 	

@@ -43,7 +43,7 @@
 					<vox name="exhaust" pos="-0.2 -0.05 0.0" texture="6 0.1" file="MOD/k-cl-e-car1/k-cl-e-car1.vox" object="exhaust">
 						<location tags="exhaust" pos="-0.05 0.15 -2.0" rot="180.0 0.0 180.0"/>
 					</vox>
-					<script pos="-0.0 0.0 -1.7" file="MOD/fx.lua">
+					<script pos="-0.0 0.0 -1.7" file="MOD/scripts/missing_script_stub.lua">
 						<vox tags="fxbreak=l1brown" pos="0.0 0.05 0.0" file="MOD/k-cl-e-car1/k-cl-e-car1.vox" object="tank"/>
 						<vox tags="fxbreak=g9" pos="-0.0 0.29 3.9" strength="20" file="MOD/k-cl-e-car1/k-cl-e-car1.vox" object="radiator"/>
 					</script>

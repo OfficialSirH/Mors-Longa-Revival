@@ -20,7 +20,7 @@ end
 
 function npc_sitting_process(npc)
 
-    local v = GetPlayerVehicle()
+    local v = GetPlayerVehicle(GoreP) -- (v2 goreai) target player
     local emptySeats = get_vehicle_empty_seats(v)
 
     local shouldEnterVehicle = VecDist(npc.torsoPos, PlayerPos) <= 5 and not npc.ai.sitting.isSitting and #emptySeats >= 1
@@ -188,7 +188,7 @@ function draw_vehicle_empty_seats(v)
 					local s = 30
 					UiColor(0,0,0, 0.5)
 					UiImageBox("ui/common/box-solid-6.png", s,s, 6,6)
-					if TableContainsValue(SeatsTaken, seat_light) then
+					if TableContainsValue(SeatsTaken or {}, seat_light) then -- (v2) SeatsTaken is server state (host only)
 						UiColor(1, 0, 0, 1)
 					else
 						UiColor(0, 1, 0, 1)

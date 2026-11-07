@@ -396,7 +396,7 @@ end
 ------SHOOT OPERATIONS AND FUNCTIONS------
 function FireRound(Type)
 	local perk = "556"
-	local perktable=gunperks[perk][Type]
+	local perktable=GunPerkFor(perk, Type) -- (v2 fix) missing bullet type -> calibre default
 	local damage = perktable["damage"]
 	local pdamage = perktable["pdamage"]
 	local explosive = perktable["explosive"]

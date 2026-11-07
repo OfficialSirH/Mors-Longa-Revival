@@ -360,7 +360,7 @@ end
 
 function FireRound(Type)
 	local perk = "57x28"
-	local perktable=gunperks[perk][Type]
+	local perktable=GunPerkFor(perk, Type) -- (v2 fix) missing bullet type -> calibre default
 	local damage = perktable["damage"]
 	local pdamage = perktable["pdamage"]
 	local explosive = perktable["explosive"]
@@ -1380,7 +1380,7 @@ function client.tick(dt)
 			toolPos = TransformToParentPoint(toolTrans, Vec(0.275, -0.6, -2.6))
 
 			if body ~= b then
-				local weaponPrefab = "MOD/script/Weapons/FiveSeven-"..camo..".xml"
+				local weaponPrefab = "MOD/script/Weapons/FiveSeven-"..(camo or "")..".xml"
 				body = b
 				gunToolShapesPending = true
 				end

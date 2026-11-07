@@ -78,12 +78,12 @@ end
 
 function client.postUpdate()
     if #MeleeNet.ops > 0 then
-        ServerCall("server.meleeOps", MeleeNet.ops)
+        ServerCall("server.meleeOps", MeleeNet.ops, GetLocalPlayer())
         MeleeNet.ops, MeleeNet.holes, MeleeNet.impulses = {}, {}, {}
     end
 end
 
-function server.meleeOps(ops)
+function server.meleeOps(ops, playerId)
     for i = 1, #ops do
         local op = ops[i]
         if op.t == "hole" then
@@ -96,6 +96,7 @@ function server.meleeOps(ops)
             SetFloat("level.goreai.body_damage_player_x", op.pos[1])
             SetFloat("level.goreai.body_damage_player_y", op.pos[2])
             SetFloat("level.goreai.body_damage_player_z", op.pos[3])
+            SetInt("level.goreai.body_damage_player_owner", playerId or 0) -- (v2 goreai) who hit, for hitmarkers/kills
         end
     end
 end

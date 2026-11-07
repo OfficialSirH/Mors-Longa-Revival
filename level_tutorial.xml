@@ -1009,13 +1009,13 @@
 								</group>
 							</body>
 						</group>
-						<group name="instance=MOD/Loots/meds-general-ifak.xml" pos="0.1 0.7 4.5" rot="0.0 -10.0 0.0">
-							<body name="IFAK" tags="Loot=meds-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
+						<group name="instance=MOD/Loots/meds-bleed-general-ifak.xml" pos="0.1 0.7 4.5" rot="0.0 -10.0 0.0">
+							<body name="IFAK" tags="Loot=meds-bleed-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
 								<voxbox pos="-0.15 -0.1 -0.1" size="3 2 2" color="0.73 0.71 0.61"/>
 							</body>
 						</group>
-						<group name="instance=MOD/Loots/meds-general-ifak.xml" pos="0.1 0.7 4.8" rot="0.0 -10.0 0.0">
-							<body name="IFAK" tags="Loot=meds-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
+						<group name="instance=MOD/Loots/meds-bleed-general-ifak.xml" pos="0.1 0.7 4.8" rot="0.0 -10.0 0.0">
+							<body name="IFAK" tags="Loot=meds-bleed-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
 								<voxbox pos="-0.15 -0.1 -0.1" size="3 2 2" color="0.73 0.71 0.61"/>
 							</body>
 						</group>
@@ -1147,7 +1147,7 @@
 						<instance pos="0.1 0.8 0.7" rot="0.0 160.0 0.0" file="MOD/Loots/material-rubber.xml"/>
 					</group>
 					<group name="instance=MOD/avf/prefabs/Weaponised vehicles/Willys Jeep.xml" pos="3.2 0.0 0.4" rot="0.0 -90.0 0.0">
-						<script file="MOD/Vehicles,Equipment/Cars,Trucks,Guns/Door.lua">
+						<script file="MOD/scripts/missing_script_stub.lua">
 							<vehicle name="Willys Jeep" tags="Door fuelLevel=1 focus=white" pos="0.0 0.3 0.0" rot="0.0 -90.0 0.0" sound="suv4 1.1" spring="2" damping="1.0" topspeed="89" acceleration="0.2" strength="1.5" antiroll="0.3" difflock="1" steerassist="0.3" friction="1.4">
 								<body dynamic="true">
 									<vox name="Body" texture="8 0.5" density="2.5" strength="3" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="body">
@@ -1479,7 +1479,6 @@
 			<script file="MOD/scripts/UI/Book.lua"/>
 			<script file="MOD/scripts/Game/Fuel.lua"/>
 			<script file="MOD/scripts/Gamerule.lua"/>
-			<script file="MOD/scripts/Game/PlayerVehicleSeat/PlayerVehicleSeat.lua"/>
 			<script file="MOD/scripts/door_global.lua"/>
 			<script file="MOD/scripts/Game/ShootFromCar.lua"/>
 			<script file="MOD/scripts/Game/ToolManager.lua"/>

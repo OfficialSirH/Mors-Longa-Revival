@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: RPG-7 rocket (player RPG and NPC RPGs): thrust, fuse, explosion, fire; proximity fuse for ANY player.
 globalConfig = {
   gravity = Vec(0, -9, 0)
 }
@@ -115,12 +118,18 @@ warhead_primed = false
 
 ]]
 
-function init()
+function server.init()
   rpg_type = GetString("savegame.mod.rpg_type")
 
   if not HasKey("savegame.mod.rpg_type") then
      rpg_type = "rocket0"
      --SetString("savegame.mod.rpg_type",rpg_type)
+  end
+  -- (v2 fix) v1 never set rpg_type, so every rocket was the PG-7V; the player's RPG now reports the loaded rocket
+  -- just before spawning it (server.rpgNextRocket). Read once and cleared, so NPC rockets keep the default.
+  if GetString("level.rpg.next_rocket") ~= "" then
+     rpg_type = GetString("level.rpg.next_rocket")
+     SetString("level.rpg.next_rocket", "")
   end
   weapon = deepcopy(weapon_PG7V)
   if (rpg_type == "rocket0") then
@@ -161,7 +170,7 @@ function rndVec(length)
   return VecScale(v, length)
 end
 
-function tick(dt)
+function server.tick(dt)
 
   if exploded or primetimer > 10 then
     return
@@ -221,7 +230,7 @@ function tick(dt)
      -- SpawnParticle(Vec(0, 0, 0), Vec(0, 1, 0), 10.0)
      -- PointLight(pos, 0.8, 0.8, 0.5, math.random(1*calibreCoef,15*calibreCoef))
 
-     if VecLength(VecSub(VecAdd(GetPlayerTransform().pos, Vec(0, 0.5, 0)), GetShapeWorldTransform(munition).pos)) < 1.2 and primed then
+     if NearestPlayerDist(GetShapeWorldTransform(munition).pos, 0.5) < 1.2 and primed then -- (v2) any player
         fuze = -1
         explosionfactor = explosionfactor * 2
      end
@@ -235,11 +244,14 @@ function tick(dt)
           VecNormalize(GetBodyVelocity(body)),
           VecLength(GetBodyVelocity(body)) * GetTimeStep(),
           0.2)
+        if ForceImpact then hit = true end -- (v2 fix) see RocketImpactTick
 
         if hit then
            local pos = GetShapeWorldTransform(munition).pos
            local explode_pos = TransformToParentPoint(GetShapeWorldTransform(munition), Vec(0, weapon.explosionSize * .7,
            0.3))
+           -- (v2 fix) found by the impact ray: explode where it hit (the rocket may have bounced / turned since)
+           if ForceImpact and ImpactPos then explode_pos = ImpactPos end
            Explosion(explode_pos, weapon.explosionSize * explosionfactor)
            PlaySound(explosion_sound, pos, 50)
            local shrapnel_pos = TransformToParentPoint(GetShapeWorldTransform(munition), Vec(0, 1.4, 0))
@@ -291,7 +303,7 @@ function fuze_triggered(t_vel)
   -- DebugWatch("test vel",vel)
   if math.abs(1 - (last_vel / vel)) / GetTimeStep() > weapon.fuze_sensitivity then
      return true
-  elseif VecLength(VecSub(GetPlayerTransform().pos, GetShapeWorldTransform(munition).pos)) < 1.2 then
+  elseif NearestPlayerDist(GetShapeWorldTransform(munition).pos, 0) < 1.2 then -- (v2) any player
      explosionfactor = 2
      return true
   else
@@ -608,6 +620,15 @@ function inflict_player_damage(projectile, point2)
   -- return false
 end
 
+-- (v2) distance from pos to the nearest player (feet + up metres)
+function NearestPlayerDist(pos, up)
+  local d = math.huge
+  for p in Players() do
+    d = math.min(d, VecLength(VecSub(VecAdd(GetPlayerTransform(p).pos, Vec(0, up or 0, 0)), pos)))
+  end
+  return d
+end
+
 function clamp(val, lower, upper)
   if lower > upper then lower, upper = upper, lower end   -- swap if boundaries supplied the wrong way
   return math.max(lower, math.min(upper, val))
@@ -626,4 +647,34 @@ function deepcopy(orig)
      copy = orig
   end
   return copy
+end
+
+-- (v2 fix 2026-11-07) Close-range / low-FPS impacts. v1 started all rocket logic 0.05 s after spawn (~6 m at
+-- 120 m/s) and then only looked one physics step ahead of the rocket, once per frame. A target closer than that was
+-- hit and the rocket had bounced off before any check ran; at low FPS it could also skip past thin targets. Here,
+-- every tick, a ray from the previous position along the previous flight direction (as far as the rocket could have
+-- flown) finds what it ran into, even if physics already bounced it back; that arms the warhead and detonates.
+local RocketTickV1 = server.tick
+function server.tick(dt)
+  if not exploded and body and IsHandleValid(body) then
+    if RocketLastPos and RocketLastSpeed > 10 then
+      for index, shape in ipairs(shapes) do QueryRejectShape(shape) end
+      QueryRejectBody(body)
+      local hit, dist, normal, shape = QueryRaycast(RocketLastPos, RocketLastDir,
+        RocketLastSpeed * math.max(dt, GetTimeStep()) * 1.2 + 0.3, 0.2)
+      if hit then
+        ForceImpact = true
+        primed = true
+        warhead_primed = true
+        ImpactPos = VecAdd(RocketLastPos, VecScale(RocketLastDir, dist))
+        ImpactShape = shape
+      end
+    end
+  end
+  RocketTickV1(dt)
+  if not exploded and body and IsHandleValid(body) then
+    local v = GetBodyVelocity(body)
+    RocketLastPos, RocketLastSpeed = GetBodyTransform(body).pos, VecLength(v)
+    RocketLastDir = RocketLastSpeed > 0 and VecScale(v, 1 / RocketLastSpeed) or Vec(0, 0, 1)
+  end
 end

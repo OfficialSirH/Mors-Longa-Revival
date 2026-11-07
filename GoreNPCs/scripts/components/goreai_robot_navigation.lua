@@ -207,7 +207,7 @@ end
 
 function truncateToGround(pos, rejectBodies)
 	RejectAllBodies(rejectBodies or {})
-	QueryRejectVehicle(GetPlayerVehicle())
+	QueryRejectVehicle(GetPlayerVehicle(GoreP)) -- (v2 goreai) target player
 	local hit, dist = QueryRaycast(pos, Vec(0, -1, 0), 5, 0.2)
 	if hit then
 		return VecAdd(pos, Vec(0, -dist, 0))

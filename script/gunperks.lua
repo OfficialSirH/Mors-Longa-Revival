@@ -852,3 +852,20 @@ gunperks={
 	
 	}
 }
+
+-- (v2 fix 2026-11-07) Stats for one round. A round can lack its bullet type (Type "nil": the gun's bullet list is
+-- shorter than its ammo count; seen in-game with unlimited ammo on), which made FireRound error on every shot. Such
+-- a round fires as the calibre's default (same table as GunDefaultBulletType in inventory.lua, which fills missing
+-- bullet types when an item is picked up).
+GunPerkDefaultType = {
+	["556"] = "HP", ["12ga"] = "BS", ["9x19"] = "HP", ["762x54"] = "HP", ["57x28"] = "HP", ["4ga"] = "BS",
+	["762x25"] = "HP", ["762x39"] = "HP", ["762x51"] = "HP", ["545"] = "HP", ["127x99"] = "FMJ", ["127x33"] = "HP",
+}
+
+function GunPerkFor(perk, Type)
+	local cal = gunperks[perk]
+	if cal[Type] then return cal[Type] end
+	local default = cal[GunPerkDefaultType[perk] or ""]
+	if default then return default end
+	for _, stats in pairs(cal) do return stats end
+end

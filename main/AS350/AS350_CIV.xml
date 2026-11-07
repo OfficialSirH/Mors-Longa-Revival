@@ -32,11 +32,11 @@
 				<voxbox pos="-0.45 1.8 -2.918" rot="0.0 0.0 0.0" size="1 1 14" brush="MOD/main/AS350/fuselage/AS350_CIV.vox" object="brush: frame metal"/>
 				<group name="Main Engine" pos="0.0 2.3 -2.25" rot="0.0 0.0 0.0" prop0="texture=1 0.5">
 					<vox tags="engine" pos="-0.05 -0.1 -1.25" file="MOD/main/AS350/fuselage/AS350_CIV.vox" object="Mechanical: Main Engine">
-						<script pos="0.3 0.0 0.7" file="MOD/main/AS350/script/fuel.lua">
+						<script pos="0.3 0.0 0.7" file="MOD/scripts/missing_script_stub.lua">
 							<vox tags="F_LINE fuel=fuel_lines strength=95 enginedoor" pos="-0.1 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/main/AS350/fuselage/AS350_CIV.vox" object="Systems: Fuel Lines"/>
 						</script>
 						<vox tags="O_LINE nocull enginedoor" pos="0.0 0.0 1.0" rot="0.0 0.0 0.0" file="MOD/main/AS350/fuselage/AS350_CIV.vox" object="Systems: Oil Lines"/>
-						<script pos="0.4 -1.0 1.3" file="LEVEL/AS350/script/fuel.lua">
+						<script pos="0.4 -1.0 1.3" file="MOD/scripts/missing_script_stub.lua">
 							<vox tags="FUEL nocull fuel=fuel_tank strength=85" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/main/AS350/fuselage/AS350_CIV.vox" object="Mechanical: fuel tank"/>
 						</script>
 						<group name="rotors" pos="0.0 0.2 -3.0">

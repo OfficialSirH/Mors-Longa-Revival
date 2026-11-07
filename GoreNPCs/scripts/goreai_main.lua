@@ -1,3 +1,4 @@
+#version 2
 --[[
 #include "../../Config.lua"
 #include "../../scripts/Game/Blood/Blood.lua"
@@ -28,15 +29,18 @@
 #include "debug/goreai_prefab_tester.lua"
 #include "other/RagdollPoseReader.lua"
 #include "script/common.lua"
+#include "script/include/player.lua"
 #include "systems/goreai_API_nav.lua"
 #include "systems/goreai_API.lua"
 #include "systems/goreai_blood.lua"
 #include "systems/goreai_controller.lua"
+#include "systems/goreai_netview.lua"
 #include "systems/goreai_grenades.lua"
 #include "systems/goreai_hitmarkers.lua"
 #include "systems/goreai_sitting.lua"
 #include "systems/goreai_killcam.lua"
 #include "systems/goreai_music.lua"
+#include "systems/goreai_players.lua"
 #include "systems/goreai_prefabs.lua"
 #include "systems/goreai_ragdoll_poser.lua"
 #include "systems/goreai_sounds.lua"
@@ -59,6 +63,19 @@
 -- Most of the ai decision making is done in npc_Process_Thinking().
 -- This code is kind of a mess and will be reworked later.
 --================================================================
+-- (v2, Mors Longa Revival) One manager script for all NPCs, spawned once by the first
+-- goreai_initializer.lua. The AI (tick/update) runs on the SERVER; each NPC targets the nearest player
+-- it can see (systems/goreai_players.lua: GoreP / PlayerPos are switched per NPC). Effects (sounds,
+-- particles, lights) stay where v1 had them, i.e. on the server, as in the official v2 scripts.
+-- The CLIENT does what needs a camera, UI or the local player: hitmarkers + their sounds, killcam,
+-- combat music, debug/controller UI. Server → client messages: client.goreHit, client.goreKillcam,
+-- client.goreBounty, client.goreAddShock (only to the player concerned, see GoreAI_ClientCall).
+-- Boss health bars, the NPC debug overlays and "control an NPC" work on every client: the server publishes npc
+-- records in shared.goreNpcs and each client rebuilds its own NPCs table from them (systems/goreai_netview.lua,
+-- systems/goreai_controller.lua). Host server/client do not share Lua globals, so client NPCs ≠ server NPCs.
+-- Constrain* calls must stay in server.update (update_npcs): v1 pointed/held the gun from tick, which crashed the
+-- v2 engine on a worker thread (2026-11-07, see docs/TECHNICAL_REFERENCE.md).
+--================================================================
 
 
 
@@ -76,55 +93,62 @@ MAX_HIGH_REACTION_NPCS = 5 -- The npcs closest to their targets check if they ca
 
 Explosions = {} -- Array of all explosions positions and their size per tick.
 
+PlayerPos = Vec() -- (v2) set per npc by GoreAI_SetContext
 
 
-function init()
+
+------------------------------------------------------------------
+-- Server
+------------------------------------------------------------------
+
+function server.init()
 
     SetBool("level.goreai_script_exists", true)
 
     IsHardcore = GetString("savegame.mod.difficulty") == "hardcore"
 
     Init_Settings()
-    init_player_hitboxes()
+    GoreAI_UpdatePlayers() -- also maps the players' hitbox triggers (v1 init_player_hitboxes)
     init_controls()
     init_config()
     init_sounds()
     init_bosses()
     init_gun_prefabs()
-    init_hitmarkers()
-    init_music()
 
     UPDATE = 1
     TICK = 1
 
     SitLight = FindLight("seat", true)
 
+    shared.goreNpcs = {}    -- (v2) npc records for the clients (goreai_netview.lua)
+    shared.goreControl = {} -- (v2) [player] = key of the npc that player controls (goreai_controller.lua)
+
 end
 
-function tick(dt)
+function server.tick(dt)
 
-    if not GetBool("level.configScriptSpawned") then
-        AutoSpawnScript("MOD/Config.lua")
-        init_config()
-        SetBool("level.configScriptSpawned", true)
-        print("NPC script - manually spawned Config.lua")
-    end
-
-    if not GetBool("level.healthScriptSpawned") then
-        Spawn(HealthScriptXML, Transform(), false, false)
-        init_player_hitboxes()
-        SetBool("level.healthScriptSpawned", true)
-        print("NPC script - manually spawned health script")
-    end
+    -- (v2) v1 spawned MOD/Config.lua and the health script here when a level lacked them. Both are
+    -- level scripts now (scripts/ConfigMenu.lua; HealthSystem + scripts/PlayerHitboxes.lua, which sets
+    -- level.healthScriptSpawned), and the health script is per player on the client.
 
     if not config.goreai.isEnabled then
         return
     end
 
+    GoreAI_UpdatePlayers()
+
+    -- (v2) Explosions of this tick from engine events (v1: handleCommand "explosion <strength> x y z").
+    Explosions = {}
+    for i = 1, GetEventCount("explosion") do
+        local pos, strength = GetEvent("explosion", i)
+        table.insert(Explosions, { pos = VecCopy(pos), strength = strength })
+    end
+
+    Killcam_Data._player_damaged = {} -- (v1 reset this in tick_lockcam) [head body] = player who hit it
+
     DebugMode               = config.db
     AllExplosiveShapes      = {} -- FindShapes("explosive", true)
     ShouldDrawDebug         = config.goreai.draw_debug
-    PlayerPos               = VecAdd(GetPlayerTransform().pos, Vec(0, 1, 0)) -- Adjusted player pos for npcs to aim at.
     PlacetoolBodies         = AutoSplit(GetString("level.placetool.preview_bodies"), "_")
     NpcTeamsEnabled         = config.goreai.teams_enabled
     IsSandstorm             = GetBool("level.IsSandstorm")
@@ -142,16 +166,13 @@ function tick(dt)
 
 
     -- Mod level functions (No matter how tempted you are, don't sort by funciton name. It doesn't end well.)
-    tick_timers()
     tick_combat()
     tick_teams()
-    tick_sounds()
     tick_grenades()
     tick_blood()
     tick_gun_class_unlocking()
-    tick_lockcam()
+    tick_lockcam_server()
     tick_spawners()
-    tick_music()
     tick_controller(dt)
 
     tick_deleting()
@@ -160,23 +181,24 @@ function tick(dt)
     if not GetBool("level.deleteNPCs") then
         tick_npcs_info()
         tick_npcs(dt) -- Run functions for each npc.
+        tick_npc_aim_alignment() -- (v2) was in draw_combat_details (draw)
     end
+
+    GoreAI_SetPlayer(GoreHost)
 
     tick_bones()
     tick_sitting()
+    tick_cleanup_leaks()
+    GoreAI_PublishNPCs(dt)
 
     TICK = TICK + 1
 
-    -- if InputPressed(KeyInputs.lmb) then
-    --     beep()
-    --     npc_move_to_pos(GetRandomPairsValue(NPCs), GetCrosshairWorldPos(), true)
-    -- end
 
 end
 
-function update(dt)
+function server.update(dt)
 
-    if not config.goreai.isEnabled then
+    if not config or not config.goreai.isEnabled then
         return
     end
 
@@ -189,9 +211,45 @@ function update(dt)
         update_npcs(dt)
     end
 
+    GoreAI_SetPlayer(GoreHost)
+
 end
 
-function draw()
+
+
+------------------------------------------------------------------
+-- Client
+------------------------------------------------------------------
+
+function client.init()
+    Init_Settings()
+    init_config()
+    init_sounds()
+    init_hitmarkers()
+    init_music()
+end
+
+function client.tick(dt)
+
+    if not config.goreai.isEnabled then
+        return
+    end
+
+    tick_timers()
+    tick_sounds()
+    tick_lockcam()
+    tick_music()
+
+    -- (v2) this client's view of the server's npcs (boss bars, debug overlays, controller)
+    DebugMode = config.db
+    NpcTeamsEnabled = config.goreai.teams_enabled
+    IsGoreMap = GetBool("level.goreai.gore_map")
+    GoreAI_RefreshClientNPCs()
+    tick_controller_client(dt)
+
+end
+
+function client.draw()
 
     if not config.goreai.isEnabled then
         return
@@ -200,7 +258,6 @@ function draw()
     draw_npc_controller()
     draw_npcs()
     debug_npcs()
-
     draw_combat_details()
     if Settings.game.hitmarker.value then draw_hitmarkers() end
     -- if IsGoreMap then draw_combat() end
@@ -210,9 +267,6 @@ function draw()
         draw_vehicle_empty_seats(GetPlayerVehicle())
     end
 
-    Explosions = {}
-
-
     -- if config.db and GetTableSize(NPCs) >= 1 then
     --     local npc1 = NPCs[GetTableKeys(NPCs)[1]]
     --     npc_draw_debug_nav_api(npc1)
@@ -220,41 +274,31 @@ function draw()
 
 end
 
-
-
-function handleCommand(cmd)
-    check_explosions(cmd)
-    handle_quickload(cmd)
+--- (v2) A player's shot (gun or melee) hit an npc. kind = "hit" | "headshot" | "kill" | "headshot_kill".
+function client.goreHit(target, kind, pos)
+    if not GoreAI_IsMe(target) then return end
+    hitmarker_receive(kind, pos)
 end
 
-function handle_quickload(cmd)
-	for _, word in ipairs(splitString(cmd, " ")) do
-		if word == "quickload" then
-			init()
-		end
-		break
-	end
+--- (v2) An npc the local player shot in the head died this tick.
+function client.goreKillcam(target, head, camPos, bodyparts)
+    if not GoreAI_IsMe(target) then return end
+    killcam_receive(head, camPos, bodyparts)
 end
 
-function check_explosions(cmd)
-    local words = splitString(cmd, " ")
-    if #words == 5 then
-        if words[1] == "explosion" then
-
-            Explosions = {}
-
-            table.insert(Explosions,
-            {
-                pos = Vec(
-                    tonumber(words[3]),
-                    tonumber(words[4]),
-                    tonumber(words[5])),
-                strength = tonumber(words[2])
-            })
-
-        end
-	end
+--- (v2) The local player killed an npc: count it on the local bounty board (savegame, per machine).
+function client.goreBounty(target, reg)
+    if not GoreAI_IsMe(target) then return end
+    SetInt(reg, GetInt(reg) + 1)
 end
+
+--- (v2) An npc punched the local player (AdvancedHealthScript reads level.advhealth.addShock locally).
+function client.goreAddShock(target, amount)
+    if not GoreAI_IsMe(target) then return end
+    SetFloat("level.advhealth.addShock", (tonumber(GetString("level.advhealth.addShock")) or 0) + amount)
+end
+
+
 
 ---Spawn in a script node in the game world.
 ---@param path td_path
@@ -266,10 +310,25 @@ function AutoSpawnScript(path, ...)
 	return Spawn((f):format(path, unpack(param)), Transform())[1]
 end
 
+--- (v2) v1 mapped the single player's six hitbox triggers here; now per player in goreai_players.lua.
 function init_player_hitboxes()
-    Hitboxes = FindTriggers("hitbox", true)
-    PlayerHitboxes = {}
-    for _, hitbox in ipairs(Hitboxes) do
-        PlayerHitboxes[GetTagValue(hitbox, "hitbox")] = hitbox
+    GoreAI_ScanHitboxes()
+end
+
+
+--- (v2 perf 2026-11-07) Leaks from the original mod that only mattered on long runs (found with debug auto-travel:
+--- 9 FPS at 10 km before, 22+ after):
+---  1. npcs whose torso was deleted (RemoveRoad, behind the players) stayed in NPCs forever: drop them.
+---  2. tick_deleting only empties NPCS_TO_DELETE when level.deleteNPCs is set, so every dead npc was appended again
+---     each tick. Nothing else reads the list (level.deleteNPCs deletes all npcs anyway).
+---  3. AVF spall shells are appended per grenade explosion but never processed (tick_spalling is never called).
+function tick_cleanup_leaks()
+    for id, npc in pairs(NPCs) do
+        if not IsHandleValid(npc.Torso) then
+            NPCs[id] = nil
+            NPC_Torsos[npc.Torso] = nil
+        end
     end
+    NPCS_TO_DELETE = {}
+    if spallHandler then spallHandler.shells = {} end
 end

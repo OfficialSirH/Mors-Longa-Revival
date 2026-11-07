@@ -120,8 +120,11 @@ function npc_process_shield(npc)
             local dist = VecDist(AabbGetBodyCenterPos(npc.Torso), e.pos)
             if dist < HEALTH_EXPLOSION_MAX_DIST then
 
-                local damage = -HEALTH_EXPLOSION_DAMAGE * e.strength / (dist + 1)
-                npc_add_shield_amount(npc, damage)
+                local damage = HEALTH_EXPLOSION_DAMAGE * e.strength / (dist + 1)
+                -- (v2 goreai) the shield (bosses) absorbs first, the rest hurts health (v1: shield only)
+                local absorbed = math.min(npc.shield.value, damage)
+                npc_add_shield_amount(npc, -absorbed)
+                npc.health_damage_taken = npc.health_damage_taken + (damage - absorbed)
 
             end
 
@@ -129,6 +132,9 @@ function npc_process_shield(npc)
 
     end
 
+
+    -- (v2 goreai) who shot (gunfunctions / melee write the shooter's id; unknown = host)
+    local hitOwner = GoreAI_ResolvePlayer(GetInt("level.goreai.body_damage_player_owner"))
 
     -- Check body part damage.
     for _, body in ipairs(npc.bodyparts) do
@@ -155,7 +161,7 @@ function npc_process_shield(npc)
         end
 
         if dmgs.player > 0 then
-            mark_body_damaged_by_player(body)
+            mark_body_damaged_by_player(body, hitOwner)
         end
 
         local headshot = body == npc.Head or body == npc.Jaw or TableContainsValue(npc.Eyes, body)
@@ -199,7 +205,12 @@ function npc_process_shield(npc)
             local impulse = VecScale(VecNormalize(Hitmarker_Last_Vel), impulse_scale)
             ApplyBodyImpulse(body, Hitmarker_Last_Pos, impulse)
 
-            if dmgs.player > 0 then
+            if dmgs.player > 0 then -- (v2 goreai) hitmarker icon + sound on the shooter's client
+                npc.lastHitPlayer = hitOwner
+                npc.lastHitTime = GetTime()
+                GoreAI_ClientCall(hitOwner, "client.goreHit", headshot and "headshot" or "hit", Hitmarker_Last_Pos)
+            end
+            if false then -- (v2) v1 local hitmarker code below, now hitmarker_receive (client)
 
                 -- Hitmarker sound.
                 if TimerConsumed(Sound_Timers.hitmarker) then
@@ -265,12 +276,12 @@ function npc_die(npc)
     --> Torso dead tag.
     SetTag(npc.Torso, "dead")
 
-    --> Death hitmarkers.
-    if GetTableSize(Hitmarker_Icons) >= 1 then
+    --> Death hitmarkers. (v2 goreai: if a player hit it in the last 2/3 s, the hitmarker display time)
+    if npc.lastHitPlayer and GetTime() - (npc.lastHitTime or -10) < 2/3 then
 
         if npc.headshot then
 
-            add_hitmarker(Icons.headshot_dead)
+            GoreAI_ClientCall(npc.lastHitPlayer, "client.goreHit", "headshot_kill", GetBodyTransform(npc.Head).pos)
 
             local tr = Transform(GetBodyTransform(npc.Head).pos, GetBodyTransform(npc.Torso).rot)
             if Settings.game.blood_and_gore.value then
@@ -279,16 +290,19 @@ function npc_die(npc)
 
         else
 
-            add_hitmarker(Icons.hitmarker_dead)
+            GoreAI_ClientCall(npc.lastHitPlayer, "client.goreHit", "kill", GetBodyTransform(npc.Torso).pos)
 
         end
     end
 	if npc.Gun then
 		local Gun = GetTagValue(npc.Gun.body, "Loot")
-		DebugPrint(gun)
+		-- (v2 goreai fix) no loot info (horde strips "Loot" tags) -> leave the gun as it is; v1 errored here.
+		-- Also removed v1 leftover DebugPrint(gun) (undefined variable).
 		GunInfos = Split(Gun, "_")
-		GunInfos[5] = math.random(0,GunInfos[6])
-		SetTag(npc.Gun.body, "Loot", table.concat(GunInfos,"_"))
+		if tonumber(GunInfos[6]) then
+			GunInfos[5] = math.random(0, tonumber(GunInfos[6]))
+			SetTag(npc.Gun.body, "Loot", table.concat(GunInfos,"_"))
+		end
         RemoveTag(npc.Gun.body, "gore_id")
 	end
 	if math.random() < .15 then
@@ -348,7 +362,7 @@ function npc_die(npc)
     if not npc.bounty_complete and not TimerConsumed(npc.health_damage_taken_timer) then
         local reg = BountyBoardPaths[npc.ai.teams.team]
         if npc.boss.isBoss then reg = BountyBoardPaths["boss_" .. npc.ai.teams.team] end
-        SetInt(reg, GetInt(reg) + 1)
+        GoreAI_ClientCall(npc.lastHitPlayer, "client.goreBounty", reg) -- (v2 goreai) the killer's savegame
         npc.bounty_complete = true
     end
 

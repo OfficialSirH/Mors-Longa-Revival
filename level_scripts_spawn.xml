@@ -20,7 +20,6 @@
 			<script file="MOD/scripts/Game/Fuel.lua"/>
 			<script file="MOD/scripts/Gamerule.lua"/>
 			<script file="MOD/scripts/Game/randomdelete.lua"/>
-			<script file="MOD/scripts/Game/PlayerVehicleSeat/PlayerVehicleSeat.lua"/>
 			<script file="MOD/scripts/door_global.lua"/>
 			<script file="MOD/scripts/Game/ShootFromCar.lua"/>
 			<script file="MOD/scripts/Game/ToolManager.lua"/>

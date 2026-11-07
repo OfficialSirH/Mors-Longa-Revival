@@ -896,6 +896,7 @@ function client.tick(dt)
 
 	SetFloat("level.player.health", TotalHealth)
 	SetFloat("level.player.health_max", TotalHealth)
+	HealthNet_ReportTotal(TotalHealth) -- (v2 goreai) NPCs aim worse at hurt players (was level.player.health)
 
 	health_debug(dt)
 	--[[if InputDown("alt") then
@@ -1850,12 +1851,34 @@ function HealthNet_SetWalkingSpeed(s)
 	end
 end
 
+-- (v2 goreai) Total limb health → server registry level.goreai.player_health.<p> (GoreAI_PlayerHealth).
+local healthNetReported, healthNetReportTime = nil, -10
+function HealthNet_ReportTotal(h)
+	if healthNetReported ~= nil and h == healthNetReported then return end
+	if healthNetReported ~= nil and math.abs(h - healthNetReported) < 5 and GetTime() - healthNetReportTime < 1 then return end
+	healthNetReported, healthNetReportTime = h, GetTime()
+	ServerCall("server.healthReport", GetLocalPlayer(), h)
+end
+
+function server.healthReport(p, h)
+	SetFloat("level.goreai.player_health." .. p, h)
+end
+
 function server.healthSetPlayerHealth(p, h)
 	SetPlayerHealth(h, p)
 end
 
+-- (v2 fix 2026-11-07) the engine resets the walking speed every frame (the official example sets it in every
+-- server.tick), so a speed sent once was lost: sprint never worked. Remember each player's speed, apply every tick.
+WalkingSpeeds = {}
 function server.healthSetWalkingSpeed(p, s)
-	SetPlayerWalkingSpeed(s, p)
+	WalkingSpeeds[p] = s
+end
+
+function server.tick(dt)
+	for p, s in pairs(WalkingSpeeds) do
+		if IsPlayerValid(p) then SetPlayerWalkingSpeed(s, p) else WalkingSpeeds[p] = nil end
+	end
 end
 
 -- Death ragdoll for player p (moved here from HealthSystem/Die.lua, which only saw the host).
@@ -1864,6 +1887,12 @@ function server.healthDied(p)
 	local x, y, z = GetQuatEuler(pltrans.rot)
 	pltrans.rot = QuatEuler(x, y, z)
 	pltrans.pos = Vec(pltrans.pos[1], pltrans.pos[2] + 1, pltrans.pos[3])
-	Spawn("MOD/HealthSystem/prefab/" .. GetString("savegame.mod.difficulty") .. ".xml", pltrans)
+	local entities = Spawn("MOD/HealthSystem/prefab/" .. GetString("savegame.mod.difficulty") .. ".xml", pltrans)
+	-- (v2) the ragdoll keeps the player's momentum (v1 launchragdoll.lua did this on its first tick; that script is
+	-- now the client-side death camera only)
+	local vel = GetPlayerVelocity(p)
+	for _, e in ipairs(entities) do
+		if GetEntityType(e) == "body" and HasTag(e, "bodypart") then SetBodyVelocity(e, vel) end
+	end
 end
 

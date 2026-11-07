@@ -1,4 +1,7 @@
-function init()
+#version 2
+-- (v2) client: the tutorial starts with an empty inventory. Inventories are per player on their own machine
+-- (Phase 2, script/inventory.lua), so each client clears its own.
+function client.init()
 	for i = 1,8 do
 		for j = 1,15 do
 			SetString("inventory.backpack."..i.."_"..j..".item", "") SetString("savegame.mod.inventory.backpack."..i.."_"..j..".item", "")

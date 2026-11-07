@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: sleeping NPC wakes when ANY player is near, standing still-ish and not crouching.
 sleeptypes = { "heavy", "light", "normal" }
 
 sleeptypetypes = {
@@ -15,7 +18,7 @@ sleeptypetypes = {
 	},
 }
 
-function init()
+function server.init()
 	Body = FindBody("Torso")
 	prefab = GetTagValue(Body, "Prefab")
 	WakeUp = false
@@ -28,7 +31,7 @@ function init()
 	shapes = FindShapes("")
 end
 
-function tick(dt)
+function server.tick(dt)
 	if not WakeUp then
 		if not ForeverSleep then
 			for i = 1, #Shapes do
@@ -38,13 +41,19 @@ function tick(dt)
 			end
 		end
 
-		if not InputDown("crouch") and GetDist(GetPlayerTransform().pos, GetBodyTransform(Body).pos) <= sleeptypetypes[sleeptype].dist and GetPlayerVelocity()[1] < 3 and GetPlayerVelocity()[2] and GetPlayerVelocity()[3] then
+		local waker, nearest = nil, math.huge -- (v2) any player (v1 conditions per player)
+		for p in Players() do
+			local d = GetDist(GetPlayerTransform(p).pos, GetBodyTransform(Body).pos)
+			nearest = math.min(nearest, d)
+			if not InputDown("crouch", p) and d <= sleeptypetypes[sleeptype].dist and GetPlayerVelocity(p)[1] < 3 then waker = p end
+		end
+		if waker then
 			SleepyTimer = SleepyTimer - dt
 			if SleepyTimer <= 0 then
 				WakeUp = true
 			end
 		else
-			if GetDist(GetPlayerTransform().pos, GetBodyTransform(Body).pos) > sleeptypetypes[sleeptype].dist then
+			if nearest > sleeptypetypes[sleeptype].dist then
 				SleepyTimer = sleeptypetypes[sleeptype].ttime
 			end
 		end

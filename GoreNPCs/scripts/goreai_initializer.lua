@@ -1,3 +1,4 @@
+#version 2
 --[[
 #include "../../scripts/TDSU/tdsu.lua"
 #include "./systems/goreai_API_nav.lua"
@@ -9,9 +10,12 @@
 -- All entities of the ragdoll must be inside of this script.
 -- This script initializes the tags for the goreai constructor to find and create the gore npc.
 --================================================================================================================================
+-- (v2 goreai) Server only: tags, collision filter, shape merging, spawning the manager script (goreai_main.lua)
+-- once, and this npc's path queries (QueryPath), exchanged with goreai_main through the registry
+-- (level.goreai.nav_api.<id>, level.nav_api_tables.<id>*). Nothing runs on clients.
 
 
-function init()
+function server.init()
 
 	check_script_exists()
 
@@ -44,14 +48,25 @@ function init()
 	}
 
 	isDead = false
+	MyTorso = FindBody("Torso") -- (v2 perf) see server.tick
 
 end
 
-function tick(dt)
+function server.tick(dt)
 
 	-- remove script when npc is dead.
+	-- (v2) v1 queueRemoval() registered a pause menu button to find its own script handle; that does not work
+	-- on the server, so the script just stops working once its npc is dead.
+	if Finished then return end
 	if GetBool("level.goreai.api.npcs.dead_id." .. ID) then
-		queueRemoval()
+		Finished = true
+		return
+	end
+	-- (v2 perf 2026-11-07) also stop once the npc's torso is gone (RemoveRoad deleted it behind the players);
+	-- v1 kept these scripts reading/writing the registry every tick for the rest of the run.
+	if MyTorso ~= 0 and not IsHandleValid(MyTorso) then
+		Finished = true
+		return
 	end
 
 	npc.navigation.GetPathState = GetPathState()
@@ -176,15 +191,16 @@ end
 function check_script_exists()
 	if not GetBool("level.goreai_script_exists") then
 		local xml = '<script file="MOD/GoreNPCs/scripts/goreai_main.lua"/>'
-		Spawn(xml, Transform(), true)
+		-- (v2) tag the manager "nodelete" (never removed by cleanup code)
+		for _, e in ipairs(Spawn(xml, Transform(), true) or {}) do
+			if GetEntityType(e) == "script" then SetTag(e, "nodelete") end
+		end
 		SetBool("level.goreai_script_exists", true)
 	end
 end
 
 
-function handleCommand(cmd)
-	handle_quickload(cmd)
-end
+-- (v2) no handleCommand/quickload in v2; handle_quickload below is unused.
 
 function handle_quickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
@@ -198,7 +214,7 @@ function handle_quickload(cmd)
 				RemoveTag(torso, "npc_initialized")
 			end
 
-			init()
+			server.init()
 
 		end
 		break

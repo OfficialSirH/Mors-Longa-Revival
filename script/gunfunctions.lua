@@ -294,6 +294,7 @@ function ProjectileOperations(projectile)
 			SetFloat("level.goreai.body_damage_player_vel_x", projectile.predictedBulletVelocity[1])
 			SetFloat("level.goreai.body_damage_player_vel_y", projectile.predictedBulletVelocity[2])
 			SetFloat("level.goreai.body_damage_player_vel_z", projectile.predictedBulletVelocity[3])
+			if doWorld then SetInt("level.goreai.body_damage_player_owner", projectile.owner or 0) end -- (v2 goreai) shooter, for hitmarkers/kills
 
 			projectile.hit_npc = true
 
@@ -1391,6 +1392,9 @@ function FlashLight(Active,Pos, Shape, Color)
 end
 
 
+-- (v2 note 2026-11-07) Original-mod behaviour: an EMPTY gun with unlimited ammo turned on gets 1 round in a 1-round
+-- "Infinite" mag, but no bullet type for it (bullettable / item field 10 stay empty). FireRound then looked up type
+-- "nil" and errored on every shot; GunPerkFor (gunperks.lua) now fires such a round as the calibre's default.
 function checkUnlimitedBulletsValid()
 	if unlimitedammo and ammo == 0 then
 		name = "Infinite"

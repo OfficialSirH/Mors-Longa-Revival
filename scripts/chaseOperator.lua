@@ -1,4 +1,9 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2 operator) SERVER only: AI driving (DriveVehicle), damage, explosions, sounds, siren/lights. Targets the
+-- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/patches/convert_operators.py.
 #include "masterScriptRemoverAPI.lua"
+#include "vehicleOperatorCoop.lua"
 --debug toggle
 debug = false
 
@@ -101,19 +106,11 @@ function controlVehicle(targetCost, vehicleid)
 end
 
 function lookatcarnage()
-	PPos = GetPlayerTransform().pos
-	VPos = GetVehicleTransform(vehicle).pos
-	DistToTarget = VecLength(VecSub(VPos, PPos))
-	if DistToTarget < 45 then
-		rot = QuatLookAt(PPos, Vec(VPos[1], VPos[2] - 1, VPos[3]))
-		--SetCameraTransform(Transform(Vec(PPos[1], PPos[2] + 3, PPos[3]), rot))
-		--SetCameraFov(120 - DistToTarget*1.4)
-		SetCameraDof(DistToTarget)
-		SetTimeScale(0.3)
-	end
+	-- (v2 operator) depth of field on each player within 45 m (client), slow motion only alone
+	OpCarnage(GetVehicleTransform(vehicle).pos)
 end
 
-function init()
+function server.init(dt)
 	vehiclebroke = false
 	Rock = LoadLoop("MOD/snd/Music/Vehicle/MUS_Radio_Vehicle0.ogg")
 	tillblo = 0
@@ -156,13 +153,13 @@ function init()
 	DebriSnd = LoadSound("MOD/snd/Vehicles/Shared/Destruction/DebriCar"..math.random(1,2)..".ogg")
 end
 
-function tick(dt)
+function OperatorTick(dt)
 	--DebugCross(GetShapeWorldTransform(exporg).pos)
 	if not completestop then
 		if vehicle ~= 0 then
 			vehicleB = GetVehicleBody(vehicle)
 			vBT = GetBodyTransform(vehicleB)
-			pT = GetPlayerTransform()
+			pT = OpTargetTransform(vBT.pos) -- (v2 operator) nearest living player
 			if not rndzi then
 			random = math.random(0,100)
 			rndzi = true
@@ -237,8 +234,7 @@ function tick(dt)
 					end
 					PlaySound(CB, GetVehicleTransform(vehicle).pos, 15)
 					PlaySound(DebriSnd, GetVehicleTransform(vehicle).pos, 15)
-					disttoplayer = VecLength(VecSub(GetVehicleTransform(vehicle).pos, GetPlayerCameraTransform().pos))
-					PlaySound(CBD, GetPlayerCameraTransform().pos, disttoplayer/10)
+					OpPlayDistantSound(CBD, GetVehicleTransform(vehicle).pos) -- (v2 operator) for every player
 					sparks()
 					debri()
 					v = GetVehicleTransform(vehicle).pos
@@ -292,14 +288,14 @@ function tick(dt)
 	end
 end
 
-function update()
+function OperatorUpdate(dt)
 	if not completestop then
 		if vehicle and vehicle~=0 then
 			RemoveTag(GetVehicleBody(vehicle), "bounded")
 		end
 		if targetfound then
 			--DebugPrint(VehicleSpeed)
-			goalPos = VecAdd(GetPlayerTransform().pos, Vec(0,1,0))
+			goalPos = VecAdd(OpTargetTransform(GetVehicleTransform(vehicle).pos).pos, Vec(0,1,0))
 
 			sirentick = sirentick +1
 		end
@@ -310,7 +306,7 @@ function update()
 
 end
 
-function draw()
+function OperatorDraw(dt)
 	local vhtrans = GetVehicleTransform(vehicle)
 	vhtrans.pos[2] = vhtrans.pos[2] + addheight
 	if debug then
@@ -436,4 +432,19 @@ function debri()
 		SpawnParticle(GetVehicleTransform(vehicle).pos, Vec(math.random(-18,18), math.random(-18,18), math.random(-18,18), 15))
 	end
 	ParticleReset()
+end
+
+
+-- (v2 operator) v1 callbacks, run on the server. draw() only played the siren, blinked lights and drew debug lines.
+function server.tick(dt)
+	if OpFinished then return end
+	OperatorTick(dt)
+	OpTicked = true
+	if not OpFinished then OperatorDraw() end
+end
+
+-- update reads values the first tick sets (health, VehicleSpeed); wait for it in case v2 orders them differently
+function server.update(dt)
+	if OpFinished or not OpTicked then return end
+	OperatorUpdate(dt)
 end

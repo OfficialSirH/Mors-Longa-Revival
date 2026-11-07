@@ -1,18 +1,26 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) client: New Save -> difficulty / character select (host only); camera moves per client.
 --[[
 #include "../../../scripts/TDSU/tdsu.lua"
 #include "../../../Settings.lua"
 #include "../../perkTable.lua"
+#include "menu_host.lua"
 ]]
 
-sndnext = LoadSound("MOD/snd/ui_button_next.ogg")
-sndback = LoadSound("MOD/snd/ui_button_back.ogg")
 
 
-function init()
+function client.init()
+
+	-- (v2) moved from load time (API calls are not allowed there)
+	sndnext = LoadSound("MOD/snd/ui_button_next.ogg")
+	sndback = LoadSound("MOD/snd/ui_button_back.ogg")
 
 	Init_Settings()
 
 	cam = FindBody("cam")
+	-- (v2) camera path kept per client; v1 moved the static "cam" body itself (a world change, server-only)
+	CamT = GetBodyTransform(cam)
 	locations = FindLocations("camdest", true)
 	lookAts = FindLocations("lookat", true)
 
@@ -48,7 +56,7 @@ function PlayCharSound()
 	PlaySound(selectsounds[currentChar])
 end
 
-function tick()
+function client.tick()
 
 	if not GetBool('level.UI.menu_select_difficulty')then
 		return
@@ -62,7 +70,7 @@ function tick()
 	SetCameraFov(90 - FOVDiff)
 	SetCameraDof(DistForFOV/4)
 
-	SetCameraTransform(GetBodyTransform(cam))
+	SetCameraTransform(CamT)
 
 	if InputPressed("rightarrow") or InputPressed("right") then
 		currentChar = currentChar + 1
@@ -95,11 +103,11 @@ function lerp(a,b,r)
 	return a*(1-r)+b*r
 end
 function nextCharecter()
-	local camTrans = GetBodyTransform(cam)
+	local camTrans = CamT
 	local locPos = GetLocationTransform(locations[currentChar]).pos
 	local rot = QuatLookAt(camTrans.pos, GetLocationTransform(lookAts[currentChar]).pos)
 
-	SetBodyTransform(cam, Transform(VecLerp(camTrans.pos,locPos,.1), rot))
+	CamT = Transform(VecLerp(camTrans.pos,locPos,.1), rot)
 
 	local distToDest = VecLength(VecSub(camTrans.pos, locPos))
 	if distToDest < 0.05 and not plaied then
@@ -147,6 +155,7 @@ DIFFCULTYTEXTS={
 	},
 }
 function playCharacter(char)
+	if not MenuIsHost() then return end -- (v2) only the host starts the game
 	SetBool("savegame.mod.continue",true)
 	SetBool("savegame.mod.inventory.init", true)
 
@@ -185,7 +194,7 @@ function playCharacter(char)
 		SetBool("savegame.mod.newLevel.gamerule.permadeath", false)
 		SetBool("savegame.mod.newLevel.gamerule.armored", true)
 
-		StartLevel("morslonga_main", level_path,"peaceful nodev")
+		MenuStartLevel("morslonga_main", level_path,"peaceful nodev")
 	elseif char == 2 then
 		SetString("savegame.mod.difficulty", "normal")
 
@@ -198,7 +207,7 @@ function playCharacter(char)
 		SetBool("savegame.mod.newLevel.gamerule.permadeath", false)
 		SetBool("savegame.mod.newLevel.gamerule.armored", false)
 
-		StartLevel("morslonga_main", level_path,"normal nodev")
+		MenuStartLevel("morslonga_main", level_path,"normal nodev")
 	elseif char == 3 then
 		SetString("savegame.mod.difficulty", "hardcore")
 
@@ -211,7 +220,7 @@ function playCharacter(char)
 		SetBool("savegame.mod.newLevel.gamerule.permadeath", true)
 		SetBool("savegame.mod.newLevel.gamerule.armored", false)
 		
-		StartLevel("morslonga_main", level_path,"hardcore nodev")
+		MenuStartLevel("morslonga_main", level_path,"hardcore nodev")
 	elseif char == 4 then
 		SetString("savegame.mod.difficulty", "hardcore")
 
@@ -224,7 +233,7 @@ function playCharacter(char)
 		SetBool("savegame.mod.newLevel.gamerule.permadeath", true)
 		SetBool("savegame.mod.newLevel.gamerule.armored", false)
 		
-		StartLevel("morslonga_level1","MOD/level_horde.xml")
+		MenuStartLevel("morslonga_level1","MOD/level_horde.xml")
 	--[[ elseif char == 5 then
 		SetString("savegame.mod.difficulty", "custom")
 
@@ -237,10 +246,10 @@ function playCharacter(char)
 		SetBool("savegame.mod.newLevel.gamerule.permadeath", Permadeath)
 		SetBool("savegame.mod.newLevel.gamerule.armored", Armored)
 		
-		StartLevel("morslonga_main", level_path,"normal nodev") ]]
+		MenuStartLevel("morslonga_main", level_path,"normal nodev") ]]
 	end
 end
-function draw()
+function client.draw()
 
 
 	Width = 900

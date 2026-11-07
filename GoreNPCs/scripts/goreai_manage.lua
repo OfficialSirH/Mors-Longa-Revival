@@ -15,6 +15,7 @@ function tick_npcs(dt)
 
             npc.torsoTr      = GetBodyTransform(npc.Torso)
             npc.torsoPos     = AabbGetBodyCenterPos(npc.Torso)
+            GoreAI_SetContext(npc) -- (v2 goreai) GoreP / PlayerPos = this npc's target player
             npc.disttoplayer = VecDist(npc.torsoPos, npc.ai.aimPos)
 
             npc.headshot     = false
@@ -44,10 +45,8 @@ function tick_npcs(dt)
                     npc_process_aim_sway(npc, 0)
                 end
 
-                if npc.Gun then
-                    npc_point_gun(npc)
-                    npc_hold_gun(npc)
-                end
+                -- (v2 goreai) npc_point_gun / npc_hold_gun (constraints) run in update_npcs: Constrain* in tick
+                -- crashed the v2 engine.
 
                 if npc.boss then
                     if npc.boss.isBoss then
@@ -83,7 +82,7 @@ function tick_npcs(dt)
 
         end
 
-        if config.db then
+        if config.db and false then -- (v2) debug: GetCrosshairWorldPos needs the camera (client only)
             if InputPressed("n") then
                 npc_navigationClear(npc)
                 npc_navigationSetTarget(npc, GetCrosshairWorldPos(), 3)
@@ -119,6 +118,8 @@ function update_npcs(dt)
     for index, npc in pairs(NPCs) do
 
         if npc.isValid then
+
+            GoreAI_SetContext(npc)
 
             if not npc.dead then
 
@@ -159,11 +160,14 @@ function update_npcs(dt)
 
                 npc_melee_hold_weapons(npc)
 
+                if npc.Gun and IsHandleValid(npc.Gun.body) then -- (v2 goreai) moved here from tick_npcs
+                    npc_point_gun(npc)
+                    npc_hold_gun(npc)
+                end
+
             else
 
-				if Settings.game.killcam.value then
-                    set_lock_cam(npc)
-                end
+                set_lock_cam(npc) -- (v2) the killer's client checks its own killcam setting
 
                 npc.HT = GetBodyTransform(npc.Head)
                 SetTag(npc.Loot, "interact", npc.enemyweapontag)

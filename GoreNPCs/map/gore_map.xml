@@ -8,7 +8,7 @@
 		<voxbox pos="-100.0 0.2 -100.0" texture="11" size="2000 1 2000" color="0.27 0.27 0.27"/>
 		<script file="MOD/scripts/Game/script.lua"/>
 		<script pos="0.0 1.5 0.0" file="MOD/main.lua"/>
-		<script pos="0.0 1.5 0.0" file="MOD/sandbox.lua"/>
+		<script pos="0.0 1.5 0.0" file="MOD/scripts/missing_script_stub.lua"/>
 		<script pos="0.0 1.5 0.0" file="MOD/GoreNPCs/map/gore_map.lua"/>
 		<spawnpoint pos="10 1 10" rot="0.0 0.0 0.0"/>
 	</group>

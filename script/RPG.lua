@@ -32,6 +32,11 @@ function server.init()
 	GunNet_ServerInit()
 end
 
+-- (v2) the loaded rocket type of the next rocket this script spawns (read and cleared by script/grenade.lua)
+function server.rpgNextRocket(rocketType)
+	SetString("level.rpg.next_rocket", tostring(rocketType or ""))
+end
+
 function server.tick(dt)
 	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerTick(dt)
@@ -220,6 +225,17 @@ function client.tick(dt)
 					local fwd = VecSub(TransformToParentPoint(player_pos,Vec(0,0,-1)),player_pos.pos)
 					local norm = VecNormalize(fwd)
 					local vel = VecScale(norm,120)
+					-- (v2 fix 2026-11-07) point blank: the rocket spawns ~2 m in front of the launcher; if something is
+					-- closer than that, spawn it just in front of that instead of inside / behind it (it never exploded)
+					local toSpawn = VecSub(grenade_pos, player_pos.pos)
+					QueryRejectBody(GetToolBody())
+					local blocked, blockedDist = QueryRaycast(player_pos.pos, VecNormalize(toSpawn), VecLength(toSpawn) + 0.5)
+					if blocked then
+						grenade_pos = VecAdd(player_pos.pos, VecScale(VecNormalize(toSpawn), math.max(blockedDist - 0.6, 0.3)))
+					end
+					-- (v2 fix 2026-11-07, user decision) tell the server which rocket is loaded; the rocket script reads
+					-- it once (level.rpg.next_rocket). v1 never passed it on, so every rocket was the PG-7V.
+					ServerCall("server.rpgNextRocket", rockettype)
 					GunNet_SpawnCasing(xml, Transform(grenade_pos,GetBodyTransform(GetToolBody()).rot), vel)
 					reload_value = 0
 					throw_force = 0.5

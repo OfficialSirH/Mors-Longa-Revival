@@ -42,7 +42,9 @@ function HandleWaterSources()
 		if IsHandleValid(waterSource) then
 			local waterSourceTransform = GetTriggerTransform(waterSource)
 	
-			if NearestPlayerDist(waterSourceTransform.pos) > deletionDist then
+			local nearest = NearestPlayerDist(waterSourceTransform.pos)
+			-- (v2 fix 2026-11-07) no players found → math.huge → never delete because of that
+			if nearest ~= math.huge and nearest > deletionDist then
 				if debug then DebugPrint('Removing water source for too far: '..waterSource) end
 				RemoveWaterSource(waterSource)
 			else

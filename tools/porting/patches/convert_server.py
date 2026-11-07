@@ -9,7 +9,10 @@ import re, sys
 
 HEADER = '#version 2\n#include "script/include/player.lua"\n'
 
-def convert(path, edits, note):
+SERVER_REALMS = {"init": "server", "tick": "server", "update": "server", "handleCommand": "server"}
+
+def convert(path, edits, note, realms=SERVER_REALMS):
+    """realms: v1 callback name -> "server" or "client" (default: all server; draw must be mapped explicitly)."""
     b = open(path, "rb").read().decode("utf-8")
     crlf = "\r\n" in b
     t = b.replace("\r\n", "\n")
@@ -18,8 +21,8 @@ def convert(path, edits, note):
         n = t.count(old)
         assert n == 1, f"{path}: expected 1x {old[:70]!r}, found {n}"
         t = t.replace(old, new)
-    for name in ("init", "tick", "update", "handleCommand"):
-        t, n = re.subn(rf'(^|\n)function {name}\(', rf'\1function server.{name}(', t)
+    for name, realm in realms.items():
+        t, n = re.subn(rf'(^|\n)function {name}\(', rf'\1function {realm}.{name}(', t)
         assert n <= 1, f"{path}: {n}x function {name}"
     assert not re.search(r'(^|\n)function (init|tick|update|draw|handleCommand)\(', t), path
     t = HEADER + "-- (v2) " + note + "\n" + t

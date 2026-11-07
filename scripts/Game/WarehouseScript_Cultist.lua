@@ -1,6 +1,9 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: cultist warehouse; the boss ambush triggers when ANY player enters.
 #include "../masterScriptRemoverAPI.lua"
 
-function init()
+function server.init()
 	boss_trigger = FindTrigger("cultist_boss_trigger")
 	local triggerT=GetTriggerTransform(boss_trigger)
 
@@ -28,14 +31,17 @@ function init()
 
 end
 
-function tick(dt)
+function server.tick(dt)
 
 	if Triggered then
-		queueRemoval()
-		return
+		return -- (v2) v1 queueRemoval() (pause-menu handle trick) does not work on the server: just stop
 	end
 
-	local PlayerPos = GetPlayerTransform().pos
+	local PlayerPos = nil -- (v2) any player inside the trigger
+	for p in Players() do
+		if IsPointInTrigger(boss_trigger, GetPlayerTransform(p).pos) then PlayerPos = GetPlayerTransform(p).pos end
+	end
+	if PlayerPos == nil then return end
 
 	--DebugWatch("Triggered", Triggered)
 	--DebugWatch("IsPointInTrigger", IsPointInTrigger(boss_trigger, PlayerPos))

@@ -1,9 +1,16 @@
+#version 2
 #include "../../scripts/TDSU/tdsu.lua"
+-- (v2) Safe zone (shop segment). Server: counts loaded safe zones (level.safezoneLoadCount, read by ParkingSpot.lua's
+-- server part). Client: the coloured outlines on the perk machine / bed / stash (they fade with camera distance).
 
 Safezone_Tag = "safezone" -- Add this tag to the body of each interactable (tags="safezone=perk")
 
 
-function init()
+function server.init()
+    SetInt("level.safezoneLoadCount", GetInt("level.safezoneLoadCount") + 1)
+end
+
+function client.init()
 
     InteractablesObjects = {}
 
@@ -16,23 +23,25 @@ function init()
         CreateInteractable(body)
     end
 
-    SetInt("level.safezoneLoadCount", GetInt("level.safezoneLoadCount") + 1)
-
 end
 
-function tick()
+function client.tick()
 
     for index, interactable in ipairs(InteractablesObjects) do
 
-        local tr = GetBodyTransform(interactable.body)
-        local a = 30 - (VecDist(GetCameraTransform().pos, tr.pos))
+        if interactable.data and IsHandleValid(interactable.body) then -- (v2) skip unknown safezone types / removed bodies
 
-        DrawBodyOutline(
-            interactable.body,
-            interactable.data.color[1],
-            interactable.data.color[2],
-            interactable.data.color[3],
-            a)
+            local tr = GetBodyTransform(interactable.body)
+            local a = 30 - (VecDist(GetCameraTransform().pos, tr.pos))
+
+            DrawBodyOutline(
+                interactable.body,
+                interactable.data.color[1],
+                interactable.data.color[2],
+                interactable.data.color[3],
+                a)
+
+        end
 
     end
 

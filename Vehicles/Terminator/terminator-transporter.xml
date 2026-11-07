@@ -52,7 +52,7 @@
 					<wheel pos="0.7 -1.15 3.05" travel="-0.1 0.1">
 						<vox pos="0.2 -0.45 0.05" file="MOD/vox/terminator_transporter.vox" object="wheel_br"/>
 					</wheel>
-					<script name="Lift1" pos="-0.4 -1.5 5.4" rot="0.0 0.0 0.0" file="MOD/script/elevator.lua">
+					<script name="Lift1" pos="-0.4 -1.5 5.4" rot="0.0 0.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 						<body name="Elevator body" tags="elevator" pos="0.0 0.2 0.8" dynamic="true">
 							<joint name="Hinge joint" tags="joint" pos="-0.5 0.55 -1.1" rot=".0 90.0 0.0" type="hinge" limits="0 110"/>
 							<vox pos="0.4 1.8 -1.0" rot="90.0 -180.0 0.0" texture="8 0.4" density="1" strength="10.0" file="MOD/vox/terminator_transporter.vox" object="lift1"/>

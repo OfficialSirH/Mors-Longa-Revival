@@ -210,6 +210,14 @@ FIXUPS = {
     # copy-paste bug: the sawed-off gated its inventory/mag update on the MP43 being enabled
     'gun-sawedoff': [('IsToolEnabled("gun-mp43")', 'IsToolEnabled("gun-sawedoff")')],
 }
+# all guns: camo is nil when the item string has fewer than 10 attachment fields (e.g. the tutorial's M4A1); the
+# "<X>-"..camo..".xml" line (an unused local) then errored on every gun switch (found in-game 2026-11-07)
+n = sub(r'"\.\.camo\.\."', '"..(camo or "").."', min_count=0)
+if n: notes.append(f'nil camo guarded: {n}')
+# all guns: a round without a bullet type (bullettable[ammo] == nil -> Type "nil") made FireRound error on every shot
+# (seen in-game 2026-11-07 with unlimited ammo on); fire it as the calibre's default round (GunPerkFor, gunperks.lua)
+n = sub(r'local perktable=gunperks\[perk\]\[Type\]', 'local perktable=GunPerkFor(perk, Type)', min_count=0)
+if n: notes.append(f'missing bullet type falls back to the calibre default: {n}')
 for old, new in FIXUPS.get(tid, []):
     assert s.count(old) >= 1, f'fixup target missing: {old}'
     s = s.replace(old, new)

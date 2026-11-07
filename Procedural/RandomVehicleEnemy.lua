@@ -1,6 +1,7 @@
 #version 2
 #include "script/include/player.lua"
 -- (v2) server: timed enemy/civilian/refugee/helicopter vehicle spawns.
+-- Debug menu: scripts/ConfigMenu.lua writes level.debug.vehicle_event (+ _x/_y/_z); handled in HandleDebugVehicleEvent.
 --[[
 #include "../scripts/TDSU/tdsu.lua"
 #include "../Settings.lua"
@@ -66,6 +67,8 @@ end
 
 
 function server.tick(dt)
+	DayPhase = GetString("level.dayphase")
+	HandleDebugVehicleEvent() -- (v2) debug menu buttons work even with spawning disabled / peaceful
 	if GetBool(disable_spawning) or GetTime() < 1 then
 		return
 	end
@@ -98,18 +101,7 @@ function server.tick(dt)
 	if SpawnTimer_Heli.time * timerDiv <= 0 then
 		MaxTime_heli = RandomSpreadPercent(math.random(TimerRange_heli[1], TimerRange_heli[2])) * 60
 		SpawnTimer_Heli = TimerCreateSeconds(MaxTime_heli)
-
-		if Settings.game.enemy_helicopter.value then
-
-			local xml = "MOD/main/AS350/AS350_INSURGENT.xml"
-
-			if DistanceProgressed > 10000 and math.random() * timerDiv < 0.5 then
-				xml = "MOD/main/AS350/AS350_MILITARY.xml"
-			end
-
-			local entities = Spawn(xml, Transform(Vec(200,50,3), QuatEuler(0,-90,0)))
-			addSpawnedVehicleXMLToRegistry(entities, xml)
-		end
+		SpawnEventHeli(timerDiv, false)
 	end
 
 
@@ -117,26 +109,7 @@ function server.tick(dt)
 	if SpawnTimer_AAF.time * timerDiv <= 0 then
 		MaxTime_aaf = RandomSpreadPercent(math.random(TimerRange_aaf[1],  TimerRange_aaf[2])) * 60
 		SpawnTimer_AAF = TimerCreateSeconds(MaxTime_aaf)
-
-		-- (v2 fix) original left the global 'whichone' unset below 5000 m (crash at the concat
-		-- before any civ spawn, otherwise it re-spawned the last civ vehicle). No AAF spawn before 5000 m.
-		local whichone = nil
-		-- (v2 fix) 8000 m checked first; the original order made the truck branch unreachable.
-		if DistanceProgressed > 8000 then
-			if math.random() * timerDiv > 0.7 then
-				whichone = "AAF1" -- truck
-			else
-				whichone = "AAF2" -- jeep
-			end
-		elseif DistanceProgressed > 5000 then
-			whichone = "AAF2" -- jeep
-		end
-
-		if whichone then
-			local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" .. whichone ..".xml"
-			entities = Spawn(xml, Transform(Vec(-300, 4.5, 3), QuatEuler(0,-90,0)))
-			addSpawnedVehicleXMLToRegistry(entities, xml)
-		end
+		SpawnEventAAF(timerDiv, false)
 	end
 
 
@@ -144,12 +117,7 @@ function server.tick(dt)
 	if SpawnTimer_Civ.time * timerDiv <= 0 then
 		MaxTime_civ = RandomSpreadPercent(math.random(TimerRange_civ[1],  TimerRange_civ[2])) * 60
 		SpawnTimer_Civ = TimerCreateSeconds(MaxTime_civ)
-
-		whichone = "D"..math.random(1,differentDvehicles)
-		local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" ..whichone..".xml"
-		local entities = nil
-		entities = Spawn(xml, Transform(Vec(-300, 4.5, math.random(-3, 3)), QuatEuler(0,-90,0)))
-		addSpawnedVehicleXMLToRegistry(entities, xml)
+		SpawnEventCiv()
 	end
 
 
@@ -157,11 +125,7 @@ function server.tick(dt)
 	if SpawnTimer_Refugee.time * timerDiv <= 0 then
 		MaxTime_ref = RandomSpreadPercent(math.random(TimerRange_ref[1],  TimerRange_ref[2])) * 60
 		SpawnTimer_Refugee = TimerCreateSeconds(MaxTime_ref)
-
-		whichone = math.random(1, differentCvehicles)
-		local xml = "MOD/prefabs/spawnables/enemy vehicles/VehicleC" ..whichone..".xml"
-		local entities = Spawn(xml, Transform(Vec(-300,4.5,3), QuatEuler(0,-90,0)))
-		addSpawnedVehicleXMLToRegistry(entities, xml)
+		SpawnEventRefugee()
 	end
 
 
@@ -186,11 +150,79 @@ function server.tick(dt)
 		Delete(Location)
 	end
 
-	if GetBool("level.procedural.spawn_npc_vehicle") then
-		SpawnRandomEnemyVehicle(GetCrosshairWorldPos())
-		SetBool("level.procedural.spawn_npc_vehicle", false)
+	-- (v2) the debug menu's "Enemy Vehicle" button now goes through HandleDebugVehicleEvent ("roadblock"):
+	-- v1 read GetCrosshairWorldPos() here, which needs the camera (client only).
+
+end
+
+-- (v2) The timed events, one function each (used by the timers above and by the debug menu).
+-- force = debug menu: ignore the distance / setting conditions.
+function SpawnEventHeli(timerDiv, force)
+	if not force and not Settings.game.enemy_helicopter.value then return end
+	local xml = "MOD/main/AS350/AS350_INSURGENT.xml"
+	if (DistanceProgressed > 10000 or force) and math.random() * (timerDiv or 1) < 0.5 then
+		xml = "MOD/main/AS350/AS350_MILITARY.xml"
+	end
+	local entities = Spawn(xml, Transform(Vec(200,50,3), QuatEuler(0,-90,0)))
+	addSpawnedVehicleXMLToRegistry(entities, xml)
+end
+
+function SpawnEventAAF(timerDiv, force)
+	-- (v2 fix) original left the global 'whichone' unset below 5000 m (crash at the concat
+	-- before any civ spawn, otherwise it re-spawned the last civ vehicle). No AAF spawn before 5000 m.
+	local whichone = nil
+	-- (v2 fix) 8000 m checked first; the original order made the truck branch unreachable.
+	if DistanceProgressed > 8000 or force then
+		if math.random() * (timerDiv or 1) > 0.7 then
+			whichone = "AAF1" -- truck
+		else
+			whichone = "AAF2" -- jeep
+		end
+	elseif DistanceProgressed > 5000 then
+		whichone = "AAF2" -- jeep
 	end
 
+	if whichone then
+		local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" .. whichone ..".xml"
+		local entities = Spawn(xml, Transform(Vec(-300, 4.5, 3), QuatEuler(0,-90,0)))
+		addSpawnedVehicleXMLToRegistry(entities, xml)
+	end
+end
+
+function SpawnEventCiv()
+	local whichone = "D"..math.random(1,differentDvehicles)
+	local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" ..whichone..".xml"
+	local entities = Spawn(xml, Transform(Vec(-300, 4.5, math.random(-3, 3)), QuatEuler(0,-90,0)))
+	addSpawnedVehicleXMLToRegistry(entities, xml)
+end
+
+function SpawnEventRefugee()
+	local whichone = math.random(1, differentCvehicles)
+	local xml = "MOD/prefabs/spawnables/enemy vehicles/VehicleC" ..whichone..".xml"
+	local entities = Spawn(xml, Transform(Vec(-300,4.5,3), QuatEuler(0,-90,0)))
+	addSpawnedVehicleXMLToRegistry(entities, xml)
+end
+
+-- (v2) Debug menu request (scripts/ConfigMenu.lua server.configVehicleEvent): run one event now.
+DEBUG_VEHICLE_EVENT = "level.debug.vehicle_event"
+function HandleDebugVehicleEvent()
+	local name = GetString(DEBUG_VEHICLE_EVENT)
+	if name == "" then return end
+	SetString(DEBUG_VEHICLE_EVENT, "")
+	DistanceProgressed = GetFloat("savegame.mod.distanceProgressed")
+	if name == "heli" then
+		SpawnEventHeli(1, true)
+	elseif name == "aaf" then
+		SpawnEventAAF(1, true)
+	elseif name == "civ" then
+		SpawnEventCiv()
+	elseif name == "refugee" then
+		SpawnEventRefugee()
+	elseif name == "roadblock" then -- v1 "Enemy Vehicle": a random road enemy vehicle at the crosshair
+		local pos = Vec(GetFloat(DEBUG_VEHICLE_EVENT .. "_x"), GetFloat(DEBUG_VEHICLE_EVENT .. "_y"), GetFloat(DEBUG_VEHICLE_EVENT .. "_z"))
+		RandomizedPosition, RandomizedRotation = nil, nil
+		SpawnRandomEnemyVehicle(pos)
+	end
 end
 
 function SpawnRandomEnemyVehicle(opt_pos)

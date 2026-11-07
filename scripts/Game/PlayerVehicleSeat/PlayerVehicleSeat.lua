@@ -6,8 +6,9 @@
 
 local player_body_tag = "PlayerVehicleBody"
 
--- (v2) client: a local (client-spawned) copy of the player model sits in the driver seat when the camera is
--- outside the car. Other players' models in seats: Phase 3 (vehicle seats).
+-- (v2) NOT LOADED since 2026-11-07: v1 had no visible player, so this put a copy of the player model in the driver
+-- seat when the camera was outside the car. v2 draws the player itself (user saw two bodies in the seat), so the
+-- script was removed from the level xmls (still referenced by test.xml / test_vehicle.xml only).
 function client.init()
 	PlayerBody = 0
 	UPDATE = 1

@@ -5,6 +5,8 @@ for _, n in ipairs{"PlaySound","SpawnParticle","PointLight","DrawLine","MakeHole
 local R = {}
 function SetFloat(k,v) calls.SetFloat=(calls.SetFloat or 0)+1 R[k]=v end
 function GetFloat(k) return R[k] or 0 end
+function SetInt(k,v) R[k]=v end
+function GetInt(k) return R[k] or 0 end
 function Vec(x,y,z) return {x or 0,y or 0,z or 0} end
 function VecCopy(v) return {v[1],v[2],v[3]} end
 function VecAdd(a,b) return {a[1]+b[1],a[2]+b[2],a[3]+b[3]} end
@@ -62,6 +64,7 @@ raycasts = 0
 for i=1,5 do GunNet_ServerTick(1/60) end
 assert((calls.MakeHole or 0) >= 1, "server must make holes")
 assert((calls.SetFloat or 0) >= 1, "server must write NPC damage")
+assert(R["level.goreai.body_damage_player_owner"] == 1, "server must record the shooter (hitmarkers)")
 assert(not calls.PlaySound and not calls.SpawnParticle and not calls.DrawLine, "server must not do fx")
 -- step client only
 calls = {}

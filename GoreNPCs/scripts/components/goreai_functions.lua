@@ -325,18 +325,20 @@ function npc_check_if_can_see_target(npc, opt_pos)
             lookTr = Transform(lookSource, QuatLookAt(lookSource, headPos))
             lookTarget = headPos
 
-            if GetPlayerVehicle() ~= 0 then QueryRejectVehicle(GetPlayerVehicle()) end
+            if GetPlayerVehicle(GoreP) ~= 0 then QueryRejectVehicle(GetPlayerVehicle(GoreP)) end
 
         end
 
     end
 
-    if npc.ai.sitting.isSitting then QueryRejectVehicle(GetPlayerVehicle()) end
+    if npc.ai.sitting.isSitting then QueryRejectVehicle(GetPlayerVehicle(GoreP)) end
     RejectAllBodies(NPC_Bodies)
     RejectAllBodies(npc.AllBodies)
     RejectAllShapes(npc.AllShapes)
-    QueryRejectBody(GetPlayerGrabBody())
-    QueryRejectBody(GetToolBody())
+    for _, p in ipairs(GorePlayerIds) do -- (v2 goreai) every player's grabbed body and tool
+        QueryRejectBody(GetPlayerGrabBody(p))
+        QueryRejectBody(GetToolBody(p))
+    end
     local hit, pos, shape, body = RaycastFromTransform(lookTr, VecDist(lookSource, lookTarget), nil, nil, nil, true, true)
 
     -- if config.goreai.draw_combat then

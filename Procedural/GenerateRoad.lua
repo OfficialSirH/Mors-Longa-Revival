@@ -1,6 +1,8 @@
 #version 2
 #include "script/include/player.lua"
 -- (v2) server: road generation, world shift (moves ALL players), distance; registry keys read by clients are synced.
+-- (v2, Phase 3) Co-op: the FURTHEST living player drives generation, the world shift and the distance counter
+-- (GetGenerationPlayerPos); players far behind are teleported up to the leader (TeleportStragglers).
 --[[
 #include "../Automatic.lua"
 #include "../Settings.lua"
@@ -142,6 +144,7 @@ function server.update(dt)
 					end
 				end
 	
+				RegisterSegmentScripts(spawnedEntities) -- (v2 perf) see TickSegmentScripts
 				ProcessEnemySpawns(spawnedEntities, spawnCountOverride)
 	
 				SetBool("level.roadgen", true)
@@ -173,6 +176,8 @@ function server.update(dt)
 	--DebugPrint("RoadSegments: "..RoadSegments)
 
 	ReturnToShadowVolume()
+	TeleportStragglers(dt)
+	TickSegmentScripts()
 
 	if InputDown('d') and InputDown('e') and InputDown('b') and InputDown('u') and InputPressed('g') then
 		debugyea = not debugyea
@@ -258,6 +263,10 @@ function ReturnToShadowVolume()
 			end
 		end
 		Returns = Returns + 1
+		SetInt("level.world_shifts", GetInt("level.world_shifts") + 1, true) -- (v2) for movers (debug auto-travel)
+		-- (v2) positions read in the shift frame (and the next) can still be the unshifted ones, which made the
+		-- distance 200 m too high for a frame; with the never-decreasing counter that froze it for 200 m.
+		DistanceSkipFrames = 2
 
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." teleported everything by: "..shiftDist)end
 		if GetBool('Level.Debug')then DebugPrint(GetTime().." player now at: "..VecStr(GetGenerationPlayerPos()))end
@@ -273,11 +282,18 @@ function ReturnToShadowVolume()
 
 	local PlayerZ = GetGenerationPlayerPos()[1]
 	local totalReturnDist = Returns * shiftDist
-	DistanceProgressed = clamp(PlayerZ - PlayerZStart + totalReturnDist, 0, math.huge)
+	-- (v2) never decreases: the leading player can change (dies, leaves, falls behind). Not updated right after a
+	-- world shift (see DistanceSkipFrames).
+	if (DistanceSkipFrames or 0) > 0 then
+		DistanceSkipFrames = DistanceSkipFrames - 1
+	else
+		DistanceProgressed = math.max(DistanceProgressed or 0, clamp(PlayerZ - PlayerZStart + totalReturnDist, 0, math.huge))
+	end
 
 	if GetBool("level.reset_distanceProgressed") then
 		PlayerZStart = GetGenerationPlayerPos()[1]
 		Returns = 0
+		DistanceProgressed = 0
 	end
 
 	SetFloat("savegame.mod.distanceProgressed", ternary(GetBool("level.reset_distanceProgressed"), 0, DistanceProgressed), true)
@@ -287,10 +303,120 @@ function ReturnToShadowVolume()
 end
 
 
--- (v2) The player whose position drives road generation, the world shift and the distance counter.
--- For now the host. Phase 3: the furthest player, with stragglers teleported.
+-- (v2) The player whose position drives road generation, the world shift and the distance counter:
+-- the living player furthest along the road (+x); if nobody is alive, the furthest player.
+function GetGenerationPlayer()
+	local best, bestX, bestAlive = nil, -math.huge, false
+	for p in Players() do
+		local x = GetPlayerTransform(p).pos[1]
+		local alive = GetPlayerHealth(p) > 0
+		if (alive and not bestAlive) or (alive == bestAlive and x > bestX) then
+			best, bestX, bestAlive = p, x, alive
+		end
+	end
+	return best
+end
+
 function GetGenerationPlayerPos()
-	return GetPlayerTransform(0).pos
+	local p = GetGenerationPlayer()
+	if p == nil then return GetPlayerTransform(0).pos end
+	return GetPlayerTransform(p).pos
+end
+
+-- (v2) Stragglers: a living player more than STRAGGLER_DIST behind the leader (along the road, x) for
+-- STRAGGLER_TIME seconds is put just behind the leader, on the ground. A player in a vehicle is moved with it.
+-- The playable world is ~400 m long (shadow volume) and RemoveRoad deletes things 250 m behind the rearmost
+-- player, so everyone stays well inside both.
+STRAGGLER_DIST = 150
+STRAGGLER_TIME = 3
+StragglerTimers = {}
+
+function TeleportStragglers(dt)
+	local leader = GetGenerationPlayer()
+	if leader == nil then return end
+	local leaderPos = GetPlayerTransform(leader).pos
+	local slot = 0
+	local seen = {}
+	for p in Players() do
+		seen[p] = true
+		local behind = leaderPos[1] - GetPlayerTransform(p).pos[1]
+		if p ~= leader and GetPlayerHealth(p) > 0 and behind > STRAGGLER_DIST then
+			StragglerTimers[p] = (StragglerTimers[p] or 0) + dt
+			if StragglerTimers[p] >= STRAGGLER_TIME then
+				slot = slot + 1
+				TeleportPlayerBehind(p, leaderPos, slot)
+				StragglerTimers[p] = 0
+			end
+		else
+			StragglerTimers[p] = 0
+		end
+	end
+	for p in pairs(StragglerTimers) do
+		if not seen[p] then StragglerTimers[p] = nil end
+	end
+end
+
+-- Ground position 8 m behind pos (x), side by side per slot (z), found by a raycast down.
+function StragglerTarget(pos, slot)
+	local side = (slot % 2 == 1) and 1 or -1
+	local target = Vec(pos[1] - 8, pos[2], pos[3] + side * 3 * math.ceil(slot / 2))
+	local from = VecAdd(target, Vec(0, 30, 0))
+	local hit, dist = QueryRaycast(from, Vec(0, -1, 0), 80)
+	if hit then target[2] = from[2] - dist end
+	return target
+end
+
+function TeleportPlayerBehind(p, leaderPos, slot)
+	local target = StragglerTarget(leaderPos, slot)
+	local vehicle = GetPlayerVehicle(p)
+	if vehicle ~= 0 then
+		local body = GetVehicleBody(vehicle)
+		local t = GetBodyTransform(body)
+		SetBodyTransform(body, Transform(VecAdd(target, Vec(0, 2, 0)), t.rot))
+		SetBodyVelocity(body, Vec())
+		SetBodyAngularVelocity(body, Vec())
+	else
+		local t = GetPlayerTransform(p)
+		SetPlayerTransform(Transform(VecAdd(target, Vec(0, 0.5, 0)), t.rot), p)
+		SetPlayerVelocity(Vec(), p)
+	end
+	if GetBool('Level.Debug') then DebugPrint(GetTime().." straggler "..p.." teleported behind the leader") end
+end
+
+--- (v2 perf 2026-11-07) Scripts that come with a road segment (vehicles, doors, shops, rotating props, ...) kept
+--- running after RemoveRoad deleted the segment behind the players (scripts 106 → 219 in 5 km). Remember each
+--- segment's scripts and world objects (from Spawn's result); once none of its bodies / shapes / vehicles / triggers
+--- is left, delete its scripts. Works however the scripts are nested in the prefab xml.
+SegmentGroups = {}
+function RegisterSegmentScripts(entities)
+	local group = { scripts = {}, anchors = {} }
+	for _, e in ipairs(entities or {}) do
+		local t = GetEntityType(e)
+		if t == "script" then
+			group.scripts[#group.scripts + 1] = e
+		elseif t == "body" or t == "shape" or t == "vehicle" or t == "trigger" then
+			group.anchors[#group.anchors + 1] = e
+		end
+	end
+	if #group.scripts > 0 and #group.anchors > 0 then SegmentGroups[#SegmentGroups + 1] = group end
+end
+
+function TickSegmentScripts()
+	if GetTime() < (SegmentGroupsNext or 0) then return end
+	SegmentGroupsNext = GetTime() + 1
+	for i = #SegmentGroups, 1, -1 do
+		local group = SegmentGroups[i]
+		local alive = false
+		for _, a in ipairs(group.anchors) do
+			if IsHandleValid(a) then alive = true break end
+		end
+		if not alive then
+			for _, s in ipairs(group.scripts) do
+				if IsHandleValid(s) then Delete(s) end
+			end
+			table.remove(SegmentGroups, i)
+		end
+	end
 end
 
 -- Check and delete shapes tagged "veg" after spawning a road segement.
