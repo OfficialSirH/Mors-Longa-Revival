@@ -8,7 +8,7 @@
   money, menu. Server: one non-colliding preview body per player, moved to the pose the client sends; spawns what
   is placed. v1 moved shared preview bodies from tick (world changes are server-only in v2).
 
-Usage (repo root): python3 tools/porting/patches/convert_horde.py   (rebuilds both files from git HEAD, v1 there)
+Usage (repo root): python3 tools/porting/patches/convert_horde.py   (rebuilds both files from the phase 2 commit, v1 there)
 """
 import os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -359,12 +359,15 @@ PLACE_BLOCK_START = "-- Keep models as non-colliding placement previews.\n"
 PLACE_BLOCK_END = "function draw()\n"
 
 
+BASE = "6c28435"  # "phase 2" commit: these files are still v1 there (HEAD has the converted versions since phase 3)
+
+
 def head(path):
-    return subprocess.run(["git", "show", "HEAD:" + path], capture_output=True, check=True).stdout.decode("utf-8")
+    return subprocess.run(["git", "show", BASE + ":" + path], capture_output=True, check=True).stdout.decode("utf-8")
 
 
 def write(path, text):
-    open(path, "wb").write(text.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8"))
+    open(path, "wb").write(text.replace("\r\n", "\n").encode("utf-8"))  # LF (repo is LF since 2026-11-08)
 
 
 def main():

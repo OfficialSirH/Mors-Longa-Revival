@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """GoreNPCs v1 -> v2 (Phase 3): per-file asserted replacements, applied in place.
 
-goreai_main.lua, systems/goreai_players.lua, systems/goreai_netview.lua and systems/goreai_controller.lua
-are (re)written by hand; this script holds every
+goreai_main.lua, systems/goreai_players.lua, systems/goreai_netview.lua, systems/goreai_controller.lua and
+systems/goreai_sitting.lua are (re)written by hand; this script holds every
 edit made to the other files. Each (old, new) must match exactly `count` times (default 1).
 Each file is rebuilt from the phase 2 commit (BASE, still v1), so the script can be re-run
 after changing an edit. Usage (repo root): python3 tools/porting/patches/convert_goreai.py [file ...]
@@ -15,7 +15,7 @@ MARK = "(v2 goreai)"   # every patched file gets at least one comment containing
 
 def apply(path, edits):
     b = subprocess.run(["git", "show", BASE + ":" + path], capture_output=True, check=True).stdout.decode("utf-8")
-    crlf = "\r\n" in b
+    crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
     t = b.replace("\r\n", "\n")
     assert MARK not in t, path + ": HEAD version is already patched"
     for e in edits:
@@ -86,6 +86,9 @@ EDITS[G + "goreai_manage.lua"] = [
      "                    npc_point_gun(npc)\n"
      "                    npc_hold_gun(npc)\n"
      "                end\n"),
+    # (Phase 4, 2026-11-08) NPCs sit in the vehicles' passenger seat rigs (systems/goreai_sitting.lua)
+    ("npc_pose_ragdoll(npc, GetLightTransform(npc.ai.sitting.sitLight), RagdollPoses.sit, npc.ai.sitting.sitBody)",
+     "npc_pose_ragdoll(npc, npc_sitting_head_transform(npc), npc_sitting_pose(npc), npc.ai.sitting.sitBody) -- (v2 goreai) seat rig"),
 ]
 
 EDITS[G + "components/goreai_targetting.lua"] = [
@@ -293,10 +296,7 @@ EDITS[G + "components/goreai_thinking.lua"] = [
      "            if GetPlayerVehicle(GoreP) ~= 0 then -- (v2 goreai) the target player (friendlies follow the nearest)\n"),
 ]
 
-EDITS[G + "systems/goreai_sitting.lua"] = [
-    ("    local v = GetPlayerVehicle()\n", "    local v = GetPlayerVehicle(GoreP) -- (v2 goreai) target player\n"),
-    ("if TableContainsValue(SeatsTaken, seat_light) then", "if TableContainsValue(SeatsTaken or {}, seat_light) then -- (v2) SeatsTaken is server state (host only)"),
-]
+# systems/goreai_sitting.lua: hand-written since Phase 4 (NPCs use the vehicles' passenger seat rigs).
 
 EDITS[G + "systems/goreai_grenades.lua"] = [
     ("\tif GetPlayerVehicle() ~= 0 then\n\t\tthrowTargetPos = VecAdd(throwTargetPos, GetBodyVelocity(GetVehicleBody(GetPlayerVehicle())))\n",

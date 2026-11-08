@@ -1,4 +1,10 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) ZU-23-2 (technical_ZU_23.xml = spawn menu "AAF Pickup Truck ZU-23" (added 2026-11-12); ZIL131_ZSU23.xml = spawn menu "AAF Truck Technical"): runs on our own
+-- mounted-gun script with AVF's shells ported (scripts/avf; v1 included ../../scripts/avf_custom.lua and needed
+-- the external AVF mod). The AVF table below is still the gun's config (weaponType "cannon": its magazines).
+MountedGunSound = "MOD/avf/assets/sounds/autocannons/zsu_23_2_single.ogg" -- AVF soundFile (copied from AVF)
 
 
 --[[

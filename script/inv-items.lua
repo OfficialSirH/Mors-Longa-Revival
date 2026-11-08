@@ -539,6 +539,11 @@ ITEMS={
 			"AMMOCOUNT",
 		},
 
+		["mag0-ak-9x19"]={ -- (v2 fix 2026-11-12) entry was missing: "Unknown item: mag0-ak-9x19"
+			"Standard Simonov-9 magazine, fits 30 rounds of 9x19 ammo.",
+			"AMMOCOUNT",
+		},
+
 		["mag0-mp5-9x19"]={
 			"Standard MC9 magazine, fits 30 rounds of 9x19 ammo.",
 			"AMMOCOUNT",

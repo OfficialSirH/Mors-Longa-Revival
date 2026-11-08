@@ -1672,6 +1672,11 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 				end
 			end
 		elseif invTable == health then
+			-- (v2 fix 2026-11-12, original-mod bug) a med goes back to its own cell after use: with the slot's own
+			-- rotation (w, h above follow a rotation made while dragging, and the rebuilt slot lost "rotation":
+			-- a rotated med was drawn unrotated on its rotated cells)
+			w, h = itemW, itemH
+			if (invSlot.rotation or 0) % 2 == 1 then w, h = itemH, itemW end
 			local bodyPart = parts[targetY]
 			if idInfos[1]=="meds" then
 				local medTypes = idInfos
@@ -1688,7 +1693,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 								if durability >= 50 then
 									durability = durability - 50
 								else
-									origtable[origx][origy] = {item, {origx, origy}, w, h}
+									origtable[origx][origy] = {item, {origx, origy}, w, h, rotation = invSlot.rotation}
 									if origtable and origtable ~= guns and origtable ~= armor then
 										for a = 1, w do
 											for b = 1, h do
@@ -1709,7 +1714,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 								return
 							else
 								itemInfos[3]=math.floor(durability)
-								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h}
+								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h, rotation = invSlot.rotation}
 								if origtable and origtable ~= guns and origtable ~= armor then
 									for a = 1, w do
 										for b = 1, h do
@@ -1740,7 +1745,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 								return
 							else
 								itemInfos[3]=math.floor(durability)
-								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h}
+								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h, rotation = invSlot.rotation}
 								if origtable and origtable ~= guns and origtable ~= armor then
 									for a = 1, w do
 										for b = 1, h do
@@ -1769,7 +1774,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 							else
 								SetTag(bodyPart, "QueriedDamage", -(MAXHP-HP))
 								itemInfos[3]=math.floor(durability-(MAXHP-HP))
-								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h}
+								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h, rotation = invSlot.rotation}
 								if origtable and origtable ~= guns and origtable ~= armor then
 									for a = 1, w do
 										for b = 1, h do
@@ -1798,7 +1803,7 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 								return
 							else
 								itemInfos[3]=math.floor(durability)
-								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h}
+								origtable[origx][origy] = {IDBuilder(itemInfos), {origx, origy}, w, h, rotation = invSlot.rotation}
 								if origtable and origtable ~= guns and origtable ~= armor then
 									for a = 1, w do
 										for b = 1, h do

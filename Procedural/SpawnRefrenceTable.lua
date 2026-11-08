@@ -397,7 +397,7 @@ spawnables = {
 				{"Gun MC9 MILITARY2.xml", 4},
 				{"Mag MC9 #1.xml", 3},
 				{"Mag MC9 #2.xml", 2},
-				{"Mag MC9 #3.xml", 2},
+				-- (v2 fix 2026-11-12) {"Mag MC9 #3.xml", 2}: no such prefab (nor a Loots/mag3-mp5-9x19.xml) in the original either; the spawner printed "Does not exist" and rerolled
 				{"Gun Simonov-9.xml", 1},
 				{"Gun Simonov-9 MILITARY1.xml", 2},
 				{"Gun Simonov-9 MILITARY2.xml", 2},

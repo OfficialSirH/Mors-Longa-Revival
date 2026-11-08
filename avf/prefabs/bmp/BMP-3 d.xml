@@ -5,6 +5,14 @@
 				<script file="MOD/avf/scripts/Immersive_Tank.lua">
 					<vehicle name="bmp-3" tags="cfg=vehicle" driven="false" sound="tank1" spring="1" damping="0.8" topspeed="70" acceleration="0.15" strength="5" antispin="1" antiroll="0.9" difflock="1" steerassist="2" friction="2">
 						<body name="bmp-3" tags="component=body" pos="0.0 1.4 0.1" dynamic="true">
+							<rig name="gunner" tags="gunner relative_parent sort=99" pos="-0.3 0.0 0.0">
+								<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.5" rot="0.0 90 50"/>
+								<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.5" rot="0.0 90 50"/>
+								<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+								<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+								<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+								<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+							</rig>
 							<vox tags="component=chassis RHA=15" pos="-0.1 -1.1 0.0" blendtexture="5 .4" density="20" strength="5" file="MOD/avf/prefabs/bmp/BMP3 d.vox" object="bmp-3 boby">
 								<group name="smoke" pos="1.85 1.15 2.9">
 									<location tags="exhaust" pos="-0.05 0.1 0.15" rot="-90.0 -20.0 -50.0"/>
@@ -143,7 +151,7 @@
 								<vox pos="0.0 0.5 2.7" blendtexture="5 .4" file="MOD/avf/prefabs/bmp/BMP3.vox" object="stern access coner"/>
 							</group>
 							<location tags="vital" pos="0.4 -0.425 3.0" rot="0.0 0.0 0.0"/>
-							<location tags="player" pos="-0.9 0.4 -1.4" rot="0.0 0.0 0.0"/>
+							<location tags="player" pos="-0.1 0.4 -1.4" rot="0.0 0.0 0.0"/>
 							<location tags="exit" pos="0.0 -0.15 4.4" rot="0.0 0.0 0.0"/>
 							<group name="turrers" pos="-0.1 1.1 0.0">
 								<vox tags="RHA=170 compnent=turret turretGroup=mainTurret" pos="0.1 -1.6 -0.1" rot="0.0 -180.0 0.0" blendtexture="5 .4" prop="true" file="MOD/avf/prefabs/bmp/BMP3 d.vox" object="turret bmp-3">
@@ -231,6 +239,47 @@
 								</vox>
 							</group>
 						</body>
+						<rig name="driver" tags="driver sort=0" pos="-0.1 1.05 -1.55">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.35 -0.4" rot="0.0 90 0.0"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.35 -0.4" rot="0.0 90 0.0"/>
+							<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+							<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.35 -0.4" rot="0.0 -180 0.0"/>
+						</rig>
+						<rig name="passenger" tags="sort=1" pos="-0.9 1.05 -1.55">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+						</rig>
+						<rig name="passenger" tags="sort=2" pos="0.8 1.05 -1.55">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.3" rot="0.0 90 50"/>
+							<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+						</rig>
+						<rig name="passenger" tags="sort=3" pos="-0.5 1.05 1.75">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+							<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+						</rig>
+						<rig name="passenger" tags="sort=4" pos="0.5 1.05 1.75">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+							<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+							<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+						</rig>
 					</vehicle>
 					<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="-0.1 2.3 -3.9" rot="0.0 -90.0 0.0"/>
 					<location name="mainCannon_coax_emitter" tags="mainCannon_coax_emitter" pos="0.15 2.35 -3.0" rot="0.0 -90.0 0.0"/>

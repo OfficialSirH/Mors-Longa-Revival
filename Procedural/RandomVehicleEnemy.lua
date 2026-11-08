@@ -196,8 +196,8 @@ function SpawnEventCiv()
 	addSpawnedVehicleXMLToRegistry(entities, xml)
 end
 
-function SpawnEventRefugee()
-	local whichone = math.random(1, differentCvehicles)
+function SpawnEventRefugee(opt_which) -- (v2) opt_which: debug menu "Refugee Van" picks VehicleC3
+	local whichone = opt_which or math.random(1, differentCvehicles)
 	local xml = "MOD/prefabs/spawnables/enemy vehicles/VehicleC" ..whichone..".xml"
 	local entities = Spawn(xml, Transform(Vec(-300,4.5,3), QuatEuler(0,-90,0)))
 	addSpawnedVehicleXMLToRegistry(entities, xml)
@@ -218,6 +218,8 @@ function HandleDebugVehicleEvent()
 		SpawnEventCiv()
 	elseif name == "refugee" then
 		SpawnEventRefugee()
+	elseif name == "refugee_van" then
+		SpawnEventRefugee(3)
 	elseif name == "roadblock" then -- v1 "Enemy Vehicle": a random road enemy vehicle at the crosshair
 		local pos = Vec(GetFloat(DEBUG_VEHICLE_EVENT .. "_x"), GetFloat(DEBUG_VEHICLE_EVENT .. "_y"), GetFloat(DEBUG_VEHICLE_EVENT .. "_z"))
 		RandomizedPosition, RandomizedRotation = nil, nil

@@ -404,7 +404,10 @@ UiPush()
 		ShowFeetData = false
 	end
 
-	if ShowFeetData then
+	-- (v2 fix 2026-11-12) FeetData is made by init_controls() on the server (it tunes the server's NPC steps); this
+	-- panel is drawn on the client, where it is nil: Ctrl+F with debug mode on raised "attempt to index global
+	-- 'FeetData'" every frame. The panel stays closed where the data is missing.
+	if ShowFeetData and FeetData then
 
 		UiMakeInteractive()
 

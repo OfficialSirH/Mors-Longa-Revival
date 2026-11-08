@@ -4,6 +4,13 @@
 			<script file="MOD/avf/prefabs/technicals/technical_spg9.lua">
 				<vehicle name="MGTechnical" tags="cfg=vehicle technicalVehicle Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="suv2" spring="0.6" damping="0.6" topspeed="105" acceleration="0.17" strength="4" antispin="0" antiroll="0.2" difflock="0.5" steerassist="0.0" friction="1">
 					<body tags="component=body" pos="0.0 0.6 -0.25" dynamic="true">
+						<rig name="gunner" tags="gunner relative_parent sort=99" pos="-0.6 0.4 1.95">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+							<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="0.03 1.45 -0.2" rot="0.0 90 0.0"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.27 1.45 -0.2" rot="0.0 90 0.0"/>
+						</rig>
 						<vox tags="component=chassis" pos="0.05 -0.2 0.25" rot="0 180 0" blendtexture="5 .3" density="2" strength="3" file="MOD/avf/prefabs/technicals/technical.vox" object="bodyturret">
 							<group name="immersive_elements">
 								<vox name="engine" tags="engine" pos="-0.1 0.4 1.7" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="engine"/>
@@ -62,10 +69,27 @@
 							<vox pos="0.1 -0.45 -0.05" rot="0 180 0" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_fr"/>
 						</wheel>
 					</body>
+					<rig name="driver" tags="driver sort=0" pos="-0.5 1.25 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.1 -0.3" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.1 -0.3" rot="0.0 90 0.0"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+						<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.1 -0.3" rot="0.0 -180 0.0"/>
+					</rig>
+					<rig name="passenger" tags="sort=1" pos="0.45 1.25 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+					</rig>
 				</vehicle>
 				<location name="mainCannon_shell_ejector" tags="mainCannon_shell_ejector" pos="-0.02899 2.38 3.71502" rot="130.0 -90.0 0.0"/>
 				<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="-0.005 2.47 -0.57898" rot="0.0 90.0 0.0"/>
-				<location name="mainCannon_backblast" tags="mainCannon_emitter flip_y_z" pos="0.015 2.38 3.67101" rot="0.0 90.0 0.0"/>
+				<location name="mainCannon_backblast" tags="mainCannon_backblast flip_y_z" pos="0.015 2.38 3.67101" rot="0.0 90.0 0.0"/>
 				<location name="mainCannon_shell_ejector_dir" tags="mainCannon_shell_ejector_dir" pos="-0.04899 1.49 5.66501" rot="130.0 -90.0 0.0"/>
 				<location name="mainCannon_sight" tags="mainCannon_sight" pos="-0.211 2.695 1.36499"/>
 				<location name="cook_off" tags="cook_off upward_force=5" pos="-0.15 1.0 0.9"/>

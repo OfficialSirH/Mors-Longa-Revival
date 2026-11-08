@@ -14,7 +14,7 @@ SERVER_REALMS = {"init": "server", "tick": "server", "update": "server", "handle
 def convert(path, edits, note, realms=SERVER_REALMS):
     """realms: v1 callback name -> "server" or "client" (default: all server; draw must be mapped explicitly)."""
     b = open(path, "rb").read().decode("utf-8")
-    crlf = "\r\n" in b
+    crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
     t = b.replace("\r\n", "\n")
     assert not t.lstrip().startswith("#version"), path + ": already v2"
     for old, new in edits:

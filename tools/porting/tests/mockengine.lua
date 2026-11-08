@@ -79,6 +79,7 @@ function MockEngine.load(path, opts)
 	env.TransformToParentTransform = function(t, l) return env.Transform(env.VecAdd(t.pos, l.pos), l.rot) end
 	env.TransformToLocalTransform = function(t, w) return env.Transform(env.VecSub(w.pos, t.pos), w.rot) end
 	env.VecLerp = function(a, b, f) return {a[1]+(b[1]-a[1])*f, a[2]+(b[2]-a[2])*f, a[3]+(b[3]-a[3])*f} end
+	env.VecCross = function(a, b) return {a[2]*b[3]-a[3]*b[2], a[3]*b[1]-a[1]*b[3], a[1]*b[2]-a[2]*b[1]} end
 	env.VecDot = function(a, b) return a[1]*b[1]+a[2]*b[2]+a[3]*b[3] end
 	env.T = 0
 	env.GetTime = function() return env.T end

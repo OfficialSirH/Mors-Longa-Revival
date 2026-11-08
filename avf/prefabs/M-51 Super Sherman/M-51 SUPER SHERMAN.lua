@@ -1,4 +1,11 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) M-51 Super Sherman (spawn menu "M-51 Sherman"): main gun on our own mounted-gun script with AVF's shells ported (scripts/avf; v1 included
+-- ../../scripts/avf_custom.lua and needed the external AVF mod). The AVF table below is still the gun's config
+-- (mainCannon; coax: later). Gunner place in the turret; the driver fires while it is empty (user, 2026-11-13).
+MountedGunSound = "MOD/avf/assets/sounds/Relic700KwK37.ogg" -- the config's soundFile (copied from AVF)
+MountedGunDriverFires = true
 
 
 --[[

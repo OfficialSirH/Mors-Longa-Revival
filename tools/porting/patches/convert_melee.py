@@ -10,7 +10,7 @@ import re, sys
 
 def convert(path):
     b = open(path, "rb").read().decode("utf-8")
-    crlf = "\r\n" in b
+    crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
     t = b.replace("\r\n", "\n")
     assert not t.lstrip().startswith("#version 2"), path + ": already v2"
 

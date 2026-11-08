@@ -32,6 +32,23 @@
 					<vox pos="-0.2 -0.35 0.05" texture="8 0.5" blendtexture="5 .4" file="MOD/Vehicles/sportscar/sportscar.vox" object="wheel_bl"/>
 				</wheel>
 			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.05 0.0 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.5 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="-0.4 0.4 -0.4" rot="80 0.0 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="-0.2 0.65 -0.55" rot="0.0 90 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="-0.2 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.5 0.65 -0.55" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="-0.4 0.95 -0.075" rot="0.0 90 10"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="-0.35 0.65 -0.55" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.45 0.0 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="-0.1 0.4 -0.4" rot="80 0.0 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.1 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="ik_head" tags="ik_head" pos="-0.1 0.95 -0.075" rot="0.0 90 10"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.4 0.45 -0.25" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.4 -0.15" rot="0.0 90 -40"/>
+			</rig>
 		</vehicle>
 	</group>
 </prefab>

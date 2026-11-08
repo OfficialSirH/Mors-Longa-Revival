@@ -8,7 +8,7 @@
 debug = false
 
 local NpcPrefabs = {
-	refugee = "MOD/prefabs/spawnables/enemies/refugee/Ragdollrefugee1.xml"
+	refugee = "MOD/prefabs/spawnables/enemies/refugees/Ragdollrefugee1.xml" -- (v2) v1 path had "refugee/"
 }
 
 detectRange = 2.5--3

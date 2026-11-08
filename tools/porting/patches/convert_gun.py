@@ -9,7 +9,7 @@ import re, sys
 
 path = sys.argv[1]
 raw = open(path, 'rb').read().decode('latin-1')
-crlf = '\r\n' in raw
+crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
 s = raw.replace('\r\n', '\n')
 notes = []
 
@@ -209,6 +209,9 @@ if n: notes.append(f'local projectile raycasts -> GunRaycast: {n}')
 FIXUPS = {
     # copy-paste bug: the sawed-off gated its inventory/mag update on the MP43 being enabled
     'gun-sawedoff': [('IsToolEnabled("gun-mp43")', 'IsToolEnabled("gun-sawedoff")')],
+    # (2026-11-12, user-approved) magazines taken out of the gun were named "Simonov-9" while loot magazines are
+    # "Simonov-9-Mag", so the two did not stack; every other gun uses one "-Mag" style name
+    'gun-pp19': [('name, maxammo = "Simonov-9", ', 'name, maxammo = "Simonov-9-Mag", ')],
 }
 # all guns: camo is nil when the item string has fewer than 10 attachment fields (e.g. the tutorial's M4A1); the
 # "<X>-"..camo..".xml" line (an unused local) then errored on every gun switch (found in-game 2026-11-07)

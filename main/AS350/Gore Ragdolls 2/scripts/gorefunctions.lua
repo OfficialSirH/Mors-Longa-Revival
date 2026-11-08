@@ -1,25 +1,39 @@
+#version 2
+#include "script/include/player.lua"
 #include "UiHealthOverlay.lua"
+-- (v2, 2026-11-13; hand-converted from git 9dde6dd) "Gore Ragdolls 2" crew sitter (Sitters/*.xml, spawned by
+-- fakegore.lua when a vehicle / helicopter crew stand-in breaks; also the Hind's copies point here).
+-- Server: everything that moves or changes the ragdoll and the world (joint motors, velocities, tags, paint, spawns,
+-- deletes). Clients: the bleeding particles (shared.bl<body> = bleed intensity) and the UI (kill warning, health
+-- overlay). Keys per player: P (sit / stand, aiming within 3 m), the "kill all ragdolls" key (savegame.mod.gore_kill).
+-- Unchanged from v1 on purpose: the gore pieces and sounds load from MOD/main/Gore Ragdolls 2/ and the UI / FX
+-- prefabs from MOD/prefab/, paths that never existed (the files are in main/AS350/Gore Ragdolls 2/): nothing spawns
+-- or plays, as in v1; the spawns are now skipped when the file is missing (spawnIf). The health overlay (H) needs
+-- "health.ui.target.body", set only by UiHealthOverlayManager.lua, which only the missing UISPAWN.xml spawned: it
+-- never opened in v1 and is kept as it was (client).
 
-function init()	
-	MyHealthUiIsActive = false
+local function spawnIf(path, t)
+	if HasFile(path) then return Spawn(path, t) end
+	return {}
+end
+
+function server.init()
 	RagdollBody = {}
 
 	sbloodval = {};
 	bloodval = {};
 	currentbloodvalue = {};
 	Puddles = {};
-	
+
 	Torso = FindBody("Torso")
-	
+
 	bodyparts = FindBodies("bodypart")
 	starttotalbloodvalue = 0
-	for i=1,#bodyparts do		
+	for i=1,#bodyparts do
 			bodypart = bodyparts[i]
 			bodypartshapes = GetBodyShapes(bodypart)
-			--DebugPrint(#bodypartshapes)
 			for h=1,#bodypartshapes do
 			SetTag(bodypartshapes[h], "fxbreak","l3red")
-			--DebugPrint("Set")
 			end
 
 		RagdollBody[bodypart] = 1
@@ -27,7 +41,6 @@ function init()
 		table.insert(sbloodval, bodypartstartmass)
 		table.insert(bloodval, bodypartstartmass)
 		table.insert(currentbloodvalue, bodypartstartmass)
-		--table.insert(puddles, {pos={x,y,z}, amount=3.0})
 		starttotalbloodvalue = starttotalbloodvalue + GetBodyMass(bodypart)
 	end
 	bleed = 0
@@ -39,14 +52,13 @@ function init()
 	Puddlemaxsize = 1
 	upspeed = 50
 	headvel = Vec(0,GetBodyMass(FindBody("RRLEG"))/upspeed,0)
-	--DebugPrint("HeadMass: "..headvel)
 	legvel = Vec(0,-GetBodyMass(FindBody("LLLEG"))/20,0)
 	recoverfromtrip = 3
 	triptim = 0
 	tripped = false
 	restartjoints = false
 	trippingspeed = 10
-	jointstrength = 10	
+	jointstrength = 10
 	sretractjoint = 12
 	retractjoint = sretractjoint
 	retractjoint1 = sretractjoint
@@ -62,14 +74,12 @@ function init()
 	drowntim = 0
 	inpostim = 0
 	deadtim = 0
-	
+
 	SetHeadHealth(RED)
 	AddHeadHealthEffect("argh",RED)
 	UI = FindLocations("UIISADDED", true)
-	--if UI == nil then
-		Spawn("MOD/prefab/UISPAWN.xml", Vec(0,0,0))
-		Spawn("MOD/prefab/GoreFX.xml", Vec(0,0,0))
-	--end
+		spawnIf("MOD/prefab/UISPAWN.xml", Vec(0,0,0))
+		spawnIf("MOD/prefab/GoreFX.xml", Vec(0,0,0))
 	manualdietim = 0
 	gorelevel = GetInt("savegame.mod.gore")
 	bleedbool = GetBool("savegame.mod.bleed")
@@ -78,30 +88,33 @@ function init()
 	else
 		multiplier = 1
 	end
-	--DebugPrint(gorelevel)
 	keytokill = GetString("savegame.mod.gore_kill")
+	Bleeding = {}
 end
 
-function tick()
-	CheckHealthUi()
+--- (v2) any player's key press this tick (v1: the one player's)
+local function anyPressed(key)
+	if key == nil or key == "" then return false end
+	for p in Players() do
+		if InputPressed(key, p) then return true end
+	end
+	return false
 end
 
-function draw(dt)
-	DrawUiHealthOverlay(dt)
-	if warn then
-	UiPush()
-      UiAlign("center middle")
-      --UiTranslate(400, 200)
-      UiFont("bold.ttf", 30)
-      UiColor(1,0,0)
-      UiText("PRESS"..keytokill.." AGAIN TO KILL ALL RAGDOLLS: "..10 - manualdietim)
-     UiPop()
- end
+--- (v2) the bleed intensity of each bleeding part for the clients' particles (v1: bleedparticles() here)
+local function shareBleeding()
+	for b, v in pairs(Bleeding) do
+		local key = "bl" .. b
+		local r = math.floor(v * 10 + 0.5) / 10
+		if shared[key] ~= r then shared[key] = r end
+	end
+	Bleeding = {}
 end
 
-function update(dt)
+function server.update(dt)
+	local stopped = entirelystop
 	if manualdietim < 10 then
-		if InputPressed(keytokill) and warn then
+		if anyPressed(keytokill) and warn then
 		entirelystop = true
 		warn = false
 		manualdietim = 0
@@ -110,20 +123,22 @@ function update(dt)
 		warn = false
 		manualdietim = 0
 	end
-	if InputPressed(keytokill) and not warn and not entirelystop then
+	if anyPressed(keytokill) and not warn and not entirelystop then
 		warn = true
 	end
 	if warn then
 		manualdietim = manualdietim + dt
 	end
+	local w = warn and true or false
+	if shared.warn ~= w then shared.warn = w end
+	local left = w and math.ceil(10 - manualdietim) or 10
+	if shared.warnLeft ~= left then shared.warnLeft = left end
 if not entirelystop then
 	if not tripped and not sitting then
 		knees = FindJoints("knee")
 		for i=1,#knees do
 			panick()
-			--if not IsJointBroken(hips[i]) then
 				SetJointMotor(knees[i], -retractjoint3/4,jointstrength)
-			--end
 		end
 	end
 
@@ -163,13 +178,12 @@ if not entirelystop then
 	end
 	for i=1,#bodyparts do
 		bodypart = bodyparts[i]
+		Bleeding[bodypart] = 0
 		SetTag(bodypart, "nocull")
 		bodypartcurrentmass = GetBodyMass(bodypart)
 		bloodval[i] = bodypartcurrentmass
 		bodyparttransform = GetBodyTransform(bodypart)
-		--DebugPrint(bloodval[i])
 		bleedintensity = ((bloodval[i]/sbloodval[i]) - 1) * -10
-		--DebugPrint(currentbloodvalue[i])
 		currentbloodvalue[i] = currentbloodvalue[i] - bleedintensity/75
 		totalbloodvalue = totalbloodvalue + currentbloodvalue[i]
 		if HasTag(bodypart, "Torso") then
@@ -188,22 +202,23 @@ if not entirelystop then
 				sitting = true
 			end
 				bodypartpos = GetBodyTransform(bodypart)
-				disttobodypart = VecLength(VecSub(GetAimPossit(), bodypartpos.pos))
 				cycled = true
-				if InputPressed("P") and cycled and not sitting then
-				if disttobodypart < 3 then
-					sitting = true
-					cycled = false
-				end
-				end
-
-				if InputPressed("P") and cycled and sitting then
-				if disttobodypart < 3 then
-					sitting = false
-					cycled = false
-					restartjointsfunc()
-					inposition = false
-				end
+				-- (v2) P from any player aiming within 3 m of the torso (v1: the one player)
+				for p in Players() do
+					if InputPressed("P", p) and cycled then
+						disttobodypart = VecLength(VecSub(GetAimPossit(p), bodypartpos.pos))
+						if disttobodypart < 3 then
+							if not sitting then
+								sitting = true
+								cycled = false
+							else
+								sitting = false
+								cycled = false
+								restartjointsfunc()
+								inposition = false
+							end
+						end
+					end
 				end
 		end
 
@@ -219,13 +234,11 @@ if not entirelystop then
 		end
 
 		if not tripped and HasTag(bodypart, "Head") and not dead and not sitting then
-				--Paint(GetAimPos(), (bleedintensity/sbloodval[i])*1.3, "explosion")
 				currentvel = GetBodyVelocity(bodypart)
 				SetBodyVelocity(bodypart, VecAdd(currentvel, headvel))
-				--DebugPrint(VecAdd(currentvel, headvel)[2])
 				if IsBodyBroken(bodypart) then
-					bodyState.head = BROKEN_BODY_PART	
-					bodyState.overall = "dead"					
+					bodyState.head = BROKEN_BODY_PART
+					bodyState.overall = "dead"
 					dead = true
 					if bloodval[i] < sbloodval[i] - sbloodval[i] / 4 then
 					bods = GetBodyShapes(bodypart)
@@ -241,7 +254,6 @@ if not entirelystop then
 
 		if not tripped and HasTag(bodypart, "RRLEG") or HasTag(bodypart, "LLLEG") then
 			if not dead and not sitting and not tripped then
-				--Paint(GetAimPos(), (bleedintensity/sbloodval[i])*1.3, "explosion")
 				currentvel = GetBodyVelocity(bodypart)
 				SetBodyVelocity(bodypart, VecAdd(currentvel, legvel))
 			end
@@ -261,48 +273,42 @@ if not entirelystop then
 
 		if IsBodyBroken(bodypart) and currentbloodvalue[i] > 0 then
 			if bodyState.overall == "healthy" then bodyState.overall = "injured" end
-			
+
 			if HasTag(bodypart, "LLLEG") or HasTag(bodypart, "LLEG") then
-				bodyState.leftLeg = BROKEN_BODY_PART			
+				bodyState.leftLeg = BROKEN_BODY_PART
 				if not diddit1 and bloodval[i] < sbloodval[i] - sbloodval[i]/3 then
-					Spawn("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
 					diddit1 = true
 				end
 			elseif HasTag(bodypart, "RRLEG") or HasTag(bodypart, "RLEG") then
-				bodyState.rightLeg = BROKEN_BODY_PART					
+				bodyState.rightLeg = BROKEN_BODY_PART
 				if not diddit2 and bloodval[i] < sbloodval[i] - sbloodval[i]/3 then
-					Spawn("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
 					diddit2 = true
 				end
 			elseif HasTag(bodypart, "RRARM") or HasTag(bodypart, "RARM") then
-				bodyState.rightArm = BROKEN_BODY_PART	
+				bodyState.rightArm = BROKEN_BODY_PART
 				if not diddit3 and bloodval[i] < sbloodval[i] - sbloodval[i]/3 then
-					Spawn("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
 					diddit3 = true
-				end				
+				end
 			elseif HasTag(bodypart, "LLARM") or HasTag(bodypart, "LARM") then
-				bodyState.leftArm = BROKEN_BODY_PART	
+				bodyState.leftArm = BROKEN_BODY_PART
 				if not diddit4 and bloodval[i] < sbloodval[i] - sbloodval[i]/3 then
-					Spawn("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/boner.xml", bodyparttransform)
 					diddit4 = true
-				end							
+				end
 			end
-		
-		
-			--Paint(GetAimPos(), bleedintensity/sbloodval[i], "explosion")
 
 			puddleregtim = puddleregtim + dt
 
 			PuddleHandleing()
 			if puddleregtim > repuddle then
-			--for i=1,bleedintensity/10 do
-			--DebugPrint(bleedintensity)
 			InsertPuddleToTable()
 			bleedparticles()
 			if bleedbool then
 			Paint(GetAimPos(), bleedintensity/sbloodval[i], "explosion")
 			end
-			--end
 			puddleregtim = 0
 			end
 			bleedparticles()
@@ -315,8 +321,7 @@ if not entirelystop then
 				currentbloodvalue[i] = 0
 			end
 
-			if HasTag(bodypart, "Torso") and bloodval[i] < sbloodval[i]/1.2 then			
-				--DebugPrint("SUPPOSED TO BE LOL GUTTED XD")
+			if HasTag(bodypart, "Torso") and bloodval[i] < sbloodval[i]/1.2 then
 				if not entrailed then
 					bodyState.body = BROKEN_BODY_PART
 					bodyState.overall = "dead"
@@ -329,25 +334,24 @@ if not entirelystop then
 					PlaySound(goresplat, GetBodyTransform(Torso).pos, 1)
 
 					if gorelevel ~= 1 then
-					Spawn("MOD/main/Gore Ragdolls 2/internals/entrails.xml", bodyparttransform)
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Heart.xml", bodyparttransform)
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Spine.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/entrails.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Heart.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Spine.xml", bodyparttransform)
 					if gorelevel ~= 2 then
 					for i=1,2 do
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Lung.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Lung.xml", bodyparttransform)
 					end
 					for i=1,30 * multiplier do
-						Spawn("MOD/main/Gore Ragdolls 2/internals/BrainMatter.xml", bodyparttransform)
+						spawnIf("MOD/main/Gore Ragdolls 2/internals/BrainMatter.xml", bodyparttransform)
 					end
 					end
 					end
-					--DebugPrint("LOL GUTTED XD")
 				end
 			end
 
 			if HasTag(bodypart, "Head") then
-				bodyState.head = BROKEN_BODY_PART	
-				bodyState.overall = "dead"	
+				bodyState.head = BROKEN_BODY_PART
+				bodyState.overall = "dead"
 				eyej = FindJoints("eye")
 				if bloodval[i] < sbloodval[i] - sbloodval[i]/4 then
 				for i=1,#eyej do
@@ -362,29 +366,27 @@ if not entirelystop then
 					for i=1,4 do
 						InsertPuddleToTable()
 					end
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Skull_Jaw.xml.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Skull_Jaw.xml.xml", bodyparttransform)
 					for i=1,2 * multiplier do
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Skull_Eye_Socket.xml", bodyparttransform)
-					Spawn("MOD/main/Gore Ragdolls 2/internals/Skull_Fragment.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Skull_Eye_Socket.xml", bodyparttransform)
+					spawnIf("MOD/main/Gore Ragdolls 2/internals/Skull_Fragment.xml", bodyparttransform)
 					end
 					if gorelevel ~= 2 then
 					for i=1,10 * multiplier do
-						Spawn("MOD/main/Gore Ragdolls 2/internals/BrainMatter.xml", bodyparttransform)
+						spawnIf("MOD/main/Gore Ragdolls 2/internals/BrainMatter.xml", bodyparttransform)
 					end
 				end
 					end
-					--DebugPrint("LOL GUTTED XD")
 				end
 				end
 			end
 		end
 	end
 	if IsJointBroken(FindJoint("neck")) or totalbloodvalue < starttotalbloodvalue - starttotalbloodvalue/1.5 then
-		bodyState.head = BROKEN_NECK						
-		bodyState.overall = "dead"	
+		bodyState.head = BROKEN_NECK
+		bodyState.overall = "dead"
 		dead = true
 	end
-	
 
 	if restartjoints and not tripped then
 		restartjointsfunc()
@@ -398,8 +400,12 @@ if not entirelystop then
 			entirelystop = true
 		end
 	end
+	shareBleeding()
 end
-
+	if entirelystop and not stopped then -- (v2) stopped: no more bleeding on the clients
+		for _, b in ipairs(FindBodies("bodypart")) do Bleeding[b] = 0 end
+		shareBleeding()
+	end
 end
 
 function GetAimPos()
@@ -416,12 +422,12 @@ function GetAimPos()
 	for i=1,#bodypartsB do
 		bodypartB = bodyparts[i]
 		QueryRejectBody(bodypartB)
-	end 
+	end
 	shapes = FindShapes("")
 	for i=1,#shapes do
 		bodypartS = shapes[i]
 		QueryRejectShape(bodypartS)
-	end 
+	end
     local hit, hitDistance = QueryRaycast(ct.pos, direction, distance)
     if hit then
         forwardPos = TransformToParentPoint(ct, Vec(0, 0, -hitDistance))
@@ -430,44 +436,26 @@ function GetAimPos()
     return forwardPos, hit, distance
 end
 
+-- (v2) the particles are the clients' (client.update): the intensity of this part goes to them
 function bleedparticles()
-    --spawn sparks
-    ParticleType("smoke")
-    ParticleColor(0.3, 0.2, 0.2)
-    ParticleRadius(0.05, 0.005)
-    ParticleAlpha(1000)
-    ParticleCollide(1)
-    ParticleGravity(-14)
-    ParticleSticky(0.5)
-    ParticleDrag(0)
-    ParticleStretch(1)
-    for i=1,bleedintensity/5 do
-    SpawnParticle(bodyparttransform.pos, Vec(math.random(-100,100)/100,math.random(0,bleedintensity*100)/40,math.random(-100,100)/100),10)
-end
+	Bleeding[bodypart] = math.max(Bleeding[bodypart] or 0, bleedintensity)
 end
 
 function PuddleHandleing()
 	if bleedbool then
-    --DebugCross(GetAimPos())    
     for i=1,#Puddles do
-        --DebugPrint(Puddles[i].size)
         if Puddles[i] ~= nil then
         if Puddles[i].amount > 0 and Puddles[i].size < Puddlemaxsize then
-            --Paint(Puddles[i].pos, Puddles[i].size, "explosion")
              Puddles[i].amount = Puddles[i].amount - puddleneutspeed/5
             Puddles[i].size = Puddles[i].size + (bleedintensity*GrowSpeed)
             Paint(Vec(Puddles[i].pos[1] + math.random(-Puddles[i].size * 100,Puddles[i].size * 100)/100, Puddles[i].pos[2], Puddles[i].pos[3] + math.random(-Puddles[i].size * 100,Puddles[i].size * 100)/100), math.random(0,200)/1000, "explosion")
         else
             table.remove(Puddles, i)
-            i = i-1 -- <- this is super important since we are in the middle of a for loop and now we remove an item, this changes the whole table so if we would not reduce i by 1 we would jump over an element!
-            --- Before [A,B,C,D] and we ar at position 2 so we are here: [A, (B), C , D]
-            --- Now, withing the for loop, we remove position 2 so the table looks like this [A, C ,D], but i would still be 2 and in the next for loop iteration it will be 3! so We would then be here: [A, C, (D)] <-- see? We skipped C
+            i = i-1
         end
     end
 end
 end
-    
-    
 end
 
 function InsertPuddleToTable()
@@ -483,7 +471,7 @@ function InsertPuddleToTable()
             end
         end
     end
-    
+
     if not merged then
         table.insert(Puddles, {pos=GetAimPos(), amount=bleedintensity, size=0})
     end
@@ -531,7 +519,6 @@ function cower()
 end
 
 function restartjointsfunc()
-	--if tripped then
 	if restartjoints then
 	shoulders = FindJoints("shoulder")
 	for i=1,#shoulders do
@@ -557,7 +544,6 @@ function restartjointsfunc()
 	end
 	restartjoints = false
 end
---end
 end
 
 function panick()
@@ -594,8 +580,9 @@ function panick()
 	end
 	end
 
-	function GetAimPossit()
-   local ct = GetPlayerCameraTransform()
+-- (v2) where player p aims (v1: the one player's camera)
+function GetAimPossit(p)
+   local ct = GetPlayerCameraTransform(p)
    local forwardPos = TransformToParentPoint(ct, Vec(0, 0, -200))
    local direction = VecSub(forwardPos, ct.pos)
    local distance = VecLength(direction)
@@ -616,11 +603,9 @@ function sit()
 			inposition = true
 			inpostim = 0
 		end
-		--DebugPrint(inpostim)
 		shoulders = FindJoints("shoulder")
 	for i=1,#shoulders do
 		panick()
-		--SetJointMotor(shoulders[i], retractjoint1,jointstrength)
 	end
 	hips = FindJoints("hip")
 	for i=1,#hips do
@@ -637,49 +622,92 @@ function sit()
 	hand1 = FindJoint("hand1")
 	hand2 = FindJoint("hand2")
 	panick()
-	if not IsJointBroken(shoulders[1]) then
-	--SetJointMotor(hand1, -retractjoint4,jointstrength)
-	end
 	panick()
-	if not IsJointBroken(shoulders[2]) then
-	--SetJointMotor(hand2, retractjoint5,jointstrength)
-	end
 	end
 end
 
+--------------------------------------------------------------------------------------------------- clients
+
+function client.init()
+	MyHealthUiIsActive = false
+	RagdollBody = {}
+	Torso = FindBody("Torso")
+	for _, b in ipairs(FindBodies("bodypart")) do RagdollBody[b] = 1 end
+	keytokill = GetString("savegame.mod.gore_kill")
+end
+
+function client.tick()
+	CheckHealthUi()
+end
+
+--- v1 bleedparticles() for each part the server reports bleeding
+function client.update(dt)
+	for _, b in ipairs(FindBodies("bodypart")) do
+		local intensity = shared["bl" .. b] or 0
+		if intensity > 0 and IsHandleValid(b) then
+			local pos = GetBodyTransform(b).pos
+			ParticleType("smoke")
+			ParticleColor(0.3, 0.2, 0.2)
+			ParticleRadius(0.05, 0.005)
+			ParticleAlpha(1000)
+			ParticleCollide(1)
+			ParticleGravity(-14)
+			ParticleSticky(0.5)
+			ParticleDrag(0)
+			ParticleStretch(1)
+			for i=1,intensity/5 do
+				SpawnParticle(pos, Vec(math.random(-100,100)/100,math.random(0,intensity*100)/40,math.random(-100,100)/100),10)
+			end
+		end
+	end
+end
+
+function client.draw(dt)
+	DrawUiHealthOverlay(dt)
+	if shared.warn then
+	UiPush()
+      UiAlign("center middle")
+      UiFont("bold.ttf", 30)
+      UiColor(1,0,0)
+      UiText("PRESS"..keytokill.." AGAIN TO KILL ALL RAGDOLLS: "..(shared.warnLeft or 10))
+     UiPop()
+ end
+end
+
+-- (client) the original's health overlay toggles (local registry, local player's keys)
 function CheckHealthUi()
 
-	local lookingAtMe = GetInt("health.ui.target.body") ~= nil and RagdollBody[GetInt("health.ui.target.body")] ~= nil		
-	
-	if InputPressed("h") then 			
+	local lookingAtMe = GetInt("health.ui.target.body") ~= nil and RagdollBody[GetInt("health.ui.target.body")] ~= nil
+
+	if InputPressed("h") then
 		if lookingAtMe and not MyHealthUiIsActive then
 			MyHealthUiIsActive = true
 			SetInt("health.ui.active.body", Torso)
 			SetBool("health.ui.shown", true)
 		else
-			MyHealthUiIsActive = false			
+			MyHealthUiIsActive = false
 			if GetInt("health.ui.active.body") == Torso then
 				SetBool("health.ui.shown", false)
 			end
-		end							
-	end	
-	
-	if not lookingAtMe and GetInt("health.ui.active.body") ~= Torso then
-		MyHealthUiIsActive = false		
+		end
 	end
-	
-	if lookingAtMe and GetBool("health.ui.shown") then		
+
+	if not lookingAtMe and GetInt("health.ui.active.body") ~= Torso then
+		MyHealthUiIsActive = false
+	end
+
+	if lookingAtMe and GetBool("health.ui.shown") then
 		MyHealthUiIsActive = true
 	end
-	
+
 	if MyHealthUiIsActive then
-		SetInt("health.ui.active.body", Torso)		
-		ShowUiHealthOverlay()	
+		SetInt("health.ui.active.body", Torso)
+		ShowUiHealthOverlay()
 	else
-		HideUiHealthOverlay()	
+		HideUiHealthOverlay()
 	end
-	
+
 	if InputPressed("x") and MyHealthUiIsActive then
 		ToggleUiHealthDetailsOverlay()
-	end		
+	end
 end

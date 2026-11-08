@@ -4,6 +4,13 @@
 			<script file="MOD/avf/prefabs/technicals/technical_dshk.lua">
 				<vehicle name="MGTechnical" tags="Door cfg=vehicle technicalVehicle DoAlarm" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="suv2" spring="0.6" damping="0.6" topspeed="105" acceleration="0.17" strength="4" antispin="0" antiroll="0.2" difflock="0.5" steerassist="0.0" friction="1">
 					<body tags="component=body" pos="0.0 0.6 -0.25" dynamic="true">
+						<rig name="gunner" tags="gunner relative_parent sort=99" pos="0.05 0.4 2.75">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+							<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.12 1.55 -0.2" rot="0.0 90 0.0"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.12 1.55 -0.2" rot="0.0 90 0.0"/>
+						</rig>
 						<vox tags="component=chassis" pos="0.05 -0.2 0.25" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" density="2" strength="3" file="MOD/avf/prefabs/technicals/technical.vox" object="bodyturret">
 							<vox tags="component=turret turretGroup=mainTurret" pos="0.0 0.6 -1.75" rot="0.0 0 0.0" texture="8 0.5" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/avf/prefabs/technicals/technical.vox" object="turret_thick_mount">
 								<joint tags="component=turretJoint" pos="0.05 0.0 -0.05" rot="90 0 0.0" type="hinge" size="0.2" rotspring="0" sound="true"/>
@@ -62,6 +69,23 @@
 							<vox pos="0.1 -0.45 -0.05" rot="0 180 0" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/technicals/technical.vox" object="wheel_fr"/>
 						</wheel>
 					</body>
+					<rig name="driver" tags="driver sort=0" pos="-0.5 1.25 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.1 -0.3" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.1 -0.3" rot="0.0 90 0.0"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+						<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.1 -0.3" rot="0.0 -180 0.0"/>
+					</rig>
+					<rig name="passenger" tags="sort=1" pos="0.45 1.25 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+					</rig>
 				</vehicle>
 				<location name="mainCannon_shell_ejector" tags="mainCannon_shell_ejector" pos="-0.33899 2.56 1.325" rot="130.0 -90.0 0.0"/>
 				<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="-0.005 2.68 -0.37898" rot="0.0 90.0 0.0"/>

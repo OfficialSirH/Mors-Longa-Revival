@@ -477,11 +477,11 @@ function FireRound(Type)
 				name = "Unloaded"
 				maxammo = 0
 				id = mag
-				if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9", 30
-				elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9", 45
-				elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9", 77
-				elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9", 95
-				elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9", 60
+				if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9-Mag", 30
+				elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9-Mag", 45
+				elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9-Mag", 77
+				elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9-Mag", 95
+				elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9-Mag", 60
 				end
 				local guninfo = Split(GetString("inventory.guns."..GetInt("inventory.curprimary")..".item"), "_")
 				guninfo[3] = mag
@@ -1487,11 +1487,11 @@ function client.tick(dt)
 					name = "Unloaded"
 					maxammo = 0
 					id = mag
-					if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9", 30
-					elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9", 45
-					elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9", 77
-					elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9", 95
-					elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9", 60
+					if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9-Mag", 30
+					elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9-Mag", 45
+					elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9-Mag", 77
+					elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9-Mag", 95
+					elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9-Mag", 60
 					end
 					if mag ~= "none" then
 						local newtable = deepcopy(bullettable)
@@ -2406,11 +2406,11 @@ function client.tick(dt)
 							name = "Unloaded"
 							maxammo = 0
 							id = mag
-							if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9", 30
-							elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9", 45
-							elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9", 77
-							elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9", 95
-							elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9", 60
+							if id == "mag0-ak-9x19" then name, maxammo = "Simonov-9-Mag", 30
+							elseif id == "mag1-ak-9x19" then name, maxammo = "Simonov-9-Mag", 45
+							elseif id == "mag2-ak-9x19" then name, maxammo = "Simonov-9-Mag", 77
+							elseif id == "mag3-ak-9x19" then name, maxammo = "Simonov-9-Mag", 95
+							elseif id == "mag4-ak-9x19" then name, maxammo = "Simonov-9-Mag", 60
 							end
 							local guninfo = Split(GetString("inventory.guns."..GetInt("inventory.curprimary")..".item"), "_")
 							guninfo[3] = mag

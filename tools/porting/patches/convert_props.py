@@ -222,6 +222,6 @@ if __name__ == "__main__":
         convert(f, edits, note)
         if f in APPEND:
             b = open(f, "rb").read().decode("utf-8")
-            nl = "\r\n" if "\r\n" in b else "\n"
+            nl = "\n"  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
             b = b.rstrip("\r\n") + nl + APPEND[f].replace("\n", nl)
             open(f, "wb").write(b.encode("utf-8"))

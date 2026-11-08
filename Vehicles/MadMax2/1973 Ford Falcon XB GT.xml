@@ -48,6 +48,39 @@
 					<vox pos="0.1 -0.33 0.05" rot="0.0 0.0 0.0" texture="8 0.4" blendtexture="5 .2" file="MOD/Vehicles/MadMax2/1973 Ford Falcon XB GT.vox" object="wheel_fr" scale="0.95"/>
 				</wheel>
 			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.4 0.65 0.15">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.45" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.45" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.2 -0.3" rot="0.0 90 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.2 -0.3" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.2 -0.3" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="-0.4 0.65 0.15">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.45" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.45" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=2" pos="-0.4 0.65 0.75">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=3" pos="0.4 0.65 0.75">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
 		</vehicle>
 	</group>
 </prefab>

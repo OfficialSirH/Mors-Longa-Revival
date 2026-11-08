@@ -1,11 +1,28 @@
-function init()
-	v=FindVehicle()
-	JetInit()
+#version 2
+#include "script/include/player.lua"
+-- (v2) JetBus jet (Shift boost). SERVER: throttle from the DRIVER (idle 0.1 while driving, 1 with Shift held; v1: the
+-- host whenever in the bus), push, turbine, smoke, engine loop, damage / explosion. CLIENT: the throttle bar for
+-- whoever is in the bus, from shared.jetThrottle / shared.jetTarget. Hand-converted 2026-11-09.
+
+-- the player driving vehicle (passengers ride too but must not boost), or nil
+function VehicleDriver(vehicle)
+	if vehicle == 0 then return nil end
+	for p in Players() do
+		if IsPlayerVehicleDriver(vehicle, p) then return p end
+	end
+	return nil
 end
 
-function tick(dt)
-	if GetPlayerVehicle()==v and GetVehicleHealth(v)>=0 then
-		if InputDown('shift')then
+function server.init()
+	v=FindVehicle()
+	JetInit()
+	shared.jetThrottle, shared.jetTarget = 0, 0
+end
+
+function server.tick(dt)
+	local driver = VehicleDriver(v)
+	if driver and GetVehicleHealth(v)>=0 then
+		if InputDown('shift', driver)then
 			SetJetPower(1)
 		else
 			SetJetPower(.1)
@@ -15,13 +32,18 @@ function tick(dt)
 	end
 
 	JetTick(dt)
+	shared.jetThrottle, shared.jetTarget = jetThrottle, jetTargetThrottle
 end
 
-function update(dt)
-	JetUpdate(dt)    
+function server.update(dt)
+	JetUpdate(dt)
 end
 
-function draw(dt)
+function client.init()
+	v=FindVehicle()
+end
+
+function client.draw(dt)
 	JetDraw(dt)
 end
 
@@ -46,6 +68,7 @@ function JetInit()
 	jetLocalExhaustPos=TransformToLocalPoint(jetT,GetTriggerTransform(FindTrigger('exhaust')).pos)
 
 	jetLoop = LoadLoop("MOD/Vehicles/bus/engine_exterior.ogg")
+	lastJetHealth = GetJetHealth() -- (v2) v1 left it nil until the first update (nil compare if the jet starts damaged)
 end
 RPM = 1000*math.pi/3
 function JetTick(dt)
@@ -100,6 +123,7 @@ function JetUpdate(dt)
 	lastJetHealth = GetJetHealth()
 end
 function JetDraw(dt)
+	local jetThrottle, jetTargetThrottle = shared.jetThrottle or 0, shared.jetTarget or 0 -- (v2) from the server
 	if GetPlayerVehicle() == v then
 		UiPush()
 			UiTranslate(20,UiHeight()-300)

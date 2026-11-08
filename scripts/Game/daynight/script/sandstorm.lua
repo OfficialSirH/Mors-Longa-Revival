@@ -25,15 +25,24 @@ function tickSandstorm()
 	end ]]
 
 	--DebugPrint("workin")
+	-- (v2 fix 2026-11-12, original-mod bug) each countdown shrinks its own range by one per tick; a roll that should
+	-- have started a storm while the "Sandstorms" option read off (see below) left "chance" running: after 100000 ticks
+	-- math.random(0, -1) raised "interval is empty" on every tick. Now the roll restarts the countdown either way,
+	-- and neither range can go below 1.
 	if not sandstorm then
-		generatestorm = math.random(0, chance)
+		generatestorm = math.random(0, math.max(chance, 1))
 		chance = chance - 1
-		if generatestorm == 1 then
-			sandstorm = true and GetBool("savegame.mod.config.daynight.sandstorms")
+		if generatestorm == 1 or chance < 1 then
+			-- (v2 fix 2026-11-12, original-mod bug) the debug menu shows "Sandstorms" on by default (Config.lua default
+			-- true, used while the key was never written), but GetBool of a missing key is false: storms only came after
+			-- toggling the button off and on. Read it the way the menu does.
+			local key = "savegame.mod.config.daynight.sandstorms"
+			sandstorm = not HasKey(key) or GetBool(key)
 			echance = eschance
+			chance = schance
 		end
 	else
-		generatestorm = math.random(0, echance)
+		generatestorm = math.random(0, math.max(echance, 1))
 		echance = echance - 1
 		if generatestorm == 1 then
 			sandstorm = false
@@ -120,7 +129,7 @@ end
 function TryEndSandStorm(totTick)
 	if sandstorm then
 		for _ = 1, totTick do
-			generatestorm = math.random(0, echance)
+			generatestorm = math.random(0, math.max(echance, 1))
 			echance = echance - 1
 			if generatestorm == 1 then
 				sandstorm = false

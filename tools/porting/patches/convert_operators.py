@@ -49,7 +49,7 @@ def rep(t, old, new, count=1, path=""):
 
 def convert(path, edits):
     b = git_head(path)
-    crlf = "\r\n" in b
+    crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
     t = b.replace("\r\n", "\n")
     assert MARK not in t and not t.startswith("#version"), path + ": HEAD already converted"
     # include the co-op helpers right after masterScriptRemoverAPI.lua (its queueRemoval is replaced)
@@ -118,6 +118,10 @@ S + "ConvoyOperatorTransport.lua": [
     ("if disttoplayer < 10 and not underControl and GetPlayerVehicle() == 0 then",
      "if disttoplayer < 10 and not underControl and GetPlayerVehicle(OpTargetPlayer(vT.pos)) == 0 then"),
     ("GetPlayerVehicle() == vehicle", "OpAnyPlayerInVehicle(vehicle)", 3),
+    # (2026-11-08) original-mod bug: the folder is enemies/refugees/ (same path in 9dde6dd), so no live refugee ever
+    # spawned when a refugee vehicle stopped; the stand-ins were deleted with nothing in their place
+    ('"MOD/prefabs/spawnables/enemies/refugee/Ragdollrefugee1.xml"',
+     '"MOD/prefabs/spawnables/enemies/refugees/Ragdollrefugee1.xml" -- (v2) v1 path had "refugee/"'),
 ],
 }
 

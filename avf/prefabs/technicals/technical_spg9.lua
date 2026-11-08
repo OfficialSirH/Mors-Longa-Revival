@@ -1,4 +1,12 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2, 2026-11-13) SPG-9 technical (technical_SPG9.xml, road spawn VehicleM4): recoilless gun on our own mounted-gun
+-- script with AVF's shells ported (scripts/avf; v1 included ../../scripts/avf_custom.lua and needed the external AVF
+-- mod). The AVF table below is still the gun's config (mainCannon, weapon type "rocket": PG-9 AT / OG-9 HE, F
+-- switches). Standing gunner place left of the tube (its sight side); the driver does not fire. The XML's backblast
+-- location was also tagged mainCannon_emitter (AVF: a second barrel at the rear end): retagged mainCannon_backblast.
+MountedGunSound = "MOD/avf/assets/sounds/recoilessRifle0.ogg" -- the config's soundFile (copied from AVF)
 
 
 --[[

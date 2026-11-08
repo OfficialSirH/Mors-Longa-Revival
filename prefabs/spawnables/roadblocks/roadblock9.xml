@@ -366,7 +366,7 @@
 			<instance pos="-5.3 0.8 31.2" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/technicals/technical_DSHK.xml"/>
 			<instance pos="-9.4 0.8 39.1" rot="0.0 -90.0 0.0" file="MOD/avf/prefabs/technicals/offroad.xml"/>
 			<instance pos="-9.4 0.8 42.1" rot="0.0 -80.0 0.0" file="MOD/avf/prefabs/technicals/offroad.xml"/>
-			<instance pos="2.6 0.9 31.0" file="MOD/Vehicles/ZIL131.xml"/>
+			<instance pos="2.6 0.9 31.0" file="MOD/Vehicles/Soviet Vehicles/ZIL131.xml"/>
 			<instance pos="-28.80001 4.4 6.09999" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml"/>
 			<instance pos="-27.70002 4.4 15.3" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml"/>
 			<instance pos="-29.30001 4.4 10.89999" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml"/>

@@ -57,6 +57,15 @@
 						<vox pos="-0.2 -0.35 0.05" blendtexture="5 .4" file="MOD/Vehicles/van1_yellow/van1_yellow.vox" object="wheel"/>
 					</wheel>
 				</body>
+				<rig name="driver" tags="driver sort=0" pos="0.1 -0.1 0.1">
+					<location name="seat" tags="seat" pos="-0.55 1.25 -1.1" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="-0.35 1.35 -1.55" rot="0.0 90 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.85 1.35 -1.55" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="-0.6 1.35 -1.5" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="1 -0.1 0.1">
+					<location name="seat" tags="seat" pos="-0.55 1.25 -1.1" rot="0.0 0.0 0.0"/>
+				</rig>
 			</vehicle>
 		</group>
 	</group>

@@ -1339,6 +1339,7 @@ ConfigVehicleEvents = {
     { "civ",     "Hostile Car" },
     { "aaf",     "Military" },
     { "refugee", "Refugees" },
+    { "refugee_van", "Refugee Van" }, -- the refugee event with VehicleC3 (rebuilt 2026-11-08) instead of a random one
     { "heli",    "Helicopter" },
 }
 function ConfigVehicleEvent(name, pos)

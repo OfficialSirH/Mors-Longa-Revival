@@ -1,7 +1,7 @@
 import sys
 p = sys.argv[1]
 raw = open(p, 'rb').read().decode('latin-1')
-crlf = '\r\n' in raw
+crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
 s = raw.replace('\r\n', '\n')
 def rep(old, new, count=1):
     global s

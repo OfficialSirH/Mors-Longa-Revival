@@ -150,7 +150,7 @@ function update_npcs(dt)
                     npc_constrain_jaw(npc)
 
                     if npc.ai.sitting.isSitting then
-                        npc_pose_ragdoll(npc, GetLightTransform(npc.ai.sitting.sitLight), RagdollPoses.sit, npc.ai.sitting.sitBody)
+                        npc_pose_ragdoll(npc, npc_sitting_head_transform(npc), npc_sitting_pose(npc), npc.ai.sitting.sitBody) -- (v2 goreai) seat rig
                     else
                         npc_robot_update(npc, dt)
                         npc_run_assist(npc)

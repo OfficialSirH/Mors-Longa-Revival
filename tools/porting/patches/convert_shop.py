@@ -283,7 +283,7 @@ end
 def convert_parking():
     import re
     b = open(PARKING, "rb").read().decode("utf-8")
-    crlf = "\r\n" in b
+    crlf = False  # (2026-11-08) the repo is LF (.gitattributes); old commits read as input may still be CRLF
     t = b.replace("\r\n", "\n")
     assert not t.startswith("#version"), "ParkingSpot already v2"
     for old, new in PARKING_EDITS:

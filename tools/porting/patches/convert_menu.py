@@ -9,8 +9,7 @@
 * Config.lua CheejinsShortcuts (dev level shortcuts, only drawn by the menu): same.
 
 Usage (repo root): python3 tools/porting/patches/convert_menu.py
-Rebuilds the three menu scripts from git HEAD each run (they are v1 there); Config.lua is edited in place once.
-All four files are CRLF.
+Rebuilds the three menu scripts from the phase 2 commit (BASE, v1 there) each run; Config.lua is edited in place once.
 """
 import os, subprocess, sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -96,13 +95,16 @@ CONFIG_EDITS = [
 ]
 
 
+BASE = "6c28435"  # "phase 2" commit: these files are still v1 there (HEAD has the converted versions since phase 3)
+
+
 def head(path):
-    return subprocess.run(["git", "show", "HEAD:" + path], capture_output=True, check=True).stdout.decode("utf-8")
+    return subprocess.run(["git", "show", BASE + ":" + path], capture_output=True, check=True).stdout.decode("utf-8")
 
 
 def write(path, text):
-    """text with LF line endings; the repo's Lua files are CRLF"""
-    open(path, "wb").write(text.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8"))
+    """written with LF line endings (the repo is LF since 2026-11-08, .gitattributes)"""
+    open(path, "wb").write(text.replace("\r\n", "\n").encode("utf-8"))
 
 
 def replace(path, text, old, new, count=1):
@@ -114,7 +116,7 @@ def replace(path, text, old, new, count=1):
 def main():
     # menu_main.lua: library, no #version header
     t = head(MAIN).replace("\r\n", "\n")
-    assert "#version" not in t, MAIN + ": HEAD is not v1"
+    assert "#version" not in t, MAIN + ": BASE is not v1"
     for old, new, count in MAIN_EDITS:
         t = replace(MAIN, t, old, new, count)
     t = "-- (v2) main menu UI (client); library: entry script main_menu.lua, also included by ingame_settings.lua\n" + t
