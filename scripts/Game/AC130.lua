@@ -1,5 +1,8 @@
- function init()
-    a = GetPlayerCameraTransform()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: supply plane flies over, drops crates when the NEAREST player is within 300 m, despawns.
+function server.init()
+    -- (v2) removed unused a = GetPlayerCameraTransform()
     sb = FindBody("plane")
     maxheight = 8
     boc = 20
@@ -46,12 +49,12 @@
 end
 
 	
-function tick(dt)
+function server.tick(dt)
 
 local planeBody = FindBody("plane")
-local playerPos = GetPlayerTransform().pos
 local planePos = GetBodyTransform(planeBody).pos
-local dist = VecLength(VecSub(playerPos, planePos))  
+local dist = math.huge -- (v2) nearest player
+for p in Players() do dist = math.min(dist, VecLength(VecSub(GetPlayerTransform(p).pos, planePos))) end
 ttime = ttime - dt
 	
     strans = GetShapeWorldTransform(sc)

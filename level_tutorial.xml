@@ -1009,13 +1009,13 @@
 								</group>
 							</body>
 						</group>
-						<group name="instance=MOD/Loots/meds-general-ifak.xml" pos="0.1 0.7 4.5" rot="0.0 -10.0 0.0">
-							<body name="IFAK" tags="Loot=meds-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
+						<group name="instance=MOD/Loots/meds-bleed-general-ifak.xml" pos="0.1 0.7 4.5" rot="0.0 -10.0 0.0">
+							<body name="IFAK" tags="Loot=meds-bleed-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
 								<voxbox pos="-0.15 -0.1 -0.1" size="3 2 2" color="0.73 0.71 0.61"/>
 							</body>
 						</group>
-						<group name="instance=MOD/Loots/meds-general-ifak.xml" pos="0.1 0.7 4.8" rot="0.0 -10.0 0.0">
-							<body name="IFAK" tags="Loot=meds-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
+						<group name="instance=MOD/Loots/meds-bleed-general-ifak.xml" pos="0.1 0.7 4.8" rot="0.0 -10.0 0.0">
+							<body name="IFAK" tags="Loot=meds-bleed-general-ifak_IFAK_300_300 interact=IFAK focus=white" pos="0.0 0.1 0.0" dynamic="true">
 								<voxbox pos="-0.15 -0.1 -0.1" size="3 2 2" color="0.73 0.71 0.61"/>
 							</body>
 						</group>
@@ -1147,7 +1147,7 @@
 						<instance pos="0.1 0.8 0.7" rot="0.0 160.0 0.0" file="MOD/Loots/material-rubber.xml"/>
 					</group>
 					<group name="instance=MOD/avf/prefabs/Weaponised vehicles/Willys Jeep.xml" pos="3.2 0.0 0.4" rot="0.0 -90.0 0.0">
-						<script file="MOD/Vehicles,Equipment/Cars,Trucks,Guns/Door.lua">
+						<script file="MOD/scripts/missing_script_stub.lua">
 							<vehicle name="Willys Jeep" tags="Door fuelLevel=1 focus=white" pos="0.0 0.3 0.0" rot="0.0 -90.0 0.0" sound="suv4 1.1" spring="2" damping="1.0" topspeed="89" acceleration="0.2" strength="1.5" antiroll="0.3" difflock="1" steerassist="0.3" friction="1.4">
 								<body dynamic="true">
 									<vox name="Body" texture="8 0.5" density="2.5" strength="3" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="body">
@@ -1180,6 +1180,39 @@
 										<vox pos="-0.1 -0.35 0.05" texture="8 0.5" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_bl"/>
 									</wheel>
 								</body>
+								<rig name="driver" tags="driver sort=0" pos="-0.3 0.55 0.15">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.07 0.35 -0.15" rot="0.0 90 0.0"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.17 0.35 -0.15" rot="0.0 90 0.0"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+									<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.35 -0.15" rot="0.0 -180 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=1" pos="0.4 0.55 0.15">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=2" pos="0.4 0.55 0.95">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=3" pos="-0.3 0.55 0.95">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
 							</vehicle>
 						</script>
 					</group>
@@ -1248,6 +1281,39 @@
 										<vox pos="0.2 -0.5 0.0" blendtexture="3 .45" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="wheel_fl"/>
 									</wheel>
 								</body>
+								<rig name="driver" tags="driver sort=0" pos="-0.7 1.2 -0.45">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.15 0.3 -0.2" rot="0.0 90 0.0"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.3 -0.2" rot="0.0 90 0.0"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+									<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.3 -0.2" rot="0.0 -180 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=1" pos="0.7 1.2 -0.45">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=2" pos="0.7 1.2 0.35">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=3" pos="-0.7 1.2 0.35">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
 							</vehicle>
 						</script>
 					</group>
@@ -1354,6 +1420,55 @@
 										<vox pos="0.1 -0.4 0.0" rot="0 180 0" texture="8 0.5" file="MOD/Vehicles/Enemy Car/Car.vox" object="wheel1"/>
 									</wheel>
 								</body>
+								<rig name="driver" tags="driver sort=0" pos="-0.55 0.95 -0.25">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.6" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.6" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.4 -0.3" rot="0.0 90 0.0"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.4 -0.3" rot="0.0 90 0.0"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+									<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.4 -0.3" rot="0.0 -180 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=1" pos="0.35 0.95 -0.25">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.6" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.6" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=2" pos="0.25 0.95 0.75">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=3" pos="-0.45 0.95 0.75">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=4" pos="-0.75 1.05 1.5" rot="0.0 -90 0.0">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.2" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.2" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
+								<rig name="passenger" tags="sort=5" pos="0.55 1.05 1.6" rot="0.0 90 0.0">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.25" rot="0.0 90 50"/>
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.25" rot="0.0 90 50"/>
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+								</rig>
 							</vehicle>
 						</script>
 					</group>
@@ -1471,7 +1586,7 @@
 			<script file="MOD/scripts/pauseMenu.lua"/>
 			<script file="MOD/scripts/Game/script.lua"/>
 			<script file="MOD/script/Thermals.lua"/>
-			<script file="MOD/Config.lua"/>
+			<script file="MOD/scripts/ConfigMenu.lua"/>
 			<script file="MOD/scripts/UI/SpawnMenu.lua"/>
 			<script file="MOD/scripts/UI/MainMenu/ingame_settings.lua"/>
 			<script file="MOD/scripts/game/daynight/script/daynight_main.lua"/>
@@ -1479,7 +1594,6 @@
 			<script file="MOD/scripts/UI/Book.lua"/>
 			<script file="MOD/scripts/Game/Fuel.lua"/>
 			<script file="MOD/scripts/Gamerule.lua"/>
-			<script file="MOD/scripts/Game/PlayerVehicleSeat/PlayerVehicleSeat.lua"/>
 			<script file="MOD/scripts/door_global.lua"/>
 			<script file="MOD/scripts/Game/ShootFromCar.lua"/>
 			<script file="MOD/scripts/Game/ToolManager.lua"/>
@@ -1490,6 +1604,7 @@
 			<script file="MOD/scripts/Grenades.lua"/>
 		</group>
 		<group name="Player body">
+			<script file="MOD/scripts/PlayerHitboxes.lua"/>
 			<script file="MOD/HealthSystem/AdvancedHealthScript.lua">
 				<trigger tags="hitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
 				<trigger tags="hitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .8 .2"/>
@@ -1501,6 +1616,45 @@
 		</group>
 		<group name="Inventory Mod">
 			<script file="MOD/script/inventory.lua"/>
+			<group name="GunScripts">
+				<!-- (v2, Phase 2) all gun scripts load with the level; the inventory used to spawn them per slot. PKM and SG553 (Bauer-553) are shelved/unfinished and not loaded. -->
+				<script file="MOD/script/AK50.lua"/>
+				<script file="MOD/script/AK74.lua"/>
+				<script file="MOD/script/AK101.lua"/>
+				<script file="MOD/script/AK74M.lua"/>
+				<script file="MOD/script/AKM.lua"/>
+				<script file="MOD/script/CZ-1012.lua"/>
+				<script file="MOD/script/G3.lua"/>
+				<script file="MOD/script/G36.lua"/>
+				<script file="MOD/script/M4A1.lua"/>
+				<script file="MOD/script/M16.lua"/>
+				<script file="MOD/script/M107.lua"/>
+				<script file="MOD/script/M870.lua"/>
+				<script file="MOD/script/KS23.lua"/>
+				<script file="MOD/script/MosinNagant.lua"/>
+				<script file="MOD/script/MosinNagantM.lua"/>
+				<script file="MOD/script/MP5.lua"/>
+				<script file="MOD/script/MP43.lua"/>
+				<script file="MOD/script/P90.lua"/>
+				<script file="MOD/script/PP19.lua"/>
+				<script file="MOD/script/PPSh.lua"/>
+				<script file="MOD/script/RPG.lua"/>
+				<script file="MOD/script/SCAR-H.lua"/>
+				<script file="MOD/script/SCAR-Hg.lua"/>
+				<script file="MOD/script/SCAR-L.lua"/>
+				<script file="MOD/script/SCAR-Lg.lua"/>
+				<script file="MOD/script/SKS.lua"/>
+				<script file="MOD/script/SV98.lua"/>
+				<script file="MOD/script/SVD.lua"/>
+				<script file="MOD/script/VECTOR.lua"/>
+				<script file="MOD/script/FiveSeven.lua"/>
+				<script file="MOD/script/G17.lua"/>
+				<script file="MOD/script/Dessert Eagle.lua"/>
+				<script file="MOD/script/G18.lua"/>
+				<script file="MOD/script/Sawed Off.lua"/>
+				<script file="MOD/script/TT33.lua"/>
+				<script file="MOD/script/M9.lua"/>
+			</group>
 			<group name="Melee Weapons">
 				<script file="MOD/scripts/Weapons/Melee/BaseballBat.lua"/>
 				<script file="MOD/scripts/Weapons/Melee/Scythe.lua"/>

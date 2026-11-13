@@ -1,7 +1,7 @@
 <prefab version="1.6.0">
 	<group name="instance=MOD/Vehicles/Soviet Vehicles/zil131fire Destoryed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 		<vox pos="0.05 0.8 0.3" rot="0.0 -180.0 0.0" texture="8" blendtexture="5 " density="3" strength="5" prop="true" file="MOD/vehicles/Soviet Vehicles/zil131fire.vox" object="bodyD" pbr="0 0 0 -64">
-			<voxbox pos="0.2 0.3 2.1" rot="-40.0 0.0 0.0" blendtexture="5 " prop="true" size="5 9 5" brush="MOD/Vehicles/zil131.vox" object="stearing"/>
+			<voxbox pos="0.2 0.3 2.1" rot="-40.0 0.0 0.0" blendtexture="5 " prop="true" size="5 9 5" brush="MOD/Vehicles/Soviet Vehicles/zil131.vox" object="stearing"/>
 			<vox pos="0.0 -0.4 0.4" rot="0.0 0.0 0.0" texture="8" blendtexture="5 " density="1.2" strength="100" prop="true" file="MOD/vehicles/Soviet Vehicles/zil131fire.vox" object="frame"/>
 		</vox>
 		<vox pos="0.05 0.5 -3.6" rot="80.0 180.0 0.0" texture="8" blendtexture="5 " density="1.2" strength="2" prop="true" file="MOD/vehicles/Soviet Vehicles/zil131fire.vox" object="hood"/>

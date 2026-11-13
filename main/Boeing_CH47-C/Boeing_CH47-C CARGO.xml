@@ -182,7 +182,7 @@
 						</group>
 						<vox pos="0.00002 0.0 3.1" file="MOD/main/Boeing_CH47-C/fuselage/Boeing_CH47-C_2.vox" object="heavy cargo lift"/>
 					</vox>
-					<script pos="-0.5 5.7 5.4" rot="0.0 0.0 0.0" file="MOD/main/Boeing_CH47-C/GoreRagdolls2/scripts/gorefunctions.lua">
+					<script pos="-0.5 5.7 5.4" rot="0.0 0.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 						<body name="foot_R" tags="RRLEG bodypart" pos="-0.3 0.9 0.2" dynamic="true">
 							<vox tags="RRLEG nocull" pos="0.2 -0.4 0.1" density="2" strength="1" file="MOD/main/Boeing_CH47-C/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R">
 								<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" collide="false" limits="-90 0"/>
@@ -280,7 +280,7 @@
 						</body>
 					</script>
 				</group>
-				<script pos="0.665 -0.6 -4.952" rot="0.0 100.0 0.0" file="MOD/main/Boeing_CH47-C/GoreRagdolls2/scripts/gorefunctions.lua">
+				<script pos="0.665 -0.6 -4.952" rot="0.0 100.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 					<body name="Torso" tags="Torso bodypart" pos="0.1 1.4 -0.1" rot="0.0 90.0 0.0" dynamic="true">
 						<vox pos="0.0 0.0 -0.1" rot="0 180 " density="1" strength="1" file="MOD/main/Boeing_CH47-C/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
 							<joint tags="hip" pos="-0.1 0.1 -0.0" rot="0.0 90.0 0.0" type="hinge" collide="false" limits="-90 90"/>

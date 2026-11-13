@@ -1,11 +1,14 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: burning debris thrown from wrecked cars, explodes after a while.
+function server.init()
 	yeeeeeeeeted = false
 	force = 15
 	tim = 0
 	B = math.random(100,250)/3
 end
 
-function tick()
+function server.tick()
 	body = FindBody("debri")
 	if not yeeeeeeeeted then
 		local pos = Vec(0,0,0)

@@ -1,6 +1,9 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) client: per-machine player id + ban check (BanTable is empty).
 CharTable = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"}
 BanTable = {}
-function init()
+function client.init()
 	if not GetBool("savegame.mod.morb.inventory.playeid.initated") then
 		local String = {}
 		for i=1,10 do 
@@ -28,12 +31,12 @@ function PlayerBanCheck(id)
 	return IsBanned
 end
 
-function tick(dt)
+function client.tick(dt)
 	if Banned then 
 		Menu()
 	end
 end	
 
-function draw()
+function client.draw()
 	-- DebugPrint(PlayerId)
 end

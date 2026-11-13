@@ -1,16 +1,13 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) horde place tool, per player (client: aim, money, menu; server: preview bodies, spawning).
 #include "../../../Settings.lua"
 
 Max_Spawn_Dist = 7
 
 
-function init()
-
-	Init_Settings()
-
-	RegisterTool("placer", "Place Tool", "MOD/vox/placer.vox", 4)
-	SetBool("game.tool.placer.enabled", true)
-
-	scroll = false
+-- (v2) the placeable list, used by both server and client
+function DefineModels()
 
 	models = {}
 	table.insert(models, {
@@ -124,58 +121,66 @@ function init()
 		amountmoney = 25
 	})
 	
-	currentModelIndex = 1
-	currentModel = models[1]
-
-	FlagRotation = Vec(0, 0, 0)
-
-	ManagePreviewModels()
-	rotate = 0
-
 end
 
--- Keep models as non-colliding placement previews.
-function ManagePreviewModels()
+-- (v2) Place tool, per player.
+--   client: tool pose, aim raycast, placement rules, money (own savegame), menu. Sends its preview pose to the
+--     server when it changes (server.placerPreview) and places with server.placerPlace.
+--   server: one preview body per player (spawned far away, no collision), moved to that player's pose; spawns placed
+--     items. shared.placer[tostring(player)] = preview body (clients outline it and ignore all previews in their
+--     raycast). level.placetool.preview_bodies lists every preview body for GoreNPCs (it ignores them).
 
-	local reg_bodies = ""
+PREVIEW_HIDDEN = Vec(1000, -1000, 1000)
 
-	for index, model in ipairs(models) do
+------------------------------------------------------------------ server
 
-		if model.preview == nil then -- Check if preview table exists.
-			CreateModelPreview(model)
+function server.init()
+	DefineModels()
+	RegisterTool("placer", "Place Tool", "MOD/vox/placer.vox", 4)
+	SetBool("game.tool.placer.enabled", true)
+	for p in Players() do SetToolEnabled("placer", true, p) end
+	Previews = {}
+	shared.placer = {}
+end
+
+function server.tick(dt)
+	for p in PlayersAdded() do SetToolEnabled("placer", true, p) end
+	for p in PlayersRemoved() do PlacerRemovePreview(p) end
+	local reg = ""
+	for p, pv in pairs(Previews) do
+		if IsHandleValid(pv.body) then
+			reg = reg .. "_" .. pv.body
+		else
+			PlacerRemovePreview(p)
 		end
-
-		if not IsHandleValid(model.preview.body) then -- Replace missing model body.
-			CreateModelPreview(model)
-		end
-
-		-- DebugLine(GetBodyTransform(model.preview.body).pos, GetPlayerTransform().pos, 1,1,0, 1)
-
-		if model == currentModel then
-			HideModelPreview(model.preview.body)
-		end
-
-		reg_bodies = reg_bodies .. "_" .. model.preview.body
-
 	end
-
-	SetString("level.placetool.preview_bodies", reg_bodies)
-
+	SetString("level.placetool.preview_bodies", reg)
 end
 
+function PlacerRemovePreview(p)
+	local pv = Previews[p]
+	if pv then
+		for _, e in ipairs(pv.entities) do
+			if IsHandleValid(e) then Delete(e) end
+		end
+	end
+	Previews[p] = nil
+	shared.placer[tostring(p)] = nil
+end
+
+-- non-colliding, unbreakable copy of the model (v1 CreateModelPreview)
 function CreateModelPreview(model)
 
-	local spawnPos = VecAdd(GetPlayerTransform().pos, Vec(1000,-1000,1000))
-	local entities = Spawn(model.path, Transform(spawnPos))
+	local entities = Spawn(model.path, Transform(PREVIEW_HIDDEN))
+	local preview = nil
 
-	-- Find body
 	for _, entity in ipairs(entities) do
 
 		if HasTag(entity, "GasCan") then
 			RemoveTag(entity, "GasCan")
 		end
 
-		if GetEntityType(entity) == "body" then -- Create preview object.
+		if GetEntityType(entity) == "body" and not preview then
 
 			local body = entity
 
@@ -183,7 +188,6 @@ function CreateModelPreview(model)
 			SetTag(body, "nodelete")
 			SetTag(body, "placetool_preview")
 
-			-- No collide with all.
 			for _, shape in ipairs(GetBodyShapes(body)) do
 				SetShapeCollisionFilter(shape, 0, 0)
 				SetTag(shape, "unbreakable")
@@ -191,21 +195,18 @@ function CreateModelPreview(model)
 				SetTag(shape, "placetool_preview")
 			end
 
-			-- Body bounds used for placement preview transform offset.
-			local bbMin, bbMax = GetBodyBounds(body)
-
-			-- Preview object.
-			model.preview = {
-				body = body,
-				bounds = { min = bbMin, max = bbMax }
-			}
+			preview = { body = body, entities = entities }
 
 		end
 
 	end
 
-end
+	if not preview then
+		for _, e in ipairs(entities) do Delete(e) end
+	end
+	return preview
 
+end
 
 function DisplayModelPreview(modelBody, tr)
 
@@ -218,106 +219,171 @@ end
 
 function HideModelPreview(modelBody)
 
-	SetBodyTransform(modelBody, Transform(Vec(1000, -1000, 1000)))
+	SetBodyTransform(modelBody, Transform(PREVIEW_HIDDEN))
 	SetBodyVelocity(modelBody, Vec(0,0,0))
 	SetBodyAngularVelocity(modelBody, Vec(0,0,0))
 
 end
 
-function tick(dt)
-	Money = GetString("savegame.mod.player.money")
-	ManagePreviewModels()
+--- index 0 = the player put the tool away. show + pose = where the preview goes.
+function server.placerPreview(p, index, show, x, y, z, qx, qy, qz, qw)
+	index = tonumber(index) or 0
+	if index < 1 or not models[index] then
+		PlacerRemovePreview(p)
+		return
+	end
+	local pv = Previews[p]
+	if not pv or pv.index ~= index or not IsHandleValid(pv.body) then
+		PlacerRemovePreview(p)
+		pv = CreateModelPreview(models[index])
+		if not pv then return end
+		pv.index = index
+		Previews[p] = pv
+		shared.placer[tostring(p)] = pv.body
+	end
+	if show then
+		DisplayModelPreview(pv.body, Transform(Vec(x, y, z), Quat(qx, qy, qz, qw)))
+	else
+		HideModelPreview(pv.body)
+	end
+end
 
-	if GetString("game.player.tool") == "placer" then
-		if GetBool("game.player.canusetool") then
+--- the client already checked distance + money and paid (client-trusted, as all money in this port)
+function server.placerPlace(p, index, x, y, z, qx, qy, qz, qw)
+	local model = models[tonumber(index) or 0]
+	if not model then return end
+	Spawn(model.path, Transform(Vec(x, y, z), Quat(qx, qy, qz, qw)), false, true)
+	if Previews[p] then HideModelPreview(Previews[p].body) end
+end
 
-			FlagRotation[1] = FlagRotation[1] + InputValue("camerax") * 2
-			FlagRotation = VecLerp(FlagRotation, Vec(0, 0, 0), 0.1)
+------------------------------------------------------------------ client
 
-			SetToolTransform(Transform(Vec(0.25, -0.25, -0.4), QuatEuler(0, FlagRotation[1], -10)))
+function client.init()
 
+	Init_Settings()
+	DefineModels()
 
-			-- if InputDown("grab") then
+	scroll = false
+	currentModelIndex = 1
+	currentModel = models[1]
 
-				for _, model in ipairs(models) do
-					QueryRejectBody(model.preview.body)
-				end
-				local t = GetCameraTransform()
-				local dir = TransformToParentVec(t, Vec(0, 0, -1))
-				local hit, dist, normal, shape = QueryRaycast(t.pos, dir, 100)
-				if hit then
+	FlagRotation = Vec(0, 0, 0)
+	rotate = 0
+	PlacerSentSig = nil
 
-					SetBool("hud.aimdot", false)
+end
 
-					local hitpoint = VecAdd(t.pos, VecScale(dir, dist))
+local function sendPreview(index, show, tr)
+	local sig
+	if show then
+		local p, r = tr.pos, tr.rot
+		sig = string.format("%d/%.2f/%.2f/%.2f/%.3f/%.3f/%.3f/%.3f", index, p[1], p[2], p[3], r[1], r[2], r[3], r[4])
+	else
+		sig = index .. "/hidden"
+	end
+	if sig == PlacerSentSig then return end
+	PlacerSentSig = sig
+	if show then
+		ServerCall("server.placerPreview", GetLocalPlayer(), index, true, tr.pos[1], tr.pos[2], tr.pos[3],
+			tr.rot[1], tr.rot[2], tr.rot[3], tr.rot[4])
+	else
+		ServerCall("server.placerPreview", GetLocalPlayer(), index, false)
+	end
+end
 
+function client.tick(dt)
 
-					local hp = VecAdd(hitpoint, normal)
-					local rot = QuatLookAt(hitpoint, hp)
-					rot = QuatRotateQuat(rot, QuatEuler(-90, 0, 0+rotate))
-
-					if currentModel.name == "Flag Small"
-							or currentModel.name == "Flag Normal"
-							or currentModel.name == "Flag Big"
-					then
-						local hp2 = VecSub(hitpoint, dir)
-						local rot2 = QuatLookAt(hitpoint, hp2)
-						local rx, ry, rz = GetQuatEuler(rot2)
-						rot = QuatRotateQuat(rot, QuatEuler(0, ry+rotate, 0))
-					end
-
-					local within_bounds = VecDist(GetPlayerTransform().pos, hitpoint) <= Max_Spawn_Dist
-					local pos = VecAdd(hitpoint, VecScale(normal, 1))
-
-					-- Spawn and place model body.
-					HasRequiredMaterials = checkPlaceable(currentModelIndex)
-					if HasRequiredMaterials and within_bounds and not HasTag(GetShapeBody(shape), "gore_id")  then
-
-							DisplayModelPreview(currentModel.preview.body, Transform(hitpoint, rot))
-							DrawBodyOutline(currentModel.preview.body, 0, 1, 0, 1)
-							DrawLine(hitpoint, pos, 0, 1, 0, 1)
-
-							if InputDown("rmb") then
-								rotate = rotate + 1
-							end
-							if InputDown("rmb") and InputDown("shift") then
-								rotate = rotate + 5
-							end
-
-							if InputPressed("usetool") then
-
-								HideModelPreview(currentModel.preview.body)
-
-								local items = Spawn(currentModel.path, Transform(hitpoint, rot), false, true)
-								SetString(
-									"savegame.mod.player.money", 
-									Money - currentModel.amountmoney)
-							end
-
-					else
-
-						if within_bounds then
-							DisplayModelPreview(currentModel.preview.body, Transform(hitpoint, rot))
-							DrawBodyOutline(currentModel.preview.body, 1, 0, 0, 1)
-							DrawBodyHighlight(currentModel.preview.body, 0.2)
-							DrawLine(hitpoint, pos, 1, 0, 0, 1)
-						end
-
-					end
-				end
-
-			else
-
-				HideModelPreview(currentModel.preview.body)
-
-			end
+	if GetPlayerTool() ~= "placer" or GetPlayerVehicle() ~= 0 then
+		if PlacerSentSig ~= nil then
+			PlacerSentSig = nil
+			ServerCall("server.placerPreview", GetLocalPlayer(), 0, false) -- tool put away: drop my preview
 		end
-	-- end
+		return
+	end
+
+	local previewBody = shared.placer and shared.placer[tostring(GetLocalPlayer())]
+
+	FlagRotation[1] = FlagRotation[1] + InputValue("camerax") * 2
+	FlagRotation = VecLerp(FlagRotation, Vec(0, 0, 0), 0.1)
+
+	SetToolTransform(Transform(Vec(0.25, -0.25, -0.4), QuatEuler(0, FlagRotation[1], -10)))
+
+	for _, body in pairs(shared.placer or {}) do
+		QueryRejectBody(body)
+	end
+	local t = GetCameraTransform()
+	local dir = TransformToParentVec(t, Vec(0, 0, -1))
+	local hit, dist, normal, shape = QueryRaycast(t.pos, dir, 100)
+	if not hit then
+		sendPreview(currentModelIndex, false)
+		return
+	end
+
+	SetBool("hud.aimdot", false)
+
+	local hitpoint = VecAdd(t.pos, VecScale(dir, dist))
+
+	local hp = VecAdd(hitpoint, normal)
+	local rot = QuatLookAt(hitpoint, hp)
+	rot = QuatRotateQuat(rot, QuatEuler(-90, 0, 0+rotate))
+
+	if currentModel.name == "Flag Small"
+			or currentModel.name == "Flag Normal"
+			or currentModel.name == "Flag Big"
+	then
+		local hp2 = VecSub(hitpoint, dir)
+		local rot2 = QuatLookAt(hitpoint, hp2)
+		local rx, ry, rz = GetQuatEuler(rot2)
+		rot = QuatRotateQuat(rot, QuatEuler(0, ry+rotate, 0))
+	end
+
+	local within_bounds = VecDist(GetPlayerTransform().pos, hitpoint) <= Max_Spawn_Dist
+	local pos = VecAdd(hitpoint, VecScale(normal, 1))
+	local tr = Transform(hitpoint, rot)
+
+	HasRequiredMaterials = checkPlaceable(currentModelIndex)
+	local valid = previewBody and IsHandleValid(previewBody)
+	if HasRequiredMaterials and within_bounds and not HasTag(GetShapeBody(shape), "gore_id") then
+
+		sendPreview(currentModelIndex, true, tr)
+		if valid then DrawBodyOutline(previewBody, 0, 1, 0, 1) end
+		DrawLine(hitpoint, pos, 0, 1, 0, 1)
+
+		if InputDown("rmb") then
+			rotate = rotate + 1
+		end
+		if InputDown("rmb") and InputDown("shift") then
+			rotate = rotate + 5
+		end
+
+		if InputPressed("usetool") then
+			-- (v2 fix) v1 used Get/SetString on this int key
+			SetInt("savegame.mod.player.money", GetInt("savegame.mod.player.money") - currentModel.amountmoney)
+			ServerCall("server.placerPlace", GetLocalPlayer(), currentModelIndex, tr.pos[1], tr.pos[2], tr.pos[3],
+				tr.rot[1], tr.rot[2], tr.rot[3], tr.rot[4])
+			sendPreview(currentModelIndex, false)
+		end
+
+	elseif within_bounds then
+
+		sendPreview(currentModelIndex, true, tr)
+		if valid then
+			DrawBodyOutline(previewBody, 1, 0, 0, 1)
+			DrawBodyHighlight(previewBody, 0.2)
+		end
+		DrawLine(hitpoint, pos, 1, 0, 0, 1)
+
+	else
+
+		sendPreview(currentModelIndex, false)
+
+	end
+
 end
 
 
 
-function draw()
+function client.draw()
 
 	UiTranslate(390, -10)
 
@@ -499,7 +565,7 @@ end
 
 
 
-function handleCommand(cmd) handle_quickload(cmd) end
+-- (v2) v1 quickload hook (re-read the settings) dropped: no client-side handleCommand in v2
 function handle_quickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then

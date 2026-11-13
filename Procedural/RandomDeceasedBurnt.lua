@@ -1,4 +1,7 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns random corpses.
+function server.init()
 	differentdeceased = 3
 	if GetBool('level.RND.deceased')then
 		DebugWatch('RND deceased',"DUPLICATED!")
@@ -6,7 +9,7 @@ function init()
 		SetBool('level.RND.deceased',true)
 	end
 end
-function tick()
+function server.tick()
 	local Locations = FindLocations("RandomDeceasedBurnt",true)
 
 	for i=1,#Locations do

@@ -1,9 +1,12 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns random loot at generated locations.
 #include "SpawnRefrenceTable.lua"
 
 local disable_spawning = "savegame.mod.procedural.disable.spawn_roadblocks"
 
 
-function init()
+function server.init()
 	rare = .1
 	uncommon = .4
 	common = 1
@@ -16,7 +19,7 @@ function init()
 	
 	luck = HasKey('level.gamerule.lrarity') and GetFloat('level.gamerule.lrarity') or 1
 end
-function tick()
+function server.tick()
 
 	if GetBool(disable_spawning) then
 		return

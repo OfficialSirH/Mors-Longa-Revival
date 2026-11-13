@@ -116,7 +116,7 @@ function npc_process_thinking(npc, dt)
             -- DebugWatch("SeatsTaken", SeatsTaken)
 
             -- Have npc enter seats.
-            if IsPlayerInVehicle() then
+            if GetPlayerVehicle(GoreP) ~= 0 then -- (v2 goreai) the target player (friendlies follow the nearest)
 
                 if IsSeatingEnabled then
                     npc_sitting_process(npc)

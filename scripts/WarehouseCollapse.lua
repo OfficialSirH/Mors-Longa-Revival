@@ -1,4 +1,7 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: warehouse roof may collapse when ANY player enters the trigger.
+function server.init()
 	RCollapse = FindTrigger("rc_trigger")
 	RoofShapes = FindShapes("warehouse_roof")
 
@@ -11,7 +14,7 @@ function init()
 	end
 end
 
-function tick(dt)
+function server.tick(dt)
 	--[[ if InputDown("f") and InputDown("e") and InputDown("l") then
 		Triggered = false
 	end ]]
@@ -20,8 +23,11 @@ function tick(dt)
 	   return
 	end
 	
-	local PlayerPos = GetPlayerTransform().pos
-	if IsPointInTrigger(RCollapse, PlayerPos) and not Triggered then
+	local inside = false -- (v2) any player
+	for p in Players() do
+		if IsPointInTrigger(RCollapse, GetPlayerTransform(p).pos) then inside = true end
+	end
+	if inside and not Triggered then
 		if math.random() <= 0.1 then
 			Collapse()
 		end

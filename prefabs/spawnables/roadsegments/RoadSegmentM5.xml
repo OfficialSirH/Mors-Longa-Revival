@@ -5228,7 +5228,7 @@
 				</rope>
 			</group>
 			<group name="BT wagon" pos="6.1 5.0 -99.85001" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
-				<script pos="0.1 0.1 0.1" file="MOD/script/BT_tank.lua">
+				<script pos="0.1 0.1 0.1" file="MOD/scripts/missing_script_stub.lua">
 					<group name="full wagon" pos="-0.1 0.0 -0.1" prop0="travel=-0.25 0.0">
 						<body tags="train=7 decouplable" pos="0.0 0.2 -0.1">
 							<vox pos="0.1 0.7 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">
@@ -5334,7 +5334,7 @@
 				</rope>
 			</group>
 			<group name="BT wagon" pos="6.1 5.0 -118.45" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
-				<script pos="0.1 0.1 0.0" file="MOD/script/BT_tank.lua">
+				<script pos="0.1 0.1 0.0" file="MOD/scripts/missing_script_stub.lua">
 					<group name="full wagon" pos="-0.1 0.0 0.0" prop0="travel=-0.25 0.0">
 						<body tags="train=8 decouplable" pos="0.0 0.2 -0.1">
 							<vox pos="0.1 0.7 0.0" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">

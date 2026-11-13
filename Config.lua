@@ -6,7 +6,9 @@
 ]]
 
 
-function init()
+-- (v2) Config.lua is a library (many scripts include it). The level-script callbacks below are called from
+-- scripts/ConfigMenu.lua (client) under new names, so they no longer leak into every including script.
+function ConfigMenu_Init()
 
     Init_Settings()
     init_update_log_data()
@@ -125,7 +127,7 @@ function init_config()
 end
 
 
-function tick()
+function ConfigMenu_Tick()
 
     if InputPressed("backspace") then
         ShowDebugMod = not ShowDebugMod
@@ -157,7 +159,7 @@ function tick()
 
 end
 
-function draw()
+function ConfigMenu_Draw()
 
     UiFont("regular.ttf", 20)
 
@@ -698,7 +700,8 @@ function DrawConfigUi_spawn()
                 end
 
                 if AutoButton("Enemy Vehicle", FontSize, 4, 4, true) then
-                    SetBool("level.procedural.spawn_npc_vehicle", true)
+                    -- (v2) at the crosshair (10 m ahead if aiming at nothing), spawned by the server
+                    ConfigVehicleEvent("roadblock", GetCrosshairWorldPos() or VecAdd(GetPlayerTransform().pos, Vec(10, 2, 0)))
                 end
             UiPop()
 
@@ -801,6 +804,50 @@ function DrawConfigUi_spawn()
     end
     margin(0, MarginH)
     margin(0, MarginH)
+    margin(-MarginH, 0)
+
+
+    -- (v2) Debug auto-travel (scripts/ConfigMenu.lua server.configTravel): fly down the road until the distance
+    -- counter grew by the chosen amount, to test long runs quickly.
+    AutoText("Auto Travel")
+    margin(MarginH, 0)
+        margin(0, MarginH)
+        UiPush()
+        for _, km in ipairs({ 1, 5, 10, 20 }) do
+            if AutoButton(km .. " km", FontSize, 4, 4, true) then
+                ConfigTravel(km * 1000)
+                ShowDebugMod = false
+            end
+            margin(110, 0)
+        end
+        UiPop()
+        margin(0, MarginH) -- Stop on its own row (the panel is narrow)
+        if AutoButton("Stop", FontSize, 4, 4, true) then
+            ConfigTravel(0)
+        end
+        margin(0, MarginH)
+        margin(0, MarginH)
+    margin(-MarginH, 0)
+
+
+    -- (v2) Start a timed vehicle event now (Procedural/RandomVehicleEnemy.lua). Ignores the distance and
+    -- helicopter-setting conditions. Vehicles arrive from behind (helicopter from ahead), like the timed events.
+    AutoText("Vehicle Events")
+    margin(MarginH, 0)
+        margin(0, MarginH)
+        for i = 1, #ConfigVehicleEvents, 2 do -- two buttons per row (the panel does not scroll)
+            UiPush()
+            for j = i, math.min(i + 1, #ConfigVehicleEvents) do
+                local ev = ConfigVehicleEvents[j]
+                if AutoButton(ev[2], FontSize, 4, 4, true) then
+                    ConfigVehicleEvent(ev[1])
+                end
+                margin(190, 0)
+            end
+            UiPop()
+            margin(0, MarginH)
+        end
+        margin(0, MarginH)
     margin(-MarginH, 0)
 
 
@@ -930,7 +977,7 @@ function spawn_npc_at_hitpos(xml, tags)
         local tagDataString = table.concat(tags, ",")
         SetString("level.torsoData."..torsoInt, tagDataString) -- Find tags string by torso.
 
-        Spawn(xml, Transform(pos))
+        ConfigSpawn(xml, Transform(pos))
 
         SetInt("level.torsoInt", GetInt("level.torsoInt") + 1)
 
@@ -943,7 +990,7 @@ function Spawn_Loot_Single(path)
     local hit, pos = RaycastFromTransform(GetCameraTransform())
 
     if hit then
-        Spawn(path, Transform(pos), true, true)
+        ConfigSpawn(path, Transform(pos), true)
     end
 
 end
@@ -962,12 +1009,7 @@ function Spawn_Loot(loots_prefabs)
             local z = 1
             for index, prefab in ipairs(loots_prefabs.xmls) do
 
-                local entities = Spawn(prefab, Transform(VecAdd(pos, Vec(x * 3, 0, z * 3)), QuatEuler(0, 0, 0)), true, true)
-                for _, entity in ipairs(entities) do
-                    if GetEntityType(entity) == "body" then
-                        SetBodyDynamic(entity, false)
-                    end
-                end
+                ConfigSpawn(prefab, Transform(VecAdd(pos, Vec(x * 3, 0, z * 3)), QuatEuler(0, 0, 0)), true, true)
 
                 if x >= 20 then
                    x   = 1
@@ -997,13 +1039,7 @@ function Spawn_Loot_All()
 
             for index, prefab in ipairs(prefab_category.xmls) do
 
-                local entities = Spawn(prefab, Transform(VecAdd(pos, Vec(x*2.5, 0, index)), QuatEuler(0, 90, 0)), true, true)
-
-                for _, entity in ipairs(entities) do
-                    if GetEntityType(entity) == "body" then
-                        SetBodyDynamic(entity, false)
-                    end
-                end
+                ConfigSpawn(prefab, Transform(VecAdd(pos, Vec(x*2.5, 0, index)), QuatEuler(0, 90, 0)), true, true)
 
             end
 
@@ -1212,7 +1248,7 @@ Loot_Prefabs = {
             "MOD/Loots/meds-bleed-bandage.xml",
             "MOD/Loots/meds-fracture-splint.xml",
             "MOD/Loots/meds-general-ai2.xml",
-            "MOD/Loots/meds-general-ifak.xml",
+            "MOD/Loots/meds-bleed-general-ifak.xml",
             "MOD/Loots/meds-stim-adrenaline.xml",
             "MOD/Loots/meds-stim-morphine.xml",
             "MOD/Loots/meds-stim-pz1.xml",
@@ -1244,10 +1280,10 @@ function CheejinsShortcuts()
 
     if InputDown("pgup") then
         if InputPressed("f5") then
-            StartLevel("", "MOD/GoreNPCs/map/gore_map.xml", "")
+            MenuStartLevel("", "MOD/GoreNPCs/map/gore_map.xml", "") -- (v2) host only, menu_host.lua
         end
         if InputPressed("f6") then
-            StartLevel("", "MOD/GoreNPCs/map/blankahmap.xml", "")
+            MenuStartLevel("", "MOD/GoreNPCs/map/blankahmap.xml", "")
         end
     end
 
@@ -1272,7 +1308,7 @@ function CheejinsShortcuts()
             UiButtonHoverColor(0,1,0, 1)
             for _, path in ipairs(levels) do
                 if UiTextButton(path) then
-                    StartLevel("", path, "")
+                    MenuStartLevel("", path, "")
                 end
                 UiTranslate(0, btnH)
             end
@@ -1282,12 +1318,55 @@ function CheejinsShortcuts()
 
 end
 
-function handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then
-			init()
+			ConfigMenu_Init()
 		end
 		break
 	end
+end
+
+-- (v2) Debug menu: auto-travel request (0 = stop); the server moves the player (scripts/ConfigMenu.lua).
+function ConfigTravel(meters)
+    if ServerCall and client then
+        ServerCall("server.configTravel", GetLocalPlayer(), meters)
+    end
+end
+
+-- (v2) Debug menu: vehicle events (see the buttons above and server.configVehicleEvent in scripts/ConfigMenu.lua).
+ConfigVehicleEvents = {
+    { "civ",     "Hostile Car" },
+    { "aaf",     "Military" },
+    { "refugee", "Refugees" },
+    { "refugee_van", "Refugee Van" }, -- the refugee event with VehicleC3 (rebuilt 2026-11-08) instead of a random one
+    { "heli",    "Helicopter" },
+}
+function ConfigVehicleEvent(name, pos)
+    if ServerCall and client then
+        ServerCall("server.configVehicleEvent", name, pos or Vec())
+        return
+    end
+    -- v1 includers (no ServerCall): same registry request, read by RandomVehicleEnemy.lua
+    pos = pos or Vec()
+    SetFloat("level.debug.vehicle_event_x", pos[1])
+    SetFloat("level.debug.vehicle_event_y", pos[2])
+    SetFloat("level.debug.vehicle_event_z", pos[3])
+    SetString("level.debug.vehicle_event", name)
+end
+
+-- (v2) Spawn for the debug menu: in a v2 script the client asks the server (server.configSpawn in
+-- scripts/ConfigMenu.lua), so the object is a real, shared one. v1 includers have no ServerCall: spawn directly.
+-- allowStatic: Spawn(..., true, true) as before; makeStatic: make the spawned bodies static (loot grids).
+function ConfigSpawn(xml, transform, allowStatic, makeStatic)
+    if ServerCall and client then
+        ServerCall("server.configSpawn", xml, transform, allowStatic or false, makeStatic or false)
+        return
+    end
+    local entities = allowStatic and Spawn(xml, transform, true, true) or Spawn(xml, transform)
+    if makeStatic then
+        for _, entity in ipairs(entities) do
+            if GetEntityType(entity) == "body" then SetBodyDynamic(entity, false) end
+        end
+    end
 end

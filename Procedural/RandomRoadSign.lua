@@ -1,4 +1,7 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: spawns random road signs.
+function server.init()
 	differentblocks = 6
 	if GetBool('level.RND.roadsign')then
 		DebugWatch('RND roadsign',"DUPLICATED!")
@@ -6,7 +9,7 @@ function init()
 		SetBool('level.RND.roadsign',true)
 	end
 end
-function tick()
+function server.tick()
 	local Locations = FindLocations("RandomRoadSign", true)
 
 	--local multiplier = GetInt("level.difficultycoef")

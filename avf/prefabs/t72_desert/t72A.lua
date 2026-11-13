@@ -1,4 +1,12 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2, 2026-11-13) T-72A, desert (road spawn VehicleM14): main gun on our own mounted-gun script with AVF's shells
+-- ported (scripts/avf; v1 included ../../scripts/avf_custom.lua and needed the external AVF mod), as t72b.lua. The AVF
+-- table below is still the gun's config (mainCannon; coax from the gun's coax tag). Gunner place in the turret; the
+-- driver fires while it is empty.
+MountedGunSound = "MOD/avf/assets/sounds/tankshot0.ogg" -- the config's soundFile (copied from AVF)
+MountedGunDriverFires = true
 
 
 --[[

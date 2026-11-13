@@ -1,13 +1,17 @@
+#version 2
+#include "script/include/player.lua"
 #include "Melee_Functions.lua"
 
 
-function init()
+function server.init()
+	RegisterTool("melee-Crowbar", "Crowbar", "MOD/vox/Weapons/Melee/Crowbar.vox", 3)
+end
+
+function client.init()
 
 	Tool_Id = "melee-Crowbar"
 
-	RegisterTool(Tool_Id, "Crowbar", "MOD/vox/Weapons/Melee/Crowbar.vox", 3)
-	SetBool("game.tool.Crowbar.enabled", true)
-	SetFloat("game.tool.Crowbar.ammo", 101)
+	-- (v2) RegisterTool moved to server.init()
 
 	smashTimer = 0
 	swingback = 0
@@ -38,6 +42,7 @@ function Smash()
 	if smashTimer == 0 then smashTimer = 0.1 end
 end
 
+-- (v2) unused; SetPlayerVelocity is server-only, needs a ServerCall if this is ever used
 function Boost()
 	local pt = GetPlayerTransform()
 	local d = TransformToParentVec(pt, Vec(0, 7.5, -2.5))
@@ -60,12 +65,12 @@ function Spin()
 	if soundtimer == 0 then soundtimer = 0.05 end
 end
 
-function tick(dt)
-	if not GetBool("game.player.canusetool") then
+function client.tick(dt)
+	if not GetPlayerCanUseTool() then
 		cycled = false
 		spinsmash = false
 	end
-	if GetString("game.player.tool") == "melee-Crowbar" and GetPlayerVehicle() == 0 and GetBool("game.player.canusetool") == true then
+	if GetPlayerTool() == "melee-Crowbar" and GetPlayerVehicle() == 0 and GetPlayerCanUseTool() then
 		if not cycled then
 		smashTimer = 0
 		cycled = true
@@ -173,7 +178,7 @@ function tick(dt)
 							Force = ForceOfMelee/#list
 						   	VelocityFromPlayer(body, Force)
 						end
-						MakeHole(holeposes[i], math.random(damage,damage*1.2)/100, math.random(damage,damage*1.2)/100*penetration, math.random(damage,damage*1.2)/100*penetration/2)
+						MeleeNet_MakeHole(holeposes[i], math.random(damage,damage*1.2)/100, math.random(damage,damage*1.2)/100*penetration, math.random(damage,damage*1.2)/100*penetration/2)
 						for q=1,10 do
 						ParticleReset()
 						ParticleType("plain")
@@ -227,5 +232,5 @@ function VelocityFromPlayer(body, force)
     local vel = GetBodyVelocity(body)
     Vel = VecAdd(vel, add)
     --SetBodyVelocity(body, Vel)
-    ApplyBodyImpulse(body, GetPlayerCameraTransform().pos, Vel)
+    MeleeNet_Impulse(body, GetPlayerCameraTransform().pos, Vel)
   end

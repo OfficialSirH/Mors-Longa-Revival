@@ -1,14 +1,10 @@
-function init()
-	hitboxes = FindTriggers('hitbox',true)
-end
-
-function tick()
-	
-end
-
-function draw()
+#version 2
+-- (v2) client: "You are bleeding" warning. The health script runs on each player's client and tags that player's
+-- own hitbox triggers "Bleed", so each player only sees their own warning. Triggers are looked up every draw
+-- because the local hitboxes may be spawned after this script's init.
+function client.draw()
 	local drawWarn = false
-	for i,hitbox in ipairs(hitboxes) do
+	for i,hitbox in ipairs(FindTriggers('hitbox',true)) do
 		if HasTag(hitbox,'Bleed') then
 			drawWarn = true
 			break

@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) client: debug registry viewer (F2 with debug mode on).
 --[[
 #include Automatic.lua
 #include helper.lua
@@ -11,7 +14,8 @@ Keybinds = {
     Toggle = 'f2'
 }
 
-local parent_script = GetIntParam('parent')
+-- (v2) engine calls are not allowed while the file loads: parent param + registry tree moved to client.init
+local parent_script = 0
 local finished_init = false
 local deleted_parent = false
 
@@ -19,22 +23,22 @@ REGISTRY = { key = '', value = '', children = {} }
 WATCHING = {}
 -- WATCHING = { ['game.pausemenu'] = 1, }
 
-for _, k in pairs(Base_Keys) do
-    WATCHING[k] = 0
-    REGISTRY.children[k] = create_node(k)
-end
-
 Scroll = 0
 Mode = 0
 
 
-function init()
+function client.init()
+    parent_script = GetIntParam('parent')
+    for _, k in pairs(Base_Keys) do
+        WATCHING[k] = 0
+        REGISTRY.children[k] = create_node(k)
+    end
     finished_init = true
 end
 
-function tick(dt)
+function client.tick(dt)
     if finished_init and not deleted_parent then
-        Delete(parent_script)
+        if parent_script ~= 0 then Delete(parent_script) end
         deleted_parent = true
     end
 
@@ -44,7 +48,7 @@ function tick(dt)
     end
 end
 
-function draw(dt)
+function client.draw(dt)
 
     if GetBool("savegame.mod.config.db") then
         if InputPressed(Keybinds.Toggle) then

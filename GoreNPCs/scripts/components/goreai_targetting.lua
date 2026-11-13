@@ -93,8 +93,8 @@ function npc_find_random_enemy(npc, include_player)
     -- Randomly choose player as target if close to npc.
     if include_player and not npc.isFriendly then
 
-        local isPlayerBesideEnemy = VecDist(GetPlayerTransform().pos, npc.torsoPos) < 10
-        local isPlayerCloseToEnemy = VecDist(GetPlayerTransform().pos, npc.torsoPos) < closestEnemyTorso.minDist*2
+        local isPlayerBesideEnemy = VecDist(GetPlayerTransform(GoreP).pos, npc.torsoPos) < 10
+        local isPlayerCloseToEnemy = VecDist(GetPlayerTransform(GoreP).pos, npc.torsoPos) < closestEnemyTorso.minDist*2
 
         if isPlayerBesideEnemy then
             npc.ai.targeting.target = create_teams_target(TargetTypes.player)
@@ -181,19 +181,25 @@ end
 --- Used to target the player only.
 function npc_manage_target_player(npc)
 
-    npc.ai.targeting.target.isAlive = GetPlayerHealth() > 0
+    npc.ai.targeting.target.isAlive = GetPlayerHealth(GoreP) > 0 -- (v2 goreai) GoreP = this npc's target player
     npc.ai.aimPos = PlayerPos
 
     if npc.Gun then
         if npc.ai.thinking.seen_time > 0.5 then
             -- if GetPlayerVehicle() == 0 then
-            npc.ai.shootPos = GetPlayerTrackingPos(PlayerPos, GetBodyTransform(npc.Gun.body).pos, npc.velocity)
+            npc.ai.shootPos = GoreAI_PlayerTrackingPos(PlayerPos, GetBodyTransform(npc.Gun.body).pos, npc.velocity)
             -- else
                 -- npc.ai.shootPos = GetVehicleTrackingPos(GetPlayerVehicle(), GetBodyTransform(npc.Gun.body).pos, npc.velocity)
             -- end
         end
     end
 
+end
+
+--- (v2) TDSU GetPlayerTrackingPos with the context player's velocity (it used the host's).
+function GoreAI_PlayerTrackingPos(playerPos, source_pos, vel_len)
+    local scale = VecDist(source_pos, playerPos) / vel_len
+    return VecAdd(playerPos, VecScale(GetPlayerVelocity(GoreP), scale))
 end
 
 --- Used for targetting other npc torsos.

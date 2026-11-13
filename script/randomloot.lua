@@ -1,8 +1,11 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: crate loot types; any player interacting with a crate removes its prompt.
 
 
 
 
-function init()
+function server.init()
 Med1x1 = {
 "meds-bleed-bandage_Bandage_1_1",
 "meds-bleed-general-ifak_IFAK_300_300",
@@ -58,7 +61,7 @@ AmountMed1x3 = #Med1x3
 
 
 end
-function tick(dt)
+function server.tick(dt)
 --	DebugPrint(#Med1x1)
 	MaybeCrate = FindBodies("MaybeCrate", true)
 		for i=1,#MaybeCrate do
@@ -93,9 +96,11 @@ function tick(dt)
 				end
 			end
 		end
-		if GetPlayerInteractBody() == Crates[i] and InputPressed("interact") then
+		for p in Players() do
+			if GetPlayerInteractBody(p) == Crates[i] and InputPressed("interact", p) then
 				RemoveTag(Crates[i], "interact")
 			end
+		end
 			
 		if not HasTag(Crates[i], "IsDone") then
 			if not HasTag(Crates[i], "med") and not HasTag(Crates[i], "weapon") and not HasTag(Crates[i], "food") and not HasTag(Crates[i], "general") then

@@ -1,3 +1,5 @@
+#version 2
+#include "script/include/player.lua"
 --[[
 #include "../../scripts/TDSU/tdsu.lua"
 #include "../../Automatic.lua"
@@ -13,7 +15,35 @@ SpawnMenuAPI = {
     }
 }
 
-function init()
+-- (v2) client: the menu UI. The server spawns the items (server.spawnMenuSpawn) and keeps each player's
+-- spawn history for the undo key (server.spawnMenuUndo).
+
+function server.init()
+    SpawnedByPlayer = {}
+end
+
+function server.spawnMenuSpawn(p, xml, pos, count)
+    local all_entities = {}
+    for i = 1, count do
+        table.insert(all_entities, Spawn(xml, Transform(pos)))
+    end
+    SpawnedByPlayer[p] = SpawnedByPlayer[p] or {}
+    table.insert(SpawnedByPlayer[p], all_entities)
+end
+
+function server.spawnMenuUndo(p)
+    local list = SpawnedByPlayer[p]
+    if list and #list >= 1 then
+        for index_item, item in ipairs(list[#list]) do
+            for index, entity in ipairs(item) do
+                if IsHandleValid(entity) then Delete(entity) end
+            end
+        end
+        list[#list] = nil
+    end
+end
+
+function client.init()
 
 	Init_Settings()
     init_spawnMenu()
@@ -84,6 +114,7 @@ function init_spawnMenu()
             { "civWeapon",       "Civilian"},
             { "milWeapon",       "Military"},
             { "UMWeapon",        "UM"},
+            { "debugTest",       "Testing"}, -- (v2) guns/mags/ammo missing from the loot tables
         },
 
         Medical = {
@@ -96,18 +127,14 @@ function init_spawnMenu()
 end
 
 
-function tick()
+function client.tick()
 
     pressed_open = function() return KeybindPressed(Settings.keybinds.other.spawn_menu_) or GetBool(SpawnMenuAPI.bool.open) end --- Checks if shortcut pressed.
     pressed_undo = function() return KeybindPressed(Settings.keybinds.other.spawn_menu_undo) end --- Checks if shortcut pressed.
 
     -- Undo last set of spawned entities.
     if pressed_undo() and #Spawned_Items >= 1 then
-        for index_item, item in ipairs(Spawned_Items[#Spawned_Items]) do
-            for index, entity in ipairs(item) do
-                Delete(entity)
-            end
-        end
+        ServerCall("server.spawnMenuUndo", GetLocalPlayer())
         Spawned_Items[#Spawned_Items] = nil
         beep()
     end
@@ -118,7 +145,7 @@ end
 
 
 --todo Save last amount spawned for each loot in savegame so player does not have to change it back each time.
-function draw()
+function client.draw()
     UiPush()
 
         local hit, pos = nil,nil
@@ -334,15 +361,11 @@ function draw()
                             -- Spawn items based on count
                             if pressed then
                                 -- beep()
-                                local all_entities = {}
-                                for i = 1, Loot_Count do
-                                    if not hit then
-                                        pos = TransformToParentPoint(GetCameraTransform(), Vec(0,0,-10))
-                                    end
-                                    local entities = Spawn(xml, Transform(pos))
-                                    table.insert(all_entities, entities)
+                                if not hit then
+                                    pos = TransformToParentPoint(GetCameraTransform(), Vec(0,0,-10))
                                 end
-                                table.insert(Spawned_Items, all_entities)
+                                ServerCall("server.spawnMenuSpawn", GetLocalPlayer(), xml, pos, Loot_Count)
+                                table.insert(Spawned_Items, true) -- (v2) entities live on the server; this only counts batches
 
                                 if CloseAfterSpawning then
                                     shouldClose = true
@@ -764,7 +787,7 @@ function reset_spawnmenu_api()
 end
 
 
-function handleCommand(cmd) HandleQuickload(cmd) end
+function client.handleCommand(cmd) HandleQuickload(cmd) end
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 		if word == "quickload" then

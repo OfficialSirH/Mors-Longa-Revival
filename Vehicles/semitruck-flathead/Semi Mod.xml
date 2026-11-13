@@ -119,6 +119,23 @@
 							<vox pos="0.2 -0.5" rot="0 180" file="MOD/Vehicles/semitruck-flathead/semitruck-flathead.vox" object="wheel_f"/>
 						</wheel>
 					</body>
+					<rig name="driver" tags="driver sort=0" pos="-0.75 1.95 -1.25">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.4 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.4 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.35 -0.5" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.35 -0.5" rot="0.0 90 0.0"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+						<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.35 -0.5" rot="0.0 -180 0.0"/>
+					</rig>
+					<rig name="passenger" tags="sort=1" pos="0.75 1.95 -1.25">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.4 -0.35" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.4 -0.35" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+					</rig>
 				</vehicle>
 			</script>
 		</group>

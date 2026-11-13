@@ -8,7 +8,8 @@
 --#endregion
 --#region Shortcuts
 
-AutoFlatSprite = LoadSprite('ui/menu/white_32.png')
+-- (v2 port) LoadSprite may not be called while the file loads; loaded on first use in AutoFlatBackground
+AutoFlatSprite = nil
 AutoPalette = {
     vfchill = {
 		background_dark =  { 0.28627450980392, 0.25490196078431,  0.38039215686275 },
@@ -3000,6 +3001,7 @@ function AutoFlatBackground(r, g, b, a, sprite, distance)
 	g = AutoDefault(g, 0)
 	b = AutoDefault(b, 0)
 	a = AutoDefault(a, 1)
+	AutoFlatSprite = AutoFlatSprite or LoadSprite('ui/menu/white_32.png')
 	sprite = AutoDefault(sprite, AutoFlatSprite)
 	
 	local cam = GetCameraTransform()

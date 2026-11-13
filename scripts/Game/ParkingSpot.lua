@@ -1,3 +1,11 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) Garage / parking spot (shop segment). ONE shared garage, saved in the host's savegame
+-- (savegame.mod.parkingSpot.*), run by the SERVER: saved vehicles are respawned at each new shop, any player's vehicle
+-- parked on the spot is saved, fuel is tracked, the spot disables itself when every player is 200 m past it.
+-- The server publishes what the clients draw in shared.garage (GaragePublish). CLIENT: icons over vehicles, parking
+-- sprite, booth hint, garage UI + booth camera; buying a spot pays from the buyer's own money (savegame, per
+-- player) and asks the server (server.garageBuySpot), which refunds if the spot count changed meanwhile.
 --[[
 #include "../TDSU/tdsu.lua"
 #include "../../Settings.lua"
@@ -27,7 +35,7 @@ Slot_Price_List = {
 
 
 
-function init()
+function server.init()
 
 	Init_Settings()
 
@@ -38,7 +46,6 @@ function init()
 	VehicleFindTimer    = TimerCreateSeconds(1.1, true)
 	SafezoneLoadCount   = GetInt("level.safezoneLoadCount")
 	ParkingSpotTrigger  = FindTrigger("parkingSpot", false)
-	ParkingSpotSprite   = LoadSprite(Icons_Parking.parking)
 	ParkingSpotBooth  	= FindBody("garageBooth", false)
 
 	GarageShopUiAlpha = 0
@@ -62,8 +69,8 @@ function init()
 	MaxSpotsReached				= false
 	IconsDrawDist = 50
 
-	PV 					  = GetPlayerVehicle() --- Curent player vehicle.
-	LV                    = 0 --- Last vehicle the player drove.
+	LVs                   = {} --- (v2) [player] = last vehicle that player drove (v1: PV / LV of the one player)
+	Hints                 = {} --- (v2) [player] = { lv = vehicle, hint = "buy" | "max" } for the garage hints
 
 
 	TrimSavedVehiclesList(SavedVehicles)
@@ -71,14 +78,19 @@ function init()
 
 end
 
-function tick()
+function server.tick()
+	if Stopped then return end
 	-- Conditionally disable script
 	if STOP_distTooFar or STOP_newSafezone or STOP_triggerDoesNotExist or STOP_map_moved then
-		SetTag(ParkingSpotBooth, "interact", "Disabled for: "..(STOP_distTooFar and "Player Too far ahead, " or "")..(STOP_newSafezone and "New Safezone Spawned, " or "")..(STOP_triggerDoesNotExist and "Parking Trigger 404, " or "")..(STOP_map_moved and "Segment shifted, " or ""))
-		queueRemoval()
+		local reason = "Disabled for: "..(STOP_distTooFar and "Player Too far ahead, " or "")..(STOP_newSafezone and "New Safezone Spawned, " or "")..(STOP_triggerDoesNotExist and "Parking Trigger 404, " or "")..(STOP_map_moved and "Segment shifted, " or "")
+		SetTag(ParkingSpotBooth, "interact", reason)
+		Stopped = true -- (v2) v1 queueRemoval() (pause-menu handle trick) does not work on the server: just stop
+		GaragePublish(reason)
 		return
 	end
-	STOP_distTooFar         	= GetPlayerTransform().pos[1] - GetTriggerTransform(ParkingSpotTrigger).pos[1] > 200
+	local rearmostX = math.huge -- (v2) disabled when EVERY player is 200 m past it
+	for p in Players() do rearmostX = math.min(rearmostX, GetPlayerTransform(p).pos[1]) end
+	STOP_distTooFar         	= rearmostX ~= math.huge and rearmostX - GetTriggerTransform(ParkingSpotTrigger).pos[1] > 200
 	STOP_newSafezone        	= SafezoneLoadCount < GetInt("level.safezoneLoadCount")
 	STOP_triggerDoesNotExist	= not IsHandleValid(ParkingSpotTrigger)
 	--STOP_map_moved          	= GetBool("level.map_moved")
@@ -86,11 +98,6 @@ function tick()
 	if GetInt(Reg_MaxSpots) <= 0 then
 		SetInt(Reg_MaxSpots, 1) -- Ensure at least one spot exists.
 	end
-
-	if ShowGarageShopUi and InputPressed("interact") then
-		ShowGarageShopUi = false
-	end
-
 
 	SavedVehicles = GetSavedVehiclesTable()
 
@@ -115,17 +122,12 @@ function tick()
 	end
 	ChangesMade = false
 
-	if InputPressed("rmb") or KeybindPressed(Settings.keybinds.inventory.toggle_inv) then
-		ShowGarageShopUi = false
-	end
+	GaragePublish("")
 
 end
 
-function draw(dt)
-
-	if STOP_distTooFar or STOP_newSafezone or STOP_triggerDoesNotExist or STOP_map_moved then
-		return
-	end
+-- (v2) v1 draw(), now client only: called from client.draw with the v1 globals filled from shared.garage.
+function GarageDraw(dt)
 
 	-- Show incompatible vehicle cross icon and error message.
 	UiPush()
@@ -277,11 +279,11 @@ function tick_read_scene_info()
 	TimerRunTime(VehicleFindTimer, true)
 
 
-	PV = GetPlayerVehicle()
-	LV = ternary(IsPlayerInVehicle(), PV, LV)
-
-	-- Update last vehicle driven in parking spot.
-	LastPlayerVehicleInSpot = ternary(IsPointInTrigger(ParkingSpotTrigger, GetVehicleCenterOfMassPos(LV)) and IsCompatibleVehicle(LV), LV, LastPlayerVehicleInSpot)
+	-- (v2) last vehicle driven, per player (v1: PV / LV; LastPlayerVehicleInSpot was never read)
+	for p in Players() do
+		local pv = GetPlayerVehicle(p)
+		if pv ~= 0 then LVs[p] = pv end
+	end
 
 
 	-- Maintain list of vehicles in trigger.
@@ -317,22 +319,22 @@ end
 -- Determine which vehicles are stored, ignored and invalid.
 function tick_process_parking_spot()
 
-	-- Update last vehicle driven in parking spot.
-	if IsPointInTrigger(ParkingSpotTrigger, GetVehicleCenterOfMassPos(LV)) and IsCompatibleVehicle(LV) and not IsSavedVehicle(LV) then
+	-- Update last vehicle driven in parking spot. (v2) per player; the booth outline and messages are drawn by that
+	-- player's client from shared.garage.hint
+	Hints = {}
+	for p, LV in pairs(LVs) do
+		if IsHandleValid(LV) and IsPointInTrigger(ParkingSpotTrigger, GetVehicleCenterOfMassPos(LV)) and IsCompatibleVehicle(LV) and not IsSavedVehicle(LV) then
 
-		-- Check spot limits.
-		PlayerShouldBuyMoreSpots = false
-		MaxSpotsReached = false
-		if SavedVehicles_SpotsUnlocked < SavedVehicles_SpotsMax then
-			PlayerShouldBuyMoreSpots = true
-			DrawBodyOutline(ParkingSpotBooth, 1,1,1, 1)
-			DrawBodyHighlight(ParkingSpotBooth, Oscillate())
-		elseif SavedVehicles_SpotsUnlocked == SavedVehicles_SpotsMax then
-			MaxSpotsReached = true
-		else
-			InsertNewSavedVehicle(LV) -- Save valid vehicles.
+			-- Check spot limits.
+			if SavedVehicles_SpotsUnlocked < SavedVehicles_SpotsMax then
+				Hints[p] = { lv = LV, hint = "buy" }
+			elseif SavedVehicles_SpotsUnlocked == SavedVehicles_SpotsMax then
+				Hints[p] = { lv = LV, hint = "max" }
+			else
+				InsertNewSavedVehicle(LV) -- Save valid vehicles.
+			end
+
 		end
-
 	end
 
 	-- Fill any unsaved vehicles if they can be saved.
@@ -351,8 +353,8 @@ function tick_process_parking_spot()
 	-- Saved vehicle has left the trigger.
 	for index, savedVehicle in ipairs(SavedVehicles) do
 
-		if PV == savedVehicle.vehicle then -- Update fuel value in real-time
-			savedVehicle.fuel = GetTagValue(PV, "fuelLevel")
+		if AnyPlayerInVehicle(savedVehicle.vehicle) then -- Update fuel value in real-time (v2: any player driving it)
+			savedVehicle.fuel = GetTagValue(savedVehicle.vehicle, "fuelLevel") -- (v2) was PV (the one player's vehicle)
 			ChangesMade = true
 		end
 
@@ -659,8 +661,9 @@ function draw_ui_garage(w,h)
 
 				if UiTextButton("Purchase slot: $"..sfnCommas(tostring(cost)), (w-20)*0.5-20, 50)then
 					if canBuy then
-						SetFloat("savegame.mod.player.money", playerMoney - cost)
-						SetInt(Reg_MaxSpots, SavedVehicles_SpotsUnlocked+1)
+						-- (v2) pay from this player's money (v1 wrote it with SetFloat), the server adds the spot
+						SetInt("savegame.mod.player.money", playerMoney - cost)
+						ServerCall("server.garageBuySpot", GetLocalPlayer(), SavedVehicles_SpotsUnlocked, cost)
 						UiSound("MOD/snd/UI/UI_Shop_Cash.ogg")
 					else
 						UiSound("error.ogg")
@@ -712,8 +715,7 @@ end
 
 function garage_debug()
 
-	DebugWatch("PV", PV)
-	DebugWatch("LV", LV)
+	DebugWatch("LVs", util.serialize(LVs)) -- (v2)
 	DebugWatch("SavedVehicles_MaxCount", SavedVehicles_SpotsUnlocked)
 	DebugWatch("#SavedVehicles", #SavedVehicles)
 	DebugWatch("ParkedVehicleHistory", table.concat(ParkedVehicleHistory, ", "))
@@ -765,7 +767,7 @@ function SmoothTransition(f)
 end
 
 
-function handleCommand(cmd) HandleQuickload(cmd) end
+-- (v2) no handleCommand/quickload in v2
 function HandleQuickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
 if word == "quickload" then
@@ -773,4 +775,106 @@ if word == "quickload" then
 		end
 		break
 	end
+end
+
+
+------------------------------------------------------------------
+-- (v2) Server <-> client
+------------------------------------------------------------------
+
+function AnyPlayerInVehicle(v)
+	for p in Players() do
+		if GetPlayerVehicle(p) == v then return true end
+	end
+	return false
+end
+
+--- Server: publish what the clients draw (only when it changed).
+function GaragePublish(stopReason)
+	local saved = {}
+	for i, sv in ipairs(SavedVehicles) do saved[i] = { vehicle = sv.vehicle } end
+	local hint = {}
+	for p, h in pairs(Hints) do hint[tostring(p)] = h end
+	local g = {
+		stop = stopReason or "",
+		unlocked = SavedVehicles_SpotsUnlocked,
+		max = SavedVehicles_SpotsMax,
+		saved = saved,
+		unsaved = UnsavedVehicles,
+		incompatible = IncompatibleVehicles,
+		hint = hint,
+		cam = ParkingCameraLocalTransform,
+	}
+	local sig = util.serialize(g)
+	if sig ~= GaragePublished then
+		GaragePublished = sig
+		shared.garage = g
+	end
+end
+
+--- Server: a client paid `paid` for the next spot; `expected` = the spot count it saw.
+function server.garageBuySpot(p, expected, paid)
+	local unlocked = GetInt(Reg_MaxSpots)
+	if not Stopped and unlocked == expected and unlocked < SavedVehicles_SpotsMax then
+		SetInt(Reg_MaxSpots, unlocked + 1)
+	else
+		ClientCall(p, "client.garageRefund", p, paid)
+	end
+end
+
+function client.garageRefund(target, amount)
+	local me = GetLocalPlayer()
+	if target ~= me and not (target == 0 and IsPlayerHost(me)) then return end
+	SetInt("savegame.mod.player.money", GetInt("savegame.mod.player.money") + amount)
+end
+
+function client.init()
+	Init_Settings()
+	ParkingSpotTrigger  = FindTrigger("parkingSpot", false)
+	ParkingSpotSprite   = LoadSprite(Icons_Parking.parking)
+	ParkingSpotBooth    = FindBody("garageBooth", false)
+	GarageShopUiAlpha   = 0
+	ShowGarageShopUi    = false
+	SavedVehicles, UnsavedVehicles, IncompatibleVehicles = {}, {}, {}
+	SavedVehicles_SpotsUnlocked, SavedVehicles_SpotsMax = 1, #Slot_Price_List + 1
+	LV, PV = 0, 0
+	IconsDrawDist = 50
+end
+
+function client.tick(dt)
+	-- v1 tick's UI handling (runs before draw, as in v1)
+	if ShowGarageShopUi and InputPressed("interact") then
+		ShowGarageShopUi = false
+	end
+	if InputPressed("rmb") or KeybindPressed(Settings.keybinds.inventory.toggle_inv) then
+		ShowGarageShopUi = false
+	end
+end
+
+function client.draw(dt)
+	local g = shared.garage
+	if not g or g.stop ~= "" then
+		if GarageShopUiAlpha > 0 or ShowGarageShopUi then
+			ShowGarageShopUi, GarageShopUiAlpha = false, 0
+			SetBool("level.parkingSpot.garageUiShowing", false)
+		end
+		return
+	end
+	-- the v1 globals GarageDraw and its helpers use
+	SavedVehicles                = g.saved or {}
+	UnsavedVehicles              = g.unsaved or {}
+	IncompatibleVehicles         = g.incompatible or {}
+	SavedVehicles_SpotsUnlocked  = g.unlocked or 1
+	SavedVehicles_SpotsMax       = g.max or (#Slot_Price_List + 1)
+	ParkingCameraLocalTransform  = g.cam or Transform()
+	local h = (g.hint or {})[tostring(GetLocalPlayer())]
+	LV                           = h and h.lv or 0
+	PlayerShouldBuyMoreSpots     = h ~= nil and h.hint == "buy"
+	MaxSpotsReached              = h ~= nil and h.hint == "max"
+	PV                           = GetPlayerVehicle()
+	if PlayerShouldBuyMoreSpots then -- v1 drew this in tick
+		DrawBodyOutline(ParkingSpotBooth, 1,1,1, 1)
+		DrawBodyHighlight(ParkingSpotBooth, Oscillate())
+	end
+	GarageDraw(dt)
 end

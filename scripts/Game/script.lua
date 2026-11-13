@@ -1,5 +1,7 @@
+#version 2
+#include "script/include/player.lua"
 --[[
-#include "ToolManager.lua"
+(v2) ToolManager.lua is no longer included: nothing in it was used here, and it runs as its own level script.
 #include "../../scripts/TDSU/tdsu.lua"
 #include "../../Settings.lua"
 #include "../../Config.lua"
@@ -12,7 +14,8 @@ local maxAngle = 20
 local maxDist = 8
 
 
-function init()
+-- (v2) client: loot outlines, bounds debug draw, "Debug Mode" pause button
+function client.init()
 
     ShowDebugMod = false -- toggle ui screen drawing.
 
@@ -23,7 +26,7 @@ function init()
 
 end
 
-function tick()
+function client.tick()
 
     if GetBool("savegame.mod.config.game.draw_bounds") then
         local min = Vec(-200, 0, -100)

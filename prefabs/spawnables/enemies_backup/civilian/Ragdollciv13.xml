@@ -1,7 +1,7 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/enemies/civilian/Ragdollciv13.xml" pos="23.4 2.4 0.0" rot="0.0 0.0 0.0">
 		<script file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
-			<!-- <script pos="0.1 0.0 0.2" file="MOD/main/GoreRagdolls2/scripts/gorefunctions.lua"> -->
+			<!-- <script pos="0.1 0.0 0.2" file="MOD/scripts/missing_script_stub.lua"> -->
 				<body name="foot_R" tags="RRLEG bodypart" pos="-0.3 0.5 -0.1" dynamic="true">
 					<vox tags="RRLEG nocull" pos="0.2 -0.4 0.1" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox" object="foot_R">
 						<joint tags="knee" pos="0.0 0.5 -0.1" rot="0 90" type="hinge" rotspring="0" limits="-90 0"/>

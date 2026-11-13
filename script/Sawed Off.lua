@@ -1,12 +1,26 @@
+#version 2
+#include "script/include/player.lua"
 #include "gunfunctions.lua"
 #include "gunperks.lua"
 #include "gunstats.lua"
+#include "gunnet.lua"
 
 
 
-function init()
+function server.init()
 	RegisterTool("gun-sawedoff", "Qasira", "MOD/vox/sawedoff.vox", 2)
-	SetBool("game.tool.gun-sawedoff.enabled", true)
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
+	GunNet_ServerInit()
+end
+
+function server.tick(dt)
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
+	GunNet_ServerTick(dt)
+end
+
+function client.init()
+	-- (v2) RegisterTool moved to server.init()
+	-- (v2) tool enabled per player in server.init()/server.tick()
 	GunName = "SawedOff"
 	Cartridge = "12ga"	
 	WeaponInit()
@@ -174,17 +188,17 @@ function init()
 	pdamage = 2
 	dmgsnd = LoadSound("MOD/snd/dmge.ogg")
 	DrawHitmark = 0
-	parts = FindTriggers("hitbox",true)
+	parts = FindTriggers("localhitbox",true)
 	magdrillFactor = 1
 	if GetBool("inventory.magdrills") then
 		magdrillFactor = 1.5
 	end
 end
 
-function Shoot(Type)
+function FireRound(Type)
 
 	local perk = "12ga"
-	local perktable=gunperks[perk][Type]
+	local perktable=GunPerkFor(perk, Type) -- (v2 fix) missing bullet type -> calibre default
 	local damage = perktable["damage"]
 	local pdamage = perktable["pdamage"]
 	local explosive = perktable["explosive"]
@@ -257,6 +271,9 @@ function Shoot(Type)
 
 	--loadedShell.predictedBulletVelocity = VecAdd(loadedShell.predictedBulletVelocity, Vec((math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2))
 	loadedShell.predictedBulletVelocity = VecAdd(loadedShell.predictedBulletVelocity, Vec((math.random()-0.5)*pelletSpread*barrelFactorspread,(math.random()-0.5)*pelletSpread*barrelFactorspread,(math.random()-0.5)*pelletSpread*barrelFactorspread))
+	loadedShell.factor = barrelFactordamage or 1
+	loadedShell.active = false -- simulated by gunnet.lua (client visuals + server world)
+	GunNet_Fire(loadedShell, muzzle == "muzzle1" and "MOD/snd/aksuppressed.ogg" or "MOD/snd/Weapons/mp43/mp43_0.ogg", 0.7)
 	end
 
 	SpawnParticle("smoke", TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(barrelx, -0.4, 0.2)), VecAdd(VecScale(dir, 0.02), GetPlayerVelocity()), 0.3, 0.3)
@@ -325,6 +342,8 @@ function ShootGrenade()
 	loadedShell.pos = gunpos
 	loadedShell.predictedBulletVelocity = VecScale(dir, 0.35*(300/distance))
 	grenadeHandler.shellNum = (grenadeHandler.shellNum%#grenadeHandler.shells) + 1
+	loadedShell.active = false -- simulated by gunnet.lua
+	GunNet_FireGrenade(loadedShell)
 
 	SpawnParticle("fire", gunpos, Vec(0, 1.0+math.random(1,10)*0.1, 0), 0.3, 0.1)
 	PlaySound(grenadelaunchersound, GetPlayerTransform().pos, 0.75, false)
@@ -374,16 +393,14 @@ function SpentCasing()
 	local casingpos = TransformToParentPoint(gt, Vec(0.225, -0.55, -1.15))
 	local fwdpos = TransformToParentPoint(gt, Vec(0.225+math.random()*4, 0.5+math.random()*4, -0.65+math.random()*4))
 	local direction = VecAdd(GetPlayerVelocity(), VecSub(fwdpos, casingpos))
-	casing = Spawn("MOD/vox/shotguncasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))))
-	SetBodyVelocity(casing[1], direction)
+	GunNet_SpawnCasing("MOD/vox/shotguncasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))), direction)
 	PlaySound(casingsound,GetPlayerTransform().pos,0.6)
 	end
 
 	local casingpos = TransformToParentPoint(gt, Vec(0.325, -0.55, -1.15))
 	local fwdpos = TransformToParentPoint(gt, Vec(0.325+math.random()*4, 0.5+math.random()*4, -0.65+math.random()*4))
 	local direction = VecAdd(GetPlayerVelocity(), VecSub(fwdpos, casingpos))
-	casing = Spawn("MOD/vox/shotguncasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))))
-	SetBodyVelocity(casing[1], direction)
+	GunNet_SpawnCasing("MOD/vox/shotguncasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))), direction)
 	PlaySound(casingsound,GetPlayerTransform().pos,0.6)
 end
 
@@ -523,7 +540,8 @@ function Rangefinder(active)
 		end
 end
 
-function tick(dt)
+function client.tick(dt)
+	GunNet_ClientTick(dt)
 	WeaponBackgroundTick(dt)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
@@ -544,30 +562,30 @@ function tick(dt)
 		end
 	end
 
-	if GetBool("game.tool.gun-mp43.enabled") then
+	if IsToolEnabled("gun-sawedoff") and GunInInventory("gun-sawedoff") then
 
 	if inventoryenabled and reloading then
 		SetBool("inventory.reloading", true)
-		SetString("game.player.tool","gun-sawedoff")
+		GunNet_SetTool("gun-sawedoff")
 	end
 
 	end
 
-	if GetString("game.player.tool") == "gun-sawedoff" and GetPlayerVehicle() == 0 then
+	if GetPlayerTool() == "gun-sawedoff" and GetPlayerVehicle() == 0 then
 		SetBool("hud.aimdot", false)
 		WeaponTick(dt)
 		if InputPressed("usetool") and not reloading and selectfire == 2 and not selectattachments and selectfireTimer == 0 and GetPlayerGrabShape() == 0 and inspectTimer <= 0 then
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 then
-				Shoot(bullettable[#bullettable])
-				Shoot(bullettable[#bullettable])
+				FireRound(bullettable[#bullettable])
+				FireRound(bullettable[#bullettable])
 			end
 		elseif InputPressed("usetool") and not reloading and selectfire == 1 and not selectattachments and selectfireTimer == 0 and GetPlayerGrabShape() == 0 and inspectTimer <= 0 then
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 and shootTimer <= 0 then
-				Shoot(bullettable[#bullettable])
+				FireRound(bullettable[#bullettable])
 				if ammo > 0 then
 					shootTimer = shotDelay
 				end
@@ -575,13 +593,13 @@ function tick(dt)
 		end
 		if GetBool("guns.accidental.shoot") and selectfire == 2 then
 			--DebugPrint("Accidental Shoot")
-			Shoot(bullettable[#bullettable])
-			Shoot(bullettable[#bullettable])
+			FireRound(bullettable[#bullettable])
+			FireRound(bullettable[#bullettable])
 			SetBool("guns.accidental.shoot", false)
 		end
 		if GetBool("guns.accidental.shoot") and selectfire == 1 then
 			--DebugPrint("Accidental Shoot")
-			Shoot(bullettable[#bullettable])
+			FireRound(bullettable[#bullettable])
 			SetBool("guns.accidental.shoot", false)
 		end
 
@@ -649,7 +667,7 @@ function tick(dt)
 				PlaySound(inspectsound)
 				selectattachmentsTimer = 0.5
 			end
-			UiMakeInteractive()
+			gunWantsInteractive = true
 			selectattachments = true
 			ironsight = false
 			inspectTimer = 0
@@ -878,7 +896,7 @@ function tick(dt)
 
 			local injuredarms = false
 			for i = 1, 6 do
-				if GetTagValue(parts[i], "hitbox") == "LARM" or GetTagValue(parts[i], "hitbox") == "RARM" then
+				if GetTagValue(parts[i], "localhitbox") == "LARM" or GetTagValue(parts[i], "localhitbox") == "RARM" then
 					if tonumber(GetTagValue(parts[i], "CurrentHealth")) == 0 or HasTag(parts[i], "Fracture") then
 						injuredarms = true
 					end
@@ -934,9 +952,9 @@ function tick(dt)
 					stockPos = TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(0, -0.5, -0.65))
 					if meleeTimer > 0.55 then
 						if GetShapeMaterialAtPosition(shape, stockPos) == "glass" and math.random() > 0.8 then
-							MakeHole(stockPos, 1)
+							GunNet_MakeHole(stockPos, 1)
 						else
-							MakeHole(stockPos, 0.3)
+							GunNet_MakeHole(stockPos, 0.3)
 						end
 					end
 				else
@@ -1613,8 +1631,11 @@ function tick(dt)
 	end
 end
 
-function draw()
-	if GetString("game.player.tool") == "gun-sawedoff" and GetPlayerVehicle() == 0 then
+function client.draw()
+	if not GunInInventory("gun-sawedoff") then return end -- (v2, Phase 2) see gunfunctions.lua
+	if gunWantsInteractive then UiMakeInteractive() gunWantsInteractive = false end
+	GunNet_DebugParts()
+	if GetPlayerTool() == "gun-sawedoff" and GetPlayerVehicle() == 0 then
 
     UiPush()
       UiAlign("center middle")
@@ -1682,7 +1703,7 @@ function draw()
 				elseif grenadelauncher then
 					UiText(grenadelauncherammo.."/1 - Grenade")
 				else
-					UiText(ammo.."/"..magsize*math.max(0, mags-1).." - "..selectfireText.." - "..bullettable[#bullettable])
+					UiText(ammo.."/"..magsize*math.max(0, mags-1).." - "..selectfireText..((bullettable[#bullettable] or "") ~= "" and " - "..bullettable[#bullettable] or ""))
 				end
 			UiPop()
 		else
@@ -1702,14 +1723,14 @@ function draw()
 			UiPop()
 		end
 	end
-	if GetString("game.player.tool") == "gun-sawedoff" and grenadelauncher and not selectattachments then
+	if GetPlayerTool() == "gun-sawedoff" and grenadelauncher and not selectattachments then
 		UiPush()
 			UiTranslate(UiCenter(), UiMiddle())
 			UiAlign("center middle")
 			UiImage("ui/hud/crosshair-launcher.png")
 		UiPop()
 	end
-	if GetString("game.player.tool") == "gun-sawedoff" and sideattachment and side == "side3" then
+	if GetPlayerTool() == "gun-sawedoff" and sideattachment and side == "side3" then
 		UiPush()
 			local x,y,dist = UiWorldToPixel(sideattachpoint)
 			UiTranslate(x, y)

@@ -1,12 +1,24 @@
+#version 2
+#include "script/include/player.lua"
 #include "gunfunctions.lua"
 #include "gunperks.lua"
 #include "gunstats.lua"
+#include "gunnet.lua"
 
 
 
-function init()
-	RegisterTool("gun-ak74", "Simonov-545", "MOD/vox/base-weapon.vox", 1)
-	SetBool("game.tool.gun-ak74.enabled", true)
+function server.init()
+	RegisterTool("gun-ak74", "Simonov-545", "MOD/script/Weapons/AK74 Tool.xml", 1)
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
+	GunNet_ServerInit()
+end
+
+function server.tick(dt)
+	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
+	GunNet_ServerTick(dt)
+end
+
+function client.init()
 	GunName = "AK74"
 	Cartridge = "545"
 	WeaponInit()
@@ -346,7 +358,7 @@ function init()
 	pdamage = 7
 	dmgsnd = LoadSound("MOD/snd/dmge.ogg")
 	DrawHitmark = 0
-	parts = FindTriggers("hitbox",true)
+	parts = FindTriggers("localhitbox",true)
 	magdrillFactor = 1
 	if GetBool("inventory.magdrills") then
 		magdrillFactor = 1.5
@@ -354,7 +366,7 @@ function init()
 	
 	if camo == "avertnus" then
 	vox = ("MOD/vox/ak74avertnus.vox")
-	RegisterTool("gun-ak74", "Simonov-545",  "MOD/vox/base-weapon.vox", 1)
+	-- (v2) RegisterTool moved to server.init()
 	end
 	-------------------------
 	holocolors = {"red","green"}
@@ -368,9 +380,9 @@ function init()
 	currentkobrareticle = 1
 end
 
-function Shoot(Type)
+function FireRound(Type)
 	local perk = "545"
-	local perktable=gunperks[perk][Type]
+	local perktable=GunPerkFor(perk, Type) -- (v2 fix) missing bullet type -> calibre default
 	local damage = perktable["damage"]
 	local pdamage = perktable["pdamage"]
 	local explosive = perktable["explosive"]
@@ -430,6 +442,9 @@ function Shoot(Type)
 	projectileHandler.shellNum = (projectileHandler.shellNum%#projectileHandler.shells) + 1
 
 	loadedShell.predictedBulletVelocity = VecAdd(loadedShell.predictedBulletVelocity, Vec((math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2, (math.random()-0.5)*accuracyFactor*2))
+	loadedShell.factor = barrelFactordamage or 1
+	loadedShell.active = false -- simulated by gunnet.lua (client visuals + server world)
+	GunNet_Fire(loadedShell, muzzle == "muzzle1" and "MOD/snd/Weapons/ak/ak_sup_0.ogg" or "MOD/snd/Weapons/ak/ak_0.ogg", 0.7)
 
 	local barrelend = barrellength + muzzlelength
 	SpawnParticle("smoke", TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(0.25, -0.55, -2.4-barrelend*4/3)), VecAdd(VecScale(dir, 2), GetPlayerVelocity()), 0.2, 0.3)
@@ -514,7 +529,7 @@ function Shoot(Type)
 	end
 	
 	local pvel = GetPlayerVelocity()
-	local prot = QuatToEuler(GetPlayerTransform(true).rot)
+	local prot = QuatToEuler(GetPlayerTransformWithPitch().rot)
 	local ppos = GetPlayerTransform().pos
 	local camrot = QuatToEuler(GetPlayerCameraTransform().rot)
 	local ppos2 = Transform()
@@ -555,6 +570,8 @@ function ShootGrenade()
 	loadedShell.pos = gunpos
 	loadedShell.predictedBulletVelocity = VecScale(dir, 0.35*(300/distance))
 	grenadeHandler.shellNum = (grenadeHandler.shellNum%#grenadeHandler.shells) + 1
+	loadedShell.active = false -- simulated by gunnet.lua
+	GunNet_FireGrenade(loadedShell)
 
 	SpawnParticle("fire", gunpos, Vec(0, 1.0+math.random(1,10)*0.1, 0), 0.3, 0.1)
 	PlaySound(grenadelaunchersound, GetPlayerTransform().pos, 0.75, false)
@@ -627,8 +644,7 @@ function SpentCasing()
 	local casingpos = TransformToParentPoint(gt, Vec(0.45, -0.55, -1.15))
 	local fwdpos = TransformToParentPoint(gt, Vec(6+math.random()*4, 0.5+math.random()*4, -0.65+math.random()*4))
 	local direction = VecAdd(GetPlayerVelocity(), VecSub(fwdpos, casingpos))
-	casing = Spawn("MOD/vox/riflecasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))))
-	SetBodyVelocity(casing[1], direction)
+	GunNet_SpawnCasing("MOD/vox/riflecasing.xml", Transform(casingpos, QuatEuler(math.random(0, 90), math.random(0, 90), math.random(0, 90))), direction)
 end
 
 function Rangefinder(active)
@@ -646,7 +662,8 @@ function Rangefinder(active)
 end
 
 
-function tick(dt)
+function client.tick(dt)
+	GunNet_ClientTick(dt)
 	WeaponBackgroundTick(dt)
 	
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
@@ -666,7 +683,7 @@ function tick(dt)
 		end
 	end
 
-	if GetBool("game.tool.gun-ak74.enabled") then
+	if IsToolEnabled("gun-ak74") and GunInInventory("gun-ak74") then
 	
 	if inventoryenabled then
 
@@ -693,12 +710,12 @@ function tick(dt)
 
 	if inventoryenabled and reloading then
 		SetBool("inventory.reloading", true)
-		SetString("game.player.tool","gun-ak74")
+		GunNet_SetTool("gun-ak74")
 	end
 
 	end
 
-	if GetString("game.player.tool") == "gun-ak74" and GetPlayerVehicle() == 0 then
+	if GetPlayerTool() == "gun-ak74" and GetPlayerVehicle() == 0 then
 		SetBool("hud.aimdot", false)
 		WeaponTick(dt)
 	
@@ -735,19 +752,19 @@ function tick(dt)
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 then
-				Shoot(tostring(bullettable[ammo]))
+				FireRound(tostring(bullettable[ammo]))
 			end
 		elseif InputPressed("usetool") and not reloading and selectfire == 2 and not selectattachments and not selectmag and selectfireTimer == 0 and GetPlayerGrabShape() == 0 and inspectTimer <= 0 and magcheckTimer == 0 and not jammed and jamclearTimer == 0 then
 			if grenadelauncherammo > 0 and grenadelauncher then
 				ShootGrenade()
 			elseif not grenadelauncher and ammo > 0 then
-				Shoot(tostring(bullettable[ammo]))
+				FireRound(tostring(bullettable[ammo]))
 				shootTimer = 0.11
 			end
 		end
 
 		if GetBool("guns.accidental.shoot") and selectfire ~= 0 then
-			Shoot(tostring(bullettable[ammo]))
+			FireRound(tostring(bullettable[ammo]))
 			SetBool("guns.accidental.shoot", false)
 		end
 
@@ -819,7 +836,7 @@ function tick(dt)
 				PlaySound(inspectsound)
 				selectattachmentsTimer = 0.5
 			end
-			UiMakeInteractive()
+			gunWantsInteractive = true
 			selectattachments = true
 			ironsight = false
 			inspectTimer = 0
@@ -856,7 +873,7 @@ function tick(dt)
 
 		if KeybindDown(Settings.keybinds.player.reload) and not reloading and selectfire > 0 and selectfireTimer <= 0 and not KeybindDown(Settings.keybinds.player.sprint) and magcheckTimer == 0 and not jammed and jamclearTimer == 0 then heldrTimer = heldrTimer + dt end
 		if KeybindDown(Settings.keybinds.player.reload) and realistic and not reloading and selectfire > 0 and selectfireTimer <= 0 and not KeybindDown(Settings.keybinds.player.sprint) and magcheckTimer == 0 and not jammed and jamclearTimer == 0 and heldrTimer > 0.2 then
-			UiMakeInteractive()
+			gunWantsInteractive = true
 			selectmag = true
 			ironsight = false
 		else
@@ -1154,7 +1171,7 @@ function tick(dt)
 
 			local injuredarms = false
 			for i = 1, 6 do
-				if GetTagValue(parts[i], "hitbox") == "LARM" or GetTagValue(parts[i], "hitbox") == "RARM" then
+				if GetTagValue(parts[i], "localhitbox") == "LARM" or GetTagValue(parts[i], "localhitbox") == "RARM" then
 					if tonumber(GetTagValue(parts[i], "CurrentHealth")) == 0 or HasTag(parts[i], "Fracture") then
 						injuredarms = true
 					end
@@ -1280,9 +1297,9 @@ function tick(dt)
 					stockPos = TransformToParentPoint(GetBodyTransform(GetToolBody()), Vec(0, -0.5, -0.65))
 					if meleeTimer > 0.55 then
 						if GetShapeMaterialAtPosition(shape, stockPos) == "glass" and math.random() > 0.8 then
-							MakeHole(stockPos, 1)
+							GunNet_MakeHole(stockPos, 1)
 						else
-							MakeHole(stockPos, 0.3)
+							GunNet_MakeHole(stockPos, 0.3)
 						end
 					end
 				else
@@ -1584,10 +1601,14 @@ function tick(dt)
 			toolTrans = GetBodyTransform(b)
 			toolPos = TransformToParentPoint(toolTrans, Vec(0.275, -0.6, -2.6))
 			if body ~= b then
-				local weaponPrefab = "MOD/script/Weapons/AK74-"..camo..".xml"
-				LoadTool(b, weaponPrefab)
+				local weaponPrefab = "MOD/script/Weapons/AK74-"..(camo or "")..".xml"
 				body = b
+				gunToolShapesPending = true
+				end
+				if gunToolShapesPending and #GetBodyShapes(b) > 8 then
+				gunToolShapesPending = false
 				local shapes = GetBodyShapes(b)
+				GunNet_FixToolParts(shapes)
 				mag0 = shapes[2]
 				mag0_2 = shapes[63]
 				bolt = shapes[3]
@@ -1825,11 +1846,11 @@ function tick(dt)
 			end
 			if camo == "avertnus" then
 			vox = ("MOD/vox/ak74avertnus.vox")
-			RegisterTool("gun-ak74", "Simonov-545",  "MOD/vox/base-weapon.vox", 1)
+			-- (v2) RegisterTool moved to server.init()
 			end
 			if camo == ("") then
 			vox = ("MOD/vox/ak74.vox")
-			RegisterTool("gun-ak74", "Simonov-545",  "MOD/vox/base-weapon.vox", 1)
+			-- (v2) RegisterTool moved to server.init()
 			end
 			if toprail == "scope" then
 				sct.pos = Vec(0.2, -0.475, -1.5-guardlength)
@@ -2378,8 +2399,11 @@ function tick(dt)
 	end
 end
 
-function draw()
-	if GetString("game.player.tool") == "gun-ak74" and GetPlayerVehicle() == 0 then
+function client.draw()
+	if not GunInInventory("gun-ak74") then return end -- (v2, Phase 2) see gunfunctions.lua
+	if gunWantsInteractive then UiMakeInteractive() gunWantsInteractive = false end
+	GunNet_DebugParts()
+	if GetPlayerTool() == "gun-ak74" and GetPlayerVehicle() == 0 then
 
 
 	if not GetBool("level.killcam.active") then
@@ -2450,7 +2474,7 @@ function draw()
 	end
 			
 		------IN-GAME UI------
-		if not realistic and not GetBool("level.optionstriggered") or inventoryenabled and GetString("game.player.tool") == "gun-ak74" and GetPlayerVehicle() == 0 then
+		if not realistic and not GetBool("level.optionstriggered") or inventoryenabled and GetPlayerTool() == "gun-ak74" and GetPlayerVehicle() == 0 then
 		if not unlimitedammo then
 			UiPush()
 				UiTranslate(UiCenter(), UiHeight()-60)
@@ -2464,7 +2488,7 @@ function draw()
 					UiText(grenadelauncherammo.."/1 - Grenade")
 				else
 					if realistic then
-						UiText(ammo.."/"..magtable2[curmagslot][3].." - "..selectfireText.." - "..bullettable[ammo])
+						UiText(ammo.."/"..magtable2[curmagslot][3].." - "..selectfireText..(bullettable[ammo] and " - "..bullettable[ammo] or ""))
 					else
 						UiText(ammo.."/"..magsize.." - "..selectfireText)
 					end
@@ -2527,14 +2551,14 @@ function draw()
 		end
 		end
 	end
-	if GetString("game.player.tool") == "gun-ak74" and grenadelauncher and not selectattachments then
+	if GetPlayerTool() == "gun-ak74" and grenadelauncher and not selectattachments then
 		UiPush()
 			UiTranslate(UiCenter(), UiMiddle())
 			UiAlign("center middle")
 			UiImage("ui/hud/crosshair-launcher.png")
 		UiPop()
 	end
-	if GetString("game.player.tool") == "gun-ak74" and sideattachment and side == "side3" then
+	if GetPlayerTool() == "gun-ak74" and sideattachment and side == "side3" then
 		UiPush()
 			local x,y,dist = UiWorldToPixel(sideattachpoint)
 			UiTranslate(x, y)
@@ -2546,7 +2570,7 @@ function draw()
 		UiPop()
 	end
 
-	if realistic and selectmag and GetString("game.player.tool") == "gun-ak74" then
+	if realistic and selectmag and GetPlayerTool() == "gun-ak74" then
 	if hint then drawHint(info) end
 		hoverindex=0
 		UiPush()
@@ -2568,7 +2592,7 @@ function draw()
 
 	------ATTACHMENTS MENU------
 	if not realistic or GetBool("level.optionstriggered") then
-	if selectattachments and GetString("game.player.tool") == "gun-ak74" and GetPlayerVehicle() == 0 then
+	if selectattachments and GetPlayerTool() == "gun-ak74" and GetPlayerVehicle() == 0 then
 	hoverindex=0
 		UiPush()
 			local x,y,dist=UiWorldToPixel(sightattachpoint)
@@ -2773,7 +2797,7 @@ function draw()
 
 
 	------OPTIONS UI------
-	if GetBool("level.optionstriggered") and GetString("game.player.tool") == "gun-ak74" then
+	if GetBool("level.optionstriggered") and GetPlayerTool() == "gun-ak74" then
 	UiPush()
 		UiAlign("center middle")
 		UiTranslate(UiCenter(), 70)
@@ -2782,7 +2806,7 @@ function draw()
 	UiPop()
 	end
 	
-	if GetBool("level.optionstriggered") and GetString("game.player.tool") == "gun-ak74" then
+	if GetBool("level.optionstriggered") and GetPlayerTool() == "gun-ak74" then
 
 	UiAlign("center middle")
 	UiTranslate(300, 250)

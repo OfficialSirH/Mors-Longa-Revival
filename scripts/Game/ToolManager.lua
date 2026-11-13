@@ -1,11 +1,18 @@
+#version 2
+#include "script/include/player.lua"
 #include "../../Settings.lua"
 
 
-function init()
+-- (v2) server. Still uses the v1 registry keys game.tool.<id>.enabled like the v1 inventory does;
+-- per-player tool enabling (SetToolEnabled) belongs to the Phase 2 inventory redesign.
+function server.init()
     Init_Settings()
 end
 
-function tick()
+function server.tick()
+    -- (v2, Phase 2) tools are now enabled per player by script/inventory.lua (server.tick), using the same rules
+    -- (always-allowed list, tutorial, "enable all tools" setting). Running this too would fight it.
+    do return end
 
     SetInt("game.tool.extinguisher.index", 4)
 
@@ -54,7 +61,7 @@ function RegisterToolId(tool_id, enabled)
 end
 
 
-function handleCommand(cmd) handle_quickload(cmd) end
+function server.handleCommand(cmd) handle_quickload(cmd) end
 function handle_quickload(cmd)
     for _, word in ipairs(splitString(cmd, " ")) do
 if word == "quickload" then

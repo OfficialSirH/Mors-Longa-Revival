@@ -1,0 +1,22 @@
+# Line endings: every text file is stored and checked out with LF (normalized 2026-11-08).
+* text=auto eol=lf
+
+# Binary assets: never touch their bytes.
+*.vox binary
+*.ogg binary
+*.wav binary
+*.png binary
+*.PNG binary
+*.jpg binary
+*.jpeg binary
+*.dds binary
+*.psd binary
+*.ttf binary
+*.otf binary
+*.sqlite binary
+*.pyc binary
+*.suo binary
+*.bin binary
+*.zip binary
+*.exe binary
+*.dll binary

@@ -439,7 +439,7 @@
 					</rope>
 				</group>
 				<group name="BT wagon" pos="6.1 5.0 -140.45001" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
-					<script pos="0.1 0.1 0.1" file="MOD/script/BT_tank.lua">
+					<script pos="0.1 0.1 0.1" file="MOD/scripts/missing_script_stub.lua">
 						<group name="full wagon" pos="-0.1 0.0 -0.1" prop0="travel=-0.25 0.0">
 							<body tags="train=7 decouplable" pos="0.0 0.2 -0.1">
 								<vox pos="0.1 0.7 0.1" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">
@@ -545,7 +545,7 @@
 					</rope>
 				</group>
 				<group name="BT wagon" pos="6.1 5.0 -121.84999" rot="0.0 90.0 0.0" prop0="texture=8 0.33">
-					<script pos="0.1 0.1 0.0" file="MOD/script/BT_tank.lua">
+					<script pos="0.1 0.1 0.0" file="MOD/scripts/missing_script_stub.lua">
 						<group name="full wagon" pos="-0.1 0.0 0.0" prop0="travel=-0.25 0.0">
 							<body tags="train=8 decouplable" pos="0.0 0.2 -0.1">
 								<vox pos="0.1 0.7 0.0" rot="0.0 180.0 0.0" file="MOD/vox/vehicle_train_bt.vox" object="wagon">
@@ -1050,11 +1050,11 @@
 							<voxbox pos="-0.45 -0.5 -0.668" size="1 1 14" brush="MOD/main/AS350/fuselage/AS350.vox" object="brush: frame metal"/>
 							<group name="Main Engine">
 								<vox pos="-0.15 -0.1 -0.55" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: Main Engine">
-									<script pos="0.3 0.0 0.0" file="MOD/main/AS350/script/fuel.lua">
+									<script pos="0.3 0.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 										<vox tags="F_LINE fuel=fuel_lines strength=95" file="MOD/main/AS350/fuselage/AS350.vox" object="Systems: Fuel Lines"/>
 									</script>
 									<vox tags="O_LINE nocull" pos="0.2 0.0 0.3" file="MOD/main/AS350/fuselage/AS350.vox" object="Systems: Oil Lines"/>
-									<script pos="0.4 -1.0 0.6" file="MOD/main/AS350/script/fuel.lua">
+									<script pos="0.4 -1.0 0.6" file="MOD/scripts/missing_script_stub.lua">
 										<vox tags="FUEL nocull fuel=fuel_tank strength=85" file="MOD/main/AS350/fuselage/AS350.vox" object="Mechanical: fuel tank"/>
 									</script>
 									<group name="rotors" pos="0.1 0.2 -3.7">

@@ -277,7 +277,7 @@ function npc_init_gun_entity(npc)
 
 
     --> Increased rpg spawns if player is in an AVF vehicle.
-    local isPlayerInAvf = HasTag(GetPlayerVehicle(), "cfg") and math.random() < 1/13
+    local isPlayerInAvf = HasTag(GetPlayerVehicle(GoreP), "cfg") and math.random() < 1/13
     local spawnRPG = isPlayerInAvf or npc.ai.spawnTags.rpg
     if spawnRPG then
         npc.Gun = get_random_gun_prefab({ faction = GUN_FACTIONS.civ, class = GUN_CLASSES.rpg })
@@ -508,9 +508,9 @@ function npc_point_gun(npc)
         if npc.ai.targeting.target then
             if npc.ai.targeting.target.type ~= TargetTypes.player then
 
-                if GetPlayerVehicle() == 0 then
+                if GetPlayerVehicle(GoreP) == 0 then
                     -- player velocity offset
-                    local velScale = AutoMap(VecLength(GetPlayerVelocity()), 0, 4, 1, 1.2)
+                    local velScale = AutoMap(VecLength(GetPlayerVelocity(GoreP)), 0, 4, 1, 1.2)
                     swayVec = VecScale(swayVec, velScale)
                 end
 
@@ -627,7 +627,7 @@ function npc_manage_shooting(npc, dt, override_shoot)
             local mult = 1 + (VecDist(npc.ai.torsoPos, npc.ai.aimPos)/100)
 
             local hitchance = Controls.hitchance.value
-            if GetFloat("level.player.health") < 175 then
+            if GoreAI_PlayerHealth(GoreP) < 175 then -- (v2 goreai) target player's limb health (v1: level.player.health)
                 hitchance = hitchance / 2
             end
 
@@ -772,11 +772,18 @@ function npc_shoot(npc, spread, bullet_count)
     -- Distant reverb shot sounds.Fades between medium and long reverb.
     if npc.Gun then
 
-        local camPos = GetPlayerTransform().pos
-        local disttoplayer = VecDist(camPos, gunTr.pos) + 1
+        -- (v2 goreai) the distant-shot layer plays at every player's position (v1: the one player);
+        -- the medium/far layers use the nearest player's distance.
+        local disttoplayer = math.huge
+        for _, p in ipairs(GorePlayerIds) do
+            local camPos = GorePlayers[p].pos
+            local d = VecDist(camPos, gunTr.pos) + 1
+            disttoplayer = math.min(disttoplayer, d)
+            PlaySound(npc.sounds.DistGunShot, camPos, AutoMap(d, 10, 30, 0, 40))
+        end
+        if disttoplayer == math.huge then disttoplayer = 1 end
 
         PlaySound(npc.sounds.gunshot, gunTr.pos, 3)
-        PlaySound(npc.sounds.DistGunShot, GetPlayerTransform().pos, AutoMap(disttoplayer, 10, 30, 0, 40))
 
         PlaySound(GetRandomArrayValue(Sounds.guns[npc.Gun.class].med), gunTr.pos, AutoMap(disttoplayer, 0, 60, 0, 30))
         PlaySound(GetRandomArrayValue(Sounds.guns[npc.Gun.class].far), gunTr.pos, AutoMap(disttoplayer, 40, 100, 0, 100))
@@ -805,15 +812,15 @@ function npc_projectile_operations(npc, projectile)
 
 
     local point2 = VecAdd(projectile.pos, VecScale(dir, queryDist))
-    local Player
-    if GetPlayerVehicle() == 0 then
-        Player = VecAdd(GetPlayerTransform().pos, Vec(0, 1, 0))
-    else
-        Player = VecCopy(GetPlayerTransform().pos)
+    -- (v2 goreai) v1 measured the miss distance to the one player; now to every player (Ranges[p]).
+    local Ranges = {}
+    for _, p in ipairs(GorePlayerIds) do
+        local pl = GorePlayers[p]
+        local Player = pl.vehicle == 0 and VecAdd(pl.pos, Vec(0, 1, 0)) or VecCopy(pl.pos)
+        local Relative = VecSub(Player, point2)
+        local Lookback = VecScale(VecNormalize(VecSub(point2,projectile.pos)), VecDot(Relative, VecNormalize(VecSub(point2,projectile.pos))))
+        Ranges[p] = VecLength(VecSub(Player, VecAdd(point2, Lookback)))
     end
-    local Relative = VecSub(Player, point2)
-    local Lookback = VecScale(VecNormalize(VecSub(point2,projectile.pos)), VecDot(Relative, VecNormalize(VecSub(point2,projectile.pos))))
-    local Range = VecSub(Player, VecAdd(point2, Lookback))
 
     local RHA = 0
     if HasTag(shape, "RHA") then
@@ -821,9 +828,11 @@ function npc_projectile_operations(npc, projectile)
     end
     projectile.momentum = projectile.momentum - RHA/4
 
-    if not npc.rpg and VecLength(Range) < (GetPlayerVehicle() == 0 and .5 or .3) and projectile.momentum ~= 0 then
-        projectile.momentum = 0
-        PlaySound(npc.sounds.rpgGunshot, GetPlayerTransform().pos, npc.disttoplayer / 10)
+    for _, p in ipairs(GorePlayerIds) do
+        if not npc.rpg and Ranges[p] < (GorePlayers[p].vehicle == 0 and .5 or .3) and projectile.momentum ~= 0 then
+            projectile.momentum = 0
+            PlaySound(npc.sounds.rpgGunshot, GorePlayers[p].pos, npc.disttoplayer / 10)
+        end
     end
 
     if npc.rpg and GetTagValue(npc.barrel, "gun") ~= "vgo" then
@@ -841,21 +850,28 @@ function npc_projectile_operations(npc, projectile)
     --     passtype="sniper_"
     --     crackrange=40
     -- end
-    if not projectile.playedb and not npc.rpg and projectile.momentum ~= 0 then
-        if VecLength(Range) < crackrange/2 then
-            PlaySound(LoadSound("MOD/snd/Projectiles/Flybys/"..passtype.."0.ogg"), GetPlayerTransform().pos, (crackrange/2-VecLength(Range))*2/crackrange)
-            projectile.playedb = true
-        end
-        if VecLength(Range) < crackrange and npc.roundsize>1 then
-            PlaySound(LoadSound("MOD/snd/Projectiles/Flybys/pistol_0.ogg"), GetPlayerTransform().pos, (crackrange-VecLength(Range))/crackrange)
-            projectile.playedb = true
+    projectile.playedb_p = projectile.playedb_p or {} -- (v2 goreai) fly-by played, per player
+    for _, p in ipairs(GorePlayerIds) do
+        local Range, ppos = Ranges[p], GorePlayers[p].pos
+        if not projectile.playedb_p[p] and not npc.rpg and projectile.momentum ~= 0 then
+            if Range < crackrange/2 then
+                PlaySound(LoadSound("MOD/snd/Projectiles/Flybys/"..passtype.."0.ogg"), ppos, (crackrange/2-Range)*2/crackrange)
+                projectile.playedb_p[p] = true
+            end
+            if Range < crackrange and npc.roundsize>1 then
+                PlaySound(LoadSound("MOD/snd/Projectiles/Flybys/pistol_0.ogg"), ppos, (crackrange-Range)/crackrange)
+                projectile.playedb_p[p] = true
+            end
         end
     end
 
     if npc.BulletsShot > npc.oldbulletsshot then
-        PlaySound(npc.sounds.DistGunShot, GetPlayerTransform().pos, 10/npc.disttoplayer)
+        for _, p in ipairs(GorePlayerIds) do
+            local pl = GorePlayers[p]
+            PlaySound(npc.sounds.DistGunShot, pl.pos, 10/(VecDist(npc.torsoPos or pl.aimPos, pl.aimPos) + 1))
+        end
         npc.oldbulletsshot = npc.BulletsShot
-        projectile.playedb = false
+        projectile.playedb_p = {}
     end
 
     local hitPos = nil
@@ -1002,8 +1018,11 @@ function npc_projectile_operations(npc, projectile)
                 Explosion(hitPos, npc.exp)
                 PlaySound(npc.sounds.rpghit, hitPos)
                 projectile.active = false
-                distfromhittoplayer = VecLength(VecSub(GetPlayerCameraTransform().pos, hitPos))
-                PlaySound(npc.sounds.rpghitdist, GetPlayerCameraTransform().pos, distfromhittoplayer / 10)
+                for _, p in ipairs(GorePlayerIds) do -- (v2 goreai) distant blast layer for every player
+                    local camPos = GetPlayerCameraTransform(p).pos
+                    distfromhittoplayer = VecLength(VecSub(camPos, hitPos))
+                    PlaySound(npc.sounds.rpghitdist, camPos, distfromhittoplayer / 10)
+                end
             end
 
             if math.random() < 0.5 then
@@ -1016,11 +1035,14 @@ function npc_projectile_operations(npc, projectile)
             end
         end
 
-    elseif not hit and projectile.active and not projectile.hitPlayer and VecDot(dir, DirLookAt(projectile.pos, PlayerPos)) > 0.5 then  -- Check is projectile hit player.
+    elseif not hit and projectile.active and not projectile.hitPlayer then  -- Check is projectile hit player.
+      -- (v2 goreai) every player whose aim point is ahead of the bullet (v1: the one player)
+      for _, hitP in ipairs(GorePlayerIds) do
+        if not projectile.hitPlayer and VecDot(dir, DirLookAt(projectile.pos, GorePlayers[hitP].aimPos)) > 0.5 then
 
         -- if VecDist(projectile.pos, PlayerPos) < queryDist * 2 then
 
-            for _, trigger in pairs(PlayerHitboxes) do -- Check each hitbox when projectile close enough
+            for _, trigger in pairs(GoreAI_Hitboxes(hitP)) do -- Check each hitbox when projectile close enough
 
                 local min, max = GetTriggerBounds(trigger)
 
@@ -1047,7 +1069,7 @@ function npc_projectile_operations(npc, projectile)
                         if GetBool("level.healthScriptSpawned") then
                             SetTag(trigger, "QueriedDamage", npc.pdamage)
                         else
-                            SetPlayerHealth(GetPlayerHealth() - (npc.pdamage/100))
+                            SetPlayerHealth(GetPlayerHealth(hitP) - (npc.pdamage/100), hitP)
                         end
 
                         -- debug hit positions
@@ -1070,6 +1092,8 @@ function npc_projectile_operations(npc, projectile)
 
             end
         -- end
+        end
+      end
 
         --point2 = VecAdd(projectile.pos, VecScale(projectile.predictedBulletVelocity, GetTimeStep()))
         -- if not npc.stealth then
@@ -1143,8 +1167,8 @@ function npc_process_aim_sway(npc, scale)
         local velScaled = 0
         if npc.ai.targeting.target then
             if npc.ai.targeting.target.type == TargetTypes.player then
-                if GetPlayerVehicle() ~= 0 then
-                    velScaled = VecLength(GetBodyVelocity(GetVehicleBody(GetPlayerVehicle())))
+                if GetPlayerVehicle(GoreP) ~= 0 then
+                    velScaled = VecLength(GetBodyVelocity(GetVehicleBody(GetPlayerVehicle(GoreP))))
                     velScaled = velScaled / 10
                 end
             end
@@ -1227,7 +1251,9 @@ function draw_combat_details()
 
             UiTranslate(UiWidth() - w, 0)
 
-            if npc.Gun and npc.ai.targeting.target then
+            -- (v2 fix) lookPos/shootPos can be nil (seen in-game: Automatic.lua:308 'index local v');
+            -- these values only feed the commented-out debug UI below.
+            if npc.Gun and npc.ai.targeting.target and npc.ai.lookPos and npc.ai.shootPos then
 
                 local gun_tr = GetBodyTransform(npc.Gun.body)
 
@@ -1304,16 +1330,35 @@ function draw_combat_details()
 
                 -- end
 
-                local dec = 0.2
-                local inc = 0.008
-                npc.aim.torso = lerp(npc.aim.torso, torso_align, ternary(npc.aim.torso < torso_align, inc, dec))
-                npc.aim.gun = lerp(npc.aim.gun, gun_align, ternary(npc.aim.gun < gun_align, inc, dec))
+                -- (v2 goreai) the npc.aim update moved to tick_npc_aim_alignment (server); draw runs on the client
 
             end
 
         UiPop()
     end
 
+end
+
+--- (v2 goreai) Server, once per tick (v1 did this in draw_combat_details, once per frame): how well each npc's torso
+--- and gun face their target. npc_manage_shooting only fires when npc.aim.torso > NPC_AIM_MIN_ALIGN.
+--- Also clears the debug hit list, which v1 cleared in debug_npcs (draw).
+function tick_npc_aim_alignment()
+    for key, npc in pairs(NPCs) do
+        if npc.Gun and npc.aim and npc.torsoTr and npc.ai.targeting.target and npc.ai.lookPos and npc.ai.shootPos then
+            local gun_tr = GetBodyTransform(npc.Gun.body)
+            local torso_align = 100 - QuatDiff(npc.torsoTr.rot, QuatLookAt(npc.torsoTr.pos, AutoVecSubsituteY(npc.ai.lookPos, npc.torsoTr.pos[2])))
+            torso_align = torso_align/100
+            local gun_align = QuatDiff(gun_tr.rot, QuatLookAt(gun_tr.pos, npc.ai.shootPos))
+            gun_align = gun_align/100
+            local dec = 0.2
+            local inc = 0.008
+            npc.aim.torso = lerp(npc.aim.torso, torso_align, ternary(npc.aim.torso < torso_align, inc, dec))
+            npc.aim.gun = lerp(npc.aim.gun, gun_align, ternary(npc.aim.gun < gun_align, inc, dec))
+        end
+    end
+    if not config.goreai.draw_projectile_impacts or #Debug_hitPositions_shapes > 200 then
+        Debug_hitPositions_shapes = {}
+    end
 end
 
 function draw_combat()

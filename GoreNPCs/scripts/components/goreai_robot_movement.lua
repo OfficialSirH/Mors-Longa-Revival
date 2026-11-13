@@ -179,7 +179,7 @@ function robotUpdate(npc, dt)
 
 	robotSetAxes(npc)
 
-	npc.robot.playerPos = GetPlayerCameraTransform().pos
+	npc.robot.playerPos = GetPlayerCameraTransform(GoreP).pos -- (v2 goreai) target player
 
 	local vel = GetBodyVelocity(npc.robot.body)
 	local fwdSpeed = VecDot(vel, npc.robot.dir)
@@ -216,7 +216,7 @@ function robotUpdate(npc, dt)
 	end
 
 	--Distance and direction to player
-	local pp = VecAdd(GetPlayerTransform().pos, Vec(0, 1, 0))
+	local pp = VecAdd(GetPlayerTransform(GoreP).pos, Vec(0, 1, 0))
 	local d = VecSub(pp, npc.robot.bodyCenter)
 	npc.robot.distToPlayer = VecLength(d)
 	npc.robot.dirToPlayer = VecScale(d, 1.0/npc.robot.distToPlayer)

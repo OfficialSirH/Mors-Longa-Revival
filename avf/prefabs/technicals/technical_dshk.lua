@@ -1,4 +1,10 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) DShK on the AAF Pickup Truck technical (technical_DSHK.xml + copies in roadblock3, test.xml): runs on our own mounted-gun script (scripts/MountedGun.lua) instead of the external AVF mod
+-- (v1 included ../../scripts/avf_custom.lua). The AVF table below is still the gun's config.
+MountedGunCalibre = "127x99" -- gunperks.lua calibre for damage / velocity
+MountedGunSound = "MOD/snd/Weapons/m107/m107_0.ogg" -- AVF's MOD/sounds/... files live in the external AVF mod
 
 
 --[[

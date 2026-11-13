@@ -1,7 +1,13 @@
+#version 2
 --[[
 #include "../../scripts/TDSU/tdsu.lua"
 #include "../../Settings.lua"
 ]]
+-- (v2) Tutorial tips. Client (every player): shows the title/text of the "tutNotification" trigger the LOCAL player
+-- stands in, with <key> placeholders replaced by that player's own keybinds (v1 rewrote the entity description once;
+-- keybinds are per machine, so each client keeps its own copy), and outlines the "focus" bodies/shapes inside it.
+-- Server: when a player enters a new tip (not tagged "nostop"), slows them down for 0.5 s (SetPlayerVelocity is
+-- server-only; the client asks with ServerCall). level.tutorial is set on both sides (inventory reads it on the client).
 
 function flattenSettingsTable(t,res)
 	for k,val in pairs(t) do
@@ -24,11 +30,35 @@ function flattenSettingsTable(t,res)
 	end
 end
 
-function init()
+------------------------------------------------------------------ server
+
+function server.init()
+	SetBool("level.tutorial", true)
+	Slowed = {} -- [player] = seconds left
+end
+
+function server.tutSlow(p)
+	Slowed[p] = .5
+end
+
+function server.update(dt)
+	for p, cd in pairs(Slowed) do
+		if IsPlayerValid(p) then
+			local pV = GetPlayerVelocity(p)
+			SetPlayerVelocity(Vec(pV[1]*.2,pV[2],pV[3]*.2), p)
+		end
+		cd = cd - dt
+		Slowed[p] = cd > 0 and cd or nil
+	end
+end
+
+------------------------------------------------------------------ client
+
+function client.init()
 	Init_Settings()
 
-	local flatKeybinds = {}
-	flattenSettingsTable(Settings.keybinds,flatKeybinds)
+	FlatKeybinds = {}
+	flattenSettingsTable(Settings.keybinds,FlatKeybinds)
 
 	Colors = {
 		red = Vec(1,0,0),
@@ -36,23 +66,25 @@ function init()
 	}
 
 	triggers = FindTriggers("tutNotification",true)
-
-	for i,trigger in ipairs(triggers)do
-		local Desc = GetDescription(trigger+1)
-		Desc = Desc:gsub("(<[%w_]->)", flatKeybinds)
-		SetDescription(trigger+1,Desc)
-	end
+	Descriptions = {} -- [trigger] = text with this player's keybinds
 
 	CurrentTriggerTitle = nil
 	CurrentTrigger = nil
 	Desc = ""
 
-	playerNoMove = false
-	playerNoMoveCD = 0
-
 	triggerTriggered={}
 end
-function tick(dt)
+
+-- the tip text is the description of the entity after the trigger (v1 layout)
+function TriggerDescription(trigger)
+	if not Descriptions[trigger] then
+		local d = GetDescription(trigger+1):gsub("(<[%w_]->)", FlatKeybinds)
+		Descriptions[trigger] = d:gsub("%s*\\n%s*", "\n") -- (v2 fix) the xml text has a literal "\n" (shown as-is in v1)
+	end
+	return Descriptions[trigger]
+end
+
+function client.tick(dt)
 
 	Focus_Bodies = FindBodies("focus", true)
 	Focus_Shapes = FindShapes("focus", true)
@@ -66,16 +98,14 @@ function tick(dt)
 		if IsHandleValid(trigger)then
 			if IsPointInTrigger(trigger,pT.pos)then
 
-				Desc = GetDescription(trigger+1)
-				-- SetString('hud.notification',Desc)
+				Desc = TriggerDescription(trigger)
 
 				CurrentTriggerTitle = string.gsub(GetTagValue(trigger, "tutNotification"), "_", " ")
 
 				if CurrentTrigger and CurrentTrigger ~= trigger then
 					beep()
 					if not(triggerTriggered[trigger] or HasTag(trigger,'nostop')) then
-						playerNoMove = true
-						playerNoMoveCD = .5
+						ServerCall("server.tutSlow", GetLocalPlayer())
 						triggerTriggered[trigger]=true
 					end
 				end
@@ -83,7 +113,7 @@ function tick(dt)
 
 				for _, body in ipairs(Focus_Bodies) do
 					if IsPointInTrigger(CurrentTrigger, AabbGetBodyCenterPos(body)) then
-						local c = Colors[GetTagValue(body, "focus")] or "white"
+						local c = Colors[GetTagValue(body, "focus")] or Colors.white
 						DrawBodyOutline(body, c[1],c[2],c[3], 1)
 						DrawBodyHighlight(body, osc/2)
 					end
@@ -91,7 +121,7 @@ function tick(dt)
 
 				for _, shape in ipairs(Focus_Shapes) do
 					if IsPointInTrigger(CurrentTrigger, AabbGetShapeCenterPos(shape)) then
-						local c = Colors[GetTagValue(shape, "focus")] or "white"
+						local c = Colors[GetTagValue(shape, "focus")] or Colors.white
 						DrawShapeOutline(shape, c[1],c[2],c[3], 1)
 						DrawShapeHighlight(shape, osc/2)
 					end
@@ -103,24 +133,10 @@ function tick(dt)
 			triggerTriggered[trigger]=nil
 		end
 	end
-	-- SetString('hud.notification',"")
 
 end
 
-function update(dt)
-	--DebugWatch('playerNoMove',playerNoMove)
-	--DebugWatch('playerNoMoveCD',playerNoMoveCD)
-	local pV = GetPlayerVelocity()
-	if playerNoMove then
-		SetPlayerVelocity(Vec(pV[1]*.2,pV[2],pV[3]*.2))
-		if playerNoMoveCD <= 0 then
-			playerNoMove = false
-		end	
-		playerNoMoveCD = playerNoMoveCD - dt
-	end
-end
-
-function draw()
+function client.draw()
 	draw_trigger_title(CurrentTrigger)
 end
 

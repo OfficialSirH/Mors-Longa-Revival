@@ -166,7 +166,7 @@
 						</group>
 						<voxbox pos="0.0 0.5 5.2" density="1000" size="2 2 2"/>
 					</vox>
-					<script pos="2.8 7.5 5.60001" file="MOD/gorescript/gorezombie.lua">
+					<script pos="2.8 7.5 5.60001" file="MOD/scripts/missing_script_stub.lua">
 						<group name="Limbs" pos="-3.4 -1.5 -0.1">
 							<body name="foot_R" tags="RRLEG" pos="-0.3 0.4 0.1" dynamic="true">
 								<vox tags="RRLEG" pos="0.2 -0.4 0.1" density="1" strength="1" file="MOD/vox/gore/pilot.vox" object="foot_R">
@@ -293,7 +293,7 @@
 						</group>
 						<group name="Predetermined Path" pos="-3.3 0.6 -0.1"/>
 					</script>
-					<script pos="4.6 7.5 5.60001" file="MOD/gorescript/gorezombie.lua">
+					<script pos="4.6 7.5 5.60001" file="MOD/scripts/missing_script_stub.lua">
 						<group name="Limbs" pos="-3.4 -1.5 -0.1">
 							<body name="foot_R" tags="RRLEG" pos="-0.3 0.4 0.1" dynamic="true">
 								<vox tags="RRLEG" pos="0.2 -0.4 0.1" density="1" strength="1" file="MOD/vox/gore/pilot.vox" object="foot_R">

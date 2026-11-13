@@ -1,3 +1,5 @@
+#version 2
+-- (v2) the whole script was already commented out in the original
 --[[function init()
 end
 function tick(dt)

@@ -1,3 +1,4 @@
+-- (v2) main menu UI (client); library: entry script main_menu.lua, also included by ingame_settings.lua
 --[[
 #include "../../../Automatic.lua"
 #include "../../../Config.lua"
@@ -9,6 +10,7 @@
 #include "menu_settings.lua"
 #include "menu_update_log.lua"
 #include "../../perkTable.lua"
+#include "menu_host.lua"
 ]]
 
 
@@ -139,7 +141,7 @@ function Init_Main_Menu()
 
 end
 
-function init()
+function MainMenu_Init() -- (v2) called by main_menu.lua client.init
 
 	init_config()
 	Init_Settings()
@@ -171,7 +173,7 @@ function init()
 
 end
 
-function tick()
+function MainMenu_Tick() -- (v2) called by main_menu.lua client.tick
 
 	if not Menu_Initialized then
 		return
@@ -203,7 +205,7 @@ function tick()
 	TICK = TICK + 1
 end
 
-function draw(dt)
+function MainMenu_Draw(dt) -- (v2) called by main_menu.lua client.draw
 
 	if not Menu_Initialized then
 		Init_Main_Menu()
@@ -335,7 +337,7 @@ function draw_menu(containers_only)
 
 			-- Button List
 			UiPush()
-			if GetBool("savegame.mod.continue") then
+			if GetBool("savegame.mod.continue") and MenuIsHost() then -- (v2) only the host starts the game
 				if UiTextButton(string.upper('Continue'), btn_width, btn_height) then
 					playLastChar()
 				end
@@ -348,7 +350,7 @@ function draw_menu(containers_only)
 			UiTranslate(0, font_size * 3)
 
 
-			if UiTextButton(string.upper('New Save'), btn_width, btn_height) then
+			if MenuHostButton(string.upper('New Save'), btn_width, btn_height) then -- (v2) only the host starts the game
 				PlaySound(sndnext)
 				if GetBool('savegame.mod.tutorial.states.hasFinishedTutorialLevel') or
 					GetBool('savegame.mod.tutorial.states.hasSkippedTutorialLevel') then
@@ -363,10 +365,10 @@ function draw_menu(containers_only)
 			UiTranslate(0, font_size * 3)
 
 
-			if UiTextButton(string.upper('Tutorial'), btn_width, btn_height) then
+			if MenuHostButton(string.upper('Tutorial'), btn_width, btn_height) then -- (v2) only the host starts the game
 				PlaySound(sndnext)
 				-- Select_Menu_Item(Menu_Items.tutorial)
-				StartLevel("morslonga_tutorial", "MOD/level_tutorial.xml", "")
+				MenuStartLevel("morslonga_tutorial", "MOD/level_tutorial.xml", "")
 			end
 			DrawCenterImage(-btn_width / 2, 0, btn_height, btn_height, Button_Icons.tutorial)
 			UiTranslate(0, font_size * 3)
@@ -407,6 +409,10 @@ function draw_menu(containers_only)
 			end
 			DrawCenterImage(-btn_width / 2, 0, btn_height, btn_height, Button_Icons.exit)
 			UiTranslate(0, font_size * 3)
+
+			if not MenuIsHost() then -- (v2)
+				UiText("THE HOST STARTS THE GAME")
+			end
 
 		end
 
@@ -681,7 +687,7 @@ function draw_menu_item_askIfTutorial(w, h)
 	UiTranslate(button_pad)
 	if UiTextButton(string.upper("Yes"), button_w, 40) then
 		PlaySound(sndnext)
-		StartLevel("morslonga_tutorial", "MOD/level_tutorial.xml", "")
+		MenuStartLevel("morslonga_tutorial", "MOD/level_tutorial.xml", "")
 	end
 	UiTranslate(button_w + button_pad)
 	UiButtonImageBox("ui/common/box-solid-6.png", 6,6, Grey_Dark,Grey_Dark,Grey_Dark, 3/4)
@@ -847,7 +853,7 @@ function draw_try_again(btn_width, btn_height)
 
 	UiFont("bold.ttf", btn_height * 0.6 * shake)
 	UiButtonImageBox('MOD/img/ui_button.png', 6, 6, 0.6, 0, 0, 0.8)
-	if UiTextButton(string.upper('Try Again?'), btn_width, btn_height) then
+	if MenuHostButton(string.upper('Try Again?'), btn_width, btn_height) then -- (v2) only the host starts the game
 
 		SetString("savegame.mod.difficulty", "hardcore")
 		SetInt("savegame.mod.player.money", 0)
@@ -877,7 +883,7 @@ function draw_try_again(btn_width, btn_height)
 
 		ClearKey("savegame.mod.parkingSpot")
 
-		StartLevel("morslonga_main", level_path, "hardcore nodev")
+		MenuStartLevel("morslonga_main", level_path, "hardcore nodev")
 	end
 
 	DrawCenterImage(-btn_width / 2, -btn_height / 2, btn_height * shake, btn_height * shake, Button_Icons.try_again, 1,1,1,1)
@@ -888,7 +894,7 @@ end
 
 
 
-function handleCommand(cmd) handle_quickload(cmd) end
+function MainMenu_HandleCommand(cmd) handle_quickload(cmd) end -- (v2) unused
 
 function handle_quickload(cmd)
 	for _, word in ipairs(splitString(cmd, " ")) do
@@ -964,7 +970,7 @@ function playLastChar()
 	if diff == "custom" then
 		diff = "normal"
 	end
-	StartLevel("morslonga_main", level_path, diff .. " nodev")
+	MenuStartLevel("morslonga_main", level_path, diff .. " nodev")
 end
 
 function MakeUiDimensions(key, x, y, w, h)

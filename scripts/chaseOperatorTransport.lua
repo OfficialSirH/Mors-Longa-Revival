@@ -1,5 +1,10 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2 operator) SERVER only: AI driving (DriveVehicle), damage, explosions, sounds, siren/lights. Targets the
+-- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/patches/convert_operators.py.
 --[[
 #include "masterScriptRemoverAPI.lua"
+#include "vehicleOperatorCoop.lua"
 #include "../scripts/TDSU/tdsu.lua"
 ]]
 
@@ -119,7 +124,7 @@ LAYER_G = 64
 LAYER_H = 128
 LAYER_ALL = 255
 
-function init()
+function server.init(dt)
 	vehicle = FindVehicle()
 
 	if HasTag(vehicle, "ai_disabled") then
@@ -180,7 +185,7 @@ function init()
 
 end
 
-function tick(dt)
+function OperatorTick(dt)
 	if vehicle ~= 0 then
 		if HasTag(vehicle, "ai_disabled") then
 			for index, value in ipairs(FindShapes("TORSO")) do
@@ -198,7 +203,7 @@ function tick(dt)
 
 			local vehicleHealth = GetVehicleHealth(vehicle)
 
-			local pT = GetPlayerTransform()
+			local pT = OpTargetTransform(vT.pos) -- (v2 operator) nearest living player
 			if vBT.pos[1] < pT.pos[1] or VecLength(VecSub(pT.pos, vT.pos)) < 2 then
 				targetfound = true
 			end
@@ -292,9 +297,9 @@ function tick(dt)
 				-- vehicle in range of player
 				if ragdollExit then
 					-- vehicle slow enough
-					if vehicleSpeed < 2 or GetPlayerVehicle() == vehicle then
+					if vehicleSpeed < 2 or OpAnyPlayerInVehicle(vehicle) then
 						-- vehicle stopped
-						if stoppedTime > 2 + math.random() or GetPlayerVehicle() == vehicle then
+						if stoppedTime > 2 + math.random() or OpAnyPlayerInVehicle(vehicle) then
 							-- ragdoll leave vehicle
 							if ragdollSpawnCD <= 0 then
 								-- no idea, delete ragdoll one by one
@@ -366,8 +371,7 @@ function tick(dt)
 						PlaySound(CB, GetVehicleTransform(vehicle).pos, 15)
 						PlaySound(DebriSnd, GetVehicleTransform(vehicle).pos, 15)
 
-						disttoplayer = VecLength(VecSub(GetVehicleTransform(vehicle).pos, GetPlayerCameraTransform().pos))
-						PlaySound(CBD, GetPlayerCameraTransform().pos, disttoplayer / 10)
+						OpPlayDistantSound(CBD, GetVehicleTransform(vehicle).pos) -- (v2 operator) for every player
 
 						sparks()
 						debri()
@@ -397,7 +401,7 @@ function tick(dt)
 	end
 end
 
-function update()
+function OperatorUpdate(dt)
 
 	if HasTag(vehicle, "ai_disabled") then
 		return
@@ -409,12 +413,12 @@ function update()
 		end
 		if targetfound then
 			--DebugPrint(vehicleSpeed)
-			goalPos = VecAdd(GetPlayerTransform().pos, Vec(0, 1, 0))
+			goalPos = VecAdd(OpTargetTransform(GetVehicleTransform(vehicle).pos).pos, Vec(0, 1, 0))
 		end
 	end
 end
 
-function draw()
+function OperatorDraw(dt)
 
 	if HasTag(vehicle, "ai_disabled") then
 		return
@@ -525,4 +529,19 @@ function debri()
 		Vec(math.random(-18, 18), math.random(-18, 18), math.random(-18, 18), 15))
 	end
 	ParticleReset()
+end
+
+
+-- (v2 operator) v1 callbacks, run on the server. draw() only played the siren, blinked lights and drew debug lines.
+function server.tick(dt)
+	if OpFinished then return end
+	OperatorTick(dt)
+	OpTicked = true
+	if not OpFinished then OperatorDraw() end
+end
+
+-- update reads values the first tick sets (health, VehicleSpeed); wait for it in case v2 orders them differently
+function server.update(dt)
+	if OpFinished or not OpTicked then return end
+	OperatorUpdate(dt)
 end

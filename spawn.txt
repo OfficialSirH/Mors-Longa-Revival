@@ -28,13 +28,20 @@ MOD/Vehicles/Constuction vehicles/Bluetractor.xml		           : [ML] - Vehicles 
 MOD/Vehicles/truck/truck_white.xml                                 : [ML] - Vehicles - Civillian/Box Truck
 MOD//Vehicles/1963 VW Beetle/1963 VW Beetle.xml                    : [ML] - Vehicles - Civillian/Bug
 MOD/Vehicles/bus/bus.xml 					                       : [ML] - Vehicles - Civillian/Bus
+MOD/Vehicles/Constuction vehicles/cement_truck.xml                 : [ML] - Vehicles - Civillian/Cement Truck
 MOD/Vehicles/cadillacfbl80/cadillacfbl80.xml                       : [ML] - Vehicles - Civillian/Classic Limo
 MOD/Vehicles/cadillacsd80/cadillacsd80.xml                         : [ML] - Vehicles - Civillian/Classic Sedan
+MOD/Vehicles/1974 Dodge Moncaco/1974 Dodge Monaco.xml              : [ML] - Vehicles - Civillian/Dodge Monaco
+MOD/Vehicles/1974 Dodge Moncaco/1974 DM Highway Police.xml         : [ML] - Vehicles - Civillian/Dodge Monaco Police
 MOD/Vehicles/Soviet Vehicles/zil131fire.xml			               : [ML] - Vehicles - Civillian/Firetruck
+MOD/Vehicles/MadMax2/1973 Ford Falcon XB GT.xml                    : [ML] - Vehicles - Civillian/Ford Falcon
 MOD/Vehicles/1969 Mini Cooper S/Mini Cooper.xml                    : [ML] - Vehicles - Civillian/Mini
+MOD/Vehicles/microcar/microcar.xml                                 : [ML] - Vehicles - Civillian/Microcar
 MOD/Vehicles/minivan1/minivan1.xml                                 : [ML] - Vehicles - Civillian/Minivan
+MOD/Vehicles/Constuction vehicles/mobile_crane.xml                 : [ML] - Vehicles - Civillian/Mobile Crane
 MOD/Vehicles/bus/bus Modified.xml                                  : [ML] - Vehicles - Civillian/Modified Bus
 MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.xml        : [ML] - Vehicles - Civillian/Officer's Jeep
+MOD/Vehicles/Plymouth Fury/Plymouth Fury.xml                       : [ML] - Vehicles - Civillian/Plymouth Fury
 MOD/avf/prefabs/technicals/offroad.xml                             : [ML] - Vehicles - Civillian/Offroad Technical
 MOD/avf/prefabs/technicals/offroad-open.xml                        : [ML] - Vehicles - Civillian/Offroad Technical Open
 MOD/avf/prefabs/technicals/Pickup Truck.xml			               : [ML] - Vehicles - Civillian/Pickup Truck
@@ -44,13 +51,16 @@ MOD/Vehicles/Constuction vehicles/Redtractor.xml		           : [ML] - Vehicles -
 MOD/Vehicles/saloon/salooncar_red.xml				               : [ML] - Vehicles - Civillian/saloon
 MOD/Vehicles/semitruck-us/Semi.xml                                 : [ML] - Vehicles - Civillian/Semi
 MOD/Vehicles/semitruck-us/Semi Special.xml                         : [ML] - Vehicles - Civillian/Semi Special
-Mod/Vehicles/Soviet Vehicles/uaz452_emergency.xml		           : [ML] - Vehicles - Civillian/Soviet ambulance
+MOD/Vehicles/semitruck-flathead/Semi.xml                           : [ML] - Vehicles - Civillian/Semi Flathead
+MOD/Vehicles/Based Vehicles/smallboat_red.xml                    : [ML] - Vehicles - Civillian/Small Boat
+MOD/Vehicles/Soviet Vehicles/uaz452_emergency.xml		           : [ML] - Vehicles - Civillian/Soviet ambulance
 MOD/Vehicles/Soviet Vehicles/paz 3205.xml			               : [ML] - Vehicles - Civillian/Soviet Bus
 MOD/Vehicles/Soviet Vehicles/uaz452.xml				               : [ML] - Vehicles - Civillian/Soviet Van
 MOD/Vehicles/Soviet Vehicles/uaz452 Modified.xml 	               : [ML] - Vehicles - Civillian/Soviet Van Lifted
 MOD/Vehicles/Soviet Vehicles/uaz452C_white.xml 			           : [ML] - Vehicles - Civillian/Soviet VanC
 MOD/Vehicles/sportscar/sportcar_green.xml                          : [ML] - Vehicles - Civillian/Sports Car
 MOD/Vehicles/stationwagon/station_wagon_brown.xml 		           : [ML] - Vehicles - Civillian/StationWagon
+MOD/Vehicles/Gaz24/volgawhite.xml                                  : [ML] - Vehicles - Civillian/Volga
 MOD/Vehicles/GAZ-24 (1968)/gaz24unreleased.xml                                   : [ML] - Vehicles - Civillian/GAZ-24 sedan
 MOD/Vehicles/GAZ-24 (1968)/gaz24unreleased_khb.xml                                   : [ML] - Vehicles - Civillian/GAZ-24 VIP
 MOD/Vehicles/GAZ-24 (1968)/gaz24unreleased_milicia.xml                                   : [ML] - Vehicles - Civillian/GAZ-24 MP
@@ -61,21 +71,38 @@ MOD/Vehicles/van1_yellow/Van (Yellow).xml			               : [ML] - Vehicles - C
 MOD/Vehicles/Enemy Car/Pickup Enemy.xml                            : [ML] - Vehicles - Insurgent/Insurgent chase vehicle 1
 MOD/Vehicles/Enemy Car/Sport Enemy.xml	                           : [ML] - Vehicles - Insurgent/Insurgent chase vehicle 2
 MOD/Vehicles/Enemy Car/SUV Enemy.xml 		                       : [ML] - Vehicles - Insurgent/Insurgent chase vehicle 3
+MOD/Vehicles/brdm/brdm.xml                                  : [ML] - Vehicles - Insurgent/BRDM-2
+MOD/main/AS350/AS350_INSURGENT_PARKED.xml                  : [ML] - Vehicles - Insurgent/Insurgent Heli (parked, no AI)
 
 MOD/Vehicles/humvee/hummer.xml                              : [ML] - Vehicles - Military/Hummer UM
 MOD/avf/prefabs/humvee/umhummeropen.xml				        : [ML] - Vehicles - Military/Hummer Open UM
 MOD/avf/prefabs/humvee/umhummer With 50 Cal.xml 		    : [ML] - Vehicles - Military/Hummer With 50 Cal
 MOD/Vehicles/ural/ural.xml                                  : [ML] - Vehicles - Military/SU Transport Truck
+MOD/Vehicles/military_truck/Milltary_Truck.xml              : [ML] - Vehicles - Military/Military Truck
 MOD/avf/prefabs/technicals/technical_DSHK.xml		        : [ML] - Vehicles - Military/AAF Pickup Truck technical
-MOD/Vehicles/ZIL131.xml 			        : [ML] - Vehicles - Military/AAF Transport truck
+MOD/avf/prefabs/technicals/technical_ZU_23.xml		        : [ML] - Vehicles - Military/AAF Pickup Truck ZU-23
+MOD/avf/prefabs/technicals/technical_SPG9.xml               : [ML] - Vehicles - Military/AAF Pickup Truck SPG-9
+MOD/Vehicles/Soviet Vehicles/ZIL131.xml 			        : [ML] - Vehicles - Military/AAF Transport truck
 MOD/Vehicles/Soviet Vehicles/ZIL131_ZSU23.xml			    : [ML] - Vehicles - Military/AAF Truck Technical
+MOD/avf/prefabs/ZIS-151/ZIS-151.xml                          : [ML] - Vehicles - Military/ZIS-151
+MOD/avf/prefabs/ZIS-151/ZIS-151 Damaged.xml                  : [ML] - Vehicles - Military/ZIS-151 Damaged
+MOD/avf/prefabs/ZIS-151/ZIS-151_Katyusha.xml                 : [ML] - Vehicles - Military/Katyusha
+MOD/avf/prefabs/Weaponised vehicles/Willys Jeep.xml          : [ML] - Vehicles - Military/Willys Jeep
 MOD/avf/prefabs/technicals/offroad_WMIK_MILAN.xml           : [ML] - Vehicles - Military/WMIK Technical
+MOD/avf/prefabs/technicals/offroad_GMG.xml                 : [ML] - Vehicles - Military/GMG Offroad
+MOD/avf/prefabs/turrets/Kornet.xml                          : [ML] - Vehicles - Military/Kornet tripod
+MOD/avf/prefabs/turrets/ags30.xml                           : [ML] - Vehicles - Military/AGS-30 tripod
 MOD/avf/prefabs/T-34/T-34-85.xml			                : [ML] - Vehicles - Military/T-34
 MOD/avf/prefabs/T-54 55/T-54-3 Alashya.xml			        : [ML] - Vehicles - Military/T-54 AAF
 MOD/avf/prefabs/T-54 55/T-55A Alashya.xml			        : [ML] - Vehicles - Military/T-55A AAF
 MOD/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.xml	: [ML] - Vehicles - Military/M-51 Sherman
 MOD/avf/prefabs/t72_desert/T72B3_mod_2016.xml       		: [ML] - Vehicles - Military/T-72
+MOD/avf/prefabs/t72_desert/T72A.xml                         : [ML] - Vehicles - Military/T-72A
+MOD/avf/prefabs/bmp/BMP-1 d.xml                             : [ML] - Vehicles - Military/BMP-1
+MOD/avf/prefabs/bmp/BMP-1P d.xml                            : [ML] - Vehicles - Military/BMP-1P
+MOD/avf/prefabs/bmp/BMP-2 D.xml                             : [ML] - Vehicles - Military/BMP-2
 MOD/avf/prefabs/bmp/BMP-3 d.xml                             : [ML] - Vehicles - Military/BMP-3
+MOD/main/AS350/AS350_MILITARY_PARKED.xml                    : [ML] - Vehicles - Military/AAF Heli (parked, no AI)
 
 MOD/Vehicles/MadMax2/Pursuit Special.xml                    : [ML] - Vehicles BASED/Pursuit Special
 MOD/Vehicles/van1_yellow/Van Modified.xml 			        : [ML] - Vehicles BASED/Modified Van
@@ -89,7 +116,7 @@ MOD/Vehicles/bus/jetbus.xml					                : [ML] - Vehicles BASED/JetBus
 MOD/Vehicles/Based Vehicles/wheeledcockpit.xml			    : [ML] - Vehicles BASED/Wheeled Cockpit
 MOD/Vehicles/Based Vehicles/SHED.xml                        : [ML] - Vehicles BASED/Shed?
 MOD/Vehicles/Based Vehicles/sailboat.xml			        : [ML] - Vehicles BASED/LeBoat
-/Vehicles/RVMethLab/MethLab.xml                             : [ML] - Vehicles BASED/Bad RV
+MOD/Vehicles/RVMethLab/MethLab.xml                          : [ML] - Vehicles BASED/Bad RV
 
 MOD/scripts/nothing.xml                                     : [ML] - Scripts/.1 Spawn one of these scripts
 MOD/scripts/nothing.xml                                     : [ML] - Scripts/.2 Open debug menu "backspace"

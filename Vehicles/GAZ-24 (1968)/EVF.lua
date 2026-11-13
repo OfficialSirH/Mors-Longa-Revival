@@ -1,9 +1,35 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) SERVER: GAZ-24 doors / hood / trunk latches (free while ANY player grabs them, latched shut when let go, open /
+-- close sounds), hinged steering wheel from the DRIVER's left/right, door-open beep while any player is inside.
+-- v1 used the host's grab and input. Parameters read in init (v2: no API calls at load time). Hand-converted 2026-11-09.
 --script version 1.1
 doorvolume = 0.4                                                                --if you reading this, get ready for yanderecode
-beep = GetBoolParam("doornotification")
-trunklift = GetBoolParam("trunklift")
-hoodlift = GetBoolParam("hoodlift")
-sounddir = GetStringParam("sounddir")
+
+-- (v2) the player driving vehicle (passengers ride too but must not steer), or nil
+function VehicleDriver(vehicle)
+    if vehicle == 0 then return nil end
+    for p in Players() do
+        if IsPlayerVehicleDriver(vehicle, p) then return p end
+    end
+    return nil
+end
+
+function AnyPlayerInside(vehicle)
+    if vehicle == 0 then return false end
+    for p in Players() do
+        if GetPlayerVehicle(p) == vehicle then return true end
+    end
+    return false
+end
+
+-- (v2) v1: GetPlayerGrabShape() == shape or GetPlayerGrabBody() == body (the host)
+function AnyPlayerGrabs(shape, body)
+    for p in Players() do
+        if GetPlayerGrabShape(p) == shape or GetPlayerGrabBody(p) == body then return true end
+    end
+    return false
+end
 function indexshapes()
     local doors = FindShapes("door")
     d1 = doors[1]
@@ -91,11 +117,15 @@ function GenerateSoundTable(ID)
     end
 end
 
-function init()
+function server.init()
+    beep = GetBoolParam("doornotification")
+    trunklift = GetBoolParam("trunklift")
+    hoodlift = GetBoolParam("hoodlift")
+    sounddir = GetStringParam("sounddir")
     if sounddir == "" then
         sounddir = "MOD/Vehicles/GAZ-24 (1968)/EVF/snd"
     end
-    doorbeep = LoadLoop(sounddir .. "/doorbeep.ogg")
+    doorbeep = LoadLoop(sounddir .. "/doorbeep.ogg") -- (v2 note) the file never shipped; the beep stays off (no XML sets "doornotification")
     door_o1 = LoadSound(sounddir .. "/door_o1.ogg")
     door_o2 = LoadSound(sounddir .. "/door_o2.ogg")
     door_c = LoadSound(sounddir .. "/door_c.ogg")
@@ -127,12 +157,11 @@ end
 function doorlatchsystem(shape, joint, ID)
     if not IsJointBroken(joint) then
         local a = GetJointMovement(joint)
-        local grabshape = GetPlayerGrabShape()
         local body1 = GetShapeBody(shape)
-        local grabbody = GetPlayerGrabBody()
+        local grabbed = AnyPlayerGrabs(shape, body1)
         local pos = GetShapeWorldTransform(shape).pos
         if not IsJointBroken(joint) then
-            if grabshape == shape or grabbody == body1 then
+            if grabbed then
                 SetJointMotor(joint, 0, 0)
                 if not played[ID]["played1o"] and a >= 0.06 then
                     played[ID]["played1o"] = true
@@ -165,14 +194,13 @@ end
 function hoodlatchsystem(shape, joint, ID, sound_o1, sound_c, lift, sound_o2)
     if not IsJointBroken(joint) then
         local a = GetJointMovement(joint)
-        local grabshape = GetPlayerGrabShape()
         local body1 = GetShapeBody(shape)
-        local grabbody = GetPlayerGrabBody()
+        local grabbed = AnyPlayerGrabs(shape, body1)
         local pos = GetShapeWorldTransform(shape).pos
         local min, max = GetJointLimits(joint)
         local b = max / 2 - 15
         local c = max - 0.2
-        if grabshape == shape or grabbody == body1 then
+        if grabbed then
             SetJointMotor(joint, 0, 0)
             played[ID]["open"] = true
             if not played[ID]["played1o"] and a >= 0.06 then
@@ -228,14 +256,19 @@ function hoodlatchsystem(shape, joint, ID, sound_o1, sound_c, lift, sound_o2)
     end
 end
 
-function update()
-    if GetPlayerVehicle() == veh then
-        if InputDown("left") or InputDown("right") then
-            if InputDown("left") then
-                SetJointMotorTarget(steer_j, 130  , 4.5)
-            else
-                SetJointMotorTarget(steer_j, -130, 4.5)
+function server.update(dt)
+    local driver = VehicleDriver(veh)
+    if AnyPlayerInside(veh) then
+        -- (v2) v1 swung the wheel to +-130 deg from the keys; the driver's hands turn with GetVehicleSteering x 180
+        -- (data/script/player_locomotion.lua), less than that (user, 2026-11-09). The wheel now follows the same
+        -- value. Sign: v1 turned the joint positive for "left"; the first time the driver holds left with the
+        -- steering away from zero, the sign of GetVehicleSteering for "left" is recorded (LeftSign).
+        if driver then
+            local s = GetVehicleSteering(veh)
+            if InputDown("left", driver) and math.abs(s) > 0.05 then
+                LeftSign = s > 0 and 1 or -1
             end
+            SetJointMotorTarget(steer_j, s * 180 * (LeftSign or -1), 4.5)
         else
             SetJointMotorTarget(steer_j, 0, 4.5)
         end

@@ -1,14 +1,17 @@
-function init()
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: shrine; any player can pray (interact); its 2D sounds play on every client.
+function server.init()
 	Shrine = FindShape("Shrine")
 	AUGH = LoadSound("MOD/snd/Enemies/Boss/Binge.ogg")
 	Gurenya = LoadSound("MOD/snd/Enemies/Boss/NecoArc.ogg")
 	timer = 0
 	prayed = false
 end
-function tick(dt)
+function server.tick(dt)
 	if IsShapeBroken(Shrine) then
 		if not played then
-			PlaySound(AUGH)
+			ClientCall(0, "client.bingeSound", "MOD/snd/Enemies/Boss/Binge.ogg") -- (v2) 2D sound for everyone
 			played = true
 			prayed = true
 		end
@@ -21,10 +24,18 @@ function tick(dt)
 			end
 		end
 	end
-	if InputPressed("Interact") and GetPlayerInteractShape() == Shrine and not prayed then
-		PlaySound(Gurenya)
+	local prayer = nil -- (v2) any player
+	for p in Players() do
+		if InputPressed("interact", p) and GetPlayerInteractShape(p) == Shrine then prayer = p end
+	end
+	if prayer and not prayed then
+		ClientCall(0, "client.bingeSound", "MOD/snd/Enemies/Boss/NecoArc.ogg")
 		prayed = true
 		ShrineTrans = GetShapeWorldTransform(Shrine)
 		Spawn("MOD/prefabs/spawns/loots/GiftFromGod.xml",Transform(VecAdd(ShrineTrans.pos,Vec(0,2,0))))
 	end
+end
+
+function client.bingeSound(path)
+	PlaySound(LoadSound(path))
 end

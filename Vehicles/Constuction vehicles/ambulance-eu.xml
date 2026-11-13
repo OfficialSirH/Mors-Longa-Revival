@@ -1,6 +1,6 @@
 <prefab version="1.1.0">
 	<group name="instance=MOD/assets/vehicle/emergency response/ambulance-eu.xml" pos="0.0 0.1 -14.4" rot="0.0 -90.0 0.0">
-		<script file="MOD/script/policelightsF.lua">
+		<script file="MOD/scripts/missing_script_stub.lua">
 			<body pos="-0.75 2.5 -1.2" rot="0.0 180.0 0.0" dynamic="true">
 				<vox tags="blink=22" pos="0.0 -0.1 0.0" rot="0.0 -180 0.0" density="1.5" strength="2" file="MOD/vox/ambulance-eu.vox" object="light1-l">
 					<light tags="blink=14" pos="0.05 0.2 0.0" color="1.0 0.2 0.2" scale="20" glare="0.5"/>

@@ -997,7 +997,7 @@
 			</script>
 		</group>
 	</group>
-	<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Credit Screen.lua">
+	<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 		<body tags="cam" pos="-70.0 3.0" dynamic="false"/>
 		<location tags="camdest=1" pos="-70.0 2.9 -6.6">
 			<location tags="lookat=1" pos="10.2 -0.5 -0.1"/>

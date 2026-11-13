@@ -1,4 +1,11 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) PKM on the Van Modified: runs on our own mounted-gun script (scripts/MountedGun.lua) instead of the external AVF mod
+-- (v1 included ../../scripts/avf_custom.lua). The AVF table below is still the gun's config.
+MountedGunCalibre = "762x54" -- gunperks.lua calibre for damage / velocity
+MountedGunSightAt = 1 -- sight view eye above the muzzle end: further back it sat inside the van, behind the window frame
+MountedGunSound = "MOD/snd/Weapons/ak/ak_0.ogg" -- (2026-11-12) was MOD/snd/ak0.ogg, which does not exist: silent -- AVF's MOD/sounds/... files live in the external AVF mod
 
 
 --[[

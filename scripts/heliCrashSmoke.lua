@@ -1,3 +1,6 @@
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: heli wreck smoke, scorch paint and fire loop.
 --[[
 #include "TDSU/tdsu.lua"
 #include "masterScriptRemoverAPI.lua"
@@ -6,7 +9,7 @@
 DebugMode = false
 
 
-function init()
+function server.init()
 
 	DrawPoints = {}
 
@@ -34,8 +37,9 @@ function init()
 
 end
 
-function update()
+function server.update()
 
+	if Finished then return end
 	local pos = VecAdd(GetLightTransform(CrashLight).pos, Vec(0, -0.3, 0))
 
 	ParticleReset()
@@ -59,10 +63,12 @@ function update()
 
 end
 
-function tick()
+function server.tick()
 	if not IsHandleValid(CrashLight) then
-		queueRemoval()
+		-- (v2) v1 queueRemoval() (pause-menu handle trick) does not work on the server: just stop.
+		Finished = true
 	end
+	if Finished then return end
 	local pos = VecAdd(GetLightTransform(CrashLight).pos, Vec(0, -0.3, 0))
 
 	PlayLoop(CrashLoop, pos, 0.1)

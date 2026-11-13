@@ -214,7 +214,7 @@ Market={
 			price=1800
 		},
 		{
-			item="gun-pp19_Simonov-9_mag0-ak-9x19_Simonov-9_30_30_9x19_-muzzle2------",
+			item="gun-pp19_Simonov-9_mag0-ak-9x19_Simonov-9-Mag_30_30_9x19_-muzzle2------",
 			price=1430
 		},
 		{

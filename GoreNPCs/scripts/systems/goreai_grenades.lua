@@ -17,8 +17,8 @@ function throw_grenade(spawnPos, targetPos, vel, fuse_time, explosion_size)
 
 	-- Set throw target position.
 	local throwTargetPos = targetPos
-	if GetPlayerVehicle() ~= 0 then
-		throwTargetPos = VecAdd(throwTargetPos, GetBodyVelocity(GetVehicleBody(GetPlayerVehicle())))
+	if GetPlayerVehicle(GoreP) ~= 0 then -- (v2 goreai) target player
+		throwTargetPos = VecAdd(throwTargetPos, GetBodyVelocity(GetVehicleBody(GetPlayerVehicle(GoreP))))
 	end
 
 	-- Set grenade velocity.
@@ -83,9 +83,11 @@ function tick_grenades()
 				end
 				grenade.lastvel = curvel
 
-				if GetPlayerInteractBody() == grenade.body and InputPressed("interact") then
-					local throwVel = VecScale(VecNormalize(VecSub(grenadePos,GetPlayerTransform().pos)), 15)
-					SetBodyVelocity(grenade.body, throwVel)
+				for _, p in ipairs(GorePlayerIds) do -- (v2) any player can throw it back
+					if GetPlayerInteractBody(p) == grenade.body and InputPressed("interact", p) then
+						local throwVel = VecScale(VecNormalize(VecSub(grenadePos,GetPlayerTransform(p).pos)), 15)
+						SetBodyVelocity(grenade.body, throwVel)
+					end
 				end
 
 				-- Check if grenade should blow up.
@@ -272,6 +274,7 @@ function spalling_push_shrapnel(spallingLoc)
 
 end
 function spalling_shrapnel_operations(projectile,dt)
+  spalling_sprite = spalling_sprite or LoadSprite("MOD/img/spalling.png")
     projectile.cannonLoc.pos = projectile.point1
     local shellHeight = projectile.shellType.shellHeight
     local shellWidth = projectile.shellType.shellWidth
@@ -371,8 +374,8 @@ function inflict_player_damage(projectile,point2)
 
   hurt_dist = VecLength(VecSub(projectile.point1,point2))
   --Hurt player
-  local player_cam_pos = GetPlayerCameraTransform().pos
-  local player_pos = GetPlayerTransform().pos
+  local player_cam_pos = GetPlayerCameraTransform(GoreP).pos
+  local player_pos = GetPlayerTransform(GoreP).pos
 
   player_pos = VecLerp(player_pos,player_cam_pos,0.5)
   local toPlayer = VecSub(player_pos, t.pos)
@@ -435,6 +438,6 @@ do
   }
 
   active_spall=0
-  spalling_sprite =  LoadSprite("MOD/img/spalling.png")
+  spalling_sprite = nil -- (v2) no API calls at load time; loaded in spalling_shrapnel_operations
 
 end

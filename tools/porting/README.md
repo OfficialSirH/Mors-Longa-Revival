@@ -1,0 +1,87 @@
+# Porting tools
+
+Helpers for converting Mors Longa scripts to Teardown 2.x (`#version 2`). Rules: `docs/PORTING.md`; context and
+engine facts: `docs/TECHNICAL_REFERENCE.md`. Run everything from the repo root.
+
+## Setup (per session, user's PC)
+
+* Lua 5.1: clone `https://github.com/lua/lua`, `git checkout v5.1.1`, then (Git Bash, LLVM installed)
+  `clang -O1 -w -o lua51.exe $(ls *.c | grep -vE '^(luac|print|ltests)\.c$')`.  No Lua at all: `texlua` (TeX Live, Lua 5.3) runs `check.lua` and `toplevel.lua`.
+* Python: a venv in the session scratchpad (`python -m venv venv`); `python3` is not on PATH on the user's PC.
+
+## Analysis
+
+* `check.lua` – Lua 5.1 syntax check, `#include`/`#version` lines ignored: `lua5.1 tools/porting/check.lua f.lua`.
+  Lines starting with `#` are treated as directives, so don't start a code line with `#x`.
+* `toplevel.lua` – loads a script + its quoted `#include` chain on a mock engine and lists API calls made at load
+  time (forbidden in v2): `lua5.1 tools/porting/toplevel.lua . script/AK74.lua`. Unquoted includes
+  (`#include x.lua`) are not followed: run it on those files directly.
+* `sides.py` – per-function report of server-only / client-only / UI / registry calls (how to split a script).
+
+## Converters (`patches/`)
+
+Two kinds. **Rebuild** converters regenerate their files from a git base on every run (re-runnable; never hand-edit
+those files, put changes in the converter). **In-place** converters convert a v1 file once (they assert v1).
+
+| Converter | Kind | Files |
+|---|---|---|
+| `convert_gun.py <file>` | in place | one gun script; asserts on template deviations; per-gun FIXUPS + all-gun fixes (camo nil, `GunPerkFor`) |
+| `convert_melee.py` | in place | 8 melee weapons (world effects via `Melee_Functions.lua` → `server.meleeOps`) |
+| `convert_server.py` | in place | world scripts; `convert(path, edits, note, realms)` is imported by the others (`realms` maps v1 callbacks to `server`/`client`, default all server) |
+| `convert_goreai.py [file]` | rebuild (base 6c28435) | GoreNPCs components/initializer, plus gunfunctions.lua, Melee_Functions.lua, AdvancedHealthScript.lua edits. Hand-written: goreai_main, systems/goreai_killcam, _players, _netview, _controller, _sitting |
+| `convert_operators.py` | rebuild (base 6c28435) | enemy/convoy car scripts (server only) |
+| `convert_props.py [file]` | in place | small prefab scripts (batches A, D), RPG rocket `script/grenade.lua` (restore v1 with `git show 6c28435:<f> > <f>` before re-running) |
+| `convert_shop.py [file]` | in place | shop segment scripts (batch B) |
+| `convert_menu.py` | rebuild (base 6c28435) | main menu scripts, RotateScene; edits Config.lua once |
+| `convert_horde.py` | rebuild (base 6c28435) | WaveHandler, HordePlaceTool (horde shelved) |
+| `add_seats.py [--dry-run] [--replace]` | idempotent | seat rigs per vehicle (VEHICLES table) into the prefab and its embedded copies (`instance=` groups, or a `path=MOD/...` tag on the `<vehicle>`; key `file#name` = that file's `<vehicle name="name">`); skips vehicles with rigs unless `--replace`. Layouts: `driver(...)`, `driver_standing(stand, wheel, radius)`, `passenger(..., yaw=, legroom=, floor=, head=)`, `gunner_seated(seat, feet_y, legroom=, yaw=)` (seated gunner place, ZU-23 mount / BMP / tank turrets), `gunner(sort, stand, grip, yaw=)` (standing mounted-gun place, rig tags `gunner relative_parent sort=99`, written under the vehicle's first `<body>`; the engine still counts it as the last seat; scripts/MountedGun.lua) (`head`: ik_head offset, default 0.8 up; low cabs as official pickup_red: (0, 0.55, 0.25), tilt 70-80), `shifted(layout, dy=)`, `official(prefab, shift=, seat=, move=, keep=)` (copies an official 2.x vehicle's rigs; `seat`/`move` move single locations, `keep` filters rigs), `heli_pilot(seat, feet_y, legroom)` (AS350 pilot facing +z). `WRAP_VEHICLE` (script marker → `<vehicle>` tag): first wraps those scripts' content in a `<vehicle>` (AS350, which had none), idempotent |
+| `port_immersive.py` | rebuild (base git 9dde6dd) | `avf/scripts/Immersive_Tank.lua`: logic on the server, effects on the clients (one event each), test `test_immersive_tank.lua` |
+| `port_avf.py` | rebuild (base `tools/porting/avf_base/`, AVF V-3.0.2, credited) | `scripts/avf/AVF_Shells.lua`: AVF's shell code split server (simulation, world effects, damage) / client (visuals from events); glue by hand in `scripts/avf/AVF_Glue.lua`; test `test_avf_cannon.lua`; cost profile `tests/profile_avf_foliage.lua` (real quaternion maths, counts engine calls per shell) |
+| `heli_variants.py` | rebuild (base: the current `main/AS350/AS350_{MILITARY,INSURGENT}.xml`, run after `add_seats.py`) | `AS350_*_PARKED.xml`: spawn-menu copies tagged `parked` (no enemy AI) |
+| `convert_steering.py [--dry-run]` | idempotent | fake-wheel steering wheels (UAZ-452 ×5) → `steer`-tagged body part + `<script file="MOD/scripts/SteeringWheel.lua">` around the vehicle |
+| `gunfunctions.py` | history | the projectile world/fx split as applied to gunfunctions.lua |
+
+All converters write LF (the repo is LF since 2026-11-08); inputs read from old commits may be CRLF.
+
+## Mock tests (`tests/`)
+
+* `mockengine.lua` – stubs every API function from `script_defs.lua` (records calls, returns 0 / {} / Vec /
+  Transform), flags client-only calls on the server and server-only calls on the client, fake registry, players
+  (`PLAYERS`, `ORDER`, `LOCAL`, `ADDED`, `REMOVED`), `ServerCall`/`ClientCall` into `env.sent`, `shared`.
+  `MockEngine.load(path, {preload = MockEngine.includes(path)})` runs a script with its include chain.
+  `env.def(name, fn)` overrides a stub but still records it. Stubs return 0, which is truthy in Lua: def
+  `HasTag`/`IsHandleValid`/`InputPressed` etc. to false where a test depends on it.
+* Tests: `test_compat`, `test_gunnet`, `test_goreai`, `test_npcview`, `test_generateroad`, `test_removeroad`,
+  `test_travel`, `test_operators`, `test_vehicleevents`, `test_props`, `test_shop`, `test_tutorial`, `test_menu`,
+  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`. Run all after every change:
+  `for t in tools/porting/tests/test_*.lua; do lua5.1 $t || echo "FAIL $t"; done`.
+
+## Other tools
+
+* `make_release.py [--dry-run] [--dest <folder>]` – Phase 5: copies only the files the game loads (no .git,
+  tools, docs, unused/, dev files) into `Documents/Teardown/mods/Mors Longa Revival (Release)`, the folder to
+  upload (the dev mod folder is a junction to the repo). Refuses while `info.txt` says AUTHOR_NAME; keeps the
+  release's own `id.txt` (its Workshop item after the first upload); empties only a folder it made itself.
+* `make_tool_prefab.py <GUN> [camo...]` – builds `script/Weapons/<GUN> Tool.xml` for LoadTool guns (reverse part
+  order, one lane per part, tags, missing `file=` filled in).
+* `vox.py` + `render_gun.py` – MagicaVoxel reader and an offline labelled render of a gun model (matplotlib):
+  `python render_gun.py vox/ak74.vox "script/Weapons/AK74 Base.xml" out.png`.
+* `blender_vehicle.py` – runs inside Blender (Blender MCP, server registered in the repo's `.mcp.json`; in Blender
+  press N → "MCP for Blender" → Start MCP Server). Loads a vehicle/prefab XML (MOD/ and BUILT-IN/ paths, instances)
+  into scene "Teardown": vox parts as coloured meshes, locations/lights/joints as named markers, XML attributes as
+  `td_*` properties; local coordinates under the `TD:<name>` root are Teardown coordinates. `report(root)` /
+  `td_pos(ob, part)` print marker positions relative to their part, ready to paste into the XML. Usage in its header.
+  Checked: official seat markers land exactly on the seat cushions. Applies `.vox` node rotations (the UAZ body
+  is stored turned 180°) and drops empty voxel layers around a shape like the engine (`crop_model`; found on the
+  Jeep and ZIL-131, TECHNICAL_REFERENCE §6). Group `prop0="file=..."` defaults are applied
+  to child vox/voxbox (Volga). Measuring: `show_only`, `cutaway(root, y)`, `heightmap(...)`, `ray(...)`,
+  `vehicle_markers`. `mannequin(root, "driver sort=0")` / `mannequins(root)`: the official player character
+  (`data/prefab/player/player_sven_lagom.xml`) as an armature, pelvis on the seat point, Blender IK to the rig's
+  hand/foot points. Calibrated on the verified UAZ: reach, backrest and legroom match the game; the head is
+  ~0.15 m higher than in-game (upright spine; the game's sitting pose is lower). Seat tilt follows the engine
+  (eased toward upright by cos^2: rot x 50 -> ~29 deg, 55 -> ~37, 60 -> ~45). Hide mannequins before `ray`. Knees bend up/forward (leg IK pole +90; -90 bent them backward before 2026-11-08). The spine is IK'd so the head
+  reaches the rig's `ik_head`, as the engine does (reclined official seats look nearly upright in-game).
+  `merc(root, rig)`: the Friendly Merc ragdoll in the game's NPC sit pose on a rig (same math as goreai_sitting.lua,
+  checked against it by test_sitting), to compare with the player mannequin.
+* `fix_missing_scripts.py [--dry-run]` – repoints XML `<script file>` references to files that exist nowhere to
+  `MOD/scripts/missing_script_stub.lua`; re-run after adding prefabs.

@@ -1,21 +1,34 @@
---[[
-#include "camera.lua"
-]]
+#version 2
+#include "script/include/player.lua"
+-- AS350 rocket (rocket_small.xml; also the Hind's rocket.xml), v2 port 2026-11-13 (hand-written; original: git
+-- 9dde6dd main/AS350/script/rocket.lua). Server: thrust, guidance (ConstrainOrientation: server.update only),
+-- detonation. Clients: flame / smoke trail and the flight sound. The original's follow camera (FollowCamEnabled,
+-- off; camera.lua) is not ported. v1 used "the camera" (the one player) to home on a player and to blow up next to
+-- one: now every player (their eyes, GetPlayerCameraTransform).
 
-FollowCamEnabled = false
+local function nearestPlayerEye(pos)
+	local best, bestD
+	for p in Players() do
+		if GetPlayerHealth(p) > 0 then
+			local e = GetPlayerCameraTransform(p).pos
+			local d = VecLength(VecSub(e, pos))
+			if best == nil or d < bestD then best, bestD = p, d end
+		end
+	end
+	return best, bestD
+end
 
-function init()
+function server.init()
     Bd = FindBody("rocket")
     Sp = FindShape("rocket")
     Tr = GetBodyTransform(Bd)
     MassFactor = GetBodyMass(Bd)/291
-    CamFrameTr = Tr
     Dir = QuatRotateVec(Tr.rot,Vec(0,0,-1))
     SetShapeCollisionFilter(Sp, 0, 0)
     Counter = 0
     Active = true
+    shared.active = true
     PrimingCounter = 30
-    Sound_fly = LoadLoop("MOD/main/AS350/rocket_effect.ogg")
 
     TrackingPower = 0.75 --max angular velocity
 
@@ -31,10 +44,11 @@ function init()
             ClearKey("level.RocketTarget" .. i2)
         end
         QueryDir = VecNormalize(VecSub(TargetPoint,QueryPos))
-        local l = VecLength(VecSub(TargetPoint,GetPlayerCameraTransform().pos))
-        --DebugPrint(l)
-        if l < 0.6 then
+        -- (v2) aimed at a player's eye: home on that player (v1: the one player's camera)
+        local p, l = nearestPlayerEye(TargetPoint)
+        if p and l < 0.6 then
             PlayerTracking = true
+            TrackedPlayer = p
         end
     end
 
@@ -49,9 +63,9 @@ function init()
     end
 end
 
-function update(dt)
-    if Active == false then 
-        return 
+function server.update(dt)
+    if Active == false then
+        return
     end
     if Counter == PrimingCounter then
         SetShapeCollisionFilter(Sp, 255, 255)
@@ -72,19 +86,22 @@ function update(dt)
             Detonate = true
         end
 
-
         hit, point, normal, shape = QueryClosestPoint(ForwardPoint, 0.15)
         if hit then
             Detonate = true
         end
 
-        local v = VecSub(ForwardPoint,GetCameraTransform().pos)
-        local l = VecLength(v)
-        if l < 1.5 then
-            v = VecSub(VecAdd(ForwardPoint,GetBodyVelocity(Bd)),GetCameraTransform().pos)
-            local l2 = VecLength(v)
-            if l <= l2 then
-            Detonate = true
+        -- (v2) next to any player's eye (v1: the camera)
+        for p in Players() do
+            if GetPlayerHealth(p) > 0 then
+                local eye = GetPlayerCameraTransform(p).pos
+                local l = VecLength(VecSub(ForwardPoint, eye))
+                if l < 1.5 then
+                    local l2 = VecLength(VecSub(VecAdd(ForwardPoint,GetBodyVelocity(Bd)), eye))
+                    if l <= l2 then
+                        Detonate = true
+                    end
+                end
             end
         end
     end
@@ -94,22 +111,21 @@ function update(dt)
     if Detonate then
         Explosion(Pos,1.2)
         Active = false
+        shared.active = false
     end
 
     if Guided then
-        if IsHandleValid(TargetBody) == false and PlayerTracking == false then 
+        if IsHandleValid(TargetBody) == false and PlayerTracking == false then
             Guided = false
         end
         if PlayerTracking == false then
             TargetPoint = TransformToParentPoint(GetBodyTransform(TargetBody),TargetPointLoc)
         else
-            TargetPoint = GetPlayerCameraTransform().pos
+            if TrackedPlayer and GetPlayerHealth(TrackedPlayer) > 0 then
+                TargetPoint = GetPlayerCameraTransform(TrackedPlayer).pos
+            end
             if Counter>15 then Guided = false end
         end
-        --DebugCross(TargetPoint)
-        --DebugLine(GetBodyTransform(Bd).pos,TargetPoint)
-        
-        --update Dir based on vec to target point from tr.pos
 
         ConstrainOrientation(Bd,0,Tr.rot,QuatLookAt(Tr.pos,TargetPoint),TrackingPower)
         Dir = QuatRotateVec(Tr.rot,Vec(0,0,-1))
@@ -118,27 +134,21 @@ function update(dt)
         SetBodyVelocity(Bd,Vel)
     end
 
-    PlayLoop(Sound_fly,ForwardPoint,2)
-    smoke(Pos,GetBodyVelocity(Bd))
     Counter = Counter + 1
-
 end
 
-function tick(dt)
-    if FollowCamEnabled then
-        if Active then
-            FollowCamera(dt,GetBodyTransform(Bd).pos,GetBodyVelocity(Bd),CamFrameTr,true,false)
-            FinalCamTr = GetCameraTransform()
-            finalcount= 0
-                --DebugPrint(VecStr(Pos))
+function client.init()
+    Bd = FindBody("rocket")
+    Sound_fly = LoadLoop("MOD/main/AS350/rocket_effect.ogg")
+end
 
-        else
-
-            finalcount = finalcount + 1
-            if finalcount>60*1.5 then return end
-            SetCameraTransform(FinalCamTr)
-        end
-    end
+-- 60 Hz like the original's update: flight sound and trail while the server says the rocket flies
+function client.update(dt)
+    if shared.active == false or not IsHandleValid(Bd) then return end
+    local tr = GetBodyTransform(Bd)
+    local pos = TransformToParentPoint(tr, GetBodyCenterOfMass(Bd))
+    PlayLoop(Sound_fly, TransformToParentPoint(tr, Vec(0,0,-0.2)), 2)
+    smoke(pos, GetBodyVelocity(Bd))
 end
 
 function smoke(bpos,vel)
@@ -157,7 +167,6 @@ function smoke(bpos,vel)
     SCount = 3
 
     ParticleColor(0.8,0.8,0.8)
-    --ParticleEmissive(2,0,"linear",0,0.5)
     ParticleRadius(0.2,0.4,"linear")
     ParticleAlpha(0.2,0.0)
     ParticleCollide(0)

@@ -33,6 +33,15 @@
 					<vox pos="0.1 -0.45 0.05" texture="8 0.5" blendtexture="5 .3" file="MOD/Vehicles/Constuction vehicles/tractor.vox" object="wheel_fr"/>
 				</wheel>
 			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.05 0.0 -0.1">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 1 0.05" rot="0.0 90 40"/>
+				<location name="seat" tags="seat" pos="-0.05 1.3 0.45" rot="80 0.0 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.1 1.65 0.15" rot="0.0 90 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.1 1 0.05" rot="0.0 90 40"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 1.65 0.15" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="-0.05 1.95 0.7" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="-0.05 1.65 0.2" rot="0.0 -180 0.0"/>
+			</rig>
 		</vehicle>
 	</group>
 </prefab>

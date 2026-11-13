@@ -3,6 +3,13 @@
 		<script file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep 50 Cal.lua">
 			<vehicle name="Willys Jeep" tags="Door cfg=vehicle name=Willy's_Jeep" sound="suv4 1.1" spring="2" damping="1.0" topspeed="89" acceleration="0.2" strength="1.5" antiroll="0.3" difflock="1" steerassist="0.3" friction="1.4">
 				<body tags="component=body" pos="0.0 0.3 0.0" dynamic="true">
+					<rig name="gunner" tags="gunner relative_parent sort=99" pos="0.0 0.3 1.5">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+						<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.22 1.05 -0.2" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.02 1.05 -0.2" rot="0.0 90 0.0"/>
+					</rig>
 					<vox name="Body" tags="component=chassis" pos="-0.05 0.0 0.0" texture="8 0.5" blendtexture="5 .3" density="2.5" strength="3" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="body">
 						<location tags="player" pos="-0.3 1.05 0.35"/>
 						<location tags="vital" pos="0.05 0.5 -1"/>
@@ -43,6 +50,39 @@
 						<vox pos="-0.1 -0.35 0.05" texture="8 0.5" blendtexture="5 .3" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_bl"/>
 					</wheel>
 				</body>
+				<rig name="driver" tags="driver sort=0" pos="-0.35 0.85 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.07 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.17 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.35 -0.15" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="0.35 0.85 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=2" pos="0.35 0.85 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=3" pos="-0.35 0.85 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
 			</vehicle>
 			<location name="mainCannon_sight" tags="mainCannon_sight" pos="-0.0 1.9 1.4" rot="0.0 180.0 0.0"/>
 			<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="0.0 1.65 -0.5" rot="0.0 180.0 0.0"/>

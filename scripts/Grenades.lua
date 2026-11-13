@@ -1,153 +1,113 @@
+#version 2
+#include "script/include/player.lua"
 --[[
-#include "../GoreNPCs/scripts/systems/goreai_grenades.lua"
+(v2) removed the include of GoreNPCs/scripts/systems/goreai_grenades.lua: nothing in it is used here and its
+top-level do-block calls LoadSprite while loading, which v2 forbids.
 #include "../scripts/TDSU/tdsu.lua"
 #include "../Automatic.lua"
 #include "../Settings.lua"
 ]]
 
-function init()
+-- (v2) Split: the client reads input + inventory (v1 registry) and asks the server to spawn the grenade.
+-- The server owns the grenades: timers, holes, shrapnel (Shoot), knock-back, throw-back by any player.
+-- Explosion particles and sounds run on every client (client.grenadeExplode).
+-- Note: an exploded grenade is removed from Splosives in the same frame, so the original "Glare" /
+-- "Shockwave" branch below never runs (kept as in the original).
 
+Devices = {
+	["RGD-5"] = {
+		Type = "Grenade", -- Type of the explosive device
+		Name = "RG-42", -- Name of the explosive device
+		Fuse = 3.2, -- How much time it takes for the explosive to detonate, only works if requirearm is true
+		Violence = 27, -- How fast the particles from the explosion will travel
+		ParticleAmount = 30, -- How dense the particles for the explosion are going to be
+		ExplosionDamage = 1, -- Amount of damage directly done to the environment by the explosive
+		Shrapnel = 100,  -- Amount of shrapnel ejected by the explosive
+		ShrapnelDist = 10,
+		Force = 0, -- Maximum force applied to objects
+		ForceRange = 2, -- does nothing atm
+		Shockwave = 2, -- Amount of shockwave particles
+		ShockParticleSize = 0.1, -- Shockwave particle size
+		RequireArm = true, -- Require arm adds a difference between explosive devices that can be armed (for example grenades) and explosives that cant be armed (barrel of gunpowder)
+		ParticleSize = 1, -- Explosion particle size
+		PR = 0.7, -- Particle red
+		PG = 0.7, -- Particle green
+		PB = 0.7, -- particle blue
+		PA = 0.7, -- particle alpha
+		PD = 0.5, -- particle drag
+		Flash = 30, -- strength of explosion flash 
+		Glare = 0.3, -- how long the explosion flash will stay
+		DynamicRange = 3, -- maximum distance the explosion can affect objects at
+		PGr = 1, -- particle gravity
+		Edmg = 5, -- Pressure damage done by explosive
+	},
+	["Type-67"] = {
+		Type = "Grenade", -- Type of the explosive device
+		Name = "Type-67", -- Name of the explosive device
+		Fuse = 3.2, -- How much time it takes for the explosive to detonate, only works if requirearm is true
+		Violence = 27, -- How fast the particles from the explosion will travel
+		ParticleAmount = 30, -- How dense the particles for the explosion are going to be
+		ExplosionDamage = 0.7, -- Amount of damage directly done to the environment by the explosive
+		Shrapnel = 120,  -- Amount of shrapnel ejected by the explosive
+		ShrapnelDist = 16,
+		Force = 0, -- Maximum force applied to objects
+		ForceRange = 2, -- does nothing atm
+		Shockwave = 0, -- Amount of shockwave particles
+		ShockParticleSize = 0.1, -- Shockwave particle size
+		RequireArm = true, -- Require arm adds a difference between explosive devices that can be armed (for example grenades) and explosives that cant be armed (barrel of gunpowder)
+		ParticleSize = 1, -- Explosion particle size
+		PR = 0.7, -- Particle red
+		PG = 0.7, -- Particle green
+		PB = 0.7, -- particle blue
+		PA = 0.7, -- particle alpha
+		PD = 0.5, -- particle drag
+		Flash = 30, -- strength of explosion flash 
+		Glare = 0.3, -- how long the explosion flash will stay
+		DynamicRange = 3, -- maximum distance the explosion can affect objects at
+		PGr = 1, -- particle gravity
+		Edmg = 5, -- Pressure damage done by explosive
+	},
 
-Splosives = {}
-    --ToolId = "gore_grenades"
+}
 
-    --RegisterTool(ToolId, "HE Grenade", "MOD/main/GoreRagdolls2/models/grenade.vox", 3)
-    --SetBool("game.tool.gore_grenades.enabled", true)
+---------------------------------------------------------------- server
 
-    Sounds = {
-        GrenadeBeep       = LoadSound("MOD/snd/Weapons/Handheld/Grenade/Grenade_beep.ogg"),
-    }
-
-    Init_Settings()
-	Devices = {
-		["RGD-5"] = {
-			Type = "Grenade", -- Type of the explosive device
-			Name = "RG-42", -- Name of the explosive device
-			Fuse = 3.2, -- How much time it takes for the explosive to detonate, only works if requirearm is true
-			Violence = 27, -- How fast the particles from the explosion will travel
-			ParticleAmount = 30, -- How dense the particles for the explosion are going to be
-			ExplosionDamage = 1, -- Amount of damage directly done to the environment by the explosive
-			Shrapnel = 100,  -- Amount of shrapnel ejected by the explosive
-			ShrapnelDist = 10,
-			Force = 0, -- Maximum force applied to objects
-			ForceRange = 2, -- does nothing atm
-			Shockwave = 2, -- Amount of shockwave particles
-			ShockParticleSize = 0.1, -- Shockwave particle size
-			RequireArm = true, -- Require arm adds a difference between explosive devices that can be armed (for example grenades) and explosives that cant be armed (barrel of gunpowder)
-			ParticleSize = 1, -- Explosion particle size
-			PR = 0.7, -- Particle red
-			PG = 0.7, -- Particle green
-			PB = 0.7, -- particle blue
-			PA = 0.7, -- particle alpha
-			PD = 0.5, -- particle drag
-			Flash = 30, -- strength of explosion flash 
-			Glare = 0.3, -- how long the explosion flash will stay
-			DynamicRange = 3, -- maximum distance the explosion can affect objects at
-			PGr = 1, -- particle gravity
-			Edmg = 5, -- Pressure damage done by explosive
-		},
-		["Type-67"] = {
-			Type = "Grenade", -- Type of the explosive device
-			Name = "Type-67", -- Name of the explosive device
-			Fuse = 3.2, -- How much time it takes for the explosive to detonate, only works if requirearm is true
-			Violence = 27, -- How fast the particles from the explosion will travel
-			ParticleAmount = 30, -- How dense the particles for the explosion are going to be
-			ExplosionDamage = 0.7, -- Amount of damage directly done to the environment by the explosive
-			Shrapnel = 120,  -- Amount of shrapnel ejected by the explosive
-			ShrapnelDist = 16,
-			Force = 0, -- Maximum force applied to objects
-			ForceRange = 2, -- does nothing atm
-			Shockwave = 0, -- Amount of shockwave particles
-			ShockParticleSize = 0.1, -- Shockwave particle size
-			RequireArm = true, -- Require arm adds a difference between explosive devices that can be armed (for example grenades) and explosives that cant be armed (barrel of gunpowder)
-			ParticleSize = 1, -- Explosion particle size
-			PR = 0.7, -- Particle red
-			PG = 0.7, -- Particle green
-			PB = 0.7, -- particle blue
-			PA = 0.7, -- particle alpha
-			PD = 0.5, -- particle drag
-			Flash = 30, -- strength of explosion flash 
-			Glare = 0.3, -- how long the explosion flash will stay
-			DynamicRange = 3, -- maximum distance the explosion can affect objects at
-			PGr = 1, -- particle gravity
-			Edmg = 5, -- Pressure damage done by explosive
-		},
-
-	}
-	Stim = 0
-	armvel = 0
-	ArmTim = 0
-
-	CurrentGrenade = 1
-	CoolDownTimer = 0
+function server.init()
+	Splosives = {}
 end
 
-function tick(dt)
-	CoolDownTimer = CoolDownTimer - dt
-	ActiveGrenades = {}
-	if GetInt("inventory.ammocount_grenade") ~= 0 then
-		table.insert(ActiveGrenades, "RGD-5")
+function server.throwGrenade(playerId, kind, throwTr)
+	local throwVel = Vec(0, 10, -15)
+	if kind == "RGD-5" then
+		local Spawn = Spawn("MOD/main/GoreRagdolls2/prefab/RGD5.xml", throwTr)
+		SetBodyVelocity(Spawn[1], TransformToParentVec(throwTr, throwVel))
+		SetBodyAngularVelocity(Spawn[1], QuatEuler(math.random()*-600,0, (math.random()-0.5)*200))
+		SetTag(Spawn[1], "Splosion","RGD-5")
+		SetTag(Spawn[1], "interact","Throw Back")
+		SetTag(Spawn[1], "Timer", Devices[GetTagValue(Spawn[1], "Splosion")]["Fuse"])
+		table.insert(Splosives, Spawn[1])
+	elseif kind == "Type-67" then
+		local Spawn = Spawn("MOD/main/GoreRagdolls2/prefab/Type 67.xml", throwTr)
+		SetBodyVelocity(Spawn[1], TransformToParentVec(throwTr, throwVel))
+		SetBodyAngularVelocity(Spawn[1], QuatEuler(math.random()*-600, math.random()*-600, (math.random()-0.5)*200))
+		SetTag(Spawn[1], "Splosion","Type-67")
+		SetTag(Spawn[1], "interact","Throw Back")
+		SetTag(Spawn[1], "Timer", Devices[GetTagValue(Spawn[1], "Splosion")]["Fuse"])
+		table.insert(Splosives, Spawn[1])
 	end
-	if GetInt("inventory.ammocount_grenade1") ~= 0 then 
-		table.insert(ActiveGrenades, "Type-67")
-	end
-	--DebugPrint(CurrentGrenade)
-	--DebugPrint(table.concat(ActiveGrenades, "|"))
-	--DebugPrint(ActiveGrenades[CurrentGrenade])
-	if InputPressed("t") then 
-		CurrentGrenade = CurrentGrenade + 1
-	end
-	if CurrentGrenade > #ActiveGrenades then CurrentGrenade = 1 end
+end
 
-	
-	
-    local throwValid =
-        GetPlayerVehicle() == 0
-        --and GetString("game.player.tool") == ToolId
-        and (GetInt("inventory.ammocount_grenade") > 0 or GetInt("inventory.ammocount_grenade1"))
-        and GetBool("game.player.grabbing") == false
-		and CoolDownTimer < 0 
-
-    if KeybindReleased(Settings.keybinds.player.throw_grenade) and throwValid then
-		CoolDownTimer = 0
-		if next(ActiveGrenades) then
-
-			local throwTr = GetPlayerCameraTransform()
-			throwTr.pos = TransformToParentPoint(throwTr, Vec(0,0,-0.5))
-			local throwVel = Vec(0, 10, -15)
-
-			PlaySound(LoadSound("MOD/snd/Weapons/Handheld/Grenade/frag_throw.ogg"), GetPlayerCameraTransform(), 1)
-
-			if ActiveGrenades[CurrentGrenade] == "RGD-5" then
-				local Spawn = Spawn("MOD/main/GoreRagdolls2/prefab/RGD5.xml", throwTr)
-				SetBodyVelocity(Spawn[1], TransformToParentVec(throwTr, throwVel))
-				SetBodyAngularVelocity(Spawn[1], QuatEuler(math.random()*-600,0, (math.random()-0.5)*200))
-				SetTag(Spawn[1], "Splosion","RGD-5")
-				SetTag(Spawn[1], "interact","Throw Back")
-				SetTag(Spawn[1], "Timer", Devices[GetTagValue(Spawn[1], "Splosion")]["Fuse"])
-				table.insert(Splosives, Spawn[1])
-				SetBool("inventory.removegrenade", true)
-			elseif ActiveGrenades[CurrentGrenade] == "Type-67" then
-				local Spawn = Spawn("MOD/main/GoreRagdolls2/prefab/Type 67.xml", throwTr)
-				SetBodyVelocity(Spawn[1], TransformToParentVec(throwTr, throwVel))
-				SetBodyAngularVelocity(Spawn[1], QuatEuler(math.random()*-600, math.random()*-600, (math.random()-0.5)*200))
-				SetTag(Spawn[1], "Splosion","Type-67")
-				SetTag(Spawn[1], "interact","Throw Back")
-				SetTag(Spawn[1], "Timer", Devices[GetTagValue(Spawn[1], "Splosion")]["Fuse"])
-				table.insert(Splosives, Spawn[1])
-				SetBool("inventory.removegrenade1", true)
-			end
-		end
-    end
-
+function server.tick(dt)
     --print(active_spall)
-	for i=1,#Splosives do
+	for i=#Splosives,1,-1 do -- (v2) backwards: entries are removed inside the loop
 		Splosive = Splosives[i]
 		Species = GetTagValue(Splosive, "Splosion")
 		SetTag(Splosive, "unbreakable")
-		if GetPlayerInteractBody() == Splosive and InputPressed("interact") then
-			local throwVel = VecScale(VecNormalize(VecSub(GetBodyTransform(Splosive).pos,GetPlayerTransform().pos)), 15)
-			SetBodyVelocity(Splosive, throwVel)
+		for p in Players() do -- (v2) any player can throw it back
+			if GetPlayerInteractBody(p) == Splosive and InputPressed("interact", p) then
+				local throwVel = VecScale(VecNormalize(VecSub(GetBodyTransform(Splosive).pos,GetPlayerTransform(p).pos)), 15)
+				SetBodyVelocity(Splosive, throwVel)
+			end
 		end
 		if Species ~= nil and Devices[Species] ~= nil and Devices[Species]["Name"] ~= nil then --Checks if explosive device is registered
 		--DebugPrint("SPECIES: "..Devices[Species]["Name"])
@@ -161,14 +121,14 @@ function tick(dt)
 			if hit and not HasTag(Splosive, "stopped") then
 				SetBodyVelocity(Splosive, Vec(GetBodyVelocity(Splosive)[1]/5,GetBodyVelocity(Splosive)[2]/5,GetBodyVelocity(Splosive)[3]/5))
 				SetTag(Splosive, "stopped")	
-				PlaySound(LoadSound("MOD/snd/Weapons/Handheld/Grenade/rattle_dirt_0.ogg"), GetBodyTransform(Splosive).pos, 4)
+				ClientCall(0, "client.grenadeRattle", GetBodyTransform(Splosive).pos)
 			end
 			if tonumber(GetTagValue(Splosive, "Timer")) < 0 or IsBodyBroken(Splosive) or (HasTag(Splosive, "Impact") and hit) then
 				Position = GetBodyTransform(Splosive).pos
 				if not HasTag(Splosive, "Glare") then
 				SetBodyDynamic(Splosive, false)
-				Splosion(Position, Devices[Species]["Violence"], Devices[Species]["ParticleAmount"], Devices[Species]["ExplosionDamage"], Devices[Species]["ParticleSize"])
-				PlaySound(LoadSound("MOD/snd/"..Devices[Species]["Name"]))
+				SplosionWorld(Position, Devices[Species]["ExplosionDamage"])
+				ClientCall(0, "client.grenadeExplode", Species, Position) -- particles + sounds on every client
 				SetTag(Splosive, "Glare", Devices[Species]["Glare"])
 				SetTag(Splosive, "Shockwave", Devices[Species]["Shockwave"])
 				table.remove(Splosives, i)
@@ -177,10 +137,6 @@ function tick(dt)
 					Delete(shapes[i])
 				end
 				Delete(Splosive)
-				PlaySound(LoadSound("MOD/snd/Explosions/frag_sand_0.ogg"), GetBodyTransform(Splosive).pos, 8)
-				PlaySound(LoadSound("MOD/snd/Explosions/Shared/Debris/expl_debris_dirt_0.ogg"), GetBodyTransform(Splosive).pos, 3)
-				PlaySound(LoadSound("MOD/snd/Explosions/Shared/Debris/expl_debris_sand_0.ogg"), GetBodyTransform(Splosive).pos, 3)
-				PlaySound(Sounds.GrenadeExplosion, GetBodyTransform(Splosive).pos, 2)
 				if Devices[Species]["Shrapnel"] > 0 then
 					maxdist = 1
 					damagemax = 100
@@ -190,7 +146,8 @@ function tick(dt)
 						if damagemax <= 1 then
 							damagemax = 1
 						end
-						Shoot(Position, RSV(0.01), "shotgun", math.random(1,damagemax)/200, maxdist)
+						-- (v2 fix) Shoot needs a unit-length direction; RSV(0.01) is at most 0.01 long
+						Shoot(Position, VecNormalize(RSV(0.01)), "shotgun", math.random(1,damagemax)/200, maxdist)
 						local hit, dist, normal, shape = QueryRaycast(Vec(math.random(1,10),math.random(1,10),math.random(1,10)), Vec(math.random(1,10),math.random(1,10),math.random(1,10)), 70)
 						--DebugPrint(dist)
 					end
@@ -201,7 +158,7 @@ function tick(dt)
 				SetTag(Splosive, "Glare", GlareT)
 				if GlareT > 0 then 
 					Position = GetBodyTransform(Splosive).pos
-					PointLight(Position, 1, 0.7, 0.3, Devices[Species]["Flash"]*GlareT)
+					-- (v2) PointLight is client-side; this branch is unreachable anyway (see top of file)
 				else
 					SetTag(Splosive, "NoL")
 				end
@@ -227,7 +184,79 @@ function tick(dt)
 	end
 end
 
-function draw()
+
+---------------------------------------------------------------- client
+
+function client.init()
+    Sounds = {
+        GrenadeBeep       = LoadSound("MOD/snd/Weapons/Handheld/Grenade/Grenade_beep.ogg"),
+    }
+    Init_Settings()
+	Stim = 0
+	armvel = 0
+	ArmTim = 0
+	CurrentGrenade = 1
+	CoolDownTimer = 0
+	ActiveGrenades = {}
+end
+
+function client.tick(dt)
+	CoolDownTimer = CoolDownTimer - dt
+	ActiveGrenades = {}
+	if GetInt("inventory.ammocount_grenade") ~= 0 then
+		table.insert(ActiveGrenades, "RGD-5")
+	end
+	if GetInt("inventory.ammocount_grenade1") ~= 0 then 
+		table.insert(ActiveGrenades, "Type-67")
+	end
+	if InputPressed("t") then 
+		CurrentGrenade = CurrentGrenade + 1
+	end
+	if CurrentGrenade > #ActiveGrenades then CurrentGrenade = 1 end
+
+    local throwValid =
+        GetPlayerVehicle() == 0
+        and (GetInt("inventory.ammocount_grenade") > 0 or GetInt("inventory.ammocount_grenade1"))
+        and GetPlayerGrabShape() == 0
+		and CoolDownTimer < 0 
+
+    if KeybindReleased(Settings.keybinds.player.throw_grenade) and throwValid then
+		CoolDownTimer = 0
+		if next(ActiveGrenades) then
+			local throwTr = GetPlayerCameraTransform()
+			throwTr.pos = TransformToParentPoint(throwTr, Vec(0,0,-0.5))
+			PlaySound(LoadSound("MOD/snd/Weapons/Handheld/Grenade/frag_throw.ogg"), throwTr.pos, 1)
+			local kind = ActiveGrenades[CurrentGrenade]
+			ServerCall("server.throwGrenade", GetLocalPlayer(), kind, throwTr)
+			if kind == "RGD-5" then
+				SetBool("inventory.removegrenade", true)
+			elseif kind == "Type-67" then
+				SetBool("inventory.removegrenade1", true)
+			end
+		end
+    end
+end
+
+function client.grenadeRattle(pos)
+	PlaySound(LoadSound("MOD/snd/Weapons/Handheld/Grenade/rattle_dirt_0.ogg"), pos, 4)
+end
+
+function client.grenadeExplode(species, pos)
+	Species = species
+	-- (v2) the player's own grenades never fed the limb-health system in v1 (no Explosion() call; the health script
+	-- only reacted to engine explosions). Queue it like PlayerHitboxes.lua does for engine explosions, with the
+	-- grenade's ExplosionDamage as strength; AdvancedHealthScript.lua applies its own distance/line-of-sight rules.
+	SetString("health.explosions", GetString("health.explosions") ..
+		string.format("%f %f %f %f;", Devices[Species]["ExplosionDamage"] or 1, pos[1], pos[2], pos[3]))
+	SplosionFx(pos, Devices[Species]["Violence"], Devices[Species]["ParticleAmount"], Devices[Species]["ExplosionDamage"], Devices[Species]["ParticleSize"])
+	PlaySound(LoadSound("MOD/snd/"..Devices[Species]["Name"]))
+	PlaySound(LoadSound("MOD/snd/Explosions/frag_sand_0.ogg"), pos, 8)
+	PlaySound(LoadSound("MOD/snd/Explosions/Shared/Debris/expl_debris_dirt_0.ogg"), pos, 3)
+	PlaySound(LoadSound("MOD/snd/Explosions/Shared/Debris/expl_debris_sand_0.ogg"), pos, 3)
+	if Sounds.GrenadeExplosion then PlaySound(Sounds.GrenadeExplosion, pos, 2) end -- (never set in the original)
+end
+
+function client.draw()
 
 -------- Thanks GS_115 :)
 	if KeybindDown(Settings.keybinds.player.throw_grenade) and #ActiveGrenades ~= 0 then
@@ -286,7 +315,13 @@ function draw()
 	end
 	
 end			
-function Splosion(pos, violence, amount, size, psize)
+-- (v2) server: the three MakeHole calls of the original Splosion (particles are in SplosionFx on clients)
+function SplosionWorld(pos, size)
+	MakeHole(pos, size, size/2, size/3, true)
+	MakeHole(pos, size, size/2, size/3, true)
+	MakeHole(pos, size, size/2, size/3, true)
+end
+function SplosionFx(pos, violence, amount, size, psize)
 	--FIRE
 	ParticleReset() -- SMOKE
 	ParticleType("plain")
@@ -299,7 +334,6 @@ function Splosion(pos, violence, amount, size, psize)
 	ParticleSticky(0.5)
 	ParticleDrag(Devices[Species]["PD"])
 	ParticleStretch(1)
-	MakeHole(pos, size, size/2, size/3, true)
 	for i=1,amount do
 	SpawnParticle(VecAdd(pos,RSV(violence/20)), RSV(violence) ,7)
 	end
@@ -314,7 +348,6 @@ function Splosion(pos, violence, amount, size, psize)
 	ParticleSticky(0.5)
 	ParticleDrag(Devices[Species]["PD"]/8)
 	ParticleStretch(1000000)
-	MakeHole(pos, size, size/2, size/3, true)
 	for i=1,amount do
 	SpawnParticle(pos, RSV(violence*1.5) ,0.5)
 	end
@@ -329,7 +362,6 @@ function Splosion(pos, violence, amount, size, psize)
 	ParticleSticky(0)
 	ParticleDrag(0)
 	ParticleStretch(3)
-	MakeHole(pos, size, size/2, size/3, true)
 	for i=1,amount*3 do
 		roingi = math.random(1,90)/100
 		ParticleTile(math.random(1,11))

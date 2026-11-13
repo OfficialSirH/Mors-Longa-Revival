@@ -114,9 +114,11 @@ function npc_melee_manage_punch_attack(npc, dist)
 
             if npc.ai.targeting.target.type == TargetTypes.player then
 
-                SetTag(GetRandomPairsValue(PlayerHitboxes), "QueriedDamage", RandomSpreadPercent25(npc.melee.punch_damage))
-                SetFloat("level.advhealth.addShock", tonumber(GetString("level.advhealth.addShock")) + 1)
-                SetPlayerVelocity(VecAdd(GetPlayerVelocity(), VecScale(VecNormalize(VecSub(PlayerPos, npc.torsoPos)), RandomSpreadPercent25(math.random(5,8)))))
+                -- (v2 goreai) the target player's hitbox; shock goes to that player's client (health runs there)
+                local hitbox = GetRandomPairsValue(GoreAI_Hitboxes(GoreP))
+                if hitbox then SetTag(hitbox, "QueriedDamage", RandomSpreadPercent25(npc.melee.punch_damage)) end
+                GoreAI_ClientCall(GoreP, "client.goreAddShock", 1)
+                SetPlayerVelocity(VecAdd(GetPlayerVelocity(GoreP), VecScale(VecNormalize(VecSub(PlayerPos, npc.torsoPos)), RandomSpreadPercent25(math.random(5,8)))), GoreP)
 
             elseif npc.ai.targeting.target.type == TargetTypes.torso then
 

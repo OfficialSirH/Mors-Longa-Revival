@@ -18,7 +18,7 @@
 			</vox>
 			<vox id_="379214432" pos="1.2 0.5 0.1" rot="0.0 0.0 0.0" file="MOD/main/Boeing CH47-C/test system/engine test system.vox" object="engine right"/>
 			<vox id_="1181030784" pos="-1.2 0.5 0.1" rot="0.0 0.0 0.0" file="MOD/main/Boeing CH47-C/test system/engine test system.vox" object="engine left"/>
-			<script id_="1434998272" pos="0.0 1.2 0.2" rot="0.0 0.0 0.0" file="MOD/main/Boeing CH47-C/scripts/engineprops.lua">
+			<script id_="1434998272" pos="0.0 1.2 0.2" rot="0.0 0.0 0.0" file="MOD/scripts/missing_script_stub.lua">
 				<body id_="365647648" name="vrotor" pos="0.0 0.0 0.0">
 					<vox id_="1885716864" open_="true" pos="0.0 0.1 0.1" prop="true" file="MOD/main/Boeing CH47-C/test system/engine test system.vox" object="BRotor axle">
 						<joint id_="555385984" tags="engine" pos="0.05 0.0 -0.05" rot="-90.0 0.0 0.0" type="hinge" limits="-180 180"/>

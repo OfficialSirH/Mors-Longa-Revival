@@ -1,6 +1,6 @@
 <prefab version="0.9.5">
 	<group open_="true" name="instance=MOD/avf/prefabs/Weaponised vehicles/Willys Jeep.xml" pos="2.3 -0.1 2.1" rot="0.0 90.0 0.0">
-		<script open_="true" file="MOD/Vehicles,Equipment/Cars,Trucks,Guns/Door.lua">
+		<script open_="true" file="MOD/scripts/missing_script_stub.lua">
 			<vehicle open_="true" name="Willys Jeep" tags="Door" pos="0.0 0.3 0.0" rot="0.0 -90.0 0.0" sound="suv4 1.1" spring="2" damping="1.0" topspeed="89" acceleration="0.2" strength="1.5" antiroll="0.3" difflock="1" steerassist="0.3" friction="1.4">
 				<body open_="true" dynamic="true">
 					<vox open_="true" name="Body" texture="8 0.5" density="2.5" strength="3" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="body">
@@ -33,6 +33,39 @@
 						<vox pos="-0.1 -0.35 0.05" texture="8 0.5" file="MOD/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_bl"/>
 					</wheel>
 				</body>
+				<rig name="driver" tags="driver sort=0" pos="-0.3 0.55 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.07 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.17 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.35 -0.15" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="0.4 0.55 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=2" pos="0.4 0.55 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=3" pos="-0.3 0.55 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
 			</vehicle>
 		</script>
 	</group>

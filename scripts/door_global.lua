@@ -1,8 +1,17 @@
-function init()
-	lastPlayerVehicle = 0
+#version 2
+#include "script/include/player.lua"
+-- (v2) server: per player, open/close the "door" joints of the vehicle they enter/leave
+function server.init()
+	lastPlayerVehicles = {}
 end
-function tick()
-	local pV = GetPlayerVehicle()
+function server.tick()
+	for p in Players() do
+		DoorUpdate(p)
+	end
+end
+function DoorUpdate(p)
+	local lastPlayerVehicle = lastPlayerVehicles[p] or 0
+	local pV = GetPlayerVehicle(p)
 	if pV ~= lastPlayerVehicle then
 		if HasTag(lastPlayerVehicle,"Door") then
 			local jBs = GetJointedBodies(GetVehicleBody(lastPlayerVehicle))
@@ -22,7 +31,7 @@ function tick()
 				end
 			end
 		end
-		lastPlayerVehicle = pV
+		lastPlayerVehicles[p] = pV
 	end
 end
 

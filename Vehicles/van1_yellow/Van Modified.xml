@@ -5,6 +5,13 @@
 				<script file="MOD/avf/prefabs/Weaponised vehicles/Van PKM.lua">
 					<vehicle name="Van (Yellow)" tags="Door cfg=vehicle name=Van" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="van" spring="0.5" damping="0.5" topspeed="80" acceleration="0.15" strength="2" antispin="0" antiroll="0.0" friction="0.95">
 						<body tags="component=body" pos="0.0 0.8 -0.3" dynamic="true">
+							<rig name="gunner" tags="gunner relative_parent sort=99" pos="0.35 -0.1 0.55" rot="0.0 90 0.0">
+								<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+								<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+								<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+								<location name="ik_hand_l" tags="ik_hand_l" pos="-0.12 1.2 -0.3" rot="0.0 90 0.0"/>
+								<location name="ik_hand_r" tags="ik_hand_r" pos="0.12 1.2 -0.3" rot="0.0 90 0.0"/>
+							</rig>
 							<vox tags="component=chassis" pos="-0.05 -0.5 0.3" blendtexture="5 .5" density="2.5" strength="2.5" file="MOD/Vehicles/van1_yellow/van1_yellow.vox" object="body3">
 								<light pos="-0.85 1.2 2.4" type="area" color="1 0.1 0.1" size="0.1 0.2" reach="2" unshadowed="0.3" glare="0.2"/>
 								<light pos="-0.85 1.0 2.4" type="area" size="0.1 0.2" reach="1.5" unshadowed="0.3"/>
@@ -62,6 +69,12 @@
 								<vox pos="-0.2 -0.4 0.0" blendtexture="5 .5" file="MOD/Vehicles/van1_yellow/van1_yellow.vox" object="wheel2"/>
 							</wheel>
 						</body>
+						<rig name="driver" tags="driver sort=0" pos="0.1 0.0 0.1">
+							<location name="seat" tags="seat" pos="-0.55 1.25 -1.1" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="-0.35 1.35 -1.55" rot="0.0 90 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.85 1.35 -1.55" rot="0.0 90 0.0"/>
+							<location name="steeringwheel" tags="steeringwheel" pos="-0.6 1.35 -1.5" rot="0.0 -180 0.0"/>
+						</rig>
 					</vehicle>
 					<location name="mainCannon_sight" tags="mainCannon_sight" pos="-0.2 2.08 0.35" rot="0.0 -90.0 0.0"/>
 					<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="-1.3 1.9 0.25" rot="0.0 -90.0 0.0"/>

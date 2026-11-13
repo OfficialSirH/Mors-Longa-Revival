@@ -1,4 +1,11 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) Katyusha (ZIS-151_Katyusha.xml, spawn menu "Katyusha"): the BM-13 rocket launcher on our own mounted-gun
+-- script with AVF's rockets ported (scripts/avf; v1 included ../../scripts/avf_custom.lua and needed the external
+-- AVF mod). The AVF table below is still the launcher's config. No gunner place: the driver fires, as in AVF.
+MountedGunSound = "MOD/avf/assets/sounds/rockets/rocket_launcher_05.ogg" -- the config's soundFile (copied from AVF)
+MountedGunDriverFires = true
 
 
 --[[

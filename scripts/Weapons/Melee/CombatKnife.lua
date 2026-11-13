@@ -1,13 +1,17 @@
+#version 2
+#include "script/include/player.lua"
 #include "Melee_Functions.lua"
 
 
-function init()
+function server.init()
+	RegisterTool("melee-CombatKnife", "CombatKnife", "MOD/vox/Weapons/Melee/CombatKnife.vox", 3)
+end
+
+function client.init()
 
 	Tool_Id = "melee-CombatKnife"
 
-	RegisterTool(Tool_Id, "CombatKnife", "MOD/vox/Weapons/Melee/CombatKnife.vox", 3)
-	SetBool("game.tool.CombatKnife.enabled", true)
-	SetFloat("game.tool.CombatKnife.ammo", 101)
+	-- (v2) RegisterTool moved to server.init()
 	thrown = false
 	ttime = 5
 	smashTimer = 0
@@ -67,6 +71,7 @@ function Smash()
 	if smashTimer == 0 then smashTimer = 0.1 end
 end
 
+-- (v2) unused; SetPlayerVelocity is server-only, needs a ServerCall if this is ever used
 function Boost()
 	local pt = GetPlayerTransform()
 	local d = TransformToParentVec(pt, Vec(0, 7.5, -2.5))
@@ -89,7 +94,7 @@ function Spin()
 	if soundtimer == 0 then soundtimer = 0.05 end
 end
 
-function tick(dt)
+function client.tick(dt)
 	--DebugWatch("CountDown", ttime)
 	--[[if not thrown and ttime < 5 then thrown = true
 	end
@@ -103,7 +108,7 @@ function tick(dt)
 			cut = FindLights("knife", true)
 			for i=1,#cut do
 			local cutpos = GetLightTransform(cut[i]).pos
-			count = MakeHole(cutpos, .15, .5, 0)
+			count = MeleeNet_MakeHole(cutpos, .15, .5, 0)
 
 			--DebugWatch("Cuts", count)
 			if count > 1.5 then
@@ -129,11 +134,11 @@ Delete(cut[i])
 end
 end]]
 
-	if not GetBool("game.player.canusetool") then
+	if not GetPlayerCanUseTool() then
 		cycled = false
 		spinsmash = false
 	end
-	if GetString("game.player.tool") == "melee-CombatKnife" and GetPlayerVehicle() == 0 and GetBool("game.player.canusetool") == true then
+	if GetPlayerTool() == "melee-CombatKnife" and GetPlayerVehicle() == 0 and GetPlayerCanUseTool() then
 		if not cycled then
 		smashTimer = 0
 		cycled = true
@@ -244,7 +249,7 @@ end]]
 							Force = ForceOfMelee/#list
 						   	VelocityFromPlayer(body, Force)
 						end
-						MakeHole(holeposes[i], math.random(damage,damage*1.2)/100, math.random(damage,damage*1.2)/100*penetration, math.random(damage,damage*1.2)/100*penetration/2)
+						MeleeNet_MakeHole(holeposes[i], math.random(damage,damage*1.2)/100, math.random(damage,damage*1.2)/100*penetration, math.random(damage,damage*1.2)/100*penetration/2)
 					end
 					for q=1,10 do
 						ParticleReset()
@@ -301,5 +306,5 @@ function VelocityFromPlayer(body, force)
     local vel = GetBodyVelocity(body)
     Vel = VecAdd(vel, add)
     --SetBodyVelocity(body, Vel)
-    ApplyBodyImpulse(body, GetPlayerCameraTransform().pos, Vel)
+    MeleeNet_Impulse(body, GetPlayerCameraTransform().pos, Vel)
   end

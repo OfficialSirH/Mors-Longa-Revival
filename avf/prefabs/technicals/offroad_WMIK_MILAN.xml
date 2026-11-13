@@ -10,6 +10,13 @@
 				<vehicle name="offroad" tags="cfg=vehicle Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="suv2 0.9" spring="0.8" damping="0.8" topspeed="150" acceleration="0.37" strength="4" antispin="0" antiroll="0.5" difflock="0.75" steerassist="0.0" friction="1">
 					<group prop0="texture=8 0.5">
 						<body pos="0.0 0.6 -0.25" dynamic="true">
+						<rig name="gunner" tags="gunner relative_parent sort=99" pos="-0.15 0.2 1.6">
+							<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+							<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+							<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+							<location name="ik_hand_l" tags="ik_hand_l" pos="-0.12 1.55 -0.35" rot="0.0 90 0.0"/>
+							<location name="ik_hand_r" tags="ik_hand_r" pos="0.12 1.55 -0.35" rot="0.0 90 0.0"/>
+						</rig>
 							<vox pos="0.05 -0.2 0.15" rot="0 180 0" texture="1 .6" blendtexture="5 .3" density="2" strength="5" file="MOD/avf/prefabs/technicals/offroad.vox" object="body_scaffoled_military">
 								<light pos="0.75 0.55 -2.2" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
 								<light pos="-0.65 0.55 -2.2" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
@@ -82,6 +89,23 @@
 							</wheel>
 						</body>
 					</group>
+					<rig name="driver" tags="driver sort=0" pos="0.35 1.05 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.25 -0.7" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.25 -0.7" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.15 0.2 -0.6" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.2 -0.6" rot="0.0 90 0.0"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+						<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.2 -0.6" rot="0.0 -180 0.0"/>
+					</rig>
+					<rig name="passenger" tags="sort=1" pos="-0.3 1.05 -0.15">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.7" rot="0.0 90 50"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.7" rot="0.0 90 50"/>
+						<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+						<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+					</rig>
 				</vehicle>
 			</script>
 		</script>

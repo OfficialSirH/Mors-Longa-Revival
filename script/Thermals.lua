@@ -1,16 +1,73 @@
+#version 2
+#include "script/include/player.lua"
 #include "../scripts/Game/Blood/Blood.lua"
 
-function init()
+-- (v2) client only: per-player night/thermal vision.
+-- v1 also recoloured "Bleedable" shapes with EditPalette, but EditPalette is not defined in this script's include
+-- chain and no prefab has a "Bleedable" shape, so that never ran; a client may not edit server shapes anyway.
+-- It is replaced by DrawShapeHighlight (client-side, only on the wearer's screen).
+-- v1 faded each enemy's "blood" tag value by writing the tag; a client may not change server entities, so the
+-- fading value is kept locally (BloodFade[body]).
+-- (v2 fix) v1 searched FindBodies("bodypart"), but in the standard ragdoll that tag is on shapes and only the
+-- head is a tagged body, so only heads were (faintly) highlighted. Now every NPC from the GoreNPCs lists
+-- (level.goreai.api.npcs.alive/dead, torso handles) is highlighted with all bodies jointed to its torso.
+
+function client.init()
 	NVGON = false
 	THERMAL = false
 	findtimer = 0
-	Enemies = FindBodies("bodypart", true)
+	Enemies = FindNpcBodies()
 	Shapes = FindShapes("Bleedable", true)
+	BloodFade = {}
 end
 
-function tick(dt)
+-- torso + every body reachable through joints (limbs, head), for all living and dead NPCs
+function FindNpcBodies()
+	local result, seen = {}, {}
+	local function add(body)
+		-- skip vehicle bodies: an NPC jointed to a car seat must not light up the whole car
+		if body ~= 0 and not seen[body] and IsHandleValid(body) and GetBodyVehicle(body) == 0 then
+			seen[body] = true
+			result[#result + 1] = body
+			return true
+		end
+		return false
+	end
+	for _, list in ipairs({"level.goreai.api.npcs.alive", "level.goreai.api.npcs.dead"}) do
+		for _, key in ipairs(ListKeys(list)) do
+			local torso = GetInt(list .. "." .. key)
+			if add(torso) then
+				local queue = { torso }
+				while #queue > 0 and #result < 2000 do
+					local b = table.remove(queue)
+					for _, j in ipairs(GetJointedBodies(b)) do
+						if add(j) then queue[#queue + 1] = j end
+					end
+				end
+			end
+		end
+	end
+	for _, b in ipairs(FindBodies("bodypart", true)) do add(b) end -- as v1 (heads)
+	return result
+end
+
+local function HighlightEnemy(body, fallback)
+	if HasTag(body, "blood") then
+		local Opacity = BloodFade[body] or tonumber(GetTagValue(body, "blood")) or fallback
+		Opacity = Opacity - .001
+		if Opacity > 0.35 then
+			BloodFade[body] = Opacity
+			DrawBodyHighlight(body, Opacity)
+		else
+			DrawBodyHighlight(body, .35)
+		end
+	else
+		DrawBodyHighlight(body, fallback)
+	end
+end
+
+function client.tick(dt)
 	findtimer = findtimer - dt
-	-------------------------------Bools
 	DURABILITY = GetFloat("inventory.nvg.durability")
 	NVGON = GetBool("inventory.nvg.enabled")
 	local curEyeWear = GetString("inventory.nvg.current")
@@ -18,89 +75,23 @@ function tick(dt)
 	THERMAL = curEyeWear == "thermals"
 	PVS14 = curEyeWear == "pvs14"
 	PNV10T = curEyeWear == "pnv10t"
-	-------------------------------Debug
-	if not NVGON then
-		for i=1,#Shapes do 
-			if HasTag(Shapes[i], "ThermalPalette") then
-				EditPalette(Shapes[i],{{"plastic",0.32,0.0,0.0,1,0,0,0,0,200}})
-				RemoveTag(Shapes[i], "ThermalPalette")
-			end
+
+	if NVGON and (THERMAL or PNV10T) then
+		if findtimer < 0 then
+			Shapes = FindShapes("Bleedable", true)
+			Enemies = FindNpcBodies()
+			findtimer = .25
 		end
-	end
-	if NVGON then
-		--DebugPrint(DURABILITY)
-		if THERMAL then
-			if findtimer < 0 then
-				Shapes = FindShapes("Bleedable", true)
-				Enemies = FindBodies("bodypart", true)
-				findtimer = .25
-			end
-			
-			for i=1,#Shapes do 
-				if not HasTag(Shapes[i], "ThermalPalette") then 
-					EditPalette(Shapes[i],{{"plastic",1,1,1,1,0,0,0,0.5,200}})
-					SetTag(Shapes[i], "ThermalPalette")
-				elseif HasTag(Shapes[i], "ThermalPalette") then
-					
-				end
-			end
-			
-			for i=1,#Enemies do
-				if HasTag(Enemies[i], "blood") then
-					local Opacity = tonumber(GetTagValue(Enemies[i], "blood"))
-					local Opacity = Opacity - .001
-					if Opacity > 0.35 then
-						SetTag(Enemies[i], "blood", Opacity)
-						DrawBodyHighlight(Enemies[i], Opacity)
-					else
-						DrawBodyHighlight(Enemies[i], .35)
-					end
-					else
-					DrawBodyHighlight(Enemies[i], 0.7)
-				end
-			end
-		elseif PNV10T then
-			if findtimer < 0 then
-				Shapes = FindShapes("Bleedable", true)
-				Enemies = FindBodies("bodypart", true)
-				findtimer = .25
-			end
-			
-			for i=1,#Shapes do 
-				if not HasTag(Shapes[i], "ThermalPalette") then 
-					EditPalette(Shapes[i],{{"plastic",1,1,1,1,0,0,0,0.2,200}})
-					SetTag(Shapes[i], "ThermalPalette")
-				elseif HasTag(Shapes[i], "ThermalPalette") then
-					
-				end
-			end
-			for i=1,#Enemies do
-				if HasTag(Enemies[i], "blood") then
-					local Opacity = tonumber(GetTagValue(Enemies[i], "blood"))
-					local Opacity = Opacity - .001
-					if Opacity > 0.35 then
-						SetTag(Enemies[i], "blood", Opacity)
-						DrawBodyHighlight(Enemies[i], Opacity)
-					else
-						DrawBodyHighlight(Enemies[i], .35)
-					end
-				else
-					DrawBodyHighlight(Enemies[i], 1)
-				end
-			end
-		else
-			for i=1,#Shapes do 
-				if HasTag(Shapes[i], "ThermalPalette") then
-					EditPalette(Shapes[i],200)
-					RemoveTag(Shapes[i], "ThermalPalette")
-				end
-			end
+		for i=1,#Shapes do
+			DrawShapeHighlight(Shapes[i], THERMAL and 0.5 or 0.2)
 		end
-		
+		for i=1,#Enemies do
+			HighlightEnemy(Enemies[i], THERMAL and 0.7 or 1)
+		end
 	end
 end
 
-function draw()
+function client.draw()
 	if NVGON then
 		UiPush()
 			UiAlign("center middle")

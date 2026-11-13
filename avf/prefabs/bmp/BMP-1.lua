@@ -1,4 +1,10 @@
-#include "../../scripts/avf_custom.lua"
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2) BMP-1 / BMP-1P (spawn menu "BMP-1", "BMP-1P"): main gun on our own mounted-gun script with AVF's shells
+-- ported (scripts/avf; v1 included ../../scripts/avf_custom.lua and needed the external AVF mod).
+-- The AVF table below is still the gun's config (mainCannon: weaponType "cannon"; coax / ATGM: later).
+MountedGunSound = "MOD/avf/assets/sounds/machine_gun/gpmg_single_02.ogg" -- the config's soundFile (copied from AVF)
 
 
 --[[

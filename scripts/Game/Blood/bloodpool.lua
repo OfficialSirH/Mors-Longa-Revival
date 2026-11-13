@@ -1,6 +1,15 @@
+#version 2
+#include "script/include/player.lua"
 #include "Blood.lua"
 
-function tick(dt)
+-- (v2) server: blood pools are paint (PaintRGBA is server-only). Blood.lua's v1 init() is not called in v2.
+function server.init()
+	Init_Settings()
+end
+
+function server.handleCommand(cmd) HandleQuickload(cmd) end
+
+function server.tick(dt)
 
 	if not Settings.game.blood_and_gore.value then
 		return

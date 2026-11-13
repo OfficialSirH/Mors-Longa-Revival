@@ -45,6 +45,19 @@
 					<joint pos="-0.6 0 2.3" rot="0 90 0" type="hinge" limits="0 70"/>
 				</vox>
 			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.0 0.0 -0.4">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.7 0.95 -2.2" rot="0.0 90 20"/>
+				<location name="seat" tags="seat" pos="-0.55 1.2 -1.8" rot="0.0 0.0 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="-0.4 0.95 -2.2" rot="0.0 90 20"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.8 1.55 -2.25" rot="0.0 90 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="-0.3 1.55 -2.25" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="-0.55 1.55 -2.2" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.95 0.0 -0.4">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.7 0.95 -2.2" rot="0.0 90 20"/>
+				<location name="seat" tags="seat" pos="-0.55 1.2 -1.8" rot="0.0 0.0 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="-0.4 0.95 -2.2" rot="0.0 90 20"/>
+			</rig>
 		</vehicle>
 	</group>
 </prefab>

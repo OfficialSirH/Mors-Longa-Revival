@@ -1,6 +1,37 @@
+#version 2
+#include "script/include/player.lua"
+#include "../../../scripts/MountedGun.lua"
+-- (v2, 2026-11-13) armed offroads (offroad_GMG / GPMG / NSV / m2.xml; only the GMG one is reached in play: road spawn
+-- VehicleM22). As the WMIK (Offroad_WMIK.lua): the original's include lines stood inside a comment, Teardown loaded
+-- them anyway and ../weapon_templates/weapon_templates.lua does not exist, so this script never loaded in the original
+-- (the gun shape has no AVF gun tags: what the external AVF made of it is unknown). The "GMG" template it names never existed either: MountedGunConfig is new, AVF's
+-- MK-19 grenade machine gun (weapons.lua "mk19": RPM 400, 60 grenades, reload 4, dispersion 12) with AVF's grenade
+-- shell (ammo.lua "G_30mm_HE": 120 m/s, HE). Standing gunner place in the roof ring; the driver does not fire.
+-- The GPMG / NSV / m2 offroads (spawned nowhere) have other gun tags: no gun found there, as before.
+MountedGunGunTag = "GMG"
+-- the gunner passes through the offroad's own shapes and is held at the place (MountedGun.lua: the roof's crossbar
+-- sits at the gunner's waist; in-game 2026-11-13 the gunner bobbed up and down)
+MountedGunHoldGunner = true
+MountedGunEmitterTag = "GMG_emitter"
+MountedGunSound = "MOD/avf/assets/sounds/grenade_mg/single_shot_01.ogg" -- AVF's grenade launcher shot (copied)
+MountedGunConfig = {
+	name = "GMG",
+	weaponType = "cannon",
+	caliber = 30,
+	RPM = 400,
+	reload = 4,
+	dispersion = 12,
+	magazines = {
+		[1] = {
+			name = "G_30mm_HE",
+			displayName = "HE grenade",
+			magazineCapacity = 60,
+			magazineCount = 1,
+		},
+	},
+}
 --[[
-#include "../weapon_templates/weapon_templates.lua"
-#include "../../scripts/avf_custom.lua"
+(v2) removed from this comment: the original's include lines (weapon_templates.lua: missing; avf_custom.lua: v1 AVF).
 ]]
 
 --[[

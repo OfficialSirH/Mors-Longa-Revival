@@ -1,6 +1,20 @@
-#include "../masterScriptRemoverAPI.lua"
+#version 2
+#include "script/include/player.lua"
+-- (v2) Perk machine ($500 per perk; lever = "supercharge": buy all remaining perks at once).
+-- Money is per player (each player's own savegame, as in the inventory), so:
+--   client: the player looking at the screen presses interact -> pays from THEIR money locally and asks the
+--           server (server.perkBuy); the server refunds (client.perkRefund) if the machine is busy/changed meanwhile.
+--   server: the machine itself - lever (any player), printing perks, descriptions/prompts, screen ejection.
+--           State for the clients in shared.perk (left, supercharge, busy).
+-- Change vs v1: supercharge pays all remaining perks up front (v1 took $500 per perk while printing and stopped with
+-- "Credit Card Declined" if the money ran out; v1 also required the full amount before starting, so the only
+-- difference is spending money elsewhere during printing). Printing no longer stops if the lever is flipped mid-run.
 
-function init()
+------------------------------------------------------------------
+-- Server
+------------------------------------------------------------------
+
+function server.init()
 	PerkMachine = FindBody("PerkMachine")
 	screen = FindShape("screen")
 	machine = FindShape("machine")
@@ -17,14 +31,18 @@ function init()
 
 	totalPerkBought = 0
 	maxPerkBought = 10
+	PerksToPrint = 0
 end
-function tick(dt)
+
+function server.tick(dt)
+	if Finished then return end
 	if not IsHandleValid(PerkMachine)then
-		queueRemoval()
+		Finished = true -- (v2) v1 queueRemoval() does not work on the server: just stop
 		return
 	end
 	if terminatePerkMachine then
 		smoke(GetBodyTransform(PerkMachine).pos,GetBodyVelocity(PerkMachine))
+		PublishPerkState()
 		return
 	end
 
@@ -50,8 +68,10 @@ function tick(dt)
 
 	local perksLeft = maxPerkBought - totalPerkBought
 	if perksLeft>1 then
-		if GetPlayerInteractShape() == lever and InputPressed("interact") then
-			supercharge=not supercharge
+		for p in Players() do -- (v2) any player can flip the lever
+			if GetPlayerInteractShape(p) == lever and InputPressed("interact", p) then
+				supercharge=not supercharge
+			end
 		end
 	else
 		RemoveTag(lever,"interact")
@@ -70,60 +90,49 @@ function tick(dt)
 		_lastSC = supercharge
 	end
 
-	if interupted then
-		SetDescription(PerkMachine, "ERROR: Credit Card Declined.\n"..perksLeft.." Perk".. (perksLeft>1 and "s" or "") .." Left.")
-	else
-		SetDescription(PerkMachine, perksLeft.." Perk".. (perksLeft>1 and "s" or "") .." Left.")
-	end
-	if supercharge then
-		if printing then
-			if printingTime >= 1 then
-				spawnPerk()
-				totalPerkBought = totalPerkBought + 1
+	SetDescription(PerkMachine, perksLeft.." Perk".. (perksLeft>1 and "s" or "") .." Left.")
 
-				local PlayerMoney = GetInt("savegame.mod.player.money")
-				if PlayerMoney >= 500 and totalPerkBought < maxPerkBought then
-					PlaySound(Lottery)
-					SetInt("savegame.mod.player.money", PlayerMoney - 500)
-					printingTime = printingTime - 0.5
-				else
-					printingTime = 0
-					printing = false
-					if totalPerkBought < maxPerkBought then
-						interupted = true
-						supercharge=false
-					end
-				end
-			end
-			printingTime = printingTime + dt
-		else
-			local PlayerMoney = GetInt("savegame.mod.player.money")
-			if GetPlayerInteractShape() == screen and InputPressed("interact") and PlayerMoney >= 500*perksLeft then
-				PlaySound(Lottery)
-				printing = true
-				interupted = false
-				SetInt("savegame.mod.player.money", PlayerMoney - 500)
-			end
-		end
-
-	else
-		if printing then
-			if printingTime >= 1 then
-				spawnPerk()
-				totalPerkBought = totalPerkBought + 1
+	-- (v2) printing the perks that were paid for (v1: separate supercharge / normal branches, money taken here)
+	if printing then
+		if printingTime >= 1 then
+			spawnPerk()
+			totalPerkBought = totalPerkBought + 1
+			PerksToPrint = PerksToPrint - 1
+			if PerksToPrint > 0 and totalPerkBought < maxPerkBought then
+				PlaySound(Lottery, GetBodyTransform(PerkMachine).pos)
+				printingTime = printingTime - 0.5
+			else
 				printingTime = 0
 				printing = false
-			end
-			printingTime = printingTime + dt
-		else
-			local PlayerMoney = GetInt("savegame.mod.player.money")
-			if GetPlayerInteractShape() == screen and InputPressed("interact") and PlayerMoney >= 500 then
-				PlaySound(Lottery)
-				printing = true
-				interupted = false
-				SetInt("savegame.mod.player.money", PlayerMoney - 500)
+				PerksToPrint = 0
 			end
 		end
+		if printing then printingTime = printingTime + dt end
+	end
+
+	PublishPerkState()
+end
+
+--- A client paid `paid` for `count` perks (1, or all remaining with supercharge).
+function server.perkBuy(p, count, paid)
+	local perksLeft = maxPerkBought - totalPerkBought
+	local wanted = supercharge and perksLeft or 1
+	if Finished or terminatePerkMachine or printing or count ~= wanted or paid < 500 * count then
+		ClientCall(p, "client.perkRefund", p, paid)
+		return
+	end
+	PlaySound(Lottery, GetBodyTransform(PerkMachine).pos) -- (v2) at the machine (v1: 2D sound for the one player)
+	printing = true
+	PerksToPrint = count
+	printingTime = 0
+end
+
+function PublishPerkState()
+	local left = maxPerkBought - totalPerkBought
+	local busy = (printing or terminatePerkMachine or Finished) and true or false
+	if PublishedLeft ~= left or PublishedSC ~= supercharge or PublishedBusy ~= busy then
+		PublishedLeft, PublishedSC, PublishedBusy = left, supercharge, busy
+		shared.perk = { left = left, supercharge = supercharge, busy = busy }
 	end
 end
 
@@ -147,4 +156,32 @@ function smoke(pos,vel)
 	ParticleDrag(0.6)
 	SpawnParticle(pos,vel, 15)
 	ParticleReset()
+end
+
+------------------------------------------------------------------
+-- Client
+------------------------------------------------------------------
+
+function client.init()
+	ClientScreen = FindShape("screen")
+end
+
+function client.tick(dt)
+	local s = shared.perk
+	if not s or s.busy or s.left < 1 then return end
+	if GetPlayerInteractShape() == ClientScreen and InputPressed("interact") then
+		local count = s.supercharge and s.left or 1
+		local cost = 500 * count
+		local money = GetInt("savegame.mod.player.money")
+		if money >= cost then
+			SetInt("savegame.mod.player.money", money - cost)
+			ServerCall("server.perkBuy", GetLocalPlayer(), count, cost)
+		end
+	end
+end
+
+function client.perkRefund(target, amount)
+	local me = GetLocalPlayer()
+	if target ~= me and not (target == 0 and IsPlayerHost(me)) then return end
+	SetInt("savegame.mod.player.money", GetInt("savegame.mod.player.money") + amount)
 end
