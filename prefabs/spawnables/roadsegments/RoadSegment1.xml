@@ -56,9 +56,9 @@
 			</group>
 			<group name="terrain">
 				<group pos="27.0 -16.9 66.6" rot="0.0 -60.0 0.0">
-					<vox pos="-12.1 13.6 -2.50001" rot="-7.7 50.4 6.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="16.9 11.5 1.19999" rot="-170.60001 160.3 -3.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="4.8 17.2 -1.9" rot="0.0 -140.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-12.1 13.6 -2.50001" rot="-7.7 50.4 6.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="16.9 11.5 1.19999" rot="-170.60001 160.3 -3.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="4.8 17.2 -1.9" rot="0.0 -140.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
 					<vox pos="16.2 16.8 -1.7" rot="0.0 150.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="13.0 17.7 2.60001" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="-6.6 17.0 -2.79999" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
@@ -145,49 +145,49 @@
 				<trigger tags="WaterSource size=150,100 depth=1 wave=0 foam=.1 color=.4,.35,.2" pos="125.0 0.3 50.0" size=".1">
 					<water size="150 100" depth="1" wave="0" foam=".1" color="0.4 0.35 0.2"/>
 				</trigger>
-				<voxbox name="wall" pos="57.39999 0.7 24.3" rot="0.0 -90.0 0.0" size="126 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="57.4 0.7 59.6" rot="0.0 -90.0 0.0" size="17 24 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="high-wall-dest1"/>
-				<voxbox name="wall" pos="57.0 0.7 38.2" rot="0.0 90.0 0.0" size="13 24 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="high-wall-dest3"/>
-				<voxbox name="wall" pos="57.4 0.7 46.7" rot="0.0 -90.0 0.0" size="129 24 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="high-wall"/>
-				<voxbox name="wall" pos="57.4 0.7 38.2" rot="0.0 -90.0 0.0" size="55 24 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="high-wall"/>
-				<voxbox name="wall" pos="57.39999 0.7 64.1" rot="0.0 -90.0 0.0" size="359 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="57.39999 0.7 23.8" rot="0.0 0.0 0.0" size="198 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="121.09999 0.7 23.8" rot="0.0 0.0 0.0" size="102 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="145.3 0.7 24.2" rot="0.0 -180.0 0.0" size="39 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="145.40001 0.7 100.0" rot="0.0 90.0 0.0" size="757 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="150.10002 0.7 100.0" rot="0.0 90.0 0.0" size="757 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<vox pos="57.2 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="57.2 0.7 44.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="high-pillar">
-					<voxbox pos="0.1 2.2 0.3" rot="0.0 -90.0 0.0" size="18 2 2" brush="MOD/vox/mudbrick_buildings_2.vox" object="log1"/>
+				<voxbox name="wall" pos="57.39999 0.7 24.3" rot="0.0 -90.0 0.0" size="126 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="57.4 0.7 59.6" rot="0.0 -90.0 0.0" size="17 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall-dest1"/>
+				<voxbox name="wall" pos="57.0 0.7 38.2" rot="0.0 90.0 0.0" size="13 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall-dest3"/>
+				<voxbox name="wall" pos="57.4 0.7 46.7" rot="0.0 -90.0 0.0" size="129 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+				<voxbox name="wall" pos="57.4 0.7 38.2" rot="0.0 -90.0 0.0" size="55 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+				<voxbox name="wall" pos="57.39999 0.7 64.1" rot="0.0 -90.0 0.0" size="359 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="57.39999 0.7 23.8" rot="0.0 0.0 0.0" size="198 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="121.09999 0.7 23.8" rot="0.0 0.0 0.0" size="102 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="145.3 0.7 24.2" rot="0.0 -180.0 0.0" size="39 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="145.40001 0.7 100.0" rot="0.0 90.0 0.0" size="757 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="150.10002 0.7 100.0" rot="0.0 90.0 0.0" size="757 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<vox pos="57.2 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="57.2 0.7 44.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar">
+					<voxbox pos="0.1 2.2 0.3" rot="0.0 -90.0 0.0" size="18 2 2" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="log1"/>
 				</vox>
-				<vox pos="57.2 0.7 46.4" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
-				<vox pos="77.5 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="120.8 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="145.60001 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="150.3 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="160.10001 0.7 49.5" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="15.4 0.7 -43.2" rot="0.0 -110.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="22.7 0.7 39.3" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="173.7 0.7 -42.0" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="35.4 0.7 52.5" rot="0.0 180.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="42.2 0.7 79.5" rot="0.0 100.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="177.8 0.7 37.0" rot="0.0 -20.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="143.10001 0.7 -65.4" rot="0.0 -100.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="22.4 0.7 -51.3" rot="0.0 -170.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="162.5 0.7 -47.6" rot="0.0 -100.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="175.5 0.7 64.7" rot="0.0 110.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="25.5 0.7 -44.3" rot="0.0 -40.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="building2w">
+				<vox pos="57.2 0.7 46.4" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+				<vox pos="77.5 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="120.8 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="145.60001 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="150.3 0.3 24.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="160.10001 0.7 49.5" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="15.4 0.7 -43.2" rot="0.0 -110.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="22.7 0.7 39.3" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="173.7 0.7 -42.0" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="35.4 0.7 52.5" rot="0.0 180.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="42.2 0.7 79.5" rot="0.0 100.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="177.8 0.7 37.0" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="143.10001 0.7 -65.4" rot="0.0 -100.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="22.4 0.7 -51.3" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="162.5 0.7 -47.6" rot="0.0 -100.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="175.5 0.7 64.7" rot="0.0 110.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="25.5 0.7 -44.3" rot="0.0 -40.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2w">
 					<body pos="0.1 0.1 2.5" dynamic="true">
-						<vox pos="-0.1 0.0 0.1" file="MOD/vox/mudbrick_buildings_2.vox" object="door">
+						<vox pos="-0.1 0.0 0.1" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="door">
 							<joint pos="0.5 0.2 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130"/>
 							<joint pos="0.5 1.7 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130"/>
 						</vox>
 					</body>
 					<body pos="0.0 2.4 0.0" rot="0.0 -180.0 0.0" dynamic="true">
-						<vox pos="-0.05 -0.1 0.05" texture="8 0.9" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox pos="-0.05 -0.1 0.05" texture="8 0.9" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night randomdelete" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox pos="0.00001 -0.05 0.0" rot="0.0 0.0 0.0" texture="8 0.9" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox pos="0.00001 -0.05 0.0" rot="0.0 0.0 0.0" texture="8 0.9" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox pos="-0.05 -0.0 -0.05" rot="0.0 0.0 0.0" texture="8 0.9" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint pos="0.0 0.3 0.0" size="0.1" collide="true"/>
 					</body>
@@ -200,13 +200,13 @@
 				<vox pos="184.2 0.7 -3.7" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="100speedsign"/>
 			</group>
 			<group name="Power Lines" pos="95.5 -0.1 94.6">
-				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
 			</group>
 			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
 				<vox pos="-48.8 -0.1 12.8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>

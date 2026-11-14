@@ -1,8 +1,0 @@
-<prefab version="1.3.0">
-	<group name="instance=MOD/Loots/helmet-killa.xml" pos="-0.6 0.0 0.0" rot="0.0 0.0 0.0">
-		<body tags="Loot=helmet-killa_Killa_45_45 interact=Killa" pos="0.0 0.2" dynamic="true">
-			<vox pos="-0.05 -0.2" file="MOD/vox/Armor/Altyn.vox" object="body1"/>
-		</body>
-	</group>
-</prefab>
-

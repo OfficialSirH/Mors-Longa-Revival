@@ -1,15 +1,15 @@
 <prefab version="1.4.0">
 	<group name="instance=MOD/prefabs/spawnables/enemies/civilian/Ragdollciv4.xml" pos="3.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<group prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox" prop1="tags=Torso Attack bodypart spawn_team=civ">
+		<group prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox" prop1="tags=Torso Attack bodypart spawn_team=civ">
 			<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-				<script tags=" " file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+				<script tags=" " file="MOD/npcs/GoreNPCs/scripts/goreai_initializer.lua">
 					<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 						<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body">
 							<instance pos="0.05 0.15 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ribs.xml"/>
 						</vox>
 					</body>
 					<group tags=" " prop0="tags=">
-						<group name="Head" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox">
+						<group name="Head" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit3.vox">
 							<body tags="Head bodypart" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" dynamic="true">
 								<vox pos="0.05 0.0 0.0" rot="0 180" density="5" object="head">
 									<voxbox pos="0.1 0.1 0.1" prop="true" size="1 1 1" material="plaster" color="0">
@@ -26,7 +26,7 @@
 								</vox>
 							</body>
 						</group>
-						<group name="Arms" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit.vox">
+						<group name="Arms" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit.vox">
 							<instance pos="-0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm L.xml"/>
 							<instance pos="0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm R.xml"/>
 						</group>

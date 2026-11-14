@@ -1,10 +1,10 @@
--- Mock test for NPC seating on the vehicles' passenger seat rigs (GoreNPCs/scripts/systems/goreai_sitting.lua),
+-- Mock test for NPC seating on the vehicles' passenger seat rigs (npcs/GoreNPCs/scripts/systems/goreai_sitting.lua),
 -- loaded through the real goreai_main.lua include chain. Run from the repo root with Lua 5.1:
 --   lua5.1 tools/porting/tests/test_sitting.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local MAIN = "GoreNPCs/scripts/goreai_main.lua"
+local MAIN = "npcs/GoreNPCs/scripts/goreai_main.lua"
 
 -- real rotation math (the mock engine's transforms ignore rotation)
 local function qmul(a, b)

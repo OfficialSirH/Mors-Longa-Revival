@@ -1,0 +1,22 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/1963 VW Beetle/Beetle Destroyed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.1 0.6 -0.15" dynamic="true">
+			<vox pos="0.0 -0.6 0.15" rot="1.0 180.0 -10.0" texture="8" blendtexture="5 " density="2.5" strength="3.5" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="body2" pbr="0 0 0 -64">
+				<vox tags="nocull" pos="0.0 0.05 1.9" rot="0.0 0.0 12.0" texture="8" blendtexture="5 " density="1.0" strength="1.0" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Front-bumper"/>
+				<vox tags="Latch=Structure nocull" pos="0.0 0.3 1.3" texture="8" blendtexture="5 " density="2.5" strength="3.0" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Hood">
+					<joint pos="0.4 0.5 -0.5" rot="0.0 -90.0 -60.0" type="ball" rotstrength="0.01" rotspring="0.0" collide="true" limits="0 60" sound="true"/>
+				</vox>
+				<vox tags="nocull" pos="0.0 -0.05 -2.1" rot="0.0 30.0 10.0" texture="8" blendtexture="5 " density="1.0" strength="1.0" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Rear-bumper"/>
+				<vox pos="0.6 0.3 0.2" texture="8" blendtexture="5 " density="1" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="door2">
+					<joint pos="0.05 0.5 0.4" rot="0.0 90.0 0.0" type="ball" rotspring="0.0" collide="true" sound="false"/>
+				</vox>
+				<vox pos="-1.1 -0.1 0.19999" rot="0.0 0.0 -40.0" texture="8" blendtexture="5 " density="1" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="door2"/>
+			</vox>
+			<vox pos="-0.518 -0.603 1.2" rot="0.0 -180.0 -70.0" texture="8" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_bl"/>
+			<vox pos="0.75 -0.66 1.2" rot="0.0 180.0 -30.0" texture="8" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_br"/>
+			<vox pos="-1.3 -0.5 -1.0" rot="0.0 210.0 90.0" texture="8" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_fl"/>
+			<vox pos="0.45 -0.66 -1.1" rot="0.0 180.0 30.0" texture="8" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_fr"/>
+		</body>
+	</group>
+</prefab>
+

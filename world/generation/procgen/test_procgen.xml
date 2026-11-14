@@ -1,0 +1,19 @@
+<scene version="1.1.0">
+
+	<script pos="0.0 0.2 0.0" file="MOD/world/generation/procgen/procgen.lua"/>
+
+	<script file="MOD/player/inventory.lua"/>
+	<script file="MOD/lib/Config.lua"/>
+	<script file="MOD/script/test.lua"/>
+
+	<script file="MOD/world/generation/RandomLoot.lua"/>
+	<script file="MOD/world/generation/RandomRoadSign.lua"/>
+	<script file="MOD/world/generation/RandomBuilding.lua"/>
+	<script file="MOD/world/generation/RandomDeceasedBurnt.lua"/>
+	<script file="MOD/world/generation/RandomEnemy.lua"/>
+
+	<voxbox pos="-0.5 0.0 -0.5" size="10 1 10" color="0.0 0.0 0.0"/>
+	<environment template="sunny" fogParams="0 0 0 0"/>
+	<spawnpoint/>
+
+</scene>

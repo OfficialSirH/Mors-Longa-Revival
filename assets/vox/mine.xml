@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/assets/vox/mine.xml" pos="69.0 0.7 33.2" rot="0.0 0.0 0.0">
+		<body name="mine" tags="mine">
+			<voxbox pos="-0.05 -0.08 -0.05" size="1 1 1" color="0.78 0.52 0.33"/>
+		</body>
+	</group>
+</prefab>
+

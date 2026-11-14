@@ -1,4 +1,4 @@
--- Mock test for horde mode (Procedural/WaveHandler.lua, scripts/Game/PlaceTool/HordePlaceTool.lua). Run from the
+-- Mock test for horde mode (world/generation/WaveHandler.lua, weapons/PlaceTool/HordePlaceTool.lua). Run from the
 -- repo root with Lua 5.1:   lua5.1 tools/porting/tests/test_horde.lua
 dofile("tools/porting/tests/mockengine.lua")
 
@@ -9,7 +9,7 @@ local function deepcopy(v)
 end
 
 ------------------------------------------------------------------ waves
-local srv = MockEngine.load("Procedural/WaveHandler.lua")
+local srv = MockEngine.load("world/generation/WaveHandler.lua")
 local torsos = {}
 srv.def("FindBodies", function(tag) if tag == "Torso" then return torsos end return {} end)
 local spawned = {}
@@ -27,7 +27,7 @@ for _, s in ipairs(srv.sent) do if s.fn == "client.hordeReward" then reward = s 
 check(reward and reward.to == 0 and reward.args[1] == 100, "waves: wave 1 cleared -> 100 to every player (ClientCall 0)")
 check(srv.shared.horde.ongoing == false, "waves: countdown shown again after a cleared wave (v1 bug: stayed 'ongoing')")
 -- ongoing while enemies are alive
-srv = MockEngine.load("Procedural/WaveHandler.lua")
+srv = MockEngine.load("world/generation/WaveHandler.lua")
 torsos = { 7, 8 }
 srv.def("FindBodies", function(tag) if tag == "Torso" then return torsos end return {} end)
 srv.def("HasTag", function() return false end)
@@ -39,7 +39,7 @@ local seen = false
 for i = 1, 6 * 60 do srv.server.tick(1/60) if #srv.shared.horde.outline == 2 then seen = true end end -- flashes 0.5 s every 1-5 s
 check(seen, "waves: last enemies listed for the client outline")
 
-local cli = MockEngine.load("Procedural/WaveHandler.lua")
+local cli = MockEngine.load("world/generation/WaveHandler.lua")
 cli.side = "client"
 cli.client.init()
 check(cli.R["savegame.mod.player.money"] == 500 and cli.R["savegame.mod.inventory.init"] == true, "waves (client): every player starts with 500 + fresh inventory")
@@ -53,7 +53,7 @@ cli.client.hordeReward(300)
 check(cli.R["savegame.mod.player.money"] == 800 and cli.R["inventory.refreshshop"] == true, "waves (client): prize added to own money")
 
 ------------------------------------------------------------------ place tool, server
-local PLACE = "scripts/Game/PlaceTool/HordePlaceTool.lua"
+local PLACE = "weapons/PlaceTool/HordePlaceTool.lua"
 srv = MockEngine.load(PLACE, { preload = MockEngine.includes(PLACE) })
 local nextHandle, spawns, deleted = 500, {}, {}
 srv.def("Spawn", function(path, t, a, b)

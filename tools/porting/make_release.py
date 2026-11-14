@@ -6,7 +6,7 @@ The game's local mod folder (Documents/Teardown/mods/Mors Longa Revival) is a ju
 would send .git (~370 MB) and every dev file. This copies only what the game loads into a separate local mod,
 default Documents/Teardown/mods/Mors Longa Revival (Release); upload that one from the game's mod manager.
 
-* Left out: EXCLUDE_DIRS / EXCLUDE_FILES / EXCLUDE_EXT below (git, tools, docs, dev notes, editor files, root test levels).
+* Left out: EXCLUDE_DIRS / EXCLUDE_FILES / EXCLUDE_EXT below (git, tools, docs, dev/, dev notes, editor files).
 * info.txt: the repo's, with " (dev)" taken off the name; refuses to build while it still says AUTHOR_NAME.
 * id.txt: the Workshop item the upload updates. The repo's has no id (the original mod's item 2906369984 was
   removed, 2026-11-13: an upload would have tried to update Overdrive Studios' item). After the first upload the
@@ -21,11 +21,9 @@ DEFAULT_DEST = os.path.join(os.path.expanduser("~"), "Documents", "Teardown", "m
 MARKER = ".made_by_make_release"
 ORIGINAL_ITEM = "2906369984"  # the original Mors Longa's Workshop item (Overdrive Studios): never upload to it
 
-EXCLUDE_DIRS = {".git", ".github", ".vscode", "tools", "docs", "__pycache__"}
+EXCLUDE_DIRS = {".git", ".github", ".vscode", "tools", "docs", "dev", "__pycache__"}   # dev/: test levels and dev scripts
 EXCLUDE_FILES = {".git-blame-ignore-revs", ".gitattributes", ".gitignore", ".luarc.json", ".mcp.json", "CLAUDE.md",
-                 "README.md", "id.txt", "info.txt", MARKER,
-                 # dev-only test levels (the main menu's Tab dev list names test_npc.xml; test.lua only serves lol.xml)
-                 "test.xml", "test_misc.xml", "test_npc.xml", "test_vehicle.xml", "lol.xml", "test.lua"}
+                 "README.md", "id.txt", "info.txt", MARKER}
 EXCLUDE_EXT = {".py", ".pyc", ".psd", ".md", ".sqlite", ".sh", ".yml"}
 
 

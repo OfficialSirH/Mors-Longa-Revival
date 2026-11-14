@@ -1,6 +1,6 @@
 <prefab version="1.1.0">
 	<group name="instance=MOD/prefabs/spawnables/buildings/constructionSpecial3.xml" pos="-17.5 -0.0 0.1">
-		<script file="MOD/scripts/Binge.lua">
+		<script file="MOD/world/Binge.lua">
 			<vox tags="Shrine interact=pray" pos="0.0 0.0 -0.2" rot="0.0 180.0 0.0" desc="Bingus Shrine All Hail Bingus" density="20" strength="2" prop="true" file="MOD/main/terrain/eastereggs/bingus_shrine.vox" object="shrine">
 				<screen pos="0.05 2.2 -0.2" rot="0.0 -180.0 0.0" size="1.1, 2" bulge="0" resolution="225 562" script="MOD/main/terrain/eastereggs/binge.lua" enabled="true" emissive="0"/>
 			</vox>

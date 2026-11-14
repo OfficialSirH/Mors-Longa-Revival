@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/PerkMachine.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<script file="MOD/scripts/Game/PerkMachine.lua">
+		<script file="MOD/game/PerkMachine.lua">
 			<group prop0="material=metal" prop1="texture=7 0.3" prop2="pbr=0 .1 0 0">
 				<body tags="PerkMachine safezone=perk unbreakable" pos="0.0 1.4 0.0" dynamic="true">
 					<compound pos="0.0 -1.4 0.0" density="2">

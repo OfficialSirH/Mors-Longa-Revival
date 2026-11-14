@@ -4,7 +4,7 @@
 -- usage: lua51 foliage_profile.lua <ammo type index> <layers>
 dofile("tools/porting/tests/mockengine.lua")
 local T, LAYERS = tonumber(arg[1]) or 1, tonumber(arg[2]) or 20
-local B = "avf/prefabs/bmp/BMP-2.lua"
+local B = "vehicles/avf/prefabs/bmp/BMP-2.lua"
 local e = MockEngine.load(B, { preload = MockEngine.includes(B) })
 
 -- ---------- real quaternions (x, y, z, w); Teardown: QuatEuler applies Y, then Z, then X

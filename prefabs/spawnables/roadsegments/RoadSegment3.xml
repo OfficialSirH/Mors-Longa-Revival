@@ -154,40 +154,40 @@
 				<trigger tags="WaterSource size=200,100 depth=1 wave=0 foam=.1 color=.4,.35,.2" pos="100.0 0.3 -50.0" size=".1">
 					<water size="200 100" depth="1" wave="0" foam=".1" color="0.4 0.35 0.2"/>
 				</trigger>
-				<voxbox name="wall" pos="4.2 0.7 -51.8" rot="0.0 35.0 0.0" size="610 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="54.8 0.7 -86.8" rot="0.0 .0 0.0" size="52 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="66.40001 0.7 -86.8" rot="0.0 0.0 0.0" size="784 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<voxbox name="wall" pos="66.3 0.7 -86.3" rot="0.0 -90.0 0.0" size="639 9 4" brush="MOD/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
-				<vox pos="4.1 0.2 -51.5" rot="0.0 125.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="54.5 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="145.10001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="60.30001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="66.1 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="66.10001 0.2 -22.1" rot="0.0 90.0 0.0" file="MOD/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
-				<vox pos="59.4 0.7 -84.1" rot="0.0 40.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="28.6 0.7 51.4" rot="0.0 -10.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="59.4 0.7 -68.5" rot="0.0 -30.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="59.4 0.7 -63.4" rot="0.0 -70.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="59.4 0.7 -75.1" rot="0.0 80.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="59.4 0.7 -26.4" rot="0.0 20.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="161.10001 0.7 69.7" rot="0.0 170.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="59.4 0.7 -32.4" rot="0.0 20.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="59.4 0.7 -53.4" rot="0.0 -20.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="59.4 0.7 -47.6" rot="0.0 -130.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="165.40001 0.7 40.8" rot="0.0 -180.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
+				<voxbox name="wall" pos="4.2 0.7 -51.8" rot="0.0 35.0 0.0" size="610 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="54.8 0.7 -86.8" rot="0.0 .0 0.0" size="52 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="66.40001 0.7 -86.8" rot="0.0 0.0 0.0" size="784 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="66.3 0.7 -86.3" rot="0.0 -90.0 0.0" size="639 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<vox pos="4.1 0.2 -51.5" rot="0.0 125.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="54.5 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="145.10001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="60.30001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="66.1 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="66.10001 0.2 -22.1" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="59.4 0.7 -84.1" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="28.6 0.7 51.4" rot="0.0 -10.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="59.4 0.7 -68.5" rot="0.0 -30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="59.4 0.7 -63.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -75.1" rot="0.0 80.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -26.4" rot="0.0 20.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="161.10001 0.7 69.7" rot="0.0 170.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -32.4" rot="0.0 20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="59.4 0.7 -53.4" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="59.4 0.7 -47.6" rot="0.0 -130.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="165.40001 0.7 40.8" rot="0.0 -180.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
 			</group>
 			<group prop0="texture=8">
 				<vox pos="5.9 0.7 18.5" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="CamelsignD"/>
 				<vox pos="190.39999 0.7 -21.7" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="Camelsign"/>
 			</group>
 			<group name="Power Lines" pos="95.5 -0.1 94.6">
-				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="66.4 0.75 -0.0" rot="0.0 100.0 -5.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.4 0.75 -0.0" rot="0.0 100.0 -5.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
 			</group>
 			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
 				<vox pos="-48.8 -0.1 12.8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>

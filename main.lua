@@ -1,5 +1,5 @@
-#include "./ModConfig.lua"
-#include "./scripts/Tools/DevShortcuts.lua"
+#include "./lib/ModConfig.lua"
+#include "./lib/DevShortcuts.lua"
 
 function tick()
   TickModConfig()

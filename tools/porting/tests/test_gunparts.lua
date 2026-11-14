@@ -1,4 +1,4 @@
--- Mock test for other players' guns (script/gunnet.lua, MP 2026-11-14): the holder's machine sends its tool parts'
+-- Mock test for other players' guns (weapons/guns/gunnet.lua, MP 2026-11-14): the holder's machine sends its tool parts'
 -- local transforms (changes only, all of them on a tool change / every 2 s), the other machines apply them to that
 -- player's tool body with the first-person arms hidden.
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_gunparts.lua
@@ -6,7 +6,7 @@ dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local PATH = "script/gunnet.lua"
+local PATH = "weapons/guns/gunnet.lua"
 
 -- a machine with two players; shape handles: tool body of player p = 100*p, its shapes 100*p + i
 local function machine(localPlayer)

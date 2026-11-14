@@ -1,4 +1,4 @@
--- Mock test for the tutorial scripts (Phase 3, scripts/Tutorial). Run from the repo root with Lua 5.1:
+-- Mock test for the tutorial scripts (Phase 3, game/Tutorial). Run from the repo root with Lua 5.1:
 --   lua5.1 tools/porting/tests/test_tutorial.lua
 dofile("tools/porting/tests/mockengine.lua")
 
@@ -22,29 +22,29 @@ end
 
 -- client-only scripts: per-machine inventory / hunger, bleeding warning
 for _, f in ipairs({ "tutClearInv", "tutForceHungry" }) do
-	local env = MockEngine.load("scripts/Tutorial/" .. f .. ".lua")
+	local env = MockEngine.load("game/Tutorial/" .. f .. ".lua")
 	check(env.server.init == nil and env.client.init ~= nil, f .. ": client only")
 	env.side = "client" env.client.init()
 	check(next(env.violations) == nil, f .. ": no server-only calls")
 end
-local env = MockEngine.load("scripts/Tutorial/tutClearInv.lua")
+local env = MockEngine.load("game/Tutorial/tutClearInv.lua")
 env.R["savegame.mod.inventory.guns.1.item"] = "AK74"
 env.side = "client" env.client.init()
 check(env.R["savegame.mod.inventory.guns.1.item"] == "", "tutClearInv: empties the local saved inventory")
 
-env = MockEngine.load("scripts/Tutorial/tutHURTWARN.lua")
+env = MockEngine.load("game/Tutorial/tutHURTWARN.lua")
 env.def("FindTriggers", function() return { 11 } end)
 env.def("HasTag", function(h, t) return t == "Bleed" end)
 env.side = "client" env.client.draw()
 check((env.calls.UiText or 0) == 3 and next(env.violations) == nil, "tutHURTWARN: warning drawn on the client")
 
 -- server-only world scripts
-env = MockEngine.load("scripts/Tutorial/tutMakeHoleAtLocation.lua")
+env = MockEngine.load("game/Tutorial/tutMakeHoleAtLocation.lua")
 env.def("FindLocations", function() return { 5, 6 } end)
 env.server.init() serverSteps(env, 2, 1/60)
 check(env.calls.MakeHole == 2 and next(env.violations) == nil, "tutMakeHole: holes made on the server, once each")
 
-env = MockEngine.load("scripts/Tutorial/tutRemoverTriggerWhenTrigger.lua")
+env = MockEngine.load("game/Tutorial/tutRemoverTriggerWhenTrigger.lua")
 twoPlayers(env, {5,0,0})
 local deleted = {}
 env.def("FindTriggers", function() return { 21, 22 } end)
@@ -54,7 +54,7 @@ env.server.init() serverSteps(env, 3, 1/60)
 check(#deleted == 1 and deleted[1] == 22, "tutRemoverTrigger: player 2 (not the host) removes the trigger, once")
 
 -- ending: any player starts it; every client fades and saves; the host loads main.xml once
-env = MockEngine.load("scripts/Tutorial/tutEnding.lua")
+env = MockEngine.load("game/Tutorial/tutEnding.lua")
 twoPlayers(env, {5,0,0})
 env.def("FindTriggers", function() return { 31 } end)
 env.def("IsPointInTrigger", function(t, pos) return pos[1] == 5 end)
@@ -73,7 +73,7 @@ check(started == 1, "tutEnding: host starts main.xml once")
 check(env.calls.SetCameraTransform and next(env.violations) == nil, "tutEnding: camera on the client, StartLevel on the server")
 
 -- tips: the local player's trigger, slow-down through the server
-env = MockEngine.load("scripts/Tutorial/tutTriggerHUDNotification.lua")
+env = MockEngine.load("game/Tutorial/tutTriggerHUDNotification.lua")
 twoPlayers(env, {5,0,0})
 env.LOCAL = 2
 env.Init_Settings = function() env.Settings = { keybinds = { jump = { type = "key", values = { k1 = "space", k2 = "none", k3 = "none" } } } } end

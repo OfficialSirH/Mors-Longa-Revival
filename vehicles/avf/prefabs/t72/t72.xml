@@ -1,0 +1,80 @@
+<prefab version="0.5.3">
+	<group name="instance=MOD/vehicles/avf/prefabs/t72/t72.xml" pos="-0.1 0.2 -23.3">
+		<vehicle open_="true" name="t72" tags="cfg=vehicle t72" pos="0.1 -0.2 1.1" driven="false" sound="dumptruck" spring="1" damping="0.8" topspeed="50" acceleration="2" strength="50" antispin="1" antiroll="0.2" difflock="1" steerassist="2" friction="2">
+			<body open_="true" tags="component=body" pos="-0.05 0.6 -0.25" dynamic="true">
+				<vox tags="component=chassis" pos="0.05 -0.2 0.25" rot="0 180 0" texture="8 .4" density="20" strength="10" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="body">
+					<light pos="0.8 1.35 3.4" type="cone" color="1 .9 .8" scale="30" angle="90" penumbra="30" size="0.2" unshadowed="0.2" glare="0.35"/>
+					<light pos="-0.8 1.35 3.4" type="cone" color="1 .9 .8" scale="30" angle="90" penumbra="30" size="0.2" unshadowed="0.2" glare="0.35"/>
+					<location tags="exhaust" pos="2.2 	1.6 	-1.7" rot="0 60 0 "/>
+					<location tags="exhaust" pos="2.1 	1.6 	-1.8" rot="-20 60 0 "/>
+					<location tags="exhaust" pos="2.1  	1.6 	-1.5" rot="20 80 0 "/>
+					<location tags="exhaust" pos="2.2  	1.6 	-1.9" rot="-10 130 0 "/>
+					<location tags="exhaust" pos="2.2  	1.6 	-2" rot="10 160 0 "/>
+					<location tags="vital" pos="0.05 0.55 1.4" rot="-180.0 360.0 -180.0"/>
+					<location tags="player" pos="-0.05 1.47 1.8"/>
+					<vox pos="2.2 .9 0.7" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="skirteraL"/>
+					<vox pos="-2.2 .9 0.7" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="skirteraR"/>
+				</vox>
+				<vox open_="true" tags="component=turret turretGroup=mainTurret" pos="0 1.4 .5" rot="0.0 180 0" texture="7 0.4" density="1.2" strength="10" prop="true" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="altTurret">
+					<light pos="-0.6 .35 1.7" type="cone" color="1 .9 .8" scale="60" angle="90" penumbra="30" size="0.2" unshadowed="1" glare="0.35"/>
+					<joint name="turretjoint" tags="component=turretJoint" rot="90 0 0" type="hinge" size="0.5" rotstrength="14" rotspring="0" sound="true"/>
+					<vox open_="true" tags="component=gun weaponType=D81 group=primary   interact=mountedGun" pos="-0.1 0.2 3.7" rot="0.0 0 0" texture="7 .5" density="1.2" strength="50" prop="true" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="altGun">
+						<joint name="gunjoint" tags="component=gunJoint" pos="-0.1 0.2 -2.5" rot="0 90 0" type="hinge" size="0.1" rotstrength=".5" rotspring="0" limits="-14 5" sound="true"/>
+					</vox>
+				</vox>
+				<vox tags="t72Trigger hook" pos="0 1 3" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="trigger">
+					<joint tags="t72triggerJoint" pos="0.0   0 0 " rot="0 90 0" type="ball" size=".1" rotstrength=".5" rotspring="0" sound="true"/>
+				</vox>
+				<wheel name="runner03" pos="1.1 0.6 -2.9" drive="1" steer="0.1" travel="-0.1 0">
+					<vox pos="0.45 -0.25 -0.05" rot="0.0 0 0.0" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="runner03"/>
+				</wheel>
+				<wheel name="whr1" pos="1.1 0.2 -2.3" rot="0.0 0 0.0" drive="1" steer="0.66" travel="-0.1 0">
+					<vox pos="0.5 -0.5 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr1"/>
+				</wheel>
+				<wheel name="whr2" pos="1.1 0.27 -1.35" rot="0.0 0 0.0" drive="1" steer="0.44" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr2"/>
+				</wheel>
+				<wheel name="whr3" pos="1.1 0.27 -.3" drive="1" steer="0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr3"/>
+				</wheel>
+				<wheel name="whr4" pos="1.1 0.27 .65" drive="1" steer="-0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr4"/>
+				</wheel>
+				<wheel name="whr5" pos="1.1 0.27 1.7" drive="1" steer="-0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr5"/>
+				</wheel>
+				<wheel name="whr6" pos="1.1 0.25 2.7" drive="1" steer="-0.66" travel="-0.1 0.1">
+					<vox pos="0.5 -0.5 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whr6"/>
+				</wheel>
+				<wheel name="runner04" pos="1.1 0.6 3.3" drive="1" steer="-0.1" travel="-0.1 0.1">
+					<vox pos="0.45 -0.25 -0.05" rot="0.0 0 0.0" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="runner04"/>
+				</wheel>
+				<wheel name="runner01" pos="-2.1 0.6 -2.9" drive="1" steer="0.1" travel="-0.1 0">
+					<vox pos="0.5 -0.3 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="runner01"/>
+				</wheel>
+				<wheel name="whl1" pos="-2.1 0.2 -2.3" drive="1" steer="0.66" travel="-0.1 0">
+					<vox pos="0.5 -0.5 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl1"/>
+				</wheel>
+				<wheel name="whl2" pos="-2.1 0.27 -1.35" drive="1" steer="0.44" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl2"/>
+				</wheel>
+				<wheel name="whl3" pos="-2.1 0.27 -.3" drive="1" steer="0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl3"/>
+				</wheel>
+				<wheel name="whl4" pos="-2.1 0.27 .65" drive="1" steer="-0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl4"/>
+				</wheel>
+				<wheel name="whl5" pos="-2.1 0.27 1.7" drive="1" steer="-0.33" travel="-0.1 0.1">
+					<vox pos="0.5 -0.55 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl5"/>
+				</wheel>
+				<wheel name="whl6" pos="-2.1 0.25 2.7" drive="1" steer="-0.66" travel="-0.1 0.1">
+					<vox pos="0.5 -0.5 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="whl6"/>
+				</wheel>
+				<wheel name="runner02" pos="-2.1 0.6 3.3" drive="1" steer="0.1" travel="-0.1 0">
+					<vox pos="0.5 -0.3 -0.05" file="MOD/vehicles/avf/prefabs/t72/t72.vox" object="runner02"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

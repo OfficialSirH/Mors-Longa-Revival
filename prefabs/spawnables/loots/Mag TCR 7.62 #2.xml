@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Mag TCR 7.62 #2.xml" pos="-7.6 1.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/mag2-scar-762x51.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/mag2-scar-762x51.xml"/>
 	</group>
 </prefab>
 

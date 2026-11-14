@@ -1,0 +1,73 @@
+<prefab version="0.9.5">
+	<group open_="true" name="instance=MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep.xml" pos="2.3 -0.1 2.1" rot="0.0 90.0 0.0">
+		<script open_="true" file="MOD/lib/missing_script_stub.lua">
+			<vehicle open_="true" name="Willys Jeep" tags="Door" pos="0.0 0.3 0.0" rot="0.0 -90.0 0.0" sound="suv4 1.1" spring="2" damping="1.0" topspeed="89" acceleration="0.2" strength="1.5" antiroll="0.3" difflock="1" steerassist="0.3" friction="1.4">
+				<body open_="true" dynamic="true">
+					<vox open_="true" name="Body" texture="8 0.5" density="2.5" strength="3" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="body">
+						<location tags="player" pos="-0.3 1.05 0.35"/>
+						<location tags="vital" pos="0.05 0.5 -1"/>
+						<location tags="exhaust" pos="0.7 0.15 0.5" rot="0.0 40.0 0.0"/>
+						<light pos="-0.3 0.6 -1.3" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="5" penumbra="30" reach="5" unshadowed="0.2" glare="0.3"/>
+						<light pos="0.4 0.6 -1.3" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="5" penumbra="30" reach="5" unshadowed="0.2" glare="0.3"/>
+						<light pos="-0.55 0.45 1.4" type="area" color="1 0.1 0.1" size="0.1 0.1" reach="2" unshadowed="0.2" glare="0.1"/>
+						<light pos="0.65 0.45 1.4" type="area" color="1 0.1 0.1" size="0.1 0.1" reach="2" unshadowed="0.2" glare="0.1"/>
+						<vox open_="true" name="Windshield" tags="nocull" pos="0.0 0.6 -0.305" rot="12" texture="8 0.5" density="2.5" strength="3" prop="true" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="windshield">
+							<joint pos="-0.5 0.084 -0.08" rot="0.0 270.0 90.0" type="hinge" rotstrength="0.02" rotspring="0.0" limits="0 100"/>
+							<joint pos="0.6 0.084 -0.08" rot="0.0 270.0 90.0" type="hinge" rotstrength="0.02" rotspring="0.0" limits="0 100"/>
+						</vox>
+						<vox name="Engine" tags="nocull" pos="0.0 0.2 -0.7" density="2" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="engine"/>
+						<vox open_="true" name="Hood" tags="nocull" pos="0.0 0.6 -0.9" texture="8 0.5" density="2.5" strength="3.0" prop="true" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="hood">
+							<joint tags="door" pos="0.0 0.15 0.4" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.05" rotspring="0.0" limits="0 100"/>
+						</vox>
+					</vox>
+					<wheel open_="true" name="fr" pos="0.6 0.05 -1.05" drive="1" steer="0.7" travel="-0.05 0.1">
+						<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_fr"/>
+					</wheel>
+					<wheel open_="true" name="fl" pos="-0.5 0.05 -1.05" drive="1" steer="0.7" travel="-0.05 0.1">
+						<vox pos="-0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_fl"/>
+					</wheel>
+					<wheel open_="true" name="br" pos="0.6 0.05 0.95" drive="1" travel="-0.05 0.1">
+						<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_br"/>
+					</wheel>
+					<wheel open_="true" name="bl" pos="-0.5 0.05 0.95" drive="1" travel="-0.05 0.1">
+						<vox pos="-0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep/Willys Jeep.vox" object="wheel_bl"/>
+					</wheel>
+				</body>
+				<rig name="driver" tags="driver sort=0" pos="-0.3 0.55 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.07 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.17 0.35 -0.15" rot="0.0 90 0.0"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.35 -0.15" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="0.4 0.55 0.15">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.4" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=2" pos="0.4 0.55 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=3" pos="-0.3 0.55 0.95">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+			</vehicle>
+		</script>
+	</group>
+</prefab>
+

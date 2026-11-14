@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun RPK74.xml" pos="-11.8 0.6 -3.0" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-ak74.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-ak74.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="AK74" tags="Loot=gun-ak74_Kovalyov-545_mag1-ak-545_6L18_45_45_5.45_--muzzle2-stock3-grip3-barrel2----- interact=Kovalyov-545" pos="0.0 0.3 0.0" dynamic="true">
 				<group name="Wood" prop0="color=.4 .19 .11" prop1="material=wood">
 					<group name="Stock" pos="0.0 0.0 -0.25">

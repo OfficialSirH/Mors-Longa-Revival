@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Mag Deagle #0.xml" pos="-21.987 0.6 -1.9" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/mag0-dgl-127x33.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/mag0-dgl-127x33.xml"/>
 	</group>
 </prefab>
 

@@ -1,0 +1,10 @@
+<prefab version="1.3.0">
+	<group>
+		<body tags="Loot=food8_Orange_30_50 interact=Orange" pos="0 .2" dynamic="true">
+			<vox pos="0 -.2" file="MOD/assets/vox/foods/orangejug.vox">
+				<voxbox pos=".05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

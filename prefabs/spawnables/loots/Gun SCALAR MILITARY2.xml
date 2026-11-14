@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun SCALAR MILITARY2.xml" pos="-3.2 0.6 -4.6" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-vector.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-vector.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="Scalar" tags="Loot=gun-vector_Scalar_mag1-glock-9x19_P17_33_33_9x19_sight3-muzzle2--grip1-barrel1-side1-guard2 interact=Scalar unbreakable" pos="0.0 0.45 0.0" dynamic="true">
 				<group name="Metal0" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 					<voxbox name="Barrel" tags="barrel range=20 magsize=33 damage=0.7 firerate=0.05 gun=vector unbreakable roundsize=1 number=Unis" pos="-0.05 -0.04 0.5" size="1 1 3" color=".1 .1 .1"/>

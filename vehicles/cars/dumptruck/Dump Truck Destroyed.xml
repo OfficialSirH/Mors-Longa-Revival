@@ -1,0 +1,24 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/dumptruck/Dump Truck Destroyed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group rot="5">
+			<body pos="-0.05 0.3 -0.45" dynamic="true">
+				<vox pos="-0.05 -0.1 -0.05" texture="8" blendtexture="5" density="5" strength="5" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="body2" pbr="0 0 0 -64">
+					<vox pos="-0.9 0.6 -1.9" texture="8" blendtexture="5" density="2" strength="3" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="door2_l">
+						<joint pos="0.0 0.7 -0.5" rot="90.0 -90.0 0.0" type="ball" rotstrength="0.01" rotspring="0.0" collide="true" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="0.8 2.4 -1.29999" rot="0.0 320.0 90.0" texture="8" blendtexture="5" density="2" strength="3" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="door2_r"/>
+				</vox>
+				<vox pos="-0.25 1.0 0.85" rot="0.0 180.0 -10.0" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_bl1"/>
+				<vox pos="-2.05 0.3 1.95" rot="0.0 -50.0 -90.0" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_bl2"/>
+				<vox pos="1.85 0.0 0.65" rot="0.0 -40.0 90.0" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_br1"/>
+				<vox pos="0.75 1.2 -0.45" rot="0.0 0.0 90.0" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_br2"/>
+				<vox pos="-1.05 -0.5 -1.85" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_fl"/>
+				<vox pos="0.95 -0.5 -1.85" texture="8" blendtexture="5" prop="true" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="wheel_fr"/>
+			</body>
+			<body pos="-0.2 0.9 -0.00001" dynamic="true">
+				<vox pos="0.1 0.1 0.1" texture="8" density="2" strength="3" file="MOD/vehicles/cars/dumptruck/dumptruck.vox" object="bed2"/>
+			</body>
+		</group>
+	</group>
+</prefab>
+

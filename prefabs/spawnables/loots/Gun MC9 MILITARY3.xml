@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun MC9 MILITARY3.xml" pos="-7.2 0.6 1.2" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-mp5.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-mp5.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="MP5" tags="Loot=gun-mp5_MC9_mag0-mp5-9x19_MC9-Mag_30_30_9x19_holo-muzzle1--grip2--side4-guard2 interact=MC9 unbreakable" pos="0.0 0.4 0.0" dynamic="true">
 				<group name="Metal" prop0="color=.12 .12 .12" prop1="pbr=.02 .1 .1" prop2="material=metal">
 					<voxbox pos="-0.05 -0.05 -0.1" size="1 1 7"/>

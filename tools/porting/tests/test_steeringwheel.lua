@@ -1,9 +1,9 @@
--- Mock test for scripts/SteeringWheel.lua (steering wheels that turn with the vehicle's steering).
+-- Mock test for vehicles/SteeringWheel.lua (steering wheels that turn with the vehicle's steering).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_steeringwheel.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "scripts/SteeringWheel.lua"
+local PATH = "vehicles/SteeringWheel.lua"
 
 local env = MockEngine.load(PATH)
 env.side = "server"

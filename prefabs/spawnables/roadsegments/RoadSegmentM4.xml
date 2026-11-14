@@ -418,38 +418,38 @@
 					<vertex pos="62.8 52.6"/>
 				</voxagon>
 				<group pos="45.1 -21.2 66.6" rot="0.0 -90.0 0.0">
-					<vox pos="-12.1 13.6 -2.50001" rot="-7.7 50.4 6.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="-41.0 12.2 12.79998" rot="-7.7 -19.6 6.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="-143.3 12.2 55.49996" rot="-7.7 -19.6 6.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="-40.40001 11.5 72.49997" rot="-7.7 -179.60001 6.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="16.9 11.5 1.19999" rot="-170.60001 160.3 -3.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="-31.8 12.3 53.09998" rot="-170.60001 130.3 -3.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="-113.39999 12.1 79.59996" rot="-170.60001 -59.7 -3.4" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="4.8 17.25 -1.9" rot="0.0 -140.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
-					<vox pos="-94.8 17.25 76.2" rot="0.0 10 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
-					<vox pos="-144.7 17.25 89.69999" rot="0.0 -110.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
-					<vox pos="-153.7 17.25 56.59999" rot="0.0 90.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-12.1 13.6 -2.50001" rot="-7.7 50.4 6.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="-41.0 12.2 12.79998" rot="-7.7 -19.6 6.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="-143.3 12.2 55.49996" rot="-7.7 -19.6 6.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="-40.40001 11.5 72.49997" rot="-7.7 -179.60001 6.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="16.9 11.5 1.19999" rot="-170.60001 160.3 -3.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="-31.8 12.3 53.09998" rot="-170.60001 130.3 -3.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="-113.39999 12.1 79.59996" rot="-170.60001 -59.7 -3.4" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="4.8 17.25 -1.9" rot="0.0 -140.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-94.8 17.25 76.2" rot="0.0 10 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-144.7 17.25 89.69999" rot="0.0 -110.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-153.7 17.25 56.59999" rot="0.0 90.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
 					<vox pos="16.2 16.8 -1.7" rot="0.0 150.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="13.0 17.7 2.60001" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="-6.6 17.0 -2.79999" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="-3.0 17.0 4.40001" rot="0.0 90.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 				</group>
-				<vox pos="76.1 0.3 65.2" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="28.5 -3.3 56.4" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="-68.1 0.7 -60.70001" rot="0.0 100.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="-43.4 0.3 29.0" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="64.3 0.3 -55.5" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="-24.1 -3.3 -87.6" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="-18.4 0.3 50.40001" rot="0.0 -180.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="-16.0 -3.3 23.8" rot="0.0 -180.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="-17.6 0.3 64.3" rot="0.0 100.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="4.6 -3.3 78.4" rot="0.0 -20.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="73.3 0.3 -71.2" rot="0.0 -100.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="-70.11217 0.7 -44.88519" rot="0.0 40.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="-22.9 -3.3 -44.9" rot="0.0 -170.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="-31.0 -3.3 -61.7" rot="0.0 -100.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="-24.3 -3.3 23.2" rot="0.0 -100.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="-0.3 -3.3 88.4" rot="0.0 110.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
+				<vox pos="76.1 0.3 65.2" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="28.5 -3.3 56.4" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="-68.1 0.7 -60.70001" rot="0.0 100.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="-43.4 0.3 29.0" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="64.3 0.3 -55.5" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="-24.1 -3.3 -87.6" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="-18.4 0.3 50.40001" rot="0.0 -180.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="-16.0 -3.3 23.8" rot="0.0 -180.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="-17.6 0.3 64.3" rot="0.0 100.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="4.6 -3.3 78.4" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="73.3 0.3 -71.2" rot="0.0 -100.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="-70.11217 0.7 -44.88519" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="-22.9 -3.3 -44.9" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="-31.0 -3.3 -61.7" rot="0.0 -100.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="-24.3 -3.3 23.2" rot="0.0 -100.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="-0.3 -3.3 88.4" rot="0.0 110.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
 			</group>
 			<group name="road" pos="100.09998 0.4 -1.5" rot="0.0 180.0 0.0" prop0="texture=16">
 				<group name="bridge" pos="-11.1 -3.3 -10.9" rot="0.0 90.0 0.0">
@@ -592,13 +592,13 @@
 				<vox pos="184.90002 0.7 -3.99999" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="80speedsignD"/>
 			</group>
 			<group name="Power Lines" pos="95.5 -0.1 94.6">
-				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="29.7 -2.6 0.0" rot="90.0 160.0 0.0" texture="8 0.5" prop="true" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="29.7 -2.6 0.0" rot="90.0 160.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
 			</group>
 			<group name="background" pos="100.0 0.3 0.0" prop0="collide=false">
 				<group pos="0.0 -4.3 -151.2">
@@ -651,15 +651,15 @@
 						<vertex pos="54.8 167.8"/>
 						<vertex pos="51.6 181.5"/>
 					</voxagon>
-					<vox pos="17.1 -9.0 23.10002" rot="-82.6 95.0 81.9" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="-32.60006 -9.1 13.20003" rot="120.0 -90.0 -80.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="15.8 -5.3 -20.10005" rot="2.1 30.7 5.6" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="-29.30009 -12.3 -41.60012" rot="173.39999 9.2 -16.9" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="17.1 -9.0 23.10002" rot="-82.6 95.0 81.9" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="-32.60006 -9.1 13.20003" rot="120.0 -90.0 -80.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="15.8 -5.3 -20.10005" rot="2.1 30.7 5.6" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="-29.30009 -12.3 -41.60012" rot="173.39999 9.2 -16.9" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
 					<voxbox name="sand:normal" pos="7.09975 0.0 51.19999" rot="0.0 180.0 0.0" size="156 1 865" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
-					<vox pos="-19.6 0.7 34.9" rot="0.0 100.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="-19.6 0.7 34.9" rot="0.0 100.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
 				</group>
 				<group pos="1.8 -41.3 169.90001">
-					<vox pos="9.8 37.45 -57.10001" rot="0.0 140.0 0.0" file="MOD/vox/terrainpieces/MorsLongaDunes.vox"/>
+					<vox pos="9.8 37.45 -57.10001" rot="0.0 140.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaDunes.vox"/>
 					<voxagon pos="22.89999 41.6 -230.7" rot="0.0 0.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" extrude="1">
 						<vertex pos="75.3 160.8"/>
 						<vertex pos="42.1 160.8"/>
@@ -722,11 +722,11 @@
 						<vertex pos="137.40001 -32.2"/>
 						<vertex pos="137.40001 -135.3"/>
 					</voxagon>
-					<vox pos="45.60001 37.1 34.29999" rot="-16.0 53.3 77.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="-5.8 35.3 -37.3" rot="0 -20 " file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="42.9 35.3 -30.50002" rot="0.0 140.0 -90.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="-42.3 37.1 5.79999" rot="-172.2 104.8 11.9" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-					<vox pos="-13.4 37.1 18.09999" rot="-172.2 174.8 11.9" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="45.60001 37.1 34.29999" rot="-16.0 53.3 77.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="-5.8 35.3 -37.3" rot="0 -20 " file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="42.9 35.3 -30.50002" rot="0.0 140.0 -90.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="-42.3 37.1 5.79999" rot="-172.2 104.8 11.9" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+					<vox pos="-13.4 37.1 18.09999" rot="-172.2 174.8 11.9" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
 				</group>
 			</group>
 		</group>
@@ -4631,7 +4631,7 @@
 		<instance pos="92.4 -2.5 9.7" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
 		<instance pos="134.2 -2.5 9.7" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
 		<instance pos="129.3 -2.5 -12.1" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
-		<vox pos="86.7 -1.8 -37.0" rot="90.0 -50.0 0.0" file="MOD/vox/cargo_wagon_insulated.vox" object="wagon">
+		<vox pos="86.7 -1.8 -37.0" rot="90.0 -50.0 0.0" file="MOD/assets/vox/cargo_wagon_insulated.vox" object="wagon">
 			<instance pos="-7.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
 			<instance pos="-5.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
 			<instance pos="-3.4 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml"/>
@@ -4643,10 +4643,10 @@
 			<instance pos="6.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
 			<instance pos="8.1 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml"/>
 		</vox>
-		<vox pos="89.8 -1.8 -16.8" rot="90.0 -50.0 0.0" prop="true" file="MOD/vox/crate_10.vox"/>
-		<vox pos="89.8 -1.8 5.0" rot="90.0 -50.0 0.0" prop="true" file="MOD/vox/crate_4.vox"/>
-		<vox pos="124.1 -1.8 7.6" rot="90.0 -50.0 0.0" prop="true" file="MOD/vox/crate_3.vox"/>
-		<vox pos="124.1 -1.8 -8.1" rot="90.0 -50.0 0.0" prop="true" file="MOD/vox/crate_8.vox"/>
+		<vox pos="89.8 -1.8 -16.8" rot="90.0 -50.0 0.0" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+		<vox pos="89.8 -1.8 5.0" rot="90.0 -50.0 0.0" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+		<vox pos="124.1 -1.8 7.6" rot="90.0 -50.0 0.0" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+		<vox pos="124.1 -1.8 -8.1" rot="90.0 -50.0 0.0" prop="true" file="MOD/assets/vox/crate_8.vox"/>
 	</group>
 </prefab>
 

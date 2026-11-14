@@ -5,10 +5,11 @@ with credit) to **Teardown 2.x co-op multiplayer (up to 4 players)**. The user i
 experience: explain Lua/Teardown specifics, not basics.
 
 Read next:
-1. `docs/TECHNICAL_REFERENCE.md` – sources, workflow gotchas, v2 engine rules, error → cause table, guns, vehicles,
+1. `docs/LAYOUT.md` – which folder holds what (reorganized 2026-11-14).
+2. `docs/TECHNICAL_REFERENCE.md` – sources, workflow gotchas, v2 engine rules, error → cause table, guns, vehicles,
    how each system works now, bugs fixed, shelved content, open questions.
-2. `docs/PORTING.md` – checklist for converting one v1 script.
-3. `tools/porting/README.md` – converters, mock tests, helper tools.
+3. `docs/PORTING.md` – checklist for converting one v1 script.
+4. `tools/porting/README.md` – converters, mock tests, helper tools.
 
 ## Agreed decisions
 
@@ -54,7 +55,7 @@ Read next:
     New vehicles: measure in Blender (`tools/porting/blender_vehicle.py`, Blender MCP), add the layout to
     `tools/porting/add_seats.py`, check with the mannequin, then the user tests (rules: §6).
   * Small vehicle scripts v2 (doors, Cadillac / LeBoat joints, semis' toggles, GAZ-24 EVF, JetBus).
-  * Mounted guns: own `scripts/MountedGun.lua` + AVF's shell code ported (`port_avf.py` → `scripts/avf/`, credit
+  * Mounted guns: own `vehicles/MountedGun.lua` + AVF's shell code ported (`port_avf.py` → `vehicles/avf_port/`, credit
     AVF / elboydo) + `Immersive_Tank.lua`; machine guns, cannons, tanks (gunner place + driver fallback), launchers,
     coax, ATGMs, performance fixes. Converted configs: table in §6 "AVF". TABS can't be used (v1, licence).
   * AS350 helicopter: a `<vehicle>` with seats, v2 port with a new mouse-aim player flight model (§7 "AS350
@@ -73,13 +74,11 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
 0. Local MP baseline: first test done (2026-11-14) → three bugs, fixed (step 3).
 1. Housekeeping ✔ (2026-11-14): converters frozen to `tools/porting/history/`, dead files deleted, `.gitignore`,
    release leaves out the root test levels.
-2. Full reorganization by system: the relocation tool is built and tested (`tools/relocate/`, README there:
-   rewrites every path reference, proves it, rolls back on failure). Draft layout `tools/relocate/moves.txt`
-   (levels/, lib/, ui/, game/, world/, player/, weapons/, items/, npcs/, vehicles/, assets/, dev/; main/ and
-   prefabs/ stay) plans clean (4251 files moved, 42481 references rewritten, 0 errors). moves.txt approved by the
-   user (no garage migration needed); to apply on a clean tree (commit first), then make_release excludes `dev/`.
+2. Full reorganization ✔ (2026-11-14, applied and verified by `tools/relocate/`: 4252 files moved, 42504
+   references rewritten; mock tests, syntax of all game Lua, XML parse, release dry run checked). Folder map:
+   `docs/LAYOUT.md`. The release leaves out `dev/`. To verify in-game (SP smoke run + local MP run).
 3. MP fixes (§8 "MP fixes"): remote players' new run (starter loadout, vitals, perks, bounty, difficulty, money on
-   Try Again) and game rules synced: verified. To re-test: vanilla tools (levels load `scripts/MLSandbox.lua`, the
+   Try Again) and game rules synced: verified. To re-test: vanilla tools (levels load `game/MLSandbox.lua`, the
    engine's sandbox.lua without its MP tool enabling), remote tool bar, other players' guns (gunnet part sync).
    Open: world-shift jank / NPCs / stuck car for non-hosts (§10). Still open (survey leads, §10):
    permadeath host-only, fuel perks / money, debug-menu toggles from non-hosts, cultist ambush, server-only

@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun Simonov-106.xml" pos="-22.4 0.6 -3.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/gun-ak74m.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/gun-ak74m.xml"/>
 	</group>
 </prefab>
 

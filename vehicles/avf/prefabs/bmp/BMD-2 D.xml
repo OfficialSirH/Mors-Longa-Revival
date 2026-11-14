@@ -1,0 +1,139 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/vehicles/avf/prefabs/bmp/BMD-2 D.xml" pos="0.0 0.0 1.5" rot="0.0 -90.0 0.0">
+		<group pos="0.08 -0.1 0.03" prop0="texture=8 0.5">
+			<script pos="0.1 0.0 0.0" rot="0.0 90.0 0.0" file="MOD/vehicles/avf/scripts/simple_avf_tank.lua">
+				<script pos="0.0 0.0 0.0" file="MOD/vehicles/avf/scripts/Immersive_Tank.lua">
+					<script pos="0.0 0.1 -0.1" file="MOD/vehicles/avf/prefabs/bmp/BMD-2 .lua">
+						<vehicle name="bmp-1" tags="cfg=vehicle" pos="-0.05 2.38 0.19" driven="false" sound="tank1" spring="1" damping="0.8" topspeed="50" acceleration=".45" strength="50" antispin="1" antiroll="0.8" difflock="1" steerassist="2" friction="2">
+							<body name="bmp-1" tags="component=body RHA=15" dynamic="true">
+								<vox tags="component=chassis" pos="0.0 -2.1 0.0" texture="7 0.5" density="20" strength="5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="body">
+									<location tags="exhaust" pos="-1.2 1.05 3.05" rot="0.0 0.0 -90.0"/>
+									<location tags="exhaust" pos="1.3 1.05 3.05" rot="0.0 0.0 -90.0"/>
+									<group name="reinfore" pos="0.0 0.0 -2.9">
+										<vox pos="0.0 1.14 0.06" rot="-12.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="on the first bmd1">
+											<vox pos="0.52 0.1 -0.57" rot="0.0 -7.0 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="on the first bmd1 2"/>
+											<vox pos="-0.42 0.1 -0.57" rot="0.0 7.0 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="on the first bmd1 2"/>
+											<vox pos="1.1 0.04 -0.41" rot="-45.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="under the first bmd1 gun">
+												<vox pos="-0.05 -0.3 0.0" rot="60.0 0.0 -10.0" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="gun r"/>
+											</vox>
+											<vox pos="-1.1 0.04 -0.41" rot="-45.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="under the first bmd1 gunl">
+												<vox pos="0.15 -0.3 -0.0" rot="60.0 0.0 10.0" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="gun l"/>
+											</vox>
+											<vox pos="0.4 0.2 -0.6" rot="0 -7 0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="spurnwater"/>
+											<vox pos="-0.3 0.175 -0.6" rot="0 7 0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="spurnwater l"/>
+										</vox>
+										<vox pos="-0.56 0.48 -0.175" rot="41 7 0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="under the first bmd1"/>
+										<vox pos="0.56 0.48 -0.185" rot="41 -7 0" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="under the first bmd1 2"/>
+									</group>
+									<light pos="1.35 1.225 -2.65001" rot="0.0 180.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+									<light pos="-1.25 1.225 -2.65001" rot="0.0 180.0 0.0" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" glare="0.4"/>
+									<group name="shsn" pos="0.0 1.5 2.5">
+										<vox pos="1.2 -0.1 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="shsn bmd 1-2"/>
+										<vox pos="-1.2 -0.1 0.0" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="shsn bmd 1-2"/>
+									</group>
+								</vox>
+								<group name="wheel" pos="1.42 -2.0 -2.4">
+									<wheel name="driving wheel r" pos="0.61 0.3 -0.1" rot="0.0 0.0 0.0" drive="1" travel="0">
+										<vox pos="-0.425 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl 4"/>
+									</wheel>
+									<wheel name="driving wheel l" pos="-3.04 0.3 -0.1" rot="0.0 0.0 0.0" drive="1" travel="0">
+										<vox name="driving wheel l" pos="0.215 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl 4"/>
+									</wheel>
+									<wheel name="driving wheel 2 l" pos="-3.0 0.2 5.2" rot="0.0 0.0 0.0" drive="1" travel="0 0">
+										<vox pos="0.175 -0.3 0.0" rot="0.0 -180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5 1"/>
+									</wheel>
+									<wheel name="driving wheel2 r" pos="0.685 0.2 5.2" rot="0.0 0.0 0.0" drive="1" travel="0 0">
+										<vox pos="-0.5 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5 1"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 4.3" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 4.3" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 3.6" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 2.9" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 3.6" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 2.9" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 2.2" rot="0.0 0.0 0.0" drive="1" steer="0.33" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 1.5" rot="0.0 0.0 0.0" drive="1" steer="0.44" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="-3.14 -0.025 0.8" rot="0.0 0.0 0.0" drive="1" steer="0.66" travel="-0.1 0.1">
+										<vox pos="0.325 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.5" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 2.2" rot="0.0 0.0 0.0" drive="1" steer="-0.33" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 1.5" rot="0.0 0.0 0.0" drive="1" steer="0.44" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+									<wheel pos="0.7 -0.025 0.8" rot="0.0 0.0 0.0" drive="1" steer="0.66" travel="-0.1 0.1">
+										<vox pos="-0.525 -0.3 0.0" rot="0.0 180.0 0.0" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="whl5"/>
+									</wheel>
+								</group>
+								<group name="immersive_elements" pos="0.0 -2.1 0.2" prop0="strength=12">
+									<vox name="engine" tags="engine" pos="0.1 0.2 2.2" texture="7 0.8" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="engine"/>
+									<vox tags="fuel_tank" pos="0.9 0.2 2.2" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="fuel tank"/>
+								</group>
+								<location tags="vital" pos="0.1 -1.5 2.3" rot="0.0 0.0 0.0"/>
+								<location tags="player" pos="0.05 -0.75 -1.4" rot="0.0 0.0 0.0"/>
+								<vox pos="1.5 -2.4 0.2" collide="false" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="tracks_r"/>
+								<vox pos="-1.4 -2.4 0.2" collide="false" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="tracks_r"/>
+								<group name="back door" pos="0.0 -1.0 1.1">
+									<vox pos="0.0 0.0 0.1" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="stern room"/>
+									<joint pos="-0.6 0.4 -0.3" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 120"/>
+									<joint pos="0.7 0.4 -0.3" rot="0 -90 0" type="hinge" rotstrength="0.08" rotspring="0" limits="0 120"/>
+								</group>
+								<group name="hatch" pos="0.1 -0.6 -1.2">
+									<joint pos="0.8 0.0 0.2" rot="0.0 50.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<joint pos="0.6 0.0 0.0" rot="0.0 50.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<vox pos="0.8 -0.1 0.0" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="body hatch"/>
+									<joint pos="-0.7 0.0 0.0" rot="0.0 140.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<joint pos="-0.9 0.0 0.2" rot="0.0 140.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<vox pos="-0.9 -0.1 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="body hatch"/>
+									<joint pos="0.1 0.0 -0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<joint pos="-0.2 0.0 -0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.03" rotspring="0" limits="0 90"/>
+									<vox pos="-0.1 -0.1 -0.4" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="driver hatch"/>
+								</group>
+								<group name="turrers" pos="-0.0 0.2 -1.2">
+									<vox tags="component=turret turretGroup=mainTurret RHA=70" pos="0.1 -1.9 0.7" rot="0.0 180.0 0.0" texture="7 0.5" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="turret BMD-2">
+										<joint tags="component=turretJoint" pos="0.05 0.0 -0.05" rot="90.0 0.0 0.0" type="hinge" size="0.1" rotspring="0" sound="true"/>
+										<vox name="ammo" tags="ammo_rack=0.01" pos="-0.0 0.1 0.3" strength="15" file="MOD/vehicles/avf/prefabs/bmp/bmd.vox" object="ammoBMD-2"/>
+										<vox pos="0.3 1.575 -0.1" texture="7 0.5" density="15" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="hatchL bmp -1"/>
+										<joint pos="0.348 1.6 0.1" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0" limits="0 90"/>
+										<vox tags="mainCannon component=gun weaponType=customcannon group=primary 2A4230MM coax=COAXMG nocull" pos="0.0 1.3 1.5" rot="0.0 0.0 0.0" texture="7 0.7" prop="true" file="MOD/vehicles/avf/prefabs/bmp/bmd d.vox" object="2A42 30mm/pkT 1">
+											<vox pos="-0.1 0.095 0.3" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 1"/>
+											<vox pos="-0.1 0.055 0.4" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 1"/>
+											<vox pos="-0.08 0.075 0.4" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 1"/>
+											<vox pos="-0.12 0.075 0.4" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 1"/>
+											<vox pos="-0.1 0.095 0.4" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 1"/>
+											<vox pos="-0.1 0.125 1.6" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 2"/>
+											<vox pos="-0.1 0.05 1.6" texture="7 0.7" file="MOD/vehicles/avf/prefabs/bmp/bmp1 1AM 2 2M.vox" object="2A42 30mm 2"/>
+											<joint name="gunJoint" tags="component=gunJoint" pos="0.3 0.05 -0.9" rot="0.0 90.0 0.0" type="hinge" size=".1" rotspring="0" limits="-25 5" sound="true"/>
+											<joint name="gunJoint" pos="-0.2 0.05 -0.9" rot="0.0 90.0 0.0" type="hinge" size=".1" rotspring="0" limits="-25 5" sound="true"/>
+										</vox>
+									</vox>
+								</group>
+							</body>
+						</vehicle>
+					</script>
+					<location name="cook_off" tags="cook_off" pos="-0.25 1.07 -0.4" rot="0.0 180.0 0.0"/>
+					<location name="mainCannon_shell_ejector" tags="mainCannon_shell_ejector" pos="0.231 2.275 -1.255" rot="154.8 160.5 1.1"/>
+					<location name="mainCannon_shell_ejector_dir" tags="mainCannon_shell_ejector_dir" pos="0.606 2.05 -2.305" rot="148.5 148.89999 3.0"/>
+				</script>
+			</script>
+		</group>
+	</group>
+</prefab>
+

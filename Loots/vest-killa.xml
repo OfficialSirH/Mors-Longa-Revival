@@ -1,8 +1,0 @@
-<prefab version="1.1.0">
-	<group>
-		<body tags="Loot=vest-killa_Killa-Vest_60_60 interact=Killa" pos="0 .5" dynamic="true">
-			<vox pos="-.05 -.5" file="MOD/vox/Armor/Killa.vox" object="body"/>
-		</body>
-	</group>
-</prefab>
-

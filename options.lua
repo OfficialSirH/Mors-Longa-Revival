@@ -10,8 +10,8 @@ function draw()
         UiAlign("center top")
         UiColor(1,1,1, 1)
         UiTranslate(UiCenter(), 0)
-        local w, h = UiGetImageSize("MOD/img/logo_normal.png")
-        UiImageBox("MOD/img/logo_normal.png", w/3, h/3)
+        local w, h = UiGetImageSize("MOD/assets/img/logo_normal.png")
+        UiImageBox("MOD/assets/img/logo_normal.png", w/3, h/3)
     UiPop()
 
     -- Close button

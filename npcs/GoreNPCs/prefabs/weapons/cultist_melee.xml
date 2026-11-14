@@ -1,0 +1,11 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/npcs/GoreNPCs/prefabs/weapons/cultist_melee.xml" pos="0.0 1.0 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=melee-DamnedScythe_DamnedScythe_150_150 interact=DamnedScythe unbreakable" pos="0.0 0.05 0.8" rot="0 0 0" dynamic="true">
+			<voxbox tags="invisible unbreakable" pos="-0.05 -0.62 -1.16" rot="0.0 0.0 0.0" size="1 10 1" material="metal" color="0 0 0 .1">
+				<light pos="0.05 0.05 0.1" scale="0"/>
+			</voxbox>
+			<voxbox tags="invisible unbreakable" pos="-0.05 -0.02 -1.34" rot="0.0 0.0 0.0" size="1 1 17" material="wood" color="0 0 0 .1"/>
+			<vox tags="unbreakable" pos="0.02 -0.62 0.3" rot="0.0 0.0 0.0" file="MOD/assets/vox/Weapons/Melee/DamnedScythe.vox" scale="0.4"/>
+		</body>
+	</group>
+</prefab>

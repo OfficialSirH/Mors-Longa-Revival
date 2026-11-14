@@ -1,11 +1,11 @@
--- Mock test for key 4 (script/inventory.lua InvCycleSlot4, 2026-11-14): it cycles the enabled tools the bar shows in
+-- Mock test for key 4 (player/inventory.lua InvCycleSlot4, 2026-11-14): it cycles the enabled tools the bar shows in
 -- slot 4 (game.tool.<id>.group = 4) in the bar's order, the Extinguisher included.
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_slot4.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local env = MockEngine.load("script/inventory.lua", { preload = MockEngine.includes("script/inventory.lua") })
+local env = MockEngine.load("player/inventory.lua", { preload = MockEngine.includes("player/inventory.lua") })
 env.side = "client"
 local held, pressed = "gun-ak74", false
 local enabled = { placer = true, welder = true, extinguisher = true, ["gun-ak74"] = true, sledge = false }

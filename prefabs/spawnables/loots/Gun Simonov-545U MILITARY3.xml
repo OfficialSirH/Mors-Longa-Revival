@@ -1,6 +1,6 @@
 <prefab version="1.5.4">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun Simonov-545U MILITARY3.xml" pos="-13.0 0.6 -6.3" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-ak74.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-ak74.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="AK74" tags="Loot=gun-ak74_Simonov-545_mag0-ak-545_6L23_30_30_5.45_--muzzle1-stock2-grip2-barrel1-side1--modernguard------- interact=Simonov-545U" pos="0.0 0.3 0.0" dynamic="true">
 				<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.1 .1 .1">
 					<voxbox pos="-0.05 -0.05 -0.25" size="1 1 6"/>

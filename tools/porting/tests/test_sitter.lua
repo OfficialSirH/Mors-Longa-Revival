@@ -1,11 +1,11 @@
--- Mock test: crew sitter ragdoll (main/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua) and the minivan's
--- Vehicles/minivan1/autobreakRemover.lua, both v2 since 2026-11-13.
+-- Mock test: crew sitter ragdoll (vehicles/aircraft/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua) and the minivan's
+-- vehicles/cars/minivan1/autobreakRemover.lua, both v2 since 2026-11-13.
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_sitter.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local PATH = "main/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua"
+local PATH = "vehicles/aircraft/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua"
 local e = MockEngine.load(PATH, { preload = MockEngine.includes(PATH) })
 e.PLAYERS = { [1] = { pos = { 0, 0, 0 }, health = 1 }, [2] = { pos = { 2, 0, 0 }, health = 1 } }
 e.ORDER = { 1, 2 }
@@ -72,7 +72,7 @@ e.client.draw(1 / 60)
 check(next(e.violations) == nil, "no server-only calls on the client")
 
 -- minivan helper
-local M = "Vehicles/minivan1/autobreakRemover.lua"
+local M = "vehicles/cars/minivan1/autobreakRemover.lua"
 local m = MockEngine.load(M)
 local removed = 0
 m.def("FindBodies", function() return { 1, 2 } end)

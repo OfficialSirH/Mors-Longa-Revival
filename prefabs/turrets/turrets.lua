@@ -162,7 +162,7 @@ function turretShoot(turret)
     end
 
     if InputPressed('lmb') and turret.shooting.ammo <= 0 then -- Play click sound when out of ammo.
-        PlaySound(LoadSound("MOD/snd/Weapons/Shared/dryfire.ogg"), turret.tr.pos, 1)
+        PlaySound(LoadSound("MOD/assets/snd/Weapons/Shared/dryfire.ogg"), turret.tr.pos, 1)
     end
 
     dbw('shooting.timer.time', turret.shooting.timer.time)

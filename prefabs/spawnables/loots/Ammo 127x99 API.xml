@@ -1,7 +1,7 @@
 <prefab version="1.5.4">
-	<group name="instance=MOD/Loots/bullets-127x99-API.xml" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0">
+	<group name="instance=MOD/items/Loots/bullets-127x99-API.xml" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0">
 		<body tags="Loot=bullets-127x99-API_.50BMG_15 interact=.50BMG" pos="0.0 0.2" dynamic="true">
-			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
 		</body>
 	</group>
 </prefab>

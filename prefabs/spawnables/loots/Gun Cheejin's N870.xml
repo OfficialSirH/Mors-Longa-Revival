@@ -1,5 +1,5 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun N870.xml" pos="-5.0 0.0 5.7" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/gun-m870.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/gun-m870.xml"/>
 	</group>
 </prefab>

@@ -1,0 +1,8 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/npcs/GoreNPCs/prefabs/extras/headwear_um_officer.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 -0.1" dynamic="true">
+			<vox pos="0.05 0.2 0.0" rot="0.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/um_officer.vox" object="extra_head"/>
+		</body>
+	</group>
+</prefab>
+

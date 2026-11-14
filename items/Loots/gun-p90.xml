@@ -1,0 +1,70 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/gun-p90.xml" pos="7.2">
+		<body name="P90" tags="Loot=gun-p90_TMP-90_mag0-p90-57x28_TMP-90_50_50_5.7x28_-muzzle2------------- interact=TMP-90 unbreakable" pos="0.0 0.2 0.0" dynamic="true">
+			<group name="Metal" prop0="color=.1 .1 .1" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<group pos="0.05 0.04 0.18">
+					<voxbox pos="-0.015 -0.0 -0.0" rot="-10.0 180.0 0.0" size="1 1 1">
+						<voxbox pos="0.1 0.1 0.1" rot="25.0 -180.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="0.015 -0.0 -0.0" rot="-10.0 180.0 0.0" size="1 1 1">
+						<voxbox pos="0.1 0.1 0.1" rot="25.0 -180.0 0.0" size="1 1 1"/>
+					</voxbox>
+				</group>
+				<voxbox pos="-0.05 0.04 -0.15" size="1 1 5" color=".2 .12 .1"/>
+				<group pos="-0.05 0.01 0.15">
+					<voxbox pos="-0.005" size="1 1 3"/>
+					<voxbox pos="0.005" size="1 1 3"/>
+				</group>
+				<voxbox name="Barrel" tags="barrel range=30 magsize=30 damage=10 firerate=.12 gun=m4 roundsize=2" pos="-0.05 0.01 0.42" size="1 1 1"/>
+				<voxbox pos="-0.05 0.05 0.35" size="1 1 1">
+					<voxbox pos="0.1 0.1 0.1" rot="10.0 180.0 0.0" size="1 1 1">
+						<voxbox pos="-0.0 0.1 0.0" rot="80.0 0.0 0.0" size="1 2 1">
+							<voxbox pos="0.0 0.18 0.0" rot="0.0 0.0 0.0" size="1 1 1"/>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</group>
+			<group name="Plastic" prop0="color=.07 .07 .07" prop1="pbr=.01 .05" prop2="material=plastic">
+				<voxbox pos="-0.051 0.04 -0.45" rot="0.0 0.0 0.0" size="1 1 3"/>
+				<group pos="-0.05 -0.14 -0.45">
+					<voxbox pos="0.005 0.0 0.0" rot="0.0 0.0 0.0" size="1 2 3">
+						<voxbox pos="0.0 0.14 0.23" rot="0.0 0.0 0.0" size="1 1 4"/>
+					</voxbox>
+					<voxbox pos="-0.005 0.0 0.0" rot="0.0 0.0 0.0" size="1 2 3">
+						<voxbox pos="0.0 0.14 0.23" rot="0.0 0.0 0.0" size="1 1 4"/>
+					</voxbox>
+				</group>
+				<group pos="-0.05 0.01 -0.45">
+					<voxbox pos="-0.01" size="1 1 3">
+						<voxbox pos="0.0 0.0 0.23" rot="0.0 0.0 0.0" size="1 1 4"/>
+					</voxbox>
+					<voxbox pos="0.01" size="1 1 3">
+						<voxbox pos="0.0 0.0 0.23" rot="0.0 0.0 0.0" size="1 1 4"/>
+					</voxbox>
+				</group>
+				<group name="Grip">
+					<voxbox pos="-0.05 -0.13 -0.18" size="1 2 1">
+						<voxbox pos="0.0 0.0 0.03" rot="40.0 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 -0.01 0.1" rot="-40.0 0.0 0.0" size="1 1 1">
+								<voxbox pos="0.0 0.0 0.1" rot="-20.0 0.0 0.0" size="1 1 2">
+									<voxbox pos="0.0 0.04 0.19" rot="-70.0 0.0 0.0" size="1 1 1"/>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+					<voxbox pos="-0.05 -0.12 0.26" rot="10.0 0.0 0.0" size="1 2 1">
+						<light tags="handle" pos="0.05 0.1 0.05" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+						<voxbox pos="0.0 0.0 0.1" rot="-140 0.0 0.0" size="1 1 1">
+							<voxbox pos="0.0 0.1 0.0" rot="40 0.0 0.0" size="1 1 1"/>
+						</voxbox>
+					</voxbox>
+					<voxbox pos="-0.05 -0.0 0.23" rot="30.0 0.0 0.0" size="1 1 1">
+						<voxbox pos="0.0 0.1 -0.02" rot="150.0 0.0 0.0" size="1 1 1"/>
+					</voxbox>
+					<voxbox pos="-0.05 -0.04 0.35" rot="0.0 0.0 0.0" size="1 1 1"/>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

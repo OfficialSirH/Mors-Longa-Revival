@@ -1,0 +1,25 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/mag1-ppsh-762x25.xml" pos="0" rot="0">
+		<body tags="Loot=mag1-ppsh-762x25_PPSh-Drum_71_71_7.62x25 interact=PPSh-Drum unbreakable" pos="0 .2" dynamic="true">
+			<group pos="0" prop0="color=.39 .39 .39" prop1="material=metal">
+				<voxbox pos="-.05 -.2 -.05" size="1 4 1">
+					<voxbox pos=".1" rot="0 0 40.0" size="1 1 1">
+						<voxbox pos=".1" rot="0 0 40.0" size="1 1 1">
+							<voxbox pos=".1" rot="0 0 40.0" size="1 1 1">
+								<voxbox pos=".1" rot="0 0 40.0" size="1 1 1"/>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+					<voxbox pos="0" rot="0 0 50.0" size="1 1 1">
+						<voxbox pos="0 .1" rot="0 0 -40.0" size="1 1 1">
+							<voxbox pos="0 .1" rot="0 0 -40.0" size="1 1 1">
+								<voxbox pos="-0 .1" rot="0 0 -40.0" size="1 1 1"/>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+

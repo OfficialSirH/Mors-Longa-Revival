@@ -1,5 +1,5 @@
 <prefab version="1.5.2">
 	<group name="instance=MOD/prefabs/spawnables/loots/PVS-14.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/eyewear-pvs14.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/eyewear-pvs14.xml"/>
 	</group>
 </prefab>

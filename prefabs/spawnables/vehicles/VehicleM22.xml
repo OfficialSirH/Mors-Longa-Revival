@@ -1,7 +1,7 @@
 <prefab version="1.5.4">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/VehicleM22.xml" pos="30.0 0.5 30.0" rot="0.0 0.0 0.0">
 		<instance pos="0.1 1.5 1.6" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml"/>
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/technicals/offroad_GMG.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/offroad_GMG.xml"/>
 		<instance pos="3.2 0.0 4.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
 		<instance pos="4.4 0.0 -3.3" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
 		<instance pos="-3.2 0.0 -4.2" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>

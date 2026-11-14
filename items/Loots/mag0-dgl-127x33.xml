@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/mag0-dgl-127x33.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=mag0-dgl-127x33_Deagle-Mag_7_7_127x33 interact=Deagle-Mag unbreakable" pos="0.0 0.1" dynamic="true">
+			<voxbox pos="-.05 -.1 -.05" texture="7" size="1 2 1" material="metal" color=".08 .08 .08"/>
+		</body>
+	</group>
+</prefab>
+

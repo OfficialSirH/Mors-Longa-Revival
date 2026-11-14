@@ -8,7 +8,7 @@
 		<instance pos="0.3 1.9 8.9" file="MOD/prefabs/spawns/loots/WorkingBCarLootSpawn.xml"/>
 		<instance pos="0.3 1.9 9.8" file="MOD/prefabs/spawns/loots/WorkingBCarLootSpawn.xml"/>
 		<instance pos="0.3 1.9 11.0" file="MOD/prefabs/spawns/loots/WorkingBCarLootSpawn.xml"/>
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-us/Semi Damaged.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/semitruck-us/Semi Damaged.xml"/>
 		<instance pos="-0.2 1.6 3.7" file="MOD/prefabs/spawns/enemies/EnemyCultSpawn.xml"/>
 	</group>
 </prefab>

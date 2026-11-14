@@ -1,0 +1,10 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/weapons/PlaceTool/Placeables/Campfire.xml" pos="-1.5 0.0 0.0" rot="0.0 0.0 0.0">
+		<body tags="Campfire" pos="0.0 0.0 0.0" dynamic="true">
+			<vox pos="0.0 -0.0 0.0" file="MOD/assets/vox/Campfire.vox" object="barrel_brown">
+				<light tags="Campfire" pos="0.05 1.0 -0.05" color="1.0 0.48 0.15" scale="8" size="0.3"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

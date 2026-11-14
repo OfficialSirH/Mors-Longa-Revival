@@ -1,0 +1,82 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/1963 VW Beetle/VW Beetle Damaged.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="1963 VW Beetle" sound="classic2 1.5" spring="0.6" damping="0.2" topspeed="100" acceleration="0.20" strength="2" antiroll="0.0" difflock="0" steerassist="0.2" friction="0.7">
+			<body pos="0.0 0.5 -0.15" dynamic="true">
+				<vox pos="0.05 -0.3 0.15" rot="0 180 0" texture="8 0.7" blendtexture="5 .4" density="2.5" strength="3.5" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="body2">
+					<light pos="-0.5 0.4 1.8" type="cone" color="1 .9 .8" scale="10" angle="90" penumbra="30" size="0.2" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+					<location tags="exhaust" pos="0.25 0.05 -1.9" rot="180.0 0.0 180.0"/>
+					<location tags="exhaust" pos="-0.15 0.05 -1.9" rot="180.0 0.0 180.0"/>
+					<location tags="vital" pos="0.05 0.55 -1.35"/>
+					<vox tags="nocull" pos="0.0 0.2 1.9" texture="8 0.7" blendtexture="5 .4" density="1.0" strength="1.0" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Front-bumper"/>
+					<vox tags="Latch=Structure nocull" pos="0.0 0.3 1.3" texture="8 0.7" blendtexture="5 .4" density="2.5" strength="3.0" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Hood">
+						<joint pos="0.4 0.5 -0.5" rot="0.0 -90.0 -60.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 60" sound="true"/>
+						<joint pos="-0.3 0.5 -0.5" rot="0.0 -90.0 -60.0" type="ball" rotstrength="0.05" rotspring="0.0" limits="0 60" sound="true"/>
+					</vox>
+					<vox tags="nocull" pos="0.0 0.2 -1.9" texture="8 0.7" blendtexture="5 .4" density="1.0" strength="1.0" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="Rear-bumper"/>
+					<light pos="0.65 0.35 -1.7" rot="0 180 0" type="area" color="1 .1 .1" scale="1" angle="90" penumbra="10" size="0.1 0.1" reach="0.8" unshadowed="0.3" glare="0.1"/>
+					<light pos="-0.55 0.35 -1.7" rot="0 180 0" type="area" color="1 .1 .1" scale="1" angle="90" penumbra="10" size="0.1 0.1" reach="0.5" unshadowed="0.3" glare="0.05"/>
+					<vox pos="0.6 0.3 0.2" texture="8 0.7" blendtexture="5 .4" density="1" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="door2">
+						<joint pos="0.05 0.5 0.4" rot="0.0 90.0 0.0" type="ball" rotspring="0.0" collide="true" sound="false"/>
+						<joint pos="0.05 0.1 0.4" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0.0" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="-0.6 0.3 0.2" texture="8 0.7" blendtexture="5 .4" density="1" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="door2">
+						<joint tags="door" pos="0.05 0.1 0.4" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 70" sound="true"/>
+					</vox>
+					<vox pos="0.0 0.3 -1.7" texture="8 0.7" blendtexture="5 .4" density="3" prop="true" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="boot">
+						<joint pos="-0.3 0.3 0.1" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 100" sound="true"/>
+						<joint pos="0.4 0.3 0.1" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 100" sound="true"/>
+					</vox>
+					<location name="exit" tags="exit" pos="1.05 0.5 0.1"/>
+					<location tags="player driver=short" pos="0.275 1.0 -0.05"/>
+					<location tags="camera" pos="0.05 1.15 0.0"/>
+				</vox>
+				<wheel name="bl" pos="-0.65 -0.2 1.2" drive="1" travel="-0.1 0.1">
+					<vox pos="0.0 -0.3 0.0" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel name="br" pos="0.65 -0.2 1.2" drive="1" travel="-0.1 0.1">
+					<vox pos="0.0 -0.3 0.0" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_br"/>
+				</wheel>
+				<wheel name="fl" pos="-0.65 -0.2 -1.1" drive="0" steer="1.5" travel="-0.1 0.1">
+					<vox pos="0.0 -0.3 0.0" rot="0.0 180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="fr" pos="0.65 -0.2 -1.1" drive="0" steer="1.5" travel="-0.1 0.1">
+					<vox pos="0.0 -0.3 0.0" rot="0.0 -180.0 0.0" texture="8 0.7" blendtexture="5 .4" file="MOD/vehicles/cars/1963 VW Beetle/1963 VW Beetle.vox" object="wheel_fr"/>
+				</wheel>
+			</body>
+			<rig name="driver" tags="driver sort=0" pos="-0.3 0.55 -0.05">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.35" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.35" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.18 0.3 -0.25" rot="0.0 90 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.18 0.3 -0.25" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.3 -0.25" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.3 0.55 -0.05">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.35" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.35" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=2" pos="0.3 0.55 0.55">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=3" pos="-0.3 0.55 0.55">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.2" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="55 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+		</vehicle>
+	</group>
+</prefab>
+

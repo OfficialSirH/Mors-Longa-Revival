@@ -79,13 +79,16 @@ local function run(path)
 
 	local src = io.open(path, "rb"):read("*a"):gsub("\r", "")
 	-- inline the includes this test needs (Teardown's preprocessor does this in-game)
+	-- an include is relative to the including script's folder (the engine's rule)
+	local dir = path:match("^(.*)/[^/]*$") or "."
 	local function inline(rel)
-		return (io.open("scripts/" .. rel, "rb"):read("*a"):gsub("\r", ""))
+		return (io.open(dir .. "/" .. rel, "rb"):read("*a"):gsub("\r", ""))
 	end
 	-- Teardown processes #include lines even inside a --[[ ]] block at the top of a file; unwrap that block here
 	src = src:gsub("\n%-%-%[%[\n(#include[^%]]-)\n%]%]\n", "\n%1\n")
-	src = src:gsub('#include "masterScriptRemoverAPI.lua"', function() return inline("masterScriptRemoverAPI.lua") end)
-	src = src:gsub('#include "vehicleOperatorCoop.lua"', function() return inline("vehicleOperatorCoop.lua") end)
+	for _, name in ipairs({ "masterScriptRemoverAPI.lua", "vehicleOperatorCoop.lua" }) do
+		src = src:gsub('#include "([^"]*' .. name:gsub("%.", "%%.") .. ')"', function(rel) return inline(rel) end)
+	end
 	src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)
 	local chunk = assert(loadstring(src, path))
 	setfenv(chunk, env)
@@ -98,8 +101,8 @@ local function run(path)
 	return env, called, clientViolations, drives
 end
 
-for _, f in ipairs({ "scripts/chaseOperator.lua", "scripts/chaseOperatorTransport.lua",
-                     "scripts/ConvoyOperations.lua", "scripts/ConvoyOperatorTransport.lua" }) do
+for _, f in ipairs({ "vehicles/operators/chaseOperator.lua", "vehicles/operators/chaseOperatorTransport.lua",
+                     "vehicles/operators/ConvoyOperations.lua", "vehicles/operators/ConvoyOperatorTransport.lua" }) do
 	local env, called, violations, drives = run(f)
 	check(next(violations) == nil, f .. ": no client-only calls on the server")
 	check((called.PauseMenuButton or 0) == 0, f .. ": no pause-menu removal trick")

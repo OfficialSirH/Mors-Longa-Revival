@@ -2,276 +2,276 @@
 	<group name="instance=MOD/prefabs/spawnables/roadblocks/roadblock1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 		<group name="roadblock" pos="11.80009 -0.0 -18.00007" rot="0.0 -90.0 0.0">
 			<group name="tyre pile" pos="9.38287 0.0 -5.56907" rot="0.0 10.0 0.0">
-				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" collide="false" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" collide="false" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
+				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" collide="false" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" collide="false" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
 			</group>
-			<vox pos="7.5 0.0 0.6" prop="false" file="MOD/vox/container_red.vox">
-				<vox pos="1.8 2.6 -1.0" rot="0.0 90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<vox pos="0.0 2.6 -1.0" rot="0.0 90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags2"/>
-				<vox pos="-1.8 2.6 -1.1" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="-0.1 2.6 -0.1" rot="0.0 -90.0 0.0" file="MOD/vox/tents.vox" object="tent3"/>
-				<vox pos="2.1 1.3 1.85" rot="0.0 -90.0 -60.0" prop="true" file="MOD/vox/stairs.vox" object="ladder1"/>
+			<vox pos="7.5 0.0 0.6" prop="false" file="MOD/assets/vox/container_red.vox">
+				<vox pos="1.8 2.6 -1.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<vox pos="0.0 2.6 -1.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags2"/>
+				<vox pos="-1.8 2.6 -1.1" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="-0.1 2.6 -0.1" rot="0.0 -90.0 0.0" file="MOD/assets/vox/tents.vox" object="tent3"/>
+				<vox pos="2.1 1.3 1.85" rot="0.0 -90.0 -60.0" prop="true" file="MOD/assets/vox/stairs.vox" object="ladder1"/>
 			</vox>
-			<vox pos="13.7 0.0 -0.5" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/container_blue.vox">
-				<vox pos="-1.5 2.5 -0.99999" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="0.3 2.5 -0.89998" rot="0.0 -95.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<voxbox pos="1.2 1.9 -1.3" rot="0.0 90.0 0.0" size="2 13 16" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-2.7 2.1 -1.3" rot="0.0 90.0 0.0" size="2 18 16" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="2.9 4.9 -1.5" rot="0.0 0.0 90.0" prop="true" size="2 56 28" brush="MOD/vox/corrugated_metal.vox"/>
-				<vox pos="2.5 2.5 -0.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="1.7 2.5 -0.9" rot="0.0 -90.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="1.7 4.1 -0.9" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="0.1 3.3 0.69999" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="-2.3 3.3 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="-2.3 4.1 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="-2.3 2.5 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="2.1 2.5 0.69999" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="2.1 4.1 0.69999" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="2.5 3.3 0.3" rot="0.0 -90.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="2.5 4.1 -0.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="2.0 3.3 -0.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="-1.1 2.5 0.9" prop="true" file="MOD/vox/barricades.vox" object="wood_doorframe"/>
-				<vox pos="0.5 4.1 0.70001" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="1.3 3.3 0.7" rot="0.0 180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="0.5 2.5 0.70001" rot="0.0 180.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-				<vox pos="-3.1 2.5 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="-3.1 3.3 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-				<vox pos="-3.1 4.1 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
+			<vox pos="13.7 0.0 -0.5" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/container_blue.vox">
+				<vox pos="-1.5 2.5 -0.99999" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="0.3 2.5 -0.89998" rot="0.0 -95.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<voxbox pos="1.2 1.9 -1.3" rot="0.0 90.0 0.0" size="2 13 16" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-2.7 2.1 -1.3" rot="0.0 90.0 0.0" size="2 18 16" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="2.9 4.9 -1.5" rot="0.0 0.0 90.0" prop="true" size="2 56 28" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<vox pos="2.5 2.5 -0.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="1.7 2.5 -0.9" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="1.7 4.1 -0.9" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="0.1 3.3 0.69999" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="-2.3 3.3 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="-2.3 4.1 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="-2.3 2.5 0.7" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="2.1 2.5 0.69999" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="2.1 4.1 0.69999" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="2.5 3.3 0.3" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="2.5 4.1 -0.5" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="2.0 3.3 -0.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="-1.1 2.5 0.9" prop="true" file="MOD/assets/vox/barricades.vox" object="wood_doorframe"/>
+				<vox pos="0.5 4.1 0.70001" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="1.3 3.3 0.7" rot="0.0 180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="0.5 2.5 0.70001" rot="0.0 180.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="-3.1 2.5 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="-3.1 3.3 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+				<vox pos="-3.1 4.1 0.7" rot="0.0 170.0 0.0" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
 			</vox>
-			<vox pos="14.8 0.0 1.8" rot="0.0 22.0 0.0" prop="false" file="MOD/vox/container_blue.vox">
-				<vox pos="-2.9 0.0 1.79999" rot="0.0 180.0 0.0" file="MOD/vox/stairs.vox" object="stairs2"/>
-				<voxbox pos="-0.6 0.0 1.1" size="24 35 15" brush="MOD/vox/stairs.vox" object="stairs2"/>
-				<voxbox pos="1.8 2.3 2.59999" rot="0.0 90.0 0.0" size="15 12 1" brush="MOD/vox/stairs.vox" object="rail1"/>
-				<voxbox pos="2.9 1.8 -1.8" size="2 19 28" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-3.4 2.3 -3.5" rot="0.0 90.0 90.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-3.4 2.3 -3.5" rot="0.0 70.0 90.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-4.1 -0.1 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-4.1 0.5 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-3.9 -0.1 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
-				<voxbox pos="-3.9 0.5 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/vox/corrugated_metal.vox"/>
+			<vox pos="14.8 0.0 1.8" rot="0.0 22.0 0.0" prop="false" file="MOD/assets/vox/container_blue.vox">
+				<vox pos="-2.9 0.0 1.79999" rot="0.0 180.0 0.0" file="MOD/assets/vox/stairs.vox" object="stairs2"/>
+				<voxbox pos="-0.6 0.0 1.1" size="24 35 15" brush="MOD/assets/vox/stairs.vox" object="stairs2"/>
+				<voxbox pos="1.8 2.3 2.59999" rot="0.0 90.0 0.0" size="15 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox pos="2.9 1.8 -1.8" size="2 19 28" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-3.4 2.3 -3.5" rot="0.0 90.0 90.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-3.4 2.3 -3.5" rot="0.0 70.0 90.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-4.1 -0.1 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-4.1 0.5 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-3.9 -0.1 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
+				<voxbox pos="-3.9 0.5 -1.8" rot="0.0 80.0 0.0" size="2 19 8" brush="MOD/assets/vox/corrugated_metal.vox"/>
 			</vox>
-			<vox pos="12.2 0.1 -2.8" rot="44.0 -160.0 36.0" prop="false" file="MOD/vox/barricades.vox" object="hedgehog"/>
-			<vox pos="11.3 0.1 -2.8" rot="44.0 -70.0 36.0" prop="false" file="MOD/vox/barricades.vox" object="hedgehog"/>
-			<vox pos="13.3 0.1 -4.0" rot="44.0 150.0 36.0" prop="false" file="MOD/vox/barricades.vox" object="hedgehog"/>
-			<vox pos="15.3 0.1 -5.5" rot="44.0 70.0 36.0" prop="false" file="MOD/vox/barricades.vox" object="hedgehog"/>
-			<vox pos="7.3 0.0 5.3" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/tents.vox" object="tent2"/>
-			<vox pos="16.9 2.5 1.5" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="barrel1"/>
-			<vox pos="14.8 0.0 -2.9" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="13.20252 0.0 -2.31857" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="11.60504 0.0 -1.73713" rot="0.0 -157.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="9.97337 0.0 -1.24967" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
-			<vox pos="11.04123 0.8 -1.53192" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="12.73268 0.8 -2.14756" rot="0.0 -166.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="14.42412 0.8 -2.76319" rot="0.0 -152.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
-			<vox pos="13.5784 1.6 -2.45537" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_red"/>
-			<vox pos="11.85275 1.6 -1.93371" rot="0.0 12.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="10.1271 1.6 -1.41204" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="8.29885 0.0 -1.17228" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="9.39975 0.8 -1.26436" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_green"/>
-			<vox pos="4.08943 0.8 6.1511" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="4.83926 2.6 0.72541" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="4.00375 0.0 5.33094" rot="0.0 82.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="4.03761 0.8 4.25444" rot="0.0 -97.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_red"/>
-			<vox pos="4.1143 0.0 3.58802" rot="0.0 -86.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_green"/>
-			<vox pos="4.11534 0.0 7.09943" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="7.70532 0.0 -14.79057" rot="0.0 -127.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="9.6219 0.0 -17.7027" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="8.67887 0.0 -16.20909" rot="0.0 -120.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="6.53607 0.0 -13.55303" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_dark"/>
-			<vox pos="5.12426 0.0 -12.64861" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="3.67016 0.0 -11.72881" rot="0.0 -160.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-			<vox pos="1.94798 0.0 -11.31163" rot="0.0 -178.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="10.62597 0.0 -19.04613" rot="0.0 -127.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-			<vox pos="12.10217 0.0 -20.08358" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="12.2 0.1 -2.8" rot="44.0 -160.0 36.0" prop="false" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="11.3 0.1 -2.8" rot="44.0 -70.0 36.0" prop="false" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="13.3 0.1 -4.0" rot="44.0 150.0 36.0" prop="false" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="15.3 0.1 -5.5" rot="44.0 70.0 36.0" prop="false" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+			<vox pos="7.3 0.0 5.3" rot="0.0 -170.0 0.0" prop="false" file="MOD/assets/vox/tents.vox" object="tent2"/>
+			<vox pos="16.9 2.5 1.5" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+			<vox pos="14.8 0.0 -2.9" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="13.20252 0.0 -2.31857" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="11.60504 0.0 -1.73713" rot="0.0 -157.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="9.97337 0.0 -1.24967" rot="0.0 10.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="11.04123 0.8 -1.53192" rot="0.0 10.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="12.73268 0.8 -2.14756" rot="0.0 -166.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="14.42412 0.8 -2.76319" rot="0.0 -152.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="13.5784 1.6 -2.45537" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_red"/>
+			<vox pos="11.85275 1.6 -1.93371" rot="0.0 12.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="10.1271 1.6 -1.41204" rot="0.0 10.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="8.29885 0.0 -1.17228" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="9.39975 0.8 -1.26436" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_green"/>
+			<vox pos="4.08943 0.8 6.1511" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="4.83926 2.6 0.72541" rot="0.0 80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="4.00375 0.0 5.33094" rot="0.0 82.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="4.03761 0.8 4.25444" rot="0.0 -97.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_red"/>
+			<vox pos="4.1143 0.0 3.58802" rot="0.0 -86.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_green"/>
+			<vox pos="4.11534 0.0 7.09943" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="7.70532 0.0 -14.79057" rot="0.0 -127.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="9.6219 0.0 -17.7027" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="8.67887 0.0 -16.20909" rot="0.0 -120.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="6.53607 0.0 -13.55303" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_dark"/>
+			<vox pos="5.12426 0.0 -12.64861" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="3.67016 0.0 -11.72881" rot="0.0 -160.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+			<vox pos="1.94798 0.0 -11.31163" rot="0.0 -178.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="10.62597 0.0 -19.04613" rot="0.0 -127.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			<vox pos="12.10217 0.0 -20.08358" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
 			<group name="tyre pile" pos="11.59997 0.0 -17.29993" rot="0.0 -140.0 0.0">
-				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.6 0.0 -0.3" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 -0.6" rot="0.0 -90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 0.2" rot="0.0 -140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.2 0.6 -0.2" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.2 0.9 0.3" rot="0.0 -50.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
+				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.6 0.0 -0.3" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 -0.6" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 0.2" rot="0.0 -140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.2 0.6 -0.2" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.2 0.9 0.3" rot="0.0 -50.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
 			</group>
 			<group name="tyre pile" pos="8.71709 0.0 -12.93081" rot="0.0 60.0 0.0">
-				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
+				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
 			</group>
 			<group name="tyre pile" pos="15.66577 0.0 -12.73821" rot="0.0 -140.0 0.0">
-				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.6 0.0 -0.3" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 -0.6" rot="0.0 -90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 0.2" rot="0.0 -140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.2 0.6 -0.2" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.2 0.9 0.3" rot="0.0 -50.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
+				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.6 0.0 -0.3" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 -0.6" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 0.2" rot="0.0 -140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.2 0.6 -0.2" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.2 0.9 0.3" rot="0.0 -50.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
 			</group>
 			<group name="tyre pile" pos="12.78287 0.0 -8.36907" rot="0.0 60.0 0.0">
-				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
-				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/barricades.vox" object="tyre"/>
+				<vox pos="-2.0 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.0 0.6" rot="0.0 -40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.1 0.0 0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.2 0.0 0.5" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.0 0.7" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.2 0.0 0.0" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.0 -0.2" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.9 0.0 -0.5" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.0 0.0 0.3" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.1 0.0 -0.3" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.8 0.3 -0.1" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.3 0.4" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.6 0.3 -0.3" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.3 -0.5" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.5 0.6 0.0" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="1.0 0.8 0.0" rot="0.0 -150.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="2.3 0.6 -0.4" rot="0.0 -170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.7 0.6 0.0" rot="0.0 -60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.1 0.6 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.7 0.6 0.1" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.5 0.6 0.2" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.0 0.3 0.0" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.4 0.3 0.7" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="0.4 0.3 0.7" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-0.8 0.3 0.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
+				<vox pos="-1.6 0.3 0.2" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/barricades.vox" object="tyre"/>
 			</group>
 			<group name="props" pos="10.6 2.7 -0.3" prop0="prop=true">
-				<vox pos="0.101 -0.04 0.04" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="-4.208 -2.7 4.509" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="1.6 -2.7 11.9" rot="0.0 -10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="1.6 -2.0 11.9" rot="0.0 -20.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="1.5 -2.7 9.6" rot="0.0 -160.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="-5.5 -2.7 5.5" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="5.6 -0.2 0.8" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="-7.1 -2.7 0.6" rot="0.0 80.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-				<vox pos="-7.3 -2.7 2.3" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-				<vox pos="4.6 -0.1 -0.8" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box3"/>
-				<vox pos="4.6 0.3 -0.8" rot="0.0 120.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box4"/>
-				<vox pos="-5.24 -2.7 4.023" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="barrel1"/>
-				<vox pos="-4.5 -2.7 6.6" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
-				<vox pos="2.6 -2.7 5.3" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
-				<vox pos="0.0 -1.4 10.3" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
-				<vox pos="7.0 -2.7 3.1" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
-				<vox pos="1.1 -2.7 4.2" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="5.0 -2.4 -0.6" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="5.5 -2.7 3.6" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/crates.vox" object="medium"/>
-				<vox pos="5.6 -1.7 3.6" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/crates.vox" object="medium"/>
-				<vox pos="0.0 -2.7 10.1" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/crates.vox" object="large"/>
-				<vox pos="4.4 -0.2 1.3" rot="0.0 30.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box4"/>
-				<vox pos="4.0 -2.7 4.3" rot="0.0 20.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="box3"/>
-				<vox pos="0.0 -2.7 12.2" prop="false" file="MOD/vox/small_props.vox" object="box3"/>
-				<vox pos="-5.6 -1.4 6.8" rot="0.0 40.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box5"/>
-				<vox pos="5.65 0.7 0.8" rot="0.0 110.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box5"/>
-				<vox pos="1.6 -0.2 2.0" rot="0.0 100.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box5"/>
-				<vox pos="-5.2 -1.9 8.5" prop="false" file="MOD/vox/small_boxes.vox" object="box3"/>
-				<vox pos="-5.2 -2.7 8.0" rot="0.0 -100.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box3"/>
-				<vox pos="-5.2 -2.7 7.4" rot="0.0 -90.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box1"/>
-				<vox pos="-5.3 -0.9 8.6" rot="0.0 -130.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box1"/>
-				<vox pos="-5.2 -2.7 8.5" rot="0.0 -90.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box2"/>
-				<vox pos="-5.6 -1.4 7.9" rot="0.0 -60.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box2"/>
-				<vox pos="-5.3 -1.4 8.2" rot="0.0 -80.0 0.0" prop="false" file="MOD/vox/small_boxes.vox" object="box2"/>
-				<vox pos="-5.4 -2.7 7.7" rot="0.0 10.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="shelf2"/>
-				<vox pos="-4.208 -2.0 4.509" rot="0.0 -15.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="-4.0 -0.1 0.6" rot="0.0 -95.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="5.6 -0.2 3.7" rot="0.0 115.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="5.6 0.5 3.7" rot="0.0 105.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="-2.8 -2.7 2.7" rot="0.0 -95.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="-2.8 -2.2 2.8" rot="0.0 -85.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate1_2"/>
-				<vox pos="-4.9 -1.8 1.3" rot="0.0 85.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
-				<vox pos="-4.9 -2.5 1.3" rot="0.0 85.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="crate2"/>
+				<vox pos="0.101 -0.04 0.04" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-4.208 -2.7 4.509" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="1.6 -2.7 11.9" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="1.6 -2.0 11.9" rot="0.0 -20.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="1.5 -2.7 9.6" rot="0.0 -160.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="-5.5 -2.7 5.5" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="5.6 -0.2 0.8" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="-7.1 -2.7 0.6" rot="0.0 80.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+				<vox pos="-7.3 -2.7 2.3" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+				<vox pos="4.6 -0.1 -0.8" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+				<vox pos="4.6 0.3 -0.8" rot="0.0 120.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box4"/>
+				<vox pos="-5.24 -2.7 4.023" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+				<vox pos="-4.5 -2.7 6.6" rot="0.0 10.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box4"/>
+				<vox pos="2.6 -2.7 5.3" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box4"/>
+				<vox pos="0.0 -1.4 10.3" prop="false" file="MOD/assets/vox/small_props.vox" object="box4"/>
+				<vox pos="7.0 -2.7 3.1" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box4"/>
+				<vox pos="1.1 -2.7 4.2" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="5.0 -2.4 -0.6" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="5.5 -2.7 3.6" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="medium"/>
+				<vox pos="5.6 -1.7 3.6" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="medium"/>
+				<vox pos="0.0 -2.7 10.1" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="large"/>
+				<vox pos="4.4 -0.2 1.3" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box4"/>
+				<vox pos="4.0 -2.7 4.3" rot="0.0 20.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box3"/>
+				<vox pos="0.0 -2.7 12.2" prop="false" file="MOD/assets/vox/small_props.vox" object="box3"/>
+				<vox pos="-5.6 -1.4 6.8" rot="0.0 40.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+				<vox pos="5.65 0.7 0.8" rot="0.0 110.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+				<vox pos="1.6 -0.2 2.0" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+				<vox pos="-5.2 -1.9 8.5" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+				<vox pos="-5.2 -2.7 8.0" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+				<vox pos="-5.2 -2.7 7.4" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+				<vox pos="-5.3 -0.9 8.6" rot="0.0 -130.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+				<vox pos="-5.2 -2.7 8.5" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+				<vox pos="-5.6 -1.4 7.9" rot="0.0 -60.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+				<vox pos="-5.3 -1.4 8.2" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+				<vox pos="-5.4 -2.7 7.7" rot="0.0 10.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="shelf2"/>
+				<vox pos="-4.208 -2.0 4.509" rot="0.0 -15.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="-4.0 -0.1 0.6" rot="0.0 -95.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="5.6 -0.2 3.7" rot="0.0 115.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="5.6 0.5 3.7" rot="0.0 105.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="-2.8 -2.7 2.7" rot="0.0 -95.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="-2.8 -2.2 2.8" rot="0.0 -85.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="-4.9 -1.8 1.3" rot="0.0 85.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
+				<vox pos="-4.9 -2.5 1.3" rot="0.0 85.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="crate2"/>
 			</group>
 		</group>
 		<group name="Enemies" pos="5.40004 0.9 -6.59999" rot="0.0 -90.0 0.0">

@@ -1,4 +1,4 @@
--- Mock test for the per-player tool list in script/inventory.lua server.tick (MP fix 2026-11-14): in multiplayer
+-- Mock test for the per-player tool list in player/inventory.lua server.tick (MP fix 2026-11-14): in multiplayer
 -- the engine's sandbox.lua enables every registered tool for every player each tick; the inventory must switch the
 -- ones a player may not have back off every tick, not only when its wish changes.
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_invtools.lua
@@ -6,7 +6,7 @@ dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local PATH = "script/inventory.lua"
+local PATH = "player/inventory.lua"
 local env = MockEngine.load(PATH, { preload = MockEngine.includes(PATH) })
 env.PLAYERS[2] = { pos = {0,0,0}, health = 1 }
 env.ORDER = { 1, 2 }

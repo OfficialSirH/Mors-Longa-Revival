@@ -22,7 +22,7 @@ local function pump(env)
 end
 
 ------------------------------------------------------------------ cultist warehouse, supply plane
-local env = MockEngine.load("scripts/Game/WarehouseScript_Cultist.lua")
+local env = MockEngine.load("world/WarehouseScript_Cultist.lua")
 twoPlayers(env, {100,0,0}, {5,0,0})
 env.def("IsPointInTrigger", function(t, pos) return pos[1] == 5 end)
 env.def("FindLocations", function() return {1} end)
@@ -33,14 +33,14 @@ local spawns = env.calls.Spawn
 env.server.tick(1/60)
 check(env.calls.Spawn == spawns, "cultist warehouse: once")
 
-env = MockEngine.load("scripts/Game/AC130.lua")
+env = MockEngine.load("world/AC130.lua")
 twoPlayers(env, {1000,0,0}, {100,0,0})
 env.server.init()
 for i = 1, 600 do env.server.tick(1/60) end
 check((env.calls.Spawn or 0) >= 1 and next(env.violations) == nil, "supply plane: drops crates for the nearest player (player 2, 100 m)")
 
 ------------------------------------------------------------------ safe zone outlines (client)
-env = MockEngine.load("scripts/Game/SafeZone.lua", { preload = { "scripts/TDSU/util_vec.lua" } })
+env = MockEngine.load("game/SafeZone.lua", { preload = { "lib/TDSU/util_vec.lua" } })
 env.def("FindBodies", function() return {3} end)
 env.def("GetTagValue", function() return "bed" end)
 env.def("IsHandleValid", function() return true end)
@@ -51,7 +51,7 @@ env.client.init() env.client.tick()
 check((env.calls.DrawBodyOutline or 0) == 1 and next(env.violations) == nil and env.server.tick == nil, "safe zone: outlines on the client")
 
 ------------------------------------------------------------------ perk machine
-env = MockEngine.load("scripts/Game/PerkMachine.lua", { preload = {} })
+env = MockEngine.load("game/PerkMachine.lua", { preload = {} })
 twoPlayers(env, {0,0,0}, {1,0,0})
 env.def("FindBody", function() return 50 end)
 env.def("FindShape", function(tag) return ({ screen = 51, machine = 52, lever = 53 })[tag] or 0 end)
@@ -82,7 +82,7 @@ pump(env)
 for i = 1, 60 * 10 do env.server.tick(1/60) end
 check(env.totalPerkBought == 10 and env.terminatePerkMachine and next(env.violations) == nil, "perk: all 10 printed, machine done")
 -- a purchase while busy is refunded
-env = MockEngine.load("scripts/Game/PerkMachine.lua")
+env = MockEngine.load("game/PerkMachine.lua")
 env.def("FindBody", function() return 50 end)
 env.def("IsHandleValid", function() return true end)
 env.server.init()
@@ -93,7 +93,7 @@ pump(env)
 check(env.R["savegame.mod.player.money"] == 500, "perk: busy machine refunds the buyer")
 
 ------------------------------------------------------------------ garage (parking spot)
-env = MockEngine.load("scripts/Game/ParkingSpot.lua", { preload = { "scripts/TDSU/compat.lua", "scripts/TDSU/util_table.lua", "scripts/TDSU/util_lua.lua", "scripts/TDSU/util_td.lua", "scripts/TDSU/util_math.lua", "scripts/TDSU/util_vec.lua", "scripts/TDSU/util_quat.lua", "Automatic.lua" } })
+env = MockEngine.load("game/ParkingSpot.lua", { preload = { "lib/TDSU/compat.lua", "lib/TDSU/util_table.lua", "lib/TDSU/util_lua.lua", "lib/TDSU/util_td.lua", "lib/TDSU/util_math.lua", "lib/TDSU/util_vec.lua", "lib/TDSU/util_quat.lua", "lib/Automatic.lua" } })
 twoPlayers(env, {0,0,0}, {2,0,0})
 env.Init_Settings = function() env.Settings = { keybinds = { inventory = { toggle_inv = "i" } } } end
 env.KeybindPressed = function() return false end

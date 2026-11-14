@@ -1,6 +1,6 @@
 <prefab version="0.9.5">
 	<group name="instance=MOD/prefabs/rangedzombie3.xml" pos="-9.8 0.4 -8.3">
-		<script open_="true" pos="0.0 1.5 -0.8" rot="0.0 170.0 0.0" file="MOD/scripts/missing_script_stub.lua">
+		<script open_="true" pos="0.0 1.5 -0.8" rot="0.0 170.0 0.0" file="MOD/lib/missing_script_stub.lua">
 			<group open_="true" name="Limbs" pos="-0.6 -1.5 -0.8">
 				<body open_="true" name="foot_R" tags="RRLEG" pos="-0.3 0.4 0.1" dynamic="true">
 					<vox open_="true" tags="RRLEG" pos="0.2 -0.4 0.1" density="2" strength="1000" file="MOD/scavs.vox" object="foot_R brown">
@@ -95,7 +95,7 @@
 							<location/>
 							<location pos="0.2 0.0 0.0"/>
 						</rope>
-						<vox open_="true" pos="0.2 0.2 -0.27" rot="-90.0 180.0 0.0" file="MOD/vox/g18 ultra.vox" scale="0.34">
+						<vox open_="true" pos="0.2 0.2 -0.27" rot="-90.0 180.0 0.0" file="MOD/assets/vox/g18 ultra.vox" scale="0.34">
 							<voxbox tags="barrel" pos="0.1 0.4 -0.7" size="0 0 0" color="0.53 0.41 0.24"/>
 						</vox>
 					</vox>

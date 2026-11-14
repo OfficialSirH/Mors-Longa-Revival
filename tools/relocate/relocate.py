@@ -475,7 +475,9 @@ class Scan:
 
 def read_moves(path):
     """moves.txt: `old -> new` per line (files or folders, repo-relative, forward slashes), # comments.
-    `ack <file>:<text>` lines accept a run-time prefix site the tool can't rewrite (after checking it by hand)."""
+    `ack <file>:<text>` lines accept a run-time prefix site the tool can't rewrite (after checking it by hand).
+    `allow <file>:<text>` lets a dead reference resolve after the move (a moved file now answers it); <file> is the
+    path before the move. Both are kept in `acks` ("ack ..." / "allow ...")."""
     moves, acks = [], set()
     with open(path, encoding="utf-8") as f:
         for n, line in enumerate(f, 1):
@@ -484,6 +486,9 @@ def read_moves(path):
                 continue
             if line.startswith("ack "):
                 acks.add(line[4:].strip())
+                continue
+            if line.startswith("allow "):
+                acks.add("allow " + line[6:].strip())
                 continue
             if "->" not in line:
                 sys.exit("%s:%d: expected `old -> new`" % (path, n))
@@ -495,6 +500,7 @@ def read_moves(path):
 class Plan:
     def __init__(self, scan, moves, acks):
         self.scan, self.moves, self.acks = scan, moves, acks
+        self.allows = set()   # (norm new path of the file, reference text), filled once newpath is known
         self.errors, self.warnings = [], []
         t = scan.tree
         self.newpath = {}   # norm old file -> real new relative path
@@ -533,6 +539,14 @@ class Plan:
                 if "/".join(parts[:i]) in seen:
                     self.errors.append("a file and a folder at %s" % "/".join(parts[:i]))
         self.moved = {k for k, v in self.newpath.items() if norm(v) != k or v != t.files[k]}
+        for entry in acks:
+            if entry.startswith("allow "):
+                f, _, text = entry[6:].partition(":")
+                k = norm(f)
+                if k not in self.newpath:
+                    self.errors.append("allow: %s does not exist" % f)
+                else:
+                    self.allows.add((norm(self.newpath[k]), text))
         self._check_pins()
         self.edits = defaultdict(list)   # rel -> [(start, end, old, new)]
         self._rewrite_all()
@@ -694,8 +708,24 @@ def rename(root, a, b):
         os.rename(src, dst)
 
 
+def teardown_running():
+    """Teardown keeps the mod's files open (sounds, scripts): a rename then fails half way (it is rolled back)."""
+    if os.name != "nt":
+        return []
+    import subprocess
+    try:
+        out = subprocess.run(["tasklist"], capture_output=True, text=True).stdout.lower()
+    except OSError:
+        return []
+    return sorted({line.split()[0] for line in out.splitlines() if line.startswith("teardown")})
+
+
 def do_apply(scan, plan, out_dir):
     root = scan.root
+    running = teardown_running() if os.path.normcase(root) == os.path.normcase(REPO) else []   # (fixtures: temp folders)
+    if running and not os.environ.get("RELOCATE_IGNORE_TEARDOWN"):
+        print("Teardown is running (%s): close it first, it keeps the mod's files open" % ", ".join(running))
+        return 1
     journal = []   # ("move", old, new) / ("write", new_rel, old_bytes), undone in reverse order
     existing = existing_dirs(root)
     try:
@@ -717,6 +747,9 @@ def do_apply(scan, plan, out_dir):
                 f.write(new_text.encode("latin-1"))
         remove_empty_dirs(root, moved_dirs)
         problems = verify(scan, plan)
+        os.makedirs(out_dir, exist_ok=True)
+        with open(os.path.join(out_dir, "verify.txt"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(problems) + "\n")
         if problems:
             raise RuntimeError("verification failed:\n  " + "\n  ".join(problems[:50]))
     except BaseException as ex:
@@ -824,12 +857,25 @@ def verify(old_scan, plan):
         if r.kind in ("dangling", "engine", "level", "pinned"):
             return (r.kind, r.text)
         return (r.kind, None)
+    # Not compared: folder names in prose (repo kind ending in "/": only matched in docs, tools and game-script
+    # comments, never rewritten when split; a new folder name like ui/ makes a commented-out engine path
+    # "ui/menu/x.png" look like one), and the references moves.txt allows to change (`allow <file>:<text>`, a dead
+    # reference that a moved file now answers; the new file is the old file's new path).
+    allowed = plan.allows
+
+    def skip(r, file_new):
+        if r.kind == "repo" and r.target and r.target.endswith("/"):
+            return True
+        return (file_new, r.text) in allowed
     old_sigs = defaultdict(Counter)
     for r in old_scan.refs:
-        old_sigs[norm(plan.newpath.get(norm(r.file), r.file))][sig(old_scan, r, lambda k: norm(plan.newpath[k]))] += 1
+        fn = norm(plan.newpath.get(norm(r.file), r.file))
+        if not skip(r, fn):
+            old_sigs[fn][sig(old_scan, r, lambda k: norm(plan.newpath[k]))] += 1
     new_sigs = defaultdict(Counter)
     for r in new_scan.refs:
-        new_sigs[norm(r.file)][sig(new_scan, r, lambda k: k)] += 1
+        if not skip(r, norm(r.file)):
+            new_sigs[norm(r.file)][sig(new_scan, r, lambda k: k)] += 1
     for f in set(old_sigs) | set(new_sigs):
         a, b = old_sigs.get(f, Counter()), new_sigs.get(f, Counter())
         if a != b:

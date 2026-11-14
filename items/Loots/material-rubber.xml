@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=material-rubber_Rubber_1 interact=Rubber" pos="0 .1" dynamic="true">
+			<vox pos="0 -.1 .05" file="MOD/assets/vox/Loots/Materials.vox" object="Rubber"/>
+		</body>
+	</group>
+</prefab>
+

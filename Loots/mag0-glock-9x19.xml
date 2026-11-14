@@ -1,8 +1,0 @@
-<prefab version="1.2.0">
-	<group name="instance=MOD/Loots/mag0-glock-9x19.xml" pos="2.4" rot="0">
-		<body tags="Loot=mag0-glock-9x19_P17-Mag_17_17_9x19 interact=P17-Mag unbreakable" pos="0 .1" dynamic="true">
-			<voxbox pos="-.05 -.1 -.05" texture="7" size="1 2 1" color=".08 .08 .08" material="metal"/>
-		</body>
-	</group>
-</prefab>
-

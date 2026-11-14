@@ -4,7 +4,7 @@
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local MAIN = "GoreNPCs/scripts/goreai_main.lua"
+local MAIN = "npcs/GoreNPCs/scripts/goreai_main.lua"
 
 local function load(side)
 	local env = MockEngine.load(MAIN, { preload = MockEngine.includes(MAIN) })

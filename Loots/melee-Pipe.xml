@@ -1,8 +1,0 @@
-<prefab version="1.3.0">
-	<!-- (v2 port) added: the original mod had no pickup item for this weapon; uses the tool model -->
-	<group name="instance=MOD/Loots/melee-Pipe.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<body tags="Loot=melee-Pipe_Pipe_150_150 interact=Pipe unbreakable" pos="0.0 0.1 0.0" dynamic="true">
-			<vox file="MOD/vox/Weapons/Melee/Pipe.vox" rot="90.0 0.0 0.0"/>
-		</body>
-	</group>
-</prefab>

@@ -1,0 +1,8 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/weapons/PlaceTool/Placeables/Armor3.xml" pos="-0.2 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 0.0" dynamic="true">
+			<vox pos="-0.45 0.0 0.05" rot="90.0 90.0 0.0" density="0.5" prop="false" file="MOD/assets/vox/Armor Plate III.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

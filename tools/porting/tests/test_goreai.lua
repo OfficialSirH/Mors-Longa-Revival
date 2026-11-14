@@ -109,19 +109,19 @@ local function loadFns(path, names)
 	src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)
 	assert(loadstring(src, path))()
 end
-loadFns("scripts/TDSU/util_td.lua")    -- timers
-loadFns("scripts/TDSU/util_table.lua")
-loadFns("scripts/TDSU/util_lua.lua")
+loadFns("lib/TDSU/util_td.lua")    -- timers
+loadFns("lib/TDSU/util_table.lua")
+loadFns("lib/TDSU/util_lua.lua")
 function RejectAllBodies(bodies) for i=1, #bodies do QueryRejectBody(bodies[i]) end end
 function DirLookAt(eye, target) return VecNormalize(VecSub(target, eye)) end
-loadFns("scripts/TDSU/util_vec.lua")   -- LineIntersectsAABB
+loadFns("lib/TDSU/util_vec.lua")   -- LineIntersectsAABB
 function AabbGetBodyCenterPos(b) return BODYPOS[b] or Vec() end -- mock again (util_vec defines it)
-loadFns("GoreNPCs/scripts/systems/goreai_players.lua")
-loadFns("GoreNPCs/scripts/systems/goreai_killcam.lua")
-loadFns("GoreNPCs/scripts/systems/goreai_hitmarkers.lua")
-loadFns("GoreNPCs/scripts/systems/goreai_sounds.lua")
-loadFns("GoreNPCs/scripts/components/goreai_ui.lua")
-loadFns("GoreNPCs/scripts/systems/goreai_API.lua")
+loadFns("npcs/GoreNPCs/scripts/systems/goreai_players.lua")
+loadFns("npcs/GoreNPCs/scripts/systems/goreai_killcam.lua")
+loadFns("npcs/GoreNPCs/scripts/systems/goreai_hitmarkers.lua")
+loadFns("npcs/GoreNPCs/scripts/systems/goreai_sounds.lua")
+loadFns("npcs/GoreNPCs/scripts/components/goreai_ui.lua")
+loadFns("npcs/GoreNPCs/scripts/systems/goreai_API.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
@@ -238,7 +238,7 @@ for _, n in ipairs{"SpawnParticle","PointLight","DrawLine","MakeHole","Explosion
 function GetShapeBody() return 0 end
 function GetShapeMaterialAtPosition() return "wood", 1,1,1,1 end
 Debug_hitPositions_shapes = {}
-loadFns("GoreNPCs/scripts/components/goreai_combat.lua")
+loadFns("npcs/GoreNPCs/scripts/components/goreai_combat.lua")
 BLOCK = false
 local shooter = { rpg = false, velocity = 600, AllBodies = {}, pdamage = 33, roundsize = 1, BulletsShot = 0, oldbulletsshot = 0,
 	disttoplayer = 10, maxMomentum = 1, torsoPos = Vec(10, 1.4, 0), barrel = 0, sounds = {} }
@@ -253,7 +253,7 @@ check(shell.hitPlayer == true, "bullet stops after a player hit")
 
 -- (2026-11-07 crash fix) Constrain* only from update: tick_npcs must not point/hold the gun, update_npcs must
 do
-	local src = io.open("GoreNPCs/scripts/goreai_manage.lua", "rb"):read("*a"):gsub("\r", "")
+	local src = io.open("npcs/GoreNPCs/scripts/goreai_manage.lua", "rb"):read("*a"):gsub("\r", "")
 	local function body(name)
 		local s = src:find("\nfunction " .. name .. "%(")
 		local e = src:find("\nfunction ", s + 1) or #src

@@ -1,0 +1,106 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/avf/prefabs/humvee/umhummer With 50 Cal.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<script file="MOD/vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep 50 Cal.lua">
+			<vehicle name="Hummer" tags="Door cfg=vehicle name=Humvee" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="military .75" spring=".8" damping=".5" topspeed="138" acceleration="0.4" strength="6" antiroll="0.2" difflock="1" steerassist=".3">
+				<body tags="component=body" pos="0.0 0.55 -0.55" dynamic="true">
+					<rig name="gunner" tags="gunner relative_parent sort=99" pos="0.0 0.7 0.85">
+						<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.0 -0.05" rot="0.0 100 0.0"/>
+						<location name="ik_foot_r" tags="ik_foot_r" pos="0.2 0.0 -0.05" rot="0.0 80 0.0"/>
+						<location name="stand" tags="stand" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+						<location name="ik_hand_l" tags="ik_hand_l" pos="-0.22 1.45 -0.25" rot="0.0 90 0.0"/>
+						<location name="ik_hand_r" tags="ik_hand_r" pos="0.02 1.45 -0.25" rot="0.0 90 0.0"/>
+					</rig>
+					<vox tags="component=chassis" pos="0.0 -0.1 0.45" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="body">
+						<location tags="exhaust" pos="-1.05 0.25 -2.6" rot="180"/>
+						<location tags="vital" pos="0.0 0.7 1.8"/>
+						<location tags="player" pos="0.65 1.35 0.25"/>
+						<location tags="camera" pos="0.0 1.65 0.0"/>
+						<location tags="exit" pos="1.6 0.5 0.2"/>
+						<light pos="-0.6 0.8 2.5" rot="0.0 0 0.0" type="cone" color="1 .9 .8" scale="60" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+						<light pos="0.6 0.8 2.5" rot="0.0 0 0.0" type="cone" color="1 .9 .8" scale="60" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.3"/>
+						<vox tags="nocull component=turret turretGroup=mainTurret" pos="0.0 1.6 0.1" rot="0.0 0.0 0.0" texture="8 .3" blendtexture="5 .3" density="10" strength="5" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="turret">
+							<joint tags="component=turretJoint" pos="0.0 0.0 -0.1" rot="90.0 0.0 0.0" type="hinge" rotstrength="0" rotspring="0"/>
+							<vox tags="nocull mainCannon component=gun weaponType=customMG group=primary avf_barrel_coords_true interact=mountedGun commander" pos="0.05 0.55 0.15" texture="8 .3" blendtexture="5 .3" strength="10" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="50 Cal_mg">
+								<joint tags="component=gunJoint" pos="-0.1 0.1 0.25" rot="-180.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" limits="-50 20"/>
+								<vox tags="nocull" pos="-0.1 0.05 0.9" texture="8 .3" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="50 Cal_barrel"/>
+							</vox>
+						</vox>
+					</vox>
+					<vox pos="0.0 0.7 2.35" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="trunk">
+						<joint pos="-0.5 0.7 0.6" rot="0.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="false" limits="0, 110" sound="true"/>
+						<joint pos="0.5 0.7 0.6" rot="0.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="false" limits="0, 110" sound="true"/>
+					</vox>
+					<vox pos="1.2 0.4 -0.05" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorf">
+						<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true"/>
+						<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true"/>
+					</vox>
+					<vox pos="1.2 0.4 0.85" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorb">
+						<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true"/>
+						<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true"/>
+					</vox>
+					<vox pos="-0.95 1.25 2.5" rot="-10.0 180.0 0.0" texture="8 .35" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="antenna">
+						<joint pos="0.05 0.05 -0.05" rot="0.0 90.0 90.0" type="hinge" collide="false" limits="-10, 10"/>
+					</vox>
+					<vox pos="-1.1 0.4 0.85" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorb">
+						<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true"/>
+						<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0-100, 0-100, 0" sound="true"/>
+					</vox>
+					<vox pos="-1.1 0.4 -0.05" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorf">
+						<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true"/>
+						<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true"/>
+					</vox>
+					<wheel name="fr" pos="-0.9 -0.05 -1.4" drive="1" steer="1">
+						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fr"/>
+					</wheel>
+					<wheel name="br" pos="-0.9 -0.05 2.2" drive="1" steer="0">
+						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_br"/>
+					</wheel>
+					<wheel name="bl" pos="0.9 -0.05 2.2" drive="1" steer="0">
+						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_bl"/>
+					</wheel>
+					<wheel name="fl" pos="0.9 -0.05 -1.4" drive="1" steer="1">
+						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fl"/>
+					</wheel>
+				</body>
+				<rig name="driver" tags="driver sort=0" pos="-0.7 1.2 -0.45">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.15 0.3 -0.2" rot="0.0 90 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.3 -0.2" rot="0.0 90 0.0"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.3 -0.2" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="0.7 1.2 -0.45">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=2" pos="0.7 1.2 0.35">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=3" pos="-0.7 1.2 0.35">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+			</vehicle>
+			<location name="mainCannon_sight" tags="mainCannon_sight" pos="0.0 3.0 0.15" rot="0.0 180.0 0.0"/>
+			<location name="mainCannon_emitter" tags="mainCannon_emitter flip_y_z" pos="0.0 2.75 -1.75" rot="0.0 180.0 0.0"/>
+			<location name="mainCannon_shell_ejector" tags="mainCannon_shell_ejector" pos="0.25 2.8 -0.55" rot="160.0 90.0 0.0"/>
+			<location name="mainCannon_shell_ejector_dir" tags="mainCannon_shell_ejector_dir" pos="0.8 2.8 -0.55" rot="169.60001 88.7 0.1"/>
+		</script>
+	</group>
+</prefab>
+

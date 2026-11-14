@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg33.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Soviet Vehicles/ZIL131.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/Soviet Vehicles/ZIL131.xml"/>
 		<instance pos="-0.3 1.3 0.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MiliWeaponLootSpawn.xml"/>
 		<instance pos="0.0 1.3 2.05" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MiliWeaponLootSpawn.xml"/>
 		<instance pos="-0.35 0.65 3.95" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml"/>

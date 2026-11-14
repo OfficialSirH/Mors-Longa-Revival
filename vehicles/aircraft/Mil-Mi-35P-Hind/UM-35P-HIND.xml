@@ -1,0 +1,927 @@
+<prefab version="1.5.2">
+	<group name="instance=MOD/vehicles/aircraft/Mil-Mi-35P-Hind/UM-35P-HIND.xml" pos="17.0 2.25 -3.35" rot="0.0 0.0 0.0">
+		<script pos="1.3 -2.65 -1.5" rot="0.0 180.0 0.0" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/script/Heli.lua">
+			<body name="Heli" tags="Heli" pos="0.8 1.055 -5.12" rot="2.0 0 0.0" dynamic="true">
+				<vox tags="nocull" pos="0.1 -0.08101 1.51" rot="0.0 90.0 0.0" texture="1 0.5" strength="2" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: cabin segment">
+					<group name="landing gear" pos="-0.0 -0.5 -0.0" rot="0.0 0.0 0.0" prop0="density=10" prop1="strength=10" prop2="tags=nocull">
+						<group name="front" pos="3.0 0.0 0.0" prop0="strength=50">
+							<vox pos="-0.15 -0.05 -0.1" rot="0.0 180.0 0.0" texture="1 0.5" strength="50" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="gear: twin nosewheel"/>
+							<group pos="-0.1 0.1 -0.1">
+								<group pos="0.2 0.1 0.05">
+									<voxbox pos="0.05 0.05 0.05" rot="-90.0 90.0 0.0" texture="1 0.5" size="1 1 5" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: dark gray  frame metal"/>
+									<voxbox pos="0.1 0.35 0.1" rot="-90.0 90.0 0.0" texture="1 0.5" size="2 2 5" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+								</group>
+								<voxbox pos="-0.63301 0.9 0.1" rot="30.0 90.0 0.0" texture="1 0.5" size="1 1 9" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+								<group pos="0.1 0.1 -0.0">
+									<voxbox pos="0.15 0.0366 0.1" rot="60.0 90.0 0.0" texture="1 0.5" size="1 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+									<voxbox pos="0.3434 0.034 0.1" rot="-30.0 90.0 0.0" texture="1 0.5" size="1 5 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+								</group>
+								<voxbox pos="-0.2 0.05 0.1" rot="0.0 90.0 0.0" texture="1 0.5" size="1 1 5" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+								<joint pos="0.35 0.7 0.05" rot="0.0 0.0 30.0" type="hinge">
+									<vox pos="-0.05 -0.6 0.05" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: nosewheel leg door"/>
+								</joint>
+							</group>
+						</group>
+						<group name="gear covers" pos="-2.9 0.9 -0.4">
+							<joint tags="casing1" pos="-0.4 0.1 0.5" rot="0.0 90.0 0.0" type="hinge" rotstrength="100">
+								<vox pos="-0.5 -0.1 0.0" rot="0 -90" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: mainwheel leg door R 2"/>
+							</joint>
+							<joint tags="casing1" pos="-0.4 0.1 0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="100">
+								<vox pos="0.5 -0.1 0.0" rot="0 -90" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: mainwheel leg door L 2"/>
+							</joint>
+							<joint tags="casing0" pos="0.3 0.6 -0.75" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.05" limits="0">
+								<vox pos="0.652 -0.24 0.2" rot="100.0 -90.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: mainwheel leg door L"/>
+							</joint>
+							<joint pos="0.3 0.6 1.45" rot="0.0 90.0 80.0" type="hinge" rotstrength="100">
+								<vox pos="-0.25 0.6 0.2" rot="180.0 -90.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: mainwheel leg door R"/>
+							</joint>
+						</group>
+						<group name="back" pos="-2.4 0.1 -0.05" prop0="strength=50">
+							<group name="left" pos="0.05 0.0 -1.4">
+								<group pos="-0.0 0.3 0.2" rot="0.0 0.0 0.0">
+									<group pos="0.05 0.28 -0.4" rot="-40.0 15.0 0.0">
+										<voxbox pos="-0.05 0.05 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: dark gray  frame metal"/>
+										<voxbox pos="-0.1 0.0 0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="2 2 9" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+									</group>
+									<group pos="0.2 0.0 0.25" rot="0.0 0.0 0.0">
+										<voxbox pos="-0.25799 0.05417 -0.78115" rot="-25.0 20.0 0.0" texture="1 0.5" size="1 1 14" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.24395 0.05417 -0.80336" rot="-25.0 -18.0 0.0" texture="1 0.5" size="1 1 14" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+									</group>
+									<vox pos="-0.05 0.05 -0.55" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="gear: axle connector"/>
+								</group>
+								<vox pos="0.0 0.0 -0.7" rot="0.0 180.0 0.0" texture="1 0.5" strength="50" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="gear: Port Mainwheel"/>
+							</group>
+							<group name="right" pos="0.29 0.1 2.2">
+								<vox pos="-0.2 -0.1 -0.2" rot="0.0 180.0 0.0" texture="1 0.5" strength="50" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="gear: Port Mainwheel"/>
+								<group pos="-0.2 0.2 -1.0" rot="0.0 180.0 0.0">
+									<group pos="0.05 0.28 -0.4" rot="-40.0 15.0 0.0">
+										<voxbox pos="-0.05 0.05 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: dark gray  frame metal"/>
+										<voxbox pos="-0.1 0.0 0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="2 2 9" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+									</group>
+									<group pos="0.2 0.0 0.25" rot="0.0 0.0 0.0">
+										<voxbox pos="-0.25799 0.05417 -0.78115" rot="-25.0 20.0 0.0" texture="1 0.5" size="1 1 14" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.24395 0.05417 -0.80336" rot="-25.0 -18.0 0.0" texture="1 0.5" size="1 1 14" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+									</group>
+									<vox pos="-0.05 0.05 -0.55" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="gear: axle connector"/>
+								</group>
+							</group>
+						</group>
+					</group>
+					<group name="cockpit" pos="-4.6 -0.7 -2.2" rot="0.0 0.0 0.0" prop0="tags=nocull">
+						<group name="pilot" pos="7.7 1.7 2.1">
+							<group pos="0.60152 0.71736 -0.3" rot="0 0 -10">
+								<vox pos="-0.1 0.0 0.4" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="pilot0">
+									<vox pos="-0.1 0.0 0.5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="thing"/>
+								</vox>
+								<vox pos="-0.1 -0.1 0.4" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p0">
+									<group pos="0.1 -0.1 0.0">
+										<vox pos="-0.1 0.09 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p2"/>
+										<vox pos="-0.1 0.012 -0.245" rot="-35" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p1"/>
+										<vox pos="-0.1 -0.01 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p2"/>
+										<vox pos="-0.1 0.09 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p2"/>
+										<vox pos="0.0 0.012 0.145" rot="-35.0 180.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p1"/>
+									</group>
+									<group pos="-0.02 0.05 -0.05">
+										<vox pos="0.0 0.02 -0.32" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p33"/>
+										<vox pos="0.1 -0.12 0.16" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+										<vox pos="0.0 0.02 -0.08" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p33"/>
+										<vox pos="0.1 -0.12 -0.08" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+									</group>
+								</vox>
+								<vox tags="panel_left" pos="-0.2 0.2 0.4" rot="0 0 5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p3"/>
+								<vox pos="-0.5 0.2 -0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p6"/>
+								<vox pos="0.05 -0.55 0.4" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p9">
+									<vox pos="0.0 -0.05 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p10"/>
+									<vox pos="-0.12 0.13 -0.15" rot="90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p31"/>
+								</vox>
+								<vox pos="-0.2 -0.02 0.69" rot="0 0 5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p11">
+									<vox pos="0.0 0.0 -0.13" rot="0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p12"/>
+								</vox>
+							</group>
+							<group pos="-0.2 0.95 -0.6" rot="0 0 -10">
+								<vox pos="-0.085 -1.09 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p5"/>
+							</group>
+							<vox pos="0.44862 0.27397 -0.3571" rot="0 30 70" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p7">
+								<vox pos="0.24 -0.0 -0.03" rot="0 25" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p8"/>
+								<group pos="-0.2 0.0 0.0">
+									<group pos="0.0 0.0 -0.025">
+										<vox pos="0.0 0.02 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+										<vox pos="0.0 0.02 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+									</group>
+									<group pos="0.23 0.0 -0.025">
+										<vox pos="0.0 0.02 -0.05" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+									</group>
+									<vox pos="0.25 0.02 -0.05" rot="90 90 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p33"/>
+								</group>
+							</vox>
+							<group name="seat" pos="-0.2 0.2 0.1">
+								<vox pos="0.0 -0.2 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps0">
+									<vox pos="-0.1 0.3 0.3" rot="0 0 -20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps1"/>
+									<vox pos="-0.185 0.3 0.0" rot="0 0 10" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps2">
+										<vox pos="-0.1 0.6 0.0" rot="0 0 -15" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps6">
+											<vox pos="0.1 0.09848 0.28264" rot="-10 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps7"/>
+											<vox pos="0.1 0.098 -0.285" rot="10 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps7"/>
+											<vox pos="0.05 0.1 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps50"/>
+										</vox>
+										<group pos="0.05 0.1 0.0">
+											<vox pos="-0.1 0.0 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps8"/>
+											<vox pos="-0.1 0.0 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps8"/>
+										</group>
+									</vox>
+									<vox pos="-0.1204 0.43321 0.3" rot="0.0 0.0 25.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps3"/>
+									<vox pos="-0.1 0.3 -0.3" rot="0 0 -20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps1"/>
+								</vox>
+								<vox pos="-0.1204 0.23321 -0.3" rot="0.0 0.0 25.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="ps3"/>
+							</group>
+							<vox pos="0.56276 0.2316 0.64397" rot="0 -30 70" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p13">
+								<vox pos="0.235 -0.0 -0.063" rot="0 -30" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p14"/>
+								<vox pos="0.23 -0.0 0.063" rot="0 32" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p15"/>
+								<vox pos="0.27 0.2 0.05" rot="0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p16"/>
+								<group pos="-0.0 0.22 0.0">
+									<vox pos="0.01 0.0 0.087" rot="0 0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p33"/>
+									<vox pos="0.25 0.0 0.06" rot="0 0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p33"/>
+									<vox pos="-0.09 0.0 -0.07" rot="0 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+									<vox pos="0.13 0.0 -0.07" rot="0 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p32"/>
+								</group>
+							</vox>
+							<vox pos="-0.5 0.0 0.65" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p21">
+								<vox pos="0.0 0.2 0.05" rot="-30 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p20"/>
+							</vox>
+							<group pos="-0.6 0.9 -0.4">
+								<group pos="-0.18 -0.5 0.1">
+									<vox pos="0.0 0.25 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p30"/>
+									<vox pos="0.0 0.6 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p30"/>
+									<vox pos="0.0 -0.1 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p30"/>
+								</group>
+								<group pos="0.5 -0.4 -0.07">
+									<vox pos="-0.1 0.2 0.0" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p31"/>
+									<vox pos="-0.1 -0.05 0.0" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p31"/>
+									<vox pos="0.25 -0.05 0.0" rot="0 90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p31"/>
+								</group>
+								<group pos="-0.13 -0.3 1.0">
+									<vox pos="-0.05 0.0 -0.15" rot="90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p34"/>
+									<vox pos="-0.05 0.35 -0.15" rot="90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p34"/>
+									<vox pos="-0.05 0.7 -0.18" rot="90" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="p30"/>
+								</group>
+							</group>
+							<group name="joy">
+								<vox pos="0.29872 -0.08875 0.1" rot="0.0 0.0 13.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="joy">
+									<vox pos="-0.02 0.65 0.0" rot="0 0 -20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="joy0"/>
+								</vox>
+							</group>
+						</group>
+						<group name="gunner" pos="9.3 1.9 2.3">
+							<group pos="0.55 -0.4 -0.6">
+								<vox pos="0.071 0.0 0.06" rot="0 55" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g1">
+									<vox pos="0.027 0.14 0.0" rot="0 0 20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g0"/>
+								</vox>
+								<vox pos="-0.01 0.0 0.9" rot="0 -55" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g1">
+									<vox pos="0.027 0.14 0.0" rot="0 0 20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g0"/>
+								</vox>
+								<vox pos="-0.903 -0.09 -0.15" rot="0 0 -20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g4"/>
+							</group>
+							<group pos="0.6 -0.4 -0.1">
+								<vox pos="-0.1 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g3"/>
+								<vox pos="0.0 -0.03 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g5"/>
+							</group>
+							<group name="seat" pos="-0.4 -0.5 -0.1">
+								<vox pos="0.0 -0.3 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g25">
+									<vox pos="-0.19372 0.29962 0.0" rot="0 0 5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g11">
+										<group pos="0.15 0.1 0.0">
+											<vox pos="-0.1 0.0 0.15" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g10"/>
+											<vox pos="-0.1 0.0 -0.15" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g10"/>
+										</group>
+									</vox>
+									<group pos="0.0 0.3 0.0">
+										<vox pos="0.0 0.02 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g30"/>
+										<vox pos="0.0 0.02 -0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g30"/>
+									</group>
+								</vox>
+							</group>
+							<group pos="0.5 -0.3 -0.1">
+								<group pos="0.1 0.05 -0.05" rot="0 0 20">
+									<vox pos="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g6"/>
+									<vox pos="0.0 0.1 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g7"/>
+								</group>
+								<vox pos="0.0 0.2 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g8"/>
+								<vox pos="-0.15 0.3 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g9"/>
+							</group>
+							<group pos="0.2 -0.3 0.3" rot="0 120">
+								<vox texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g20"/>
+								<group pos="0.08 0.15 -0.1">
+									<vox pos="-0.1 0.0 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g21"/>
+									<vox pos="-0.1 0.2 0.1" rot="0 0 -30" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g21"/>
+								</group>
+							</group>
+							<group pos="-0.3 -0.3 0.5">
+								<vox pos="-0.1 0.0 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g22">
+									<vox pos="0.0 0.05 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g22"/>
+								</vox>
+								<vox pos="-0.1 0.1 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g23">
+									<vox pos="0.0 0.25 -0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g22"/>
+								</vox>
+							</group>
+							<vox pos="-0.07 -0.3 0.5" rot="0 15" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="g24"/>
+							<group name="joy" pos="-0.2 -0.9 -0.2">
+								<vox pos="0.29872 -0.08875 0.1" rot="0.0 0.0 13.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="joy">
+									<vox pos="-0.02 0.65 0.0" rot="0 0 -20" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/cockpit.vox" object="joy0"/>
+								</vox>
+							</group>
+						</group>
+					</group>
+					<group name="bladder fuel tank" pos="-2.6 1.3 0.0">
+						<vox tags="explosive=0.5" pos="2.4 -0.9 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: self-sealing bag type fuel tank"/>
+					</group>
+					<group name="weapons" pos="-4.6 -0.7 -2.2" rot="0.0 0.0 0.0" prop0="tags=nocull">
+						<group name="pylons" pos="2.2 1.9 4.9" rot="0.0 0.0 0.0">
+							<vox pos="-0.0 0.2 -0.43" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: pylon 1">
+								<group pos="-0.8 -0.2 -0.1">
+									<voxbox pos="-0.26511 0.10636 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="9 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.29991 0.00039 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.54587 0.30789 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="7 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.0 -0.0 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="15 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+									<voxbox pos="-0.01913 0.19989 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.23787 0.25489 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.218 0.196 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="3 4 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.40574 0.36537 -0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="1 3 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								</group>
+							</vox>
+							<vox pos="-0.0 -0.1 0.3" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: pylon 1">
+								<group pos="-0.8 -0.2 -0.1">
+									<voxbox pos="-0.26511 0.10636 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="9 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.29991 0.00039 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.54587 0.30789 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="7 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.0 -0.0 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="15 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+									<voxbox pos="-0.01913 0.19989 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.23787 0.25489 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.218 0.196 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="3 4 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.40574 0.36537 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="1 5 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								</group>
+							</vox>
+							<vox pos="0.0 -0.1 -5.7" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: pylon 1">
+								<group pos="-0.8 -0.2 -0.1">
+									<voxbox pos="-0.26511 0.10636 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="9 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.29991 0.00039 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.54587 0.30789 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="7 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.0 -0.0 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="15 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+									<voxbox pos="-0.01913 0.19989 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.23787 0.25489 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.218 0.196 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="3 4 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.40574 0.36537 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="1 5 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								</group>
+							</vox>
+							<vox pos="0.0 0.2 -4.98" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: pylon 1">
+								<group pos="-0.8 -0.2 -0.1">
+									<voxbox pos="-0.26511 0.10636 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="9 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.29991 0.00039 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.54587 0.30789 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="7 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="-0.0 -0.0 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="15 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+									<voxbox pos="-0.01913 0.19989 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="3 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="0.23787 0.25489 0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.218 0.196 0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="3 4 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+									<voxbox pos="1.40574 0.36537 -0.0" rot="0.0 0.0 20.0" texture="1 0.5" size="1 3 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								</group>
+							</vox>
+						</group>
+						<vox pos="10.0 0.8 2.2" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="cannoncase">
+							<joint tags="yaw_gun" pos="0.0 0.4 -0.05" rot="-90" type="hinge" size="0.15" rotstrength="1" limits="-60 60"/>
+							<body tags="nocull gun" pos="1.79 0.1 -0.05" dynamic="true">
+								<group name="gun" pos="-1.69 -0.1 -0.05">
+									<vox pos="-0.1 0.0 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun0">
+										<body name="gun " tags="gun nocull" pos="1.7 0.1 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
+											<vox tags="gun" pos="-0.0 -0.1 0.8" rot="0.0 90.0 0.0" texture="1 0.5" density="0" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun3">
+												<vox pos="-0.4 0.08 0.08" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun5"/>
+												<vox pos="-0.4 0.08 0.02" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun5"/>
+												<vox pos="-0.4 0.02 0.02" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun5"/>
+												<vox pos="-0.4 0.02 0.08" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="gun5"/>
+											</vox>
+											<location/>
+										</body>
+										<group pos="1.6 0.0 -0.05"/>
+									</vox>
+									<joint tags="gun" pos="0.1 0.1 -0.1" type="hinge"/>
+									<joint tags="barrelRot" pos="0.2 0.1 0.05" rot="0 90" type="hinge" size="0.1"/>
+								</group>
+							</body>
+						</vox>
+						<group name="casing" pos="2.1 1.17 4.37" rot="0.0 0.0 0.0">
+							<vox tags="casingCollide" pos="0.1 0.0 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing">
+								<vox pos="0.6 0.2 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="collide"/>
+							</vox>
+							<group pos="0.3 -0.0 0.1">
+								<vox pos="0.0 0.1 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.1 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.3 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.3 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.2 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.2 0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.2 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.4 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.4 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.4 0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.5 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+							</group>
+						</group>
+						<group name="casing" pos="2.1 1.17 -0.18" rot="0.0 0.0 0.0">
+							<vox tags="rocket" pos="0.1 0.0 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing">
+								<vox pos="0.6 0.2 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="collide"/>
+								<location tags="rocket" pos="1.8 0.45 -0.05" rot="0.0 -90.0 0.0"/>
+								<location tags="rocket2" pos="1.8 0.45 4.5" rot="0.0 -90.0 0.0"/>
+							</vox>
+							<group pos="0.3 -0.0 0.1">
+								<vox pos="0.0 0.1 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.1 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.3 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.3 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.2 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.2 0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.2 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.4 -0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.4 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.4 0.2" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+								<vox pos="-0.0 0.5 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile"/>
+							</group>
+						</group>
+						<body name="inside" tags="inside" pos="2.1 0.97 5.1" rot="0.0 0.0 0.0" dynamic="true"/>
+						<group pos="2.2 1.0 2.1" rot="0.0 0.0 0.0">
+							<vox pos="-0.1 0.0 4.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing2">
+								<group pos="0.1 0.05 -0.1">
+									<vox pos="-0.5 -0.0 0.3" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="0.3 -0.0 0.3" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="0.3 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="-0.5 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+								</group>
+							</vox>
+							<vox pos="-0.1 0.0 -3.9" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing2">
+								<group pos="0.1 0.05 -0.1">
+									<vox pos="-0.5 -0.0 0.3" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="0.3 -0.0 0.3" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="0.3 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+									<vox pos="-0.5 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missilecasing3"/>
+								</group>
+							</vox>
+						</group>
+						<group pos="2.1 1.0 6.4" rot="0.0 0.0 0.0">
+							<vox pos="0.0 0.15 -0.05" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile3"/>
+							<vox pos="-0.0 0.15 -0.45" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile3"/>
+							<vox pos="-0.0 0.15 -8.05" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile3"/>
+							<vox pos="-0.0 0.15 -8.45" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="missile3"/>
+						</group>
+					</group>
+				</vox>
+				<trigger name="internal" tags="internal" pos="0.05 0.61832 -3.23955" rot="0.0 180.0 0.0" type="box" size="1 1 1"/>
+				<trigger name="internal" tags="internal" pos="0.05 0.818 0.76" rot="0.0 180.0 0.0" type="box" size="1.8 1.7 6"/>
+				<location name="first person" tags="Pilot_View_1p" pos="0.05 2.2685 -1.27196" rot="-2.0 180.0 0.0"/>
+				<location name="third person" tags="Pilot_View_3p" pos="0.1 2.99006 0.82271" rot="-2.0 180.0 0.0"/>
+				<location name="smoke" tags="smoke" pos="1.0 2.90942 1.64225" rot="-2.0 -130.0 0.1"/>
+				<location name="smoke" tags="smoke" pos="-0.9 2.90942 1.64225" rot="-2.0 130.0 -0.1"/>
+				<script pos="0.1 0.28918 -1.55627" rot="2.0 180.0 0.0" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/scripts/fakegore.lua">
+					<vox tags="bodypart TORSO ragdollname=Soldier3Sitting2 PilotTorso" pos="0.0 0.9 -0.1" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart PilotHead" pos="0.0 0.7 0.1" rot="0.0 0.0 0.0" density="8" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="head_3">
+							<voxbox tags="unbreakable  PilotHead" pos="0.1 0.1 0.0" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable  PilotHead" pos="-0.1 0.1 0.0" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart  PilotHead" pos="0.0 0.0 0.0" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="jaw"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R"/>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L"/>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 -0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L"/>
+						</vox>
+					</vox>
+				</script>
+				<script pos="0.1 -0.2075 -2.92496" rot="2.0 180.0 0.0" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/scripts/fakegore.lua">
+					<vox tags="bodypart TORSO ragdollname=Soldier3Sitting2" pos="0.0 0.9 -0.1" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="body">
+						<vox tags="bodypart" pos="0.0 0.7 0.1" rot="0.0 0.0 0.0" density="8" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="head_3">
+							<voxbox tags="unbreakable  PilotHead" pos="0.1 0.1 0.0" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<voxbox tags="unbreakable  PilotHead" pos="-0.1 0.1 0.0" collide="true" prop="false" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0"/>
+							<vox tags="bodypart  PilotHead" pos="0.0 0.0 0.0" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="jaw"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.1 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_R">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="2" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_R"/>
+						</vox>
+						<vox tags="bodypart" pos="0.2 0.1 0.4" rot="-90.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Leg_L">
+							<vox tags="bodypart" pos="0.0 0.0 -0.5" rot="90.0 0.0 0.0" density="3.5" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="foot_L"/>
+						</vox>
+						<vox tags="bodypart" pos="0.4 0.3 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L"/>
+						</vox>
+						<vox tags="bodypart" pos="-0.3 0.3 -0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="Uarm_L">
+							<vox tags="bodypart" pos="0.0 -0.4 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/Gore Ragdolls 2/SnakeyWakey's ragdoll pack/vox/gore/soldier3.vox" object="larm_L"/>
+						</vox>
+					</vox>
+				</script>
+				<group name="lighting" pos="1.0 1.918 9.26" rot="0.0 0.0 0.0" prop0="tags=nocull">
+					<group pos="3.1 -0.8 -5.3">
+						<vox name="nav" pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav green" color="0.07 0.5 0.0">
+							<light tags="light=navigation" pos="0.05 0.05 -0.05" color="0.07 0.5 0.0" scale="5" glare="0.1"/>
+						</vox>
+						<vox name="nav" pos="-8.1 0.1 0.05" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav red" color="0.45 0.01 0.0">
+							<light tags="light=navigation" pos="0.05 0.05 -0.05" color="0.45 0.01 0.0" scale="5" glare="0.1"/>
+						</vox>
+						<vox name="nav" pos="-4.1 1.43 10.55" rot="35 0.0 " texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white" color="0.73 0.73 0.73">
+							<light tags="light=navigation" pos="0.05 0.05 -0.05" color="0.73 0.73 0.73" scale="1" glare="0.1"/>
+						</vox>
+						<group pos="-4.0 1.2 -2.9">
+							<vox name="interior" pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white" color="0.73 0.73 0.73">
+								<light tags="light=interior" pos="0.05 0.0 -0.05" rot="90" type="cone" color="0.73 0.73 0.73" scale="0.7" glare="0.1"/>
+							</vox>
+							<vox name="interior" pos="-0.1 0.1 0.75" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white" color="0.73 0.73 0.73">
+								<light tags="light=interior" pos="0.05 0.0 -0.05" rot="90" type="cone" color="0.73 0.73 0.73" scale="0.7" glare="0.1"/>
+							</vox>
+							<vox name="interior" pos="-0.1 0.1 1.35" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white" color="0.73 0.73 0.73">
+								<light tags="light=interior" pos="0.05 0.0 -0.05" rot="90" type="cone" color="0.73 0.73 0.73" scale="0.7" glare="0.1"/>
+							</vox>
+							<vox name="interior" pos="-0.1 0.1 1.85" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white" color="0.73 0.73 0.73">
+								<light tags="light=interior" pos="0.05 0.0 -0.05" rot="90" type="cone" color="0.73 0.73 0.73" scale="0.7" glare="0.1"/>
+							</vox>
+						</group>
+					</group>
+					<group name="landing">
+						<voxbox pos="-1.0 -2.1 -12.65" rot="90.0 0.0 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav white">
+							<light tags="light=landing" pos="0.1 0.0 0.1" rot="90.0 0.0 0.0" type="cone" scale="70" glare="0.2"/>
+						</voxbox>
+					</group>
+					<vox pos="-0.9 1.2 -3.05" rot="0.0 90.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: infrared suppression unit 1">
+						<vox pos="-0.2 0.4 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: infrared suppression unit 2">
+							<vox pos="0.05 0.25 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: infrared suppression unit 3"/>
+						</vox>
+					</vox>
+					<group pos="-0.9 -2.29968 -12.44951" rot="0.0 90.0 0.0">
+						<vox pos="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="landing0">
+							<vox pos="-0.05 0.2 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="landing1"/>
+						</vox>
+					</group>
+				</group>
+				<group name="Extras" pos="0.1 0.619 5.41" rot="0.0 90.0 0.0" prop0="tags=nocull">
+					<group name="exhaust" pos="3.85 1.9 -1.0">
+						<vox pos="-0.116 0.067 0.1" rot="0.0 10.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine exhaust left"/>
+						<vox pos="-0.099 0.067 1.802" rot="0 -10" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine exhaust right"/>
+					</group>
+					<group name="cover" pos="6.7 1.9 0.0">
+						<vox pos="-0.1 0.0 -0.4" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine air intake vortex 2">
+							<vox pos="-0.1 0.46 0.0" rot="0.0 0.0 -35.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="-0.1 0.102 0.107" rot="115.3 31.2 16.7" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="-0.1 0.188 -0.257" rot="-115.3 -31.2 16.7" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="0.05 0.1 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine air intake vortex 1"/>
+						</vox>
+						<vox pos="-0.1 0.0 0.4" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine air intake vortex 2">
+							<vox pos="-0.1 0.46 0.0" rot="0.0 0.0 -35.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="-0.1 0.102 0.107" rot="115.3 31.2 16.7" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="-0.1 0.188 -0.257" rot="-115.3 -31.2 16.7" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							<vox pos="0.05 0.1 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: engine air intake vortex 1"/>
+						</vox>
+					</group>
+					<voxbox pos="5.9028 0.014 -0.302" rot="0.0 0.0 30.0" texture="1 0.5" size="4 1 6" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+					<group name="turbine" pos="4.4 2.9 -0.1">
+						<body pos="-0.1 -0.2 0.1" dynamic="true">
+							<vox pos="0.1 0.2 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 1">
+								<group pos="0.1 -0.2 0.0">
+									<vox pos="-0.05 0.2 -0.16" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+									<vox pos="-0.05 0.32 -0.148" rot="60.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+									<vox pos="-0.05 0.37 -0.038" rot="120.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+									<vox pos="-0.05 0.13 -0.062" rot="-60.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+									<vox pos="-0.05 0.18 0.048" rot="-120.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+									<vox pos="-0.05 0.3 0.06" rot="-180.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: turbine 2"/>
+								</group>
+							</vox>
+							<joint tags="turbineJoint" pos="-0.2 0.25 -0.05" rot="0.0 90.0 0.0" type="hinge" size="0.15"/>
+						</body>
+					</group>
+					<group name="imterior" pos="4.7 0.3 0.2">
+						<group pos="2.3 0.2 0.8">
+							<vox pos="-0.1 -0.15 0.15" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: step"/>
+						</group>
+						<group pos="-2.5 0.8 -0.6">
+							<group pos="-0.05 -0.0 -0.1">
+								<voxbox pos="-0.1 0.0 -0.3" rot="0.0 0.0 0.0" texture="1 0.5" size="2 5 6" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+									<voxbox pos="-0.0 0.1 0.6" rot="0.0 0.0 0.0" texture="1 0.5" size="1 4 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									<group pos="0.2 0.0 0.5" rot="0.0 0.0 0.0">
+										<voxbox pos="-0.08 0.05 -0.48" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.08 0.05 -0.02" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.08 0.05 -0.15" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.08 0.05 -0.35" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: gray  frame metal"/>
+										<voxbox pos="-0.08 0.35 -0.35" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+									</group>
+								</voxbox>
+							</group>
+						</group>
+					</group>
+					<group name="radars and sensors" pos="8.3 -1.1 0.0">
+						<group name="weapon sensors" pos="0.3 0.0 -0.7" rot="0.0 0.0 0.0" prop0="density=1.1">
+							<group name="Antenna Pod" pos="0.1 0.1 0.05">
+								<vox pos="-0.2 -0.03 -0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar0">
+									<vox pos="0.4 0.1 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar1"/>
+								</vox>
+								<vox pos="-0.25 0.3 0.0" rot="30" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar2"/>
+							</group>
+							<group name="Raduga-F Optical Guidance System" pos="-0.1 0.5 1.3">
+								<vox pos="-0.2 -0.2 0.1" rot=" 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar4"/>
+								<vox pos="-0.2 -0.45 0.0" rot=" 0 0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar5">
+									<group pos="0.5 0.1 0.0">
+										<vox pos="-0.05 0.0 -0.05" rot="0 25" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar9"/>
+										<vox pos="-0.05 0.0 0.05" rot="0 -25" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/weapons.vox" object="radar9"/>
+									</group>
+								</vox>
+							</group>
+						</group>
+						<group name="aircraft sensors and radars" pos="-12.55 3.4 -0.1" rot="0.0 -90.0 0.0" prop0="tags=nocull">
+							<group name="ILS aerial" pos="0.0 -2.17 -3.65" rot="-180.0 -90.0 30.0">
+								<voxbox pos="0.092 0.318 0.0" rot="110.0 -90.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox tags="altitude nocull" pos="0.092 0.318 0.0" rot="100.0 -90.0 0.0" texture="1 0.5" size="1 2 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+							<group name="Air data sensor boom" pos="0.5 -1.6 -14.55" rot="0.0 90.0 0.0">
+								<voxbox tags="airspeed nocull" pos="-1.2 0.2 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="23 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal">
+									<group name="Low speed precision airflow sensor" pos="1.9 -0.0 0.0" rot="0.0 0.0 0.0">
+										<voxbox pos="-0.0766 0.0 -0.11428" rot="-90.0 -40.0 0.0" texture="1 0.5" size="3 1 1"/>
+										<voxbox pos="-0.0766 0.21428 0.0" rot="0.0 0.0 -40.0" texture="1 0.5" size="3 1 1"/>
+										<voxbox pos="-0.0766 0.1 0.21428" rot="90.0 40.0 0.0" texture="1 0.5" size="3 1 1"/>
+										<voxbox pos="-0.0766 -0.11428 0.1" rot="180.0 0.0 40.0" texture="1 0.5" size="3 1 1"/>
+									</group>
+								</voxbox>
+							</group>
+							<group name="odd-rods IFF" pos="0.3 -1.4 -13.49999" rot="0.0 0.0 0.0">
+								<voxbox pos="0.1 0.1 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+								<voxbox pos="0.1 0.1 -0.12" rot="0.0 0.0 0.0" texture="1 0.5" size="1 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+								<voxbox pos="0.1 0.1 -0.24" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: black metal"/>
+							</group>
+						</group>
+					</group>
+				</group>
+				<group name="tail" pos="-0.0 2.31946 9.86022" rot="0.0 0.0 0.0" prop0="tags=nocull" prop1="density=0.67">
+					<vox tags="tail" pos="0.1 -1.2 1.75" rot="0.0 90.0 0.0" texture="1 0.5" strength="2" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: tail segment">
+						<group name="tailguard" pos="-2.3 0.25 -0.1" rot="0.0 0.0 0.0">
+							<group pos="0.0 0.005 0.0">
+								<voxbox pos="0.01264 0.052 0.00152" rot="0.0 10.0 -45.0" texture="1 0.5" size="1 14 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.013 0.052 0.002" rot="0.0 0.0 -10.0" texture="1 0.5" size="1 10 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.114 -0.024 0.002" rot="0.0 0.0 80.0" texture="1 0.5" size="1 3 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.04736 0.052 0.00152" rot="0.0 -10.0 -45.0" texture="1 0.5" size="1 14 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+						</group>
+						<group pos="-2.5 1.699 0.0" rot="0.0 0.0 0.0">
+							<voxbox pos="-1.20197 2.36433 -0.1" rot="0.0 0.0 -43.0" texture="1 0.5" size="33 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="-2.13797 2.22033 -0.1" rot="0.0 0.0 -55.0" texture="1 0.5" size="32 3 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="-1.87422 2.19376 -0.1" rot="0.0 0.0 20.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="-1.64422 2.28476 -0.1" rot="0.0 0.0 5.0" texture="1 0.5" size="3 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="-1.36422 2.20976 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="3 3 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<group pos="-1.2 2.3 -0.1"/>
+							<vox pos="-0.9 0.9 0.01" rot="-50.0 -90.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: identification tail"/>
+						</group>
+						<group name="fin" pos="3.9 1.93 -0.1" rot="0.0 0.0 0.0">
+							<voxbox pos="0.092 0.318 0.0" rot="100.0 -90.0 0.0" texture="1 0.5" size="1 2 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="0.092 0.318 0.0" rot="110.0 -90.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+						</group>
+						<group name="sensors" pos="1.8 1.3 0.0">
+							<group name="HF aerial radio cable" pos="-0.1 0.301 -1.2" rot="0.0 0.0 0.0">
+								<voxbox pos="3.0 0.35977 0.77183" rot="-90.0 90.0 70.0" texture="1 0.5" size="3 1 1">
+									<rope pos="0.3 0.05 0.05" rot="0.0 0.0 -90.0" slack="-0.9">
+										<location pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+										<location pos="-5.8 -0.065 -1.6" rot="0.0 0.0 0.0"/>
+									</rope>
+								</voxbox>
+								<voxbox pos="2.9 0.3342 1.40603" rot="20.0 0.0 0.0" texture="1 0.5" size="1 4 1">
+									<rope pos="0.05 0.4 0.05" rot="0.0 0.0 0.0" slack="-0.9">
+										<location pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+										<location pos="-5.8 -0.1 1.6" rot="0.0 0.0 0.0"/>
+									</rope>
+								</voxbox>
+							</group>
+							<group name="UHF aerial mast" pos="0.95 0.4 0.1" rot="0.0 -90.0 0.0">
+								<voxbox pos="-0.084 0.91 -0.148" rot="12.0 0.0 0.0" texture="1 0.5" size="1 1 3" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.084 1.0 -0.02" rot="110.0 0.0 0.0" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.084 1.0 -0.022" rot="103.0 0.0 0.0" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+							<group name="VHF aerial" pos="0.15 0.5 -0.1" rot="0.0 -90.0 0.0">
+								<voxbox pos="-0.134 0.86 0.17" rot="120.1 -2.1 7.8" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.13398 0.86035 0.16803" rot="113.1 -2.1 7.8" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+						</group>
+						<group pos="1.59951 1.99932 0.0" rot="0.0 0.0 0.0">
+							<voxbox pos="-0.1 -0.05 -0.15" rot="0.0 0.0 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							<voxbox pos="-0.1 0.05 -0.15" rot="0.0 0.0 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav red">
+								<voxbox pos="0.05 0.03 0.05" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="light:nav red">
+									<light tags="light=spin" pos="0.05049 0.04968 0.05" rot="0.0 -90.0 0.0" color="1.0 0.0 0.0" glare="0.1"/>
+								</voxbox>
+							</voxbox>
+						</group>
+					</vox>
+				</group>
+				<group name="Main Engines" pos="-2.1 -0.781 6.10999" rot="0.0 90.0 0.0" prop0="tags=nocull">
+					<group name="rotors" pos="1.1 2.9 1.3" rot="0.0 0.0 0.0">
+						<group name="Main Rotor (MROT)" pos="4.2 2.2 -2.9" rot="0 0 -3">
+							<body tags="rotor" pos="-1.7588 -0.1 3.72215" dynamic="true">
+								<vox tags="rotor=main tags=nocull" pos="-0.0412 -0.7 0.07785" rot="0.0 0.0 0.0" texture="8 0.4" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor">
+									<vox name="RPM sensor" pos="0.0 0.263 -0.24" rot="90.0 0.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+									<joint tags="MainRotor" pos="0.05 -0.0 -0.05" rot="90.0 0.0 0.0" type="hinge" size="0.2"/>
+									<group pos="-0.0 0.6 -5.1" rot="0.0 0.0 0.0">
+										<vox pos="0.0 0.55 5.1" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="top">
+											<vox pos="0.0 0.15 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="top1"/>
+										</vox>
+										<group pos="-2.9 -0.2 9.3">
+											<vox pos="-0.15 0.5 0.358" rot="0.0 144.0 10.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main">
+												<group pos="0.1 0.0 0.0">
+													<vox pos="-0.07 0.0 -4.577" rot="0 15" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main12" color="1.0 1.0 1.0"/>
+													<vox pos="-0.16659 0.0 -4.55112" rot="0.0 15.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main15"/>
+													<vox pos="-0.2173 0.0 -4.50854" rot="0.0 35.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1">
+														<vox pos="-0.054 -0.0 0.0" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+														<vox pos="-0.054 0.0 0.05" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+													</vox>
+													<vox pos="-0.1634 0.0 4.41" rot="0 30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.1 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main3"/>
+													<vox pos="0.237 0.0 4.37" rot="0 10" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.29 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main6"/>
+												</group>
+												<group pos="0.2 -0.1 4.6">
+													<vox pos="0.0 0.05 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+													<vox pos="-0.05 0.0 0.6" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main5"/>
+												</group>
+											</vox>
+											<group pos="2.69276 -0.0 -4.06607" rot="0.0 144.0 0.0">
+												<vox pos="-0.05 0.1 -0.022" rot="-5" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor3"/>
+												<vox pos="-0.05 0.063 0.01" rot="-30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+											</group>
+										</group>
+										<group pos="-4.9 -0.2 3.6">
+											<vox pos="-0.39 0.5 -0.075" rot="0.0 72.0 10.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main">
+												<group pos="0.1 0.0 0.0">
+													<vox pos="-0.07 0.0 -4.577" rot="0 15" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main12" color="1.0 1.0 1.0"/>
+													<vox pos="-0.16659 0.0 -4.55112" rot="0.0 15.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main15"/>
+													<vox pos="-0.2173 0.0 -4.50854" rot="0.0 35.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1">
+														<vox pos="-0.054 -0.0 0.0" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+														<vox pos="-0.054 0.0 0.05" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+													</vox>
+													<vox pos="-0.1634 0.0 4.41" rot="0 30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.1 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main3"/>
+													<vox pos="0.237 0.0 4.37" rot="0 10" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.29 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main6"/>
+												</group>
+												<group pos="0.2 -0.1 4.6">
+													<vox pos="0.0 0.05 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+													<vox pos="-0.05 0.0 0.6" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main5"/>
+												</group>
+											</vox>
+											<group pos="4.69558 -0.0 1.26219" rot="0.0 72.0 0.0">
+												<vox pos="-0.05 0.1 -0.022" rot="-5" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor3"/>
+												<vox pos="-0.05 0.063 0.01" rot="-30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+											</group>
+										</group>
+										<group pos="-0.1 -0.2 -0.1">
+											<vox pos="-0.05 0.5 -0.4" rot="0.0 0.0 10.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main">
+												<group pos="0.1 0.0 0.0">
+													<vox pos="-0.07 0.0 -4.577" rot="0 15" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main12" color="1.0 1.0 1.0"/>
+													<vox pos="-0.16659 0.0 -4.55112" rot="0.0 15.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main15"/>
+													<vox pos="-0.2173 0.0 -4.50854" rot="0.0 35.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1">
+														<vox pos="-0.054 -0.0 0.0" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+														<vox pos="-0.054 0.0 0.05" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+													</vox>
+													<vox pos="-0.1634 0.0 4.41" rot="0 30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.1 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main3"/>
+													<vox pos="0.237 0.0 4.37" rot="0 10" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.29 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main6"/>
+												</group>
+												<group pos="0.2 -0.1 4.6">
+													<vox pos="0.0 0.05 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+													<vox pos="-0.05 0.0 0.6" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main5"/>
+												</group>
+											</vox>
+											<group pos="0.25 -0.0 4.85" rot="0.0 0.0 0.0">
+												<vox pos="-0.05 0.1 -0.022" rot="-5" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor3"/>
+												<vox pos="-0.05 0.063 0.01" rot="-30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+											</group>
+										</group>
+										<group pos="4.9 -0.2 3.3">
+											<vox pos="0.367 0.5 -0.155" rot="0.0 -72.0 10.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main">
+												<group pos="0.1 0.0 0.0">
+													<vox pos="-0.07 0.0 -4.577" rot="0 15" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main12" color="1.0 1.0 1.0"/>
+													<vox pos="-0.16659 0.0 -4.55112" rot="0.0 15.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main15"/>
+													<vox pos="-0.2173 0.0 -4.50854" rot="0.0 35.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1">
+														<vox pos="-0.054 -0.0 0.0" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+														<vox pos="-0.054 0.0 0.05" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+													</vox>
+													<vox pos="-0.1634 0.0 4.41" rot="0 30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.1 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main3"/>
+													<vox pos="0.237 0.0 4.37" rot="0 10" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.29 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main6"/>
+												</group>
+												<group pos="0.2 -0.1 4.6">
+													<vox pos="0.0 0.05 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+													<vox pos="-0.05 0.0 0.6" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main5"/>
+												</group>
+											</vox>
+											<group pos="-4.53378 -0.0 1.7524" rot="0.0 -72.0 0.0">
+												<vox pos="-0.05 0.1 -0.022" rot="-5" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor3"/>
+												<vox pos="-0.05 0.063 0.01" rot="-30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+											</group>
+										</group>
+										<group pos="3.2 -0.2 9.1">
+											<vox pos="0.274 0.5 0.322" rot="0.0 -144.0 10.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main">
+												<group pos="0.1 0.0 0.0">
+													<vox pos="-0.07 0.0 -4.577" rot="0 15" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main12" color="1.0 1.0 1.0"/>
+													<vox pos="-0.16659 0.0 -4.55112" rot="0.0 15.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main15"/>
+													<vox pos="-0.2173 0.0 -4.50854" rot="0.0 35.0 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1">
+														<vox pos="-0.054 -0.0 0.0" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+														<vox pos="-0.054 0.0 0.05" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main1"/>
+													</vox>
+													<vox pos="-0.1634 0.0 4.41" rot="0 30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.1 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main3"/>
+													<vox pos="0.237 0.0 4.37" rot="0 10" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main2"/>
+													<vox pos="0.29 0.0 4.72" rot="0 0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main6"/>
+												</group>
+												<group pos="0.2 -0.1 4.6">
+													<vox pos="0.0 0.05 0.0" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+													<vox pos="-0.05 0.0 0.6" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main5"/>
+												</group>
+											</vox>
+											<group pos="-3.05457 -0.0 -3.74852" rot="0.0 -144.0 0.0">
+												<vox pos="-0.05 0.1 -0.022" rot="-5" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor3"/>
+												<vox pos="-0.05 0.063 0.01" rot="-30" texture="8 0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="mainrotor4"/>
+											</group>
+										</group>
+									</group>
+								</vox>
+							</body>
+						</group>
+						<group name="Anti Torque (ATRQ)" pos="-10.3 1.1 0.3">
+							<voxbox name="Rear Rotor Shaft" tags="RearShaft" pos="1.1 -0.4 0.5" rot="0.0 0.0 0.0" texture="1 0.5" size="109 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4">
+								<voxbox pos="10.8 0.1 -0.0" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+								<voxbox tags="RearShaft" pos="0.0 0.0 0.0" rot="-180.0 -180.0 60.0" texture="1 0.5" size="23 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="main4"/>
+							</voxbox>
+							<body name="side_rotor" tags="s_rotor" pos="0.0 0.0 -0.071" dynamic="true">
+								<vox pos="0.0 1.3 0.07" texture="1 0.5" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="rotor">
+									<group pos="0.1 0.1 -0.3">
+										<vox pos="0.04 0.3 0.117" rot="0.0 -10.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back">
+											<vox pos="-0.15 0.0 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back0">
+												<vox pos="0.0 -0.2 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back1"/>
+											</vox>
+											<group pos="0.15 1.7 -0.1" rot="0 0 45">
+												<vox pos="0.006 0.034 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+												<vox pos="0.006 0.078 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+											</group>
+											<vox pos="-0.15472 -0.3 -0.07122" rot="0.0 10.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back2"/>
+										</vox>
+									</group>
+									<group pos="-1.0 -1.2 -0.3">
+										<vox pos="0.745 1.228 0.117" rot="163.3 -160.60001 58.5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back">
+											<vox pos="-0.15 0.0 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back0">
+												<vox pos="0.0 -0.2 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back1"/>
+											</vox>
+											<group pos="0.15 1.7 -0.1" rot="0 0 45">
+												<vox pos="0.006 0.034 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+												<vox pos="0.006 0.078 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+											</group>
+											<vox pos="-0.155 -0.30009 -0.07111" rot="0.0 10.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back2"/>
+										</vox>
+									</group>
+									<group pos="1.1 -1.3 -0.3">
+										<vox pos="-0.835 1.172 0.117" rot="-163.3 -160.60001 -58.5" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back">
+											<vox pos="-0.15 0.0 -0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back0">
+												<vox pos="0.0 -0.2 0.05" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back1"/>
+											</vox>
+											<group pos="0.15 1.7 -0.1" rot="0 0 45">
+												<vox pos="0.006 0.034 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+												<vox pos="0.006 0.078 0.1" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back3"/>
+											</group>
+											<vox pos="-0.15445 -0.3 -0.07086" rot="0.0 10.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/propellers.vox" object="back2"/>
+										</vox>
+									</group>
+									<joint tags="s_rotor" pos="0.05 0.15 0.403" rot="0.0 0.0 0.0" type="hinge"/>
+								</vox>
+							</body>
+						</group>
+					</group>
+					<vox tags="engine nocull" pos="4.4 3.3 2.2" texture="8 0.7" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: Isotov TV3-117 Turboshaft engine complex">
+						<vox tags="O_LINE nocull " pos="0.4 0.0 -0.3" rot="0.0 0.0 0.0" texture="8 0.7" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: oil lines"/>
+						<vox tags="F_LINE nocull " pos="-1.3 -1.3 0.0" rot="0.0 0.0 0.0" texture="8 0.7" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="engine: fuel lines"/>
+						<vox pos="-2.5 -1.4 0.0" rot="0.0 0.0 0.0" texture="8 0.7" strength="2" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="fuel: main fuel tank"/>
+						<vox tags="explosive=1.5" pos="-2.4 -1.3 0.0" rot="0.0 0.0 0.0" texture="8 0.7" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="fuel: fuel content"/>
+					</vox>
+					<vox tags="engine=left" pos="6.3 3.2 1.6" rot="0.0 0.0 0.0" texture="1 0.5" strength="5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: left engine cowling"/>
+					<vox tags="engine=right" pos="6.3 3.2 2.7" rot="0.0 0.0 0.0" texture="1 0.5" strength="5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: right engine cowling"/>
+				</group>
+				<group name="flaps" pos="-2.1 -0.781 6.10999" rot="0.0 90.0 0.0" prop0="tags=nocull" prop1="density=0.95">
+					<group name="right" pos="-7.2 3.4 3.29">
+						<vox pos="0.0 0.1 0.03" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: flap right upper">
+							<group pos="0.1 0.0 0.0">
+								<voxbox pos="0.32913 0.0 0.73001" rot="0.0 44.8 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.59739 0.0 -0.69952" rot="0.0 10.0 0.0" texture="1 0.5" size="2 1 13" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.37895 0.0 0.55967" rot="0.0 27.4 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.28795 -0.0 0.73667" rot="0.0 71.0 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.35913 -0.0 0.70001" rot="0.0 44.8 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+							<vox pos="0.1 -0.05 0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: flap right lower"/>
+						</vox>
+					</group>
+					<group name="left" pos="-7.2 3.4 1.05">
+						<vox pos="0.0 0.1 0.03" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: flap left upper">
+							<group pos="0.0 0.1 -0.1" rot="0 180 180">
+								<voxbox pos="-0.49739 -0.0 -0.70048" rot="0.0 10.0 0.0" texture="1 0.5" size="2 1 13" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.27895 0.0 0.55871" rot="0.0 27.4 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="-0.18795 0.0 0.73571" rot="0.0 71.0 0.0" texture="1 0.5" size="2 1 2" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.45913 0.0 0.69905" rot="0.0 44.8 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+								<voxbox pos="0.42913 0.0 0.72905" rot="0.0 44.8 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: outer frame metal"/>
+							</group>
+							<vox pos="0.1 -0.05 0.0" rot="0.0 0.0 0.0" texture="1 0.5" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: flap left lower"/>
+						</vox>
+					</group>
+				</group>
+			</body>
+			<group name="doors" pos="-1.3 0.06074 0.95904" rot="0.0 90.0 2.0">
+				<group name="pilot" pos="7.6 2.0 2.9" rot="0.0 0.0 0.0">
+					<vox tags="pilot" pos="0.0 0.0 0.1" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: starboard side entry door pilot">
+						<joint tags="pilot" pos="-0.4 0.8 -0.1" rot="65.0 0.0 0.0" type="hinge" size="0.15" limits="0 90"/>
+					</vox>
+				</group>
+				<group name="gunner" pos="9.4 2.0 1.4">
+					<vox tags="pilot" pos="0.0 0.0 0.6" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body:  entry door gunner">
+						<joint tags="pilot" pos="-0.1 0.6 0.4" rot="15.0 90.0 0.0" type="hinge" size="0.15" limits="0 70"/>
+					</vox>
+				</group>
+				<group name="side doors" pos="5.0 1.3 1.4" rot="0.0 0.0 0.0">
+					<script pos="-0.1 0.1 -0.4" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/script/doors.lua" param0="type=interact">
+						<joint tags="upJoint" pos="0.0 1.7 0.05" rot="0.0 90. 90.0" type="hinge" size="0.15" limits="0 90"/>
+						<joint tags="downJoint" pos="0.0 0.15 0.1" rot="0.0 -90.0 90." type="hinge" size="0.15" limits="0 150"/>
+						<vox tags="shape interact=Door" pos="0.0 0.9 0.1" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: left door top">
+							<group pos="0.78 0.3 0.3">
+								<voxbox tags="airspeed nocull" pos="-0.1 0.28235 -0.26178" rot="-15.0 0.0 0.0" texture="1 0.5" size="1 1 6" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								<voxbox tags="airspeed nocull" pos="-0.1 -0.14164 -0.23363" rot="-46.4 0.0 0.0" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								<rope pos="-0.8 -1.2 -0.4" slack="-1">
+									<location pos="0.75 1.65 0.7" rot="0.0 0.0 0.0"/>
+									<location pos="0.75 0.65 0.2" rot="0.0 0.0 0.0"/>
+								</rope>
+							</group>
+							<group pos="-0.0 0.15 0.27" rot="179.60001 -180.0 0.0">
+								<voxbox tags="airspeed nocull" pos="-0.7 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="13 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+									<voxbox tags="airspeed nocull" pos="0.0 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									<voxbox tags="airspeed nocull" pos="1.2 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								</voxbox>
+							</group>
+						</vox>
+						<vox pos="0.0 0.2 0.1" rot="0.0 0.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: left door bottom">
+							<vox pos="0.1 0.6 0.0" rot="0.0 180.0 0.0" texture="1 0.5" collide="false" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="collision"/>
+							<voxbox tags="airspeed nocull" pos="-0.6 0.46 0.09" rot="0.0 0.0 0.0" texture="1 0.5" size="13 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+								<group pos="0.7 -0.0 0.12" rot="0.0 0.0 0.0">
+									<voxbox tags="airspeed nocull" pos="-0.7 -0.0 -0.05" rot="0.0 0.0 0.0" texture="1 0.5" size="13 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.0 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+										<voxbox tags="airspeed nocull" pos="1.2 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+									<voxbox tags="airspeed nocull" pos="-0.67 0.1 -0.05" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.081 0.0 0.002" rot="0.0 10.0 0.0" texture="1 0.5" size="4 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+									<voxbox tags="airspeed nocull" pos="0.57 0.2 -0.05" rot="-180.0 -180.0 -0.4" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.081 0.0 0.002" rot="0.0 10.0 0.0" texture="1 0.5" size="4 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+								</group>
+							</voxbox>
+						</vox>
+					</script>
+					<script pos="0.0 0.1 1.9" rot="0 180" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/script/doors.lua" param0="type=interact">
+						<joint tags="upJoint" pos="0.0 1.7 0.05" rot="0.0 90. 90.0" type="hinge" size="0.15" limits="0 90"/>
+						<joint tags="downJoint" pos="0.0 0.15 0.1" rot="0.0 -90.0 90." type="hinge" size="0.15" limits="0 150"/>
+						<vox tags="shape interact=Door" pos="0.1 0.9 0.1" rot="0.0 180.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: right door top">
+							<group pos="-0.0 0.05 -0.27" rot="0.0 -180.0 0.0">
+								<voxbox tags="airspeed nocull" pos="-0.7 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="13 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+									<voxbox tags="airspeed nocull" pos="0.0 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									<voxbox tags="airspeed nocull" pos="1.2 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								</voxbox>
+							</group>
+							<group pos="0.678 0.3 -0.298" rot="0.0 179.60001 0.0">
+								<voxbox tags="airspeed nocull" pos="-0.1 0.28235 -0.26178" rot="-15.0 0.0 0.0" texture="1 0.5" size="1 1 6" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								<voxbox tags="airspeed nocull" pos="-0.1 -0.14164 -0.23363" rot="-46.4 0.0 0.0" texture="1 0.5" size="1 1 8" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+								<rope pos="-0.8 -1.2 -0.4" slack="-1">
+									<location pos="0.75 1.65 0.7" rot="0.0 0.0 0.0"/>
+									<location pos="0.75 0.65 0.2" rot="0.0 0.0 0.0"/>
+								</rope>
+							</group>
+						</vox>
+						<vox pos="0.1 0.2 0.1" rot="0.0 -180.0 0.0" texture="1 0.5" prop="true" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="body: right door bottom">
+							<vox pos="0.1 0.6 0.0" rot="0.0 180.0 0.0" texture="1 0.5" collide="false" prop="false" file="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="collision6"/>
+							<voxbox tags="airspeed nocull" pos="0.7 0.46 -0.09" rot="0.0 -180.0 0.0" texture="1 0.5" size="13 2 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+								<group pos="0.7 -0.0 0.12" rot="0.0 0.0 0.0">
+									<voxbox tags="airspeed nocull" pos="-0.7 -0.0 -0.05" rot="0.0 0.0 0.0" texture="1 0.5" size="13 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.0 0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+										<voxbox tags="airspeed nocull" pos="1.2 -0.0 -0.1" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+									<voxbox tags="airspeed nocull" pos="-0.67 0.1 -0.05" rot="0.0 0.0 0.0" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.081 0.0 0.002" rot="0.0 10.0 0.0" texture="1 0.5" size="4 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+									<voxbox tags="airspeed nocull" pos="0.57 0.2 -0.05" rot="-180.0 -180.0 -0.4" texture="1 0.5" size="1 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal">
+										<voxbox tags="airspeed nocull" pos="0.081 0.0 0.002" rot="0.0 10.0 0.0" texture="1 0.5" size="4 1 1" brush="MOD/vehicles/aircraft/Mil-Mi-35P-Hind/fuselage/Mil-Mi-35P-Hind.vox" object="brush: interior metal"/>
+									</voxbox>
+								</group>
+							</voxbox>
+						</vox>
+					</script>
+				</group>
+			</group>
+		</script>
+	</group>
+</prefab>
+

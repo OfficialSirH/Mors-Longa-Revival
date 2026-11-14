@@ -1,9 +1,9 @@
--- Mock test for Vehicles/bus/jet.lua (JetBus jet: Shift boost, throttle bar).
+-- Mock test for vehicles/cars/bus/jet.lua (JetBus jet: Shift boost, throttle bar).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_jet.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "Vehicles/bus/jet.lua"
+local PATH = "vehicles/cars/bus/jet.lua"
 
 local env = MockEngine.load(PATH, { preload = MockEngine.includes(PATH) })
 env.side = "server"

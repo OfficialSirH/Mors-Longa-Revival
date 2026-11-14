@@ -1,7 +1,0 @@
-<prefab version="1.1.0">
-	<group>
-		<body tags="Loot=material-scrap_Scrap_1 interact=Scrapmetal" pos="0 .05" dynamic="true">
-			<vox pos="0 -.05 .05" file="MOD/vox/Loots/Materials.vox" object="Scrap"/>
-		</body>
-	</group>
-</prefab>

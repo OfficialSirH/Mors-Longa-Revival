@@ -1,0 +1,19 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/mag0-m107-127x99.xml" pos="0" rot="0">
+		<body name="N107-Mag" tags="Loot=mag0-m107-127x99_N107-Mag_10_10_.50BMG interact=N107-Mag unbreakable" pos="0 .1" dynamic="true">
+			<group name="Metal2" pos="0 .1 -.1" prop0="color=.13 .13 .13" prop1="material=metal">
+				<voxbox pos="-.055 -.2" rot="0" size="1 2 1">
+					<voxbox pos="0 .1 .07" size="1 1 2"/>
+					<voxbox pos="0 .017 .07" size="1 1 2"/>
+					<voxbox pos="0 0 .07" rot="-5" size="1 1 2"/>
+				</voxbox>
+				<voxbox pos="-.045 -.2" rot="0" size="1 2 1">
+					<voxbox pos="0 .1 .07" size="1 1 2"/>
+					<voxbox pos="0 .017 .07" size="1 1 2"/>
+					<voxbox pos="0 0 .07" rot="-5" size="1 1 2"/>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+

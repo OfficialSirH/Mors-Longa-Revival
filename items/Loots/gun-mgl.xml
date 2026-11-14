@@ -1,0 +1,51 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/items/Loots/gun-mgl.xml" pos="2.8" rot="0">
+		<body name="MGL" tags="Loot=gun-mgl_MGL_mag0_Internal_6_6_40mm interact=MGL unbreakable" pos="0 .2" dynamic="true">
+			<group name="Metal2" prop0="color=.39 .39 .39" prop1="material=metal">
+				<group name="Stock" pos="0 .05 -.25">
+					<voxbox pos="-.05 -.05 -.3" size="1 1 3">
+						<voxbox rot="71.0" size="1 3 1"/>
+					</voxbox>
+				</group>
+			</group>
+			<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
+				<voxbox pos="-.05 0 -.25" size="1 1 6">
+					<voxbox pos="0 -.08" size="1 1 3"/>
+				</voxbox>
+				<voxbox name="Barrel" tags="barrel range=50 magsize=3 damage=.2 firerate=1.2 gun=vgo unbreakable exp=.1 expvel=70 expgrav=17 enemy=Military enemy=Military enemy=Military" pos="-.05 0 .35" size="1 1 1"/>
+				<group name="Magazine" pos="0 0 -.1">
+					<voxbox pos="-.05 -.1" size="1 1 2">
+						<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+							<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+								<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+									<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+										<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+											<voxbox pos=".1" rot="0 0 45.0" size="1 1 2">
+												<voxbox pos=".1" rot="0 0 45.0" size="1 1 2"/>
+											</voxbox>
+										</voxbox>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</group>
+				<group name="grip" pos="0 0 .15">
+					<voxbox pos="-.05 -.2 .05" size="1 2 1"/>
+					<group pos="-.05 .01 -.1">
+						<voxbox pos=".00999 0 .1" size="1 1 2"/>
+						<voxbox pos="-.00999 0 .1" size="1 1 2"/>
+					</group>
+					<group pos="-.05 -.01 -.1">
+						<voxbox pos=".00999 0 .1" size="1 1 2"/>
+						<voxbox pos="-.00999 0 .1" size="1 1 2"/>
+					</group>
+				</group>
+				<voxbox name="Grip" tags="Grip" pos="-.05 0 -.15" rot="-160" size="1 2 1">
+					<light tags="handle" pos=".05 .1 .05" scale="0" angle="0" penumbra="0" size=".05" reach="0" unshadowed="0" fogscale="0" fogiter="0" glare="0"/>
+				</voxbox>
+			</group>
+		</body>
+	</group>
+</prefab>
+

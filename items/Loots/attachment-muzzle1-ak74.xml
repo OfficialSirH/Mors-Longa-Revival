@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/items/Loots/attachment-muzzle1-ak74.xml" pos="8.0 0.1 -3.4" rot="0.0 0.0 0.0">
+		<body tags="Loot=attachment-muzzle1-ak74_Simonov-545-Suppressor interact=Simonov-545-Suppressor" pos="0.1 0.05 0.0" dynamic="true">
+			<voxbox pos="-0.1 -0.02 -0.17" rot="0.0 0.0 0.0" size="1 1 4" color=".1 .1 .1"/>
+		</body>
+	</group>
+</prefab>
+

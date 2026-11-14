@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun Simonov-9 MILITARY1.xml" pos="2.613 0.6 1.1" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-pp19.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-pp19.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="PP19" tags="Loot=gun-pp19_Simonov-9_mag0-ak-9x19_Simonov-9-Mag_30_30_9x19_kobra-muzzle2------ interact=Simonov-9 unbreakable" pos="0.0 0.3" dynamic="true">
 				<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 					<voxbox pos="-.05 -.05 -.2" size="1 1 7"/>

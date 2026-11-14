@@ -1,0 +1,8 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/items/Loots/mag0-tt33-762x25.xml" pos="6.8" rot="0">
+		<body tags="Loot=mag0-tt33-762x25_TT-33_8_8_7.62x25 interact=TT-33-Mag unbreakable" pos="0 .1" dynamic="true">
+			<voxbox pos="-.05 -.1 -.05" size="1 2 1" color=".23 .23 .23" material="metal"/>
+		</body>
+	</group>
+</prefab>
+

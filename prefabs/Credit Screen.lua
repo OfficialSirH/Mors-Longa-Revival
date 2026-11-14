@@ -7,7 +7,7 @@ function init()
 
 	FOVDiff = VecLength(VecSub(GetLocationTransform(locations[currentChar]).pos, GetLocationTransform(lookAts[currentChar]).pos))*4
 
-	snd = LoadSound("MOD/snd/selectsnd.ogg")
+	snd = LoadSound("MOD/assets/snd/selectsnd.ogg")
 
 	hints = true
 

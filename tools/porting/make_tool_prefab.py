@@ -2,7 +2,7 @@
 """Build a Teardown 2.x tool prefab for a Mors Longa gun model.
 
 v1 guns registered a placeholder vox and then, from the client, attached the
-parts of script/Weapons/<GUN>-<camo>.xml to the tool body (LoadTool). In v2 a
+parts of weapons/guns/Weapons/<GUN>-<camo>.xml to the tool body (LoadTool). In v2 a
 client may not do that, so the parts must be part of the tool itself. A tool
 prefab needs the official layout (see mods/minigun/prefab/minigun.xml):
     tool_space -> <body dynamic="false"> -> <vox .../>
@@ -13,11 +13,11 @@ exactly at their Base.xml positions. The <vox> lines are copied verbatim and in
 order (the gun scripts address parts by index), with the camo vox file swapped in.
 
 Usage (repo root): python3 tools/porting/make_tool_prefab.py AK74 [camo ...]
-Writes script/Weapons/<GUN> Tool.xml (default camo) and "<GUN> Tool-<camo>.xml".
+Writes weapons/guns/Weapons/<GUN> Tool.xml (default camo) and "<GUN> Tool-<camo>.xml".
 """
 import re, sys
 
-W = 'script/Weapons/'
+W = 'weapons/guns/Weapons/'
 
 def read(p):
     return open(p, 'rb').read().decode('utf-8').replace('\r\n', '\n')
@@ -54,12 +54,12 @@ def build(gun, camo):
     voxes = voxes[::-1]
     # In v2 the tool body is a real body in the world: make the parts unbreakable
     # (gun melee MakeHole at the stock etc.) and tag them so GunRaycast() in
-    # script/gunfunctions.lua lets bullets pass through weapon models.
+    # weapons/guns/gunfunctions.lua lets bullets pass through weapon models.
     assert not any(' tags=' in v for v in voxes), 'Base.xml parts already have tags; merge needed'
     voxes = [v.replace('<vox ', '<vox tags="ml_toolpart unbreakable" ', 1) for v in voxes]
     # Parts that overlap inside one body lose their overlapping voxels when the engine
     # builds the tool [verified in-game, AK74]. Build each part in its own lane on a
-    # grid; GunNet_FixToolParts() in script/gunnet.lua moves it back on the client
+    # grid; GunNet_FixToolParts() in weapons/guns/gunnet.lua moves it back on the client
     # (only while |x - lane_x(i)| < SPACING/2). Keep SPACING/COLUMNS in sync.
     SPACING, COLUMNS = 24.0, 10
     def lane(i):

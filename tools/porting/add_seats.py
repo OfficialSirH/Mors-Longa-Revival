@@ -54,7 +54,7 @@ def driver_standing(stand, wheel, wheel_radius):
 
 
 def gunner(sort, stand, grip, yaw=0):
-    """Mounted-gun place (scripts/MountedGun.lua finds the rig tagged "gunner"): standing ("stand" location, the
+    """Mounted-gun place (vehicles/MountedGun.lua finds the rig tagged "gunner"): standing ("stand" location, the
     standing pose as in driver_standing) at stand, facing yaw (0 = -z, 90 = -x, -90 = +x), hands on the gun's grips
     (grip = the point between them, at the gun's rest pose; they don't follow the gun yet). stand is in vehicle space.
     NOT a vehicle seat (user, 2026-11-12): patch_text puts it under the vehicle's first <body> (as the game's own
@@ -427,7 +427,7 @@ CEMENT_TRUCK = [
     passenger(1, (0.55, 1.25, -2.45), feet_z=-2.85, feet_y=0.85),
 ]
 
-# Volga (Vehicles/Gaz24/volgawhite.xml, road spawner Vehiclewg18; a different model from the GAZ-24 (1968) set; the
+# Volga (vehicles/cars/Gaz24/volgawhite.xml, road spawner Vehiclewg18; a different model from the GAZ-24 (1968) set; the
 # .vox is named by <group prop0="file=...">; black/blue/taxi are referenced nowhere): front bench cushion 0.6,
 # x -0.55..0.65, z -0.45..-0.15, backrest face z -0.1; rear bench cushion 0.6, z 0.35..0.65, backrest face z 0.7, rear
 # floor 0.4 at z 0.15..0.25; front floor 0.4 at z -0.65 under the dash; roof 1.4. Vertical steering wheel ring centre
@@ -482,7 +482,7 @@ PURSUIT_SPECIAL = FALCON[:1] + [
 ]
 
 # Military truck (military_truck / _um .vox; "UM Damaged" is the one in use: roadblocks 8 and 9; plain and Damaged
-# only in test_vehicle.xml; all three same net model position and seat rays; official military_truck_green overlap
+# only in dev/levels/test_vehicle.xml; all three same net model position and seat rays; official military_truck_green overlap
 # 0.49, measured): cab floor 1.2, roof 2.7; two seats, cushion 1.7, x -1.0..-0.5 / 0.5..1.0, z -2.35..-2.05, backrest
 # face z -2.0; a 0.3 m wide engine cover between them (top 1.8); flat steering wheel ring centre (-0.6, 2.05, -2.75),
 # radius 0.2. Open cargo bed: floor 1.4, side walls inner faces x -1.15 / 1.15, front wall z -0.9, no benches: two
@@ -574,7 +574,7 @@ TRACTOR_FROM_HELL = [
     driver((-0.05, 1.45, 0.65), wheel=(-0.05, 1.65, 0.25), wheel_radius=0.2, feet_z=0.25, feet_y=1.25),
 ]
 
-# Insurgent chase cars ("Vehicles/Enemy Car/Car.vox", one model file with several bodies on the same chassis; the
+# Insurgent chase cars ("vehicles/cars/Enemy Car/Car.vox", one model file with several bodies on the same chassis; the
 # chassis vox is turned 180 deg, positions here are vehicle coordinates). Pickup ("Utebody") and SUV ("SUVbody")
 # share the cab: front cushions top 0.9, x -0.75..-0.35 (driver) and 0.15..0.55, z -0.45..0.15, backrest face z 0.0;
 # vertical steering wheel ring centre (-0.55, 1.35, -0.55), radius 0.2; front floor 0.6 back from the firewall at
@@ -609,7 +609,7 @@ SPORT_ENEMY = [
     passenger(2, (-0.1, 0.8, 1.4), feet_y=0.75, yaw=180, legroom=0.45, tilt=55),
 ]
 
-# BRDM-2 (brdm.xml, only in test_vehicle.xml; in play as VehicleD7 "Insurgent Ambush 7", same body placement): floor
+# BRDM-2 (brdm.xml, only in dev/levels/test_vehicle.xml; in play as VehicleD7 "Insurgent Ambush 7", same body placement): floor
 # 1.1, walls inner faces x -0.65 / 0.65 (troop compartment), roof 2.4. Front bench cushion top 1.4, x -0.5..0.5,
 # z -1.75..-1.45, backrest face z -1.5; vertical steering wheel ring centre (-0.3, 1.75, -2.05), radius 0.2; front
 # footwell to the nose armour at z -2.25, a column at x 0 between the feet. Troop compartment: side benches along both
@@ -624,7 +624,7 @@ BRDM = [
     passenger(5, (0.45, 1.45, 0.7), feet_y=1.15, yaw=90, legroom=0.35),
 ]
 
-# AVF offroad (avf/prefabs/technicals/offroad.vox; plain "body" with roof, "body__scaffoled" open, GMG
+# AVF offroad (vehicles/avf/prefabs/technicals/offroad.vox; plain "body" with roof, "body__scaffoled" open, GMG
 # "body_enclosed_turret_ring", all at the same position; VehicleAAF2 "AAF Jeep" = the open one): front cushions top
 # 1.0, x -0.55..-0.15 / 0.05..0.45, z -0.25..0.15, backrest face z 0.1; rear bench x -0.65..0.55, z 0.45..0.85,
 # backrest face z 0.8; floor 0.7, pedals 0.75 at z -0.9; vertical steering wheel ring centre (-0.35, 1.25, -0.75),
@@ -644,7 +644,7 @@ OFFROAD_WMIK = [
     passenger(1, (-0.3, 1.05, -0.15), feet_z=-0.85, feet_y=0.75),
 ]
 
-# AVF technical pickup (avf/prefabs/technicals/technical.vox; "Pickup Truck" bodyturret, "Pickup Lifted" bodyturret3
+# AVF technical pickup (vehicles/avf/prefabs/technicals/technical.vox; "Pickup Truck" bodyturret, "Pickup Lifted" bodyturret3
 # with the same cab, "Pickup Damaged" bodyturret2 = same cab 0.05 left / 0.1 back, no steering wheel ring): bench
 # seat, cushion top 1.2, x -0.75..-0.15 / 0.15..0.75, z -0.25..0.15, backrest face z 0.0; roof 1.9 (0.65 m above the
 # seat point: tilt 55); footwell floor 0.9 up to the dash at z -0.6; vertical steering wheel ring centre
@@ -662,7 +662,7 @@ PICKUP_TRUCK = [
     passenger(3, (0.75, 1.5, 1.9), feet_y=1.05, yaw=90, legroom=0.45),
 ]
 
-# ZIS-151 (avf/prefabs/ZIS-151; ZIS-151 "body3" road spawner Vehiclewg28, Damaged "body2" + cargo box wb26,
+# ZIS-151 (vehicles/avf/prefabs/ZIS-151; ZIS-151 "body3" road spawner Vehiclewg28, Damaged "body2" + cargo box wb26,
 # Katyusha "body" VehicleM2; Damaged and Katyusha cabs = the plain one 0.05 further back): bench cushion top 1.5,
 # x -0.6..0.6, z -1.3..-0.95, backrest face z -0.95; cab floor 1.2 back from the dash at z -1.9; roof underside 2.3
 # (0.75 m above the seat point: heads ~0.1 through it in-game, kept upright as in the pickup); steering:
@@ -684,7 +684,7 @@ ZIS151_DAMAGED = shifted(ZIS151_CAB, dz=0.05) + [
     passenger(3, (0.8, 1.35, 2.0), feet_y=1.35, yaw=90, legroom=0.45, floor=True),
 ]
 
-# Willys Jeep (avf/prefabs/Weaponised vehicles/Willys Jeep.xml; only the drivable copy in level_tutorial.xml, same
+# Willys Jeep (vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep.xml; only the drivable copy in levels/level_tutorial.xml, same
 # placement): an undersized model (v1 eye point 0.5 above the seat). Floor 0.2; front seats cushion top 0.5,
 # x -0.45..-0.15 / 0.25..0.55, z 0.15..0.45, backrest face z 0.4; rear bench x -0.45..0.55, cushion top 0.5,
 # backrest face z 1.2; tiny tilted steering wheel ring ~(-0.25, 0.9, 0.0), radius ~0.12; firewall z -0.35. Open
@@ -696,7 +696,7 @@ WILLYS = [
     passenger(3, (-0.3, 0.55, 0.95), feet_z=0.6, feet_y=0.25),
 ]
 
-# BMP-1 / BMP-1P / BMP-2 (avf/prefabs/bmp; hulls "bmp-1 body", "bodybmp-1 3", "bodybmp-2": same interior at the same
+# BMP-1 / BMP-1P / BMP-2 (vehicles/avf/prefabs/bmp; hulls "bmp-1 body", "bodybmp-1 3", "bodybmp-2": same interior at the same
 # place, overlap 0.94-0.99; military spawners VehicleM18/M19/M20). Vehicle origin high (pos y 2.48): interior
 # coordinates are negative. Hull floor -1.9, roof underside -0.8. Driver front left: small cushion top -1.5
 # (z -1.55..-1.45; the -1.8 layer is its base), backrest face z -1.2, steering levers ahead at ~z -2.0 / y -1.4 (hands on them), feet on the floor. Rear troop
@@ -711,7 +711,7 @@ BMP12 = [
     passenger(4, (0.5, -1.55, 3.0), feet_y=-1.85, yaw=-90, legroom=0.3),
 ]
 
-# BMP-3 (avf/prefabs/bmp/BMP-3 d.xml; spawn menu, military spawner VehicleM21; hull "bmp-3 boby" + front roof
+# BMP-3 (vehicles/avf/prefabs/bmp/BMP-3 d.xml; spawn menu, military spawner VehicleM21; hull "bmp-3 boby" + front roof
 # "bmp-3 boby r1"): floor 0.7 (0.8 in the front row), roof underside 2.0. Front row of three seats (cushion top 1.0,
 # z -1.55..-1.25, backrest face z -1.3) at x -0.9 / -0.1 / 0.8; controls ahead of the middle one (z -2.5..-2.0): the
 # driver sits in the middle as in a real BMP-3 (the v1 eye point was on the left seat). Behind the turret basket
@@ -730,7 +730,7 @@ BMP3 = [
 # Tanks: the hulls are too low to sit upright; drivers recline as in the official military_tank_green (seat rot 80,
 # ik_head 0.45 up / 0.25 back, legs stretched forward). Turret crews come with the mounted-gun work.
 TANK_HEAD = (0, 0.45, 0.25)
-# T-72 (avf/prefabs/t72_desert: T72A, T72B, T72B3 mod 2016 = spawn menu "T-72", T72B3 obj 1989, T72BA; military
+# T-72 (vehicles/avf/prefabs/t72_desert: T72A, T72B, T72B3 mod 2016 = spawn menu "T-72", T72B3 obj 1989, T72BA; military
 # spawners VehicleM14-M17 / M3; hull "t72body" + "hull_roof" identical in all five): driver compartment front centre,
 # x -0.45..0.45, floor 0.9, roof underside 1.7 (0.8 m), backrest face z -1.8, no cushion; front plate / controls from
 # z -2.55 up from 1.25. v1 eye point (0.05, 1.47, -2.1). Riders (user request 2026-11-09): engine deck flat at 1.9
@@ -745,7 +745,7 @@ T72 = [
            head=TANK_HEAD),
 ] + tank_riders(1.9, 1.9, (2.1, 2.9))
 
-# T-54 / T-55 (avf/prefabs/T-54 55: T-54-3 / T-55A, Alashya + Desert; spawn menu "T-54 AAF", "T-55A AAF"; military
+# T-54 / T-55 (vehicles/avf/prefabs/T-54 55: T-54-3 / T-55A, Alashya + Desert; spawn menu "T-54 AAF", "T-55A AAF"; military
 # spawners VehicleM10-M13; hulls "hull T-54 (1951)" / "hull T-55A" + "front", same driver compartment): floor 0.1, hull
 # top ~1.1; driver front left under his hatch: low cushion top 0.3, z -1.95..-1.65, short backrest face z -1.6;
 # controls ahead (~z -2.2). Reclined like the T-72. Engine deck behind the turret (turret rear z 1.15): raised centre
@@ -765,7 +765,7 @@ T54 = T54_DRIVER + [side_rider(1, -1, 1.0, 1.55), side_rider(2, 1, 1.1, 1.0), si
 T55 = T54_DRIVER + [side_rider(1, -1, 1.1, 2.0), side_rider(2, 1, 1.1, 1.0), side_rider(3, -1, 1.0, 1.05),
                     side_rider(4, 1, 1.1, 1.95)]
 
-# T-34-85 (avf/prefabs/T-34/T-34-85.xml; spawn menu "T-34", military spawner VehicleM9; hull "hull T-34-85" + "front" +
+# T-34-85 (vehicles/avf/prefabs/T-34/T-34-85.xml; spawn menu "T-34", military spawner VehicleM9; hull "hull T-34-85" + "front" +
 # "rear"): floor 0.5; driver front left (v1 eye (-0.35, 1.48, -1.7)): low cushion top 0.7, z -1.95..-1.75, backrest face
 # z -1.7, the sloped front plate over him: reclined like the T-72. Engine deck behind the turret (turret rear z 0.55):
 # centre 1.8, side ledges top 1.7 at x -1.2 / 1.2 stepping down to the fenders (top 1.25): riders on the ledges facing
@@ -776,7 +776,7 @@ T34 = [
     side_rider(1, -1, 1.8, 0.9, x=1.15, feet_y=1.3), side_rider(2, 1, 1.8, 0.9, x=1.15, feet_y=1.3),
     side_rider(3, -1, 1.8, 1.5, x=1.15, feet_y=1.3), side_rider(4, 1, 1.8, 1.5, x=1.15, feet_y=1.3),
 ]
-# M-51 Super Sherman (avf/prefabs/M-51 Super Sherman; spawn menu "M-51 Sherman", military spawner VehicleM8; hull
+# M-51 Super Sherman (vehicles/avf/prefabs/M-51 Super Sherman; spawn menu "M-51 Sherman", military spawner VehicleM8; hull
 # "body" + "front"): floor 0.5, hull roof underside 1.9; driver front left (v1 eye (-0.5, 1.7, -0.55)): cushion top 1.0,
 # z -0.75..-0.45, levers ahead; room to sit upright. The big turret (z -0.35..2.65, sweeps ~1.75 m around its ring)
 # covers the hull top: riders on the rear deck (top 1.75, z 2.6..3.4) side edges at x -1.15 / 1.15, facing outward,
@@ -856,7 +856,7 @@ def heli_pilot(seat, feet_y, legroom):
     ], (0, 180, 0))
 
 
-# AS350 helicopters (main/AS350, 2026-11-13). Not vehicles in the original (the script teleported the pilot every
+# AS350 helicopters (vehicles/aircraft/AS350, 2026-11-13). Not vehicles in the original (the script teleported the pilot every
 # frame); the port wraps the whole helicopter in a <vehicle> (no pos: vehicle space = the Heli.lua <script> space,
 # body "Heli" at 0.1 0.1 3.7). Measured in body space, nose at +z: cabin floor 1.2; front seats cushion 1.6,
 # backrest face z 0.1, roof 2.7; the AI pilot ragdoll sits on the right seat (x -0.5), so the player pilot takes the
@@ -878,85 +878,85 @@ AS350_INSURGENT = shifted(AS350_BODY[:3] + [
 
 
 VEHICLES = {
-    "avf/prefabs/humvee/umhummer.xml": HUMVEE,
-    "avf/prefabs/humvee/umhummeropen.xml": HUMVEE,
-    "Vehicles/Soviet Vehicles/uaz452.xml": UAZ452,
-    "Vehicles/Soviet Vehicles/uaz452 Damaged.xml": UAZ452_DAMAGED,
-    "Vehicles/Soviet Vehicles/uaz452 Modified.xml": UAZ452_MODIFIED,
-    "Vehicles/Soviet Vehicles/uaz452C_white.xml": UAZ452_WHITE,
-    "Vehicles/Soviet Vehicles/uaz452_emergency.xml": UAZ452_EMERGENCY,
-    "Vehicles/GAZ-24 (1968)/gaz24unreleased.xml": GAZ24,
-    "Vehicles/GAZ-24 (1968)/gaz24unreleased_khb.xml": GAZ24,
-    "Vehicles/GAZ-24 (1968)/gaz24unreleased_milicia.xml": GAZ24,
+    "vehicles/avf/prefabs/humvee/umhummer.xml": HUMVEE,
+    "vehicles/avf/prefabs/humvee/umhummeropen.xml": HUMVEE,
+    "vehicles/cars/Soviet Vehicles/uaz452.xml": UAZ452,
+    "vehicles/cars/Soviet Vehicles/uaz452 Damaged.xml": UAZ452_DAMAGED,
+    "vehicles/cars/Soviet Vehicles/uaz452 Modified.xml": UAZ452_MODIFIED,
+    "vehicles/cars/Soviet Vehicles/uaz452C_white.xml": UAZ452_WHITE,
+    "vehicles/cars/Soviet Vehicles/uaz452_emergency.xml": UAZ452_EMERGENCY,
+    "vehicles/cars/GAZ-24 (1968)/gaz24unreleased.xml": GAZ24,
+    "vehicles/cars/GAZ-24 (1968)/gaz24unreleased_khb.xml": GAZ24,
+    "vehicles/cars/GAZ-24 (1968)/gaz24unreleased_milicia.xml": GAZ24,
     # copies of Teardown 1.x vehicles: official 2.x rigs (voxel overlap 0.6-0.8 after the shift)
-    "Vehicles/sportscar/sportcar_green.xml": SPORTSCAR,
-    "Vehicles/sportscar/sportcar_greenDamged.xml": SPORTSCAR,
-    "Vehicles/sportscar/sportcar_greenOffroad.xml": SPORTSCAR,
-    "Vehicles/sportscar/RampCar.xml": SPORTSCAR,
-    "Vehicles/sportscar/sportsoffroad.xml": SPORTSCAR,  # "SportsCar offroad": overlap 0.78, seat rays within 1 voxel
-    "Vehicles/SUV/suv_yellow.xml": official("generic_blue_light.xml"),
-    "Vehicles/SUV/suv_yellowdamaged.xml": official("generic_blue_light.xml"),
-    "Vehicles/saloon/salooncar_red.xml": SALOON,
-    "Vehicles/saloon/salooncar_red damaged.xml": SALOON,
-    "Vehicles/saloon/salooncar_taxi.xml": SALOON,
-    "Vehicles/saloon/salooncar_taxi damaged.xml": SALOON,
+    "vehicles/cars/sportscar/sportcar_green.xml": SPORTSCAR,
+    "vehicles/cars/sportscar/sportcar_greenDamged.xml": SPORTSCAR,
+    "vehicles/cars/sportscar/sportcar_greenOffroad.xml": SPORTSCAR,
+    "vehicles/cars/sportscar/RampCar.xml": SPORTSCAR,
+    "vehicles/cars/sportscar/sportsoffroad.xml": SPORTSCAR,  # "SportsCar offroad": overlap 0.78, seat rays within 1 voxel
+    "vehicles/cars/SUV/suv_yellow.xml": official("generic_blue_light.xml"),
+    "vehicles/cars/SUV/suv_yellowdamaged.xml": official("generic_blue_light.xml"),
+    "vehicles/cars/saloon/salooncar_red.xml": SALOON,
+    "vehicles/cars/saloon/salooncar_red damaged.xml": SALOON,
+    "vehicles/cars/saloon/salooncar_taxi.xml": SALOON,
+    "vehicles/cars/saloon/salooncar_taxi damaged.xml": SALOON,
     # official 2.x: driver + 1 passenger (box truck, dump truck), driver only (crane, tractor)
-    "Vehicles/truck/truck_white.xml": BOXTRUCK,
-    "Vehicles/truck/truck_whitedamaged.xml": BOXTRUCK,
-    "Vehicles/truck/truck_ramp.xml": BOXTRUCK,
-    "Vehicles/truck/truck_rampdamaged.xml": BOXTRUCK,
-    "Vehicles/dumptruck/Dump_truck.xml": official("dumptruck_yellow.xml", shift=(0, 0, 0.1)),
-    "Vehicles/dumptruck/Dump_truck Damaged.xml": official("dumptruck_yellow.xml", shift=(0, 0, 0.1)),
-    "Vehicles/Constuction vehicles/mobile_crane.xml": official("crane_medium_yellow.xml"),
-    "Vehicles/Constuction vehicles/Bluetractor.xml": official("tractor_teal.xml"),
-    "Vehicles/Constuction vehicles/Redtractor.xml": official("tractor_teal.xml"),
-    "Vehicles/van1_yellow/Van (Yellow).xml": VAN,
-    "Vehicles/van1_yellow/Van (Yellow) Damaged.xml": VAN,
+    "vehicles/cars/truck/truck_white.xml": BOXTRUCK,
+    "vehicles/cars/truck/truck_whitedamaged.xml": BOXTRUCK,
+    "vehicles/cars/truck/truck_ramp.xml": BOXTRUCK,
+    "vehicles/cars/truck/truck_rampdamaged.xml": BOXTRUCK,
+    "vehicles/cars/dumptruck/Dump_truck.xml": official("dumptruck_yellow.xml", shift=(0, 0, 0.1)),
+    "vehicles/cars/dumptruck/Dump_truck Damaged.xml": official("dumptruck_yellow.xml", shift=(0, 0, 0.1)),
+    "vehicles/cars/Constuction vehicles/mobile_crane.xml": official("crane_medium_yellow.xml"),
+    "vehicles/cars/Constuction vehicles/Bluetractor.xml": official("tractor_teal.xml"),
+    "vehicles/cars/Constuction vehicles/Redtractor.xml": official("tractor_teal.xml"),
+    "vehicles/cars/van1_yellow/Van (Yellow).xml": VAN,
+    "vehicles/cars/van1_yellow/Van (Yellow) Damaged.xml": VAN,
     # Van Modified: official driver rig + the PKM gunner on the cargo floor behind the gun, facing out the left side
-    "Vehicles/van1_yellow/Van Modified.xml": lambda bp: VAN_MODIFIED(bp) + [gunner(1, (0.35, 0.7, 0.25), (0.05, 1.9, 0.25), yaw=90)],
+    "vehicles/cars/van1_yellow/Van Modified.xml": lambda bp: VAN_MODIFIED(bp) + [gunner(1, (0.35, 0.7, 0.25), (0.05, 1.9, 0.25), yaw=90)],
     # station wagon = official generic_stationwagon_blue_dark (overlap 0.68; the yellow one is a different model).
     # Damaged: same seats (its body2 has 2 empty layers on one side; uncropped it looked 0.1 off). Destroyed: wreck.
-    "Vehicles/minivan1/minivan1.xml": MINIVAN,
-    "Vehicles/Soviet Vehicles/zil131fire.xml": ZIL_FIRE,
-    "Vehicles/Soviet Vehicles/ZIL131.xml": ZIL131,
-    "Vehicles/Soviet Vehicles/ZIL131_ZSU23.xml": ZIL131_ZSU23,
-    "Vehicles/bus/bus.xml": BUS,
-    "Vehicles/bus/bus Damaged.xml": BUS,
-    "Vehicles/bus/bus Modified.xml": BUS_MODIFIED,
-    "Vehicles/bus/jetbus.xml": JETBUS,
-    "Vehicles/Soviet Vehicles/paz 3205.xml": PAZ,
-    "Vehicles/Soviet Vehicles/paz 3205 Damaged.xml": PAZ,
-    "Vehicles/semitruck-us/Semi.xml": SEMI_US,
-    "Vehicles/semitruck-us/Semi Damaged.xml": SEMI_US,
-    "Vehicles/semitruck-us/Semi Modified.xml": SEMI_US,
-    "Vehicles/semitruck-us/Semi Special.xml": SEMI_US,
-    "Vehicles/semitruck-flathead/Semi.xml": SEMI_FLATHEAD,
-    "Vehicles/semitruck-flathead/Semi Damaged.xml": SEMI_FLATHEAD,
-    "Vehicles/semitruck-flathead/Semi Mod.xml": SEMI_FLATHEAD,
+    "vehicles/cars/minivan1/minivan1.xml": MINIVAN,
+    "vehicles/cars/Soviet Vehicles/zil131fire.xml": ZIL_FIRE,
+    "vehicles/cars/Soviet Vehicles/ZIL131.xml": ZIL131,
+    "vehicles/cars/Soviet Vehicles/ZIL131_ZSU23.xml": ZIL131_ZSU23,
+    "vehicles/cars/bus/bus.xml": BUS,
+    "vehicles/cars/bus/bus Damaged.xml": BUS,
+    "vehicles/cars/bus/bus Modified.xml": BUS_MODIFIED,
+    "vehicles/cars/bus/jetbus.xml": JETBUS,
+    "vehicles/cars/Soviet Vehicles/paz 3205.xml": PAZ,
+    "vehicles/cars/Soviet Vehicles/paz 3205 Damaged.xml": PAZ,
+    "vehicles/cars/semitruck-us/Semi.xml": SEMI_US,
+    "vehicles/cars/semitruck-us/Semi Damaged.xml": SEMI_US,
+    "vehicles/cars/semitruck-us/Semi Modified.xml": SEMI_US,
+    "vehicles/cars/semitruck-us/Semi Special.xml": SEMI_US,
+    "vehicles/cars/semitruck-flathead/Semi.xml": SEMI_FLATHEAD,
+    "vehicles/cars/semitruck-flathead/Semi Damaged.xml": SEMI_FLATHEAD,
+    "vehicles/cars/semitruck-flathead/Semi Mod.xml": SEMI_FLATHEAD,
     # "Hummer UM" (spawn menu; humvee.vox, same model as the AVF Humvee, body 0.05 higher: all seat rays identical
-    # after the shift). The other Vehicles/humvee files point at MOD/Vehicles/AvertCars/, which doesn't exist; unused.
-    "Vehicles/humvee/hummer.xml": shifted(HUMVEE, dy=0.05),
-    "Vehicles/Gaz24/volgawhite.xml": VOLGA,
-    "Vehicles/RVMethLab/MethLab.xml": RV_METHLAB,
-    "Vehicles/1963 VW Beetle BugZilla/BugZilla.xml": BUGZILLA,
-    "Vehicles/Based Vehicles/golf_cart.xml": GOLF_CART,
-    "Vehicles/Based Vehicles/golf_cartBomb.xml": GOLF_CART,
-    "Vehicles/Based Vehicles/smallboat_red.xml": SMALLBOAT,
-    "Vehicles/Based Vehicles/SHED.xml": SHED,
-    "Vehicles/Based Vehicles/GARAGE.xml": SHED,
-    "Vehicles/Based Vehicles/wheeledcockpit.xml": WHEELED_COCKPIT,
-    "Vehicles/Based Vehicles/sailboat.xml": SAILBOAT,
-    "Vehicles/military_truck/Milltary_Truck_UM Damaged.xml": MILITARY_TRUCK,
-    "Vehicles/military_truck/Milltary_Truck.xml": MILITARY_TRUCK,
-    "Vehicles/military_truck/Milltary_Truck Damaged.xml": MILITARY_TRUCK,
-    "Vehicles/MadMax2/1973 Ford Falcon XB GT.xml": FALCON,
-    "Vehicles/MadMax2/1973 Ford Falcon XB GT damaged.xml": FALCON,
-    "Vehicles/MadMax2/Pursuit Special.xml": PURSUIT_SPECIAL,
-    "Vehicles/microcar/microcar.xml": MICROCAR,
-    "Vehicles/microcar/microcarDamged.xml": MICROCAR,
-    "Vehicles/microcar/monstercompact.xml": MONSTERCOMPACT,
-    "Vehicles/Constuction vehicles/cement_truck.xml": CEMENT_TRUCK,
-    "Vehicles/Constuction vehicles/tractorFromHell.xml": TRACTOR_FROM_HELL,
+    # after the shift). The other vehicles/cars/humvee files point at MOD/vehicles/cars/AvertCars/, which doesn't exist; unused.
+    "vehicles/cars/humvee/hummer.xml": shifted(HUMVEE, dy=0.05),
+    "vehicles/cars/Gaz24/volgawhite.xml": VOLGA,
+    "vehicles/cars/RVMethLab/MethLab.xml": RV_METHLAB,
+    "vehicles/cars/1963 VW Beetle BugZilla/BugZilla.xml": BUGZILLA,
+    "vehicles/cars/Based Vehicles/golf_cart.xml": GOLF_CART,
+    "vehicles/cars/Based Vehicles/golf_cartBomb.xml": GOLF_CART,
+    "vehicles/cars/Based Vehicles/smallboat_red.xml": SMALLBOAT,
+    "vehicles/cars/Based Vehicles/SHED.xml": SHED,
+    "vehicles/cars/Based Vehicles/GARAGE.xml": SHED,
+    "vehicles/cars/Based Vehicles/wheeledcockpit.xml": WHEELED_COCKPIT,
+    "vehicles/cars/Based Vehicles/sailboat.xml": SAILBOAT,
+    "vehicles/cars/military_truck/Milltary_Truck_UM Damaged.xml": MILITARY_TRUCK,
+    "vehicles/cars/military_truck/Milltary_Truck.xml": MILITARY_TRUCK,
+    "vehicles/cars/military_truck/Milltary_Truck Damaged.xml": MILITARY_TRUCK,
+    "vehicles/cars/MadMax2/1973 Ford Falcon XB GT.xml": FALCON,
+    "vehicles/cars/MadMax2/1973 Ford Falcon XB GT damaged.xml": FALCON,
+    "vehicles/cars/MadMax2/Pursuit Special.xml": PURSUIT_SPECIAL,
+    "vehicles/cars/microcar/microcar.xml": MICROCAR,
+    "vehicles/cars/microcar/microcarDamged.xml": MICROCAR,
+    "vehicles/cars/microcar/monstercompact.xml": MONSTERCOMPACT,
+    "vehicles/cars/Constuction vehicles/cement_truck.xml": CEMENT_TRUCK,
+    "vehicles/cars/Constuction vehicles/tractorFromHell.xml": TRACTOR_FROM_HELL,
     # Enemy / event vehicles (prefabs/spawnables/enemy vehicles): inline copies of seated models. Players can take
     # them over once the crew is dead (the operator scripts remove the "nodrive" tag). Checked 2026-11-08 with the
     # crew ragdolls hidden: all seat rays identical after the shift (net body + vox position difference).
@@ -972,30 +972,30 @@ VEHICLES = {
     # BMP gunners on the turret basket's left seat (Blender 2026-11-12, mapped to vehicle space through the driver rig;
     # cushion tops / basket floors: BMP-2 1.2 / 0.8 (roof inside 2.2), BMP-1 1.1 / 0.7 (roof 2.0), BMP-1P = BMP-1 with
     # its turret 0.2 lower), facing forward
-    "avf/prefabs/bmp/BMP-1 d.xml": BMP12 + [gunner_seated((-0.15, -1.28, 0.76), feet_y=-1.68)],
-    "avf/prefabs/bmp/BMP-1P d.xml": BMP12 + [gunner_seated((-0.15, -1.48, 0.76), feet_y=-1.88)],
-    "avf/prefabs/bmp/BMP-2 D.xml": BMP12 + [gunner_seated((-0.45, -1.28, 0.96), feet_y=-1.68)],
+    "vehicles/avf/prefabs/bmp/BMP-1 d.xml": BMP12 + [gunner_seated((-0.15, -1.28, 0.76), feet_y=-1.68)],
+    "vehicles/avf/prefabs/bmp/BMP-1P d.xml": BMP12 + [gunner_seated((-0.15, -1.48, 0.76), feet_y=-1.88)],
+    "vehicles/avf/prefabs/bmp/BMP-2 D.xml": BMP12 + [gunner_seated((-0.45, -1.28, 0.96), feet_y=-1.68)],
     # BMP-3: gunner on the turret's left seat (Blender 2026-11-12: cushion top 1.4, floor 1.1, roof inside 2.4; vehicle
     # space through the driver rig), facing forward
-    "avf/prefabs/bmp/BMP-3 d.xml": BMP3 + [gunner_seated((-0.3, 1.4, 0.1), feet_y=1.1)],
+    "vehicles/avf/prefabs/bmp/BMP-3 d.xml": BMP3 + [gunner_seated((-0.3, 1.4, 0.1), feet_y=1.1)],
     # Tank gunners (2026-11-13): seated left of the gun breech inside the turret. The turrets are solid shells
     # without modelled seats (Blender, vehicle space via the vehicle's own transform), so: hips 1.1 below the turret
     # roof (head stays inside), feet 0.5 lower, facing forward; the player is hidden, the gun camera is outside.
     # Turret roof / centre z: T-34 2.75 / -0.8; T-54, T-55 2.1 / -0.25 (Desert copies: same model); Sherman ~3.0
     # (cupola 3.7) beside the breech z 0.6; T-72B3 ~2.8 / -0.1. Other T-72 variants: no gunner place (driver fires).
-    "avf/prefabs/T-34/T-34-85.xml": T34 + [gunner_seated((-0.4, 1.65, -0.8), feet_y=1.15)],
-    "avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.xml": SHERMAN + [gunner_seated((-0.45, 1.9, 0.6), feet_y=1.4)],
-    "avf/prefabs/T-54 55/T-54-3 Alashya.xml": T54 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
-    "avf/prefabs/T-54 55/T-54-3 Desert.xml": T54 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
-    "avf/prefabs/T-54 55/T-55A Alashya.xml": T55 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
-    "avf/prefabs/T-54 55/T-55A Desert.xml": T55 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
-    **{"avf/prefabs/t72_desert/%s.xml" % n: T72 for n in ("T72B", "T72B3_obj_1989", "T72BA")},
+    "vehicles/avf/prefabs/T-34/T-34-85.xml": T34 + [gunner_seated((-0.4, 1.65, -0.8), feet_y=1.15)],
+    "vehicles/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.xml": SHERMAN + [gunner_seated((-0.45, 1.9, 0.6), feet_y=1.4)],
+    "vehicles/avf/prefabs/T-54 55/T-54-3 Alashya.xml": T54 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
+    "vehicles/avf/prefabs/T-54 55/T-54-3 Desert.xml": T54 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
+    "vehicles/avf/prefabs/T-54 55/T-55A Alashya.xml": T55 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
+    "vehicles/avf/prefabs/T-54 55/T-55A Desert.xml": T55 + [gunner_seated((-0.45, 1.0, -0.25), feet_y=0.5)],
+    **{"vehicles/avf/prefabs/t72_desert/%s.xml" % n: T72 for n in ("T72B", "T72B3_obj_1989", "T72BA")},
     # T-72A (road spawn VehicleM14, mounted gun 2026-11-13): same hull / turret placement as the mod 2016
-    "avf/prefabs/t72_desert/T72A.xml": T72 + [gunner_seated((-0.5, 1.7, -0.1), feet_y=1.2)],
-    "avf/prefabs/t72_desert/T72B3_mod_2016.xml": T72 + [gunner_seated((-0.5, 1.7, -0.1), feet_y=1.2)],
+    "vehicles/avf/prefabs/t72_desert/T72A.xml": T72 + [gunner_seated((-0.5, 1.7, -0.1), feet_y=1.2)],
+    "vehicles/avf/prefabs/t72_desert/T72B3_mod_2016.xml": T72 + [gunner_seated((-0.5, 1.7, -0.1), feet_y=1.2)],
     # Humvee .50 cal: gunner standing on the centre console, head out of the roof ring, hands on the gun's rear
-    "avf/prefabs/humvee/umhummer With 50 Cal.xml": HUMVEE + [gunner(4, (0.0, 1.25, 0.3), (-0.1, 2.7, 0.05))],
-    "avf/prefabs/Weaponised vehicles/Willys Jeep.xml": WILLYS,
+    "vehicles/avf/prefabs/humvee/umhummer With 50 Cal.xml": HUMVEE + [gunner(4, (0.0, 1.25, 0.3), (-0.1, 2.7, 0.05))],
+    "vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep.xml": WILLYS,
     # inline Willys copies in spawners (Vehiclewg9 plain, VehicleM7 .50 cal, gunner with the mounted-gun work): the same
     # jeep 0.05 left / 0.3 up in vehicle coordinates (body voxels identical after the shift, 2026-11-09)
     "prefabs/spawnables/vehicles/Vehiclewg9.xml": shifted(WILLYS, dx=-0.05, dy=0.3),
@@ -1003,32 +1003,32 @@ VEHICLES = {
     "prefabs/spawnables/vehicles/VehicleM7.xml": shifted(WILLYS, dx=-0.05, dy=0.3) + [gunner(4, (0.0, 0.6, 1.5), (-0.1, 1.65, 1.3))],
     # roadblock3's inline ZIL-131: its path= tag is cut at the space in "Soviet Vehicles"; same placement as ZIL131.xml
     "prefabs/spawnables/roadblocks/roadblock3.xml#ZIL 131": ZIL131,
-    "avf/prefabs/ZIS-151/ZIS-151.xml": ZIS151,
-    "avf/prefabs/ZIS-151/ZIS-151 Damaged.xml": ZIS151_DAMAGED,
-    "avf/prefabs/ZIS-151/ZIS-151_Katyusha.xml": shifted(ZIS151_CAB, dz=0.05),  # first <vehicle> = the truck
-    "avf/prefabs/technicals/Pickup Truck.xml": PICKUP_TRUCK,
-    "avf/prefabs/technicals/Pickup Lifted.xml": PICKUP_TRUCK,
-    "avf/prefabs/technicals/Pickup Damaged.xml": shifted(PICKUP_TRUCK, dx=-0.05, dz=0.1),
+    "vehicles/avf/prefabs/ZIS-151/ZIS-151.xml": ZIS151,
+    "vehicles/avf/prefabs/ZIS-151/ZIS-151 Damaged.xml": ZIS151_DAMAGED,
+    "vehicles/avf/prefabs/ZIS-151/ZIS-151_Katyusha.xml": shifted(ZIS151_CAB, dz=0.05),  # first <vehicle> = the truck
+    "vehicles/avf/prefabs/technicals/Pickup Truck.xml": PICKUP_TRUCK,
+    "vehicles/avf/prefabs/technicals/Pickup Lifted.xml": PICKUP_TRUCK,
+    "vehicles/avf/prefabs/technicals/Pickup Damaged.xml": shifted(PICKUP_TRUCK, dx=-0.05, dz=0.1),
     # DShK technical: gunner standing at the rear of the bed behind the gun (grips z ~2.35, height ~2.55)
-    "avf/prefabs/technicals/technical_DSHK.xml": shifted(PICKUP_TRUCK[:2], dz=0.1) + [gunner(2, (0.05, 1.0, 2.5), (0.05, 2.55, 2.3))],
+    "vehicles/avf/prefabs/technicals/technical_DSHK.xml": shifted(PICKUP_TRUCK[:2], dz=0.1) + [gunner(2, (0.05, 1.0, 2.5), (0.05, 2.55, 2.3))],
     # SPG-9 (road spawn VehicleM4; mounted gun 2026-11-13): DShK's mount (+0.06 z), tube z -0.38..3.62 at y 2.13-2.73
     # (its rear overhangs the bed), sight on the left at (-0.21, 2.69, 1.36): the gunner stands left of the tube
-    "avf/prefabs/technicals/technical_SPG9.xml": shifted(PICKUP_TRUCK[:2], dz=0.1) + [gunner(2, (-0.6, 1.0, 1.7), (-0.45, 2.45, 1.5))],
-    # ZU-23-2 technical (not in the spawn menu or road spawns: only test_npc.xml via VehicleM24): gunner on the mount's left bucket seat (Blender 2026-11-12: cushion top y 1.8,
+    "vehicles/avf/prefabs/technicals/technical_SPG9.xml": shifted(PICKUP_TRUCK[:2], dz=0.1) + [gunner(2, (-0.6, 1.0, 1.7), (-0.45, 2.45, 1.5))],
+    # ZU-23-2 technical (not in the spawn menu or road spawns: only dev/levels/test_npc.xml via VehicleM24): gunner on the mount's left bucket seat (Blender 2026-11-12: cushion top y 1.8,
     # x -0.6..-0.3 / z 1.2..1.6 in XML space, backrest at z 1.0-1.1, footrest y 1.7 in front; vehicle pos x 0.1),
     # facing the gun (+z)
-    "avf/prefabs/technicals/technical_ZU_23.xml": shifted(PICKUP_TRUCK[:2], dx=-0.05, dz=0.1) +
+    "vehicles/avf/prefabs/technicals/technical_ZU_23.xml": shifted(PICKUP_TRUCK[:2], dx=-0.05, dz=0.1) +
         [gunner_seated((-0.55, 1.8, 1.4), feet_y=1.7, yaw=180)],
-    "avf/prefabs/technicals/offroad.xml": OFFROAD,
-    "avf/prefabs/technicals/offroad-open.xml": OFFROAD,
+    "vehicles/avf/prefabs/technicals/offroad.xml": OFFROAD,
+    "vehicles/avf/prefabs/technicals/offroad-open.xml": OFFROAD,
     # GMG offroad (road spawn VehicleM22; mounted gun 2026-11-13): roof turret ring x -0.6..0.5, z -0.18..1.32, top
     # y 2.51, gun pivot (-0.1, 2.51, -0.07), AVF sight (eye) y 3.23: the gunner stands between the rear seats, head
     # and shoulders through the ring, hands on the rear of the launcher
     # (written under the body, whose group is shifted -0.1 in x: +0.1 here puts the place at x -0.05)
-    "avf/prefabs/technicals/offroad_GMG.xml": OFFROAD + [gunner(4, (0.05, 1.3, 0.75), (0.05, 2.7, 0.45))],
+    "vehicles/avf/prefabs/technicals/offroad_GMG.xml": OFFROAD + [gunner(4, (0.05, 1.3, 0.75), (0.05, 2.7, 0.45))],
     # WMIK MILAN gunner (2026-11-13, Blender in the vehicle's frame): standing on the weapons bed (floor 0.8) behind
     # the launcher (MILAN_launcher z -0.56..0.94, y 2.32..3.12; turret ring y 2.0-2.4), hands at the firing post's rear
-    "avf/prefabs/technicals/offroad_WMIK_MILAN.xml": OFFROAD_WMIK + [gunner(3, (-0.15, 0.8, 1.35), (-0.15, 2.35, 1.0))],
+    "vehicles/avf/prefabs/technicals/offroad_WMIK_MILAN.xml": OFFROAD_WMIK + [gunner(3, (-0.15, 0.8, 1.35), (-0.15, 2.35, 1.0))],
     # Kornet / AGS-30 tripods (road segment RoadSegmentL1; user 2026-11-13: "Stand at it"). Measured from the vox files
     # (vehicle frame, node rotations applied; Blender not running): ground y 0.4 (lowest voxel). Kornet: tripod up to
     # y 1.85, launcher tube y 2.65-3.15, z -1.05..1.55 (the model is far taller than the real 9P163): standing behind
@@ -1037,48 +1037,48 @@ VEHICLES = {
     # hands sat right of the tube: MountedGun.lua moved them onto the model's box centre; simple_avf_tank.lua now keeps
     # them as laid, MountedGunKeepGrip.) Both are rebuilt from git and turned into plain objects: EMPLACEMENTS below.
     "prefabs/spawnables/enemy vehicles/VehicleAAF2.xml": OFFROAD,  # same body placement as offroad-open
-    "Vehicles/brdm/brdm.xml": BRDM,
+    "vehicles/cars/BRDM/brdm.xml": BRDM,
     "prefabs/spawnables/enemy vehicles/VehicleD7.xml": BRDM,  # same body placement (voxels identical)
-    "Vehicles/Enemy Car/Pickup Enemy.xml": PICKUP_ENEMY,
-    "Vehicles/Enemy Car/SUV Enemy.xml": SUV_ENEMY,
-    "Vehicles/Enemy Car/Sport Enemy.xml": SPORT_ENEMY,
+    "vehicles/cars/Enemy Car/Pickup Enemy.xml": PICKUP_ENEMY,
+    "vehicles/cars/Enemy Car/SUV Enemy.xml": SUV_ENEMY,
+    "vehicles/cars/Enemy Car/Sport Enemy.xml": SPORT_ENEMY,
     **{"prefabs/spawnables/enemy vehicles/Vehicle%s.xml" % k: shifted(PICKUP_ENEMY, dx=0.7, dy=-0.8, dz=1.9)
        for k in ("D2", "D5", "DD3")},
     **{"prefabs/spawnables/enemy vehicles/Vehicle%s.xml" % k: shifted(SUV_ENEMY, dx=0.9, dy=-0.9, dz=2.2)
        for k in ("D3", "D6", "DD1")},
     **{"prefabs/spawnables/enemy vehicles/Vehicle%s.xml" % k: shifted(SPORT_ENEMY, dx=0.5, dy=-0.8, dz=2.4)
        for k in ("D1", "D4", "DD2", "DF1")},
-    "Vehicles/ural/ural.xml": URAL,
-    "Vehicles/ural/uraldamaged.xml": URAL,
-    "Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.xml": JEEP,
-    "Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara Damaged.xml": JEEP,
-    "Vehicles/Plymouth Fury/Plymouth Fury.xml": PLYMOUTH,
-    "Vehicles/Plymouth Fury/Plymouth Damaged.xml": PLYMOUTH,
-    "Vehicles/Plymouth Fury/Plymouth Modified.xml": PLYMOUTH,
-    "Vehicles/1974 Dodge Moncaco/1974 Dodge Monaco.xml": DODGE_MONACO,
-    "Vehicles/1974 Dodge Moncaco/1974 Dodge Monaco Damaged.xml": DODGE_MONACO,
-    "Vehicles/1974 Dodge Moncaco/1974 DM Highway Police.xml": DODGE_MONACO,
-    "Vehicles/1974 Dodge Moncaco/1974 DM Highway Police Damaged.xml": DODGE_MONACO,
-    "Vehicles/1969 Mini Cooper S/Mini Cooper.xml": MINI,
-    "Vehicles/1969 Mini Cooper S/Mini Damaged.xml": MINI,
-    "Vehicles/1969 Mini Cooper S/Mini Modified.xml": MINI_MODIFIED,
-    "Vehicles/1963 VW Beetle/1963 VW Beetle.xml": on_body(BEETLE, (0, 0.5, -0.15)),
-    "Vehicles/1963 VW Beetle/VW Beetle Damaged.xml": on_body(BEETLE, (0, 0.5, -0.15)),
-    "Vehicles/1963 VW Beetle/VW Beetle Modified.xml": BEETLE_MODIFIED,
+    "vehicles/cars/ural/ural.xml": URAL,
+    "vehicles/cars/ural/uraldamaged.xml": URAL,
+    "vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.xml": JEEP,
+    "vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara Damaged.xml": JEEP,
+    "vehicles/cars/Plymouth Fury/Plymouth Fury.xml": PLYMOUTH,
+    "vehicles/cars/Plymouth Fury/Plymouth Damaged.xml": PLYMOUTH,
+    "vehicles/cars/Plymouth Fury/Plymouth Modified.xml": PLYMOUTH,
+    "vehicles/cars/1974 Dodge Moncaco/1974 Dodge Monaco.xml": DODGE_MONACO,
+    "vehicles/cars/1974 Dodge Moncaco/1974 Dodge Monaco Damaged.xml": DODGE_MONACO,
+    "vehicles/cars/1974 Dodge Moncaco/1974 DM Highway Police.xml": DODGE_MONACO,
+    "vehicles/cars/1974 Dodge Moncaco/1974 DM Highway Police Damaged.xml": DODGE_MONACO,
+    "vehicles/cars/1969 Mini Cooper S/Mini Cooper.xml": MINI,
+    "vehicles/cars/1969 Mini Cooper S/Mini Damaged.xml": MINI,
+    "vehicles/cars/1969 Mini Cooper S/Mini Modified.xml": MINI_MODIFIED,
+    "vehicles/cars/1963 VW Beetle/1963 VW Beetle.xml": on_body(BEETLE, (0, 0.5, -0.15)),
+    "vehicles/cars/1963 VW Beetle/VW Beetle Damaged.xml": on_body(BEETLE, (0, 0.5, -0.15)),
+    "vehicles/cars/1963 VW Beetle/VW Beetle Modified.xml": BEETLE_MODIFIED,
     # Cadillacs (no official counterpart). cadillace80 / abandonedeldorado point at .vox files that don't exist and
     # are used nowhere: skipped. Destroyed variants are static wrecks.
-    "Vehicles/cadillacsd80/cadillacsd80.xml": on_body(CADILLAC_SEDAN, (0, 0.2, -0.15)),
-    "Vehicles/cadillacsd80/cadillacsd80 Damaged.xml": on_body(CADILLAC_SEDAN, (0, 0.2, -0.15)),
-    "Vehicles/cadillacsd80/abandonedsedan.xml": CADILLAC_SEDAN_ABANDONED,
-    "Vehicles/cadillacfbl80/cadillacfbl80.xml": on_body(CADILLAC_LIMO, (0, 0.2, -0.15)),
-    "Vehicles/cadillacfbl80/cadillacfbl80Damaged.xml": on_body(CADILLAC_LIMO, (0, 0.2, -0.15)),
-    "Vehicles/cadillacfbl80/abandonedlimousine.xml": CADILLAC_LIMO_ABANDONED,
-    "Vehicles/stationwagon/station_wagon_brown.xml": official("generic_stationwagon_blue_dark.xml"),
-    "Vehicles/stationwagon/station_wagon_brown damaged.xml": official("generic_stationwagon_blue_dark.xml"),
-    "main/AS350/AS350_MILITARY.xml": AS350,
-    "main/AS350/AS350_CIV.xml": AS350,
-    "main/AS350/AS350_VIP.xml": AS350,
-    "main/AS350/AS350_INSURGENT.xml": AS350_INSURGENT,
+    "vehicles/cars/cadillacsd80/cadillacsd80.xml": on_body(CADILLAC_SEDAN, (0, 0.2, -0.15)),
+    "vehicles/cars/cadillacsd80/cadillacsd80 Damaged.xml": on_body(CADILLAC_SEDAN, (0, 0.2, -0.15)),
+    "vehicles/cars/cadillacsd80/abandonedsedan.xml": CADILLAC_SEDAN_ABANDONED,
+    "vehicles/cars/cadillacfbl80/cadillacfbl80.xml": on_body(CADILLAC_LIMO, (0, 0.2, -0.15)),
+    "vehicles/cars/cadillacfbl80/cadillacfbl80Damaged.xml": on_body(CADILLAC_LIMO, (0, 0.2, -0.15)),
+    "vehicles/cars/cadillacfbl80/abandonedlimousine.xml": CADILLAC_LIMO_ABANDONED,
+    "vehicles/cars/stationwagon/station_wagon_brown.xml": official("generic_stationwagon_blue_dark.xml"),
+    "vehicles/cars/stationwagon/station_wagon_brown damaged.xml": official("generic_stationwagon_blue_dark.xml"),
+    "vehicles/aircraft/AS350/AS350_MILITARY.xml": AS350,
+    "vehicles/aircraft/AS350/AS350_CIV.xml": AS350,
+    "vehicles/aircraft/AS350/AS350_VIP.xml": AS350,
+    "vehicles/aircraft/AS350/AS350_INSURGENT.xml": AS350_INSURGENT,
 }
 
 
@@ -1112,7 +1112,7 @@ def patch_text(text, prefab, rigs, embedded, replace=False, vehicle_name=None):
     elif embedded:
         for m in re.finditer(r'<group name="instance=MOD/%s"' % re.escape(prefab), text):
             starts.append(m.end())
-        # copies marked by a tag instead (roadblock3 / test.xml offroads: <vehicle tags="... path=MOD/<prefab>">)
+        # copies marked by a tag instead (roadblock3 / dev/levels/test.xml offroads: <vehicle tags="... path=MOD/<prefab>">)
         for m in re.finditer(r'<vehicle\b[^>]*\btags="[^"]*\bpath=MOD/%s[" ]' % re.escape(prefab), text):
             starts.append(m.start())
         starts.sort()
@@ -1176,7 +1176,7 @@ def patch_text(text, prefab, rigs, embedded, replace=False, vehicle_name=None):
 # shown by the user as a reference), tags player_nogears / player_nosteeringwheel (data/script/player_locomotion.lua).
 # The look-back comes from the drive input (GetVehicleDrive < -0.5): Heli.lua holds DriveVehicle at 0 while piloted.
 WRAP_VEHICLE = {
-    'file="MOD/main/AS350/script/Heli.lua"':
+    'file="MOD/vehicles/aircraft/AS350/script/Heli.lua"':
         '<vehicle name="AS350" tags="player_nogears player_nosteeringwheel" sound="0" topspeed="0" acceleration="0">',
 }
 
@@ -1221,7 +1221,7 @@ def wrap_text(text):
 # rotor): beside the pilot door, ~1 m outside the left skid (body +x), near the ground; clear of the AAF gun (left
 # pylon, behind the door) and the Insurgent door gun (ahead of it). Body coordinates, nose at +z.
 VEHICLE_EXITS = {
-    'file="MOD/main/AS350/script/Heli.lua"':
+    'file="MOD/vehicles/aircraft/AS350/script/Heli.lua"':
         ('<body name="Heli"', '<location name="exit" tags="exit" pos="1.9 0.4 0.4" rot="0.0 -90.0 0.0"/>'),
 }
 
@@ -1255,12 +1255,12 @@ def exit_text(text, done=0):
 # Gun emplacements (2026-11-13, user: only the "Use mounted gun" prompt on the Kornet / AGS-30 tripods). As vehicles
 # the game showed its own "Enter vehicle" prompt on every part without an interact tag, at each part's own place
 # (hud.lua): the <vehicle> becomes a <group> with the same name / tags / pos / rot, so they are plain objects and
-# scripts/MountedGun.lua uses the chassis body instead of a vehicle. Rebuilt from git each run (gunner place
+# vehicles/MountedGun.lua uses the chassis body instead of a vehicle. Rebuilt from git each run (gunner place
 # inserted while it is still a vehicle, then converted).
 EMPLACEMENT_BASE = "cfa00f1"  # "phase 4": both files as in the original mod (normalized to LF)
 EMPLACEMENTS = {
-    "avf/prefabs/turrets/Kornet.xml": [gunner(1, (-0.05, 0.4, 1.25), (-0.05, 2.6, 0.8))],
-    "avf/prefabs/turrets/ags30.xml": [gunner(1, (-0.05, 0.4, 1.2), (-0.05, 1.85, 0.7))],
+    "vehicles/avf/prefabs/turrets/Kornet.xml": [gunner(1, (-0.05, 0.4, 1.25), (-0.05, 2.6, 0.8))],
+    "vehicles/avf/prefabs/turrets/ags30.xml": [gunner(1, (-0.05, 0.4, 1.2), (-0.05, 1.85, 0.7))],
 }
 
 

@@ -1,0 +1,79 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/ural/ural.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="ZILTruck" tags="Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" sound="dumptruck .875" spring="0.7" damping="0.9" topspeed="95" acceleration="0.09" strength="5" antiroll="0.2" difflock="1" steerassist="0.1" friction="1.2">
+			<body pos="0.0 0.95 -0.25" dynamic="true">
+				<vox pos="0.05 -0.7 0.15" rot="0 180" texture="8 .2" blendtexture="5 .4" density="1.2" strength="2" file="MOD/vehicles/cars/ural/ural.vox" object="body">
+					<light pos="-0.9 0.8 3.1" type="cone" color="1 .9 .8" scale="60" angle="60" penumbra="30" unshadowed=".2" fogscale="0.1" glare=".3"/>
+					<light pos="1.0 0.8 3.1" type="cone" color="1 .9 .8" scale="60" angle="60" penumbra="30" unshadowed=".2" fogscale="0.1" glare=".3"/>
+					<location tags="exhaust" pos=".45 .25 -3" rot="180"/>
+					<location tags="vital" pos=".05 1.1 2.45"/>
+					<location tags="player" pos=".45 1.8 .8"/>
+					<location tags="camera" pos="0.05 2.3 0.0"/>
+					<light pos="1.05 .5 -3.4" rot="180" type="area" color=".7 .2 .2" size=".3 .2"/>
+					<light pos="-.95 .5 -3.4" rot="180" type="area" color=".7 .2 .2" size=".3 .2"/>
+					<location tags="exit" pos="1.7 0.5 0.5"/>
+				</vox>
+				<vox pos="-0.75 0.1 -0.85" rot="0 180" texture="8 .2" blendtexture="5 .4" density="1.2" strength="2" prop="true" file="MOD/vehicles/cars/ural/ural.vox" object="door">
+					<joint pos=".05 .2 .5" rot="90" type="hinge" rotstrength=".01" rotspring="0" limits="0 100" sound="true"/>
+					<joint tags="door" pos="0.05 0.6 0.5" rot="90" type="hinge" rotstrength=".01" rotspring="0" limits="0 100" sound="true"/>
+				</vox>
+				<vox pos="0.85 0.1 -0.85" rot="0 180" texture="8 .2" blendtexture="5 .4" density="1.2" strength="2" prop="true" file="MOD/vehicles/cars/ural/ural.vox" object="door">
+					<joint pos=".05 .2 .5" rot="-90" type="hinge" rotstrength=".01" rotspring="0" limits="0 100" sound="true"/>
+					<joint tags="door" pos="0.05 0.6 0.5" rot="-90" type="hinge" rotstrength=".01" rotspring="0" limits="0 100" sound="true"/>
+				</vox>
+				<wheel name="fl" pos="0.95 -0.5 -2.25" drive="1" steer="1">
+					<vox pos=".1 -.45 .05" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+				<wheel name="fr" pos="-0.95 -0.5 -2.25" drive="1" steer="1">
+					<vox pos="-.1 -.45 -.05" rot="0 180" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+				<wheel name="bl" pos="0.95 -0.5 1.45" drive="1" steer="0">
+					<vox pos=".1 -.45 .05" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+				<wheel name="br" pos="-0.95 -0.5 1.45" drive="1" steer="0">
+					<vox pos="-.1 -.45 -.05" rot="0 180" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+				<wheel name="bbl" pos="0.95 -0.5 2.75" drive="1" steer="0">
+					<vox pos=".1 -.45 .05" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+				<wheel name="bbr" pos="-0.95 -0.5 2.75" drive="1" steer="0">
+					<vox pos="-.1 -.45 -.05" rot="0 180" blendtexture="5 .4" file="MOD/vehicles/cars/ural/ural.vox" object="wheel"/>
+				</wheel>
+			</body>
+			<rig name="driver" tags="driver sort=0" pos="-0.35 1.4 -0.95">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.35 -0.5" rot="0.0 90 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.35 -0.5" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.35 -0.5" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.4 1.4 -0.95">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=2" pos="-0.9 1.7 1" rot="0.0 -90 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.45" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.45" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=3" pos="0.85 1.7 1.8" rot="0.0 90 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.45" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.45" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+		</vehicle>
+	</group>
+</prefab>
+

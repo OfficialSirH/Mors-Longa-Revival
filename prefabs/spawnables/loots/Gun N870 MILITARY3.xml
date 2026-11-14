@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun N870 MILITARY3.xml" pos="-7.214 0.2 5.7" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-m870.xml">
+		<group name="instance=MOD/items/Loots/gun-m870.xml">
 			<body name="N870" tags="Loot=gun-m870_N870_mag1_Internal_8_8_12ga_holo--removed-grip1-side2- interact=N870 unbreakable" pos="0.0 0.15 0.0" dynamic="true">
 				<group name="Wood" prop0="color=.2 .2 .2" prop1="material=wood">
 					<voxbox pos="-0.06 -0.09 0.25" size="1 1 3">

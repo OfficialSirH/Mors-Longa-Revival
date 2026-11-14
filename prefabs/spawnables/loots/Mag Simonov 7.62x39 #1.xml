@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Mag Simonov 7.62 #1.xml" pos="8.0 0.3 -7.5" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Loots/mag1-ak-762x39.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/items/Loots/mag1-ak-762x39.xml"/>
 	</group>
 </prefab>
 

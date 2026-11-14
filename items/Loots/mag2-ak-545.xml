@@ -1,0 +1,43 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/mag2-ak-545.xml" pos="0.0 0.8 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=mag2-ak-545_Simonov-77_77_77_5.45 interact=Simonov-77 unbreakable" pos="0 .15" dynamic="true">
+			<group prop0="color=.2 .2 .2" prop1="material=metal">
+				<voxbox pos="-.05 -.15 -.075" size="1 2 1"/>
+				<voxbox pos="-0.05 -0.15 -0.045" size="1 2 1"/>
+				<group pos=".05 -.15 -.075" rot="0 0 45">
+					<voxbox size="1 1 1"/>
+					<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+					<group pos=".1" rot="0 0 45">
+						<voxbox size="1 1 1"/>
+						<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+						<group pos=".1" rot="0 0 45">
+							<voxbox size="1 1 1"/>
+							<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+							<group pos=".1" rot="0 0 45">
+								<voxbox size="1 1 1"/>
+								<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+								<group pos=".1" rot="0 0 45">
+									<voxbox size="1 1 1"/>
+									<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+									<group pos=".1" rot="0 0 45">
+										<voxbox size="1 1 1"/>
+										<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+										<group pos=".1" rot="0 0 45">
+											<voxbox size="1 1 1"/>
+											<voxbox pos="0.0 0.0 0.03" size="1 1 1"/>
+										</group>
+									</group>
+								</group>
+								<group pos=".1" rot="-170 180">
+									<voxbox size="1 1 1"/>
+									<voxbox pos="-0.0 0.0 0.03" size="1 1 1"/>
+								</group>
+							</group>
+						</group>
+					</group>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

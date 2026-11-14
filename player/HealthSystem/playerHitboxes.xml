@@ -1,0 +1,12 @@
+<!-- <prefab version="1.5.4">
+	<group name="instance=MOD/player/HealthSystem/playerHitboxes.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+        <script file="MOD/player/HealthSystem/AdvancedHealthScript.lua">
+            <trigger tags="hitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
+            <trigger tags="hitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+            <trigger tags="hitbox=LLEG QueriedDamage=0 LLEG" pos="0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+            <trigger tags="hitbox=RARM QueriedDamage=0" pos="-0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+            <trigger tags="hitbox=RLEG QueriedDamage=0 RLEG" pos="-0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+            <trigger tags="hitbox=TORSO QueriedDamage=0 TORSO" pos="0.0 0.8 0.0" type="box" size=".5 .6 .3"/>
+        </script>
+    </group>
+</prefab> -->

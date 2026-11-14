@@ -1,0 +1,10 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/weapons/guns/bullet.xml" pos="-12.95 0.65 -13.25" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 0.0" dynamic="true">
+			<voxbox pos="-0.05 -0.05 -0.05" rot="0.0 0.0 0.0" size="1 1 1">
+				<vox pos="0.05 0.025 0.05" rot="0.0 0.0 0.0" file="MOD/assets/vox/bullet.vox" object="bullet" scale="0.05"/>
+			</voxbox>
+		</body>
+	</group>
+</prefab>
+

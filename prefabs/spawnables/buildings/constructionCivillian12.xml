@@ -3,201 +3,201 @@
 		<group pos="6.6 0.0 6.2">
 			<compound pos="-0.1 0.0 -9.0">
 				<group pos="-0.5 0.0 -0.0">
-					<voxbox pos="11.2 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 48" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="6.3 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="2.2 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-3.3 0.3 -0.1" rot="0.0 0.0 0.0" size="20 22 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-					<voxbox pos="-7.4 0.3 -0.1" rot="0.0 0.0 0.0" size="20 22 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-					<voxbox pos="3.7 1.2 -0.1" rot="0.0 0.0 0.0" size="5 13 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-					<voxbox pos="2.3 1.2 -0.1" rot="0.0 0.0 0.0" size="5 13 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-					<voxbox pos="2.9 1.2 -0.1" rot="0.0 0.0 0.0" size="7 13 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-					<voxbox pos="-3.4 0.3 -0.2" rot="0.0 0.0 0.0" size="1 22 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-5.4 0.3 -0.2" rot="0.0 0.0 0.0" size="1 22 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-10.1 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="11.1 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="11.1 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 47" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="4.5 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 11 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="4.5 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 12 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 1.1 0.1" rot="0.0 -90.0 90.0" size="1 2 23" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 0.2 0.2" rot="0.0 -90.0 90.0" size="0 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 2.5 0.2" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-5.3 2.5 0.2" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 2.5 0.1" rot="0.0 -90.0 90.0" size="1 2 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 1 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="-1.3 2.9 -0.1" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="-3.4 2.6 -0.1" rot="0.0 -90.0 0.0" size="2 5 40" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="-3.4 2.6 0.1" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-3.4 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 2.6 0.1" rot="0.0 -90.0 0.0" size="1 5 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="5.8 2.6 -0.1" rot="0.0 -90.0 0.0" size="2 5 35" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="6.3 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.5 0.0 0.1" rot="0.0 -90.0 0.0" size="1 12 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="6.3 2.6 0.1" rot="0.0 -90.0 0.0" size="1 4 40" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 2.5 0.1" rot="0.0 -90.0 0.0" size="1 1 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="11.2 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 48" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="3.6 1.2 -0.2" rot="0.0 0.0 0.0" size="1 14 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="2.8 1.2 -0.2" rot="0.0 0.0 0.0" size="1 14 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 0.0 -0.1" rot="0.0 90.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.2 0.0 0.2" rot="0.0 90.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="2.2 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 34" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="2.2 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 34" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="2.2 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 34" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-1.3 0.0 0.1" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-7.5 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-7.5 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 25" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-7.5 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 25" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="-7.5 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 25" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="11.2 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 48" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="6.3 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="2.2 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-3.3 0.3 -0.1" rot="0.0 0.0 0.0" size="20 22 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="-7.4 0.3 -0.1" rot="0.0 0.0 0.0" size="20 22 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="3.7 1.2 -0.1" rot="0.0 0.0 0.0" size="5 13 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="2.3 1.2 -0.1" rot="0.0 0.0 0.0" size="5 13 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="2.9 1.2 -0.1" rot="0.0 0.0 0.0" size="7 13 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="-3.4 0.3 -0.2" rot="0.0 0.0 0.0" size="1 22 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-5.4 0.3 -0.2" rot="0.0 0.0 0.0" size="1 22 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-10.1 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="11.1 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="11.1 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 47" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="4.5 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 11 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="4.5 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 12 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 1.1 0.1" rot="0.0 -90.0 90.0" size="1 2 23" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 0.2 0.2" rot="0.0 -90.0 90.0" size="0 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 2.5 0.2" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-5.3 2.5 0.2" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 2.5 0.1" rot="0.0 -90.0 90.0" size="1 2 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 1 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="-1.3 2.9 -0.1" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="-3.4 2.6 -0.1" rot="0.0 -90.0 0.0" size="2 5 40" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="-3.4 2.6 0.1" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-3.4 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 2.6 0.1" rot="0.0 -90.0 0.0" size="1 5 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="5.8 2.6 -0.1" rot="0.0 -90.0 0.0" size="2 5 35" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="6.3 2.6 -0.2" rot="0.0 -90.0 0.0" size="1 5 40" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.5 0.0 0.1" rot="0.0 -90.0 0.0" size="1 12 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="6.3 2.6 0.1" rot="0.0 -90.0 0.0" size="1 4 40" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 2.5 0.1" rot="0.0 -90.0 0.0" size="1 1 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="11.2 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 48" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="3.6 1.2 -0.2" rot="0.0 0.0 0.0" size="1 14 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="2.8 1.2 -0.2" rot="0.0 0.0 0.0" size="1 14 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 0.0 -0.1" rot="0.0 90.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.2 0.0 0.2" rot="0.0 90.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="2.2 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 34" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="2.2 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 34" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="2.2 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 34" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-1.3 0.0 0.1" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-7.5 0.0 -0.2" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-7.5 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 31 25" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-7.5 0.0 -0.1" rot="0.0 -90.0 0.0" size="2 31 25" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="-7.5 0.0 0.1" rot="0.0 -90.0 0.0" size="1 31 25" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 					<group pos="5.4 0.1 -0.0" rot="0.0 -90.0 0.0">
-						<voxbox pos="0.2 0.0 0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 -0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.3 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.3 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.2 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.3 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 2.4 -0.9" rot="0.0 0.0 90.0" size="1 4 17" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 -0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.3 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.3 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.2 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.3 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 2.4 -0.9" rot="0.0 0.0 90.0" size="1 4 17" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
 					</group>
 					<group pos="-4.4 0.1 0.0" rot="0.0 -90.0 0.0">
-						<voxbox pos="0.2 0.0 0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 -0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.3 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.3 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="-0.2 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.3 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-						<voxbox pos="0.2 2.4 -0.9" rot="0.0 0.0 90.0" size="1 4 17" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 -0.8" rot="0.0 -90.0 90.0" size="24 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.3 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.3 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 -0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="-0.2 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.3 2.5 -1.0" rot="0.0 0.0 90.0" size="1 0 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 0.0 0.9" rot="0.0 -180.0 90.0" size="25 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+						<voxbox pos="0.2 2.4 -0.9" rot="0.0 0.0 90.0" size="1 4 17" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
 					</group>
-					<voxbox pos="-5.3 0.2 0.2" rot="0.0 -90.0 90.0" size="0 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-5.3 0.0 0.1" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-5.3 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-5.3 0.2 0.2" rot="0.0 -90.0 90.0" size="0 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-5.3 0.0 0.1" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-5.3 0.0 -0.2" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 				</group>
 			</compound>
 			<group pos="10.4 0.0 -7.3">
-				<voxbox pos="0.1 0.0 -1.5" rot="0.0 0.0 0.0" size="1 31 179" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-0.1 0.0 -1.5" rot="0.0 0.0 0.0" size="2 31 179" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-				<voxbox pos="-0.2 0.0 -1.5" rot="0.0 0.0 0.0" size="1 31 176" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="0.2 0.0 16.4" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.1 0.0 -1.5" rot="0.0 0.0 0.0" size="1 31 179" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-0.1 0.0 -1.5" rot="0.0 0.0 0.0" size="2 31 179" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+				<voxbox pos="-0.2 0.0 -1.5" rot="0.0 0.0 0.0" size="1 31 176" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.2 0.0 16.4" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 			</group>
 			<group pos="10.2 0.0 -15.1">
-				<voxbox pos="0.2 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="0.1 0.0 5.9" rot="0.0 180.0 0.0" size="2 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-				<voxbox pos="-0.1 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1">
-					<vox pos="0.1 1.3 5.8" rot="0.0 90.0 0.0" file="MOD/vox/tg_props.vox" object="gas_diploma"/>
+				<voxbox pos="0.2 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.1 0.0 5.9" rot="0.0 180.0 0.0" size="2 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+				<voxbox pos="-0.1 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1">
+					<vox pos="0.1 1.3 5.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/tg_props.vox" object="gas_diploma"/>
 				</voxbox>
-				<voxbox pos="0.2 0.0 -5.9" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.2 0.0 -5.9" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 			</group>
 			<group pos="3.8 0.0 -15.1">
-				<voxbox pos="0.2 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="0.1 0.0 5.9" rot="0.0 180.0 0.0" size="2 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-				<voxbox pos="-0.1 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="0.2 0.0 -5.9" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.2 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.1 0.0 5.9" rot="0.0 180.0 0.0" size="2 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+				<voxbox pos="-0.1 0.0 5.9" rot="0.0 180.0 0.0" size="1 31 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="0.2 0.0 -5.9" rot="0.0 -90.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 			</group>
 			<group pos="-8.8 0.0 9.0">
-				<voxbox pos="-1.5 0.0 0.1" rot="0.0 90.0 0.0" size="2 31 208" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-				<voxbox pos="-1.5 0.0 -0.1" rot="0.0 90.0 0.0" size="1 31 206" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-1.5 0.0 0.2" rot="0.0 90.0 0.0" size="1 31 208" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-1.5 0.0 0.1" rot="0.0 90.0 0.0" size="2 31 208" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+				<voxbox pos="-1.5 0.0 -0.1" rot="0.0 90.0 0.0" size="1 31 206" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-1.5 0.0 0.2" rot="0.0 90.0 0.0" size="1 31 208" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 			</group>
 			<compound pos="-10.5 0.0 0.2">
 				<group pos="-0.9 0.0 5.7" rot="0.0 90.0 0.0">
-					<voxbox pos="14.7 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 53" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="14.7 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 53" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="14.7 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 53" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="9.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="8.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="7.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="6.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1">
-						<voxbox pos="-4.4 0.3 0.1" rot="0.0 0.0 0.0" size="21 25 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-						<voxbox pos="-6.6 0.3 0.1" rot="0.0 0.0 0.0" size="21 25 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-						<voxbox pos="2.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-						<voxbox pos="1.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
-						<voxbox pos="0.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/vox/moedrn homes.vox" object="glass"/>
+					<voxbox pos="14.7 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 53" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="14.7 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 53" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="14.7 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 53" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="8.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="7.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="6.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1">
+						<voxbox pos="-4.4 0.3 0.1" rot="0.0 0.0 0.0" size="21 25 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+						<voxbox pos="-6.6 0.3 0.1" rot="0.0 0.0 0.0" size="21 25 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+						<voxbox pos="2.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+						<voxbox pos="1.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
+						<voxbox pos="0.1 1.0 0.1" rot="0.0 0.0 0.0" size="9 12 2" brush="MOD/assets/vox/moedrn homes.vox" object="glass"/>
 					</voxbox>
-					<voxbox pos="9.3 0.9 1.1" rot="0.0 -90.0 90.0" size="1 4 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="9.3 0.0 0.7" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="9.3 2.2 0.7" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="9.3 2.2 0.8" rot="0.0 -90.0 0.0" size="2 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="9.3 2.2 1.0" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="9.3 0.0 0.8" rot="0.0 -90.0 0.0" size="2 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="9.3 0.0 1.0" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="6.3 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="6.3 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="6.3 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 22" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 0.2 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 0.0 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 2.9 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="4.0 2.8 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 2.9 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 2.9 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="4.0 0.0 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="4.0 0.0 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 0.2 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 0.0 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-0.4 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-3.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 2.9 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 2.8 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 2.9 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="1.8 2.9 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="1.8 0.0 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="1.8 0.0 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-0.4 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 28" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2"/>
-					<voxbox pos="-0.4 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-0.4 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 29" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 0.9 1.1" rot="0.0 -90.0 90.0" size="1 4 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 0.0 0.7" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 2.2 0.7" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 2.2 0.8" rot="0.0 -90.0 0.0" size="2 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="9.3 2.2 1.0" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="9.3 0.0 0.8" rot="0.0 -90.0 0.0" size="2 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="9.3 0.0 1.0" rot="0.0 -90.0 0.0" size="1 9 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="6.3 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="6.3 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="6.3 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 22" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 0.2 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 0.0 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 2.9 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="4.0 2.8 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 2.9 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 2.9 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="4.0 0.0 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="4.0 0.0 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 0.2 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 0.0 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-0.4 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-3.3 0.0 0.7" rot="0.0 0.0 0.0" size="1 31 4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 2.9 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 2.8 1.1" rot="0.0 -90.0 90.0" size="1 4 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 2.9 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="1.8 2.9 0.7" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="1.8 0.0 0.8" rot="0.0 -90.0 0.0" size="2 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="1.8 0.0 1.0" rot="0.0 -90.0 0.0" size="1 2 21" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-0.4 0.0 0.8" rot="0.0 -90.0 0.0" size="2 31 28" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2"/>
+					<voxbox pos="-0.4 0.0 0.7" rot="0.0 -90.0 0.0" size="1 31 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-0.4 0.0 1.0" rot="0.0 -90.0 0.0" size="1 31 29" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 				</group>
 			</compound>
 			<group pos="-0.8 0.0 0.0">
-				<voxbox pos="11.4 3.1 -9.2" rot="0.0 -90.0 0.0" size="1 1 213" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-3.2 0.0 -9.2" rot="0.0 -90.0 0.0" size="4 1 19" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7"/>
-				<voxbox pos="11.4 3.1 9.1" rot="0.0 -90.0 0.0" size="1 1 213" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="11.4 3.1 9.1" rot="0.0 180.0 0.0" size="1 1 182" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-9.8 3.1 9.1" rot="0.0 180.0 0.0" size="1 1 131" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-9.8 3.1 -5.9" rot="0.0 180.0 0.0" size="1 1 32" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-9.9 3.2 1.4" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-9.9 3.7 -3.9" size="1 3 53" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.7 -9.1" size="1 3 31" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="11.3 3.7 -5.3" size="1 3 144" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-0.3 3.7 9.2" rot="0.0 90.0 0.0" size="1 3 116" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.8 3.7 -9.1" rot="0.0 90.0 0.0" size="1 3 158" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.7 -4.0" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-11.4 3.7 -4.0" rot="0.0 -180.0 0.0" size="1 3 51" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.2 -4.0" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-11.5 3.2 -4.0" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-11.5 3.2 -9.2" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-9.9 3.2 -6.0" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-9.9 3.2 -9.2" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="6.0 3.2 -9.2" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="11.3 3.2 -5.4" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="11.3 3.2 9.1" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-0.4 3.2 9.1" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="11.3 3.3 -5.3" size="1 3 144" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.8 3.3 -9.1" rot="0.0 90.0 0.0" size="1 3 158" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.3 -9.1" size="1 3 31" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-11.4 3.3 -4.0" rot="0.0 -180.0 0.0" size="1 3 51" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.3 -3.9" size="1 3 53" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-9.9 3.3 -4.0" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-0.3 3.3 9.2" rot="0.0 90.0 0.0" size="1 3 116" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="11.4 3.1 -9.2" rot="0.0 -90.0 0.0" size="1 1 213" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-3.2 0.0 -9.2" rot="0.0 -90.0 0.0" size="4 1 19" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7"/>
+				<voxbox pos="11.4 3.1 9.1" rot="0.0 -90.0 0.0" size="1 1 213" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="11.4 3.1 9.1" rot="0.0 180.0 0.0" size="1 1 182" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-9.8 3.1 9.1" rot="0.0 180.0 0.0" size="1 1 131" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-9.8 3.1 -5.9" rot="0.0 180.0 0.0" size="1 1 32" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-9.9 3.2 1.4" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-9.9 3.7 -3.9" size="1 3 53" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.7 -9.1" size="1 3 31" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="11.3 3.7 -5.3" size="1 3 144" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-0.3 3.7 9.2" rot="0.0 90.0 0.0" size="1 3 116" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.8 3.7 -9.1" rot="0.0 90.0 0.0" size="1 3 158" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.7 -4.0" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-11.4 3.7 -4.0" rot="0.0 -180.0 0.0" size="1 3 51" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.2 -4.0" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-11.5 3.2 -4.0" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-11.5 3.2 -9.2" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-9.9 3.2 -6.0" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-9.9 3.2 -9.2" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="6.0 3.2 -9.2" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="11.3 3.2 -5.4" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="11.3 3.2 9.1" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-0.4 3.2 9.1" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="11.3 3.3 -5.3" size="1 3 144" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.8 3.3 -9.1" rot="0.0 90.0 0.0" size="1 3 158" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.3 -9.1" size="1 3 31" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-11.4 3.3 -4.0" rot="0.0 -180.0 0.0" size="1 3 51" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.3 -3.9" size="1 3 53" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-9.9 3.3 -4.0" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-0.3 3.3 9.2" rot="0.0 90.0 0.0" size="1 3 116" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
 			</group>
 			<group>
-				<voxbox pos="10.2 0.0 2.6" rot="0.0 -90.0 0.0" size="2 31 77" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2">
-					<voxbox pos="-0.1 0.0 -0.1" rot="0.0 0.0 0.0" size="1 31 81" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="0.2 0.0 0.0" rot="0.0 0.0 0.0" size="1 31 76" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="10.2 0.0 2.6" rot="0.0 -90.0 0.0" size="2 31 77" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2">
+					<voxbox pos="-0.1 0.0 -0.1" rot="0.0 0.0 0.0" size="1 31 81" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="0.2 0.0 0.0" rot="0.0 0.0 0.0" size="1 31 76" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 				</voxbox>
-				<voxbox pos="2.3 0.0 2.6" rot="0.0 0.0 0.0" size="2 31 62" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece2">
-					<voxbox pos="-0.1 0.0 -0.1" rot="0.0 0.0 0.0" size="1 31 63" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="0.2 0.0 0.2" rot="0.0 0.0 0.0" size="1 31 60" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="2.3 0.0 2.6" rot="0.0 0.0 0.0" size="2 31 62" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece2">
+					<voxbox pos="-0.1 0.0 -0.1" rot="0.0 0.0 0.0" size="1 31 63" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="0.2 0.0 0.2" rot="0.0 0.0 0.0" size="1 31 60" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 				</voxbox>
 			</group>
 		</group>
-		<voxagon pos="-3.1 0.0 -1.6" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
+		<voxagon pos="-3.1 0.0 -1.6" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
 			<vertex pos="-0.7 11.2"/>
 			<vertex pos="-0.6 -1.0"/>
 			<vertex pos="3.9 -1.0"/>
@@ -219,7 +219,7 @@
 			<vertex pos="1.3 16.9"/>
 			<vertex pos="-0.6 17.0"/>
 		</voxagon>
-		<voxagon pos="-3.1 3.0 -1.6" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece4" extrude="1">
+		<voxagon pos="-3.1 3.0 -1.6" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece4" extrude="1">
 			<vertex pos="-0.6 -1.0"/>
 			<vertex pos="3.9 -1.0"/>
 			<vertex pos="4.0 -1.3"/>
@@ -231,7 +231,7 @@
 			<vertex pos="1.3 16.9"/>
 			<vertex pos="-0.6 17.0"/>
 		</voxagon>
-		<voxagon pos="-3.1 3.1 -1.6" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
+		<voxagon pos="-3.1 3.1 -1.6" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
 			<vertex pos="-0.9 3.8"/>
 			<vertex pos="-2.5 3.8"/>
 			<vertex pos="-2.5 1.9"/>
@@ -251,15 +251,15 @@
 			<vertex pos="-0.9 16.9"/>
 		</voxagon>
 		<group pos="-10.7 0.0 15.2">
-			<vox pos="3.4 0.0 0.0" rot="0.0 1.2 0.0" file="MOD/vox/moedrn homes.vox" object="high-wall-metal"/>
-			<vox pos="-2.9 0.0 -0.3" rot="0.0 -6.9 0.0" file="MOD/vox/moedrn homes.vox" object="high-wall-metal"/>
-			<vox pos="-6.3 0.0 -0.7" file="MOD/vox/moedrn homes.vox" object="high-pillar"/>
-			<vox pos="6.3 0.0 0.0" file="MOD/vox/moedrn homes.vox" object="high-pillar"/>
-			<vox pos="-6.3 0.0 -30.3" file="MOD/vox/moedrn homes.vox" object="high-pillar"/>
-			<vox pos="-4.2 0.0 -27.4" file="MOD/vox/moedrn homes.vox" object="building1w"/>
-			<vox pos="25.2 3.2 -16.3" rot="0.0 -90.0 0.0" file="MOD/vox/moedrn homes.vox" object="building1w1"/>
-			<vox pos="11.4 3.2 -3.7" rot="0.0 90.0 0.0" file="MOD/vox/moedrn homes.vox" object="building3">
-				<voxagon pos="-2.5 2.5 -3.4" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
+			<vox pos="3.4 0.0 0.0" rot="0.0 1.2 0.0" file="MOD/assets/vox/moedrn homes.vox" object="high-wall-metal"/>
+			<vox pos="-2.9 0.0 -0.3" rot="0.0 -6.9 0.0" file="MOD/assets/vox/moedrn homes.vox" object="high-wall-metal"/>
+			<vox pos="-6.3 0.0 -0.7" file="MOD/assets/vox/moedrn homes.vox" object="high-pillar"/>
+			<vox pos="6.3 0.0 0.0" file="MOD/assets/vox/moedrn homes.vox" object="high-pillar"/>
+			<vox pos="-6.3 0.0 -30.3" file="MOD/assets/vox/moedrn homes.vox" object="high-pillar"/>
+			<vox pos="-4.2 0.0 -27.4" file="MOD/assets/vox/moedrn homes.vox" object="building1w"/>
+			<vox pos="25.2 3.2 -16.3" rot="0.0 -90.0 0.0" file="MOD/assets/vox/moedrn homes.vox" object="building1w1"/>
+			<vox pos="11.4 3.2 -3.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/moedrn homes.vox" object="building3">
+				<voxagon pos="-2.5 2.5 -3.4" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece3" extrude="1">
 					<vertex pos="-1.3 -0.8"/>
 					<vertex pos="-1.3 -1.3"/>
 					<vertex pos="6.3 -1.3"/>
@@ -270,46 +270,46 @@
 					<vertex pos="6.3 8.1"/>
 					<vertex pos="-1.3 8.1"/>
 				</voxagon>
-				<voxbox pos="5.4 -0.1 4.8" rot="0.0 -180.0 0.0" size="15 27 28" brush="MOD/vox/moedrn homes.vox" object="staro">
-					<voxbox pos="-0.1 0.0 0.2" rot="0.0 0.0 0.0" size="1 27 42" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-					<voxbox pos="-0.1 0.0 4.5" rot="0.0 90.0 0.0" size="1 27 16" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="5.4 -0.1 4.8" rot="0.0 -180.0 0.0" size="15 27 28" brush="MOD/assets/vox/moedrn homes.vox" object="staro">
+					<voxbox pos="-0.1 0.0 0.2" rot="0.0 0.0 0.0" size="1 27 42" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+					<voxbox pos="-0.1 0.0 4.5" rot="0.0 90.0 0.0" size="1 27 16" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 				</voxbox>
-				<voxbox pos="-3.8 2.5 4.8" rot="0.0 -180.0 0.0" size="1 1 96" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-3.8 2.5 4.8" rot="0.0 90.0 0.0" size="1 1 77" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="3.9 2.5 4.7" rot="0.0 -180.0 0.0" size="1 1 27" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="3.9 2.5 0.4" rot="0.0 -180.0 0.0" size="1 1 52" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="3.8 2.5 -4.8" rot="0.0 -90.0 0.0" size="1 1 76" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-				<voxbox pos="-3.9 2.6 4.7" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="3.8 2.6 4.7" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="3.8 2.6 0.3" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="5.4 2.6 0.3" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="5.4 2.6 4.5" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="3.8 2.6 2.0" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-3.9 2.6 -4.8" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="3.8 2.6 -4.8" size="1 8 1" brush="MOD/vox/moedrn homes.vox" object="fence 2"/>
-				<voxbox pos="-3.9 3.1 -4.7" size="1 3 94" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-3.8 3.1 -4.7" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-3.8 3.1 4.8" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="3.9 3.1 4.7" rot="0.0 -180.0 0.0" size="1 3 26" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="5.5 3.1 4.5" rot="0.0 -180.0 0.0" size="1 3 41" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="5.4 3.1 0.3" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="3.9 3.1 0.3" rot="0.0 -180.0 0.0" size="1 3 50" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-3.8 2.7 4.8" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="5.5 2.7 4.5" rot="0.0 -180.0 0.0" size="1 3 41" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="3.9 2.7 4.7" rot="0.0 -180.0 0.0" size="1 3 26" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="3.9 2.7 0.3" rot="0.0 -180.0 0.0" size="1 3 50" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="5.4 2.7 0.3" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-3.8 2.7 -4.7" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
-				<voxbox pos="-3.9 2.7 -4.7" size="1 3 94" brush="MOD/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.8 2.5 4.8" rot="0.0 -180.0 0.0" size="1 1 96" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-3.8 2.5 4.8" rot="0.0 90.0 0.0" size="1 1 77" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="3.9 2.5 4.7" rot="0.0 -180.0 0.0" size="1 1 27" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="3.9 2.5 0.4" rot="0.0 -180.0 0.0" size="1 1 52" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="3.8 2.5 -4.8" rot="0.0 -90.0 0.0" size="1 1 76" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+				<voxbox pos="-3.9 2.6 4.7" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="3.8 2.6 4.7" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="3.8 2.6 0.3" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="5.4 2.6 0.3" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="5.4 2.6 4.5" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="3.8 2.6 2.0" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-3.9 2.6 -4.8" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="3.8 2.6 -4.8" size="1 8 1" brush="MOD/assets/vox/moedrn homes.vox" object="fence 2"/>
+				<voxbox pos="-3.9 3.1 -4.7" size="1 3 94" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.8 3.1 -4.7" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.8 3.1 4.8" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="3.9 3.1 4.7" rot="0.0 -180.0 0.0" size="1 3 26" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="5.5 3.1 4.5" rot="0.0 -180.0 0.0" size="1 3 41" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="5.4 3.1 0.3" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="3.9 3.1 0.3" rot="0.0 -180.0 0.0" size="1 3 50" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.8 2.7 4.8" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="5.5 2.7 4.5" rot="0.0 -180.0 0.0" size="1 3 41" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="3.9 2.7 4.7" rot="0.0 -180.0 0.0" size="1 3 26" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="3.9 2.7 0.3" rot="0.0 -180.0 0.0" size="1 3 50" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="5.4 2.7 0.3" rot="0.0 -90.0 0.0" size="1 3 15" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.8 2.7 -4.7" rot="0.0 90.0 0.0" size="1 3 76" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
+				<voxbox pos="-3.9 2.7 -4.7" size="1 3 94" brush="MOD/assets/vox/moedrn homes.vox" object="fence 1"/>
 			</vox>
-			<vox pos="10.4 0.0 -30.3" file="MOD/vox/moedrn homes.vox" object="high-pillar"/>
-			<voxbox pos="-6.5 0.0 -1.0" rot="0.0 90.0 0.0" size="290 24 4" brush="MOD/vox/moedrn homes.vox" object="high-wall-metal"/>
-			<voxbox pos="5.1 0.0 -18.2" rot="0.0 0.0 0.0" size="15 27 28" brush="MOD/vox/moedrn homes.vox" object="staro"/>
-			<voxbox pos="5.1 2.6 -15.4" rot="0.0 0.0 0.0" size="15 6 5" brush="MOD/vox/moedrn homes.vox" object="staro" offset="0 0 2"/>
-			<voxbox pos="-6.0 0.0 -30.5" rot="0.0 0.0 0.0" size="162 24 4" brush="MOD/vox/moedrn homes.vox" object="high-wall-metal"/>
-			<voxbox pos="5.0 0.0 -18.2" rot="0.0 0.0 0.0" size="1 32 53" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-			<voxbox pos="5.1 0.0 -12.9" rot="0.0 90.0 0.0" size="1 32 15" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-			<voxagon pos="-5.1 0.0 -2.2" brush="MOD/vox/moedrn homes.vox" object="farm1" extrude="2">
+			<vox pos="10.4 0.0 -30.3" file="MOD/assets/vox/moedrn homes.vox" object="high-pillar"/>
+			<voxbox pos="-6.5 0.0 -1.0" rot="0.0 90.0 0.0" size="290 24 4" brush="MOD/assets/vox/moedrn homes.vox" object="high-wall-metal"/>
+			<voxbox pos="5.1 0.0 -18.2" rot="0.0 0.0 0.0" size="15 27 28" brush="MOD/assets/vox/moedrn homes.vox" object="staro"/>
+			<voxbox pos="5.1 2.6 -15.4" rot="0.0 0.0 0.0" size="15 6 5" brush="MOD/assets/vox/moedrn homes.vox" object="staro" offset="0 0 2"/>
+			<voxbox pos="-6.0 0.0 -30.5" rot="0.0 0.0 0.0" size="162 24 4" brush="MOD/assets/vox/moedrn homes.vox" object="high-wall-metal"/>
+			<voxbox pos="5.0 0.0 -18.2" rot="0.0 0.0 0.0" size="1 32 53" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+			<voxbox pos="5.1 0.0 -12.9" rot="0.0 90.0 0.0" size="1 32 15" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+			<voxagon pos="-5.1 0.0 -2.2" brush="MOD/assets/vox/moedrn homes.vox" object="farm1" extrude="2">
 				<vertex pos="-1.0 -19.8"/>
 				<vertex pos="5.2 -17.6"/>
 				<vertex pos="5.4 2.1"/>
@@ -753,8 +753,8 @@
 						<vox pos="-0.38 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3"/>
 					</group>
 				</group>
-				<vox pos="2.8 0.1 0.9" rot="0.0 90.0 0.0" file="MOD/vox/sleepinbag.vox" object="Grave"/>
-				<vox pos="2.8 0.1 -1.9" rot="0.0 110.0 0.0" file="MOD/vox/sleepinbag.vox" object="Grave"/>
+				<vox pos="2.8 0.1 0.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/sleepinbag.vox" object="Grave"/>
+				<vox pos="2.8 0.1 -1.9" rot="0.0 110.0 0.0" file="MOD/assets/vox/sleepinbag.vox" object="Grave"/>
 			</voxagon>
 		</group>
 		<group name="Enemy" pos="10.8 0.0 -21.1">
@@ -768,16 +768,16 @@
 			<instance pos="-16.4 0.4 12.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemySecurity.xml"/>
 		</group>
 		<group pos="13.6 0.0 -8.9">
-			<voxbox pos="-3.0 0.0 -5.9" size="61 1 118" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece4"/>
-			<voxbox pos="-3.3 3.1 -5.8" size="66 1 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece4"/>
-			<voxbox pos="-3.4 3.1 -5.8" size="1 1 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-			<voxbox pos="3.3 3.1 -5.8" size="1 1 117" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
-			<voxbox pos="-3.4 3.1 -5.9" size="68 1 1" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece1"/>
+			<voxbox pos="-3.0 0.0 -5.9" size="61 1 118" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece4"/>
+			<voxbox pos="-3.3 3.1 -5.8" size="66 1 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece4"/>
+			<voxbox pos="-3.4 3.1 -5.8" size="1 1 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+			<voxbox pos="3.3 3.1 -5.8" size="1 1 117" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
+			<voxbox pos="-3.4 3.1 -5.9" size="68 1 1" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece1"/>
 			<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg37.xml" pos="1.6 0.0 -1.1" rot="0.0 0.0 0.0">
-				<group name="instance=MOD/Vehicles/sportscar/sportcar_green.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<group name="instance=MOD/vehicles/cars/sportscar/sportcar_green.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 					<vehicle name="Eurus IV XXF" tags="Door DoAlarm" sound="sportscar" spring="1.2" topspeed="320" acceleration="0.4" strength="8" antiroll="0.1" difflock="0.1" steerassist="0.3" friction="1.5">
 						<body pos="0.0 0.35 0.25" dynamic="true">
-							<vox pos="-0.05 -0.15 -0.25" texture="8 0.5" density="2" strength="2" file="MOD/Vehicles/sportscar/sportscar.vox" object="body">
+							<vox pos="-0.05 -0.15 -0.25" texture="8 0.5" density="2" strength="2" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="body">
 								<light pos="-0.6 0.35 -1.9" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="80" angle="50" penumbra="15" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
 								<light pos="0.7 0.35 -1.9" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="80" angle="50" penumbra="15" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
 								<light pos="-0.3 0.55 2.1" type="area" size="0.2 0.1" unshadowed="0.3"/>
@@ -787,13 +787,13 @@
 								<location tags="exhaust" pos="-0.4 0.1 2.1"/>
 								<location tags="vital" pos="0.05 0.55 1.4"/>
 								<location tags="player" pos="-0.3 0.75 -0.15"/>
-								<vox pos="-0.8 0.1 -0.1" texture="8 0.5" prop="true" file="MOD/Vehicles/sportscar/sportscar.vox" object="door_l">
+								<vox pos="-0.8 0.1 -0.1" texture="8 0.5" prop="true" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="door_l">
 									<joint tags="door" pos="0.0 0.5 -0.6" rot="30.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
 								</vox>
-								<vox pos="0.9 0.1 -0.1" texture="8 0.5" prop="true" file="MOD/Vehicles/sportscar/sportscar.vox" object="door_r">
+								<vox pos="0.9 0.1 -0.1" texture="8 0.5" prop="true" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="door_r">
 									<joint tags="door" pos="0.0 0.5 -0.6" rot="-30.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
 								</vox>
-								<vox pos="0.0 0.4 -1.6" texture="8 0.5" file="MOD/Vehicles/sportscar/sportscar.vox" object="hood">
+								<vox pos="0.0 0.4 -1.6" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="hood">
 									<joint tags="door" pos="-0.4 0.15 0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
 									<joint tags="door" pos="0.5 0.15 0.2" rot="0.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
 								</vox>
@@ -801,16 +801,16 @@
 								<location name="camera" tags="camera" pos="0.05 0.9 0.0"/>
 							</vox>
 							<wheel name="fr" pos="0.65 0 -1.4" drive="1" steer="0.7" travel="-0.1 0.0">
-								<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/Vehicles/sportscar/sportscar.vox" object="wheel_fr"/>
+								<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="wheel_fr"/>
 							</wheel>
 							<wheel name="fl" pos="-0.65 0 -1.4" drive="1" steer="0.7" travel="-0.1 0.0">
-								<vox pos="-0.2 -0.35 0.05" texture="8 0.5" file="MOD/Vehicles/sportscar/sportscar.vox" object="wheel_fl"/>
+								<vox pos="-0.2 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="wheel_fl"/>
 							</wheel>
 							<wheel name="br" pos="0.65 0 1.2" drive="1" travel="-0.1 0.0">
-								<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/Vehicles/sportscar/sportscar.vox" object="wheel_br"/>
+								<vox pos="0.1 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="wheel_br"/>
 							</wheel>
 							<wheel name="bl" pos="-0.65 0 1.2" drive="1" travel="-0.1 0.0">
-								<vox pos="-0.2 -0.35 0.05" texture="8 0.5" file="MOD/Vehicles/sportscar/sportscar.vox" object="wheel_bl"/>
+								<vox pos="-0.2 -0.35 0.05" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportscar.vox" object="wheel_bl"/>
 							</wheel>
 						</body>
 						<rig name="driver" tags="driver sort=0" pos="0.05 0.0 0.0">
@@ -834,10 +834,10 @@
 				</group>
 			</group>
 			<group name="instance=MOD/prefabs/spawnables/vehicles/VehicleS5.xml" pos="-1.6 0.0 -0.8" rot="0.0 0.0 0.0">
-				<group name="instance=MOD/Vehicles/sportscar/sportsoffroad.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<group name="instance=MOD/vehicles/cars/sportscar/sportsoffroad.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 					<vehicle tags="Door DoAlarm" sound="sportscar 0.9" spring=".7" damping="1" topspeed="300" acceleration="0.5" strength="9" antiroll=".1" difflock="0.7" steerassist="0.3">
 						<body pos="0.0 0.5 0.25" rot="0.0 0.0 0.0" dynamic="true">
-							<vox pos="0.05 -0.15 -0.25" rot="0.0 180.0 0.0" texture="8 0.5" density="3" strength="3" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="body">
+							<vox pos="0.05 -0.15 -0.25" rot="0.0 180.0 0.0" texture="8 0.5" density="3" strength="3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="body">
 								<light pos="0.7 0.35 1.9" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
 								<light pos="-0.6 0.35 1.9" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
 								<light pos="0.4 0.55 -2.1" rot="0.0 180.0 0.0" type="area" size="0.2 0.1" unshadowed="0.3"/>
@@ -851,26 +851,26 @@
 								<location tags="exhaust" pos="-0.55 0.15 -1.9" rot="-160.0 0.0 0.0"/>
 								<location tags="vital" pos="0.05 0.55 -1.4" rot="-180.0 360.0 -180.0"/>
 								<location tags="player" pos="0.4 0.75 0.15"/>
-								<vox pos="0.8 0.1 0.1" texture="8 0.5" prop="true" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="door_l">
+								<vox pos="0.8 0.1 0.1" texture="8 0.5" prop="true" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="door_l">
 									<joint tags="door" pos="0.1 0.5 0.6" rot="150.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
 								</vox>
-								<vox pos="-0.8 0.1 0.1" texture="8 0.5" prop="true" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="door_r">
+								<vox pos="-0.8 0.1 0.1" texture="8 0.5" prop="true" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="door_r">
 									<joint tags="door" pos="0.0 0.5 0.6" rot="-30.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
 								</vox>
 								<location name="exit" tags="exit" pos="1.25 0.5 0.0"/>
 								<location name="camera" tags="camera" pos="0.05 0.9 0.0"/>
 							</vox>
 							<wheel name="bl" pos="-0.75 -0.1 1.2" rot="0.0 0.0 0.0" drive="1" steer="0.1" travel="-0.2 0.1">
-								<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="wheel"/>
+								<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
 							</wheel>
 							<wheel name="br" pos="0.75 -0.1 1.2" rot="0.0 0.0 0.0" drive="1" steer="0.1" travel="-0.2 0.1">
-								<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="wheel"/>
+								<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
 							</wheel>
 							<wheel name="fl" pos="-0.75 -0.1 -1.4" rot="0.0 0.0 0.0" drive="1" steer="1" travel="-0.2 0.1">
-								<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="wheel"/>
+								<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
 							</wheel>
 							<wheel name="fr" pos="0.75 -0.1 -1.4" rot="0.0 0.0 0.0" drive="1" steer="1" travel="-0.2 0.1">
-								<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/Vehicles/sportscar/sportsoffroad.vox" object="wheel"/>
+								<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
 							</wheel>
 						</body>
 						<rig name="driver" tags="driver sort=0" pos="0.05 0.15 0.0">
@@ -893,60 +893,60 @@
 					</vehicle>
 				</group>
 			</group>
-			<vox pos="1.3 0.0 5.4" file="MOD/vox/car_repair_set.vox" object="bench2">
-				<vox pos="0.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/vox/car_repair_set.vox" object="bench2_props1"/>
+			<vox pos="1.3 0.0 5.4" file="MOD/assets/vox/car_repair_set.vox" object="bench2">
+				<vox pos="0.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/car_repair_set.vox" object="bench2_props1"/>
 			</vox>
-			<vox pos="2.5 0.0 3.2" rot="0.0 -90.0 0.0" file="MOD/vox/car_repair_set.vox" object="bench1">
-				<vox pos="0.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/vox/car_repair_set.vox" object="bench1_props2"/>
+			<vox pos="2.5 0.0 3.2" rot="0.0 -90.0 0.0" file="MOD/assets/vox/car_repair_set.vox" object="bench1">
+				<vox pos="0.0 0.3 0.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/car_repair_set.vox" object="bench1_props2"/>
 			</vox>
 		</group>
 		<group pos="14.2 0.1 11.9">
-			<vox pos="2.25 0.0 -9.0" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="wardrobe - no doors"/>
-			<vox pos="0.15 0.0 -8.5" rot="0.0 -180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="large_table"/>
-			<vox pos="-11.85 0.0 -2.0" rot="0.0 -180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="larger_table"/>
-			<vox pos="-10.65 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-11.45 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-12.25 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-13.05 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="0.15 0.8 -8.5" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="flatscreen"/>
-			<vox pos="-16.8 3.1 -0.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="bed"/>
-			<vox pos="-14.0 3.1 2.1" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="beside_table"/>
-			<vox pos="-9.5 3.1 2.1" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="wardrobe"/>
-			<vox pos="-9.5 3.1 -2.3" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="wardrobe"/>
-			<vox pos="-17.6 3.1 -1.8" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="beside_table">
-				<vox pos="0.0 0.6 0.0" file="MOD/vox/bedroom_modern.vox" object="lamp"/>
+			<vox pos="2.25 0.0 -9.0" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="wardrobe - no doors"/>
+			<vox pos="0.15 0.0 -8.5" rot="0.0 -180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="large_table"/>
+			<vox pos="-11.85 0.0 -2.0" rot="0.0 -180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="larger_table"/>
+			<vox pos="-10.65 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-11.45 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-12.25 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-13.05 0.0 -2.7" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="0.15 0.8 -8.5" rot="0.0 0.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="flatscreen"/>
+			<vox pos="-16.8 3.1 -0.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="bed"/>
+			<vox pos="-14.0 3.1 2.1" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="beside_table"/>
+			<vox pos="-9.5 3.1 2.1" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="wardrobe"/>
+			<vox pos="-9.5 3.1 -2.3" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="wardrobe"/>
+			<vox pos="-17.6 3.1 -1.8" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="beside_table">
+				<vox pos="0.0 0.6 0.0" file="MOD/assets/vox/bedroom_modern.vox" object="lamp"/>
 			</vox>
-			<vox pos="-17.6 3.1 0.7" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/vox/bedroom_modern.vox" object="beside_table">
-				<vox pos="0.0 0.6 0.0" file="MOD/vox/bedroom_modern.vox" object="lamp"/>
+			<vox pos="-17.6 3.1 0.7" rot="0.0 -90.0 0.0" density="22" prop="false" file="MOD/assets/vox/bedroom_modern.vox" object="beside_table">
+				<vox pos="0.0 0.6 0.0" file="MOD/assets/vox/bedroom_modern.vox" object="lamp"/>
 			</vox>
-			<vox pos="-1.35 0.4 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
-			<vox pos="-2.25 0.5 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
-			<voxbox pos="-1.3 0.0 2.6" size="39 1 5" brush="MOD/vox/modern shelf.vox" object="shoerack"/>
-			<voxbox pos="-4.5 0.6 -2.8" rot="0.0 -90.0 0.0" size="49 1 5" brush="MOD/vox/modern shelf.vox" object="shoerack">
+			<vox pos="-1.35 0.4 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
+			<vox pos="-2.25 0.5 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
+			<voxbox pos="-1.3 0.0 2.6" size="39 1 5" brush="MOD/assets/vox/modern shelf.vox" object="shoerack"/>
+			<voxbox pos="-4.5 0.6 -2.8" rot="0.0 -90.0 0.0" size="49 1 5" brush="MOD/assets/vox/modern shelf.vox" object="shoerack">
 				<body tags="GasCan RNDfuelLevel fuelLevelMAX=40 explosive=.5 randomdelete chance=40" pos="5.7 -0.2 -0.0" rot="0.0 90.0 0.0" dynamic="true">
-					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/vox/plasticcan.vox"/>
+					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/assets/vox/plasticcan.vox"/>
 				</body>
 				<body tags="GasCan RNDfuelLevel fuelLevelMAX=40 explosive=.5 randomdelete chance=40" pos="5.4 -0.2 0.0" rot="0.0 90.0 0.0" dynamic="true">
-					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/vox/plasticcan.vox"/>
+					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/assets/vox/plasticcan.vox"/>
 				</body>
 				<body tags="GasCan RNDfuelLevel fuelLevelMAX=40 explosive=.5 randomdelete chance=40" pos="5.1 -0.2 0.0" rot="0.0 90.0 0.0" dynamic="true">
-					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/vox/plasticcan.vox"/>
+					<vox pos="-0.0 -0.4 0.15" texture="7 .4" file="MOD/assets/vox/plasticcan.vox"/>
 				</body>
 			</voxbox>
-			<voxbox pos="0.0 0.6 -2.2" rot="0.0 180.0 0.0" size="45 1 6" brush="MOD/vox/modern shelf.vox" object="shoerack">
+			<voxbox pos="0.0 0.6 -2.2" rot="0.0 180.0 0.0" size="45 1 6" brush="MOD/assets/vox/modern shelf.vox" object="shoerack">
 				<instance pos="3.5 0.1 0.3" rot="0.0 180.0 0.0" file="MOD/prefabs/spawnables/loots/Thermals.xml"/>
 				<instance pos="2.8 0.1 0.3" rot="0.0 180.0 0.0" file="MOD/prefabs/spawnables/loots/NVG.xml"/>
 				<body tags="Loot=helmet-altyn_Altyn_45_45 interact=Altyn randomdelete chance=80" pos="3.3 0.9 0.3" rot="0.0 -180.0 0.0" dynamic="true">
-					<vox pos="-.05 -.2" file="MOD/vox/Armor/Altyn.vox" object="body"/>
+					<vox pos="-.05 -.2" file="MOD/assets/vox/Armor/Altyn.vox" object="body"/>
 				</body>
 				<body tags="Loot=helmet-altyn_Altyn_45_45 interact=Altyn randomdelete chance=80" pos="1.5 0.9 0.3" rot="0.0 -180.0 0.0" dynamic="true">
-					<vox pos="-.05 -.2" file="MOD/vox/Armor/Altyn.vox" object="body"/>
+					<vox pos="-.05 -.2" file="MOD/assets/vox/Armor/Altyn.vox" object="body"/>
 				</body>
 			</voxbox>
-			<voxbox pos="0.0 1.2 -2.3" rot="0.0 180.0 0.0" size="37 1 5" brush="MOD/vox/modern shelf.vox" object="shoerack"/>
-			<voxbox pos="0.0 1.8 -2.3" rot="0.0 180.0 0.0" size="37 1 5" brush="MOD/vox/modern shelf.vox" object="shoerack"/>
-			<voxbox pos="-1.2 0.8 2.6" size="38 1 5" brush="MOD/vox/modern shelf.vox"/>
-			<voxbox pos="-1.2 1.6 2.6" size="38 1 5" brush="MOD/vox/modern shelf.vox">
+			<voxbox pos="0.0 1.2 -2.3" rot="0.0 180.0 0.0" size="37 1 5" brush="MOD/assets/vox/modern shelf.vox" object="shoerack"/>
+			<voxbox pos="0.0 1.8 -2.3" rot="0.0 180.0 0.0" size="37 1 5" brush="MOD/assets/vox/modern shelf.vox" object="shoerack"/>
+			<voxbox pos="-1.2 0.8 2.6" size="38 1 5" brush="MOD/assets/vox/modern shelf.vox"/>
+			<voxbox pos="-1.2 1.6 2.6" size="38 1 5" brush="MOD/assets/vox/modern shelf.vox">
 				<body name="Carbattery" template=" " tags="Loot=general-carbattery_Carbattery interact=Carbattery randomdelete chance=40" pos="3.55 0.3 0.2" rot="0.0 -180.0 0.0" dynamic="true">
 					<voxbox pos="-.25 -.2 -.15" rot="0 0" size="5 3 3" color=".4 .4 .4"/>
 					<voxbox pos="-.2 .1 -.05" rot="0" size="1 1 1" color=".09 .09 .09"/>
@@ -1020,8 +1020,8 @@
 					</compound>
 				</body>
 			</voxbox>
-			<vox pos="-2.15 1.1 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
-			<vox pos="-4.8 0.8 1.8" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-2.15 1.1 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
+			<vox pos="-4.8 0.8 1.8" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<body name="P17" tags="Loot=gun-g17_P17_mag0-glock-9x19_P17-Mag_17_17_9x19_----tan interact=P17 unbreakable randomdelete chance=50" pos="0.2 0.1 -0.1" rot="-30.0 -90.0 0.0" dynamic="true">
 					<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 						<voxbox name="Grip" tags="Grip" pos="-0.05 0.0 -0.02" rot="-175.0 0.0 0.0" size="1 2 1" color="0.67 0.58 0.4">
@@ -1035,7 +1035,7 @@
 					</group>
 				</body>
 			</vox>
-			<vox pos="-4.8 0.8 1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 0.8 1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<body name="P17" tags="Loot=gun-g17_P17_mag0-glock-9x19_P17-Mag_17_17_9x19_----tan interact=P17 unbreakable randomdelete chance=50" pos="0.2 0.1 -0.1" rot="-30.0 -90.0 0.0" dynamic="true">
 					<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 						<voxbox name="Grip" tags="Grip" pos="-0.05 0.0 -0.02" rot="-175.0 0.0 0.0" size="1 2 1" color="0.67 0.58 0.4">
@@ -1049,7 +1049,7 @@
 					</group>
 				</body>
 			</vox>
-			<vox pos="-4.8 0.8 1.0" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 0.8 1.0" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<body name="P17" tags="Loot=gun-g17_P17_mag0-glock-9x19_P17-Mag_17_17_9x19_----tan interact=P17 unbreakable randomdelete chance=50" pos="0.2 0.1 -0.1" rot="-30.0 -90.0 0.0" dynamic="true">
 					<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 						<voxbox name="Grip" tags="Grip" pos="-0.05 0.0 -0.02" rot="-175.0 0.0 0.0" size="1 2 1" color="0.67 0.58 0.4">
@@ -1063,9 +1063,9 @@
 					</group>
 				</body>
 			</vox>
-			<vox pos="-4.8 1.4 0.2" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 1.4 0.2" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun MC308 COMPACT1.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
-					<group name="instance=MOD/Loots/gun-g3.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+					<group name="instance=MOD/items/Loots/gun-g3.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 						<body name="G3" tags="Loot=gun-g3_MC308_mag0-g3-762x51_MC308-Mag_20_20_7.62x51_-muzzle2-stock1--barrel1--guard1 interact=MC308 unbreakable randomdelete chance=40" pos="0.0 0.3" dynamic="true">
 							<group name="Metal" prop0="color=.12 .12 .12" prop1="pbr=.02 .1 .1" prop2="material=metal">
 								<voxbox pos="-0.05 -0.05 -0.15" size="1 1 7"/>
@@ -1126,9 +1126,9 @@
 						</body>
 					</group>
 				</group>
-				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-4.8 0.9 -1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 0.9 -1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Offensive's N4A1.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
 					<body name="N4A1" tags="Loot=gun-ar15_Offensive's-N4A1_mag2-ar-556_STANAG-60_60_60_5.56_scope--muzzle1--grip3-barrel2-side1---offensive interact=Offensive's-N4A1  randomdelete chance=97" pos="0.0 0.25 0.0" dynamic="true">
 						<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.1 .1 .1">
@@ -1200,11 +1200,11 @@
 						</group>
 					</body>
 				</group>
-				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-4.8 2.2 1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 2.2 1.4" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Tess's Drozdov.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
-					<group name="instance=MOD/Loots/gun-svd.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+					<group name="instance=MOD/items/Loots/gun-svd.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 						<body name="Drozdov" tags="Loot=gun-svd_Drozdov_mag0-ak-762x54_Drozdov-Mag_10_10_7.62x54R_-pso-muzzle2-stock2-grip3------tess interact=Drozdov unbreakable randomdelete chance=97" pos="0.0 0.3 -0.1" dynamic="true">
 							<group name="Metal1" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 								<voxbox pos="-0.05 -0.05 -0.35" rot="0.0 0.0 0.0" size="1 1 13">
@@ -1294,9 +1294,9 @@
 						</body>
 					</group>
 				</group>
-				<vox pos="0.8 -0.1 -0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.8 -0.1 -0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-2.9 2.3 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-2.9 2.3 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Snakey's TCR-308.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
 					<body name="Scar-H" tags="Loot=gun-scarh_Snakey's-TCR-308_mag2-scar-762x51_TCR-50_50_50_7.62x51_holo-muzzle1--grip2-barrel1----snakey interact=Snakey's-Seraphim unbreakable randomdelete chance=97" pos="0.0 0.25 -0.1" dynamic="true">
 						<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
@@ -1391,9 +1391,9 @@
 						</group>
 					</body>
 				</group>
-				<vox pos="0.9 -0.1 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.9 -0.1 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-3.3 1.3 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-3.3 1.3 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Avertnus's Simonov-545.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
 					<body name="AK74" tags="Loot=gun-ak74_Avertnus's-Simonov-545_mag0-ak-545_6L23_30_30_5.45_-kobra---------avertnus interact=Avertnus's-Simonov-545 unbreakable randomdelete chance=97" pos="0.0 0.3 0.0" rot="0.0 0.0 0.0" dynamic="true">
 						<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
@@ -1478,9 +1478,9 @@
 						</group>
 					</body>
 				</group>
-				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.9 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-2.9 0.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-2.9 0.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Autumnatic's Mudafie.xml" pos="0.5 -0.0 -0.1" rot="0.0 -90.0 0.0">
 					<body name="MP43" tags="Loot=gun-mp43_Autmnatic's-Mudafie_mag1_Internal_2_2_12ga_-----autumnatic interact=Autumnatic's-Mudafie unbreakable randomdelete chance=97" pos="0.0 0.15 0.0" rot="0.0 0.0 0.0" dynamic="true">
 						<group name="Wood" prop0="color=.3 .19 .11" prop1="material=wood">
@@ -1526,11 +1526,11 @@
 						</group>
 					</body>
 				</group>
-				<vox pos="0.9 -0.1 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.9 -0.1 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-4.8 1.4 2.5" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK">
+			<vox pos="-4.8 1.4 2.5" rot="0.0 90.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK">
 				<group name="instance=MOD/prefabs/spawnables/loots/Gun Simonov-9 MILITARY2.xml" pos="0.5 -0.1 -0.1" rot="0.0 -90.0 0.0">
-					<group name="instance=MOD/Loots/gun-pp19.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+					<group name="instance=MOD/items/Loots/gun-pp19.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 						<body name="PP19" tags="Loot=gun-pp19_Simonov-9_mag0-ak-9x19_Simonov-9-Mag_30_30_9x19_holo-muzzle2-stock1-grip2---guard1-cover2 interact=Simonov-9 unbreakable randomdelete chance=40" pos="0.0 0.3" dynamic="true">
 							<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 								<voxbox pos="-.05 -.05 -.2" size="1 1 7"/>
@@ -1578,11 +1578,11 @@
 						</body>
 					</group>
 				</group>
-				<vox pos="0.8 -0.1 -0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+				<vox pos="0.8 -0.1 -0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			</vox>
-			<vox pos="-2.118 0.78124 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/moedrn homes.vox" object="shelfdivider3">
-				<voxbox pos="0.1 0.0 -0.2" size="3 1 4" brush="MOD/vox/moedrn homes.vox" object="shelfdivider1"/>
-				<vox pos="0.4 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/moedrn homes.vox" object="shelfdivider3"/>
+			<vox pos="-2.118 0.78124 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider3">
+				<voxbox pos="0.1 0.0 -0.2" size="3 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="shelfdivider1"/>
+				<vox pos="0.4 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider3"/>
 				<body name="MP5-Mag" tags="Loot=mag0-mp5-9x19_MC9-Mag_30_30_9x19 interact=MC9-Mag unbreakable randomdelete chance=40" pos="0.15 0.214 0.1" rot="-30" dynamic="true">
 					<group name="Magazine" pos="0 .15 -.05" prop0="color=.1 .1 .1" prop1="material=metal">
 						<group pos="-.05 0 -.05" rot="-10.0">
@@ -1617,9 +1617,9 @@
 					</group>
 				</body>
 			</vox>
-			<vox pos="-1.468 0.03124 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/moedrn homes.vox" object="shelfdivider3">
-				<voxbox pos="0.1 0.0 -0.2" size="3 1 4" brush="MOD/vox/moedrn homes.vox" object="shelfdivider1"/>
-				<vox pos="0.4 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/vox/moedrn homes.vox" object="shelfdivider3"/>
+			<vox pos="-1.468 0.03124 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider3">
+				<voxbox pos="0.1 0.0 -0.2" size="3 1 4" brush="MOD/assets/vox/moedrn homes.vox" object="shelfdivider1"/>
+				<vox pos="0.4 0.0 0.0" rot="0.0 0.0 0.0" density="22" prop="false" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider3"/>
 				<body tags="Loot=mag1-ar-556_PROMAG-40_40_40_5.56 interact=PROMAG-40 unbreakable randomdelete chance=40" pos="0.15 0.249 0.001" rot="-50" dynamic="true">
 					<group pos="0 .1" prop0="color=.14 .14 .14" prop1="material=metal">
 						<voxbox pos="-.05 -.15 -.075" size="1 1 1"/>
@@ -1675,9 +1675,9 @@
 					</group>
 				</body>
 			</vox>
-			<vox pos="-1.35 1.1 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
-			<vox pos="-2.15 1.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
-			<vox pos="-1.35 1.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/vox/modern shelf.vox" object="hOOK"/>
+			<vox pos="-1.35 1.1 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
+			<vox pos="-2.15 1.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
+			<vox pos="-1.35 1.7 2.9" rot="0.0 180.0 0.0" density="22" prop="false" file="MOD/assets/vox/modern shelf.vox" object="hOOK"/>
 			<group pos="-1.8 0.4 3.0">
 				<body name="N4A1" tags="Loot=gun-ar15_N4A1_mag0-ar-556_STANAG-30_30_30_5.56_scope--muzzle2--grip1--side1-- interact=N4A1 randomdelete chance=50" pos="-0.1 0.25 -0.0" rot="0.0 -90.0 0.0" dynamic="true">
 					<group name="Metal" prop0="color=.15 .15 .15" prop1="pbr=.1 .1 .1">
@@ -1791,97 +1791,97 @@
 				</body>
 				<group pos="4.3 -0.3 0.0">
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="0.0 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="0.0 0.25 -0.2" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.2 0.25 -0.2" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.2 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.4 0.25 -0.2" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.4 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.6 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.6 0.25 -0.2" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.8 0.25 -0.2" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-0.8 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-1.0 0.25 -0.2" dynamic="true">
-						<vox pos="0.0 -0.25 0.0" file="MOD/vox/foods/water.vox">
+						<vox pos="0.0 -0.25 0.0" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food5_Water_0_40 interact=Water randomdelete chance=40" pos="-1.0 0.25 0.0" dynamic="true">
-						<vox pos="0 -.25" file="MOD/vox/foods/water.vox">
+						<vox pos="0 -.25" file="MOD/assets/vox/foods/water.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food6_Vodka_10_-20 interact=Vodka randomdelete chance=40" pos="-1.3 0.3 0.0" dynamic="true">
-						<vox name="water" pos="0 -.3" file="MOD/vox/foods/vodka.vox">
+						<vox name="water" pos="0 -.3" file="MOD/assets/vox/foods/vodka.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 2 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food6_Vodka_10_-20 interact=Vodka randomdelete chance=40" pos="-1.3 0.3 -0.2" dynamic="true">
-						<vox name="water" pos="0 -.3" file="MOD/vox/foods/vodka.vox">
+						<vox name="water" pos="0 -.3" file="MOD/assets/vox/foods/vodka.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 2 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food6_Vodka_10_-20 interact=Vodka randomdelete chance=40" pos="-1.5 0.3 -0.2" dynamic="true">
-						<vox name="water" pos="0 -.3" file="MOD/vox/foods/vodka.vox">
+						<vox name="water" pos="0 -.3" file="MOD/assets/vox/foods/vodka.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 2 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food6_Vodka_10_-20 interact=Vodka randomdelete chance=40" pos="-1.5 0.3 0.0" dynamic="true">
-						<vox name="water" pos="0 -.3" file="MOD/vox/foods/vodka.vox">
+						<vox name="water" pos="0 -.3" file="MOD/assets/vox/foods/vodka.vox">
 							<voxbox pos="-.05 .4 -.05" size="1 2 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food8_Orange_30_50 interact=Orange randomdelete chance=40" pos="-1.8 0.2 -0.1" rot="0.0 90.0 0.0" dynamic="true">
-						<vox pos="0 -.2" file="MOD/vox/foods/orangejug.vox">
+						<vox pos="0 -.2" file="MOD/assets/vox/foods/orangejug.vox">
 							<voxbox pos=".05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food8_Orange_30_50 interact=Orange randomdelete chance=40" pos="-2.0 0.2 -0.1" rot="0.0 90.0 0.0" dynamic="true">
-						<vox pos="0 -.2" file="MOD/vox/foods/orangejug.vox">
+						<vox pos="0 -.2" file="MOD/assets/vox/foods/orangejug.vox">
 							<voxbox pos=".05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
 					<body tags="Loot=food8_Orange_30_50 interact=Orange randomdelete chance=40" pos="-2.2 0.2 -0.1" rot="0.0 90.0 0.0" dynamic="true">
-						<vox pos="0 -.2" file="MOD/vox/foods/orangejug.vox">
+						<vox pos="0 -.2" file="MOD/assets/vox/foods/orangejug.vox">
 							<voxbox pos=".05 .4 -.05" size="1 1 1" color=".08 .08 .08"/>
 						</vox>
 					</body>
@@ -1944,34 +1944,34 @@
 					</body>
 					<group pos="-2.6 0.0 0.0">
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.25 0.05 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="0.15 0.05 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="0.05 0.05 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.05 0.05 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.15 0.05 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.25 0.15 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="0.15 0.15 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="0.05 0.15 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.05 0.15 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 						<body tags="Loot=food2_Choccy_10_0 interact=Choccy randomdelete chance=10" pos="-0.15 0.15 -0.05" rot="0.0 -90.0 0.0" dynamic="true">
-							<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+							<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 						</body>
 					</group>
 					<body name="tuna" tags="Loot=food9_Pineapple_20_20 interact=Pineapple randomdelete chance=50" pos="-3.675 0.123 -0.045" dynamic="true">
@@ -2064,32 +2064,32 @@
 					</group>
 				</body>
 			</group>
-			<vox pos="1.4 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
-			<vox pos="1.594 1.7 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
-			<vox pos="1.268 1.7 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
-			<vox pos="0.9 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
-			<vox pos="0.2 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
-			<vox pos="-0.4 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="1.4 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="1.594 1.7 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="1.268 1.7 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="0.9 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="0.2 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
+			<vox pos="-0.4 0.1 2.9" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/moedrn homes.vox" object="shelfdivider"/>
 			<body tags="Loot=bullets-127x99_.50BMG_15 interact=.50BMG randomdelete chance=40" pos="1.9 1.1 2.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
 			</body>
 			<body tags="Loot=bullets-556_5.56_30 interact=5.56 randomdelete chance=40" pos="1.1 1.1 2.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
 			</body>
 			<body tags="Loot=bullets-762x54_7.62x54R_30 interact=7.62x54R randomdelete chance=40" pos="0.3 1.1 2.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
 			</body>
 			<body tags="Loot=bullets-9x19_9x19_30 interact=9x19 randomdelete chance=40" pos="-0.5 1.1 2.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/vox/military/ammobox.vox"/>
+				<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
 			</body>
-			<vox pos="-10.65 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-11.45 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-12.25 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-13.05 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-13.55 0.0 -2.0" rot="0.0 90.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
-			<vox pos="-10.15 0.0 -2.00001" rot="0.0 -90.0 0.0" density="22" prop="true" file="MOD/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-10.65 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-11.45 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-12.25 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-13.05 0.0 -1.3" rot="0.0 180.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-13.55 0.0 -2.0" rot="0.0 90.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
+			<vox pos="-10.15 0.0 -2.00001" rot="0.0 -90.0 0.0" density="22" prop="true" file="MOD/assets/vox/bedroom_modern.vox" object="chair"/>
 		</group>
-		<voxagon pos="15.8 0.0 14.0" brush="MOD/vox/moedrn homes.vox" object="mudbrick piece7" extrude="1">
+		<voxagon pos="15.8 0.0 14.0" brush="MOD/assets/vox/moedrn homes.vox" object="mudbrick piece7" extrude="1">
 			<vertex pos="-6.6 -4.9"/>
 			<vertex pos="-1.9 -4.9"/>
 			<vertex pos="-1.9 -5.3"/>
@@ -2101,11 +2101,11 @@
 			<vertex pos="-6.6 1.1"/>
 		</voxagon>
 		<group>
-			<vox pos="15.5 0.1 8.3" rot="0.0 -180.0 0.0" file="MOD/vox/designer_furniture.vox" object="sofa"/>
-			<vox pos="16.4 0.1 7.4" rot="0.0 -90.0 0.0" file="MOD/vox/designer_furniture.vox" object="sofa"/>
-			<vox pos="14.3 0.1 6.2" rot="0.0 0.0 0.0" file="MOD/vox/designer_furniture.vox" object="sofa_table"/>
-			<vox pos="16.4 0.1 5.0" rot="0.0 -90.0 0.0" file="MOD/vox/designer_furniture.vox" object="sofa"/>
-			<vox pos="13.1 0.1 8.3" rot="0.0 -180.0 0.0" file="MOD/vox/designer_furniture.vox" object="sofa"/>
+			<vox pos="15.5 0.1 8.3" rot="0.0 -180.0 0.0" file="MOD/assets/vox/designer_furniture.vox" object="sofa"/>
+			<vox pos="16.4 0.1 7.4" rot="0.0 -90.0 0.0" file="MOD/assets/vox/designer_furniture.vox" object="sofa"/>
+			<vox pos="14.3 0.1 6.2" rot="0.0 0.0 0.0" file="MOD/assets/vox/designer_furniture.vox" object="sofa_table"/>
+			<vox pos="16.4 0.1 5.0" rot="0.0 -90.0 0.0" file="MOD/assets/vox/designer_furniture.vox" object="sofa"/>
+			<vox pos="13.1 0.1 8.3" rot="0.0 -180.0 0.0" file="MOD/assets/vox/designer_furniture.vox" object="sofa"/>
 		</group>
 	</group>
 </prefab>

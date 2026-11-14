@@ -1,0 +1,8 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/weapons/guns/Weapons/FiveSeven-grey.xml" pos="-0.55 4.5 -0.15" rot="0.0 0.0 0.0">
+		<group pos="0.5 -1.5 0.1" prop0="file=MOD/assets/vox/fivesevengrey.vox">
+			<instance pos="-0.5 1.5 -0.1" rot="0.0 0.0 0.0" file="MOD/weapons/guns/Weapons/Five Seven Base.xml"/>
+		</group>
+	</group>
+</prefab>
+

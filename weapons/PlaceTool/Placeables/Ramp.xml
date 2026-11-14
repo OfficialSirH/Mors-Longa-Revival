@@ -1,0 +1,43 @@
+<prefab version="1.1.0">
+	<group>
+		<body dynamic="true">
+			<vox density="0.5" pos="0.0 0.2 -0.4" rot="0.0 90.0 90.0" file="MOD/assets/vox/Ramp.vox" object="main">
+				<voxbox pos="-0.1 0.8 0.9" rot="180 0 -20" size="5 1 18" brush="MOD/assets/vox/Ramp.vox">
+					<voxbox pos="0.5 0.0 0.0" size="5 1 18" brush="MOD/assets/vox/Ramp.vox">
+						<voxbox pos="0.5 0.0 0.0" size="5 1 18" brush="MOD/assets/vox/Ramp.vox">
+							<voxbox pos="0.5 0.0 0.0" rot="0 0 -5" size="5 1 18" brush="MOD/assets/vox/Ramp.vox">
+								<voxbox pos="0.5 0.0 0.0" rot="0 0 -5" size="5 1 18" brush="MOD/assets/vox/Ramp.vox">
+									<voxbox pos="0.5 0.0 0.0" rot="0 0 -5" size="5 1 18" brush="MOD/assets/vox/Ramp.vox"/>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+				<voxbox pos="-0.2 -0.1 0.6" size="17 1 1" brush="MOD/assets/vox/Ramp.vox" object="Structural"/>
+				<voxbox pos="-0.2 -0.1 -0.7" size="17 1 1" brush="MOD/assets/vox/Ramp.vox" object="Structural"/>
+				<voxbox pos="-0.2 -0.1 -0.05" size="17 1 1" brush="MOD/assets/vox/Ramp.vox" object="Structural"/>
+				<joint pos="-0.2 0.7 0.8" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 0.8" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 -0.8" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 -0.8" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 -0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 -0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 -0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 -0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.1 -0.0" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.7 -0.0" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 -0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 -0.8" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 -0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 -0.0" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 0.2" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 0.5" rot="0 90" type="hinge" rotstrength="1"/>
+				<joint pos="-0.2 0.4 0.8" rot="0 90" type="hinge" rotstrength="1"/>
+			</vox>
+		</body>
+	</group>
+</prefab>

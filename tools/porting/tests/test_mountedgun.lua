@@ -1,9 +1,9 @@
--- Mock test for scripts/MountedGun.lua through a vehicle config (avf/prefabs/technicals/technical_dshk.lua).
+-- Mock test for vehicles/MountedGun.lua through a vehicle config (vehicles/avf/prefabs/technicals/technical_dshk.lua).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_mountedgun.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "avf/prefabs/technicals/technical_dshk.lua"
+local PATH = "vehicles/avf/prefabs/technicals/technical_dshk.lua"
 
 local env = MockEngine.load(PATH, { preload = MockEngine.includes(PATH) })
 env.side = "server"

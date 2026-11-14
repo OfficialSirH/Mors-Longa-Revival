@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun MC308 MILITARY1.xml" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-g3.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-g3.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="G3" tags="Loot=gun-g3_MC308_mag0-g3-762x51_MC308-Mag_20_20_7.62x51_scope-muzzle2-----guard2 interact=MC308 unbreakable" pos="0.0 0.3" dynamic="true">
 				<group name="Metal" prop0="color=.12 .12 .12" prop1="pbr=.02 .1 .1" prop2="material=metal">
 					<voxbox pos="-0.05 -0.05 -0.15" size="1 1 9"/>

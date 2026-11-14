@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/items/Loots/bullets-556-HP.xml" pos="3.0 0.4 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=bullets-556-HP_5.56_30 interact=5.56" pos="0.0 0.2" dynamic="true">
+			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
+		</body>
+	</group>
+</prefab>
+

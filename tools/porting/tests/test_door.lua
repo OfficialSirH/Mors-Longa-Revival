@@ -1,9 +1,9 @@
--- Mock test for Vehicles/!library/scripts/door.lua (vehicle doors shut while a player is inside).
+-- Mock test for vehicles/cars/!library/scripts/door.lua (vehicle doors shut while a player is inside).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_door.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "Vehicles/!library/scripts/door.lua"
+local PATH = "vehicles/cars/!library/scripts/door.lua"
 
 local function run(vehicle, joints)
 	local env = MockEngine.load(PATH)

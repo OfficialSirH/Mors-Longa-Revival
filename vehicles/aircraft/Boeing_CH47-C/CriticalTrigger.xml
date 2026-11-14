@@ -1,0 +1,6 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/vehicles/aircraft/Boeing_CH47-C/CriticalTrigger.xml" pos="174.70399 -133.10001 -31.404" rot="0.0 0.0 0.0">
+		<trigger name="Critical" tags="critical" size="15" sound="MOD/vehicles/aircraft/Boeing_CH47-C/snd/critical_alarm.ogg"/>
+	</group>
+</prefab>
+

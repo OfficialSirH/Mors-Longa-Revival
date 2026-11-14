@@ -1,142 +1,142 @@
 <prefab version="1.0.0">
 	<group name="instance=MOD/prefabs/militarybase1.xml" pos="-86.59999 0.7 -1.7" rot="0.0 180.0 0.0">
 		<group pos="2.7 -0.8 -0.0" rot="0.0 180.0 0.0">
-			<vox pos="11.19999 0.8 35.8" file="MOD/vox/militarybase.vox" object="building1">
-				<vox pos="-5.5 6.4 -6.7" file="MOD/vox/sandbags.vox" object="sandbags1"/>
-				<vox pos="-5.4 6.4 -4.9" rot="0.0 -180.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags1"/>
-				<vox pos="-5.5 6.4 -3.1" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="-5.5 6.4 -1.8" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="-5.3 6.8 -2.9" rot="0.0 -180.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="-5.4 6.4 2.5" rot="0.0 -180.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<vox pos="1.7 4.8 0.0" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<vox pos="3.5 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<vox pos="4.8 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="4.9 5.0 7.8" rot="0.0 90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="-4.6 6.8 -7.8" rot="0.0 -90.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="5.8 4.6 5.4" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="-5.9 1.6 -6.3" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-				<vox pos="5.8 4.6 2.4" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-				<vox pos="5.8 4.6 1.1" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-				<vox pos="5.9 5.0 1.0" rot="0.0 -180.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
+			<vox pos="11.19999 0.8 35.8" file="MOD/assets/vox/militarybase.vox" object="building1">
+				<vox pos="-5.5 6.4 -6.7" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+				<vox pos="-5.4 6.4 -4.9" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+				<vox pos="-5.5 6.4 -3.1" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="-5.5 6.4 -1.8" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-5.3 6.8 -2.9" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-5.4 6.4 2.5" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<vox pos="1.7 4.8 0.0" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<vox pos="3.5 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<vox pos="4.8 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="4.9 5.0 7.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="-4.6 6.8 -7.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="5.8 4.6 5.4" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="-5.9 1.6 -6.3" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+				<vox pos="5.8 4.6 2.4" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+				<vox pos="5.8 4.6 1.1" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+				<vox pos="5.9 5.0 1.0" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
 			</vox>
-			<vox pos="-10.5 0.8 46.1" file="MOD/vox/militarybase.vox" object="tower1">
+			<vox pos="-10.5 0.8 46.1" file="MOD/assets/vox/militarybase.vox" object="tower1">
 				<vox file="MOD/assets/warzone/CCTV.vox"/>
 			</vox>
-			<vox pos="-0.79999 0.8 0.1" file="MOD/vox/militarybase.vox" object="tower1">
+			<vox pos="-0.79999 0.8 0.1" file="MOD/assets/vox/militarybase.vox" object="tower1">
 				<vox file="MOD/assets/warzone/CCTV.vox"/>
 			</vox>
-			<vox pos="19.9 0.8 46.10001" rot="0.0 90.0 0.0" file="MOD/vox/militarybase.vox" object="tower1"/>
+			<vox pos="19.9 0.8 46.10001" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1"/>
 			<group name="hedgehogs" pos="-4.80002 0.0 -2.4">
-				<vox pos="-5.17999 0.8 9.32899" rot="35.0 -100.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-5.17999 0.8 8.729" rot="35.0 160.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-4.67999 0.8 6.42899" rot="35.0 -90.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-4.98 0.8 5.029" rot="35.0 20.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-5.03499 0.8 11.38499" rot="35.0 -130.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-6.101 0.8 12.822" rot="35.0 10.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-5.59799 0.8 14.624" rot="35.0 0.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-4.198 0.8 17.02399" rot="35.0 -150.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="-4.198 0.8 18.02399" rot="35.0 -80.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="3.20001 0.8 -6.3" rot="35.0 -100.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="3.70001 0.8 -3.60001" rot="35.0 160.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="2.02701 0.8 -7.632" rot="35.0 60.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="2.83601 0.8 -11.69701" rot="35.0 -90.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
-				<vox pos="2.81001 0.8 -9.17101" rot="35.0 -170.0 -35.0" density="4" prop="true" file="MOD/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.17999 0.8 9.32899" rot="35.0 -100.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.17999 0.8 8.729" rot="35.0 160.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-4.67999 0.8 6.42899" rot="35.0 -90.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-4.98 0.8 5.029" rot="35.0 20.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.03499 0.8 11.38499" rot="35.0 -130.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-6.101 0.8 12.822" rot="35.0 10.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.59799 0.8 14.624" rot="35.0 0.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-4.198 0.8 17.02399" rot="35.0 -150.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-4.198 0.8 18.02399" rot="35.0 -80.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="3.20001 0.8 -6.3" rot="35.0 -100.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="3.70001 0.8 -3.60001" rot="35.0 160.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="2.02701 0.8 -7.632" rot="35.0 60.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="2.83601 0.8 -11.69701" rot="35.0 -90.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="2.81001 0.8 -9.17101" rot="35.0 -170.0 -35.0" density="4" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
 			</group>
 			<group name="outer wall" pos="-2.1 -2.6 13.3" rot="0.0 -90.0 0.0">
 				<group name="cinderblocks" pos="-5.4 3.4 7.8">
-					<vox pos="-2.0 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="0.0 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="-0.4 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-5.2 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-3.6 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-8.4 2.4 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-6.8 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="6.4 2.4 -4.0" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="6.4 0.8 -4.0" rot="0.0 -180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="-10.0 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-15.2 1.6 -4.0" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="-13.2 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-11.6 2.4 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-14.8 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 2.4 4.0" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="13.6 0.8 4.0" rot="0.0 -180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="-14.8 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-13.2 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-11.6 0.8 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-10.0 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-8.4 0.8 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-6.8 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-5.2 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-2.0 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-0.4 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-14.0 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-12.4 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-10.8 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-9.2 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-7.6 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-6.0 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-2.8 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-3.6 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-4.4 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-1.2 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-4.4 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-2.8 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-1.2 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-14.0 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-6.0 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-7.6 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-9.2 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="-10.8 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="-12.4 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="0.0 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="-15.2 0.0 -4.0" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="halfcinderblok_light"/>
-					<vox pos="12.4 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.2 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="11.6 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="12.4 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="11.6 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.4 0.0 -15.0" rot="0.0 -70.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="9.1 0.0 -13.4" rot="0.0 -20.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="12.2 0.0 -13.1" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="6.8 0.0 -17.3" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="6.8 0.0 -20.1" rot="0.0 -100.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.0 0.0 -22.6" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.0 0.0 -25.5" rot="0.0 -80.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.0 0.0 -28.2" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.4 0.0 -30.7" rot="0.0 -100.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="10.8 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.2 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="10.0 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="10.8 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="9.2 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="10.0 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="9.2 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="8.4 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.6 0.8 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="7.6 2.4 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="8.4 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="6.8 1.6 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="6.8 0.0 -4.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 2.4 -3.5" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 1.6 -2.7" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 0.8 -1.9" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 0.8 -3.5" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 -0.0 -2.7" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 -0.0 -1.1" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 0.8 -0.3" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 2.4 -1.9" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 2.4 -0.3" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 1.6 -1.1" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 -0.0 0.50001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 0.8 1.30001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 1.6 0.50001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 2.4 1.30001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 1.6 2.10001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 -0.0 2.10001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 2.4 2.90001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 1.6 3.70001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
-					<vox pos="13.6 0.8 2.90001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_light"/>
-					<vox pos="13.6 0.0 3.70001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-2.0 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="0.0 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="-0.4 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-5.2 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-3.6 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-8.4 2.4 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-6.8 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="6.4 2.4 -4.0" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="6.4 0.8 -4.0" rot="0.0 -180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="-10.0 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-15.2 1.6 -4.0" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="-13.2 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-11.6 2.4 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-14.8 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 2.4 4.0" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="13.6 0.8 4.0" rot="0.0 -180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="-14.8 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-13.2 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-11.6 0.8 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-10.0 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-8.4 0.8 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-6.8 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-5.2 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-2.0 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-0.4 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-14.0 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-12.4 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-10.8 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-9.2 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-7.6 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-6.0 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-2.8 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-3.6 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-4.4 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-1.2 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-4.4 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-2.8 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-1.2 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-14.0 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-6.0 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-7.6 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-9.2 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="-10.8 1.6 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="-12.4 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="0.0 0.0 -4.0" rot="0.0 180.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="-15.2 0.0 -4.0" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="halfcinderblok_light"/>
+					<vox pos="12.4 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.2 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="11.6 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="12.4 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="11.6 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.4 0.0 -15.0" rot="0.0 -70.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="9.1 0.0 -13.4" rot="0.0 -20.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="12.2 0.0 -13.1" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="6.8 0.0 -17.3" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="6.8 0.0 -20.1" rot="0.0 -100.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.0 0.0 -22.6" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.0 0.0 -25.5" rot="0.0 -80.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.0 0.0 -28.2" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.4 0.0 -30.7" rot="0.0 -100.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="10.8 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.2 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="10.0 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="10.8 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="9.2 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="10.0 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="9.2 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="8.4 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.6 0.8 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="7.6 2.4 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="8.4 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="6.8 1.6 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="6.8 0.0 -4.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 2.4 -3.5" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 1.6 -2.7" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 0.8 -1.9" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 0.8 -3.5" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 -0.0 -2.7" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 -0.0 -1.1" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 0.8 -0.3" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 2.4 -1.9" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 2.4 -0.3" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 1.6 -1.1" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 -0.0 0.50001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 0.8 1.30001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 1.6 0.50001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 2.4 1.30001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 1.6 2.10001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 -0.0 2.10001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 2.4 2.90001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 1.6 3.70001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
+					<vox pos="13.6 0.8 2.90001" rot="0.0 90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+					<vox pos="13.6 0.0 3.70001" rot="0.0 -90.0 0.0" density="3" prop="true" file="MOD/assets/vox/barricades.vox" object="cinderblok_medium"/>
 				</group>
 				<instance pos="9.6 3.4 11.2" rot="0.0 90.0 0.0" file="MOD/prefabs/hesco.xml"/>
 				<instance pos="11.6 3.4 11.2" rot="0.0 90.0 0.0" file="MOD/prefabs/hesco.xml"/>
@@ -201,147 +201,147 @@
 			</group>
 			<group name="props" pos="15.4 -2.6 -13.3" rot="0.0 -90.0 0.0">
 				<group name="military crate" pos="4.19999 3.4 6.5" rot="0.0 95.0 0.0">
-					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 					<joint pos="-0.4 0.5 0.55" collide="true"/>
 					<joint pos="-0.4 0.5 -0.45" collide="true"/>
 				</group>
 				<group name="military crate" pos="26.6 3.4 18.6" rot="0.0 95.0 0.0">
-					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 					<joint pos="-0.4 0.5 0.55" collide="true"/>
 					<joint pos="-0.4 0.5 -0.45" collide="true"/>
 				</group>
 				<group name="military crate" pos="26.6 4.1 18.6" rot="0.0 85.0 0.0">
-					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 					<joint pos="-0.4 0.5 0.55" collide="true"/>
 					<joint pos="-0.4 0.5 -0.45" collide="true"/>
 				</group>
 				<group name="military crate" pos="6.1 3.4 7.3" rot="0.0 15.0 0.0">
-					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+					<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+					<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 					<joint pos="-0.4 0.5 0.55" collide="true"/>
 					<joint pos="-0.4 0.5 -0.45" collide="true"/>
 				</group>
-				<vox pos="0.5 3.4 7.4" rot="0.0 -90.0 0.0" prop="true" file="MOD/vox/small_props.vox" object="box3"/>
-				<vox pos="0.31273 3.4 10.24177" rot="0.0 80.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="1.14102 3.4 9.67548" rot="0.0 -70.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="0.6 4.1 9.9" rot="0.0 -70.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="-0.60758 3.4 8.3693" rot="0.0 -150.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="0.7 3.4 6.2" rot="0.0 -170.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="26.2 3.4 17.3" rot="0.0 100.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="-2.1 3.4 9.6" rot="0.0 90.0 0.0" prop="true" file="MOD/vox/small_props.vox" object="barrel1"/>
-				<vox pos="24.8 3.4 15.4" rot="0.0 60.0 0.0" prop="true" file="MOD/vox/small_props.vox" object="barrel1"/>
-				<vox pos="-1.7 3.4 11.0" rot="0.0 20.0 0.0" prop="true" file="MOD/vox/small_props.vox" object="barrel1"/>
-				<vox pos="6.9 4.2 5.0" rot="0.0 50.0 0.0" prop="true" file="MOD/vox/plasticcan.vox"/>
-				<vox pos="6.4 4.2 4.5" rot="0.0 40.0 0.0" prop="true" file="MOD/vox/plasticcan.vox"/>
-				<vox pos="26.2 4.1 17.3" rot="0.0 110.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="-0.1 3.4 6.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/vox/crates.vox" object="tiny"/>
-				<vox pos="46.6 3.4 13.8" prop="true" file="MOD/vox/tents.vox" object="tent5"/>
-				<vox pos="25.83738 3.4 13.46476" rot="0.0 170.0 0.0" prop="true" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="25.75075 4.4 13.51477" rot="0.0 -170.0 0.0" prop="true" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="24.4 3.4 21.2" rot="0.0 180.0 0.0" prop="true" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="20.5 3.4 20.80002" rot="0.0 50.0 0.0" prop="true" file="MOD/vox/crates.vox" object="small"/>
-				<vox pos="25.69999 3.4 11.90001" rot="0.0 10.0 0.0" prop="true" file="MOD/vox/small_props.vox" object="box2"/>
+				<vox pos="0.5 3.4 7.4" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="box3"/>
+				<vox pos="0.31273 3.4 10.24177" rot="0.0 80.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="1.14102 3.4 9.67548" rot="0.0 -70.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="0.6 4.1 9.9" rot="0.0 -70.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="-0.60758 3.4 8.3693" rot="0.0 -150.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="0.7 3.4 6.2" rot="0.0 -170.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="26.2 3.4 17.3" rot="0.0 100.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="-2.1 3.4 9.6" rot="0.0 90.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+				<vox pos="24.8 3.4 15.4" rot="0.0 60.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+				<vox pos="-1.7 3.4 11.0" rot="0.0 20.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+				<vox pos="6.9 4.2 5.0" rot="0.0 50.0 0.0" prop="true" file="MOD/assets/vox/plasticcan.vox"/>
+				<vox pos="6.4 4.2 4.5" rot="0.0 40.0 0.0" prop="true" file="MOD/assets/vox/plasticcan.vox"/>
+				<vox pos="26.2 4.1 17.3" rot="0.0 110.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="-0.1 3.4 6.2" rot="0.0 -180.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="tiny"/>
+				<vox pos="46.6 3.4 13.8" prop="true" file="MOD/assets/vox/tents.vox" object="tent5"/>
+				<vox pos="25.83738 3.4 13.46476" rot="0.0 170.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="25.75075 4.4 13.51477" rot="0.0 -170.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="24.4 3.4 21.2" rot="0.0 180.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="20.5 3.4 20.80002" rot="0.0 50.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="small"/>
+				<vox pos="25.69999 3.4 11.90001" rot="0.0 10.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="box2"/>
 			</group>
 			<group name="military crate" pos="26.09998 0.8 11.49999" rot="0.0 105.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<group name="military crate" pos="14.69999 0.8 8.6" rot="0.0 95.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<group name="military crate" pos="14.69999 1.5 8.70001" rot="0.0 85.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<group name="military crate" pos="30.47749 1.5 13.39304" rot="0.0 95.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<group name="military crate" pos="30.5641 0.8 13.34305" rot="0.0 -75.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<group name="military crate" pos="28.95884 0.8 14.96269" rot="0.0 155.0 0.0">
-				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/vox/small_props.vox" object="crate1"/>
-				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/vox/small_props.vox" object="crate1_2"/>
+				<vox pos="0.0 -0.0 0.10001" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1"/>
+				<vox pos="0.0 0.5 0.1" prop="true" file="MOD/assets/vox/small_props.vox" object="crate1_2"/>
 				<joint pos="-0.4 0.5 0.55" collide="true"/>
 				<joint pos="-0.4 0.5 -0.45" collide="true"/>
 			</group>
 			<voxbox name="sand:normal" pos="3.00003 0.7 -2.80002" rot="0.0 -90.0 0.0" size="58 1 108" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
 			<voxbox name="sand:normal" pos="25.40004 0.7 19.69999" rot="0.0 -90.0 0.0" size="310 1 405" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
-			<instance pos="-0.4 0.8 31.2" file="MOD/avf/prefabs/technicals/technical_DSHK.xml"/>
-			<instance pos="-9.4 0.8 24.2" rot="0.0 -100.0 0.0" file="MOD/avf/prefabs/technicals/offroad.xml"/>
-			<instance pos="-9.4 0.8 27.3" rot="0.0 -90.0 0.0" file="MOD/avf/prefabs/technicals/offroad.xml"/>
+			<instance pos="-0.4 0.8 31.2" file="MOD/vehicles/avf/prefabs/technicals/technical_DSHK.xml"/>
+			<instance pos="-9.4 0.8 24.2" rot="0.0 -100.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/offroad.xml"/>
+			<instance pos="-9.4 0.8 27.3" rot="0.0 -90.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/offroad.xml"/>
 		</group>
 		<group name="Enemies" pos="5.60001 0.0 0.0" rot="0.0 180.0 0.0">
-			<script pos="-5.2 1.5 -5.5" file="MOD/Procedural/RandomEnemy.lua">
+			<script pos="-5.2 1.5 -5.5" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="-5.2 1.5 0.5" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="-5.2 1.5 0.5" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script pos="-0.9 1.5 0.5" file="MOD/Procedural/RandomEnemy.lua">
+			<script pos="-0.9 1.5 0.5" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script pos="1.9 3.1 0.5" file="MOD/Procedural/RandomEnemy.lua">
+			<script pos="1.9 3.1 0.5" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="-7.6 3.1 46.8" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="-7.6 3.1 46.8" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="22.7 3.1 46.3" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="22.7 3.1 46.3" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script pos="6.4 1.5 17.5" file="MOD/Procedural/RandomEnemy.lua">
+			<script pos="6.4 1.5 17.5" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="17.2 3.4 38.0" rot="0.0 90.0 0.0" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="17.2 3.4 38.0" rot="0.0 90.0 0.0" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="9.7 3.4 34.0" rot="0.0 90.0 0.0" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="9.7 3.4 34.0" rot="0.0 90.0 0.0" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script tags="type=mil" pos="9.7 3.4 37.7" rot="0.0 90.0 0.0" file="MOD/Procedural/RandomEnemy.lua">
+			<script tags="type=mil" pos="9.7 3.4 37.7" rot="0.0 90.0 0.0" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
-			<script pos="6.3 1.5 -10.7" file="MOD/Procedural/RandomEnemy.lua">
+			<script pos="6.3 1.5 -10.7" file="MOD/world/generation/RandomEnemy.lua">
 				<location tags="RandomRagdoll Type=civ chance=100" pos="0.0 0.1 0.0"/>
 			</script>
 		</group>
 		<group name="Loot" pos="5.60001 0.0 0.0" rot="0.0 180.0 0.0">
-			<script pos="7.6 0.5 -9.3" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="7.6 0.5 -9.3" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=35 type=food" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="7.6 0.5 -9.1" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="7.6 0.5 -9.1" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=35 type=food" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="7.0 0.5 -9.1" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="7.0 0.5 -9.1" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=35 type=food" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="11.6 0.5 14.8" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="11.6 0.5 14.8" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=35 type=food" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="7.0 1.1 13.1" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="7.0 1.1 13.1" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=25 type=general" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="6.3 0.0 11.5" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="6.3 0.0 11.5" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=25 type=general" pos="-0.1 0.1 0.3"/>
 			</script>
-			<script pos="5.8 0.0 11.5" file="MOD/Procedural/RandomLoot.lua">
+			<script pos="5.8 0.0 11.5" file="MOD/world/generation/RandomLoot.lua">
 				<location tags="RandomLoot chance=25 type=general" pos="-0.1 0.1 0.3"/>
 			</script>
 		</group>

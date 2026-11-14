@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Melee CombatKnife.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" file="MOD/Loots/melee-CombatKnife.xml"/>
+		<instance pos="0.0 0.0 0.0" file="MOD/items/Loots/melee-CombatKnife.xml"/>
 	</group>
 </prefab>
 

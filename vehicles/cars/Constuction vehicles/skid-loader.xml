@@ -1,0 +1,39 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/Constuction vehicles/skid-loader.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="Frontloader" tags="frontloader" pos="0.0 0.6 0.0" sound="military 1.2" spring="1.3" damping="1.3" topspeed="19" acceleration="0.5" strength="3" antiroll="0.4" difflock="1">
+			<body dynamic="true">
+				<vox pos="0.0 0.0 -0.1" texture="8 0.5" blendtexture="5 .5" density="3" strength="3" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="body">
+					<location tags="exhaust" pos="0.25 1.1 0.9"/>
+					<location tags="vital" pos="0.1 0.2 0.5"/>
+					<location tags="player" pos="0.05 1.1 -0.1"/>
+					<light pos="0.05 1.35 -0.8" rot="0 180 0" type="cone" color="1 1 0.8" scale="30" penumbra="30" unshadowed="0.2" fogscale="0.1" glare="0.35"/>
+					<body pos="0.0 0.0 -0.4" rot="0.0 0.0 0.0" dynamic="true">
+						<vox pos="0.0 0.0 0.1" texture="8 0.5" blendtexture="5 .5" density="4" strength="5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="arm">
+							<body pos="0.0 -0.0 -0.9" dynamic="true">
+								<vox pos="0.0 -0.2 -0.2" texture="8 0.5" blendtexture="5 .5" density="3" strength="5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="bucket">
+									<joint pos="-0.5 0.3 0.2" rot="0 90 0" type="hinge" rotspring="0" limits="-1 14" sound="true"/>
+									<joint pos="0.6 0.3 0.2" rot="0 90 0" type="hinge" rotspring="0" limits="-1 14" sound="true"/>
+								</vox>
+							</body>
+						</vox>
+						<joint pos="-0.5 1.0 1.0" rot="0 90 0" type="hinge" rotspring="0" limits="-0 55" sound="true"/>
+						<joint pos="0.6 1.0 1.0" rot="0 90 0" type="hinge" rotspring="0" limits="-0 55" sound="true"/>
+					</body>
+				</vox>
+				<wheel name="bl" pos="-0.6 0.05 0.35" drive="1" steer="-1" travel="-0.1 0.1">
+					<vox pos="-0.1 -0.35 0.05" rot="0.0 .0 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="wheel_bl"/>
+				</wheel>
+				<wheel name="br" pos="0.6 0.05 0.35" drive="1" steer="-1" travel="-0.1 0.1">
+					<vox pos="0.2 -0.35 0.05" rot="0 0 0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="wheel_br"/>
+				</wheel>
+				<wheel name="fl" pos="-0.6 0.05 -0.75" drive="0.4" steer="0.7" travel="-0.1 0.1">
+					<vox pos="-0.1 -0.35 0.05" rot="0 0 0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="fr" pos="0.6 0.05 -0.75" drive="0.4" steer="0.7" travel="-0.1 0.1">
+					<vox pos="0.2 -0.35 0.05" rot="0.0 0.0 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/Constuction vehicles/skid loader.vox" object="wheel_fr"/>
+				</wheel>
+			</body>
+		</vehicle>
+	</group>
+</prefab>
+

@@ -6,7 +6,7 @@
 		<instance pos="-0.5 1.5 0.2" file="MOD/prefabs/spawns/loots/WorkingBCarLootSpawn.xml"/>
 		<instance pos="-0.5 1.5 1.1" file="MOD/prefabs/spawns/loots/WorkingBCarLootSpawn.xml"/>
 		<instance pos="-0.5 1.5 0.7" file="MOD/prefabs/spawns/loots/MilitaryCarLootSpawn.xml"/>
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/ural/uraldamaged.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/ural/uraldamaged.xml"/>
 	</group>
 </prefab>
 

@@ -1,6 +1,6 @@
 <prefab version="0.9.6">
 	<group name="instance=MOD/prefabs/alien.xml" pos="-232.7 1.2 15.0" rot="0.0 180.0 0.0">
-		<script file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+		<script file="MOD/npcs/GoreNPCs/scripts/goreai_initializer.lua">
 
 				<body name="foot_R" tags="RRLEG bodypart" pos="-0.3 0.5 -0.1" dynamic="true">
 					<vox tags="RRLEG nocull" pos="0.2 -0.4 0.1" density="2" strength="1" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Alien.vox" object="foot_R">

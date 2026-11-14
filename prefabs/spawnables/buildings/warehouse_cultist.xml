@@ -1,6 +1,6 @@
 <prefab version="1.4.0">
 	<group name="instance=MOD/prefabs/spawnables/buildings/warehouse_cultist.xml" pos="-126.89998 0.0 0.0" rot="0.0 0.0 0.0">
-		<script pos="14.8 0.0 -0.1" file="MOD/scripts/Game/WarehouseScript_Cultist.lua">
+		<script pos="14.8 0.0 -0.1" file="MOD/world/WarehouseScript_Cultist.lua">
 			<group name="warehouse" pos="-14.4 0.4 10.4" rot="0.0 -90.0 0.0">
 				<group name="damaged panels" pos="-18.8 0.0 1.5">
 					<group pos="0.0 0.0 -1.5">
@@ -490,286 +490,286 @@
 					</voxbox>
 				</group>
 				<group name="props" pos="-11.8 -0.0 -17.5" rot="0.0 90.0 0.0">
-					<vox tags="pdfwashere" pos="-4.2 0.0 13.3" rot="0.0 -180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-					<vox pos="5.62 0.0 6.44" rot="0.0 177.0 0.0" texture="8 .8" prop="false" file="MOD/vox/airbasevox/airbase_shelf.vox" object="metal"/>
-					<vox pos="7.1 1.3 13.2" rot="0.0 138.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
-					<vox pos="-4.3 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
-					<vox tags="pdfwashere" pos="-5.6 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="0.7 0.0 -13.29999" rot="0.0 -140.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-0.5 0.0 -12.51999" rot="0.0 173.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-0.2 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-3.66 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-2.66 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-1.6 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-1.9 1.3 7.70001" rot="0.0 -80.0 0.0" texture="18 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-2.4 0.0 7.5" rot="0.0 -113.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-1.2 0.0 7.50001" rot="0.0 -159.0 0.0" texture="11 .5" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox pos="3.4 0.5 10.49999" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-					<vox pos="-8.63 0.5 12.98999" rot="0.0 -97.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-					<vox tags="pdfwashere" pos="9.6 0.4 6.9" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-					<vox tags="pdfwashere" pos="9.6 1.2 6.9" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-					<vox pos="3.59 1.6 9.79999" rot="0.0 -74.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-					<vox pos="3.8 0.5 9.29999" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-					<vox pos="2.7 0.5 9.59999" rot="0.0 1.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-					<vox pos="-4.89999 0.72 -12.15" rot="49.0 -89.3 0.8" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-					<vox pos="-4.90999 1.0 -13.25001" rot="0.0 5.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_8.vox"/>
-					<vox pos="8.16 0.6 7.28" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_3.vox"/>
-					<vox pos="-3.49999 1.1 -11.93" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_2.vox"/>
-					<vox pos="-7.12 1.1 13.04" rot="0.0 177.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_2.vox"/>
-					<vox tags="explosive=1 detail" pos="0.9 0.0 -12.29999" rot="0.0 170.0 0.0" texture="22 .6" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="explosive=1 detail" pos="0.9 1.3 -13.24998" rot="0.0 170.0 0.0" texture="16 .6" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox tags="pdfwashere" pos="-2.04 0.0 -12.02" rot="0.0 -85.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="9.2 0.0 13.10001" rot="0.0 -159.0 0.0" texture="11 .5" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="6.9 0.0 13.10001" rot="0.0 -80.0 0.0" texture="18 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="8.0 0.0 13.10001" rot="0.0 -113.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox tags="pdfwashere" pos="4.2 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-					<vox pos="4.1 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
-					<vox pos="2.7 1.5 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
-					<vox pos="4.1 0.1 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
-					<vox pos="5.6 0.1 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
-					<vox pos="5.6 1.5 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
-					<vox pos="5.6 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-					<vox tags="pdfwashere" pos="2.8 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-					<vox pos="-4.3 0.1 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
-					<vox pos="-5.8 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
-					<vox pos="9.70455 0.1 9.04792" rot="0.0 -178.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="9.91064 0.6 9.71739" rot="0.0 88.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
-					<vox pos="8.51064 0.0 10.11739" rot="0.0 108.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
-					<vox pos="9.91165 0.2 8.98606" rot="0.0 168.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
-					<vox pos="9.512 0.55 8.98601" rot="-3.5 176.0 -59.9" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
-					<vox pos="9.90723 0.2 9.62144" rot="0.0 163.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
-					<vox tags="fxbreak=l2black detail" pos="4.23374 0.0 8.23807" rot="0.0 -89.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="5.47374 0.0 4.92807" rot="0.0 -89.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="pdfwashere" pos="0.35 0.2 -10.94001" rot="0.0 -98.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/vox/supply_boxes.vox" object="general_small"/>
-					<vox tags="pdfwashere" pos="0.35 0.0 -10.94001" rot="0.0 -98.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/vox/supply_boxes.vox" object="general_small1"/>
-					<vox pos="-9.51 0.5 -12.93001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-					<vox pos="-9.02999 0.6 -11.64" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_3.vox"/>
-					<vox pos="-7.51 0.3 -11.50001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-6.41 0.5 -11.50001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-					<vox pos="-6.10999 0.6 -13.00001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_3.vox"/>
-					<vox pos="-7.58999 1.2 -13.25999" rot="0.0 -173.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-					<vox pos="-7.93388 0.3 -13.18364" rot="0.0 -173.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-10.22538 0.4 -12.36641" rot="0.0 -179.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_10.vox"/>
-					<vox pos="6.84552 0.36 4.20451" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_10.vox"/>
-					<vox pos="7.52001 1.0 5.36" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_8.vox"/>
-					<vox pos="6.74728 0.5 5.29575" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-					<vox pos="-11.39471 0.0 -12.5985" rot="0.0 -179.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/vox/uam_woodcratesflag.vox" object="3"/>
-					<vox pos="-16.57 1.01 -8.935" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-16.57 0.31 -8.935" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-16.57 0.31 -10.955" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-16.57 1.0 -10.955" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-					<vox pos="-16.49 0.0 -2.58" rot="0.0 0.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/vox/uam_woodcratesflag.vox" object="1"/>
-					<vox pos="1.29 0.0 5.86" rot="0.0 106.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/vox/uam_woodcratesflag.vox" object="2"/>
-					<vox pos="-11.33 0.8 -12.84" rot="0.0 -179.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/vox/uam_woodcratesflag.vox" object="4"/>
-					<vox pos="-15.86307 0.1 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 0.3 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 0.7 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 0.5 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 1.1 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 0.9 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 1.3 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 1.5 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-15.86307 1.7 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-16.41307 0.0 1.13388" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-					<vox pos="-16.41307 0.0 -0.36612" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-					<vox pos="-16.41307 0.0 5.63388" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-					<vox pos="-16.41307 0.0 4.13388" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-					<vox pos="-16.41307 0.0 2.63388" rot="0.0 90.0 0.0" prop="false" file="MOD/vox/small_props.vox" object="concrete_slabs"/>
-					<vox pos="-13.38308 1.7 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 1.5 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 1.3 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 1.1 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 0.9 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 0.7 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 0.5 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 0.3 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="-13.38308 0.1 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-					<vox pos="1.29955 0.0 7.63765" rot="0.0 -89.0 0.0" density="16" file="MOD/vox/small_props.vox" object="shelf2">
-						<vox pos="0.145 0.0 0.33" rot="0.0 -110.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
-						<vox pos="0.058 0.8 0.823" rot="0.0 -10.0 0.0" file="MOD/vox/small_boxes.vox" object="box3"/>
-						<vox pos="0.012 1.3 0.51" rot="0.0 -90.0 0.0" file="MOD/vox/small_boxes.vox" object="box2"/>
-						<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/vox/small_boxes.vox" object="box5"/>
-						<vox pos="-0.058 1.8 0.904" rot="0.0 -140.0 0.0" file="MOD/vox/small_boxes.vox" object="box1"/>
+					<vox tags="pdfwashere" pos="-4.2 0.0 13.3" rot="0.0 -180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox pos="5.62 0.0 6.44" rot="0.0 177.0 0.0" texture="8 .8" prop="false" file="MOD/assets/vox/airbasevox/airbase_shelf.vox" object="metal"/>
+					<vox pos="7.1 1.3 13.2" rot="0.0 138.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+					<vox pos="-4.3 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+					<vox tags="pdfwashere" pos="-5.6 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="0.7 0.0 -13.29999" rot="0.0 -140.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-0.5 0.0 -12.51999" rot="0.0 173.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-0.2 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-3.66 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-2.66 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-1.6 0.0 -13.4" rot="0.0 170.0 0.0" texture="12 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-1.9 1.3 7.70001" rot="0.0 -80.0 0.0" texture="18 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-2.4 0.0 7.5" rot="0.0 -113.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-1.2 0.0 7.50001" rot="0.0 -159.0 0.0" texture="11 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox pos="3.4 0.5 10.49999" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+					<vox pos="-8.63 0.5 12.98999" rot="0.0 -97.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+					<vox tags="pdfwashere" pos="9.6 0.4 6.9" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+					<vox tags="pdfwashere" pos="9.6 1.2 6.9" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+					<vox pos="3.59 1.6 9.79999" rot="0.0 -74.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="3.8 0.5 9.29999" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="2.7 0.5 9.59999" rot="0.0 1.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="-4.89999 0.72 -12.15" rot="49.0 -89.3 0.8" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+					<vox pos="-4.90999 1.0 -13.25001" rot="0.0 5.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_8.vox"/>
+					<vox pos="8.16 0.6 7.28" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+					<vox pos="-3.49999 1.1 -11.93" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_2.vox"/>
+					<vox pos="-7.12 1.1 13.04" rot="0.0 177.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_2.vox"/>
+					<vox tags="explosive=1 detail" pos="0.9 0.0 -12.29999" rot="0.0 170.0 0.0" texture="22 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="explosive=1 detail" pos="0.9 1.3 -13.24998" rot="0.0 170.0 0.0" texture="16 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox tags="pdfwashere" pos="-2.04 0.0 -12.02" rot="0.0 -85.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/assets/vox/airbasevox/airbase_mili_crate_1.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="9.2 0.0 13.10001" rot="0.0 -159.0 0.0" texture="11 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="6.9 0.0 13.10001" rot="0.0 -80.0 0.0" texture="18 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="8.0 0.0 13.10001" rot="0.0 -113.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox tags="pdfwashere" pos="4.2 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox pos="4.1 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+					<vox pos="2.7 1.5 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+					<vox pos="4.1 0.1 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+					<vox pos="5.6 0.1 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+					<vox pos="5.6 1.5 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+					<vox pos="5.6 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox tags="pdfwashere" pos="2.8 0.0 13.3" rot="0.0 180.0 0.0" texture="8 .8" density="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox pos="-4.3 0.1 13.3" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+					<vox pos="-5.8 0.8 13.3" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
+					<vox pos="9.70455 0.1 9.04792" rot="0.0 -178.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="9.91064 0.6 9.71739" rot="0.0 88.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+					<vox pos="8.51064 0.0 10.11739" rot="0.0 108.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+					<vox pos="9.91165 0.2 8.98606" rot="0.0 168.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+					<vox pos="9.512 0.55 8.98601" rot="-3.5 176.0 -59.9" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+					<vox pos="9.90723 0.2 9.62144" rot="0.0 163.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+					<vox tags="fxbreak=l2black detail" pos="4.23374 0.0 8.23807" rot="0.0 -89.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="5.47374 0.0 4.92807" rot="0.0 -89.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="pdfwashere" pos="0.35 0.2 -10.94001" rot="0.0 -98.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/assets/vox/supply_boxes.vox" object="general_small"/>
+					<vox tags="pdfwashere" pos="0.35 0.0 -10.94001" rot="0.0 -98.0 0.0" texture="8 .4" density="13" prop="false" file="MOD/assets/vox/supply_boxes.vox" object="general_small1"/>
+					<vox pos="-9.51 0.5 -12.93001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+					<vox pos="-9.02999 0.6 -11.64" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+					<vox pos="-7.51 0.3 -11.50001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-6.41 0.5 -11.50001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+					<vox pos="-6.10999 0.6 -13.00001" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+					<vox pos="-7.58999 1.2 -13.25999" rot="0.0 -173.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="-7.93388 0.3 -13.18364" rot="0.0 -173.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-10.22538 0.4 -12.36641" rot="0.0 -179.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+					<vox pos="6.84552 0.36 4.20451" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+					<vox pos="7.52001 1.0 5.36" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_8.vox"/>
+					<vox pos="6.74728 0.5 5.29575" rot="0.0 79.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+					<vox pos="-11.39471 0.0 -12.5985" rot="0.0 -179.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/assets/vox/uam_woodcratesflag.vox" object="3"/>
+					<vox pos="-16.57 1.01 -8.935" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-16.57 0.31 -8.935" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-16.57 0.31 -10.955" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-16.57 1.0 -10.955" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+					<vox pos="-16.49 0.0 -2.58" rot="0.0 0.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/assets/vox/uam_woodcratesflag.vox" object="1"/>
+					<vox pos="1.29 0.0 5.86" rot="0.0 106.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/assets/vox/uam_woodcratesflag.vox" object="2"/>
+					<vox pos="-11.33 0.8 -12.84" rot="0.0 -179.0 0.0" texture="8 .6" blendtexture="3 .5" density="2" prop="false" file="MOD/assets/vox/uam_woodcratesflag.vox" object="4"/>
+					<vox pos="-15.86307 0.1 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 0.3 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 0.7 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 0.5 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 1.1 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 0.9 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 1.3 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 1.5 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-15.86307 1.7 -12.80611" rot="0.0 93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-16.41307 0.0 1.13388" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+					<vox pos="-16.41307 0.0 -0.36612" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+					<vox pos="-16.41307 0.0 5.63388" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+					<vox pos="-16.41307 0.0 4.13388" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+					<vox pos="-16.41307 0.0 2.63388" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="concrete_slabs"/>
+					<vox pos="-13.38308 1.7 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 1.5 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 1.3 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 1.1 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 0.9 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 0.7 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 0.5 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 0.3 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="-13.38308 0.1 -12.73611" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+					<vox pos="1.29955 0.0 7.63765" rot="0.0 -89.0 0.0" density="16" file="MOD/assets/vox/small_props.vox" object="shelf2">
+						<vox pos="0.145 0.0 0.33" rot="0.0 -110.0 0.0" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+						<vox pos="0.058 0.8 0.823" rot="0.0 -10.0 0.0" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+						<vox pos="0.012 1.3 0.51" rot="0.0 -90.0 0.0" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+						<vox pos="-0.041 1.3 -0.921" rot="0.0 30.0 0.0" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+						<vox pos="-0.058 1.8 0.904" rot="0.0 -140.0 0.0" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
 					</vox>
-					<vox pos="5.30001 3.9 12.79" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_3.vox"/>
-					<vox pos="6.28001 3.8 12.84" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-					<vox pos="7.23 3.8 12.94" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-					<vox pos="9.59001 3.8 12.84" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-					<vox pos="4.41001 4.3 11.63" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_8.vox"/>
-					<vox pos="8.55001 3.9 12.89" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-4.34477 3.3 9.09824" rot="0.0 26.0 0.0" texture="11 .5" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-3.14933 3.3 8.99366" rot="0.0 72.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox pos="-12.46999 6.8 8.72" rot="0.0 -96.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-					<vox pos="-12.46999 7.3 9.87" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_8.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="-14.65 6.3 13.14" rot="0.0 5.0 0.0" texture="12 .8" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-					<vox pos="-13.45223 6.8 12.93108" rot="0.0 95.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-					<vox pos="-15.707 7.04 13.017" rot="179.7 -90.3 84.0" texture="8 .4" file="MOD/vox/crate_9.vox"/>
-					<vox pos="-16.65945 6.7 11.24208" rot="0.0 -1.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_10.vox"/>
-					<vox pos="-13.409 6.3 9.312" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_plastic_table.vox" object="white"/>
-					<vox tags="pdfwashere" pos="-15.73999 1.2 15.27" rot="0.0 90.0 0.0" desc="5" texture="5 .5" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="-14.04 1.2 15.27" rot="0.0 90.0 0.0" texture="7 .6" blendtexture="7" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="-13.54 -0.4 15.27" rot="0.0 85.0 0.0" texture="11 .9" blendtexture="5" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="-15.23999 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="13 .8" blendtexture="3 2" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-16.94 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="7 .8" blendtexture="3" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-					<vox tags="pdfwashere" pos="-2.04999 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="-4.58998 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="-16.38745 1.6 -5.3503" rot="0.0 0.0 0.0" texture="9 .8" blendtexture="8" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-16.38745 -0.0 -4.8503" rot="0.0 -5.0 0.0" texture="12 .8" blendtexture="6" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-16.38745 -0.0 -6.55028" rot="0.0 -1.0 0.0" texture="8 .8" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-					<vox tags="pdfwashere" pos="-11.79 -0.4 15.27" rot="0.0 85.0 0.0" texture="12 .8" blendtexture="6" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-12.29 1.2 15.27" rot="0.0 90.0 0.0" texture="9 .8" blendtexture="8" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-10.59 1.2 15.27" rot="0.0 90.0 0.0" desc="6" texture="8 1" blendtexture="12" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-					<vox tags="pdfwashere" pos="-10.09 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="7 .8" blendtexture="3" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-					<vox tags="pdfwashere" pos="-8.88999 1.2 15.27" rot="0.0 90.0 0.0" desc="5" texture="5 .5" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="-7.19 1.2 15.27" rot="0.0 90.0 0.0" texture="7 .6" blendtexture="7" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="-8.38999 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="13 .8" blendtexture="3 2" strength="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-					<vox tags="pdfwashere" pos="-6.69 -0.4 15.27" rot="0.0 85.0 0.0" texture="11 .9" blendtexture="5" density="20" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-					<vox tags="pdfwashere" pos="2.95001 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="0.41002 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="7.98001 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="11.62 -0.39 9.56" rot="0.0 90.0 0.0" texture="9" blendtexture="3 .5" density="15" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox tags="pdfwashere" pos="5.44002 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-					<vox pos="0.1 3.3 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-					<vox pos="0.7 0.0 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-					<vox pos="6.4 0.0 9.10001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-					<vox pos="-2.2 0.0 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-					<vox pos="-6.7 0.0 9.3" rot="0.0 0.0 0.0" texture="6" blendtexture="3 .8" density="3" file="MOD/vox/Props/MISC/park_table.vox"/>
-					<vox pos="-1.4 0.0 9.3" rot="0.0 0.0 0.0" texture="6" blendtexture="3 .8" density="3" prop="true" file="MOD/vox/Props/MISC/park_table.vox"/>
-					<vox pos="-15.2 0.0 -11.0" rot="0.0 -82.0 0.0" texture="8 .9" prop="true" file="MOD/vox/airbasevox/airbase_pallettruck.vox"/>
-					<vox pos="3.6 0.0 5.0" rot="0.0 -42.0 0.0" texture="8 .9" prop="true" file="MOD/vox/airbasevox/airbase_pallettruck.vox"/>
-					<vox tags="pdfwashere" pos="-1.6 0.0 -10.50001" rot="0.0 -82.0 0.0" texture="8" prop="true" file="MOD/vox/airbasevox/airbase_pushcart.vox"/>
-					<vox tags="pdfwashere" pos="4.8 0.0 3.99999" rot="0.0 -22.0 0.0" texture="8" prop="true" file="MOD/vox/airbasevox/airbase_pushcart.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="3.95067 3.3 13.30284" rot="0.0 62.0 0.0" texture="12 .2" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-					<vox tags="fxbreak=l2black detail" pos="2.35523 3.3 13.29824" rot="0.0 16.0 0.0" texture="11 .5" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox pos="5.30001 3.9 12.79" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+					<vox pos="6.28001 3.8 12.84" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+					<vox pos="7.23 3.8 12.94" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+					<vox pos="9.59001 3.8 12.84" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+					<vox pos="4.41001 4.3 11.63" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_8.vox"/>
+					<vox pos="8.55001 3.9 12.89" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-4.34477 3.3 9.09824" rot="0.0 26.0 0.0" texture="11 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-3.14933 3.3 8.99366" rot="0.0 72.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox pos="-12.46999 6.8 8.72" rot="0.0 -96.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+					<vox pos="-12.46999 7.3 9.87" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_8.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="-14.65 6.3 13.14" rot="0.0 5.0 0.0" texture="12 .8" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+					<vox pos="-13.45223 6.8 12.93108" rot="0.0 95.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="-15.707 7.04 13.017" rot="179.7 -90.3 84.0" texture="8 .4" file="MOD/assets/vox/crate_9.vox"/>
+					<vox pos="-16.65945 6.7 11.24208" rot="0.0 -1.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+					<vox pos="-13.409 6.3 9.312" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_plastic_table.vox" object="white"/>
+					<vox tags="pdfwashere" pos="-15.73999 1.2 15.27" rot="0.0 90.0 0.0" desc="5" texture="5 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="-14.04 1.2 15.27" rot="0.0 90.0 0.0" texture="7 .6" blendtexture="7" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="-13.54 -0.4 15.27" rot="0.0 85.0 0.0" texture="11 .9" blendtexture="5" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="-15.23999 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="13 .8" blendtexture="3 2" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-16.94 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="7 .8" blendtexture="3" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox tags="pdfwashere" pos="-2.04999 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="-4.58998 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="-16.38745 1.6 -5.3503" rot="0.0 0.0 0.0" texture="9 .8" blendtexture="8" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-16.38745 -0.0 -4.8503" rot="0.0 -5.0 0.0" texture="12 .8" blendtexture="6" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-16.38745 -0.0 -6.55028" rot="0.0 -1.0 0.0" texture="8 .8" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox tags="pdfwashere" pos="-11.79 -0.4 15.27" rot="0.0 85.0 0.0" texture="12 .8" blendtexture="6" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-12.29 1.2 15.27" rot="0.0 90.0 0.0" texture="9 .8" blendtexture="8" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-10.59 1.2 15.27" rot="0.0 90.0 0.0" desc="6" texture="8 1" blendtexture="12" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox tags="pdfwashere" pos="-10.09 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="7 .8" blendtexture="3" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox tags="pdfwashere" pos="-8.88999 1.2 15.27" rot="0.0 90.0 0.0" desc="5" texture="5 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="-7.19 1.2 15.27" rot="0.0 90.0 0.0" texture="7 .6" blendtexture="7" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="-8.38999 -0.4 15.27" rot="0.0 85.0 0.0" desc="8" texture="13 .8" blendtexture="3 2" strength="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox tags="pdfwashere" pos="-6.69 -0.4 15.27" rot="0.0 85.0 0.0" texture="11 .9" blendtexture="5" density="20" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox tags="pdfwashere" pos="2.95001 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="0.41002 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="7.98001 -0.39 15.14" rot="0.0 3.0 0.0" texture="9" blendtexture="3 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="11.62 -0.39 9.56" rot="0.0 90.0 0.0" texture="9" blendtexture="3 .5" density="15" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox tags="pdfwashere" pos="5.44002 -0.39 15.14" rot="0.0 -5.0 0.0" texture="10" blendtexture="5 .5" density="30" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+					<vox pos="0.1 3.3 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+					<vox pos="0.7 0.0 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+					<vox pos="6.4 0.0 9.10001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+					<vox pos="-2.2 0.0 13.20001" rot="0.0 179.0 0.0" texture="8 .1" blendtexture="3 .4" density="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+					<vox pos="-6.7 0.0 9.3" rot="0.0 0.0 0.0" texture="6" blendtexture="3 .8" density="3" file="MOD/assets/vox/Props/MISC/park_table.vox"/>
+					<vox pos="-1.4 0.0 9.3" rot="0.0 0.0 0.0" texture="6" blendtexture="3 .8" density="3" prop="true" file="MOD/assets/vox/Props/MISC/park_table.vox"/>
+					<vox pos="-15.2 0.0 -11.0" rot="0.0 -82.0 0.0" texture="8 .9" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallettruck.vox"/>
+					<vox pos="3.6 0.0 5.0" rot="0.0 -42.0 0.0" texture="8 .9" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallettruck.vox"/>
+					<vox tags="pdfwashere" pos="-1.6 0.0 -10.50001" rot="0.0 -82.0 0.0" texture="8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pushcart.vox"/>
+					<vox tags="pdfwashere" pos="4.8 0.0 3.99999" rot="0.0 -22.0 0.0" texture="8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pushcart.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="3.95067 3.3 13.30284" rot="0.0 62.0 0.0" texture="12 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+					<vox tags="fxbreak=l2black detail" pos="2.35523 3.3 13.29824" rot="0.0 16.0 0.0" texture="11 .5" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
 					<group name="precomposed gore" pos="-2.0 -0.1 6.1">
 						<group name="torn insurgent" pos="1.27 0.1 -0.54" rot="0.0 -160.0 0.0" prop0="tags=nocull bloodgore">
-							<vox pos="-1.531 0.137 0.136" rot="-17.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_upper_missing_old"/>
-							<vox pos="-2.366 -0.002 0.782" rot="0.0 0.0 53.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_mangled_old"/>
-							<vox pos="-1.831 0.50029 0.00196" rot="-16.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R4_mangled_all_old"/>
-							<vox pos="-1.83 0.00037 -0.00676" rot="1.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R4_mangled_all_old"/>
-							<vox pos="-1.131 0.30789 -0.08871" rot="-5.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_severed_top_old"/>
-							<vox pos="-1.131 0.023 0.165" rot="-36.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R_hnad_damage_minor_R_old"/>
-							<vox pos="-1.331 0.29171 0.41207" rot="-122.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L1_top_damage_old"/>
-							<vox pos="-1.631 0.29171 0.41207" rot="-122.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R1_top_damage_old"/>
-							<vox pos="-1.631 0.071 0.846" rot="-68.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R1_bottom_damage_old"/>
-							<vox pos="-1.331 0.16372 0.88346" rot="-68.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L1_bottom_damage_old"/>
-							<vox pos="-1.25702 -0.08 0.30763" rot="0.0 120.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large1_old"/>
-							<vox pos="-2.52744 -0.079 0.83917" rot="0.0 -20.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
+							<vox pos="-1.531 0.137 0.136" rot="-17.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_upper_missing_old"/>
+							<vox pos="-2.366 -0.002 0.782" rot="0.0 0.0 53.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_mangled_old"/>
+							<vox pos="-1.831 0.50029 0.00196" rot="-16.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R4_mangled_all_old"/>
+							<vox pos="-1.83 0.00037 -0.00676" rot="1.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R4_mangled_all_old"/>
+							<vox pos="-1.131 0.30789 -0.08871" rot="-5.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_severed_top_old"/>
+							<vox pos="-1.131 0.023 0.165" rot="-36.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R_hnad_damage_minor_R_old"/>
+							<vox pos="-1.331 0.29171 0.41207" rot="-122.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L1_top_damage_old"/>
+							<vox pos="-1.631 0.29171 0.41207" rot="-122.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R1_top_damage_old"/>
+							<vox pos="-1.631 0.071 0.846" rot="-68.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R1_bottom_damage_old"/>
+							<vox pos="-1.331 0.16372 0.88346" rot="-68.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L1_bottom_damage_old"/>
+							<vox pos="-1.25702 -0.08 0.30763" rot="0.0 120.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large1_old"/>
+							<vox pos="-2.52744 -0.079 0.83917" rot="0.0 -20.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
 						</group>
 						<group name="split insurgent" pos="-3.03 0.5 3.66" rot="0.0 -180.0 0.0" prop0="tags=nocull bloodgore">
-							<vox pos="0.069 0.70115 0.16346" rot="-91.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_top_half_no_bottom_old"/>
-							<vox pos="0.14722 0.701 -0.33484" rot="-91.0 172.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_bottom_half_no_top_old"/>
-							<vox pos="0.288 0.701 -0.618" rot="-90.0 172.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R1_top_damage_old"/>
-							<vox pos="-0.345 0.198 -0.916" rot="-90.0 -143.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L3_bottom_severed_old"/>
-							<vox pos="-0.00908 0.701 -0.65975" rot="-90.0 172.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L2_bottom_severed_old"/>
-							<vox pos="0.069 0.694 0.549" rot="-98.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_top_left_damage_old"/>
-							<vox pos="0.069 0.794 0.567" rot="-98.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="jaw_left_damage_old"/>
-							<vox pos="-0.331 0.70115 0.16346" rot="91.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_mangled_top_bone_old"/>
-							<vox pos="0.369 0.70487 0.26339" rot="91.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R4_mangled_all_old"/>
-							<vox pos="-0.024 -0.488 0.06" rot="0.0 0.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_medium1_old"/>
-							<voxbox pos="-0.368 0.518 -0.337" rot="0.0 0.0 0.0" size="9 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
-							<voxbox pos="0.529 0.518 0.558" rot="0.0 180.0 0.0" size="9 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
-							<voxbox pos="-0.02561 0.626 0.26666" rot="0.0 -174.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="0.17539 0.632 0.17606" rot="0.0 172.0 0.0" size="1 1 2" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<vox pos="0.069 0.70115 0.16346" rot="-91.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_top_half_no_bottom_old"/>
+							<vox pos="0.14722 0.701 -0.33484" rot="-91.0 172.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_bottom_half_no_top_old"/>
+							<vox pos="0.288 0.701 -0.618" rot="-90.0 172.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R1_top_damage_old"/>
+							<vox pos="-0.345 0.198 -0.916" rot="-90.0 -143.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L3_bottom_severed_old"/>
+							<vox pos="-0.00908 0.701 -0.65975" rot="-90.0 172.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L2_bottom_severed_old"/>
+							<vox pos="0.069 0.694 0.549" rot="-98.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_top_left_damage_old"/>
+							<vox pos="0.069 0.794 0.567" rot="-98.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="jaw_left_damage_old"/>
+							<vox pos="-0.331 0.70115 0.16346" rot="91.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_mangled_top_bone_old"/>
+							<vox pos="0.369 0.70487 0.26339" rot="91.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R4_mangled_all_old"/>
+							<vox pos="-0.024 -0.488 0.06" rot="0.0 0.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_medium1_old"/>
+							<voxbox pos="-0.368 0.518 -0.337" rot="0.0 0.0 0.0" size="9 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
+							<voxbox pos="0.529 0.518 0.558" rot="0.0 180.0 0.0" size="9 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_old"/>
+							<voxbox pos="-0.02561 0.626 0.26666" rot="0.0 -174.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="0.17539 0.632 0.17606" rot="0.0 172.0 0.0" size="1 1 2" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
 						</group>
 						<group name="split insurgent 2" pos="-7.279 6.4 3.6" rot="0.0 90.0 0.0" prop0="tags=nocull bloodgore">
-							<vox pos="-0.161 -2.685 2.736" rot="-127.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_top_half_no_bottom_old"/>
-							<vox pos="0.001 1.126 0.197" rot="-110.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_bottom_half_no_top_old"/>
-							<vox pos="-0.161 -2.84586 3.03263" rot="-57.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_top_right_damage_old"/>
-							<vox pos="0.1 1.094 -0.078" rot="-90.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R2_mangled_top_old"/>
-							<vox pos="-0.198 1.055 -0.103" rot="-82.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L2_bottom_severed_old"/>
-							<vox pos="-0.199 0.64307 -0.29305" rot="-23.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L2_top_severed_old"/>
-							<vox pos="0.101 0.604 -0.201" rot="-23.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R2_mangled_bottom_old"/>
-							<vox pos="0.138 -2.3334 2.77661" rot="-168.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R1_mangled_bottom_old"/>
-							<vox pos="0.139 -2.61 2.791" rot="-147.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R1_minor_bottom_old"/>
-							<vox pos="-0.561 -2.897 3.254" rot="89.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_minor_bottom_old"/>
-							<vox pos="-0.561 -2.90498 3.65394" rot="89.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R4_mangled_all_old"/>
-							<voxbox pos="-0.1757 0.98035 0.55405" rot="-23.9 -174.5 -2.4" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.1747 0.93235 0.56405" rot="-57.1 -174.7 -1.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="0.07058 0.9079 0.46852" rot="-52.7 175.2 6.3" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.06458 0.84594 0.48334" rot="-72.0 176.10001 4.9" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.05458 0.76295 0.49187" rot="-82.0 177.0 5.5" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.02258 0.52556 0.45649" rot="-110.2 179.89999 6.3" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.03258 0.60285 0.48792" rot="-100.1 178.8 6.2" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.03858 0.66437 0.50491" rot="-81.9 178.8 7.9" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="-0.1717 0.81435 0.57305" rot="-98.3 -174.7 -0.2" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.16888 0.8571 0.59691" rot="-65.1 -175.39999 -1.4" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.15988 0.63739 0.46797" rot="-134.10001 -174.7 -5.8" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.16158 0.69492 0.52682" rot="-126.1 -174.0 -6.3" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.15945 0.72144 0.56801" rot="-93.0 -175.3 -7.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="0.02306 -2.96452 2.51481" rot="74.9 179.60001 -6.5" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.01921 -2.9146 2.55465" rot="55.8 -179.89999 -4.9" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="0.0121 -2.8566 2.61503" rot="45.8 179.10001 -4.6" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="-0.01156 -2.73776 2.82467" rot="17.7 176.7 -2.8" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="-0.0043 -2.76076 2.74417" rot="27.7 177.5 -3.6" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="-0.00047 -2.78534 2.68509" rot="45.8 176.10001 -4.6" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
-							<voxbox pos="-0.19782 -2.75778 2.80268" rot="-41.6 -172.5 5.6" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.2016 -2.70202 2.74225" rot="-33.8 -172.0 6.3" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<voxbox pos="-0.20045 -2.66228 2.71356" rot="-0.6 -171.2 5.1" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
-							<vox pos="-0.179 -0.09 -0.197" rot="0.0 36.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small2_old"/>
-							<vox pos="-0.124 -3.089 3.255" rot="0.0 80.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_medium2_old"/>
-							<vox pos="0.059 -6.389 0.74" rot="0.0 90.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large2_old"/>
+							<vox pos="-0.161 -2.685 2.736" rot="-127.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_top_half_no_bottom_old"/>
+							<vox pos="0.001 1.126 0.197" rot="-110.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_bottom_half_no_top_old"/>
+							<vox pos="-0.161 -2.84586 3.03263" rot="-57.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_top_right_damage_old"/>
+							<vox pos="0.1 1.094 -0.078" rot="-90.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R2_mangled_top_old"/>
+							<vox pos="-0.198 1.055 -0.103" rot="-82.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L2_bottom_severed_old"/>
+							<vox pos="-0.199 0.64307 -0.29305" rot="-23.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L2_top_severed_old"/>
+							<vox pos="0.101 0.604 -0.201" rot="-23.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R2_mangled_bottom_old"/>
+							<vox pos="0.138 -2.3334 2.77661" rot="-168.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R1_mangled_bottom_old"/>
+							<vox pos="0.139 -2.61 2.791" rot="-147.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R1_minor_bottom_old"/>
+							<vox pos="-0.561 -2.897 3.254" rot="89.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_minor_bottom_old"/>
+							<vox pos="-0.561 -2.90498 3.65394" rot="89.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R4_mangled_all_old"/>
+							<voxbox pos="-0.1757 0.98035 0.55405" rot="-23.9 -174.5 -2.4" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.1747 0.93235 0.56405" rot="-57.1 -174.7 -1.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="0.07058 0.9079 0.46852" rot="-52.7 175.2 6.3" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.06458 0.84594 0.48334" rot="-72.0 176.10001 4.9" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.05458 0.76295 0.49187" rot="-82.0 177.0 5.5" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.02258 0.52556 0.45649" rot="-110.2 179.89999 6.3" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.03258 0.60285 0.48792" rot="-100.1 178.8 6.2" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.03858 0.66437 0.50491" rot="-81.9 178.8 7.9" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="-0.1717 0.81435 0.57305" rot="-98.3 -174.7 -0.2" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.16888 0.8571 0.59691" rot="-65.1 -175.39999 -1.4" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.15988 0.63739 0.46797" rot="-134.10001 -174.7 -5.8" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.16158 0.69492 0.52682" rot="-126.1 -174.0 -6.3" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.15945 0.72144 0.56801" rot="-93.0 -175.3 -7.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="0.02306 -2.96452 2.51481" rot="74.9 179.60001 -6.5" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.01921 -2.9146 2.55465" rot="55.8 -179.89999 -4.9" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="0.0121 -2.8566 2.61503" rot="45.8 179.10001 -4.6" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="-0.01156 -2.73776 2.82467" rot="17.7 176.7 -2.8" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="-0.0043 -2.76076 2.74417" rot="27.7 177.5 -3.6" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="-0.00047 -2.78534 2.68509" rot="45.8 176.10001 -4.6" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="large_intestine_old"/>
+							<voxbox pos="-0.19782 -2.75778 2.80268" rot="-41.6 -172.5 5.6" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.2016 -2.70202 2.74225" rot="-33.8 -172.0 6.3" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<voxbox pos="-0.20045 -2.66228 2.71356" rot="-0.6 -171.2 5.1" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="small_intestine_old"/>
+							<vox pos="-0.179 -0.09 -0.197" rot="0.0 36.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small2_old"/>
+							<vox pos="-0.124 -3.089 3.255" rot="0.0 80.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_medium2_old"/>
+							<vox pos="0.059 -6.389 0.74" rot="0.0 90.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large2_old"/>
 						</group>
 						<group name="burnt insurgent" pos="0.4 0.3 -16.6" prop0="tags=nocull bloodgore" prop1="prop=true">
-							<vox pos="-0.165 0.201 -0.077" rot="-90.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_rotted"/>
-							<vox pos="0.04302 0.201 -0.41009" rot="-90.0 -94.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R_rotted"/>
-							<vox pos="-0.356 0.201 -0.438" rot="-90.0 -94.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R_rotted"/>
-							<vox pos="-0.465 0.20101 -0.177" rot="-90.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R_rotted"/>
-							<vox pos="-0.3589 0.201 0.14243" rot="-90.0 -85.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L_rotted"/>
-							<vox pos="-0.23 0.201 0.47701" rot="-90.0 -78.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_L_rotted"/>
-							<vox pos="0.25907 0.201 0.37305" rot="-90.0 -78.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_rotted"/>
-							<vox pos="0.535 0.201 -0.077" rot="-52.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_rotted"/>
-							<vox pos="-0.965 0.20101 -0.177" rot="-90.0 -90.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R_rotted"/>
-							<vox pos="-0.857 0.301 0.18601" rot="-90.0 -85.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L_rotted"/>
+							<vox pos="-0.165 0.201 -0.077" rot="-90.0 -90.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="body_rotted"/>
+							<vox pos="0.04302 0.201 -0.41009" rot="-90.0 -94.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_R_rotted"/>
+							<vox pos="-0.356 0.201 -0.438" rot="-90.0 -94.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_R_rotted"/>
+							<vox pos="-0.465 0.20101 -0.177" rot="-90.0 -90.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_R_rotted"/>
+							<vox pos="-0.3589 0.201 0.14243" rot="-90.0 -85.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Leg_L_rotted"/>
+							<vox pos="-0.23 0.201 0.47701" rot="-90.0 -78.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="larm_L_rotted"/>
+							<vox pos="0.25907 0.201 0.37305" rot="-90.0 -78.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="Uarm_L_rotted"/>
+							<vox pos="0.535 0.201 -0.077" rot="-52.0 -90.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="head_rotted"/>
+							<vox pos="-0.965 0.20101 -0.177" rot="-90.0 -90.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_R_rotted"/>
+							<vox pos="-0.857 0.301 0.18601" rot="-90.0 -85.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="foot_L_rotted"/>
 						</group>
 						<group name="slashed UM" pos="-13.0 6.3 6.0">
-							<vox pos="-0.17102 0.74282 0.23026" rot="36.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw_left_damage_old"/>
-							<vox pos="-0.169 0.202 0.071" rot="-19.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_side_bottom_injury_old"/>
-							<vox pos="0.131 0.4531 0.26322" rot="-19.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R1_minor_bottom_old"/>
-							<vox pos="0.131 0.16944 0.16555" rot="-19.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R1_mangled_bottom_old"/>
-							<vox pos="-0.569 0.4531 0.26322" rot="-19.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_minor_bottom_old"/>
-							<vox pos="-0.57 0.16944 0.16555" rot="-19.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R2_bone_exposed_mangled_bottom_old"/>
-							<vox pos="-0.069 0.2 -0.119" rot="-90.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R1_top_damage_old"/>
-							<vox pos="-0.069 0.2 -0.619" rot="-90.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R1_bottom_damage_old"/>
-							<vox pos="0.04 0.013 0.009" rot="0.0 95.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_medium2_old"/>
-							<vox pos="-0.369 0.3 -0.619" rot="-90.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L1_bottom_damage_old"/>
-							<vox pos="-0.369 0.2 -0.119" rot="-90.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L1_top_damage_old"/>
-							<vox pos="-0.17 0.79828 0.31075" rot="35.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_top_left_damage_old"/>
+							<vox pos="-0.17102 0.74282 0.23026" rot="36.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw_left_damage_old"/>
+							<vox pos="-0.169 0.202 0.071" rot="-19.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_side_bottom_injury_old"/>
+							<vox pos="0.131 0.4531 0.26322" rot="-19.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R1_minor_bottom_old"/>
+							<vox pos="0.131 0.16944 0.16555" rot="-19.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R1_mangled_bottom_old"/>
+							<vox pos="-0.569 0.4531 0.26322" rot="-19.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_minor_bottom_old"/>
+							<vox pos="-0.57 0.16944 0.16555" rot="-19.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R2_bone_exposed_mangled_bottom_old"/>
+							<vox pos="-0.069 0.2 -0.119" rot="-90.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R1_top_damage_old"/>
+							<vox pos="-0.069 0.2 -0.619" rot="-90.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R1_bottom_damage_old"/>
+							<vox pos="0.04 0.013 0.009" rot="0.0 95.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_medium2_old"/>
+							<vox pos="-0.369 0.3 -0.619" rot="-90.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L1_bottom_damage_old"/>
+							<vox pos="-0.369 0.2 -0.119" rot="-90.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L1_top_damage_old"/>
+							<vox pos="-0.17 0.79828 0.31075" rot="35.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_top_left_damage_old"/>
 						</group>
 						<group name="torn UM" pos="-9.7 0.0 6.6">
-							<vox pos="0.17 0.216 0.938" rot="107.0 -167.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R3_bottom_severed_old"/>
-							<vox pos="-0.01 0.186 0.178" rot="97.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_center_injury_old"/>
-							<vox pos="0.35 0.196 -0.152" rot="90.0 -171.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R1_minor_bottom_old"/>
-							<vox pos="0.41258 0.196 0.24307" rot="90.0 -171.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R3_hand_damage_minor_L_old"/>
-							<vox pos="-0.44818 0.196 -0.11981" rot="90.0 174.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_minor_bottom_old"/>
-							<vox pos="-0.49 0.196 0.278" rot="90.0 174.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R4_mangled_all_old"/>
-							<vox pos="-0.01 0.13287 -0.5902" rot="47.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw_left_damage_old"/>
-							<vox pos="-0.01 0.206 -0.522" rot="47.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_top_left_damage_old"/>
-							<vox pos="-0.21 0.20039 0.47283" rot="76.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L2_bottom_severed_old"/>
-							<vox pos="-0.21 0.226 0.948" rot="104.0 180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L2_top_severed_old"/>
-							<vox pos="0.09 0.206 0.478" rot="78.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R3_bottom_severed_bone_old"/>
-							<vox pos="-0.269 0.011 -0.639" rot="0.0 -117.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large1_old"/>
-							<vox pos="0.081 0.011 0.571" rot="0.0 -106.0 0.0" file="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small3_old"/>
+							<vox pos="0.17 0.216 0.938" rot="107.0 -167.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R3_bottom_severed_old"/>
+							<vox pos="-0.01 0.186 0.178" rot="97.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_center_injury_old"/>
+							<vox pos="0.35 0.196 -0.152" rot="90.0 -171.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R1_minor_bottom_old"/>
+							<vox pos="0.41258 0.196 0.24307" rot="90.0 -171.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R3_hand_damage_minor_L_old"/>
+							<vox pos="-0.44818 0.196 -0.11981" rot="90.0 174.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_minor_bottom_old"/>
+							<vox pos="-0.49 0.196 0.278" rot="90.0 174.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R4_mangled_all_old"/>
+							<vox pos="-0.01 0.13287 -0.5902" rot="47.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw_left_damage_old"/>
+							<vox pos="-0.01 0.206 -0.522" rot="47.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_top_left_damage_old"/>
+							<vox pos="-0.21 0.20039 0.47283" rot="76.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L2_bottom_severed_old"/>
+							<vox pos="-0.21 0.226 0.948" rot="104.0 180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L2_top_severed_old"/>
+							<vox pos="0.09 0.206 0.478" rot="78.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R3_bottom_severed_bone_old"/>
+							<vox pos="-0.269 0.011 -0.639" rot="0.0 -117.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_large1_old"/>
+							<vox pos="0.081 0.011 0.571" rot="0.0 -106.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small3_old"/>
 						</group>
 						<group name="severed UM" pos="-3.7 0.1 -14.5">
-							<vox pos="-2.21 0.086 -0.632" rot="10.0 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_right_arm_injury_old"/>
-							<vox pos="-0.85568 0.10088 -1.15594" rot="0.0 65.1 90.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R_mangled_top_bone_old"/>
-							<vox pos="-0.57 0.10488 -1.43615" rot="0.0 46.2 90.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R_hnad_damage_minor_R_old"/>
-							<vox pos="-2.21 0.73536 -0.75355" rot="28.9 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_back_damage_old"/>
-							<vox pos="-2.21 0.73536 -0.75355" rot="28.9 -180.0 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw"/>
-							<vox pos="-2.62526 0.39852 -0.58561" rot="10.0 -180.0 2.2" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_severed_top_old"/>
-							<vox pos="-2.64 0.01488 -0.66616" rot="-7.7 -180.0 2.2" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R4_mangled_all_old"/>
-							<vox pos="-2.45 0.086 -0.842" rot="-90.0 -173.60001 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L1_top_damage_old"/>
-							<vox pos="-2.50573 0.186 -1.33888" rot="-90.0 -173.60001 0.0" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L1_bottom_damage_old"/>
-							<vox pos="-2.09442 0.086 -0.8426" rot="-90.0 177.2 -0.5" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R1_top_damage_old"/>
-							<vox pos="-2.07 0.086 -1.342" rot="-90.0 177.2 -0.5" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R2_mangled_bottom_old"/>
-							<vox pos="-2.32 -0.084 -0.922" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_small3_old"/>
-							<vox pos="-1.04 -0.084 -0.862" file="MOD/main/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_small1_old"/>
+							<vox pos="-2.21 0.086 -0.632" rot="10.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="body_right_arm_injury_old"/>
+							<vox pos="-0.85568 0.10088 -1.15594" rot="0.0 65.1 90.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_R_mangled_top_bone_old"/>
+							<vox pos="-0.57 0.10488 -1.43615" rot="0.0 46.2 90.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R_hnad_damage_minor_R_old"/>
+							<vox pos="-2.21 0.73536 -0.75355" rot="28.9 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="head_back_damage_old"/>
+							<vox pos="-2.21 0.73536 -0.75355" rot="28.9 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="jaw"/>
+							<vox pos="-2.62526 0.39852 -0.58561" rot="10.0 -180.0 2.2" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Uarm_L_severed_top_old"/>
+							<vox pos="-2.64 0.01488 -0.66616" rot="-7.7 -180.0 2.2" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="larm_R4_mangled_all_old"/>
+							<vox pos="-2.45 0.086 -0.842" rot="-90.0 -173.60001 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_L1_top_damage_old"/>
+							<vox pos="-2.50573 0.186 -1.33888" rot="-90.0 -173.60001 0.0" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_L1_bottom_damage_old"/>
+							<vox pos="-2.09442 0.086 -0.8426" rot="-90.0 177.2 -0.5" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="Leg_R1_top_damage_old"/>
+							<vox pos="-2.07 0.086 -1.342" rot="-90.0 177.2 -0.5" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="foot_R2_mangled_bottom_old"/>
+							<vox pos="-2.32 -0.084 -0.922" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_small3_old"/>
+							<vox pos="-1.04 -0.084 -0.862" file="MOD/npcs/GoreRagdolls2/deceased/AlashyanUM dead.vox" object="blood_pool_small1_old"/>
 						</group>
 					</group>
 					<group name="cultist symbolism" pos="-7.9 -0.1 -1.9" rot="0.0 0.0 0.0">
-						<vox tags="unbreakable" pos="0.07 0.1 -5.84" rot="0.0 -180.0 0.0" texture="8 .4" strength="10" file="MOD/vox/container_red_destroyed.vox">
-							<voxbox pos="-2.88 0.2 -1.15" rot="0.0 0.0 0.0" size="56 14 21" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="flesh-pit">
+						<vox tags="unbreakable" pos="0.07 0.1 -5.84" rot="0.0 -180.0 0.0" texture="8 .4" strength="10" file="MOD/assets/vox/container_red_destroyed.vox">
+							<voxbox pos="-2.88 0.2 -1.15" rot="0.0 0.0 0.0" size="56 14 21" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="flesh-pit">
 								<trigger tags="WaterSource size=2,5.7 depth=1.3 wave=0 foam=.1 color=.29,.02,.02" pos="2.75 1.1 1.01" rot="0.0 -90.0 0.0" size=".1">
 									<water size="2 5.7" depth="1.3" wave="0" foam=".1" color="0.29 0.02 0.02"/>
 								</trigger>
@@ -783,151 +783,151 @@
 							<voxbox tags="invisible" pos="-2.63 1.1 0.86" rot="90.0 90.0 0.0" size="7 4 3" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="warehouse:beam2"/>
 							<voxbox tags="invisible" pos="-2.93 1.4 0.86" rot="90.0 90.0 0.0" size="7 4 3" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="warehouse:beam2"/>
 							<group name="cultist wiccan" pos="0.1 -0.1 -7.0">
-								<voxbox pos="-0.81822 0.02 -2.23372" rot="0.0 8.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.76233 0.02 -1.88026" rot="0.0 99.0 0.0" size="3 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.99428 0.02 1.27634" rot="0.0 23.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.02 0.02 4.65" rot="0.0 0.0 0.0" size="11 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small3_fresh"/>
-								<voxbox pos="-1.05 0.02 4.65" rot="0.0 0.0 0.0" size="9 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_fresh"/>
-								<voxbox pos="-3.21293 0.02 -0.81118" rot="0.0 -90.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.719 0.02 -0.67" rot="0.0 -98.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.52387 0.02 -0.22959" rot="0.0 -98.0 0.0" size="1 1 5" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.44387 0.02 -0.02959" rot="0.0 -150.0 0.0" size="1 1 5" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.20387 0.02 0.03041" rot="0.0 147.0 0.0" size="1 1 5" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.66112 0.02 -1.27611" rot="0.0 -137.0 0.0" size="1 1 16" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.32472 0.02 -1.26238" rot="0.0 -137.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.32472 0.02 -1.26238" rot="0.0 -111.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.03472 0.02 -1.37238" rot="0.0 -41.0 0.0" size="1 1 2" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.90472 0.02 -1.22238" rot="0.0 25.0 0.0" size="1 1 2" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.99472 0.02 -1.04238" rot="0.0 74.0 0.0" size="1 1 2" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.84732 0.02 -1.77433" rot="0.0 -137.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.81418 0.02 -1.66613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.37417 0.02 -1.74613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.44418 0.02 -1.82613" rot="0.0 -138.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.98418 0.02 -1.48613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.51046 0.02 -2.25253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.19327 0.02 -1.86495" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.26187 0.02 -1.78374" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.33046 0.02 -1.70253" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.59046 0.02 -2.16253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.67046 0.02 -2.07253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.75046 0.02 -1.98253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.83046 0.02 -1.89253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.779 0.02 -0.83" rot="0.0 -69.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.80963 0.02 -0.81774" rot="0.0 -115.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.719 0.02 -0.97" rot="0.0 -81.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.56559 0.02 -1.82362" rot="0.0 47.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.72342 0.02 -1.98528" rot="0.0 -26.0 0.0" size="3 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.33497 0.02 2.01538" rot="0.0 -13.0 0.0" size="1 1 28" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-2.3 0.02 -3.07" rot="0.0 0.0 0.0" size="46 1 46" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood-circle"/>
-								<voxbox pos="-1.30887 0.02 -1.9106" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.10787 0.02 -2.1336" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.30941 0.02 -1.77421" rot="0.0 47.0 0.0" size="4 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.20887 0.02 -2.0256" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.21423 0.02 -1.51689" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-3.5584 0.02 -0.79234" rot="0.0 -39.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-3.87212 0.02 -0.83381" rot="0.0 -39.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-4.07209 0.02 -0.83731" rot="0.0 -91.0 0.0" size="1 1 7" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-3.79787 0.02 -0.77673" rot="0.0 -145.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-3.49141 0.02 -0.81385" rot="0.0 -145.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-4.95815 0.02 -0.75299" rot="0.0 141.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-5.0324 0.02 -0.81007" rot="0.0 35.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.721 0.02 -0.57" rot="0.0 99.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.721 0.02 -0.87" rot="0.0 82.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.199 0.02 0.96" rot="0.0 -171.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.101 0.02 0.96" rot="0.0 172.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.201 0.02 -2.48" rot="0.0 9.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.099 0.02 -2.48" rot="0.0 -8.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.751 0.02 -0.73" rot="0.0 67.0 0.0" size="1 1 8" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.701 0.02 -0.76" rot="0.0 115.0 0.0" size="1 1 8" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.03037 0.02 -1.61774" rot="0.0 -25.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.06963 0.02 -0.01648" rot="0.0 -155.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.04263 0.02 -1.58711" rot="0.0 21.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.05737 0.02 -0.05711" rot="0.0 157.0 0.0" size="1 1 8" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.81822 0.02 -2.23372" rot="0.0 8.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.76233 0.02 -1.88026" rot="0.0 99.0 0.0" size="3 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.99428 0.02 1.27634" rot="0.0 23.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.02 0.02 4.65" rot="0.0 0.0 0.0" size="11 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small3_fresh"/>
+								<voxbox pos="-1.05 0.02 4.65" rot="0.0 0.0 0.0" size="9 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_pool_small1_fresh"/>
+								<voxbox pos="-3.21293 0.02 -0.81118" rot="0.0 -90.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.719 0.02 -0.67" rot="0.0 -98.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.52387 0.02 -0.22959" rot="0.0 -98.0 0.0" size="1 1 5" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.44387 0.02 -0.02959" rot="0.0 -150.0 0.0" size="1 1 5" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.20387 0.02 0.03041" rot="0.0 147.0 0.0" size="1 1 5" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.66112 0.02 -1.27611" rot="0.0 -137.0 0.0" size="1 1 16" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.32472 0.02 -1.26238" rot="0.0 -137.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.32472 0.02 -1.26238" rot="0.0 -111.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.03472 0.02 -1.37238" rot="0.0 -41.0 0.0" size="1 1 2" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.90472 0.02 -1.22238" rot="0.0 25.0 0.0" size="1 1 2" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.99472 0.02 -1.04238" rot="0.0 74.0 0.0" size="1 1 2" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.84732 0.02 -1.77433" rot="0.0 -137.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.81418 0.02 -1.66613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.37417 0.02 -1.74613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.44418 0.02 -1.82613" rot="0.0 -138.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.98418 0.02 -1.48613" rot="0.0 133.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.51046 0.02 -2.25253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.19327 0.02 -1.86495" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.26187 0.02 -1.78374" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.33046 0.02 -1.70253" rot="0.0 132.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.59046 0.02 -2.16253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.67046 0.02 -2.07253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.75046 0.02 -1.98253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.83046 0.02 -1.89253" rot="0.0 133.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.779 0.02 -0.83" rot="0.0 -69.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.80963 0.02 -0.81774" rot="0.0 -115.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.719 0.02 -0.97" rot="0.0 -81.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.56559 0.02 -1.82362" rot="0.0 47.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.72342 0.02 -1.98528" rot="0.0 -26.0 0.0" size="3 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.33497 0.02 2.01538" rot="0.0 -13.0 0.0" size="1 1 28" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-2.3 0.02 -3.07" rot="0.0 0.0 0.0" size="46 1 46" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood-circle"/>
+								<voxbox pos="-1.30887 0.02 -1.9106" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.10787 0.02 -2.1336" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.30941 0.02 -1.77421" rot="0.0 47.0 0.0" size="4 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.20887 0.02 -2.0256" rot="0.0 -43.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.21423 0.02 -1.51689" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-3.5584 0.02 -0.79234" rot="0.0 -39.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-3.87212 0.02 -0.83381" rot="0.0 -39.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-4.07209 0.02 -0.83731" rot="0.0 -91.0 0.0" size="1 1 7" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-3.79787 0.02 -0.77673" rot="0.0 -145.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-3.49141 0.02 -0.81385" rot="0.0 -145.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-4.95815 0.02 -0.75299" rot="0.0 141.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-5.0324 0.02 -0.81007" rot="0.0 35.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.721 0.02 -0.57" rot="0.0 99.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.721 0.02 -0.87" rot="0.0 82.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.199 0.02 0.96" rot="0.0 -171.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.101 0.02 0.96" rot="0.0 172.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.201 0.02 -2.48" rot="0.0 9.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.099 0.02 -2.48" rot="0.0 -8.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.751 0.02 -0.73" rot="0.0 67.0 0.0" size="1 1 8" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.701 0.02 -0.76" rot="0.0 115.0 0.0" size="1 1 8" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.03037 0.02 -1.61774" rot="0.0 -25.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.06963 0.02 -0.01648" rot="0.0 -155.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.04263 0.02 -1.58711" rot="0.0 21.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.05737 0.02 -0.05711" rot="0.0 157.0 0.0" size="1 1 8" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
 								<voxbox pos="-3.65 0.11 -0.72" rot="0.0 -179.0 0.0" size="1 5 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="torch2">
 									<light pos="0.05 0.5 0.05" color="0.97 0.55 0.09" scale="0.075"/>
 								</voxbox>
-								<voxbox pos="-2.261 0.02 -0.97" rot="0.0 -81.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-2.261 0.02 -0.67" rot="0.0 -98.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="4.07791 0.02 -0.69731" rot="0.0 89.0 0.0" size="1 1 7" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="3.80369 0.02 -0.75789" rot="0.0 35.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="3.87794 0.02 -0.70081" rot="0.0 141.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="5.03822 0.02 -0.72455" rot="0.0 -145.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="4.96397 0.02 -0.78163" rot="0.0 -39.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="3.49723 0.02 -0.72077" rot="0.0 35.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="3.56422 0.02 -0.74228" rot="0.0 141.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="3.21875 0.02 -0.72344" rot="0.0 90.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-2.261 0.02 -0.97" rot="0.0 -81.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-2.261 0.02 -0.67" rot="0.0 -98.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="4.07791 0.02 -0.69731" rot="0.0 89.0 0.0" size="1 1 7" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="3.80369 0.02 -0.75789" rot="0.0 35.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="3.87794 0.02 -0.70081" rot="0.0 141.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="5.03822 0.02 -0.72455" rot="0.0 -145.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="4.96397 0.02 -0.78163" rot="0.0 -39.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="3.49723 0.02 -0.72077" rot="0.0 35.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="3.56422 0.02 -0.74228" rot="0.0 141.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="3.21875 0.02 -0.72344" rot="0.0 90.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
 								<voxbox pos="3.65582 0.11 -0.81462" rot="0.0 1.0 0.0" size="1 5 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="torch2">
 									<light pos="0.05 0.5 0.05" color="0.97 0.55 0.09" scale="0.075"/>
 								</voxbox>
-								<voxbox pos="2.26682 0.02 -0.86462" rot="0.0 82.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="2.26682 0.02 -0.56462" rot="0.0 99.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.05791 0.02 -4.85731" rot="0.0 179.0 0.0" size="1 1 7" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.00267 0.02 -4.58309" rot="0.0 125.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.05441 0.02 -4.65734" rot="0.0 -129.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.03067 0.02 -5.81762" rot="0.0 -55.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.02641 0.02 -5.74337" rot="0.0 51.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.03445 0.02 -4.27664" rot="0.0 125.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.01294 0.02 -4.34362" rot="0.0 -129.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.03178 0.02 -3.99815" rot="0.0 -180.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="2.26682 0.02 -0.86462" rot="0.0 82.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="2.26682 0.02 -0.56462" rot="0.0 99.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.05791 0.02 -4.85731" rot="0.0 179.0 0.0" size="1 1 7" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.00267 0.02 -4.58309" rot="0.0 125.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.05441 0.02 -4.65734" rot="0.0 -129.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.03067 0.02 -5.81762" rot="0.0 -55.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.02641 0.02 -5.74337" rot="0.0 51.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.03445 0.02 -4.27664" rot="0.0 125.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.01294 0.02 -4.34362" rot="0.0 -129.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.03178 0.02 -3.99815" rot="0.0 -180.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
 								<voxbox pos="-0.0594 0.11 -4.43522" rot="0.0 91.0 0.0" size="1 5 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="torch2">
 									<light pos="0.05 0.5 0.05" color="0.97 0.55 0.09" scale="0.075"/>
 								</voxbox>
-								<voxbox pos="-0.1094 0.02 -3.04622" rot="0.0 172.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.1906 0.02 -3.04622" rot="0.0 -171.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.1094 0.02 -3.04622" rot="0.0 172.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.1906 0.02 -3.04622" rot="0.0 -171.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
 								<voxbox pos="0.0506 0.11 2.87478" rot="0.0 -89.0 0.0" size="1 5 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="torch2">
 									<light pos="0.05 0.5 0.05" color="0.97 0.55 0.09" scale="0.075"/>
 								</voxbox>
 								<voxbox pos="3.4506 0.11 5.57478" rot="0.0 -89.0 0.0" size="1 5 1" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="torch2">
 									<light pos="0.05 0.5 0.05" color="0.97 0.55 0.09" scale="0.1"/>
 								</voxbox>
-								<voxbox pos="-0.1994 0.02 1.48578" rot="0.0 9.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.1006 0.02 1.48578" rot="0.0 -8.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.04058 0.02 2.43771" rot="0.0 0.0 0.0" size="1 1 4" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.04325 0.02 2.71619" rot="0.0 -55.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.02174 0.02 2.78318" rot="0.0 51.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.06321 0.02 3.0969" rot="0.0 51.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.06671 0.02 3.29687" rot="0.0 -1.0 0.0" size="1 1 7" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.03947 0.02 4.25718" rot="0.0 125.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.01761 0.02 4.18293" rot="0.0 -129.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.00613 0.02 3.02265" rot="0.0 -55.0 0.0" size="1 1 10" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.445 0.02 2.065" rot="0.0 13.0 0.0" size="1 1 30" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.096 0.02 1.266" rot="0.0 -23.0 0.0" size="1 1 9" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.44734 0.02 0.60165" rot="0.0 126.0 0.0" size="1 1 8" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.33697 0.02 0.60588" rot="0.0 61.0 0.0" size="1 1 3" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.5475 0.02 0.64968" rot="0.0 67.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.64157 0.02 0.5745" rot="0.0 126.0 0.0" size="3 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.54614 0.02 0.37205" rot="0.0 178.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.40738 0.02 0.34475" rot="0.0 -140.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.34037 0.02 0.18693" rot="0.0 -108.0 0.0" size="7 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.94 0.02 -0.373" rot="0.0 -158.0 0.0" size="6 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.27272 0.02 0.46446" rot="0.0 -164.0 0.0" size="4 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.54272 0.02 0.26446" rot="0.0 -60.0 0.0" size="4 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.24272 0.02 -0.51554" rot="0.0 -70.0 0.0" size="4 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.97 0.02 -0.463" rot="0.0 -46.0 0.0" size="9 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.53733 0.02 -0.24267" rot="0.0 -46.0 0.0" size="14 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.55373 0.02 -2.0164" rot="0.0 -133.0 0.0" size="10 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.11208 0.02 -1.42182" rot="0.0 164.0 0.0" size="3 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.092 0.02 -1.532" rot="0.0 -71.0 0.0" size="3 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-1.29559 0.02 -1.55362" rot="0.0 -123.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.97559 0.02 -1.19362" rot="0.0 -162.0 0.0" size="2 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.56833 0.02 -1.62699" rot="0.0 -133.0 0.0" size="4 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.78687 0.02 -1.4946" rot="0.0 137.0 0.0" size="5 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.56887 0.02 -1.4906" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.66887 0.02 -1.3756" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="-0.76987 0.02 -1.2676" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.9356 0.02 0.45531" rot="0.0 -171.0 0.0" size="1 1 5" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.08196 0.02 0.29726" rot="0.0 -119.0 0.0" size="1 1 5" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.54046 0.02 -1.16253" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.4589 0.02 -1.25112" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.37734 0.02 -1.33971" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.29578 0.02 -1.4283" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="0.87578 0.02 -1.0483" rot="0.0 114.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.00578 0.02 -0.9583" rot="0.0 149.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
-								<voxbox pos="1.13578 0.02 -0.9183" rot="0.0 172.0 0.0" size="1 1 1" brush="MOD/main/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.1994 0.02 1.48578" rot="0.0 9.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.1006 0.02 1.48578" rot="0.0 -8.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.04058 0.02 2.43771" rot="0.0 0.0 0.0" size="1 1 4" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.04325 0.02 2.71619" rot="0.0 -55.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.02174 0.02 2.78318" rot="0.0 51.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.06321 0.02 3.0969" rot="0.0 51.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.06671 0.02 3.29687" rot="0.0 -1.0 0.0" size="1 1 7" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.03947 0.02 4.25718" rot="0.0 125.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.01761 0.02 4.18293" rot="0.0 -129.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.00613 0.02 3.02265" rot="0.0 -55.0 0.0" size="1 1 10" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.445 0.02 2.065" rot="0.0 13.0 0.0" size="1 1 30" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.096 0.02 1.266" rot="0.0 -23.0 0.0" size="1 1 9" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.44734 0.02 0.60165" rot="0.0 126.0 0.0" size="1 1 8" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.33697 0.02 0.60588" rot="0.0 61.0 0.0" size="1 1 3" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.5475 0.02 0.64968" rot="0.0 67.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.64157 0.02 0.5745" rot="0.0 126.0 0.0" size="3 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.54614 0.02 0.37205" rot="0.0 178.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.40738 0.02 0.34475" rot="0.0 -140.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.34037 0.02 0.18693" rot="0.0 -108.0 0.0" size="7 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.94 0.02 -0.373" rot="0.0 -158.0 0.0" size="6 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.27272 0.02 0.46446" rot="0.0 -164.0 0.0" size="4 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.54272 0.02 0.26446" rot="0.0 -60.0 0.0" size="4 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.24272 0.02 -0.51554" rot="0.0 -70.0 0.0" size="4 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.97 0.02 -0.463" rot="0.0 -46.0 0.0" size="9 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.53733 0.02 -0.24267" rot="0.0 -46.0 0.0" size="14 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.55373 0.02 -2.0164" rot="0.0 -133.0 0.0" size="10 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.11208 0.02 -1.42182" rot="0.0 164.0 0.0" size="3 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.092 0.02 -1.532" rot="0.0 -71.0 0.0" size="3 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-1.29559 0.02 -1.55362" rot="0.0 -123.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.97559 0.02 -1.19362" rot="0.0 -162.0 0.0" size="2 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.56833 0.02 -1.62699" rot="0.0 -133.0 0.0" size="4 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.78687 0.02 -1.4946" rot="0.0 137.0 0.0" size="5 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.56887 0.02 -1.4906" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.66887 0.02 -1.3756" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="-0.76987 0.02 -1.2676" rot="0.0 137.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.9356 0.02 0.45531" rot="0.0 -171.0 0.0" size="1 1 5" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.08196 0.02 0.29726" rot="0.0 -119.0 0.0" size="1 1 5" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.54046 0.02 -1.16253" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.4589 0.02 -1.25112" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.37734 0.02 -1.33971" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.29578 0.02 -1.4283" rot="0.0 134.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="0.87578 0.02 -1.0483" rot="0.0 114.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.00578 0.02 -0.9583" rot="0.0 149.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
+								<voxbox pos="1.13578 0.02 -0.9183" rot="0.0 172.0 0.0" size="1 1 1" brush="MOD/npcs/GoreRagdolls2/deceased/Alashyan Forces1 dead.vox" object="blood_brush_fresh"/>
 							</group>
 						</vox>
 					</group>
-					<group name="hanged cultist" pos="-2.4 6.0 -1.0" rot="0.0 90.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
+					<group name="hanged cultist" pos="-2.4 6.0 -1.0" rot="0.0 90.0 0.0" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
 						<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 							<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body"/>
 						</body>
@@ -1001,7 +1001,7 @@
 							</group>
 						</group>
 					</group>
-					<group name="hanged cultist" pos="-13.3 6.0 -1.0" rot="0.0 -90.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
+					<group name="hanged cultist" pos="-13.3 6.0 -1.0" rot="0.0 -90.0 0.0" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
 						<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 							<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body"/>
 						</body>
@@ -1075,7 +1075,7 @@
 							</group>
 						</group>
 					</group>
-					<group name="hanged cultist" pos="-10.0 5.9 -8.3" rot="0.0 -180.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
+					<group name="hanged cultist" pos="-10.0 5.9 -8.3" rot="0.0 -180.0 0.0" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
 						<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 							<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body"/>
 						</body>
@@ -1149,7 +1149,7 @@
 							</group>
 						</group>
 					</group>
-					<group name="hanged cultist" pos="-5.7 5.9 -8.3" rot="0.0 -180.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
+					<group name="hanged cultist" pos="-5.7 5.9 -8.3" rot="0.0 -180.0 0.0" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Regular_cultist2.vox" prop1="texture=8 0.5" prop2="tags=nocull">
 						<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 							<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body"/>
 						</body>
@@ -1226,50 +1226,50 @@
 				</group>
 				<group name="lights">
 					<body tags="night" pos="-1.24001 1.7 -14.35" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>
 					<body tags="night" pos="-0.91002 7.8 -2.48" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>
 					<body tags="night" pos="-1.24001 1.7 -19.39" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>
 					<body tags="night" pos="-1.24001 1.7 -22.69" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>
 					<body tags="night" pos="-0.85 4.7 -5.65" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>
 					<body tags="night" pos="-0.85 4.7 -3.05" rot="0.0 90.0 0.0" dynamic="true">
-						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+						<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 							<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 						</vox>
-						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+						<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 						<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 						<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 					</body>

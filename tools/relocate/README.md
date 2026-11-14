@@ -11,7 +11,10 @@ python tools/relocate/tests/test_relocate.py                    # the tool's own
 ```
 
 `moves.txt`: `old -> new` per line (repo paths, files or whole folders; the most specific line wins), `#` comments,
-and `ack <file>:<literal>` for a run-time path prefix checked by hand (see below). `out/` holds the reports and,
+`ack <file>:<literal>` for a run-time path prefix checked by hand (see below), and `allow <file>:<text>` for a
+dead reference (matching no file) that a moved file is allowed to answer afterwards (<file> = its path before the
+move). `apply` refuses to start while Teardown runs (it keeps the mod's files open; set RELOCATE_IGNORE_TEARDOWN=1
+when only the main menu is open). `out/` holds the reports and,
 after `apply`, `manifest.json` (every file move and every rewritten span).
 
 ## What counts as a reference (how the engine reads paths)
@@ -35,4 +38,12 @@ Paths that name no file are reported as dangling and left exactly as they are.
    dangling; no include newly ambiguous.
 3. File set: every old file exists at its new path; unrewritten files and all binary files have the same content.
 
-Then run the mock tests, `check.lua` on touched Lua files and `make_release.py --dry-run` by hand.
+Folder names in prose (docs, tool code, game-script comments) are matched but not compared (a new folder such as
+`ui/` makes a commented-out engine path look like one). `out/verify.txt` lists every difference of a failed apply.
+
+Then run the mock tests, `check.lua` on touched Lua files and `make_release.py --dry-run` by hand, and review the
+folder-name rewrites in tool and test code (`out/manifest.json`): a word that looks like a moved folder is rewritten
+too. Seen in the 2026-11-14 run: `"enemy vehicles/VehicleD%d"` (a Lua pattern in test_vehicleevents.lua) became
+`"enemy vehicles/cars/..."` because `Vehicles/` moved to `vehicles/cars/`; fixed by hand, all other folder rewrites
+were real paths. On Windows a move into a folder that differs only in case (`Vehicles` -> `vehicles/cars`) lands
+in the old folder: rename it afterwards (done for `vehicles/`).

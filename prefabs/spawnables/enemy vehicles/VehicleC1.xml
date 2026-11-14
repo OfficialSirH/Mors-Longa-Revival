@@ -1,49 +1,49 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/enemy vehicles/VehicleC1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<script file="MOD/scripts/ConvoyOperatorTransport.lua">
-			<script file="MOD/Vehicles/!library/scripts/door.lua">
+		<script file="MOD/vehicles/operators/ConvoyOperatorTransport.lua">
+			<script file="MOD/vehicles/cars/!library/scripts/door.lua">
 				<vehicle name="1992 JW YJ Sahara" tags="Door chasecar ragdoll2" driven="false" sound="classic2 1.0" spring="0.8" damping="0.8" topspeed="30" acceleration="0.2" strength="5" antiroll="0.2" difflock="0.5" steerassist="0.4" friction="1.1">
 					<body tags="component=body" pos="0.0 0.5 -0.25" dynamic="true">
-						<vox tags="component=chassis" pos="0.05 -0.2 0.25" rot="0 180 0" texture="8 0.4" density="3.0" strength="4.0" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="body">
-							<vox pos="0.49 0.59 1.705" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Lights">
+						<vox tags="component=chassis" pos="0.05 -0.2 0.25" rot="0 180 0" texture="8 0.4" density="3.0" strength="4.0" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="body">
+							<vox pos="0.49 0.59 1.705" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Lights">
 								<light pos="0.0 0.1 0.0" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="40" angle="90" penumbra="30" size="0.2" unshadowed="0.2" glare="0.3"/>
 							</vox>
-							<vox pos="-0.39 0.59 1.705" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Lights">
+							<vox pos="-0.39 0.59 1.705" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Lights">
 								<light pos="0.0 0.1 0.0" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="40" angle="90" penumbra="30" size="0.2" unshadowed="0.2" glare="0.3"/>
 							</vox>
 							<location tags="exhaust" pos="-0.3 0.15 -1.7" rot="180.0 0.0 180.0"/>
 							<location tags="vital" pos="0.05 0.55 0.95" rot="180.0 0.0 180.0"/>
 							<location tags="player" pos="0.35 1.25 -0.25" rot="0.0 0.0 0.0"/>
-							<vox pos="0.6 0.55 -1.65" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Rear_Lights">
+							<vox pos="0.6 0.55 -1.65" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Rear_Lights">
 								<light pos="0.0 0.1 -0.1" rot="0 180 0" type="area" color="1 .1 .1" scale="1" angle="90" penumbra="10" size="0.2 0.2" reach="2" unshadowed="0.3" glare="0.2"/>
 							</vox>
-							<vox pos="-0.5 0.55 -1.65" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Rear_Lights">
+							<vox pos="-0.5 0.55 -1.65" rot="0.0 0.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="Rear_Lights">
 								<light pos="0.0 0.1 -0.1" rot="0 180 0" type="area" color="1 .1 .1" scale="1" angle="90" penumbra="10" size="0.2 0.2" reach="2" unshadowed="0.3" glare="0.2"/>
 							</vox>
-							<vox pos="0.0 0.7 1.1" texture="8 0.4" density="3.0" strength="4.0" prop="true" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="hood">
+							<vox pos="0.0 0.7 1.1" texture="8 0.4" density="3.0" strength="4.0" prop="true" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="hood">
 								<joint pos="0.6 0.2 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.02" rotspring="0.0" limits="0 50"/>
 								<joint pos="-0.5 0.2 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0.02" rotspring="0.0" limits="0 50"/>
 							</vox>
-							<vox pos="0.7 0.5 0.0" texture="8 0.4" prop="true" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="door">
+							<vox pos="0.7 0.5 0.0" texture="8 0.4" prop="true" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="door">
 								<joint tags="door" pos="0.1 0.3 0.3" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
 								<joint pos="0.1 0.0 0.3" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0" limits="0 60"/>
 							</vox>
-							<vox pos="-0.7 0.5 0.0" texture="8 0.4" prop="true" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="door">
+							<vox pos="-0.7 0.5 0.0" texture="8 0.4" prop="true" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="door">
 								<joint tags="door" pos="0.0 0.3 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 60"/>
 								<joint pos="0.0 0.0 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.0" rotspring="0" limits="0 60"/>
 							</vox>
 						</vox>
 						<wheel name="bl" pos="-0.65 -0.15 1.3" drive="1" travel="-0.06 0.1">
-							<vox pos="-0.1 -0.35 -0.05" rot="0.0 180.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_bl"/>
+							<vox pos="-0.1 -0.35 -0.05" rot="0.0 180.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_bl"/>
 						</wheel>
 						<wheel name="br" pos="0.65 -0.15 1.3" drive="1" travel="-0.06 0.1">
-							<vox pos="0.1 -0.35 -0.05" rot="0.0 -180.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_br"/>
+							<vox pos="0.1 -0.35 -0.05" rot="0.0 -180.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_br"/>
 						</wheel>
 						<wheel name="fl" pos="-0.65 -0.15 -1.0" rot="0.0 0.0 0.0" drive="1" steer="1.1" travel="-0.06 0.1">
-							<vox pos="-0.1 -0.35 -0.05" rot="0.0 180.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_fl"/>
+							<vox pos="-0.1 -0.35 -0.05" rot="0.0 180.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_fl"/>
 						</wheel>
 						<wheel name="fr" pos="0.65 -0.15 -1.0" drive="1" steer="1.1" travel="-0.06 0.1">
-							<vox pos="0.1 -0.35 -0.05" rot="0.0 -180.0 0.0" texture="8 0.4" file="MOD/Vehicles/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_fr"/>
+							<vox pos="0.1 -0.35 -0.05" rot="0.0 -180.0 0.0" texture="8 0.4" file="MOD/vehicles/cars/Jeep Wrangler/1992 Jeep Wrangler YJ Sahara.vox" object="wheel_fr"/>
 						</wheel>
 					</body>
 					<rig name="driver" tags="driver sort=0" pos="-0.35 0.85 0.15">

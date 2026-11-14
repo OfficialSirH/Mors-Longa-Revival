@@ -1,0 +1,61 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/vehicles/cars/sportscar/sportsoffroad.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle tags="Door DoAlarm path=MOD/vehicles/cars/sportscar/sportsoffroad.xml" sound="sportscar 0.9" spring=".7" damping="1" topspeed="300" acceleration="0.5" strength="9" antiroll=".1" difflock="0.7" steerassist="0.3">
+			<body pos="0.0 0.5 0.25" rot="0.0 0.0 0.0" dynamic="true">
+				<vox pos="0.05 -0.15 -0.25" rot="0.0 180.0 0.0" texture="8 0.5" blendtexture="5 .3" density="3" strength="3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="body">
+					<light pos="0.7 0.35 1.9" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
+					<light pos="-0.6 0.35 1.9" type="cone" color="1 .9 .8" scale="20" angle="50" penumbra="15" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.4"/>
+					<light pos="0.4 0.55 -2.1" rot="0.0 180.0 0.0" type="area" size="0.2 0.1" unshadowed="0.3"/>
+					<light pos="-0.3 0.55 -2.1" rot="0.0 180.0 0.0" type="area" size="0.2 0.1" unshadowed="0.3"/>
+					<light pos="0.6 0.55 -2.1" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+					<light pos="-0.5 0.55 -2.1" rot="0.0 -180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+					<light pos="-0.3 0.5 1.9" rot="0.0 -20.0 0.0" type="cone" color=".8 .9 1" scale="70" angle="40" penumbra="15" size="0.1" fogscale="0.1" glare="0.7"/>
+					<light pos="0.05 0.5 1.9" rot="0.0 0.0 0.0" type="cone" color=".8 .9 1" scale="70" angle="40" penumbra="15" size="0.1" fogscale="0.1" glare="0.7"/>
+					<light pos="0.4 0.5 1.9" rot="0.0 20.0 0.0" type="cone" color=".8 .9 1" scale="70" angle="40" penumbra="15" size="0.1" fogscale="0.1" glare="0.7"/>
+					<location tags="exhaust" pos="0.65 0.15 -1.9" rot="-160.0 0.0 0.0"/>
+					<location tags="exhaust" pos="-0.55 0.15 -1.9" rot="-160.0 0.0 0.0"/>
+					<location tags="vital" pos="0.05 0.55 -1.4" rot="-180.0 360.0 -180.0"/>
+					<location tags="player" pos="0.4 0.75 0.15"/>
+					<vox pos="0.8 0.1 0.1" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="door_l">
+						<joint tags="door" pos="0.1 0.5 0.6" rot="150.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+					</vox>
+					<vox pos="-0.8 0.1 0.1" texture="8 0.5" blendtexture="5 .3" prop="true" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="door_r">
+						<joint tags="door" pos="0.0 0.5 0.6" rot="-30.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+					</vox>
+					<location name="exit" tags="exit" pos="1.25 0.5 0.0"/>
+					<location name="camera" tags="camera" pos="0.05 0.9 0.0"/>
+				</vox>
+				<wheel name="bl" pos="-0.75 -0.1 1.2" rot="0.0 0.0 0.0" drive="1" steer="0.1" travel="-0.2 0.1">
+					<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" blendtexture="5 .3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
+				</wheel>
+				<wheel name="br" pos="0.75 -0.1 1.2" rot="0.0 0.0 0.0" drive="1" steer="0.1" travel="-0.2 0.1">
+					<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" blendtexture="5 .3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
+				</wheel>
+				<wheel name="fl" pos="-0.75 -0.1 -1.4" rot="0.0 0.0 0.0" drive="1" steer="1" travel="-0.2 0.1">
+					<vox pos="-0.1 -0.4 0.0" rot="0.0 180.0 0.0" texture="8 0.5" blendtexture="5 .3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
+				</wheel>
+				<wheel name="fr" pos="0.75 -0.1 -1.4" rot="0.0 0.0 0.0" drive="1" steer="1" travel="-0.2 0.1">
+					<vox pos="0.1 -0.4 0.0" rot="0.0 0.0 0.0" texture="8 0.5" blendtexture="5 .3" file="MOD/vehicles/cars/sportscar/sportsoffroad.vox" object="wheel"/>
+				</wheel>
+			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.05 0.15 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.5 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="-0.4 0.4 -0.4" rot="80 0.0 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="-0.2 0.65 -0.55" rot="0.0 90 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="-0.2 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.5 0.65 -0.55" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="-0.4 0.95 -0.075" rot="0.0 90 10"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="-0.35 0.65 -0.55" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.45 0.15 0.0">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.2 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="-0.1 0.4 -0.4" rot="80 0.0 0.0"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.1 0.4 -1.05" rot="0.0 90 50"/>
+				<location name="ik_head" tags="ik_head" pos="-0.1 0.95 -0.075" rot="0.0 90 10"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.4 0.45 -0.25" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.4 -0.15" rot="0.0 90 -40"/>
+			</rig>
+		</vehicle>
+	</group>
+</prefab>
+

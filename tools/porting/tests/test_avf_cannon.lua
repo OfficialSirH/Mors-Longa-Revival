@@ -1,10 +1,10 @@
--- Mock test for the cannon path of scripts/MountedGun.lua + scripts/avf (AVF's shells, ported) through the
--- ZU-23-2 config (avf/prefabs/technicals/ZSU-23-2.lua). Run from the repo root with Lua 5.1:
+-- Mock test for the cannon path of vehicles/MountedGun.lua + vehicles/avf_port (AVF's shells, ported) through the
+-- ZU-23-2 config (vehicles/avf/prefabs/technicals/ZSU-23-2.lua). Run from the repo root with Lua 5.1:
 --   lua5.1 tools/porting/tests/test_avf_cannon.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "avf/prefabs/technicals/ZSU-23-2.lua"
+local PATH = "vehicles/avf/prefabs/technicals/ZSU-23-2.lua"
 
 local env = MockEngine.load(PATH, { preload = MockEngine.includes(PATH) })
 env.side = "server"
@@ -185,7 +185,7 @@ check(fires() == 2, "fires again on the next press")
 held = false
 check(next(env.violations) == nil, "no server-only calls on the client")
 -- the BMP configs load in cannon mode with their own shell names and AVF's customcannon base
-for _, c in ipairs({ { "avf/prefabs/bmp/BMP-2.lua", "3UBR8 APDS", "3UOF8 HEI", 30 }, { "avf/prefabs/bmp/BMP-1.lua", "PG15V-HEAT", "PG15V-HE", 73 } }) do
+for _, c in ipairs({ { "vehicles/avf/prefabs/bmp/BMP-2.lua", "3UBR8 APDS", "3UOF8 HEI", 30 }, { "vehicles/avf/prefabs/bmp/BMP-1.lua", "PG15V-HEAT", "PG15V-HE", 73 } }) do
 	local e = MockEngine.load(c[1], { preload = MockEngine.includes(c[1]) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -225,7 +225,7 @@ do
 end
 -- tanks: the driver fires while the gunner place is empty (MountedGunDriverFires, T-34 config); a gunner takes over
 do
-	local T34 = "avf/prefabs/T-34/T-34-85.lua"
+	local T34 = "vehicles/avf/prefabs/T-34/T-34-85.lua"
 	local e = MockEngine.load(T34, { preload = MockEngine.includes(T34) })
 	e.side = "server"
 	e.PLAYERS = { [1] = { pos = { 0, 0, 0 }, health = 1 }, [2] = { pos = { 0, 0, 0 }, health = 1 } }
@@ -339,7 +339,7 @@ end
 -- Katyusha (phase 3): a rocket config fires AVF's shells; three launch rails (one above the others) get offsets
 -- across the barrel line, height included; AVF asset paths map to our copies; clients draw exhaust + flight sound
 do
-	local K = "avf/prefabs/ZIS-151/katyusha.lua"
+	local K = "vehicles/avf/prefabs/ZIS-151/katyusha.lua"
 	local e = MockEngine.load(K, { preload = MockEngine.includes(K) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -367,8 +367,8 @@ do
 	e.server.init()
 	check(e.MG.cannon and #e.MG.types == 1 and e.MG_AmmoLabel(1) == "132mm rocket HE", "Katyusha: rocket config fires AVF's shells (132mm rocket HE)")
 	local c = e.MG.types[1].CfgAmmo
-	check(c.launcher == "rocket" and c.shellSpriteName == "MOD/avf/assets/gfx/rocketModel2.png"
-		and c.flightLoop == "MOD/avf/assets/sounds/rocketFlightLoop0", "AVF asset paths mapped to MOD/avf/assets/")
+	check(c.launcher == "rocket" and c.shellSpriteName == "MOD/vehicles/avf/assets/gfx/rocketModel2.png"
+		and c.flightLoop == "MOD/vehicles/avf/assets/sounds/rocketFlightLoop0", "AVF asset paths mapped to MOD/vehicles/avf/assets/")
 	check(e.shared.mgBarrels == 3 and math.abs(e.shared.mgB3y - 0.5) < 1e-6 and math.abs(e.shared.mgB1x - (-0.3)) < 1e-6,
 		"three rails: offsets across the barrel line, height included (rail 3 is 0.5 higher)")
 	e.side = "client"
@@ -383,7 +383,7 @@ do
 end
 -- WMIK MILAN: own config table (MountedGunConfig), gun / emitter tags main_MILAN / main_MILAN_emitter, guided missile
 do
-	local W = "avf/prefabs/technicals/Offroad_WMIK.lua"
+	local W = "vehicles/avf/prefabs/technicals/Offroad_WMIK.lua"
 	local e = MockEngine.load(W, { preload = MockEngine.includes(W) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -406,7 +406,7 @@ do
 end
 -- GMG offroad (2026-11-13): own config, gun / emitter tags GMG / GMG_emitter, AVF grenade shell, automatic
 do
-	local W = "avf/prefabs/technicals/Offroad_armed.lua"
+	local W = "vehicles/avf/prefabs/technicals/Offroad_armed.lua"
 	local e = MockEngine.load(W, { preload = MockEngine.includes(W) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -448,7 +448,7 @@ do
 end
 -- SPG-9 technical (2026-11-13): mainCannon config, weapon type rocket, PG-9 / OG-9 on F
 do
-	local W = "avf/prefabs/technicals/technical_spg9.lua"
+	local W = "vehicles/avf/prefabs/technicals/technical_spg9.lua"
 	local e = MockEngine.load(W, { preload = MockEngine.includes(W) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -471,7 +471,7 @@ end
 -- AVF's weapon type named by the gun's weaponType tag; "GMGun" (AGS-30) fires AVF grenades; the player in it fires
 for _, case in ipairs({ { tag = "9M133", payload = "HEAT", cap = 1, snd = "atgm00" },
 		{ tag = "AGS30", payload = "HE", cap = 60, snd = "grenade_mg/single_shot_01" } }) do
-	local W = "avf/scripts/simple_avf_tank.lua"
+	local W = "vehicles/avf/scripts/simple_avf_tank.lua"
 	local e = MockEngine.load(W, { preload = MockEngine.includes(W) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = {}, {}
@@ -490,7 +490,7 @@ for _, case in ipairs({ { tag = "9M133", payload = "HEAT", cap = 1, snd = "atgm0
 	e.server.init()
 	local c = e.MG.types and e.MG.types[1] and e.MG.types[1].CfgAmmo
 	check(e.MG.cannon and c and c.payload == case.payload and e.MG.capacity == case.cap
-		and e.MG.sound == "MOD/avf/assets/sounds/" .. case.snd .. ".ogg" and e.MountedGunDriverFires == true,
+		and e.MG.sound == "MOD/vehicles/avf/assets/sounds/" .. case.snd .. ".ogg" and e.MountedGunDriverFires == true,
 		case.tag .. " tripod: AVF's weapon type (" .. case.payload .. ", " .. case.cap .. " per load, its own sound), player in it fires")
 	check(removed[21] == "interact", case.tag .. " tripod: AVF's \"mountedGun\" prompt removed (no gunner place)")
 	-- as placed in play (add_seats.py EMPLACEMENTS, user 2026-11-13): a plain object, no <vehicle>, a standing gunner
@@ -530,7 +530,7 @@ end
 -- coax MG as weapon 2 (BMP-2: coax=COAXMG on the gun, config mainCannon.coax): fires from the coax emitter along
 -- the main barrel; X switches weapon, F stays within the weapon
 do
-	local B = "avf/prefabs/bmp/BMP-2.lua"
+	local B = "vehicles/avf/prefabs/bmp/BMP-2.lua"
 	local e = MockEngine.load(B, { preload = MockEngine.includes(B) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = { [1] = { pos = { 0, 0, 0 }, health = 1 } }, { 1 }
@@ -613,7 +613,7 @@ end
 -- BMP-2 Kornet launcher as weapon 3: its own gun shape (tag 9m133m2, body 122), missile from its front end along the
 -- main gun's line, guided; X cycles main -> coax -> launcher; shells skip the launcher's body too
 do
-	local B = "avf/prefabs/bmp/BMP-2.lua"
+	local B = "vehicles/avf/prefabs/bmp/BMP-2.lua"
 	local e = MockEngine.load(B, { preload = MockEngine.includes(B) })
 	e.side = "server"
 	e.PLAYERS, e.ORDER = { [1] = { pos = { 0, 0, 0 }, health = 1 } }, { 1 }
@@ -661,13 +661,13 @@ end
 do
 	local DATA = "C:/Program Files (x86)/Steam/steamapps/common/Teardown/data/"
 	local configs = {
-		"avf/prefabs/technicals/technical_dshk.lua", "avf/prefabs/Weaponised vehicles/Van PKM.lua",
-		"avf/prefabs/Weaponised vehicles/Willys Jeep 50 Cal.lua", "avf/prefabs/technicals/ZSU-23-2.lua",
-		"avf/prefabs/bmp/BMP-1.lua", "avf/prefabs/bmp/BMP-2.lua", "avf/prefabs/bmp/2A70.lua",
-		"avf/prefabs/T-34/T-34-85.lua", "avf/prefabs/T-54 55/T-54.lua", "avf/prefabs/T-54 55/T-55.lua",
-		"avf/prefabs/M-51 Super Sherman/M-51 SUPER SHERMAN.lua", "avf/prefabs/t72_desert/t72b.lua",
-		"avf/prefabs/ZIS-151/katyusha.lua", "avf/prefabs/technicals/Offroad_WMIK.lua",
-		"avf/prefabs/t72_desert/t72A.lua", "avf/prefabs/technicals/Offroad_armed.lua", "avf/prefabs/technicals/technical_spg9.lua", "avf/scripts/simple_avf_tank.lua",
+		"vehicles/avf/prefabs/technicals/technical_dshk.lua", "vehicles/avf/prefabs/Weaponised vehicles/Van PKM.lua",
+		"vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep 50 Cal.lua", "vehicles/avf/prefabs/technicals/ZSU-23-2.lua",
+		"vehicles/avf/prefabs/bmp/BMP-1.lua", "vehicles/avf/prefabs/bmp/BMP-2.lua", "vehicles/avf/prefabs/bmp/2A70.lua",
+		"vehicles/avf/prefabs/T-34/T-34-85.lua", "vehicles/avf/prefabs/T-54 55/T-54.lua", "vehicles/avf/prefabs/T-54 55/T-55.lua",
+		"vehicles/avf/prefabs/M-51 Super Sherman/M-51 SUPER SHERMAN.lua", "vehicles/avf/prefabs/t72_desert/t72b.lua",
+		"vehicles/avf/prefabs/ZIS-151/katyusha.lua", "vehicles/avf/prefabs/technicals/Offroad_WMIK.lua",
+		"vehicles/avf/prefabs/t72_desert/t72A.lua", "vehicles/avf/prefabs/technicals/Offroad_armed.lua", "vehicles/avf/prefabs/technicals/technical_spg9.lua", "vehicles/avf/scripts/simple_avf_tank.lua",
 	}
 	local function exists(path) local f = io.open(path, "r") if f then f:close() return true end return false end
 	local bad = {}
@@ -687,7 +687,7 @@ print("all AVF cannon tests passed")
 -- AVF body pushes are capped (AVF_Impulse, 2026-11-13): the AGS-30's gun weighs ~1e-7 kg; a full push on it meant
 -- absurd speeds (the game froze for a while when its tripod was shot, in-game)
 do
-	local W = "avf/scripts/simple_avf_tank.lua"
+	local W = "vehicles/avf/scripts/simple_avf_tank.lua"
 	local e = MockEngine.load(W, { preload = MockEngine.includes(W) })
 	local got = {}
 	e.def("GetBodyMass", function(b) return b == 1 and 1e-7 or 1000 end)

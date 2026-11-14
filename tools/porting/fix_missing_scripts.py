@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Repoint XML <script file="..."> references to files that do not exist to MOD/scripts/missing_script_stub.lua.
+"""Repoint XML <script file="..."> references to files that do not exist to MOD/lib/missing_script_stub.lua.
 
 Why: three engine crashes (2026-11-06/07) each happened 0-1 s after the log said "Script not found" while a road
 segment with such a reference spawned. The scripts never existed (also missing in the original Workshop mod).
@@ -10,10 +10,10 @@ Usage (repo root): python3 tools/porting/fix_missing_scripts.py [--dry-run]
 """
 import os, re, sys
 
-STUB = "MOD/scripts/missing_script_stub.lua"
+STUB = "MOD/lib/missing_script_stub.lua"
 ENGINE = r"C:\Program Files (x86)\Steam\steamapps\common\Teardown\data"
-SKIP = {"lol.xml", "test.xml", "test_vehicle.xml"}
-SKIP_PREFIX = ("Procedural/procgen/test_",)
+SKIP = {"dev/levels/lol.xml", "dev/levels/test.xml", "dev/levels/test_vehicle.xml"}
+SKIP_PREFIX = ("world/generation/procgen/test_",)
 
 def exists_anywhere(fn, xml_path):
     cands = []

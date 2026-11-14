@@ -1,4 +1,4 @@
--- Mock test for the debug-menu vehicle events (Procedural/RandomVehicleEnemy.lua HandleDebugVehicleEvent).
+-- Mock test for the debug-menu vehicle events (world/generation/RandomVehicleEnemy.lua HandleDebugVehicleEvent).
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_vehicleevents.lua
 
 local DEFS = "C:/Program Files (x86)/Steam/steamapps/common/Teardown/data/script_defs.lua"
@@ -27,7 +27,7 @@ env.RandomSpreadPercent = function(x) return x end
 env.TimerCreateSeconds = function(s) return { time = s, rpm = s } end
 env.server, env.client = {}, {}
 
-local src = io.open("Procedural/RandomVehicleEnemy.lua", "rb"):read("*a"):gsub("\r", "")
+local src = io.open("world/generation/RandomVehicleEnemy.lua", "rb"):read("*a"):gsub("\r", "")
 src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)
 local chunk = assert(loadstring(src, "RandomVehicleEnemy.lua"))
 setfenv(chunk, env)

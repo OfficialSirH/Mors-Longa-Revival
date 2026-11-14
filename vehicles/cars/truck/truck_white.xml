@@ -1,0 +1,65 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/truck/truck_white.xml" pos="-0.1 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="Single-unit truck (White)" tags="reversebeep Door DoAlarm" sound="semitruck2" spring="0.8" damping="0.8" topspeed="136" acceleration="0.09" strength="2" antiroll="0.3" difflock="0.5">
+			<body pos="0.0 1.2 -0.3" dynamic="true">
+				<vox pos="-0.0 -0.7 0.3" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="body">
+					<light pos="0.8 0.8 -3.9" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="60" angle="50" penumbra="15" unshadowed="0.3" fogscale="0.1"/>
+					<light pos="-0.8 0.8 -3.9" rot="0 180 0" type="cone" color="1 0.9 0.8" scale="60" angle="50" penumbra="15" unshadowed="0.3" fogscale="0.1"/>
+					<light pos="-1 0.4 4.1" type="area" color="1 0.1 0.1" size="0.2 0.2" unshadowed="0.2"/>
+					<light pos="1 0.4 4.1" type="area" color="1 0.1 0.1" size="0.2 0.2" unshadowed="0.2"/>
+					<light pos="-1.15 0.4 4.1" type="area" size="0.1 0.2" unshadowed="0.2"/>
+					<light pos="1.15 0.4 4.1" type="area" size="0.1 0.2" unshadowed="0.2"/>
+					<location tags="player" pos="-0.65 1.85 -3.05"/>
+					<location tags="exhaust" pos="-1.1 0.05 -0.95" rot="0 -55 0"/>
+					<location tags="exhaust" pos="1.1 0.05 -0.95" rot="0 45 0"/>
+					<location tags="vital" pos="0 0.75 -3.65"/>
+					<vox pos="-1.4 0.8 -3.2" texture="8 0.5" blendtexture="5 .5" prop="true" file="MOD/vehicles/cars/truck/boxtruck.vox" object="door_l">
+						<joint tags="door" pos="0.1 0.2 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+						<joint pos="0.1 1.2 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+					</vox>
+					<vox pos="1.4 0.8 -3.2" texture="8 0.5" blendtexture="5 .5" prop="true" file="MOD/vehicles/cars/truck/boxtruck.vox" object="door_r">
+						<joint tags="door" pos="-0.1 0.2 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+						<joint pos="-0.1 1.2 -0.5" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" limits="0 70"/>
+					</vox>
+					<location name="exit" tags="exit" pos="-1.85 0.5 -3.0"/>
+					<vox pos="0.0 0.8 1.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="box"/>
+					<location name="camera" tags="camera" pos="0.0 3.0 0.0" rot="0.0 0.0 0.0"/>
+				</vox>
+				<wheel name="fr" pos="1.2 -0.7 -2.2" rot="0.0 0.0 0.0" steer="1" travel="-0.1 0.1">
+					<vox pos="0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_fr"/>
+				</wheel>
+				<wheel name="fl" pos="-1.2 -0.7 -2.2" rot="0.0 0.0 0.0" steer="1" travel="-0.1 0.1">
+					<vox pos="-0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_fl"/>
+				</wheel>
+				<wheel name="br1" pos="1.2 -0.7 1.2" rot="0.0 0.0 0.0" drive="1" travel="-0.1 0.1">
+					<vox pos="0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_br1"/>
+				</wheel>
+				<wheel name="br2" pos="1.2 -0.7 2.5" rot="0.0 0.0 0.0" drive="1" travel="-0.1 0.1">
+					<vox pos="0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_br2"/>
+				</wheel>
+				<wheel name="bl1" pos="-1.2 -0.7 1.2" rot="0.0 0.0 0.0" drive="1" travel="-0.1 0.1">
+					<vox pos="-0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_bl1"/>
+				</wheel>
+				<wheel name="bl2" pos="-1.2 -0.7 2.5" rot="0.0 0.0 0.0" drive="1" travel="-0.1 0.1">
+					<vox pos="-0.1 -0.5 0.0" texture="8 0.5" blendtexture="5 .5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="wheel_bl2"/>
+				</wheel>
+			</body>
+			<body pos="0.0 1.3 4.2" rot="0.0 0.0 0.0" dynamic="true">
+				<vox pos="0.0 0.0 -0.1" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/truck/boxtruck.vox" object="door">
+					<joint tags="door" pos="-1.0 0.0 0.0" rot="0.0 90.0 90.0" type="hinge" rotstrength="0.002" rotspring="0" limits="0 120"/>
+					<joint tags="door" pos="1.0 0.0 0.0" rot="0.0 90.0 90.0" type="hinge" rotstrength="0.002" rotspring="0" limits="0 120"/>
+				</vox>
+			</body>
+			<rig name="driver" tags="driver sort=0" pos="0.0 0.0 -0.1">
+				<location name="ik_hand_r" tags="ik_hand_r" pos="-0.4 1.75 -3.35" rot="0.0 90 0.0"/>
+				<location name="seat" tags="seat" pos="-0.65 1.3 -2.75" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.9 1.75 -3.35" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="-0.65 1.75 -3.3" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="1.3 0.0 -0.1">
+				<location name="seat" tags="seat" pos="-0.65 1.3 -2.75" rot="0.0 0.0 0.0"/>
+			</rig>
+		</vehicle>
+	</group>
+</prefab>
+

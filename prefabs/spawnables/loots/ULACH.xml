@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/ULACH.xml" pos="7.1 0.3 -7.5" rot="0.0 0.0 0.0">
-		<instance file="MOD/Loots/helmet-ulach.xml"/>
+		<instance file="MOD/items/Loots/helmet-ulach.xml"/>
 	</group>
 </prefab>
 

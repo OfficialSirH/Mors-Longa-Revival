@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group>
+		<body tags="Loot=vest-thor_Thor_70_70 interact=Thor" pos="0 .6" dynamic="true">
+			<vox pos="-.05 -.6" file="MOD/assets/vox/Armor/Thor.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,8 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/assets/vox/riflecasing.xml" pos="-200.2 3.8 7.5">
+		<body name="casing" dynamic="true">
+			<vox pos="0.0 0.0 -0.1" file="MOD/assets/vox/casing.vox" object="rifle"/>
+		</body>
+	</group>
+</prefab>
+

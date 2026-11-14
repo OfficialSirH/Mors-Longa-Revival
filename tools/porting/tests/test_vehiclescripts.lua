@@ -1,10 +1,10 @@
--- Mock test for the small vehicle scripts in Vehicles/!library/scripts: drive, drivetrain, steer (driver input
+-- Mock test for the small vehicle scripts in vehicles/cars/!library/scripts: drive, drivetrain, steer (driver input
 -- only) and toggleAction (any player toggles). dash.lua is a <screen> script: those stay v1 (TECHNICAL_REFERENCE §3).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_vehiclescripts.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local DIR = "Vehicles/!library/scripts/"
+local DIR = "vehicles/cars/!library/scripts/"
 
 -- two players: 1 = host, 2 = client. VEH[p] = vehicle, DRV[p] = true when driving it, KEYS[p][input] = value
 local function setup(file)

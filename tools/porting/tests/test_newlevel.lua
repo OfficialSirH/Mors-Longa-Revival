@@ -1,11 +1,11 @@
--- Mock test for scripts/newLeveltoLEVEL.lua (MP fixes 2026-11-14): game rules synced, a remote player's own new
+-- Mock test for game/newLeveltoLEVEL.lua (MP fixes 2026-11-14): game rules synced, a remote player's own new
 -- run (starter loadout via inventory.init, perks, bounty board), the host's difficulty mirrored.
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_newlevel.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local PATH = "scripts/newLeveltoLEVEL.lua"
+local PATH = "game/newLeveltoLEVEL.lua"
 
 -- one machine: its own registry; SetString/SetBool record the sync flag
 local function machine(localPlayer)

@@ -1,0 +1,12 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/weapons/PlaceTool/Placeables/Gun1.xml" pos="21.1 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.0 0.0" dynamic="true">
+			<voxbox pos="-0.1 0.0 -0.1" rot="0.0 0.0 0.0" size="2 1 2" offset="0.0 0.0 18.0" color="0.19 0.19 0.19">
+				<voxbox tags="mod=Gun" pos="0.05 0.1 0.05" rot="0.0 0.0 0.0" size="7 1 1" offset="0.0 0.0 18.0" color="0.19 0.19 0.19">
+					<light pos="0.75 0.05 0.05" color="0.0 0.0 0.0" size="0.05"/>
+				</voxbox>
+			</voxbox>
+		</body>
+	</group>
+</prefab>
+

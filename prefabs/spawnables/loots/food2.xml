@@ -1,7 +1,7 @@
 <prefab version="1.1.0">
 	<group>
 		<body tags="Loot=food2_Choccy_10_0 interact=Choccy" pos="0 .05" dynamic="true">
-			<vox pos="-.05 -.05 .05" file="MOD/vox/foods/choccy.vox"/>
+			<vox pos="-.05 -.05 .05" file="MOD/assets/vox/foods/choccy.vox"/>
 		</body>
 	</group>
 </prefab>

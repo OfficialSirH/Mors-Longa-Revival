@@ -1,12 +1,12 @@
 <prefab version="0.9.5">
 	<group name="DeceasedBurnt" pos="-135.99998 2.0 43.1">
-		<vox open_="true" pos="-0.20003 0.7 -0.2" file="MOD/vox/gore/ashen remains.vox" object="body">
-			<vox pos="0.0 0.7 0.1" file="MOD/vox/gore/ashen remains.vox" object="head_3"/>
-			<vox open_="true" pos="0.4 0.5 -0.3" rot="-100.0 140.0 0.0" file="MOD/vox/gore/ashen remains.vox" object="Uarm_L">
-				<vox pos="-0.2 -0.4 0.0" rot="0.0 0.0 -30.0" file="MOD/vox/gore/ashen remains.vox" object="larm_L"/>
+		<vox open_="true" pos="-0.20003 0.7 -0.2" file="MOD/assets/vox/gore/ashen remains.vox" object="body">
+			<vox pos="0.0 0.7 0.1" file="MOD/assets/vox/gore/ashen remains.vox" object="head_3"/>
+			<vox open_="true" pos="0.4 0.5 -0.3" rot="-100.0 140.0 0.0" file="MOD/assets/vox/gore/ashen remains.vox" object="Uarm_L">
+				<vox pos="-0.2 -0.4 0.0" rot="0.0 0.0 -30.0" file="MOD/assets/vox/gore/ashen remains.vox" object="larm_L"/>
 			</vox>
-			<vox pos="0.2 -0.3 0.0" file="MOD/vox/gore/ashen remains.vox" object="Leg_L">
-				<vox pos="-0.1 -0.3 0.0" file="MOD/vox/gore/ashen remains.vox" object="foot_L"/>
+			<vox pos="0.2 -0.3 0.0" file="MOD/assets/vox/gore/ashen remains.vox" object="Leg_L">
+				<vox pos="-0.1 -0.3 0.0" file="MOD/assets/vox/gore/ashen remains.vox" object="foot_L"/>
 			</vox>
 		</vox>
 	</group>

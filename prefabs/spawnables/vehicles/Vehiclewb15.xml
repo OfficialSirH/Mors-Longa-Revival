@@ -14,7 +14,7 @@
 			<instance pos="-0.05 2.0 10.25" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
 			<instance pos="-0.05 2.0 11.45" file="MOD/prefabs/spawns/loots/SpecialCarLootSpawn.xml"/>
 		</group>
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/semitruck-us/Semi Modified.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/semitruck-us/Semi Modified.xml"/>
 		<instance pos="-0.2 1.6 5.0" file="MOD/prefabs/spawns/enemies/EnemyCultSpawn.xml"/>
 	</group>
 </prefab>

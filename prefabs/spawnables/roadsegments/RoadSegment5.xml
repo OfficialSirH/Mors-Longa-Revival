@@ -6,15 +6,15 @@
 				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
 				<voxbox name="sand:normal" pos="0.0 0.6 18.4" size="2000 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
 				<voxbox name="unbreakable ground" tags="unbreakable" pos="0.0 0.5 -100.0" rot="0.0 0.0 0.0" size="2000 1 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
-				<vox pos="26.6 0.7 -49.2" rot="0.0 40.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="63.0 0.7 -79.6" rot="0.0 -70.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="175.5 0.7 -57.4" rot="0.0 -70.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
-				<vox pos="174.60001 0.7 -28.2" rot="0.0 -20.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="181.90001 0.7 48.4" rot="0.0 -40.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="37.7 0.7 51.4" rot="0.0 -60.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="31.1 0.7 54.3" rot="0.0 30.0 0.0" file="MOD/vox/trees/Small 13.vox"/>
-				<vox pos="41.3 0.7 36.1" rot="0.0 -40.0 0.0" file="MOD/vox/trees/Small 15.vox"/>
-				<vox pos="101.7 0.7 75.5" rot="0.0 -170.0 0.0" file="MOD/vox/trees/Small 14.vox"/>
+				<vox pos="26.6 0.7 -49.2" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="63.0 0.7 -79.6" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="175.5 0.7 -57.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="174.60001 0.7 -28.2" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="181.90001 0.7 48.4" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="37.7 0.7 51.4" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="31.1 0.7 54.3" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="41.3 0.7 36.1" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="101.7 0.7 75.5" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
 			</group>
 			<group name="road" prop0="texture=16">
 				<voxbox name="highway road l edge" pos="200.0 0.6 -21.6" rot="0.0 -90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
@@ -74,54 +74,54 @@
 			</group>
 			<group name="terrain">
 				<group pos="75.90001 -16.9 40.39999" rot="0.0 40.0 0.0">
-					<vox pos="-6.90006 13.6 0.59998" rot="-0.2 -152.10001 49.9" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="13.8 11.5 1.20006" rot="123.6 -127.0 -47.2" file="MOD/vox/terrainpieces/rock1.vox"/>
-					<vox pos="4.8 17.6 -1.9" rot="0.0 180.0 0.0" file="MOD/vox/terrainpieces/MorsLongaHill.vox"/>
-					<vox pos="-4.0 17.15 0.8" rot="0.0 -100.0 0.0" file="MOD/vox/terrainpieces/MorsLongaHill.vox"/>
+					<vox pos="-6.90006 13.6 0.59998" rot="-0.2 -152.10001 49.9" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="13.8 11.5 1.20006" rot="123.6 -127.0 -47.2" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="4.8 17.6 -1.9" rot="0.0 180.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaHill.vox"/>
+					<vox pos="-4.0 17.15 0.8" rot="0.0 -100.0 0.0" file="MOD/assets/vox/terrainpieces/MorsLongaHill.vox"/>
 					<vox pos="12.0 16.8 -0.9" rot="0.0 20.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="6.99997 18.1 0.40001" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="-3.00001 17.0 3.60001" rot="0.0 90.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
 					<vox pos="-5.5 17.6 -8.79998" rot="0.0 46.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="small-1"/>
 					<vox pos="-7.50042 17.6 10.60002" rot="0.0 -34.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="small-1"/>
 				</group>
-				<vox pos="46.879 2.6 93.0108" rot="-1.6 158.60001 -21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="50.40001 3.5 76.50001" rot="0.0 0.0 -20.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="48.47899 2.6 -74.18919" rot="178.39999 -138.60001 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="47.07032 3.5 -95.46476" rot="0.0 10.0 -20.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="151.37897 2.6 93.0108" rot="-1.6 158.60001 -21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="160.09998 3.5 76.50001" rot="0.0 0.0 -20.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="157.37898 2.6 -79.8892" rot="178.39999 -168.60001 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="157.1703 3.5 -95.46476" rot="0.0 10.0 -20.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="99.67899 -2.1 -91.2892" rot="178.39999 -118.6 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="105.87899 0.4 -104.68919" rot="178.39999 -88.6 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="119.77899 0.4 89.01083" rot="178.39999 -88.6 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="99.67899 -3.2 87.21082" rot="178.39999 -118.6 21.0" file="MOD/vox/terrainpieces/rock1.vox"/>
-				<vox pos="81.879 -2.6 -79.98901" rot="0.0 90.0 0.0" file="MOD/vox/terrainpieces/rock1.vox"/>
+				<vox pos="46.879 2.6 93.0108" rot="-1.6 158.60001 -21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="50.40001 3.5 76.50001" rot="0.0 0.0 -20.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="48.47899 2.6 -74.18919" rot="178.39999 -138.60001 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="47.07032 3.5 -95.46476" rot="0.0 10.0 -20.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="151.37897 2.6 93.0108" rot="-1.6 158.60001 -21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="160.09998 3.5 76.50001" rot="0.0 0.0 -20.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="157.37898 2.6 -79.8892" rot="178.39999 -168.60001 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="157.1703 3.5 -95.46476" rot="0.0 10.0 -20.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="99.67899 -2.1 -91.2892" rot="178.39999 -118.6 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="105.87899 0.4 -104.68919" rot="178.39999 -88.6 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="119.77899 0.4 89.01083" rot="178.39999 -88.6 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="99.67899 -3.2 87.21082" rot="178.39999 -118.6 21.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+				<vox pos="81.879 -2.6 -79.98901" rot="0.0 90.0 0.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
 			</group>
 			<group name="Power Lines" pos="95.5 -0.1 94.6">
-				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="-27.5 0.8 0.0" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.5 0.8 0.0" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
 			</group>
 			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
 				<vox pos="-48.8 -0.1 12.8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>
 				<vox pos="48.8 -0.1 12.8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>
 				<vox pos="-48.8 -0.1 -289.60001" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>
 				<vox pos="48.8 -0.1 -289.60001" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>
-				<vox pos="-61.921 -14.0 -28.789" rot="90.0 170.0 -80.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="-13.521 -5.9 -20.889" rot="10.7 76.5 -9.5" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="48.179 -14.0 -11.789" rot="90.0 -10.0 -80.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="54.17894 -16.54441 -14.08585" rot="96.8 -3.5 -60.1" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="54.77899 -14.0 -247.989" rot="90.0 20.0 -80.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="-61.721 -14.0 -265.28903" rot="90.0 160.0 -80.0" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="-13.521 -5.9 -257.789" rot="10.7 76.5 -9.5" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="-48.421 -7.7 -264.289" rot="-40.1 -140.10001 -87.5" file="MOD/vox/terrainpieces/rock1.vox" scale="3"/>
-				<vox pos="-0.121 -19.0 -322.78903" rot="90.0 -180.0 -70.0" file="MOD/vox/terrainpieces/rock1.vox" scale="6"/>
-				<vox pos="-15.821 -24.3 40.71098" rot="90.0 -10.0 -70.0" file="MOD/vox/terrainpieces/rock1.vox" scale="6"/>
+				<vox pos="-61.921 -14.0 -28.789" rot="90.0 170.0 -80.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="-13.521 -5.9 -20.889" rot="10.7 76.5 -9.5" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="48.179 -14.0 -11.789" rot="90.0 -10.0 -80.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="54.17894 -16.54441 -14.08585" rot="96.8 -3.5 -60.1" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="54.77899 -14.0 -247.989" rot="90.0 20.0 -80.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="-61.721 -14.0 -265.28903" rot="90.0 160.0 -80.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="-13.521 -5.9 -257.789" rot="10.7 76.5 -9.5" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="-48.421 -7.7 -264.289" rot="-40.1 -140.10001 -87.5" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="3"/>
+				<vox pos="-0.121 -19.0 -322.78903" rot="90.0 -180.0 -70.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="6"/>
+				<vox pos="-15.821 -24.3 40.71098" rot="90.0 -10.0 -70.0" file="MOD/assets/vox/terrainpieces/rock1.vox" scale="6"/>
 			</group>
 		</group>
 		<trigger tags="PuzzlePiece" pos="200.0 0.0 0.0" size="0.1"/>

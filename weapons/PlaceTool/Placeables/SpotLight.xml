@@ -1,0 +1,8 @@
+<prefab version="1.6.0">
+	<group name="instance=MOD/weapons/PlaceTool/Placeables/SpotLight.xml" pos="16.5 0.0 0.1" rot="0.0 0.0 0.0">
+		<vox pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/Spotlight.vox">
+			<light pos="0.0 0.55 -0.05" rot="0.0 90.0 0.0" type="cone" color="1.0 0.98 0.87" scale="120" angle="40" reach="60" glare="1"/>
+		</vox>
+	</group>
+</prefab>
+

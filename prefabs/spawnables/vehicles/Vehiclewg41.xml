@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg41.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/Constuction vehicles/Bluetractor.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/Constuction vehicles/Bluetractor.xml"/>
 	</group>
 </prefab>
 

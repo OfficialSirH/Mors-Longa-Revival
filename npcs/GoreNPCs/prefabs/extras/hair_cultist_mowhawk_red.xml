@@ -1,0 +1,8 @@
+<prefab version="1.4.0">
+	<group>
+		<body dynamic="true">
+			<vox pos="-0.05 0.3 0.0" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/cultist3.vox" object="head_extra"/>
+		</body>
+	</group>
+</prefab>
+

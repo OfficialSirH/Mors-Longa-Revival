@@ -1,13 +1,13 @@
 <prefab version="1.4.0">
 	<group name="instance=MOD/prefabs/spawnables/enemies/cult/Ragdollcult3.xml" pos="-13.0 0.0 9.0" rot="0.0 0.0 0.0">
-		<script pos="0.0 0.0 0.1" file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
-			<group name="Standard Ragdoll" pos="0.0 0.0 -0.1" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/cultist_night.vox" prop1="tags=Torso Attack bodypart spawn_team=cult eyes=red">
+		<script pos="0.0 0.0 0.1" file="MOD/npcs/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll" pos="0.0 0.0 -0.1" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/cultist_night.vox" prop1="tags=Torso Attack bodypart spawn_team=cult eyes=red">
 				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml"/>
 			</group>
 			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS"/>
 			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
-				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/eyes_red.xml"/>
-				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/hood_cultist_black_nvg.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/prefabs/extras/eyes_red.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/prefabs/extras/hood_cultist_black_nvg.xml"/>
 			</group>
 		</script>
 	</group>

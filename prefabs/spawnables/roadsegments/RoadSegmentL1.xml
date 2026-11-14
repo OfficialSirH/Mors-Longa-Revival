@@ -175,8 +175,8 @@
 				<vox pos="48.8 -0.1 -289.60001" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" scale="4"/>
 			</group>
 			<group name="Power Lines" pos="95.5 -0.1 94.6">
-				<vox pos="-84.2 1.0 0.0" rot="-90.0 20.0 0.0" texture="8 0.5" prop="true" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
-				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-84.2 1.0 0.0" rot="-90.0 20.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
 			</group>
 			<group name="Enemies" pos="119.80001 0.9 -2.7" rot="0.0 -180.0 0.0">
 				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="109.9 0.3 -5.2" rot="0.0 -80.0 0.0"/>
@@ -908,14 +908,14 @@
 						<instance pos="-11.4 0.0 -3.2" rot="0 95 -4" file="MOD/prefabs/assets/ballistic wall low.xml"/>
 						<instance pos="-13.5 0.0 -3.1" rot="0.0 -175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
 						<instance pos="-9.99999 0.1 0.80001" rot="0.0 -175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
-						<vox pos="-15.3 0.0 -4.5" rot="0.0 0.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-						<vox pos="-14.5 0.0 -5.7" rot="0.0 -70.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
-						<vox pos="-14.6 0.0 -3.4" rot="0.0 -110.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-						<vox pos="-15.2 0.3 -3.8" rot="0.0 -160.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-						<vox pos="-14.6 0.0 37.4" rot="0.0 -70.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-						<vox pos="-15.1 0.3 37.9" rot="0.0 150.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags5"/>
-						<vox pos="-15.3 0.0 38.6" rot="0.0 -180.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags3"/>
-						<vox pos="-14.5 0.0 39.9" rot="0.0 -110.0 0.0" file="MOD/vox/sandbags.vox" object="sandbags4"/>
+						<vox pos="-15.3 0.0 -4.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+						<vox pos="-14.5 0.0 -5.7" rot="0.0 -70.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+						<vox pos="-14.6 0.0 -3.4" rot="0.0 -110.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+						<vox pos="-15.2 0.3 -3.8" rot="0.0 -160.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+						<vox pos="-14.6 0.0 37.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+						<vox pos="-15.1 0.3 37.9" rot="0.0 150.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+						<vox pos="-15.3 0.0 38.6" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+						<vox pos="-14.5 0.0 39.9" rot="0.0 -110.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
 					</group>
 					<vox name="boom barrier" pos="-19.2 0.35 -3.5" rot="0.0 -90.0 0.0" texture="8 0.5" file="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier mechanism">
 						<voxbox name="pole" pos="-0.2 1.05 0.3" texture="6 0.5" density="3" prop="true" size="122 3 2" brush="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier pole">
@@ -1268,10 +1268,10 @@
 				<instance pos="23.4 0.2 39.1" file="MOD/prefabs/assets/checkpoint shack.xml"/>
 			</group>
 			<group name="Defense Weaponry" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-				<instance pos="-21.7 0.0 -7.1" rot="0.0 100.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-21.7 0.0 29.1" rot="0.0 80.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-26.5 0.0 32.54002" rot="0.0 83.0 0.0" file="MOD/avf/prefabs/turrets/ags30.xml"/>
-				<instance pos="-26.5 0.0 -10.59998" rot="0.0 100.0 0.0" file="MOD/avf/prefabs/turrets/ags30.xml"/>
+				<instance pos="-21.7 0.0 -7.1" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-21.7 0.0 29.1" rot="0.0 80.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-26.5 0.0 32.54002" rot="0.0 83.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml"/>
+				<instance pos="-26.5 0.0 -10.59998" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml"/>
 			</group>
 		</group>
 		<group name="HEAVY STRUCTURE BORDER" pos="168.2 0.5 -12.6" prop0="texture=6 0.5">
@@ -2390,12 +2390,12 @@
 				</group>
 			</group>
 			<group name="Defense Weaponry" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-				<instance pos="-21.7 0.0 6.8" rot="0.0 70.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-21.7 0.0 -7.1" rot="0.0 100.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-21.7 0.0 15.1" rot="0.0 100.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-21.7 0.0 29.1" rot="0.0 80.0 0.0" file="MOD/avf/prefabs/turrets/Kornet.xml"/>
-				<instance pos="-26.5 -0.1 32.20002" rot="0.0 90.0 0.0" file="MOD/avf/prefabs/turrets/ags30.xml"/>
-				<instance pos="-26.5 -0.1 -10.59998" rot="0.0 100.0 0.0" file="MOD/avf/prefabs/turrets/ags30.xml"/>
+				<instance pos="-21.7 0.0 6.8" rot="0.0 70.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-21.7 0.0 -7.1" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-21.7 0.0 15.1" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-21.7 0.0 29.1" rot="0.0 80.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml"/>
+				<instance pos="-26.5 -0.1 32.20002" rot="0.0 90.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml"/>
+				<instance pos="-26.5 -0.1 -10.59998" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml"/>
 			</group>
 		</group>
 		<group name="decor" pos="71.15 0.0 0.0" prop0="texture=19 0.5" prop1="tags=nocull" prop2="collide=false">

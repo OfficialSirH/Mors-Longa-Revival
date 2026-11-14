@@ -1,15 +1,15 @@
 <prefab version="1.5.4">
 	<group name="instance=MOD/prefabs/spawnables/enemies/security/Ragdollsecurity2.xml" pos="0.0 0.0 -7.1" rot="0.0 180.0 0.0">
-		<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
-			<group name="Standard Ragdoll (prop0)" pos="0.0 0.0 0.0" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security1.vox" prop1="tags=Torso Attack bodypart spawn_team=merc">
+		<script pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/scripts/goreai_initializer.lua">
+			<group name="Standard Ragdoll (prop0)" pos="0.0 0.0 0.0" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security1.vox" prop1="tags=Torso Attack bodypart spawn_team=merc">
 				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml"/>
 			</group>
 			<group name="TORSO_EXTRAS" pos="0.0 0.6 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=TORSO_EXTRAS">
-				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/vest_security.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/prefabs/extras/vest_security.xml"/>
 			</group>
 			<group name="HEAD_EXTRAS" pos="0.0 1.5 0.0" rot="0.0 0.0 0.0" prop0="collide=false" prop1="tags=HEAD_EXTRAS">
-				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/helmet_security_standard.xml"/>
-				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/GoreNPCs/prefabs/extras/headwear_security_earpiece.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/prefabs/extras/helmet_security_standard.xml"/>
+				<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/npcs/GoreNPCs/prefabs/extras/headwear_security_earpiece.xml"/>
 			</group>
 		</script>
 	</group>

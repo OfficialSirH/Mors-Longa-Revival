@@ -1,0 +1,103 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/levels/level_scripts_spawn.xml" pos="-28.0 2.5 70.9" rot="0.0 0.0 0.0">
+		<script file="MOD/game/MLSandbox.lua"/>
+		<group name="MorsLonga" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" layer="-MorsLonga">
+			<script file="MOD/game/newLeveltoLEVEL.lua"/>
+			<script file="MOD/game/Radio.lua"/>
+			<script file="MOD/weapons/guns/Airstrike.lua"/>
+			<script file="MOD/weapons/mine.lua"/>
+			<script file="MOD/ui/pauseMenu.lua"/>
+			<script file="MOD/game/LootOutline.lua"/>
+			<script file="MOD/world/window.lua"/>
+			<script file="MOD/weapons/guns/Thermals.lua"/>
+			<script file="MOD/ui/ConfigMenu.lua"/>
+			<script file="MOD/ui/SpawnMenu.lua"/>
+			<script file="MOD/ui/MainMenu/ingame_settings.lua"/>
+			<script file="MOD/vehicles/CarAlarm.lua"/>
+			<script file="MOD/world/daynight/script/daynight_main.lua"/>
+			<script file="MOD/player/HealthSystem/Die.lua"/>
+			<script file="MOD/ui/Book.lua"/>
+			<script file="MOD/vehicles/Fuel.lua"/>
+			<script file="MOD/game/Gamerule.lua"/>
+			<script file="MOD/game/randomdelete.lua"/>
+			<script file="MOD/world/door_global.lua"/>
+			<script file="MOD/vehicles/ShootFromCar.lua"/>
+			<script file="MOD/game/ToolManager.lua"/>
+		</group>
+		<group name="ToolsAndWeapons" layer="-ToolsAndWeapons">
+			<script file="MOD/weapons/PlaceTool/PlaceTool.lua"/>
+			<script file="MOD/weapons/guns/Weld.lua"/>
+			<script file="MOD/weapons/Grenades.lua"/>
+		</group>
+		<group name="PlayerBody" pos="-205.19998 4.4 11.0" layer="-PlayerBody">
+			<script file="MOD/player/PlayerHitboxes.lua"/>
+			<script pos="-0.35 -0.6 0.0" file="MOD/player/HealthSystem/AdvancedHealthScript.lua">
+				<trigger tags="hitbox=HEAD QueriedDamage=0" pos="0.0 1.4 0.05" type="box" size=".3 .3 .3"/>
+				<trigger tags="hitbox=LARM QueriedDamage=0" pos="0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=LLEG QueriedDamage=0 LLEG" pos="0.15 0.0 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=RARM QueriedDamage=0" pos="-0.35 0.6 0.0" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=RLEG QueriedDamage=0 RLEG" pos="-0.15 0.0 0.1" type="box" size=".2 .7 .2"/>
+				<trigger tags="hitbox=TORSO QueriedDamage=0 TORSO" pos="0.0 0.8 0.0" type="box" size=".5 .6 .3"/>
+			</script>
+		</group>
+		<group name="InventoryMod">
+			<script file="MOD/player/inventory.lua"/>
+			<group name="GunScripts">
+				<!-- (v2, Phase 2) all gun scripts load with the level; the inventory used to spawn them per slot. PKM and SG553 (Bauer-553) are shelved/unfinished and not loaded. -->
+				<script file="MOD/weapons/guns/AK50.lua"/>
+				<script file="MOD/weapons/guns/AK74.lua"/>
+				<script file="MOD/weapons/guns/AK101.lua"/>
+				<script file="MOD/weapons/guns/AK74M.lua"/>
+				<script file="MOD/weapons/guns/AKM.lua"/>
+				<script file="MOD/weapons/guns/CZ-1012.lua"/>
+				<script file="MOD/weapons/guns/G3.lua"/>
+				<script file="MOD/weapons/guns/G36.lua"/>
+				<script file="MOD/weapons/guns/M4A1.lua"/>
+				<script file="MOD/weapons/guns/M16.lua"/>
+				<script file="MOD/weapons/guns/M107.lua"/>
+				<script file="MOD/weapons/guns/M870.lua"/>
+				<script file="MOD/weapons/guns/KS23.lua"/>
+				<script file="MOD/weapons/guns/MosinNagant.lua"/>
+				<script file="MOD/weapons/guns/MosinNagantM.lua"/>
+				<script file="MOD/weapons/guns/MP5.lua"/>
+				<script file="MOD/weapons/guns/MP43.lua"/>
+				<script file="MOD/weapons/guns/P90.lua"/>
+				<script file="MOD/weapons/guns/PP19.lua"/>
+				<script file="MOD/weapons/guns/PPSh.lua"/>
+				<script file="MOD/weapons/guns/RPG.lua"/>
+				<script file="MOD/weapons/guns/SCAR-H.lua"/>
+				<script file="MOD/weapons/guns/SCAR-Hg.lua"/>
+				<script file="MOD/weapons/guns/SCAR-L.lua"/>
+				<script file="MOD/weapons/guns/SCAR-Lg.lua"/>
+				<script file="MOD/weapons/guns/SKS.lua"/>
+				<script file="MOD/weapons/guns/SV98.lua"/>
+				<script file="MOD/weapons/guns/SVD.lua"/>
+				<script file="MOD/weapons/guns/VECTOR.lua"/>
+				<script file="MOD/weapons/guns/FiveSeven.lua"/>
+				<script file="MOD/weapons/guns/G17.lua"/>
+				<script file="MOD/weapons/guns/Dessert Eagle.lua"/>
+				<script file="MOD/weapons/guns/G18.lua"/>
+				<script file="MOD/weapons/guns/Sawed Off.lua"/>
+				<script file="MOD/weapons/guns/TT33.lua"/>
+				<script file="MOD/weapons/guns/M9.lua"/>
+			</group>
+			<group name="MeleeWeapons">
+				<script file="MOD/weapons/melee/BaseballBat.lua"/>
+				<script file="MOD/weapons/melee/Scythe.lua"/>
+				<script file="MOD/weapons/melee/CombatKnife.lua"/>
+				<script file="MOD/weapons/melee/Crowbar.lua"/>
+				<script file="MOD/weapons/melee/FireAxe.lua"/>
+				<script file="MOD/weapons/melee/Katana.lua"/>
+				<script file="MOD/weapons/melee/Pipe.lua"/>
+				<script file="MOD/weapons/melee/Tomahawk.lua"/>
+			</group>
+			<group name="Consumables">
+				<script file="MOD/player/meds.lua"/>
+			</group>
+		</group>
+		<group name="NPCs" layer="-NPCs">
+			<script file="MOD/world/generation/RandomEnemy.lua"/>
+			<script file="MOD/world/generation/RandomVehicleEnemy.lua"/>
+		</group>
+	</group>
+</prefab>

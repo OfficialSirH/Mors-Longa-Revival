@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclef12.xml" pos="-12.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/Vehicles/cadillacsd80/Cadlilac Destroyed.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/cars/cadillacsd80/Cadlilac Destroyed.xml"/>
 		<instance pos="0.0 0.7 2.3" file="MOD/prefabs/spawns/loots/BrokenCarLootSpawn.xml"/>
 	</group>
 </prefab>

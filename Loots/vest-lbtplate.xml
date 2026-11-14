@@ -1,8 +1,0 @@
-<prefab version="1.1.0">
-	<group>
-		<body tags="Loot=vest-lbtplate_LBT-Plate_70_70 interact=Slick" pos="0 .4" dynamic="true">
-			<vox pos="-.05 -.4" file="MOD/vox/Armor/Slick.vox" object="body"/>
-		</body>
-	</group>
-</prefab>
-

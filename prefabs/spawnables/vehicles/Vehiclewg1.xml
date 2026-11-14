@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/technicals/Pickup Lifted.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/Pickup Lifted.xml"/>
 		<instance pos="-0.2 1.3 1.3" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml"/>
 		<instance pos="-0.2 1.3 2.2" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml"/>
 	</group>

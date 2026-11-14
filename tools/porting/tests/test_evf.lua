@@ -5,7 +5,7 @@ dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local env = MockEngine.load("Vehicles/GAZ-24 (1968)/EVF.lua", { preload = MockEngine.includes("Vehicles/GAZ-24 (1968)/EVF.lua") })
+local env = MockEngine.load("vehicles/cars/GAZ-24 (1968)/EVF.lua", { preload = MockEngine.includes("vehicles/cars/GAZ-24 (1968)/EVF.lua") })
 env.side = "server"
 env.PLAYERS = { [1] = { pos = { 0, 0, 0 }, health = 1 }, [2] = { pos = { 5, 0, 0 }, health = 1 } }
 env.ORDER = { 1, 2 }
@@ -80,7 +80,7 @@ check(next(env.violations) == nil, "no client-only calls on the server")
 
 -- the GAZ-24's other scripts: interior light switch, militia siren switch, police lights
 local function gaz(file)
-	local e = MockEngine.load("Vehicles/GAZ-24 (1968)/" .. file, { preload = MockEngine.includes("Vehicles/GAZ-24 (1968)/" .. file) })
+	local e = MockEngine.load("vehicles/cars/GAZ-24 (1968)/" .. file, { preload = MockEngine.includes("vehicles/cars/GAZ-24 (1968)/" .. file) })
 	e.side = "server"
 	e.PLAYERS = { [1] = { pos = { 0, 0, 0 }, health = 1 }, [2] = { pos = { 5, 0, 0 }, health = 1 } }
 	e.ORDER = { 1, 2 }

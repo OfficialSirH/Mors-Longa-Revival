@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/items/Loots/bullets-545-FMJ.xml" pos="0.0 0.8 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=bullets-545-FMJ_5.45_30 interact=5.45" pos="0.0 0.2 0.0" dynamic="true">
+			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
+		</body>
+	</group>
+</prefab>
+

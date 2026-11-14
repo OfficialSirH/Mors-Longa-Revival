@@ -1,0 +1,114 @@
+<prefab version="1.0.0">
+	<group name="instance=MOD/vehicles/cars/Enemy Car/SUV Enemy.xml" pos="-611.29999 0.2 -19.4" rot="0.0 -90.0 0.0">
+		<script pos="0.1 0.0 0.1" file="MOD/vehicles/cars/!library/scripts/door.lua">
+			<vehicle name="MGTechnical" tags="Door" pos="0.0 0.0 -0.1" driven="false" sound="suv2" spring="0.45" damping="0.6" topspeed="95" acceleration="0.15" strength="3" antispin="0" antiroll="0.0" difflock="0.5" steerassist="0.0" friction="0.9">
+				<body tags="component=body" pos="-0.05 0.6 -0.25" dynamic="true">
+					<vox tags="component=chassis" pos="0.05 -0.3 0.25" rot="0 180 0" texture="8 0.5" density="2" strength="3" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="chassis">
+						<group name="immersive_elements">
+							<vox name="engine" tags="engine" pos="0.1 0.1 1.8" texture="8 0.8" density="3" strength="3" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="Hemi_v8"/>
+							<group name="ammo_rack" pos="-0.2 0.4 -0.4" prop0="tags=ammo_rack=0"/>
+						</group>
+						<group name="hinged_eleements"/>
+						<group name="base_vehicle_parts" pos="0.0 0.0 -0.2">
+							<location tags="player" pos="0.55 1.5 0.3"/>
+							<location tags="exhaust" pos="-0.8 0.15 -0.75" rot="0.0 -90.0 0.0"/>
+							<location tags="vital" pos="0.05 0.65 2.0" rot="-180.0 360.0 -180.0"/>
+						</group>
+						<location name="exit" tags="exit" pos="1.45 1.25 0.1" rot="0.0 180.0 0.0"/>
+						<vox pos="0.1 0.3 0.0" texture="8 0.8" density="4" strength="4" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="SUVbody">
+							<light pos="0.8 0.5 2.5" rot="0.0 -10.0 0.0" type="cone" color="1 .9 .8" scale="2" angle="90" penumbra="30" size="0.1" reach="2" unshadowed="0.2" glare="0.1"/>
+							<light pos="-0.8 0.5 2.5" type="cone" color="1 .9 .8" scale="5" angle="90" penumbra="30" size="0.2" reach="5" unshadowed="0.2" glare="0.25"/>
+							<vox pos="0.0 0.1 -2.6" texture="8 0.8" prop="true" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="reardoor">
+								<joint pos="-0.7 0.0 -0.1" rot="0.0 -90.0 90.0" type="hinge" rotstrength="0.05" rotspring="0.0" limits="0 110"/>
+								<joint pos="0.7 0.0 -0.1" rot="0.0 -90.0 90.0" type="hinge" rotstrength="0.05" rotspring="0.0" limits="0 110"/>
+							</vox>
+							<vox pos="-0.05 1.1 -2.9" rot="-50.0 0.0 0.0" texture="8 0.8" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="flag"/>
+							<vox pos="0.0 0.6 1.9" texture="8 0.8" prop="true" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="hood2">
+								<joint pos="0.8 0.2 -0.7" rot="0.0 -90.0 0.0" type="hinge" rotspring="0.0" limits="0 60"/>
+								<joint pos="-0.8 0.2 -0.7" rot="0.0 -90.0 0.0" type="hinge" rotspring="0.0" limits="0 60"/>
+							</vox>
+							<group name="Doors" pos="-0.1 0.0 0.0">
+								<vox pos="-0.8 0.1 0.5" texture="8 0.8" prop="true" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="door2">
+									<joint pos="-0.1 0.0 0.55" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+									<joint pos="-0.1 0.7 0.55" rot="-90.0 90.0 0.0" type="ball" size="0.15" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+								</vox>
+								<vox pos="1.0 0.1 0.5" texture="8 0.8" prop="false" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="door1">
+									<joint pos="0.1 0.0 0.55" rot="90.0 90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+									<joint pos="0.1 0.7 0.55" rot="-90.0 90.0 0.0" type="ball" size="0.15" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+								</vox>
+								<vox pos="-0.9 0.1 -0.6" texture="8 0.8" prop="true" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="door3.5">
+									<joint pos="0.0 0.2 -0.5" rot="90.0 -90.0 0.0" type="hinge" rotstrength="0.1" rotspring="0.0" limits="0 70"/>
+								</vox>
+								<vox pos="1.0 0.1 -0.6" texture="8 0.8" density="0.1" strength="0.0" prop="true" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="door3.5">
+									<joint pos="0.1 0.2 -0.5" rot="-90.0 -90.0 0.0" type="hinge" limits="0 70"/>
+								</vox>
+							</group>
+						</vox>
+					</vox>
+					<wheel name="bl" pos="-0.8 -0.2 1.7" drive="1" travel="-0.1 0.2">
+						<vox pos="-0.1 -0.4 0.0" rot="0.0 -180.0 0.0" texture="8 0.5" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="wheel1"/>
+					</wheel>
+					<wheel name="br" pos="0.7 -0.2 1.7" drive="1" travel="-0.1 0.2">
+						<vox pos="0.1 -0.4 0.0" rot="0 180 0" texture="8 0.5" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="wheel_br"/>
+					</wheel>
+					<wheel name="fl" pos="-0.9 -0.2 -1.4" drive="1" steer="0.8" travel="-0.1 0.2">
+						<vox pos="0.0 -0.4 0.0" rot="0 180 0" texture="8 0.5" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="wheel1"/>
+					</wheel>
+					<wheel name="fr" pos="0.7 -0.2 -1.4" drive="1" steer="0.8" travel="-0.1 0.2">
+						<vox pos="0.1 -0.4 0.0" rot="0 180 0" texture="8 0.5" file="MOD/vehicles/cars/Enemy Car/Car.vox" object="wheel1"/>
+					</wheel>
+				</body>
+				<rig name="driver" tags="driver sort=0" pos="-0.55 0.95 -0.25">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.6" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.6" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.4 -0.3" rot="0.0 90 0.0"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.4 -0.3" rot="0.0 90 0.0"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+					<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.4 -0.3" rot="0.0 -180 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=1" pos="0.35 0.95 -0.25">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.6" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.6" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=2" pos="0.25 0.95 0.75">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=3" pos="-0.45 0.95 0.75">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.2 -0.35" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.2 -0.35" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=4" pos="-0.75 1.05 1.5" rot="0.0 -90 0.0">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.2" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.2" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+				<rig name="passenger" tags="sort=5" pos="0.55 1.05 1.6" rot="0.0 90 0.0">
+					<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.25" rot="0.0 90 50"/>
+					<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.25" rot="0.0 90 50"/>
+					<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+					<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+					<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+				</rig>
+			</vehicle>
+		</script>
+	</group>
+</prefab>
+

@@ -1,9 +1,9 @@
 <prefab version="1.5.4">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg30.xml" pos="0.1 0.0 0.0" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/avf/prefabs/humvee/umhummeropen.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/vehicles/avf/prefabs/humvee/umhummeropen.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<vehicle name="Hummer" tags="Door" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="military .75" spring=".8" damping=".5" topspeed="138" acceleration="0.4" strength="6" antiroll="0.2" difflock="1" steerassist=".3">
 				<body pos="0.0 0.55 -0.55" dynamic="true">
-					<vox pos="0.0 -0.1 0.45" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="bodyopen">
+					<vox pos="0.0 -0.1 0.45" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="bodyopen">
 						<location tags="exhaust" pos="-1.05 0.25 -2.6" rot="180"/>
 						<location tags="vital" pos="0.0 0.7 1.8"/>
 						<location tags="player" pos="0.65 1.35 0.25"/>
@@ -21,21 +21,21 @@
 							<location name="cheeks position" pos="0.0 -0.8 0.1"/>
 						</light>
 					</vox>
-					<vox pos="0.0 0.6 2.85" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="truck2">
+					<vox pos="0.0 0.6 2.85" rot="0 180 0" texture="8 .3" blendtexture="5 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="truck2">
 						<joint tags="door" pos="-0.5 0.0 -0.1" rot="0.0 -90.0 90.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0 110" sound="true"/>
 						<joint tags="door" pos="0.5 0.0 -0.1" rot="0.0 -90.0 90.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0 110" sound="true"/>
 					</vox>
 					<wheel name="fr" pos="-0.9 -0.05 -1.4" drive="1" steer="1">
-						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="wheel_fr"/>
+						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fr"/>
 					</wheel>
 					<wheel name="br" pos="-0.9 -0.05 2.2" drive="1" steer="0">
-						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="wheel_br"/>
+						<vox pos="-0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_br"/>
 					</wheel>
 					<wheel name="bl" pos="0.9 -0.05 2.2" drive="1" steer="0">
-						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="wheel_bl"/>
+						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_bl"/>
 					</wheel>
 					<wheel name="fl" pos="0.9 -0.05 -1.4" drive="1" steer="1">
-						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/avf/prefabs/humvee/umhumvee.vox" object="wheel_fl"/>
+						<vox pos="0.2 -0.5 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fl"/>
 					</wheel>
 				</body>
 				<rig name="driver" tags="driver sort=0" pos="-0.7 1.2 -0.45">

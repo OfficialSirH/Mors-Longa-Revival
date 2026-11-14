@@ -1,6 +1,6 @@
 <prefab version="1.5.4">
 	<group name="instance=MOD/prefabs/spawnables/vehicles/VehicleM2.xml" pos="10.0 0.5 10.0" rot="0.0 0.0 0.0">
-		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/avf/prefabs/ZIS-151/ZIS-151_Katyusha.xml"/>
+		<instance pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/ZIS-151/ZIS-151_Katyusha.xml"/>
 		<instance pos="3.0 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
 		<instance pos="-3.6 0.0 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>
 		<instance pos="2.9 0.0 -4.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyRoadblockMilSpawn.xml"/>

@@ -37,7 +37,7 @@ end
 local function has(list, v) for _, x in ipairs(list) do if x == v then return true end end return false end
 
 -- 1. host: menu runs on the client without server-only calls; Continue asks the server to start the level
-local env = load("scripts/UI/MainMenu/main_menu.lua")
+local env = load("ui/MainMenu/main_menu.lua")
 env.R["savegame.mod.continue"] = true
 env.R["savegame.mod.difficulty"] = "normal"
 env.client.init()
@@ -48,8 +48,8 @@ press = "CONTINUE"
 frames(env, 1)
 press = nil
 local s = startCalls(env)
-check(#s == 1 and s[1].args[1] == "morslonga_main" and s[1].args[2] == "MOD/level.xml" and s[1].args[3] == "normal nodev",
-	"menu (host): CONTINUE -> server.startLevel(morslonga_main, MOD/level.xml, 'normal nodev')")
+check(#s == 1 and s[1].args[1] == "morslonga_main" and s[1].args[2] == "MOD/levels/level.xml" and s[1].args[3] == "normal nodev",
+	"menu (host): CONTINUE -> server.startLevel(morslonga_main, MOD/levels/level.xml, 'normal nodev')")
 env.side = "server"
 env.server.startLevel(unpack(s[1].args))
 check(env.calls.StartLevel == 1 and next(env.violations) == nil, "server.startLevel calls StartLevel on the server")
@@ -58,7 +58,7 @@ press = "TUTORIAL"
 frames(env, 1)
 press = nil
 s = startCalls(env)
-check(#s == 2 and s[2].args[2] == "MOD/level_tutorial.xml", "menu (host): TUTORIAL -> tutorial level")
+check(#s == 2 and s[2].args[2] == "MOD/levels/level_tutorial.xml", "menu (host): TUTORIAL -> tutorial level")
 press = "NEW SAVE"
 env.R["savegame.mod.tutorial.states.hasFinishedTutorialLevel"] = true
 frames(env, 1)
@@ -66,7 +66,7 @@ press = nil
 check(env.R["level.UI.menu_select_difficulty"] == true, "menu (host): NEW SAVE opens the difficulty screen")
 
 -- 2. other player: start buttons do nothing, notice shown, options still work
-env = load("scripts/UI/MainMenu/main_menu.lua")
+env = load("ui/MainMenu/main_menu.lua")
 env.LOCAL = 2
 env.PLAYERS[2] = { pos = {0,0,0}, health = 1 }
 env.R["savegame.mod.continue"] = true
@@ -85,7 +85,7 @@ press = nil
 check(env.Selected_Menu_Item and env.Selected_Menu_Item.key == "options" and next(env.violations) == nil, "menu (other player): OPTIONS still opens")
 
 -- 3. difficulty screen: client camera (no world change), host picks -> savegame + start request
-env = load("scripts/UI/MainMenu/menu_select_difficulty.lua")
+env = load("ui/MainMenu/menu_select_difficulty.lua")
 local locs = { 11, 12, 13, 14 }
 env.def("FindLocations", function(tag) if tag == "camdest" then return locs end return { 21, 22, 23, 24 } end)
 env.def("GetLocationTransform", function(h) return env.Transform({ h, 0, 0 }) end)
@@ -101,9 +101,9 @@ check(#s == 1 and s[1].args[3] == "hardcore nodev" and env.R["savegame.mod.diffi
 	and env.R["savegame.mod.newLevel.gamerule.permadeath"] == true, "difficulty (host): SURVIVOR -> hardcore rules saved, server.startLevel")
 env.playCharacter(4)
 s = startCalls(env)
-check(#s == 2 and s[2].args[1] == "morslonga_level1" and s[2].args[2] == "MOD/level_horde.xml" and s[2].args[3] == "",
+check(#s == 2 and s[2].args[1] == "morslonga_level1" and s[2].args[2] == "MOD/levels/level_horde.xml" and s[2].args[3] == "",
 	"difficulty (host): Gladiator -> horde level")
-env = load("scripts/UI/MainMenu/menu_select_difficulty.lua")
+env = load("ui/MainMenu/menu_select_difficulty.lua")
 env.LOCAL = 2
 env.PLAYERS[2] = { pos = {0,0,0}, health = 1 }
 env.client.init()
@@ -111,7 +111,7 @@ env.playCharacter(2)
 check(#startCalls(env) == 0 and env.R["savegame.mod.difficulty"] == nil, "difficulty (other player): nothing saved or started")
 
 -- 4. turntable: body turns on the server, camera on each client
-env = load("scripts/RotateScene.lua")
+env = load("ui/RotateScene.lua")
 env.side = "server"
 env.server.init()
 env.server.update(1/60)
@@ -128,7 +128,7 @@ env.client.draw(1/60)
 check(env.calls.SetCameraTransform == 1 and next(env.violations) == nil and env.client.tick == nil, "turntable: menu camera set on the client")
 
 -- 5. ingame_settings still loads with the library version of menu_main (its own client callbacks win)
-env = load("scripts/UI/MainMenu/ingame_settings.lua")
+env = load("ui/MainMenu/ingame_settings.lua")
 env.client.init()
 env.client.draw()
 env.client.tick()

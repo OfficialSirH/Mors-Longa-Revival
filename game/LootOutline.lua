@@ -1,0 +1,82 @@
+#version 2
+#include "script/include/player.lua"
+--[[
+(v2) ToolManager.lua is no longer included: nothing in it was used here, and it runs as its own level script.
+#include "../lib/TDSU/tdsu.lua"
+#include "../lib/Settings.lua"
+#include "../lib/Config.lua"
+#include "../lib/Automatic.lua"
+#include "PrefabTester.lua"
+]]
+
+
+local maxAngle = 20
+local maxDist = 8
+
+
+-- (v2) client: loot outlines, bounds debug draw, "Debug Mode" pause button
+function client.init()
+
+    ShowDebugMod = false -- toggle ui screen drawing.
+
+    -- Init_Config()
+    Init_Settings()
+
+    init_prefab_tester()
+
+end
+
+function client.tick()
+
+    if GetBool("savegame.mod.config.game.draw_bounds") then
+        local min = Vec(-200, 0, -100)
+        local max = Vec(200, 40, 100)
+        AabbDraw(min, max, 1,1,0, 1)
+    end
+
+    -- Draw loot outlines.
+    local pTr = GetPlayerTransform()
+    pTr.pos = VecAdd(pTr.pos, Vec(0,0.5,0))
+    for _, body in ipairs(FindBodies("Loot", true)) do
+
+        local bodyTr = GetBodyTransform(body)
+
+        local dist = clamp(VecDist(pTr.pos, bodyTr.pos), 2, maxDist)
+        if dist < maxDist and HasTag(body, "interact") and HasTag(body, "Loot") then
+
+            if QuatAngle(pTr.rot, QuatLookAt(pTr.pos, bodyTr.pos)) < maxAngle then
+                local a = 1 - (dist/maxDist)
+                DrawBodyNonInvisibleOutline(body, 1,1,1, a)
+            end
+
+        end
+
+    end
+
+    -- Config >> Debug mode.
+    Debug = GetBool("savegame.mod.config.db")
+    if PauseMenuButton("Debug Mode " .. ternary(Debug, "ON", "OFF")) then
+        SetBool("savegame.mod.config.db", not Debug)
+    end
+
+
+    -- for index, body in ipairs(FindBodies("", true)) do
+    --     if IsBodyActive(body) then
+    --         DebugLine(GetPlayerTransform().pos, GetBodyTransform(body).pos, 1,1,0, 1/2)
+    --     end
+    -- end
+
+    -- for index, body in ipairs(FindShapes("detail", true)) do
+    --     DrawShapeOutline(body, 1,0,0.5, 1/2)
+    -- end
+
+end
+
+function DrawBodyNonInvisibleOutline(b,...)
+    local ss=GetBodyShapes(b)
+    for i=1,#ss do
+        if not HasTag(ss[i], "invisible")then
+            DrawShapeOutline(ss[i],...)
+        end
+    end
+end

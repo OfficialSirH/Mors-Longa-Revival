@@ -5,7 +5,7 @@
     ns["report"](root)                      # every marker's pos relative to its parent part (XML coords)
 
 Everything goes into scene "Teardown", one collection per XML. The XML hierarchy is mirrored as parenting:
-group/vehicle/body/wheel/instance -> empties, vox/voxbox -> meshes (exposed faces only, palette colours),
+group/vehicle/body/wheel/instance -> empties, assets/vox/voxbox -> meshes (exposed faces only, palette colours),
 location/light/joint/... -> small empties named "<tag>:<tags or name>". The root empty is rotated +90 deg
 about X, so local coordinates under it are Teardown coordinates (x right, y up, -z forward); Blender's Z is up.
 Each object keeps the XML attributes as custom properties (prefix "td_").
@@ -306,7 +306,7 @@ def import_vehicle(xml_path, clear=True, name=None):
 
 
 def td_part(ob):
-    """Nearest ancestor that is a vox/body/wheel/vehicle (what an XML child's pos is relative to)."""
+    """Nearest ancestor that is a assets/vox/body/wheel/vehicle (what an XML child's pos is relative to)."""
     p = ob.parent
     while p is not None and p.get("td_element") not in ("vox", "voxbox", "body", "wheel", "vehicle", "group"):
         p = p.parent
@@ -572,7 +572,7 @@ def mannequins(root):
 
 # ---------- NPC mannequin: the Friendly Merc ragdoll in GoreNPCs' sit pose ----------
 MERC = REPO + "/prefabs/spawnables/enemies/security/Ragdollsecurity2.xml"
-# RagdollPoses.sit (GoreNPCs/scripts/other/RagdollPoseReader.lua): body transforms relative to the Head body,
+# RagdollPoses.sit (npcs/GoreNPCs/scripts/other/RagdollPoseReader.lua): body transforms relative to the Head body,
 # (pos, quat x y z w). npc_pose_ragdoll pins each ragdoll body there, relative to the head transform it is given.
 SIT_POSE = {
     "Torso": ((0, -0.7, 0), (0, 0, 0, 1)),
@@ -694,7 +694,7 @@ def player_pelvis_y(character=CHARACTER):
 
 
 def npc_head(rig, veh):
-    """Python copy of get_seat_head_transform (GoreNPCs/scripts/systems/goreai_sitting.lua): the NPC sits like the
+    """Python copy of get_seat_head_transform (npcs/GoreNPCs/scripts/systems/goreai_sitting.lua): the NPC sits like the
     player (player_seat: pelvis point and eased lean), head placed NPC_HEAD_OFFSET from the pelvis in that frame."""
     pel, R = player_seat(rig, veh)
     ik = next((c for c in rig.children if c.get("td_name") == "ik_head"), None)

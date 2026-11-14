@@ -1,0 +1,8 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/npcs/GoreNPCs/prefabs/extras/headwear_security_hair_brown.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body dynamic="true">
+			<vox pos="0.05 0.0 0.0" rot="0.0 -180.0 0.0" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security2.vox" object="head2"/>
+		</body>
+	</group>
+</prefab>
+

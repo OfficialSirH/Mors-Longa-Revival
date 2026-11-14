@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun N107 MILITARY3.xml" pos="1.9 0.1 6.4" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-m107.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-m107.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="M107" tags="Loot=gun-m107_N107_mag0-m107-127x99_N107-Mag_10_10_.50BMG_holo--muzzle2--grip3--side2----- interact=N107 unbreakable" pos="0.0 0.3 -0.1" dynamic="true">
 				<group name="Metal1" prop0="color=.15 .15 .15" prop1="pbr=.02 .1 .1" prop2="material=metal">
 					<voxbox pos="-0.05 -0.05 -0.35" rot="0.0 0.0 0.0" size="1 1 15">

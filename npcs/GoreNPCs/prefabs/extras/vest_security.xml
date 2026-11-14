@@ -1,0 +1,20 @@
+<prefab version="1.4.0">
+	<group>
+		<body dynamic="true">
+			<vox pos="0.05 0.43 -0.15" rot="0.0 -180.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security2.vox" object="front armor">
+				<vox pos="0.0 0.0 -0.22" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="back armor"/>
+				<vox pos="0.17 0.0 -0.2" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="back armorside"/>
+				<vox tags="explosive=.2" pos="0.18 0.0 0.03" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="pocket"/>
+				<vox pos="-0.08 0.0 0.03" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="pocket"/>
+				<vox pos="-0.17 0.0 -0.2" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="back armorside"/>
+				<vox pos="0.17 0.0 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="front armor side"/>
+				<vox pos="-0.17 0.0 0.0" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="front armor side"/>
+				<vox pos="-0.17 0.4 -0.08" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="strap armor"/>
+				<vox pos="-0.17 0.4 -0.18" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="strap armor"/>
+				<vox pos="0.17 0.4 -0.08" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="strap armor"/>
+				<vox pos="0.17 0.4 -0.18" rot="0.0 0.0 0.0" density="1" strength="1" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Security.vox" object="strap armor"/>
+			</vox>
+		</body>
+	</group>
+</prefab>
+

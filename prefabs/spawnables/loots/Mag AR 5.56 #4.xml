@@ -1,6 +1,6 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Mag AR 5.56 #4.xml" pos="-13.2 0.8 -3.0" rot="0.0 0.0 0.0">
-		<instance file="MOD/Loots/mag4-ar-556.xml"/>
+		<instance file="MOD/items/Loots/mag4-ar-556.xml"/>
 	</group>
 </prefab>
 

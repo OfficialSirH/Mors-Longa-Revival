@@ -1,7 +1,7 @@
 <prefab version="1.1.0">
 	<group name="instance=MOD/prefabs/Perk4.xml" pos="-4.9 1.2 17.3">
 		<body pos="0.0 -0.2 0.0" tags="PerkObject=woundclosing interact=WoundClosing" dynamic="true">
-			<vox pos="0.1 0.0 0.0" rot="0.0 90.0 0.0" file="MOD/vox/Perk.vox"/>
+			<vox pos="0.1 0.0 0.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/Perk.vox"/>
 		</body>
 	</group>
 </prefab>

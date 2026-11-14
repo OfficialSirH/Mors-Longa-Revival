@@ -37,7 +37,7 @@ function MockEngine.load(path, opts)
 	opts = opts or {}
 	local env = setmetatable({}, { __index = _G })
 	env.calls, env.violations, env.side = {}, {}, "server"
-	env._G = env -- scripts index their own globals via _G (e.g. Settings.lua st_table)
+	env._G = env -- scripts index their own globals via _G (e.g. lib/Settings.lua st_table)
 	local function record(n)
 		env.calls[n] = (env.calls[n] or 0) + 1
 		if env.side == "server" and CLIENT_ONLY[n] then env.violations[n] = true end
@@ -123,7 +123,7 @@ function MockEngine.load(path, opts)
 
 	for k, v in pairs(opts.overrides or {}) do env[k] = v end
 
-	-- library files run in the same environment first (e.g. scripts/TDSU/compat.lua for util.serialize)
+	-- library files run in the same environment first (e.g. lib/TDSU/compat.lua for util.serialize)
 	for _, lib in ipairs(opts.preload or {}) do
 		local lsrc = io.open(lib, "rb"):read("*a"):gsub("\r", "")
 		lsrc = lsrc:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)

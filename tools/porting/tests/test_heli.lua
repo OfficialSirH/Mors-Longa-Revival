@@ -1,9 +1,9 @@
--- Mock test for the AS350 helicopter v2 port (main/AS350/script/Heli.lua + HeliV2.lua + HeliPilot.lua, rocket.lua).
+-- Mock test for the AS350 helicopter v2 port (vehicles/aircraft/AS350/script/Heli.lua + HeliV2.lua + HeliPilot.lua, rocket.lua).
 -- Run from the repo root with Lua 5.1:  lua5.1 tools/porting/tests/test_heli.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
-local PATH = "main/AS350/script/Heli.lua"
+local PATH = "vehicles/aircraft/AS350/script/Heli.lua"
 
 -- real quaternions (x, y, z, w); Teardown's QuatEuler applies Y, then Z, then X (as profile_avf_foliage.lua)
 local function qmul(a, b)
@@ -254,7 +254,7 @@ c.client.draw()
 check(not c.PilotIsLocal, "another player's client: no pilot camera")
 
 -------------------------------------------------------------------------------- rocket
-local R = "main/AS350/script/rocket.lua"
+local R = "vehicles/aircraft/AS350/script/rocket.lua"
 local r = MockEngine.load(R, { preload = MockEngine.includes(R) })
 r.PLAYERS = { [1] = { pos = { 0, 0, 0 }, health = 1 }, [2] = { pos = { 0, 0, 50 }, health = 1 } }
 r.ORDER = { 1, 2 }

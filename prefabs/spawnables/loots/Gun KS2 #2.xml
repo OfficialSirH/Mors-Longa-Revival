@@ -1,6 +1,6 @@
 <prefab version="1.4.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Gun KS2 #2.xml" pos="-8.1 0.2 5.7" rot="0.0 0.0 0.0">
-		<group name="instance=MOD/Loots/gun-ks23.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="instance=MOD/items/Loots/gun-ks23.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
 			<body name="N870" tags="Loot=gun-ks23_KS23_mag1_Internal_3_3_4ga_--removed-modern--modern interact=KS23 unbreakable" pos="0.0 0.15 0.0" dynamic="true">
 				<group name="Wood" prop0="color=.2 .2 .2" prop1="material=wood">
 					<voxbox pos="-0.06 -0.09 0.25" size="1 1 3" color="0.28 0.28 0.28">

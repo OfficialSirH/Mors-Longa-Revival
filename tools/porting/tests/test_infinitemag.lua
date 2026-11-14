@@ -1,11 +1,11 @@
--- Mock test for checkUnlimitedBulletsValid (script/gunfunctions.lua, 2026-11-14): the fake "Infinite" magazine
+-- Mock test for checkUnlimitedBulletsValid (weapons/guns/gunfunctions.lua, 2026-11-14): the fake "Infinite" magazine
 -- holds exactly one bullet, and one left over while Infinite Ammo is off is emptied (PP19.lua:475 concat error).
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_infinitemag.lua
 dofile("tools/porting/tests/mockengine.lua")
 
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local env = MockEngine.load("script/gunfunctions.lua", { preload = MockEngine.includes("script/gunfunctions.lua") })
+local env = MockEngine.load("weapons/guns/gunfunctions.lua", { preload = MockEngine.includes("weapons/guns/gunfunctions.lua") })
 env.side = "client"
 env.def("GetInt", function(k) if k == "inventory.curprimary" then return 1 end return env.R[k] or 0 end)
 local KEY = "inventory.guns.1.item"

@@ -1,0 +1,50 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/vehicles/cars/semitruck-us/Semi Truck Destroyed.xml">
+		<group prop0="texture=8" prop1="blendtexture=6 .2">
+			<body name="Semi-trailer" pos="-3.79025 1.26497 7.60997" rot="0.7 -47.9 0.0" dynamic="true">
+				<vox pos="0.0 -1.2 0.0" density="3" strength="2" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="trailer2">
+					<joint pos="0.0 0.7 -5.1" rot="-90 90 0"/>
+					<body pos="0.00062 0.90303 6.00197" rot="0.2 -0.2 0.0" dynamic="true">
+						<vox pos="0.0 0.0 0.7" density="3" strength="5" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="door2">
+							<joint tags="door" pos="-1.2 0.0 0.0" rot="0 90 90" type="hinge" rotstrength="0.1" rotspring="0" collide="true" limits="0 120"/>
+							<joint tags="door" pos="1.2 0.0 0.0" rot="0 90 90" type="hinge" rotstrength="0.1" rotspring="0" collide="true" limits="0 120"/>
+						</vox>
+					</body>
+				</vox>
+				<vox pos="-1.92745 -1.03264 2.26072" rot="0.0 45.7 -90.0" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				<vox pos="-1.93913 -1.04044 3.07261" rot="-3.2 12.2 -74.8" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				<vox pos="-1.99635 -1.12259 4.0145" rot="-1.0 9.8 -32.0" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				<vox pos="1.17917 -0.85704 3.67719" rot="-113.8 -155.10001 -76.4" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				<vox pos="1.34965 -0.75788 2.9964" rot="-112.2 -129.10001 -65.0" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				<vox pos="1.03151 -0.78429 1.5985" rot="-177.0 177.0 -74.1" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+			</body>
+			<body pos="0.0 0.455" rot="-1" dynamic="true">
+				<vox pos="0.0 -0.5 0.9" density="4" strength="5" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="body2">
+					<vox pos="-1.34347 0.1459 -2.57596" rot="89.9 -93.2 62.5" density="4" strength="5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="door2_l"/>
+					<vox pos="1.17536 1.29976 -2.59355" rot="0.0 27.8 0.0" density="4" strength="5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="door2_r">
+						<joint tags="door" pos="-0.1 0.0 -0.4" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 80"/>
+						<joint pos="-0.1 0.7 -0.4" rot="-90.0 -90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0.0" limits="0 80"/>
+					</vox>
+					<vox pos="0.00039 1.87105 -4.43265" rot="-58.8 0.0 0.0" density="4" strength="5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="hood2">
+						<joint pos="-0.85 0.0 -0.9" rot="0.0 -90.0 0.0" rotstrength=".2" collide="true"/>
+						<joint pos="0.85 0.0 -0.9" rot="0.0 -90.0 0.0" rotstrength=".2" collide="true"/>
+					</vox>
+					<vox pos="-0.00095 0.19989 -4.79998" density="4" strength="5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="bumper2_f">
+						<joint pos="-0.5 0.4 0.1" rot="0.0 -90.0 0.0" rotstrength="1" collide="true"/>
+						<joint pos="0.5 0.4 0.1" rot="0.0 -90.0 0.0" rotstrength="1" collide="true"/>
+					</vox>
+					<vox pos="0.0 0.7 3.4" density="4" strength="5" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="hatch"/>
+				</vox>
+				<group prop0="travel=-.05 .1">
+					<vox pos="1.68222 -0.41939 2.99264" rot="25.9 -138.2 2.6" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_b"/>
+					<vox pos="2.04914 -0.12913 4.34039" rot="0.0 -211.89999 -90.0" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_b"/>
+					<vox pos="-1.69029 -0.50527 2.94866" rot="0.8 -27.7 -0.5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_b"/>
+					<vox pos="-2.09908 -0.0656 4.03696" rot="69.5 43.1 -73.0" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_b"/>
+					<vox pos="-1.8413 0.0998 -3.5459" rot="87.2 12.6 -28.8" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+					<vox pos="1.8137 -0.21531 -3.35444" rot="-4.2 -173.89999 -75.5" prop="true" file="MOD/vehicles/cars/semitruck-us/semitruck-us.vox" object="wheel_f"/>
+				</group>
+			</body>
+		</group>
+	</group>
+</prefab>
+

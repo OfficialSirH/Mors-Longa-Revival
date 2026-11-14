@@ -1,0 +1,107 @@
+<prefab version="1.1.0">
+	<group name="instance=MOD/player/HealthSystem/prefab/normal.xml" pos="0.0 0.0 8.0">
+		<script pos="0.0 -0.3 0.0" file="MOD/player/HealthSystem/launchragdoll.lua">
+			<body name="foot_R" tags="RRLEG bodypart" pos="0.3 0.3 0.2" rot="0.0 180.0 0.0" dynamic="true">
+				<vox tags="RRLEG nocull" pos="0.2 -0.4 0.1" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="foot_R">
+					<joint pos="0.0 0.5 -0.1" rot="0 90" type="hinge" collide="false"/>
+					<voxbox tags="unbreakable" pos="-0.05 0.05 -0.15" texture="7" size="1 5 1" material="masonry" color="0.43 0.0 0."/>
+					<rope pos="0.0 0.7 -0.1" rot="0 0 -90" color="0.5">
+						<location/>
+						<location pos="0.2 0.0 0.0"/>
+					</rope>
+				</vox>
+			</body>
+			<body name="Head" tags="Head bodypart" pos="0.2 1.5 0.0" dynamic="true">
+				<vox pos="-0.2 -0.1 0.2" rot="0 180" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="head_3">
+					<voxbox tags="unbreakable" pos="-0.05 0.05 -0.099" texture="7" size="2 2 2" material="masonry" color="0.71 0.0 0.0"/>
+					<rope pos="-0.0 0.2 0.0" color="0.5">
+						<location/>
+						<location pos="0.0 -0.3 0.0"/>
+					</rope>
+					<voxbox tags="unbreakable" pos="0.1 0.1 0.1" collide="true" prop="true" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0">
+						<joint tags="eye" pos="0.05 0.05" type="hinge" rotstrength="1"/>
+						<joint tags="eye" pos="0.05 0.05" rot="90" type="hinge" rotstrength="1"/>
+						<rope color="0.5" slack="0.2">
+							<location pos="0.05 0.05 0.05"/>
+							<location pos="-0.05 0.05 -0.15"/>
+						</rope>
+					</voxbox>
+					<voxbox tags="unbreakable" pos="-0.1 0.1 0.1" collide="true" prop="true" size="1 1 1" material="heavymetal" color="0.0 0.0 0.0">
+						<joint tags="eye" pos="0.05 0.05" type="hinge" rotstrength="1"/>
+						<joint tags="eye" pos="0.05 0.05" rot="90" type="hinge" rotstrength="1"/>
+						<rope color="0.5" slack="0.2">
+							<location pos="0.05 0.05 0.05"/>
+							<location pos="0.15 0.05 -0.15"/>
+						</rope>
+					</voxbox>
+				</vox>
+			</body>
+			<body name="Torso" tags="Torso bodypart dead_player" pos="0.0 1.1 0.2" dynamic="true">
+				<vox pos="0.0 -0.4 0.0" rot="0 180 " density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="body">
+					<joint pos="-0.1 0.1 -0.0" rot="0.0 90.0 0.0" type="hinge" collide="false"/>
+					<group name="skeleton" pos="0.0 0.1 -0.05">
+						<voxbox tags="unbreakable" pos="0.0 0.05 0.0" texture="7" size="1 5 1" material="masonry" color="0.43 0.0 0.0"/>
+						<voxbox tags="unbreakable" pos="-0.15 0.4 0.0" texture="7" size="4 1 1" material="masonry" color="0.43 0.0 0."/>
+						<voxbox tags="unbreakable" pos="-0.15 0.2 0.0" texture="7" size="4 1 1" material="masonry" color="0.43 0.0 0."/>
+					</group>
+				</vox>
+				<joint tags="neck" pos="0.05 0.3 0.0" rot="90 -45" type="hinge" rotstrength="0.01" collide="false" limits="0 90"/>
+			</body>
+			<group pos="0.3 1.4 -0.4" rot="70">
+				<body name="UArm_L" tags="LARM bodypart" pos="-0.8 0.6 0.3" rot="0 180" dynamic="true">
+					<vox pos="-0.1 -0.4 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="Uarm_L">
+						<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+					</vox>
+					<joint pos="-0.2 -0.1 0.0" rot="0 90" collide="false"/>
+				</body>
+				<body name="LArm_L" tags="LLARM bodypart" pos="-0.8 0.1 0.3" rot="0 180" dynamic="true">
+					<vox pos="-0.1 -0.3 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="larm_L">
+						<joint pos="0.0 0.4 0.0" rot="0 90" type="hinge" collide="false"/>
+						<rope pos="0.0 0.5 0.0" rot="0 0 -90" color="0.5">
+							<location/>
+							<location pos="0.2 0.0 0.0"/>
+						</rope>
+					</vox>
+				</body>
+			</group>
+			<group pos="-0.2 1.0 -0.26" rot="70">
+				<body name="LArm_R" tags="RRARM bodypart" pos="0.4 0.1 -0.1" rot="0 180" dynamic="true">
+					<vox pos="-0.1 -0.3 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="larm_R">
+						<joint pos="0.0 0.4 0.0" rot="0 90" type="hinge" collide="false"/>
+						<rope pos="0.0 0.5 0.0" rot="0 0 -90" color="0.5">
+							<location/>
+							<location pos="0.2 0.0 0.0"/>
+						</rope>
+					</vox>
+				</body>
+				<body name="UArm_R" tags="RARM bodypart" pos="0.4 0.6 -0.1" rot="0 180" dynamic="true">
+					<vox pos="-0.1 -0.4 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="Uarm_R">
+						<joint pos="0.1 0.3 0.0" rot="0 90" collide="false"/>
+						<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+					</vox>
+				</body>
+			</group>
+			<body name="foot_L" tags="LLLEG bodypart" pos="0.0 0.3 0.2" rot="0.0 -180.0 0.0" dynamic="true">
+				<vox tags="LLLEG nocull" pos="0.2 -0.4 0.1" density="4" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="foot_L">
+					<joint pos="0.0 0.5 -0.1" rot="0 90" type="hinge" collide="false"/>
+					<voxbox tags="unbreakable" pos="-0.05 0.05 -0.15" texture="7" size="1 5 1" material="masonry" color="0.43 0.0 0."/>
+					<rope pos="0.0 0.7 -0.1" rot="0 0 -90" color="0.5">
+						<location/>
+						<location pos="0.2 0.0 0.0"/>
+					</rope>
+				</vox>
+			</body>
+			<body name="Leg_L" tags="LLEG bodypart" pos="0.0 0.8 0.2" rot="0.0 180.0 0.0" dynamic="true">
+				<vox pos="0.2 -0.4 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="Leg_L">
+					<joint pos="0.0 0.4 0.0" rot="0 90" type="hinge" collide="false"/>
+					<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+				</vox>
+			</body>
+			<body name="Leg_R" tags="RLEG bodypart" pos="0.3 0.8 0.2" rot="0.0 180.0 0.0" dynamic="true">
+				<vox pos="0.2 -0.4 0.0" density="3" strength="1" file="MOD/npcs/GoreRagdolls2/models/player.vox" object="Leg_R">
+					<voxbox tags="unbreakable" pos="-0.05 0.05 -0.05" texture="7" size="1 3 1" material="masonry" color="0.43 0.0 0."/>
+				</vox>
+			</body>
+		</script>
+	</group>
+</prefab>

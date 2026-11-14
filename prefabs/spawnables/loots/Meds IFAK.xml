@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/spawnables/loots/Meds IFAK.xml" pos="-1.0 0.0 2.9" rot="0.0 0.0 0.0">
-		<instance file="MOD/Loots/meds-bleed-general-ifak.xml"/>
+		<instance file="MOD/items/Loots/meds-bleed-general-ifak.xml"/>
 	</group>
 </prefab>
 

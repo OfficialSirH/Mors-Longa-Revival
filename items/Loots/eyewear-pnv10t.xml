@@ -1,0 +1,8 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/eyewear-pnv10t.xml" pos="2.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=eyewear-pnv10t_PNV-10T_100_100 interact=PNV-10T" pos="0.0 0.1 0.0" dynamic="true">
+			<vox pos="-0.05 -0.1 0.05" texture="7 .4" file="MOD/assets/vox/military/nvg.vox" object="light123132312123"/>
+		</body>
+	</group>
+</prefab>
+

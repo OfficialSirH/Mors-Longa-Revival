@@ -277,120 +277,120 @@
 			<trigger tags="vegRemove" pos="3.9 0.0 0.7" type="box" size="31.8 2 19.2"/>
 		</group>
 		<group name="props" pos="2.1 0.0 -1.4" prop0="tags=detail">
-			<vox pos="0.7 0.2 0.9" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="0.1 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="7.8 0.2 -4.6" rot="0.0 -90.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="5.5 0.2 -5.9" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="6.4 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="6.4 3.3 6.9" rot="0.0 -172.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="6.4 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="1.5 0.0 -12.7" rot="0.0 -46.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="12.2 0.0 -7.4" rot="0.0 114.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="11.50767 0.0 -6.37497" rot="0.0 154.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="2.2 0.0 -14.2" rot="0.0 29.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox tags="pdfwashere" pos="-4.0 0.2 -6.1" rot="0.0 -96.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="4.6 0.2 -0.2" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="6.3 0.3 -0.2" rot="0.0 -8.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_pallet.vox"/>
-			<vox pos="9.7 -0.2 -3.6" rot="0.0 91.0 0.0" texture="8 .8" prop="false" file="MOD/vox/airbasevox/airbase_shipping_darkgreen.vox"/>
-			<vox pos="4.6 0.2 1.2" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="4.6 0.0 -9.1" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-			<vox tags="pdfwashere" pos="6.3 0.0 -8.7" rot="0.0 89.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-			<vox tags="pdfwashere" pos="8.0 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-			<vox tags="pdfwashere" pos="7.5 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-			<vox pos="4.6 0.3 1.2" rot="0.0 84.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
-			<vox pos="5.9 0.4 0.3" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
-			<vox pos="6.2 0.4 -0.8" rot="0.0 -27.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
-			<vox pos="6.0 0.4 -0.3" rot="0.0 -25.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
-			<vox pos="6.7 0.4 -0.2" rot="0.0 -102.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
-			<vox pos="6.3 0.8 -0.5" rot="0.0 -32.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
-			<vox pos="6.0 0.8 0.1" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
-			<vox pos="4.6 1.0 -0.3" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
-			<vox tags="pdfwashere" pos="4.6 0.2 -1.6" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="-4.0 0.2 -2.7" rot="0.0 -93.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="-4.0 0.2 -4.4" rot="0.0 -83.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="fxbreak=l2black" pos="3.1 0.2 -0.2" rot="0.0 -140.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-			<vox tags="fxbreak=l2black" pos="-2.3 0.2 -4.1" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-			<vox tags="fxbreak=l2black" pos="-0.1 3.3 -2.0" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-			<vox tags="fxbreak=l2black" pos="0.9 3.3 -2.0" rot="0.0 -180.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-			<vox tags="fxbreak=l2black" pos="0.4 4.6 -2.0" rot="0.0 -180.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
-			<vox tags="fxbreak=l2black" pos="7.8 0.2 -0.2" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-			<vox tags="fxbreak=l2black" pos="7.8 0.2 0.9" rot="0.0 157.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-			<vox tags="fxbreak=l2black" pos="7.8 0.2 2.1" rot="0.0 111.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-			<vox pos="0.2 0.2 -6.2" rot="0.0 -86.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
-			<vox pos="-4.4 0.7 2.5" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-			<vox pos="-2.2 0.7 4.1" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-			<vox pos="2.8 0.6 3.8" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="-1.8 0.6 -6.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="9.2 2.8 -4.8" rot="0.0 -5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="9.2 3.7 -3.9" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="9.2 2.8 -2.4" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="2.8 1.4 3.8" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox tags="pdfwashere" pos="6.4 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox tags="pdfwashere" pos="6.4 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="-1.2 0.7 4.1" rot="0.0 -87.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_7.vox"/>
-			<vox pos="-4.4 1.8 1.8" rot="0.0 -74.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_5.vox"/>
-			<vox pos="-4.0 0.7 1.3" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_4.vox"/>
-			<vox pos="-1.4 0.5 1.3" rot="0.0 176.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
-			<vox pos="-1.4 1.2 1.3" rot="0.0 -177.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_6.vox"/>
-			<vox tags="pdfwashere" pos="-1.6 0.0 -8.1" rot="0.0 3.0 0.0" texture="6" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-			<vox tags="pdfwashere" pos="-4.7 0.0 -8.1" rot="0.0 -5.0 0.0" texture="6" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-			<vox tags="pdfwashere" pos="-5.5 0.0 -10.3" rot="0.0 85.0 0.0" texture="6" prop="true" file="MOD/vox/airbasevox/airbase_blockade_1.vox"/>
-			<vox pos="0.8 1.5 -6.3" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox pos="0.0 1.5 -7.2" rot="0.0 -170.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox pos="0.6 1.7 -6.2" rot="0.0 -93.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox tags="explosive=1" pos="3.1 0.2 0.8" rot="0.0 170.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_barrel_3.vox"/>
+			<vox pos="0.7 0.2 0.9" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="0.1 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="7.8 0.2 -4.6" rot="0.0 -90.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="5.5 0.2 -5.9" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="6.4 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="6.4 3.3 6.9" rot="0.0 -172.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="6.4 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="1.5 0.0 -12.7" rot="0.0 -46.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="12.2 0.0 -7.4" rot="0.0 114.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="11.50767 0.0 -6.37497" rot="0.0 154.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="2.2 0.0 -14.2" rot="0.0 29.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox tags="pdfwashere" pos="-4.0 0.2 -6.1" rot="0.0 -96.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="4.6 0.2 -0.2" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="6.3 0.3 -0.2" rot="0.0 -8.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox"/>
+			<vox pos="9.7 -0.2 -3.6" rot="0.0 91.0 0.0" texture="8 .8" prop="false" file="MOD/assets/vox/airbasevox/airbase_shipping_darkgreen.vox"/>
+			<vox pos="4.6 0.2 1.2" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="4.6 0.0 -9.1" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="6.3 0.0 -8.7" rot="0.0 89.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="8.0 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox tags="pdfwashere" pos="7.5 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox pos="4.6 0.3 1.2" rot="0.0 84.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+			<vox pos="5.9 0.4 0.3" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+			<vox pos="6.2 0.4 -0.8" rot="0.0 -27.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+			<vox pos="6.0 0.4 -0.3" rot="0.0 -25.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+			<vox pos="6.7 0.4 -0.2" rot="0.0 -102.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+			<vox pos="6.3 0.8 -0.5" rot="0.0 -32.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
+			<vox pos="6.0 0.8 0.1" rot="0.0 -12.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard3"/>
+			<vox pos="4.6 1.0 -0.3" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+			<vox tags="pdfwashere" pos="4.6 0.2 -1.6" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="-4.0 0.2 -2.7" rot="0.0 -93.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="-4.0 0.2 -4.4" rot="0.0 -83.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="fxbreak=l2black" pos="3.1 0.2 -0.2" rot="0.0 -140.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black" pos="-2.3 0.2 -4.1" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black" pos="-0.1 3.3 -2.0" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black" pos="0.9 3.3 -2.0" rot="0.0 -180.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black" pos="0.4 4.6 -2.0" rot="0.0 -180.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+			<vox tags="fxbreak=l2black" pos="7.8 0.2 -0.2" rot="0.0 -170.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="fxbreak=l2black" pos="7.8 0.2 0.9" rot="0.0 157.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black" pos="7.8 0.2 2.1" rot="0.0 111.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox pos="0.2 0.2 -6.2" rot="0.0 -86.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_mili_crate_1.vox"/>
+			<vox pos="-4.4 0.7 2.5" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+			<vox pos="-2.2 0.7 4.1" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+			<vox pos="2.8 0.6 3.8" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="-1.8 0.6 -6.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="9.2 2.8 -4.8" rot="0.0 -5.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="9.2 3.7 -3.9" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="9.2 2.8 -2.4" rot="0.0 5.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="2.8 1.4 3.8" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox tags="pdfwashere" pos="6.4 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox tags="pdfwashere" pos="6.4 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="-1.2 0.7 4.1" rot="0.0 -87.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_7.vox"/>
+			<vox pos="-4.4 1.8 1.8" rot="0.0 -74.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+			<vox pos="-4.0 0.7 1.3" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+			<vox pos="-1.4 0.5 1.3" rot="0.0 176.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="-1.4 1.2 1.3" rot="0.0 -177.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+			<vox tags="pdfwashere" pos="-1.6 0.0 -8.1" rot="0.0 3.0 0.0" texture="6" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox tags="pdfwashere" pos="-4.7 0.0 -8.1" rot="0.0 -5.0 0.0" texture="6" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox tags="pdfwashere" pos="-5.5 0.0 -10.3" rot="0.0 85.0 0.0" texture="6" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox"/>
+			<vox pos="0.8 1.5 -6.3" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="0.0 1.5 -7.2" rot="0.0 -170.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="0.6 1.7 -6.2" rot="0.0 -93.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox tags="explosive=1" pos="3.1 0.2 0.8" rot="0.0 170.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
 			<instance tags="pdfwashere" pos="-2.1 0.0 -15.4" rot="0.0 -145.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
 			<instance tags="pdfwashere" pos="-2.4 0.0 -15.4" rot="0.0 105.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
 			<instance tags="pdfwashere" pos="-0.5 0.0 -16.5" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml"/>
-			<vox tags="fxbreak=l2black" pos="3.4 0.0 -16.6" rot="0.0 57.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-			<vox tags="fxbreak=l2black" pos="2.21823 0.0 -16.20838" rot="0.0 11.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_2.vox"/>
-			<vox tags="fxbreak=l2black" pos="4.28329 0.0 -16.30899" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_barrel_1.vox"/>
-			<vox tags="pdfwashere" pos="1.4 0.0 -13.8" rot="0.0 180.0 0.0" prop="false" file="MOD/vox/tents.vox" object="tent7"/>
-			<vox tags="pdfwashere" pos="9.2 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-			<vox tags="pdfwashere" pos="9.7 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="3"/>
-			<vox tags="pdfwashere" pos="10.9 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-			<vox tags="pdfwashere" pos="11.4 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="1"/>
-			<vox tags="pdfwashere" pos="12.6 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-			<vox tags="pdfwashere" pos="13.1 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_hesco.vox" object="2"/>
-			<vox pos="14.9 0.2 -5.2" rot="0.0 -86.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_mili_crate_1.vox"/>
-			<vox pos="12.1 3.3 -6.3" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox pos="11.9 3.5 -6.3" rot="0.0 -93.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox pos="11.3 3.3 -6.4" rot="0.0 -170.0 0.0" texture="8 .4" prop="false" file="MOD/vox/airbasevox/airbase_sandbag.vox"/>
-			<vox pos="11.2 3.5 -8.5" rot="0.0 -85.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="11.3 0.0 -4.9" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="11.3 0.8 -3.6" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
-			<vox pos="11.3 0.0 -3.5" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="0.1 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="0.1 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="0.1 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="-2.1 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox tags="pdfwashere" pos="-2.1 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="-5.8 3.9 6.9" rot="90.0 168.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox tags="pdfwashere" pos="-2.1 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="-2.1 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox pos="-8.4 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox tags="pdfwashere" pos="-9.1 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="-9.1 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="-9.1 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="16.0 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox tags="pdfwashere" pos="16.0 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="16.0 3.3 6.9" rot="0.0 -172.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox tags="pdfwashere" pos="16.0 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/vox/crate_9.vox"/>
-			<vox pos="16.0 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/vox/airbasevox/airbase_bed.vox"/>
-			<vox tags="pdfwashere" pos="8.9 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/vox/airbasevox/airbase_plasticchair.vox"/>
-			<vox pos="9.2 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox tags="pdfwashere" pos="9.2 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="9.2 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/vox/airbasevox/airbase_armory_shelf.vox"/>
-			<vox pos="1.7 4.4 1.7" rot="90.0 -5.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="0.86 4.4 1.7" rot="90.0 .0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox pos="-0.302 3.7 1.0" rot="0.0 0.0 90.0" texture="8 .4" prop="false" file="MOD/vox/crate_10.vox"/>
-			<vox tags="pdfwashere" pos="7.2 3.6 -1.637" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox pos="11.39901 3.6 -1.636" rot="0.0 0.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox pos="10.69901 4.3 -1.636" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox pos="9.299 4.3 -1.636" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox pos="9.299 3.6 -1.636" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox pos="9.49941 5.0 -1.63616" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
-			<vox tags="pdfwashere" pos="7.4 4.3 -1.636" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/vox/crate_6.vox"/>
+			<vox tags="fxbreak=l2black" pos="3.4 0.0 -16.6" rot="0.0 57.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black" pos="2.21823 0.0 -16.20838" rot="0.0 11.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+			<vox tags="fxbreak=l2black" pos="4.28329 0.0 -16.30899" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+			<vox tags="pdfwashere" pos="1.4 0.0 -13.8" rot="0.0 180.0 0.0" prop="false" file="MOD/assets/vox/tents.vox" object="tent7"/>
+			<vox tags="pdfwashere" pos="9.2 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="9.7 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+			<vox tags="pdfwashere" pos="10.9 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="11.4 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+			<vox tags="pdfwashere" pos="12.6 1.6 -8.7" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox tags="pdfwashere" pos="13.1 0.0 -8.7" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+			<vox pos="14.9 0.2 -5.2" rot="0.0 -86.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_mili_crate_1.vox"/>
+			<vox pos="12.1 3.3 -6.3" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="11.9 3.5 -6.3" rot="0.0 -93.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="11.3 3.3 -6.4" rot="0.0 -170.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+			<vox pos="11.2 3.5 -8.5" rot="0.0 -85.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="11.3 0.0 -4.9" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="11.3 0.8 -3.6" rot="0.0 96.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+			<vox pos="11.3 0.0 -3.5" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="0.1 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="0.1 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="0.1 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="-2.1 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox tags="pdfwashere" pos="-2.1 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="-5.8 3.9 6.9" rot="90.0 168.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox tags="pdfwashere" pos="-2.1 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="-2.1 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox pos="-8.4 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox tags="pdfwashere" pos="-9.1 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="-9.1 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="-9.1 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="16.0 3.3 3.5" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox tags="pdfwashere" pos="16.0 3.7 5.2" rot="0.0 -85.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="16.0 3.3 6.9" rot="0.0 -172.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox tags="pdfwashere" pos="16.0 3.7 8.5" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+			<vox pos="16.0 3.3 10.3" rot="0.0 178.0 0.0" texture="8 .2" prop="true" file="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+			<vox tags="pdfwashere" pos="8.9 3.3 10.5" rot="0.0 -120.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+			<vox pos="9.2 3.3 3.7" rot="0.0 87.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox tags="pdfwashere" pos="9.2 3.3 5.1" rot="0.0 91.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="9.2 3.3 6.5" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+			<vox pos="1.7 4.4 1.7" rot="90.0 -5.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="0.86 4.4 1.7" rot="90.0 .0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox pos="-0.302 3.7 1.0" rot="0.0 0.0 90.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+			<vox tags="pdfwashere" pos="7.2 3.6 -1.637" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="11.39901 3.6 -1.636" rot="0.0 0.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="10.69901 4.3 -1.636" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="9.299 4.3 -1.636" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="9.299 3.6 -1.636" rot="0.0 1.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox pos="9.49941 5.0 -1.63616" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
+			<vox tags="pdfwashere" pos="7.4 4.3 -1.636" rot="0.0 -3.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_6.vox"/>
 		</group>
 		<group name="Loot">
 			<instance pos="11.2 4.4 9.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml"/>
@@ -432,105 +432,105 @@
 		</group>
 		<group name="lights">
 			<body tags="night" pos="3.6 2.2 7.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="-2.7 2.2 7.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="10.7 2.2 7.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="17.0 2.2 7.9" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="10.7 2.2 2.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="17.0 2.2 2.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="10.7 2.2 -5.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="17.0 2.2 -5.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="4.3 2.2 -5.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="-2.0 2.2 2.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="4.3 2.2 2.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
 			<body tags="night" pos="-3.3 2.2 -5.3" rot="0.0 0.0 0.0" dynamic="true">
-				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4a">
+				<vox tags="night" pos="-0.05 0.6 0.05" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
 					<light tags="night" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0"/>
 				</vox>
-				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/vox/Furniture/lights.vox" object="light4b"/>
+				<vox tags="night" pos="0.00001 0.65 0.0" rot="0.0 0.0 0.0" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b"/>
 				<voxbox tags="night" pos="-0.05 0.7 -0.05" rot="0.0 0.0 0.0" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32"/>
 				<joint tags="night" pos="0.0 1.0 0.0" size="0.1" collide="true"/>
 			</body>
-			<vox pos="0.3 4.0 3.9" rot="0.0 -90.0 0.0" prop="true" file="MOD/Vox/lantern.vox">
+			<vox pos="0.3 4.0 3.9" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/lantern.vox">
 				<light tags="night" pos="-0.05 0.45 0.25" size="0.2"/>
 			</vox>
-			<vox pos="18.5 4.0 7.2" rot="0.0 -90.0 0.0" prop="true" file="MOD/Vox/lantern.vox">
+			<vox pos="18.5 4.0 7.2" rot="0.0 -90.0 0.0" prop="true" file="MOD/assets/vox/lantern.vox">
 				<light tags="night" pos="-0.05 0.45 0.25" size="0.2"/>
 			</vox>
 		</group>

@@ -158,3 +158,8 @@ ack scripts/TDSU/umf.lua:MOD/
 ack tools/porting/blender_vehicle.py:MOD/
 ack tools/porting/fix_missing_scripts.py:MOD/
 ack .github/ISSUE_TEMPLATE/bug_report.md:MOD/
+
+# --- dead references a moved file now answers (checked by hand; the verifier allows exactly these):
+# lol.xml (dev test level) names MOD/UI/Book.lua, which never existed (the file was scripts/UI/Book.lua); after the
+# move ui/Book.lua answers it (paths are case-insensitive).
+allow lol.xml:MOD/UI/Book.lua

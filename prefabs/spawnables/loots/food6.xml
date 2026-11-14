@@ -1,7 +1,7 @@
 <prefab version="1.3.0">
 	<group>
 		<body tags="Loot=food6_Vodka_10_-20 interact=Vodka" pos="0 .3" dynamic="true">
-			<vox name="water" pos="0 -.3" file="MOD/vox/foods/vodka.vox">
+			<vox name="water" pos="0 -.3" file="MOD/assets/vox/foods/vodka.vox">
 				<voxbox pos="-.05 .4 -.05" size="1 2 1" color=".08 .08 .08"/>
 			</vox>
 		</body>

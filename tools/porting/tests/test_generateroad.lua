@@ -1,4 +1,4 @@
--- Mock-engine test for Procedural/GenerateRoad.lua co-op parts (Phase 3): run from the repo root with Lua 5.1:
+-- Mock-engine test for world/generation/GenerateRoad.lua co-op parts (Phase 3): run from the repo root with Lua 5.1:
 --   lua5.1 tools/porting/tests/test_generateroad.lua
 -- Covers the generation player (furthest living), straggler teleport (on foot / in a vehicle), and the
 -- distance counter never going down.
@@ -32,7 +32,7 @@ function SetBodyAngularVelocity() end
 function IsMultiplayer() return #ORDER > 1 end
 function IsHandleValid(h) return h ~= 0 end
 
-local src = io.open("Procedural/GenerateRoad.lua", "rb"):read("*a"):gsub("\r", "")
+local src = io.open("world/generation/GenerateRoad.lua", "rb"):read("*a"):gsub("\r", "")
 src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)
 assert(loadstring(src, "GenerateRoad.lua"))()
 

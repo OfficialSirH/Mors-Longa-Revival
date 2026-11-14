@@ -1,0 +1,86 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/avf/prefabs/technicals/offroad-open.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<vehicle name="offroad" tags="Door DoAlarm" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" driven="false" sound="suv2 0.9" spring="0.8" damping="0.8" topspeed="150" acceleration="0.21" strength="4" antispin="0" antiroll="0.2" difflock="0.75" steerassist="0.0" friction="1.0">
+			<group pos="-0.1 0.0 0.0" prop0="texture=8 0.5">
+				<body pos="0.05 0.6 -0.25" rot="0.0 0.0 0.0" dynamic="true">
+					<vox pos="0.05 -0.2 0.15" rot="0 180 0" blendtexture="5 .3" density="2" strength="5" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="body__scaffoled">
+						<light pos="0.75 0.55 -2.2" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
+						<light pos="-0.65 0.55 -2.2" rot="0.0 180.0 0.0" type="area" size="0.1 0.1" unshadowed="0.3"/>
+						<light pos="0.6 0.55 -2.2" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+						<light pos="-0.5 0.55 -2.2" rot="0.0 180.0 0.0" type="area" color="1 .1 .1" size="0.2 0.1" unshadowed="0.2" glare="0.2"/>
+						<light pos="0.65 0.65 2.0" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="40" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.35"/>
+						<light pos="-0.55 0.65 2.0" rot="0.0 0.0 0.0" type="cone" color="1 .9 .8" scale="40" angle="90" penumbra="30" size="0.1" unshadowed="0.2" fogscale="0.1" glare="0.35"/>
+						<location tags="exhaust" pos="0.5 0.05 -2.2" rot="180"/>
+						<location tags="vital" pos="0.05 0.55 1.3"/>
+						<location tags="player" pos="0.35 1.25 0.15"/>
+						<group name="immersive_elements" prop0="strength=12">
+							<vox name="engine" tags="engine" pos="0.0 0.2 1.5" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="engine"/>
+							<vox name="fuel_tank" tags="fuel_tank" pos="-0.3 0.1 -1.19998" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="fuel_tank"/>
+							<group name="ammo_rack" pos="-0.2 0.4 -0.4" prop0="tags=ammo_rack=0">
+								<vox name="ammo_rack" pos="-0.10001 0.1 -1.1" rot="0.0 90.0 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="ammo_box_small"/>
+								<vox name="ammo_rack" pos="0.6 0.1 -1.10002" rot="0.0 90.0 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="ammo_box_rocket"/>
+								<vox name="ammo_rack" pos="0.20002 -0.1 -0.2" rot="0.0 0.0 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="ammo_belt"/>
+							</group>
+						</group>
+						<group name="hinged_eleements" pos="0.0 1.0 0.0">
+							<vox pos="0.0 -0.1 1.5" blendtexture="5 .3" prop="true" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="bonnet">
+								<joint pos="0.6 0.1 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength=".05" rotspring="0" collide="true" limits="0 70"/>
+								<joint pos="0.05 0.1 -0.6" rotspring="0" collide="true"/>
+								<joint pos="-0.5 0.1 -0.6" rot="0.0 -90.0 0.0" type="hinge" rotstrength=".05" rotspring="0" collide="true" limits="0 70"/>
+							</vox>
+							<vox pos="-0.0 -0.7 -2.3" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="rear_door_mil"/>
+						</group>
+						<location tags="camera" pos="0.05 1.6"/>
+						<location tags="exit" pos="1.2 0.5"/>
+					</vox>
+					<wheel name="bl" pos="-0.65 -0.15 1.4" drive="1" travel="-0.1 0.2">
+						<vox pos="-0.1 -0.45 -0.05" rot="0.0 -180.0 0.0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="wheel_bl"/>
+					</wheel>
+					<wheel name="br" pos="0.65 -0.15 1.4" drive="1" travel="-0.1 0.2">
+						<vox pos="0.1 -0.45 -0.05" rot="0 180 0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="wheel_br"/>
+					</wheel>
+					<wheel name="fl" pos="-0.65 -0.15 -1.4" drive="1" steer="1" travel="-0.1 0.2">
+						<vox pos="-0.1 -0.45 -0.05" rot="0 180 0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="wheel_fl"/>
+					</wheel>
+					<wheel name="fr" pos="0.65 -0.15 -1.4" drive="1" steer="1" travel="-0.1 0.2">
+						<vox pos="0.1 -0.45 -0.05" rot="0 180 0" blendtexture="5 .3" file="MOD/vehicles/avf/prefabs/technicals/offroad.vox" object="wheel_fr"/>
+					</wheel>
+				</body>
+			</group>
+			<rig name="driver" tags="driver sort=0" pos="-0.35 1.05 -0.15">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.25 -0.7" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.25 -0.7" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.2 0.2 -0.6" rot="0.0 90 0.0"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.2 0.2 -0.6" rot="0.0 90 0.0"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0"/>
+				<location name="steeringwheel" tags="steeringwheel" pos="0.0 0.2 -0.6" rot="0.0 -180 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=1" pos="0.25 1.05 -0.15">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.7" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.7" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=2" pos="0.25 1.05 0.6">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.25" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.25" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+			<rig name="passenger" tags="sort=3" pos="-0.35 1.05 0.6">
+				<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.3 -0.25" rot="0.0 90 50"/>
+				<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.3 -0.25" rot="0.0 90 50"/>
+				<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
+				<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30"/>
+				<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0"/>
+			</rig>
+		</vehicle>
+	</group>
+</prefab>
+

@@ -1,0 +1,22 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/vehicles/cars/1963 VW Beetle BugZilla/BugZilla Destoryed.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body pos="0.0 0.6 0.05" dynamic="true">
+			<vox pos="0.4 -0.3 -0.05" rot="-7.1 -158.8 18.7" texture="8" blendtexture="5 " density="6" strength="7" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="body">
+				<vox name="Bull Bar" tags="nocull" pos="0.0 0.2 1.8" rot="20.0 0.0 0.0" blendtexture="5 " density="1.0" strength="15.0" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="Bullbar"/>
+				<vox name="hood" tags="nocull" pos="-0.0 0.60001 1.29999" texture="8" blendtexture="5 " density="2.5" strength="5" prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="Hood"/>
+				<vox name="Door" pos="1.14998 -0.74999 0.3" rot="30 -20 70" texture="8" blendtexture="5 " density="3" prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="door"/>
+				<vox name="Door" pos="-0.6 0.5 0.2" texture="8" blendtexture="5 " density="3" prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="door">
+					<joint pos="0.05 0.4 0.4" rot="90.0 90.0 0.0" type="ball" rotspring="0.0" collide="true"/>
+				</vox>
+				<body tags="fuelLevel=0 RNDfuelLevel=10 GasCan fuelLevelMAX=50" pos="0.1 0.9 -0.9" dynamic="true">
+					<vox pos="0.0 -0.4 0.0" texture="8 0.9" blendtexture="5 " density="5" strength="3" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="fuel_tank"/>
+				</body>
+			</vox>
+			<vox pos="0.0 -0.32 1.3" rot="0.0 -40.0 90.0" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1"/>
+			<vox pos="2.35 -0.52 1.4" rot="0.0 -20.0 30.0" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1"/>
+			<vox pos="-0.3 -0.32 -1.15" rot="0.0 180.0 -90.0" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1"/>
+			<vox pos="1.5 -0.32 -1.55" rot="0.0 170.0 -90.0" blendtexture="5 " prop="true" file="MOD/vehicles/cars/1963 VW Beetle BugZilla/1963 VW Beetle BugZilla.vox" object="wheel" scale="1"/>
+		</body>
+	</group>
+</prefab>
+

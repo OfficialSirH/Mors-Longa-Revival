@@ -44,17 +44,17 @@ function GetLocalPlayer() return 1 end
 function IsPlayerLocal(p) return p == 1 end
 local function pump() while #outbox > 0 do local m = table.remove(outbox,1); local f = assert(loadstring("return "..m[1]))(); f(unpack(m[2])) end end
 -- load the code under test (only the functions we need from gunfunctions.lua)
-local src = io.open("script/gunfunctions.lua","rb"):read("*a"):gsub("\r","")
+local src = io.open("weapons/guns/gunfunctions.lua","rb"):read("*a"):gsub("\r","")
 local a = src:find("function GunRaycast"); local b = src:find("\nfunction ShootNewDontCallYet")
 assert(loadstring(src:sub(a,b)))()
 local g1 = src:find("function GrenadeOperations"); local g2 = src:find("\nfunction ADS")
 assert(loadstring(src:sub(g1,g2)))()
-dofile("script/gunnet.lua")
+dofile("weapons/guns/gunnet.lua")
 
 GunNet_ServerInit()
 local shell = {armor={1,1,1,1,1}, damage=0.2, pdamage=1, tracer=true, velocity=880, maxmomentum=2.5, momentum=2.5,
   pos=Vec(0,1,0), predictedBulletVelocity=Vec(0,0,-880), factor=1, active=false}
-GunNet_Fire(shell, "MOD/snd/Weapons/ak/ak_0.ogg", 0.7)
+GunNet_Fire(shell, "MOD/assets/snd/Weapons/ak/ak_0.ogg", 0.7)
 assert(#client.gunShells == 1 and client.gunShells[1].doWorld == false)
 pump() -- server.gunFire -> ClientCall(client.gunRemoteFire) -> local, ignored
 assert(#server.gunShells == 1 and server.gunShells[1].doFx == false and server.gunShells[1].owner == 1)
@@ -74,7 +74,7 @@ assert(not calls.MakeHole and not calls.SetFloat and not calls.ApplyBodyImpulse 
 assert((calls.PlaySound or 0) >= 1 and (calls.SpawnParticle or 0) >= 1, "client must do fx")
 -- remote player's shot reaches this client with sound
 calls = {}
-client.gunRemoteFire(2, {pos=Vec(0,1,0), predictedBulletVelocity=Vec(0,0,-880), momentum=1, maxmomentum=1, armor={}}, "MOD/snd/x.ogg", 0.7)
+client.gunRemoteFire(2, {pos=Vec(0,1,0), predictedBulletVelocity=Vec(0,0,-880), momentum=1, maxmomentum=1, armor={}}, "MOD/assets/snd/x.ogg", 0.7)
 assert(calls.PlaySound == 1 and #client.gunShells >= 1)
 -- grenade: explosion only on server
 GunNet_FireGrenade({pos=Vec(0,1,0), predictedBulletVelocity=Vec(0,0,-10)})

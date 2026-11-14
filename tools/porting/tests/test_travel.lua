@@ -1,9 +1,9 @@
--- Mock test for the debug auto-travel (scripts/ConfigMenu.lua server.configTravel / TickTravel).
+-- Mock test for the debug auto-travel (ui/ConfigMenu.lua server.configTravel / TickTravel).
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_travel.lua
 dofile("tools/porting/tests/mockengine.lua")
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local env = MockEngine.load("scripts/ConfigMenu.lua")
+local env = MockEngine.load("ui/ConfigMenu.lua")
 env.PLAYERS[1].pos = {0, 4, 3}
 env.def("IsPlayerValid", function() return true end)
 local road = true

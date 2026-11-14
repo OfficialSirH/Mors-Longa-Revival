@@ -1,0 +1,8 @@
+<prefab version="1.2.0">
+	<group>
+		<body tags="Loot=material-explosive_Explosive_1 interact=Explosive explosive=.5" pos="0 .35" dynamic="true">
+			<vox pos="-.05 -.35 .05" file="MOD/assets/vox/Loots/Materials.vox" object="GunPowder"/>
+		</body>
+	</group>
+</prefab>
+

@@ -76,7 +76,7 @@ Best primary sources, in order:
   loaded in v1). The mock engine drops includes, so test_avf_cannon.lua checks that every include line of the converted
   configs resolves.
 * Converter traps seen: a v1 callback with leading whitespace (` function init()` in AC130) escapes the rename
-  regex and silently never runs in v2; a loose grep for includers matched `ModConfig.lua` as `Config.lua` (use
+  regex and silently never runs in v2; a loose grep for includers matched `lib/ModConfig.lua` as `lib/Config.lua` (use
   `#include "([^"]*/)?Config\.lua"`).
 
 ---
@@ -93,7 +93,7 @@ Best primary sources, in order:
   function before init is not supported". Pure math (`Vec`, `Quat`) at top level is fine. `tools/porting/toplevel.lua`
   finds them.
 * An `#include`d file has no `#version` line of its own (only the entry script). A v1 library included by v2 scripts
-  must not define `init/tick/draw` that leak into includers: rename them (Config.lua → `ConfigMenu_*`,
+  must not define `init/tick/draw` that leak into includers: rename them (lib/Config.lua → `ConfigMenu_*`,
   menu_main.lua → `MainMenu_*`).
 * **The host's server and client halves do NOT share Lua globals** [verified in-game]. Client code gets server data
   only via `shared`, synced registry keys or `ClientCall`, also on the host. (SP testing used to hide this.)
@@ -190,7 +190,7 @@ from these lists.
     <group name="eye_space"> <!-- optional ToolAnimator poses: fp_action, tp_action, tp_run, ... --> </group>
     <group name="tool_space">
       <body dynamic="false">
-        <vox file="MOD/vox/mytool.vox" scale="0.4"/>   <!-- one <vox> per shape, in index order -->
+        <vox file="MOD/assets/vox/mytool.vox" scale="0.4"/>   <!-- one <vox> per shape, in index order -->
       </body>
       <location name="muzzle" tags="name=muzzle" pos="..."/>
       <location name="tp_action_rh" tags="name=tp_action_rh ik_hand" pos="..." rot="..."/>
@@ -216,13 +216,13 @@ from these lists.
 ### v2 gun design (current)
 * All gun logic runs on the holding player's client as in v1 (client-trusted). Projectiles are simulated twice by
   `ProjectileOperations`/`GrenadeOperations`: the server for world effects (`doWorld`), every client for visuals
-  (`doFx`). `script/gunnet.lua` carries shots, melee holes, casings, the shooter id (`projectile.owner` →
+  (`doFx`). `weapons/guns/gunnet.lua` carries shots, melee holes, casings, the shooter id (`projectile.owner` →
   `level.goreai.body_damage_player_owner`).
 * Gun scripts are **static** level scripts (group `GunScripts` in the level xmls; v1 spawned them per equip);
   each checks `GunInInventory(id)` before acting.
 * Two model kinds: **vox guns** (27, multi-object `.vox`, engine-built) and **LoadTool guns** (AK74, FiveSeven,
   G17, G18 [G17 model], M107, M4A1 [M4 model], M870, MP5, TT33): registered with a generated
-  `script/Weapons/<GUN> Tool.xml` (`tools/porting/make_tool_prefab.py`):
+  `weapons/guns/Weapons/<GUN> Tool.xml` (`tools/porting/make_tool_prefab.py`):
   * parts in **reverse** Base.xml order (v1 index i = i-th part from the end: GetBodyShapes lists the last attached
     first);
   * each part built in its own lane (24 m grid, 10 columns) because **overlapping parts lose voxels** in an
@@ -233,7 +233,7 @@ from these lists.
   * Camo variants are generated but not registered (known gap).
 * Debug overlay (any v2 gun): **Ctrl+O** part index labels, **Ctrl+L** part table (local pos, voxel size, rot).
   Offline render: `tools/porting/render_gun.py`.
-* RPG-7: hand-converted `script/RPG.lua`; the rocket (`script/grenade.lua`) is spawned by the server (§7).
+* RPG-7: hand-converted `weapons/guns/RPG.lua`; the rocket (`weapons/guns/grenade.lua`) is spawned by the server (§7).
 * Scope look tweak (`SetPlayerTransform(ppos2, true)` in some rifles) disabled; TODO via `SetToolAllowedZoom`.
 * Original quirks kept as-is: PKM's own projectile sim has no NPC damage; FiveSeven hand indices 18-29 exceed its 26
   parts; Jalaad init matches `ak-762x54` mags but its tick `m107-127x99`; no MC9 mag #3 item exists.
@@ -261,7 +261,7 @@ from these lists.
 | M870 | gun-m870 | N870 | LoadTool | | TT33 | gun-tt33 | TT-33 | LoadTool |
 | M9 | gun-m9 | M9 (shelved) | vox | | VECTOR | gun-vector | SCALAR | vox |
 
-Melee (8, `scripts/Weapons/Melee/`, `convert_melee.py`): client = input/animation/raycasts/fx; world effects
+Melee (8, `weapons/melee/`, `convert_melee.py`): client = input/animation/raycasts/fx; world effects
 queued in `Melee_Functions.lua` and sent once per frame to `server.meleeOps(ops, playerId)`.
 
 ---
@@ -369,10 +369,10 @@ queued in `Melee_Functions.lua` and sent once per frame to `server.meleeOps(ops,
   Cadillac Eldorado (`cadillace80`, `abandonedeldorado`): .vox paths don't exist, used nowhere: skipped.
   Also skipped, referenced nowhere outside their own folder (no spawn menu entry, spawner or level; found 2026-11-08):
   ambulance-eu/-us, steamroller, sportcar_pink, zapper `8x8 dumptruck`/`tanker`, Terminator (4), MethLab Enemy;
-  only in the test level `test_vehicle.xml`: backhoe, bulldozer, skid-loader, small_excavator. Dirt bikes (`Vehicles/Bike`): only
-  in test.xml. Volga black/blue/taxi
-  (`Vehicles/Gaz24`) and `k-cl-e-car1-w`: referenced nowhere either; also `Based Vehicles/wheelchair.xml`.
-  Insurgent chase cars (`Vehicles/Enemy Car`): Coupe, Sadan, Sport2 and "Pickup Enemy With Crew" referenced nowhere.
+  only in the test level `dev/levels/test_vehicle.xml`: backhoe, bulldozer, skid-loader, small_excavator. Dirt bikes (`vehicles/cars/Bike`): only
+  in dev/levels/test.xml. Volga black/blue/taxi
+  (`vehicles/cars/Gaz24`) and `k-cl-e-car1-w`: referenced nowhere either; also `Based vehicles/cars/wheelchair.xml`.
+  Insurgent chase cars (`vehicles/cars/Enemy Car`): Coupe, Sadan, Sport2 and "Pickup Enemy With Crew" referenced nowhere.
   Empty voxel layers (2026-11-08): the engine drops empty voxel layers on every side of a shape; x and depth are
   then centred on the cropped size. Found on the Jeep (3 empty layers underneath: seats measured on the full model
   sat 0.3 m too high in-game, 0.3 lower was right; its v1 eye point fits only then) and the ZIL-131 (38 empty layers
@@ -388,67 +388,67 @@ queued in `Melee_Functions.lua` and sent once per frame to `server.meleeOps(ops,
 ### Status (passenger seats)
 | Vehicle | Files | Players | Status |
 |---|---|---|---|
-| Humvee (plain, open) | `avf/prefabs/humvee/umhummer.xml`, `umhummeropen.xml` + embedded copies in Vehiclewg30, RoadSegmentM7, level_tutorial | 4 | verified SP |
-| "Hummer UM" (spawn menu) | `Vehicles/humvee/hummer.xml` (other `Vehicles/humvee` files point at a missing `Vehicles/AvertCars/` folder, unused) | 4 | Humvee layout 0.05 higher (identical seat rays); verified SP |
-| UAZ-452 (normal, damaged, lifted, white, emergency) | `Vehicles/Soviet Vehicles/uaz452*.xml` | 4; emergency 3 (stretcher) | verified SP |
-| GAZ-24 (sedan, VIP, MP) | `Vehicles/GAZ-24 (1968)/gaz24unreleased*.xml` | 4 | verified SP |
-| Sports car (green, damaged, offroad, RampCar) | `Vehicles/sportscar/sportcar_green*.xml`, `RampCar.xml` + copy in constructionCivillian12 | 2 | official rigs (`sportscar_green`); verified SP; shift -0.1 → 0 afterwards (cropping) |
-| Yellow SUV (normal, damaged) | `Vehicles/SUV/suv_yellow*.xml` | 4 | official rigs (`generic_blue_light`); verified SP |
-| Saloon (red, taxi, damaged) | `Vehicles/saloon/salooncar_*.xml` | 4 | official rigs (`generic_sedan_red`); verified SP |
-| Box/Ramp Truck (+ damaged) | `Vehicles/truck/truck_{white,ramp}*.xml` | 2 | official rigs (`boxtruck_white`, seat point moved); verified SP |
-| Yellow Dump Truck (+ damaged) | `Vehicles/dumptruck/Dump_truck*.xml` | 2 | official rigs (`dumptruck_yellow`); verified SP |
-| Mobile crane | `Vehicles/Constuction vehicles/mobile_crane.xml` (spawn menu entry added, §8) | 1 | official rig (`crane_medium_yellow`); verified SP |
-| Blue/Red Tractor | `Vehicles/Constuction vehicles/{Blue,Red}tractor.xml` | 1 | official rig (`tractor_teal`); verified SP |
-| Yellow Van (+ damaged, Modified) | `Vehicles/van1_yellow/Van*.xml` | 2; Modified 1 (gun stand) | official rigs (`van_yellow`, seat point raised 0.2); verified SP |
-| Station wagon (+ damaged) | `Vehicles/stationwagon/station_wagon_brown*.xml` (Destroyed: static wreck) | 4 | official rigs (`generic_stationwagon_blue_dark`); verified SP; damaged shift 0.1 → 0 afterwards (cropping) |
-| Minivan | `Vehicles/minivan1/minivan1.xml` | 4 | measured (front seats + rear bench, upright); verified SP |
-| Cadillac sedan (+ damaged, abandoned) | `Vehicles/cadillacsd80/*.xml` | 4 (abandoned: 2 + 2 floor; 0.1 forward afterwards, cropping) | measured, tilt 55; verified SP (heads poke through the roof a little, accepted) |
-| Cadillac limo (+ damaged, abandoned) | `Vehicles/cadillacfbl80/*.xml` | 4: front + rear bench (abandoned: rear floor) | measured, tilt 55; verified SP (heads poke through the roof a little, accepted) |
-| Mini (+ damaged, Modified) | `Vehicles/1969 Mini Cooper S/Mini*.xml` | 4 (Modified: driver + 3 floor) | measured, right-hand drive, tilt 55; verified SP; lowered 0.1 afterwards (empty layer) |
-| VW Beetle (+ damaged, Modified) | `Vehicles/1963 VW Beetle/*.xml` | 4 (Modified: driver + 2 floor) | measured, tilt 55; verified SP |
-| Plymouth Fury (+ damaged, Modified) | `Vehicles/Plymouth Fury/*.xml` | 4 | measured, tilt 55; verified SP |
-| Dodge Monaco + Highway Police (+ damaged) | `Vehicles/1974 Dodge Moncaco/*.xml` | 4 | measured, tilt 55; verified SP; afterwards 0.1 lower and police = civilian seats (cropping) |
-| Jeep Wrangler ("Officer's Jeep", + damaged) | `Vehicles/Jeep Wrangler/*.xml` (Willys Jeep folder: static wreck only) | 4 | measured, upright (open top), 0.3 lower for the empty layers (test 1: far above the seats); verified SP |
-| Ural ("SU Transport Truck", + damaged) | `Vehicles/ural/ural*.xml` | 4: cab 2 + cargo side benches 2 (facing inward) | measured, upright; verified SP |
-| ZIL-131 fire truck ("Firetruck") | `Vehicles/Soviet Vehicles/zil131fire.xml` | 4: crew cab, 2 rows | measured, upright; verified SP |
-| ZIL-131 transport ("AAF Transport truck") | `Vehicles/Soviet Vehicles/ZIL131.xml` (+ Vehiclewg33, roadblock9) | 4: cab 2 + cargo side benches 2 | measured, upright; paths fixed (§8); verified SP |
-| ZIL-131 ZU-23 ("AAF Truck Technical") | `Vehicles/Soviet Vehicles/ZIL131_ZSU23.xml` | 2 (cab; gunner with the mounted-gun work) | as ZIL131; verified SP |
-| Bus (+ damaged, Modified, JetBus) | `Vehicles/bus/bus*.xml`, `jetbus.xml` (Destroyed: static wreck) | 4: driver + front rows (one rear-facing); Modified: driver + 3 floor; JetBus: driver + 2 on the wheel arches (engine fills the cabin) | measured, upright; verified SP |
-| PAZ-3205 ("Soviet Bus", + damaged) | `Vehicles/Soviet Vehicles/paz 3205*.xml` (+ event copy VehicleC2, see the enemy row) | 4 | measured, upright; verified SP |
-| American semi (+ damaged, Modified, Special) | `Vehicles/semitruck-us/Semi*.xml` (Destroyed: static wreck) | 4: cab 2 + 2 on the lower sleeper bunk (facing the middle) | measured, upright; verified SP |
-| Flathead semi (+ damaged, Mod) | `Vehicles/semitruck-flathead/Semi*.xml` (spawn menu "Semi Flathead" added, §8) | 2 (no room for more: engine hump, bunks 0.7 m apart) | measured, upright; verified SP |
-| SportsCar offroad | `Vehicles/sportscar/sportsoffroad.xml` + copy in constructionCivillian12 | 2 | official rigs (`sportscar_green`, overlap 0.78); verified SP |
-| Cement truck | `Vehicles/Constuction vehicles/cement_truck.xml` (road spawner Vehiclewg42; spawn menu "Cement Truck" added, §8) | 2 | measured, upright; verified SP |
-| Tractor From Hell ("TRACTOR") | `Vehicles/Constuction vehicles/tractorFromHell.xml` | 1 (like the official tractor) | measured, upright; verified SP |
-| Volga (white) | `Vehicles/Gaz24/volgawhite.xml` (road spawner Vehiclewg18; spawn menu "Volga" added, §8; Destroyed: wrecks) | 4 | measured, tilt 55; verified SP |
-| Microcar (+ damaged) | `Vehicles/microcar/microcar*.xml` (road spawners Vehiclewg38, wb30; spawn menu "Microcar" added, §8) | 2 | measured, tilt 55; verified SP |
-| Monster Compact | `Vehicles/microcar/monstercompact.xml` | 4 (rear cramped) | measured, tilt 55; verified SP |
-| Ford Falcon XB GT (+ damaged) | `Vehicles/MadMax2/1973 Ford Falcon XB GT*.xml` (road spawners Vehiclewg21, wb19; spawn menu "Ford Falcon" added, §8; Destroyed: wreck) | 4 (right-hand drive; rear cramped) | measured, tilt 55; verified SP |
-| Pursuit Special | `Vehicles/MadMax2/Pursuit Special.xml` | 4: driver, a sideways seat on the left door (ledge + door panel, faces the driver; user spotted it in-game), 2 on the rear floor | measured; verified SP |
-| Military truck (UM Damaged; plain, Damaged) | `Vehicles/military_truck/Milltary_Truck*.xml` (UM Damaged in roadblocks 8/9; plain one now spawn menu "Military Truck", §8; Destroyed: wrecks) | 4: cab 2 + 2 on the cargo bed floor (no benches) | measured, upright; verified SP |
-| RV MethLab ("Bad RV") | `Vehicles/RVMethLab/MethLab.xml` (road spawner Vehiclewg26; spawn menu path fixed, §8; MethLab Enemy: unused) | 4: cab 2 + 2 on the rear bench (facing the aisle) | measured, upright; verified SP |
-| BugZilla ("Monster Bug") | `Vehicles/1963 VW Beetle BugZilla/BugZilla.xml` (Destroyed: wreck) | 3: driver + 2 floor (stripped; engine/fuel tank in the back) | measured, tilt 55; verified SP |
-| Golf cart + "Nuclear Golfcart" | `Vehicles/Based Vehicles/golf_cart*.xml` (road spawner Vehiclewg45; Bomb in the spawn menu) | 2 | measured, upright (wheel far ahead: arms stretched); verified SP |
-| Small red boat | `Vehicles/Based Vehicles/smallboat_red.xml` (road spawner vehicleS13; spawn menu "Small Boat" added, §8) | 4: stern (driver, no steering wheel), middle seat 2, bow 1 facing back | measured, upright; verified SP |
-| "Shed?" + Garage | `Vehicles/Based Vehicles/SHED.xml`, `GARAGE.xml` (vehicleS11/S12; Garage copy in test.xml) | 4: driver on the chair + 3 on the floor | measured, upright; verified SP |
-| Wheeled Cockpit | `Vehicles/Based Vehicles/wheeledcockpit.xml` (spawn menu; vehicleS10) | 2 (pilot + copilot; no yoke in the model) | measured, upright; verified SP |
-| AS350 helicopter: AAF Attack Heli (MILITARY), Insurgent Attack Heli, parked copies, CIV (gore map), VIP | `main/AS350/AS350_*.xml` (+ 2 copies in test_misc.xml). Not a vehicle in the original (Heli.lua teleported the pilot every frame): add_seats.py `WRAP_VEHICLE` wraps the Heli.lua `<script>` content in `<vehicle name="AS350" tags="player_nogears player_nosteeringwheel" sound="0" topspeed="0" acceleration="0">` (no car sounds or driving animations) and `VEHICLE_EXITS` adds an `exit` location beside the pilot door | 4: pilot left front (the AI pilot ragdoll sits right) + 3 on the rear bench; Insurgent: no left front cushion (open door-gun side), third bench place 0.1 lower | measured, upright, nose at body +z (rigs turned 180); verified SP 2026-11-13 |
-| LeBoat (sailboat) | `Vehicles/Based Vehicles/sailboat.xml` (spawn menu; vehicleS14) | 4: driver standing at the left ship's wheel (user request; first version sat between the two wheels) + 3 on the side benches | measured; verified SP |
+| Humvee (plain, open) | `vehicles/avf/prefabs/humvee/umhummer.xml`, `umhummeropen.xml` + embedded copies in Vehiclewg30, RoadSegmentM7, level_tutorial | 4 | verified SP |
+| "Hummer UM" (spawn menu) | `vehicles/cars/humvee/hummer.xml` (other `vehicles/cars/humvee` files point at a missing `vehicles/cars/AvertCars/` folder, unused) | 4 | Humvee layout 0.05 higher (identical seat rays); verified SP |
+| UAZ-452 (normal, damaged, lifted, white, emergency) | `vehicles/cars/Soviet Vehicles/uaz452*.xml` | 4; emergency 3 (stretcher) | verified SP |
+| GAZ-24 (sedan, VIP, MP) | `vehicles/cars/GAZ-24 (1968)/gaz24unreleased*.xml` | 4 | verified SP |
+| Sports car (green, damaged, offroad, RampCar) | `vehicles/cars/sportscar/sportcar_green*.xml`, `RampCar.xml` + copy in constructionCivillian12 | 2 | official rigs (`sportscar_green`); verified SP; shift -0.1 → 0 afterwards (cropping) |
+| Yellow SUV (normal, damaged) | `vehicles/cars/SUV/suv_yellow*.xml` | 4 | official rigs (`generic_blue_light`); verified SP |
+| Saloon (red, taxi, damaged) | `vehicles/cars/saloon/salooncar_*.xml` | 4 | official rigs (`generic_sedan_red`); verified SP |
+| Box/Ramp Truck (+ damaged) | `vehicles/cars/truck/truck_{white,ramp}*.xml` | 2 | official rigs (`boxtruck_white`, seat point moved); verified SP |
+| Yellow Dump Truck (+ damaged) | `vehicles/cars/dumptruck/Dump_truck*.xml` | 2 | official rigs (`dumptruck_yellow`); verified SP |
+| Mobile crane | `vehicles/cars/Constuction vehicles/mobile_crane.xml` (spawn menu entry added, §8) | 1 | official rig (`crane_medium_yellow`); verified SP |
+| Blue/Red Tractor | `vehicles/cars/Constuction vehicles/{Blue,Red}tractor.xml` | 1 | official rig (`tractor_teal`); verified SP |
+| Yellow Van (+ damaged, Modified) | `vehicles/cars/van1_yellow/Van*.xml` | 2; Modified 1 (gun stand) | official rigs (`van_yellow`, seat point raised 0.2); verified SP |
+| Station wagon (+ damaged) | `vehicles/cars/stationwagon/station_wagon_brown*.xml` (Destroyed: static wreck) | 4 | official rigs (`generic_stationwagon_blue_dark`); verified SP; damaged shift 0.1 → 0 afterwards (cropping) |
+| Minivan | `vehicles/cars/minivan1/minivan1.xml` | 4 | measured (front seats + rear bench, upright); verified SP |
+| Cadillac sedan (+ damaged, abandoned) | `vehicles/cars/cadillacsd80/*.xml` | 4 (abandoned: 2 + 2 floor; 0.1 forward afterwards, cropping) | measured, tilt 55; verified SP (heads poke through the roof a little, accepted) |
+| Cadillac limo (+ damaged, abandoned) | `vehicles/cars/cadillacfbl80/*.xml` | 4: front + rear bench (abandoned: rear floor) | measured, tilt 55; verified SP (heads poke through the roof a little, accepted) |
+| Mini (+ damaged, Modified) | `vehicles/cars/1969 Mini Cooper S/Mini*.xml` | 4 (Modified: driver + 3 floor) | measured, right-hand drive, tilt 55; verified SP; lowered 0.1 afterwards (empty layer) |
+| VW Beetle (+ damaged, Modified) | `vehicles/cars/1963 VW Beetle/*.xml` | 4 (Modified: driver + 2 floor) | measured, tilt 55; verified SP |
+| Plymouth Fury (+ damaged, Modified) | `vehicles/cars/Plymouth Fury/*.xml` | 4 | measured, tilt 55; verified SP |
+| Dodge Monaco + Highway Police (+ damaged) | `vehicles/cars/1974 Dodge Moncaco/*.xml` | 4 | measured, tilt 55; verified SP; afterwards 0.1 lower and police = civilian seats (cropping) |
+| Jeep Wrangler ("Officer's Jeep", + damaged) | `vehicles/cars/Jeep Wrangler/*.xml` (Willys Jeep folder: static wreck only) | 4 | measured, upright (open top), 0.3 lower for the empty layers (test 1: far above the seats); verified SP |
+| Ural ("SU Transport Truck", + damaged) | `vehicles/cars/ural/ural*.xml` | 4: cab 2 + cargo side benches 2 (facing inward) | measured, upright; verified SP |
+| ZIL-131 fire truck ("Firetruck") | `vehicles/cars/Soviet Vehicles/zil131fire.xml` | 4: crew cab, 2 rows | measured, upright; verified SP |
+| ZIL-131 transport ("AAF Transport truck") | `vehicles/cars/Soviet Vehicles/ZIL131.xml` (+ Vehiclewg33, roadblock9) | 4: cab 2 + cargo side benches 2 | measured, upright; paths fixed (§8); verified SP |
+| ZIL-131 ZU-23 ("AAF Truck Technical") | `vehicles/cars/Soviet Vehicles/ZIL131_ZSU23.xml` | 2 (cab; gunner with the mounted-gun work) | as ZIL131; verified SP |
+| Bus (+ damaged, Modified, JetBus) | `vehicles/cars/bus/bus*.xml`, `jetbus.xml` (Destroyed: static wreck) | 4: driver + front rows (one rear-facing); Modified: driver + 3 floor; JetBus: driver + 2 on the wheel arches (engine fills the cabin) | measured, upright; verified SP |
+| PAZ-3205 ("Soviet Bus", + damaged) | `vehicles/cars/Soviet Vehicles/paz 3205*.xml` (+ event copy VehicleC2, see the enemy row) | 4 | measured, upright; verified SP |
+| American semi (+ damaged, Modified, Special) | `vehicles/cars/semitruck-us/Semi*.xml` (Destroyed: static wreck) | 4: cab 2 + 2 on the lower sleeper bunk (facing the middle) | measured, upright; verified SP |
+| Flathead semi (+ damaged, Mod) | `vehicles/cars/semitruck-flathead/Semi*.xml` (spawn menu "Semi Flathead" added, §8) | 2 (no room for more: engine hump, bunks 0.7 m apart) | measured, upright; verified SP |
+| SportsCar offroad | `vehicles/cars/sportscar/sportsoffroad.xml` + copy in constructionCivillian12 | 2 | official rigs (`sportscar_green`, overlap 0.78); verified SP |
+| Cement truck | `vehicles/cars/Constuction vehicles/cement_truck.xml` (road spawner Vehiclewg42; spawn menu "Cement Truck" added, §8) | 2 | measured, upright; verified SP |
+| Tractor From Hell ("TRACTOR") | `vehicles/cars/Constuction vehicles/tractorFromHell.xml` | 1 (like the official tractor) | measured, upright; verified SP |
+| Volga (white) | `vehicles/cars/Gaz24/volgawhite.xml` (road spawner Vehiclewg18; spawn menu "Volga" added, §8; Destroyed: wrecks) | 4 | measured, tilt 55; verified SP |
+| Microcar (+ damaged) | `vehicles/cars/microcar/microcar*.xml` (road spawners Vehiclewg38, wb30; spawn menu "Microcar" added, §8) | 2 | measured, tilt 55; verified SP |
+| Monster Compact | `vehicles/cars/microcar/monstercompact.xml` | 4 (rear cramped) | measured, tilt 55; verified SP |
+| Ford Falcon XB GT (+ damaged) | `vehicles/cars/MadMax2/1973 Ford Falcon XB GT*.xml` (road spawners Vehiclewg21, wb19; spawn menu "Ford Falcon" added, §8; Destroyed: wreck) | 4 (right-hand drive; rear cramped) | measured, tilt 55; verified SP |
+| Pursuit Special | `vehicles/cars/MadMax2/Pursuit Special.xml` | 4: driver, a sideways seat on the left door (ledge + door panel, faces the driver; user spotted it in-game), 2 on the rear floor | measured; verified SP |
+| Military truck (UM Damaged; plain, Damaged) | `vehicles/cars/military_truck/Milltary_Truck*.xml` (UM Damaged in roadblocks 8/9; plain one now spawn menu "Military Truck", §8; Destroyed: wrecks) | 4: cab 2 + 2 on the cargo bed floor (no benches) | measured, upright; verified SP |
+| RV MethLab ("Bad RV") | `vehicles/cars/RVMethLab/MethLab.xml` (road spawner Vehiclewg26; spawn menu path fixed, §8; MethLab Enemy: unused) | 4: cab 2 + 2 on the rear bench (facing the aisle) | measured, upright; verified SP |
+| BugZilla ("Monster Bug") | `vehicles/cars/1963 VW Beetle BugZilla/BugZilla.xml` (Destroyed: wreck) | 3: driver + 2 floor (stripped; engine/fuel tank in the back) | measured, tilt 55; verified SP |
+| Golf cart + "Nuclear Golfcart" | `vehicles/cars/Based Vehicles/golf_cart*.xml` (road spawner Vehiclewg45; Bomb in the spawn menu) | 2 | measured, upright (wheel far ahead: arms stretched); verified SP |
+| Small red boat | `vehicles/cars/Based Vehicles/smallboat_red.xml` (road spawner vehicleS13; spawn menu "Small Boat" added, §8) | 4: stern (driver, no steering wheel), middle seat 2, bow 1 facing back | measured, upright; verified SP |
+| "Shed?" + Garage | `vehicles/cars/Based Vehicles/SHED.xml`, `GARAGE.xml` (vehicleS11/S12; Garage copy in dev/levels/test.xml) | 4: driver on the chair + 3 on the floor | measured, upright; verified SP |
+| Wheeled Cockpit | `vehicles/cars/Based Vehicles/wheeledcockpit.xml` (spawn menu; vehicleS10) | 2 (pilot + copilot; no yoke in the model) | measured, upright; verified SP |
+| AS350 helicopter: AAF Attack Heli (MILITARY), Insurgent Attack Heli, parked copies, CIV (gore map), VIP | `vehicles/aircraft/AS350/AS350_*.xml` (+ 2 copies in dev/levels/test_misc.xml). Not a vehicle in the original (Heli.lua teleported the pilot every frame): add_seats.py `WRAP_VEHICLE` wraps the Heli.lua `<script>` content in `<vehicle name="AS350" tags="player_nogears player_nosteeringwheel" sound="0" topspeed="0" acceleration="0">` (no car sounds or driving animations) and `VEHICLE_EXITS` adds an `exit` location beside the pilot door | 4: pilot left front (the AI pilot ragdoll sits right) + 3 on the rear bench; Insurgent: no left front cushion (open door-gun side), third bench place 0.1 lower | measured, upright, nose at body +z (rigs turned 180); verified SP 2026-11-13 |
+| LeBoat (sailboat) | `vehicles/cars/Based Vehicles/sailboat.xml` (spawn menu; vehicleS14) | 4: driver standing at the left ship's wheel (user request; first version sat between the two wheels) + 3 on the side benches | measured; verified SP |
 | Enemy/event copies: AAF Truck (VehicleAAF1, ZIL-131), Civillian Jeep (VehicleC1, Jeep), Civillian Bus (VehicleC2, PAZ), Insurgent Ambush 8 (VehicleD8, Ural) | `prefabs/spawnables/enemy vehicles/Vehicle{AAF1,C1,C2,D8}.xml` (inline copies) | as their models | those models' layouts (AAF1, C1 shifted 0.05-0.1 m); seat rays identical with the crew hidden; awaiting test |
-| Insurgent chase cars: pickup, SUV, sport ("Insurgent chase vehicle 1/2/3") | `Vehicles/Enemy Car/{Pickup,SUV,Sport} Enemy.xml` (one `Car.vox`, several bodies; SUV copy in level_tutorial; overturned SUV in roadblock8 is a wreck without `<vehicle>`) | back places where the enemy crews of the copies sit (user request 2026-11-09), all normal seats so friendly NPCs use them: pickup 4: cab 2 + 2 behind the cab facing back (toolbox, low reclined place on the left; as VehicleD5); SUV 6: front 2 + rear bench 2 + one on each cargo wheel arch facing inward (as D3/D6; knees on the crate edge); sport 3: 2 + one low in the tray facing back (as D1/D4) | measured, upright (low back places tilt 55); verified SP |
-| Chase/ambush copies: VehicleD2/D5/DD3 (pickup), D3/D6/DD1 (SUV, + copy in test.xml), D1/D4/DD2/DF1 (sport) | `prefabs/spawnables/enemy vehicles/Vehicle{D*,DD*,DF1}.xml` | as above | the chase cars' layouts shifted (whole car moved inside the `<vehicle>`: pickup 0.7/-0.8/1.9, SUV 0.9/-0.9/2.2, sport 0.5/-0.8/2.4; body voxels identical after the shift); verified SP |
-| BRDM-2 (Insurgent Ambush 7) | `prefabs/spawnables/enemy vehicles/VehicleD7.xml` (in play), `Vehicles/BRDM/brdm.xml` (was test_vehicle.xml only; spawn menu "BRDM-2" added, §8; same body placement; its stray civilian spawn point removed, §8; `brdmwrecked.xml`: wreck without `<vehicle>`) | 6: driver + commander on the front bench, 4 on the troop compartment's side benches facing inward (the D7 crew's places) | measured, upright (driver's knees just under the wheel rim, tight cab); verified SP |
-| AVF offroad: "Offroad Technical" (+ Open), AAF Jeep (VehicleAAF2), "GMG Offroad" (VehicleM22), "WMIK Technical" (MILAN; VehicleM23) | `avf/prefabs/technicals/offroad{,-open,_GMG,_WMIK_MILAN}.xml`, `prefabs/spawnables/enemy vehicles/VehicleAAF2.xml`; inline copies in roadblock3 and test.xml (marked by a `path=` tag on the `<vehicle>`, not an `instance=` group: add_seats.py now finds those too; identical to their sources) | 4: front 2 + rear bench 2 (the AAF2 crew's places); WMIK 2 (right-hand drive; weapons bed). GMG / WMIK: + standing gunner place (mounted guns) | measured, upright; rear seats 0.2 from the backrest (knees clear the front seats); verified SP |
-| AVF technical pickup: "Pickup Truck", "Pickup Truck Lifted", Pickup Damaged (wb34), "AAF Pickup Truck technical" (DShK), SPG-9 (M4), ZU-23 (M24) | `avf/prefabs/technicals/{Pickup Truck,Pickup Lifted,Pickup Damaged,technical_DSHK,technical_SPG9,technical_ZU_23}.xml` (DShK copies in roadblock3, test.xml) | pickups 4: cab bench 2 + 2 sitting on the bed side rails facing inward; technicals 2 (cab) + standing gunner place (ZU-23: seated) | measured (model = modified official pickup_red, overlap 0.89; its bench sits 0.3 further forward and 0.1 higher, so the official rigs don't fit as they are). Cab smaller than the player (0.7 m cushion to roof): test 1 with the official reclined pose (seat rot 70, low head point, `head=` argument): head still out, looked silly; now upright, head through the roof accepted (user 2026-11-09); verified SP |
-| ZIS-151 (road spawners Vehiclewg28; Damaged wb26; Katyusha VehicleM2; spawn menu entries added, §8) | `avf/prefabs/ZIS-151/{ZIS-151,ZIS-151 Damaged,ZIS-151_Katyusha}.xml` (Katyusha: the launcher is a second `<vehicle>` "bm-14" in the same file; the two Destoryed files: wrecks; Cabin, ZIS-150, Katyusha Damaged: referenced nowhere) | ZIS-151 4: bench 2 + 2 on the bed floor; Damaged 4: bench 2 + 2 on the cargo box floor; Katyusha 2 (cab; launcher with the mounted-gun work) | measured, upright (heads ~0.1 through the cab roof, as the Cadillacs); steering wheel = top of a tilted column voxbox; verified SP |
-| Humvee .50 cal ("Hummer With 50 Cal", VehicleM1) | `avf/prefabs/humvee/umhummer With 50 Cal.xml` | 4 (Humvee layout, same body placement; gunner with the mounted-gun work) | as the Humvee; turret clear of the seats; verified SP |
-| Willys Jeep (tutorial; spawn menu entry added, §8) | `avf/prefabs/Weaponised vehicles/Willys Jeep.xml` + drivable copy in level_tutorial.xml (same placement; `Willy's Destroyed.xml` there is a wreck) | 4: front 2 + rear bench 2 | measured, upright; undersized model (v1 eye 0.5 above the seat, tiny wheel): knees into the dashboard, accepted; verified SP |
-| BMP-1, BMP-1P, BMP-2 (military spawners VehicleM18/M19/M20; spawn menu entries added, §8) | `avf/prefabs/bmp/{BMP-1 d,BMP-1P d,BMP-2 D}.xml` (three hull models, same interior at the same place) | 5: driver (front left, levers) + 4 troops on the rear central bench, back to back facing the hull sides; commander/gunner in the turret with the mounted-gun work | measured, upright; vehicle origin high (interior y negative). Driver: hips ~0.1 into the small cushion (higher puts the head in the hatch); troops: heads at the roof, knees near the wall racks; verified SP |
-| BMP-3 (spawn menu; military spawner VehicleM21) | `avf/prefabs/bmp/BMP-3 d.xml` | 5: driver in the middle of the front row (controls there, as in a real BMP-3; the v1 eye point `player` was on the left seat, moved to the middle, §8) + the two front-row side seats + 2 on the rear bench; the two seats behind the turret left out (narrow tubs with a raised lip); turret crew with the mounted-gun work | measured, upright; heads at the roof; verified SP |
-| T-72 ("T-72" = T72B3 mod 2016, "T-72A"; T72B, T72B3 obj 1989, T72BA from military spawners VehicleM3, M14-M17) | `avf/prefabs/t72_desert/*.xml` (hull identical in all five) | 5: driver, reclined as in the official military_tank_green (seat rot 80, head point 0.45 up / 0.25 back; the hull is 0.8 m high inside) + 4 riders on the engine deck edges facing outward, legs over the side (user request 2026-11-09; `tank_riders()`, NPCs ride too); gunner place in the turret (mod 2016, T-72A) | measured; head under the roof, right forearm at the controls; verified SP (heavy frame drops while driving, §10) |
-| T-54 / T-55 ("T-54 AAF", "T-55A AAF" = Alashya; Desert versions from military spawners VehicleM10-M13) | `avf/prefabs/T-54 55/{T-54-3,T-55A} {Alashya,Desert}.xml` | 5: reclined driver (front left, T-72 pose) + 4 riders facing outward with legs over the side, on the fender fuel tanks / stowage boxes / fender (each spot measured) | measured; turret crew with the mounted-gun work; a rider's head can meet the gun barrel when the turret turns sideways; verified SP |
-| T-34-85 ("T-34"; military spawner VehicleM9) | `avf/prefabs/T-34/T-34-85.xml` | 5: reclined driver (front left, under the sloped front plate) + 4 riders on the engine deck side ledges facing outward, feet on the fenders, thighs over the external fuel tanks | measured; turret crew with the mounted-gun work; verified SP |
-| M-51 Super Sherman ("M-51 Sherman"; military spawner VehicleM8) | `avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.xml` | 5: upright driver (room to sit up) + 4 riders on the rear deck edges facing outward (the big turret sweeps the hull top) | measured; turret crew with the mounted-gun work; verified SP |
+| Insurgent chase cars: pickup, SUV, sport ("Insurgent chase vehicle 1/2/3") | `vehicles/cars/Enemy Car/{Pickup,SUV,Sport} Enemy.xml` (one `Car.vox`, several bodies; SUV copy in level_tutorial; overturned SUV in roadblock8 is a wreck without `<vehicle>`) | back places where the enemy crews of the copies sit (user request 2026-11-09), all normal seats so friendly NPCs use them: pickup 4: cab 2 + 2 behind the cab facing back (toolbox, low reclined place on the left; as VehicleD5); SUV 6: front 2 + rear bench 2 + one on each cargo wheel arch facing inward (as D3/D6; knees on the crate edge); sport 3: 2 + one low in the tray facing back (as D1/D4) | measured, upright (low back places tilt 55); verified SP |
+| Chase/ambush copies: VehicleD2/D5/DD3 (pickup), D3/D6/DD1 (SUV, + copy in dev/levels/test.xml), D1/D4/DD2/DF1 (sport) | `prefabs/spawnables/enemy vehicles/Vehicle{D*,DD*,DF1}.xml` | as above | the chase cars' layouts shifted (whole car moved inside the `<vehicle>`: pickup 0.7/-0.8/1.9, SUV 0.9/-0.9/2.2, sport 0.5/-0.8/2.4; body voxels identical after the shift); verified SP |
+| BRDM-2 (Insurgent Ambush 7) | `prefabs/spawnables/enemy vehicles/VehicleD7.xml` (in play), `vehicles/cars/BRDM/brdm.xml` (was dev/levels/test_vehicle.xml only; spawn menu "BRDM-2" added, §8; same body placement; its stray civilian spawn point removed, §8; `brdmwrecked.xml`: wreck without `<vehicle>`) | 6: driver + commander on the front bench, 4 on the troop compartment's side benches facing inward (the D7 crew's places) | measured, upright (driver's knees just under the wheel rim, tight cab); verified SP |
+| AVF offroad: "Offroad Technical" (+ Open), AAF Jeep (VehicleAAF2), "GMG Offroad" (VehicleM22), "WMIK Technical" (MILAN; VehicleM23) | `vehicles/avf/prefabs/technicals/offroad{,-open,_GMG,_WMIK_MILAN}.xml`, `prefabs/spawnables/enemy vehicles/VehicleAAF2.xml`; inline copies in roadblock3 and dev/levels/test.xml (marked by a `path=` tag on the `<vehicle>`, not an `instance=` group: add_seats.py now finds those too; identical to their sources) | 4: front 2 + rear bench 2 (the AAF2 crew's places); WMIK 2 (right-hand drive; weapons bed). GMG / WMIK: + standing gunner place (mounted guns) | measured, upright; rear seats 0.2 from the backrest (knees clear the front seats); verified SP |
+| AVF technical pickup: "Pickup Truck", "Pickup Truck Lifted", Pickup Damaged (wb34), "AAF Pickup Truck technical" (DShK), SPG-9 (M4), ZU-23 (M24) | `vehicles/avf/prefabs/technicals/{Pickup Truck,Pickup Lifted,Pickup Damaged,technical_DSHK,technical_SPG9,technical_ZU_23}.xml` (DShK copies in roadblock3, dev/levels/test.xml) | pickups 4: cab bench 2 + 2 sitting on the bed side rails facing inward; technicals 2 (cab) + standing gunner place (ZU-23: seated) | measured (model = modified official pickup_red, overlap 0.89; its bench sits 0.3 further forward and 0.1 higher, so the official rigs don't fit as they are). Cab smaller than the player (0.7 m cushion to roof): test 1 with the official reclined pose (seat rot 70, low head point, `head=` argument): head still out, looked silly; now upright, head through the roof accepted (user 2026-11-09); verified SP |
+| ZIS-151 (road spawners Vehiclewg28; Damaged wb26; Katyusha VehicleM2; spawn menu entries added, §8) | `vehicles/avf/prefabs/ZIS-151/{ZIS-151,ZIS-151 Damaged,ZIS-151_Katyusha}.xml` (Katyusha: the launcher is a second `<vehicle>` "bm-14" in the same file; the two Destoryed files: wrecks; Cabin, ZIS-150, Katyusha Damaged: referenced nowhere) | ZIS-151 4: bench 2 + 2 on the bed floor; Damaged 4: bench 2 + 2 on the cargo box floor; Katyusha 2 (cab; launcher with the mounted-gun work) | measured, upright (heads ~0.1 through the cab roof, as the Cadillacs); steering wheel = top of a tilted column voxbox; verified SP |
+| Humvee .50 cal ("Hummer With 50 Cal", VehicleM1) | `vehicles/avf/prefabs/humvee/umhummer With 50 Cal.xml` | 4 (Humvee layout, same body placement; gunner with the mounted-gun work) | as the Humvee; turret clear of the seats; verified SP |
+| Willys Jeep (tutorial; spawn menu entry added, §8) | `vehicles/avf/prefabs/Weaponised vehicles/Willys Jeep.xml` + drivable copy in levels/level_tutorial.xml (same placement; `Willy's Destroyed.xml` there is a wreck) | 4: front 2 + rear bench 2 | measured, upright; undersized model (v1 eye 0.5 above the seat, tiny wheel): knees into the dashboard, accepted; verified SP |
+| BMP-1, BMP-1P, BMP-2 (military spawners VehicleM18/M19/M20; spawn menu entries added, §8) | `vehicles/avf/prefabs/bmp/{BMP-1 d,BMP-1P d,BMP-2 D}.xml` (three hull models, same interior at the same place) | 5: driver (front left, levers) + 4 troops on the rear central bench, back to back facing the hull sides; commander/gunner in the turret with the mounted-gun work | measured, upright; vehicle origin high (interior y negative). Driver: hips ~0.1 into the small cushion (higher puts the head in the hatch); troops: heads at the roof, knees near the wall racks; verified SP |
+| BMP-3 (spawn menu; military spawner VehicleM21) | `vehicles/avf/prefabs/bmp/BMP-3 d.xml` | 5: driver in the middle of the front row (controls there, as in a real BMP-3; the v1 eye point `player` was on the left seat, moved to the middle, §8) + the two front-row side seats + 2 on the rear bench; the two seats behind the turret left out (narrow tubs with a raised lip); turret crew with the mounted-gun work | measured, upright; heads at the roof; verified SP |
+| T-72 ("T-72" = T72B3 mod 2016, "T-72A"; T72B, T72B3 obj 1989, T72BA from military spawners VehicleM3, M14-M17) | `vehicles/avf/prefabs/t72_desert/*.xml` (hull identical in all five) | 5: driver, reclined as in the official military_tank_green (seat rot 80, head point 0.45 up / 0.25 back; the hull is 0.8 m high inside) + 4 riders on the engine deck edges facing outward, legs over the side (user request 2026-11-09; `tank_riders()`, NPCs ride too); gunner place in the turret (mod 2016, T-72A) | measured; head under the roof, right forearm at the controls; verified SP (heavy frame drops while driving, §10) |
+| T-54 / T-55 ("T-54 AAF", "T-55A AAF" = Alashya; Desert versions from military spawners VehicleM10-M13) | `vehicles/avf/prefabs/T-54 55/{T-54-3,T-55A} {Alashya,Desert}.xml` | 5: reclined driver (front left, T-72 pose) + 4 riders facing outward with legs over the side, on the fender fuel tanks / stowage boxes / fender (each spot measured) | measured; turret crew with the mounted-gun work; a rider's head can meet the gun barrel when the turret turns sideways; verified SP |
+| T-34-85 ("T-34"; military spawner VehicleM9) | `vehicles/avf/prefabs/T-34/T-34-85.xml` | 5: reclined driver (front left, under the sloped front plate) + 4 riders on the engine deck side ledges facing outward, feet on the fenders, thighs over the external fuel tanks | measured; turret crew with the mounted-gun work; verified SP |
+| M-51 Super Sherman ("M-51 Sherman"; military spawner VehicleM8) | `vehicles/avf/prefabs/M-51 Super Sherman/M-51 Super Sherman.xml` | 5: upright driver (room to sit up) + 4 riders on the rear deck edges facing outward (the big turret sweeps the hull top) | measured; turret crew with the mounted-gun work; verified SP |
 | Refugee UAZ (VehicleC3, debug "Refugee Van") | `prefabs/spawnables/enemy vehicles/VehicleC3.xml` | 4 (UAZ layout) | body rebuilt (§8), seated; event behaviour shelved (§9) |
 
 Inline copies done last (2026-11-09): Willys in the spawners Vehiclewg9 / VehicleM7 (the jeep 0.05 left / 0.3 up),
@@ -460,7 +460,7 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
 
 ### Steering wheels
 * UAZ-452 (5 files): the original built the wheel as a fifth `<wheel>` (turned with steering but spun freely after
-  crashes). Now a `steer`-tagged body part turned by `scripts/SteeringWheel.lua` (server, `SetShapeLocalTransform`,
+  crashes). Now a `steer`-tagged body part turned by `vehicles/SteeringWheel.lua` (server, `SetShapeLocalTransform`,
   steering × 180°; axis = the shape's thinnest voxel dimension, pivot = its bounding-box centre;
   `convert_steering.py`, test_steeringwheel.lua) [verified in-game]. Other vehicles: tag the wheel part `steer` and
   wrap the `<vehicle>` in the script.
@@ -470,16 +470,16 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
   it positive for left). Kept as a joint (not SteeringWheel.lua).
 
 ### Other vehicle content
-* `scripts/Game/PlayerVehicleSeat/` (fake driver model for the v1 invisible player) is no longer loaded: v2 draws
-  the driver itself (user saw two bodies). Still referenced by test.xml / test_vehicle.xml only.
-* AVF vehicles (mounted guns, cannons, launchers, tanks: `avf/`). In v1 each vehicle's XML tags its gun parts and a
+* `vehicles/PlayerVehicleSeat/` (fake driver model for the v1 invisible player) is no longer loaded: v2 draws
+  the driver itself (user saw two bodies). Still referenced by dev/levels/test.xml / dev/levels/test_vehicle.xml only.
+* AVF vehicles (mounted guns, cannons, launchers, tanks: `vehicles/avf/`). In v1 each vehicle's XML tags its gun parts and a
   config `.lua` describes the gun (`vehicleParts.guns.mainCannon` = name, magazines, RPM, reload, dispersion,
-  sounds); `avf/scripts/avf_custom.lua` copied that onto tags and the external AVF mod (Workshop 2400346027, no MP
+  sounds); `vehicles/avf/scripts/avf_custom.lua` copied that onto tags and the external AVF mod (Workshop 2400346027, no MP
   version; "ERROR: AVF MOD NOT ENABLED" without it) did everything else. Frameworks considered (2026-11-12): **TABS
   Vehicle Framework** (3148138736) cannot be used (all ~125 scripts v1; its README forbids copying or modifying it);
   **AVF** (elboydo) allows reuse with credit ("no copyright but please give credit", main.lua) → its shell code is
   ported, credited (also in the mod's credits at publish).
-  * **`scripts/MountedGun.lua`** (own, v2; design user-approved 2026-11-09): a library each vehicle config includes
+  * **`vehicles/MountedGun.lua`** (own, v2; design user-approved 2026-11-09): a library each vehicle config includes
     instead of avf_custom.lua. Config = `#version 2` + player.lua + MountedGun.lua + optional hooks:
     `MountedGunConfig` (own gun table instead of `vehicleParts.guns.mainCannon`), `MountedGunGunTag` /
     `MountedGunEmitterTag` (default `mainCannon` / `mainCannon_emitter`), `MountedGunSound` (else the weapon's AVF
@@ -545,8 +545,8 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
     vehicle (distances + 1 m) → `MG_Retire` once: gunner off, the gunner rig deleted, prompt removed (its debug line
     removed 2026-11-13, user). (IsShapeBroken / origin-distance checks retired working guns.)
   * AVF shells: `tools/porting/history/port_avf.py` (rebuild; base `tools/porting/history/avf_base/` = AVF V-3.0.2,
-    unmodified) → `scripts/avf/AVF_Shells.lua` (AVF's common, ammo, weapons, globalConfig, handlers; server simulation;
-    client visuals); hand-written `scripts/avf/AVF_Glue.lua`. Server: flight, penetration, payloads, spall / shrapnel,
+    unmodified) → `vehicles/avf_port/AVF_Shells.lua` (AVF's common, ammo, weapons, globalConfig, handlers; server simulation;
+    client visuals); hand-written `vehicles/avf_port/AVF_Glue.lua`. Server: flight, penetration, payloads, spall / shrapnel,
     world effects, NPC damage (AVF's `mors_longa_damage` registry hook), player damage. Clients: shells drawn from
     the spawn event (guided ones resynced every 0.1 s, `client.avfShellSync`), impact / explosion visuals as events
     (`client.avfFx`, `client.avfShell`), rocket exhaust and flight loop. The gunner's client counts rate / ammo and
@@ -562,7 +562,7 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
     ~46 SpawnFire per HE shell. Port differences (§8): 256 shell slots per gun (AVF 1050 shared); spall / shrapnel
     not drawn; v1 particle calls approximated (`AVF_LegacyParticle`); drawn shells ignore AVF's per-tick dispersion.
     Kept from AVF: the 2A42's second shell type inherits the first's values (3UOF8 shows as AP).
-  * `avf/scripts/Immersive_Tank.lua` (tank damage: cook-off, engine failure, fuel fires, blow-outs; outer script of
+  * `vehicles/avf/scripts/Immersive_Tank.lua` (tank damage: cook-off, engine failure, fuel fires, blow-outs; outer script of
     ~90 AVF vehicle XMLs): rebuilt by `port_immersive.py` from 9dde6dd (test_immersive_tank.lua); its logic runs on
     the server; the effect functions run on every client from one event each (`ITC_*` on the server → `ITR_*` on a
     client), other visual calls recorded and replayed (`client.itFx`); masterScriptRemoverAPI dropped.
@@ -570,9 +570,9 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
 
     | Vehicle (spawn menu; spawner) | Config | Weapon | Who fires |
     |---|---|---|---|
-    | AAF Pickup Truck technical (+ roadblock3 / test.xml copies) | `technicals/technical_dshk.lua` | DShK 12.7 mm | gunner standing, rear of the bed |
+    | AAF Pickup Truck technical (+ roadblock3 / dev/levels/test.xml copies) | `technicals/technical_dshk.lua` | DShK 12.7 mm | gunner standing, rear of the bed |
     | Hummer With 50 Cal (VehicleM1); Willys in VehicleM7 | `Weaponised vehicles/Willys Jeep 50 Cal.lua` | M2 | gunner standing: centre console, head out of the roof ring / behind the rear bench |
-    | Van Modified | `Weaponised vehicles/Van PKM.lua` | PKM (`MountedGunSightAt = 1`) | gunner on the cargo floor, facing left |
+    | Van Modified | `Weaponised vehicles/cars/Van PKM.lua` | PKM (`MountedGunSightAt = 1`) | gunner on the cargo floor, facing left |
     | AAF Pickup Truck ZU-23 (VehicleM24; VehicleM25 points at a missing path, original-mod); AAF Truck Technical (ZIL) | `technicals/ZSU-23-2.lua` | ZU-23-2, twin 23 mm | gunner seated on the mount |
     | BMP-1, BMP-1P | `bmp/BMP-1.lua` | 73 mm 2A28; 1P: 9M133 launcher on X | gunner seated in the turret |
     | BMP-2 | `bmp/BMP-2.lua` | 30 mm 2A42, coax, 9M133M-2 launcher on X | gunner seated in the turret |
@@ -584,13 +584,13 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
     | WMIK Technical | `technicals/Offroad_WMIK.lua` | MILAN, own config (§8) | gunner standing on the weapons bed |
     | GMG Offroad (VehicleM22) | `technicals/Offroad_armed.lua` | AVF MK-19 grenades, own config (§8) | gunner standing in the roof ring, held there (`MountedGunHoldGunner`); verified SP |
     | AAF Pickup Truck SPG-9 (VehicleM4) | `technicals/technical_spg9.lua` | PG-9 / OG-9 | gunner standing left of the tube; verified SP |
-    | Kornet tripod, AGS-30 tripod (RoadSegmentL1) | `avf/scripts/simple_avf_tank.lua` | AVF 9M133 / AGS-30 (no config) | gunner standing behind it (user 2026-11-13 "Stand at it"; Kornet: hands raised to the tube, the model is ~2.7 m tall); no longer vehicles (one prompt, on the gun); AGS-30 hands as laid out; verified SP except AGS-30 pitch (shelved, §9) |
+    | Kornet tripod, AGS-30 tripod (RoadSegmentL1) | `vehicles/avf/scripts/simple_avf_tank.lua` | AVF 9M133 / AGS-30 (no config) | gunner standing behind it (user 2026-11-13 "Stand at it"; Kornet: hands raised to the tube, the model is ~2.7 m tall); no longer vehicles (one prompt, on the gun); AGS-30 hands as laid out; verified SP except AGS-30 pitch (shelved, §9) |
 
     Not converted (loaded nowhere): other T-72 / T-90 / TOS-1 / BMD-2 / Cromwell / ZSU-23-4 configs, the offroad
     GPMG / NSV / M2 guns (share Offroad_armed.lua; their gun tags differ: no gun found), the technical UB-16 / BM-14 /
-    Type 63 configs and the stand-alone turret configs (`avf/prefabs/turrets/*.lua`).
+    Type 63 configs and the stand-alone turret configs (`vehicles/avf/prefabs/turrets/*.lua`).
 * Small vehicle scripts (all v2, hand-converted, verified SP 2026-11-09 unless noted):
-  * `Vehicles/!library/scripts/door.lua` (28 xmls; test_door.lua): server, door-tagged joints motored shut while any
+  * `vehicles/cars/!library/scripts/door.lua` (28 xmls; test_door.lua): server, door-tagged joints motored shut while any
     player (driver or passenger) is in the vehicle, free otherwise; hinges without a `door` tag (insurgent chase cars,
     18 of 29 placements) unaffected, as in v1.
   * `drive.lua` (Cadillac sedans' extra drive joints), `steer.lua` (Cadillac / minivan steering wheel joint),
@@ -601,11 +601,11 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
     shut when let go; hinged steering wheel from the driver's steering; the door-open beep stays off as in v1: no XML
     sets `doornotification` and its sound never shipped), `lampa.lua` (interior lights), `policelightsF.lua` (militia:
     F toggles the light bar, blinking on the server), `radio_car2.lua` (siren switch); `radio_car.lua` used nowhere.
-  * JetBus `Vehicles/bus/jet.lua` (test_jet.lua): server = throttle from the driver's Shift (idle 0.1 while driving,
+  * JetBus `vehicles/cars/bus/jet.lua` (test_jet.lua): server = throttle from the driver's Shift (idle 0.1 while driving,
     1 boosting; v1: the host), push in server.update, turbine, smoke, damage / explosion; client = the throttle bar for
     whoever is in the bus (`shared.jetThrottle` / `jetTarget`). `lastJetHealth` now set in init (v1 compared nil).
-  * `Vehicles/minivan1/autobreakRemover.lua`: server (removes the bodies' `autobreak` tag); verified SP.
-  * Left v1: `scripts/bike.lua` (dirt bikes, test.xml only).
+  * `vehicles/cars/minivan1/autobreakRemover.lua`: server (removes the bodies' `autobreak` tag); verified SP.
+  * Left v1: `vehicles/bike.lua` (dirt bikes, dev/levels/test.xml only).
 * Helicopters: AS350 v2 (§7). CH-47 (spawn menu, road VehicleM5 "FunkyFlight") and Hind (spawn menu) stay v1 for now
   (user, 2026-11-13): dead in MP.
 
@@ -613,13 +613,13 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
 
 ## 7. Systems (how the port works)
 
-Level entry points: `main.xml` (menu) → `level.xml` / `level_no_shadow.xml` → `level_instance.xml`; scripts in
-`level_scripts.xml` (also `level_scripts_spawn.xml`, `level_tutorial.xml`, `level_horde.xml`: keep the four in sync).
-Libraries: `scripts/TDSU/tdsu.lua` (+ `compat.lua`, which replaced UMF), `Settings.lua`/`Settings_Table.lua`
-(`savegame.mod.settings` via `util.structured_table`, reads the registry live), `Config.lua` (debug menu library;
-level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
+Level entry points: `main.xml` (menu) → `levels/level.xml` / `levels/level_no_shadow.xml` → `levels/level_instance.xml`; scripts in
+`levels/level_scripts.xml` (also `levels/level_scripts_spawn.xml`, `levels/level_tutorial.xml`, `levels/level_horde.xml`: keep the four in sync).
+Libraries: `lib/TDSU/tdsu.lua` (+ `compat.lua`, which replaced UMF), `lib/Settings.lua`/`lib/Settings_Table.lua`
+(`savegame.mod.settings` via `util.structured_table`, reads the registry live), `lib/Config.lua` (debug menu library;
+level script `ui/ConfigMenu.lua`), `lib/Automatic.lua`.
 
-### World generation (`Procedural/`)
+### World generation (`world/generation/`)
 * `GenerateRoad.lua` (server): the **furthest living player** drives generation, the world shift (~every 200 m,
   moves all players; vehicles by body) and the distance counter (`savegame.mod.distanceProgressed`, never decreases,
   not updated for 2 frames after a shift). `TeleportStragglers`: a living player > 150 m behind the leader for 3 s is
@@ -630,7 +630,7 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
   (v1-port bug that once deleted the whole start area).
 * Spawners: RandomEnemy, RandomVehicleEnemy (+ debug "Vehicle Events"), RandomVehicle/Building/Loot/RoadSign,
   WaterMover (nearest player), randomloot (crate prompt per player). Enemy/convoy cars: `chaseOperator*.lua`,
-  `ConvoyOperatorTransport.lua` (server, target = nearest living player; helpers `scripts/vehicleOperatorCoop.lua`).
+  `ConvoyOperatorTransport.lua` (server, target = nearest living player; helpers `vehicles/operators/vehicleOperatorCoop.lua`).
 * Playable world is ~400 m long (shadow volume 400x25x200), which is why the shift and the straggler limits exist.
 * `fix_missing_scripts.py` repointed 76 XML references to never-existing scripts to `missing_script_stub.lua`.
   Leftover log noise: `<instance file="MOD"/>` (empty) in RoadSegment1237/4/5.xml ("Could not find prefab");
@@ -640,7 +640,7 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
   dropped it).
 
 ### NPCs (GoreNPCs)
-* One manager script `GoreNPCs/scripts/goreai_main.lua` (spawned once by the first of 152 NPC prefabs'
+* One manager script `npcs/GoreNPCs/scripts/goreai_main.lua` (spawned once by the first of 152 NPC prefabs'
   `goreai_initializer.lua`, tagged `nodelete`). AI on the **server**; Constrain* (gun pointing/holding) in
   server.update. Each NPC's target = nearest living player it can see (`systems/goreai_players.lua`: `GoreP`,
   `PlayerPos` set per NPC; NPC bullets check every player's hitboxes).
@@ -682,7 +682,7 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
 * Performance: ~30 NPCs at once ≈ 18 FPS (512 active bodies), same as v1; possible later optimization.
 * Other NPC scripts: SleepingRagdoll (wakes for any player), StandingRagdoll (shop trader; looks at the nearest
   player; killing it halves the nearest player's money), `fakegore.lua` crew stand-ins in vehicles / helicopters and
-  the limp sitters they turn into (`main/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua`, v2 2026-11-13,
+  the limp sitters they turn into (`vehicles/aircraft/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua`, v2 2026-11-13,
   test_sitter.lua: ragdoll logic on the server, bleeding particles from `shared.bl<body>` on the clients; P and the
   kill-all key for any player; verified SP).
 * Converted by `tools/porting/history/convert_goreai.py` (base 6c28435, frozen; also gunfunctions.lua,
@@ -690,11 +690,11 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
   controller, sitting.
 
 ### Player: health, inventory, hitboxes (Phase 2 design, verified)
-* Health (`HealthSystem/AdvancedHealthScript.lua`) and inventory (`script/inventory.lua`) run on each player's
+* Health (`player/HealthSystem/AdvancedHealthScript.lua`) and inventory (`player/inventory.lua`) run on each player's
   **client**. The server does world ops only: pickups (`server.invTake`, first request wins), drops, tool enabling
   (per player: enable-all setting OR always-allowed list OR wanted by that player's inventory; covers ListKeys ∪
   requested ids, since melee ids are not in ListKeys), `SetPlayerHealth`, walking speed (re-applied every tick).
-* `scripts/PlayerHitboxes.lua` (server): the host keeps the level's six `hitbox` triggers, other players get a
+* `player/PlayerHitboxes.lua` (server): the host keeps the level's six `hitbox` triggers, other players get a
   spawned set (`hitbox_player=<id>`); `QueriedDamage` → `client.hitboxDamage`; health uses local `localhitbox`
   triggers. Death: one death request + one ragdoll (`server.healthDied`), death camera `launchragdoll.lua` (client).
   Because SetPlayerHealth is a ServerCall, the client keeps a "dying" state (no reheal until the engine health
@@ -704,31 +704,31 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
 
 ### Menu, tutorial, debug menu
 * Main menu (`main.xml`, `patches/convert_menu.py`): client UI; level starts are host-only through
-  `MenuStartLevel` → `server.startLevel` (`scripts/UI/MainMenu/menu_host.lua`); others see greyed buttons.
+  `MenuStartLevel` → `server.startLevel` (`ui/MainMenu/menu_host.lua`); others see greyed buttons.
   `menu_main.lua` is a library (entry `main_menu.lua`; also included by `ingame_settings.lua`). Character select
   camera is per client; `RotateScene.lua` hides all players. Tab on the main menu = dev level list.
-* Tutorial (`scripts/Tutorial/`): per-player tips/hurt warning/inventory reset on the client; triggers, holes and
+* Tutorial (`game/Tutorial/`): per-player tips/hurt warning/inventory reset on the client; triggers, holes and
   the ending on the server (`shared.ending`). `tutMedTV.lua` (screen script) stays v1.
-* Debug menu (Backspace; `Config.lua`): Debug Mode, Gore NPCs debug overlays, NPC Controller, Vehicle Events
+* Debug menu (Backspace; `lib/Config.lua`): Debug Mode, Gore NPCs debug overlays, NPC Controller, Vehicle Events
   (Hostile Car, Military, Refugees, "Refugee Van" = the refugee event with VehicleC3, added 2026-11-08 for the
   shelved van work, §9, Helicopter),
   Auto Travel (1/5/10/20 km at 40 m/s, `server.configTravel`), Infinite Ammo, spawn menu (`Weapons → Testing`
-  holds items only test.xml had). Pause menu: one primary button "MorsLonga Menu".
-* Spawn menu (`scripts/UI/SpawnMenu.lua`) lists only what is in the loot tables `Procedural/SpawnRefrenceTable.lua`
+  holds items only dev/levels/test.xml had). Pause menu: one primary button "MorsLonga Menu".
+* Spawn menu (`ui/SpawnMenu.lua`) lists only what is in the loot tables `world/generation/SpawnRefrenceTable.lua`
   (`spawnables.loots`; menu-only category `debugTest`); spawns go through `server.spawnMenuSpawn` with a per-player
   undo history. Debug-menu spawns: `ConfigSpawn` → `server.configSpawn`.
 
 ### Other converted systems (all v2, verified unless noted)
 * Shop segment: SafeZone, PerkMachine (client pays, `server.perkBuy`, refunds), ParkingSpot garage (one shared garage
   in the host's savegame, `shared.garage`), WarehouseScript_Cultist, AC130 supply plane.
-* RPG rocket `script/grenade.lua` (server): impact ray from the previous position (close-range hits), explodes at
+* RPG rocket `weapons/guns/grenade.lua` (server): impact ray from the previous position (close-range hits), explodes at
   the hit point, proximity fuse for any player, loaded rocket type via `server.rpgNextRocket` (sizes: PG-7V 0.6,
   OG-7V 1.0, PG-7VT 1.0, PG-7VA 2.0).
 * World props (convert_props.py): debris, parachute, warehouse collapse, Binge shrine, heli crash smoke, crew
   ragdolls (batch D). Grenades, PlaceTool, Weld, meds, Airstrike, daynight/sandstorm, Fuel,
   ShootFromCar, CarAlarm, Thermals/NVGs, mines, doors, Book, SpawnMenu: Phase 1.
 
-### AS350 helicopter (`main/AS350/script/`, v2 2026-11-13, verified SP except rockets on RMB, §9)
+### AS350 helicopter (`vehicles/aircraft/AS350/script/`, v2 2026-11-13, verified SP except rockets on RMB, §9)
 * Hand-ported (no converter). `Heli.lua` = entry (rewritten from 9dde6dd: server / client callbacks, its own
   functions with `(v2)` notes); the original files are included as libraries (common, Inputs, Control, PointControl,
   Damage, Weapons, AI, Config, AI_Gore, Settings, Blood) and **`HeliV2.lua`** (included after them) replaces the
@@ -788,8 +788,8 @@ Bugs fixed (all present in the original Workshop mod):
 * Loot/spawn tables: 4GA ammo unreachable; broken entries (KS23 #2, .50BMG, P17 Grey); tutorial IFAK id
   (`meds-bleed-general-ifak`).
 * ZIL-131 trucks: "AAF Transport truck" (spawn menu), Vehiclewg33, roadblock9 and test_npc pointed at
-  `MOD/Vehicles/ZIL131.xml` (it is in `Vehicles/Soviet Vehicles/`); ZIL131, ZIL131_ZSU23, VehicleAAF1 (both copies),
-  roadblock3, test.xml and the fire truck's steering wheel pointed at `MOD/vehicles/zil131.vox` (same folder). Paths
+  `MOD/Vehicles/ZIL131.xml` (it is in `vehicles/cars/Soviet Vehicles/`); ZIL131, ZIL131_ZSU23, VehicleAAF1 (both copies),
+  roadblock3, dev/levels/test.xml and the fire truck's steering wheel pointed at `MOD/vehicles/zil131.vox` (same folder). Paths
   fixed 2026-11-08 (user OK); never tested in-game before.
 * World: RandomVehicleEnemy `whichone` nil (AAF below 5000 m); military truck never spawning (order of distance
   checks); Cultist ambushes never fired (`GetPlayerVehicle == 0`); pause button in an undrawn slot; parachute /
@@ -799,9 +799,9 @@ Bugs fixed (all present in the original Workshop mod):
   GAZ-24 sedan + VIP steering wheel turned with A/D while on foot and stayed centred while driving (`EVF.lua`
   finds its car by `FindVehicle("vehicle")`; only the MP variant had the `vehicle` tag, so the others got 0 and
   "player vehicle == 0" was true on foot) → tag added. Both verified in SP.
-* Spawn menu "Bad RV" (RV MethLab): the entry's path started with `/Vehicles/` instead of `MOD/Vehicles/` (same in
+* Spawn menu "Bad RV" (RV MethLab): the entry's path started with `/Vehicles/` instead of `MOD/vehicles/cars/` (same in
   the original 9dde6dd, like the ambulance entry); fixed 2026-11-08.
-* Refugee UAZ event (`enemy vehicles/VehicleC3.xml`): built for an older `uaz452.vox` (objects `body`, `door fl`,
+* Refugee UAZ event (`enemy vehicles/cars/VehicleC3.xml`): built for an older `uaz452.vox` (objects `body`, `door fl`,
   `stearingwheel`...); the shipped file has the newer model (`Body`, `Door_FL`...), so in-game only its lights and
   the two refugees showed (user, 2026-11-08; same XML in 9dde6dd). Its `<body>` was replaced by the working UAZ's
   (`uaz452.xml`, in `uaz452.vox` colours, 0.25 lower / 0.05 back to keep the old cab spot); scripts, vehicle
@@ -818,7 +818,7 @@ Bugs fixed (all present in the original Workshop mod):
   like the Jeep/Bus drivers but 0.25 lower (these ragdolls sit ~1.3 m tall, the UAZ has 0.9 m headroom: its head still
   pokes ~0.2 m through the roof); passenger figure on the floor in the back by the luggage (front seat would put its
   head 0.45 m through the roof).
-* Refugee events (Civillian Jeep / Bus / Van, `scripts/ConvoyOperatorTransport.lua`): when the vehicle stopped near a
+* Refugee events (Civillian Jeep / Bus / Van, `vehicles/operators/ConvoyOperatorTransport.lua`): when the vehicle stopped near a
   player the stand-ins were deleted and `enemies/refugee/Ragdollrefugee1.xml` spawned, but the folder is
   `enemies/refugees/` (same in 9dde6dd): no live refugee ever got out. Path fixed in convert_operators.py
   (2026-11-08). Ambushes (`chaseOperatorTransport.lua`, debug "Enemy Vehicle") spawn existing prefabs. Still open:
@@ -843,28 +843,28 @@ Behaviour changes decided by the user:
   (`[noupload]` kept as in the original). `id.txt` no longer holds 2906369984, the original's Workshop item (an
   upload would have tried to update Overdrive Studios' item): no id, so the first upload creates a new item.
 * Spawn menu additions (each user-approved; in v1 these were only road / roadside spawns, test levels or nowhere):
-  * Vehicles - Civillian: "Mobile Crane" (v1 only in test_vehicle.xml), "Dodge Monaco", "Dodge Monaco Police",
+  * Vehicles - Civillian: "Mobile Crane" (v1 only in dev/levels/test_vehicle.xml), "Dodge Monaco", "Dodge Monaco Police",
     "Plymouth Fury", "Semi Flathead" (roadside Vehiclewb1/wb15), "Cement Truck" (wg42), "Volga" (wg18), "Microcar"
-    (wg38), "Ford Falcon" (wg21), "Small Boat" (`Based Vehicles/smallboat_red.xml`, vehicleS13) (2026-11-08).
-  * Vehicles - Insurgent: "BRDM-2" (the empty `brdm.xml`, v1 only in test_vehicle.xml; with crew it was already
+    (wg38), "Ford Falcon" (wg21), "Small Boat" (`Based vehicles/cars/smallboat_red.xml`, vehicleS13) (2026-11-08).
+  * Vehicles - Insurgent: "BRDM-2" (the empty `brdm.xml`, v1 only in dev/levels/test_vehicle.xml; with crew it was already
     VNPCs - Transports / Insurgent Ambush 7; 2026-11-09). Its `<instance file="MOD/prefabs/spawns/enemies/
     EnemyCivSpawnVehicle.xml"/>` (`RandomRagdoll Type=civ chance=100`: a random civilian NPC at the car's centre, under
     the hull; no other drivable vehicle has one) was removed; VehicleD7 keeps its copy (original event content).
     "Insurgent Heli (parked, no AI)" (2026-11-13, below).
-  * Vehicles - Military: "Military Truck" (the plain `Milltary_Truck.xml`, v1 only in test_vehicle.xml; the
+  * Vehicles - Military: "Military Truck" (the plain `Milltary_Truck.xml`, v1 only in dev/levels/test_vehicle.xml; the
     roadblocks use the UM Damaged one; 2026-11-08); "ZIS-151", "ZIS-151 Damaged", "Katyusha" (wg28 / wb26 /
     VehicleM2), "Willys Jeep" (tutorial only), "BMP-1", "BMP-1P", "BMP-2" (VehicleM18-M20) (2026-11-09); "AAF Pickup
-    Truck ZU-23" (only test_npc.xml placed it; 2026-11-12); "AAF Heli (parked, no AI)", and for testing the
+    Truck ZU-23" (only dev/levels/test_npc.xml placed it; 2026-11-12); "AAF Heli (parked, no AI)", and for testing the
     v1-survey batch "T-72A", "AAF Pickup Truck SPG-9", "GMG Offroad", "Kornet tripod", "AGS-30 tripod" (2026-11-13).
-  * Parked helis: `main/AS350/AS350_{MILITARY,INSURGENT}_PARKED.xml` (generated by `heli_variants.py`), the enemy
+  * Parked helis: `vehicles/aircraft/AS350/AS350_{MILITARY,INSURGENT}_PARKED.xml` (generated by `heli_variants.py`), the enemy
     helis with the tag `parked` on body Heli, which Heli.lua reads as not hostile (the original's friendly mode:
     stays landed, the pilot offers "Take a ride"). For testing seats and player flight.
-* Militia GAZ-24 siren (original-mod bug, same in 9dde6dd): `Vehicles/GAZ-24 (1968)/radio_car2.lua` loaded
+* Militia GAZ-24 siren (original-mod bug, same in 9dde6dd): `vehicles/cars/GAZ-24 (1968)/radio_car2.lua` loaded
   `MOD/Vehicle/GAZ-24 (1968)/Sounds/Siren.ogg` (the folder is `Vehicles/`), so the "radio" switch never made a sound;
   path fixed (user OK 2026-11-09).
-* BMP-3 driver eye point (`location tags="player"` in `avf/prefabs/bmp/BMP-3 d.xml`): x -0.9 → -0.1 (the left front
+* BMP-3 driver eye point (`location tags="player"` in `vehicles/avf/prefabs/bmp/BMP-3 d.xml`): x -0.9 → -0.1 (the left front
   seat → the middle one, where the controls and the new driver seat are; user request 2026-11-09).
-* Van PKM fire sound (original-mod bug): the config named `MOD/snd/ak0.ogg` (missing: silent) → `MOD/snd/Weapons/ak/
+* Van PKM fire sound (original-mod bug): the config named `MOD/assets/snd/ak0.ogg` (missing: silent) → `MOD/assets/snd/Weapons/ak/
   ak_0.ogg`; a missing mounted-gun sound now falls back to the M107 sound with a debug line.
 * WMIK Technical weapon (user, 2026-11-13: "MILAN missile"): in the original its AVF config never loaded (commented-out
   includes of a missing file, §2), so the external AVF mod fired its generic customcannon shell from the XML tags
@@ -946,7 +946,7 @@ Behaviour changes decided by the user:
     happen by default, as the menu says. (Other raw `GetBool` reads of default-true keys, e.g.
     `map.spawnTileContent` in procgen.lua, not checked.)
   * Simonov-9 magazines under two names (original-mod, user chose 2026-11-12): magazines out of the gun
-    (`script/PP19.lua`, also a `convert_gun.py` FIXUP) and the shop's gun item were `Simonov-9`, loot ones
+    (`weapons/guns/PP19.lua`, also a `convert_gun.py` FIXUP) and the shop's gun item were `Simonov-9`, loot ones
     `Simonov-9-Mag`, so they did not stack. All are `Simonov-9-Mag` now; magazines already held keep the old name.
   * NPC feet panel (port regression): Ctrl+F with debug mode on opens `npc_debug_feet` (client draw), `FeetData`
     exists only on the server (`init_controls`): "attempt to index global 'FeetData'" every frame. The panel now
@@ -965,7 +965,7 @@ Behaviour changes decided by the user:
     multiplayer only enables every registered tool for every player each tick; the inventory's server.tick applied
     its per-player list only when it changed (`InvApplied` cache), so after the first tick sandbox won. First fix:
     re-apply every tick against `IsToolEnabled` (worked, but the two fought every tick). Now the game levels load
-    `scripts/MLSandbox.lua` instead: the engine's sandbox.lua with only that SetToolEnabled removed (spawn /
+    `game/MLSandbox.lua` instead: the engine's sandbox.lua with only that SetToolEnabled removed (spawn /
     respawn, name tags, damage indicators, death fade, weather, map markers, unlimited ammo unchanged); the per-tick
     check stays as a guard. (A gamemode would also stop sandbox.lua, `contentgamemodeexample/race.lua`, but takes
     those features with it.)
@@ -1027,7 +1027,7 @@ Behaviour changes decided by the user:
 * **AS350 rockets on RMB** (user decision 2026-11-13, revisit later): in the pilot seat RMB leans the player out of
   the helicopter (the same lean-out as aiming out of a car) instead of firing rockets, also with empty hands (so
   emptying the pilot's hands, kept as in v1, does not stop it). Where the lean-out is implemented was not found
-  (not `script/Lean.lua`, not the gun scripts' vehicle checks; the 1.x update log lists "New improved vehicle leaning,
+  (not `player/Lean.lua`, not the gun scripts' vehicle checks; the 1.x update log lists "New improved vehicle leaning,
   you can now drive as you lean out"). Options when revisited: find and suppress it for the pilot, or another key.
 * **AGS-30 tripod aiming up / down** (user decision 2026-11-13, "Shelve and clean up"): its gun does not pitch, also
   as the unchanged original vehicle under our script (user test with a temporary copy); whether the external AVF of
@@ -1037,8 +1037,8 @@ Behaviour changes decided by the user:
   both of its coaxial gun hinges, a speed-command mode, density 0.05 instead of 1e-12 (19 kg: it only sagged to its
   limit). No motor command ever moved its hinge; grabbing the gun by hand does. All reverted except what serves the
   other guns. Its gun weighs ~1e-7 kg (see the freeze in §10).
-* Test-only levels stay v1: test.xml, lol.xml, test_*.xml, procgen and gore-map test levels, `main.lua`.
-  `prefabs/other/Credits.xml` (thiccparticle.lua) is never spawned. `script/craftingrecipes.lua` has a syntax
+* Test-only levels stay v1: dev/levels/test.xml, dev/levels/lol.xml, test_*.xml, procgen and gore-map test levels, `main.lua`.
+  `prefabs/other/Credits.xml` (thiccparticle.lua) is never spawned. `weapons/guns/craftingrecipes.lua` has a syntax
   error and is never loaded. ~478 Lua files existed, ~316 reachable; dead files (`unused/`, `_WORKSHOP/`, the
   Teardown-Totally-Documented dump, `*_old` / `- Copy` leftovers, editor stubs) deleted 2026-11-14 (in git history).
 
@@ -1090,7 +1090,7 @@ Known gaps:
   the engine reports. Not changed (would alter the original).
 * Screens in MP (user, 2026-11-09; later, nice to have): `<screen>` scripts must be v1 (§3) and the engine disables v1
   scripts in multiplayer, so all screens are dead in MP: Cadillac speedometer (`dash.lua`), tutorial TV (`tutMedTV.lua`),
-  helicopter instruments (`main/AS350/screens/*`, `main/Boeing_CH47-C/screens/*`), `terrain/eastereggs/binge.lua`.
+  helicopter instruments (`vehicles/aircraft/AS350/screens/*`, `vehicles/aircraft/Boeing_CH47-C/screens/*`), `terrain/eastereggs/binge.lua`.
   To find: a v2 form for screen scripts (other callback names? a plain `draw` under `#version 2`?) or drawing them
   from a normal client script (UiGetScreen is screen-only).
 * T-72 (user, 2026-11-09; to look at later, cause not investigated): heavy frame drops while it is driven (reported
@@ -1110,7 +1110,7 @@ Known gaps:
 
 ## 11. History (summary)
 
-* 2026-11-03: plan agreed; UMF replaced by `scripts/TDSU/compat.lua`; tools started.
+* 2026-11-03: plan agreed; UMF replaced by `lib/TDSU/compat.lua`; tools started.
 * 2026-11-04/05: guns (AK74 tool-prefab design after three attempts; all 38 converted, all verified except shelved
   ones), melee. Phase 1 (55 level scripts) done and verified 2026-11-06.
 * 2026-11-06: Phase 2 (per-player health/inventory/hitboxes) verified. Phase 3: GoreNPCs, co-op road generation,
@@ -1128,7 +1128,7 @@ Known gaps:
   steering wheel; original-mod fixes (ambulance spawn entry, GAZ `vehicle` tag).
 * 2026-11-09: seats for every drivable vehicle in use (§6 table); small vehicle scripts v2 (doors, Cadillac / LeBoat
   joints, semis' toggles, GAZ-24 EVF, JetBus).
-* 2026-11-12: `scripts/MountedGun.lua` (machine guns: DShK, M2, PKM); AVF's shell code ported (`port_avf.py`):
+* 2026-11-12: `vehicles/MountedGun.lua` (machine guns: DShK, M2, PKM); AVF's shell code ported (`port_avf.py`):
   ZU-23-2, BMP-1/1P/2/3; playtest fixes (sandstorms, Simonov-9 mags, loot table, med rotation).
 * 2026-11-13: tanks (gunner place + driver fallback), launchers (Katyusha, WMIK MILAN), coax MGs and BMP ATGMs,
   Immersive_Tank.lua, AVF performance fixes; AS350 helicopter (vehicle with seats, v2 port, mouse-aim flight;

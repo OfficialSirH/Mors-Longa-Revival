@@ -1,0 +1,8 @@
+<prefab version="1.5.4">
+	<group name="instance=MOD/items/Loots/bullets-762x39-APE.xml" pos="0.0 1.6 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=bullets-762x39-APE_7.62x39_30 interact=7.62x39" pos="0.0 0.2" dynamic="true">
+			<vox pos="0 -.2 .05" texture="7 .4" file="MOD/assets/vox/military/ammobox.vox"/>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,8 @@
+<prefab version="1.2.0">
+	<group>
+		<body tags="Loot=helmet-ulach_ULACH_30_30 interact=ULACH" pos="0 .25" dynamic="true">
+			<vox pos="-.05 -.25" file="MOD/assets/vox/Armor/ULACH.vox" object="body"/>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,22 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/items/Loots/food15.xml" pos="6.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<body tags="Loot=food15_Pita_30_-20 interact=Pita" pos="0.0 0.05" dynamic="true">
+			<voxbox pos="-.25 -.05 -.1" size="3 1 2" color=".8 .63 .4">
+				<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+					<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+						<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+							<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+								<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+									<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4">
+										<voxbox pos="0 0 .2" rot="0 45" size="3 1 2" color=".8 .63 .4"/>
+									</voxbox>
+								</voxbox>
+							</voxbox>
+						</voxbox>
+					</voxbox>
+				</voxbox>
+			</voxbox>
+		</body>
+	</group>
+</prefab>
+

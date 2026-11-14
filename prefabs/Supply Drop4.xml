@@ -1,17 +1,17 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/prefabs/Supply Drop4.xml" pos="0.0 34.3 0.0" rot="0.0 0.0 0.0">
 		<body tags="crate4 Crate interact=Crate Width=7 Height=7" pos="-0.08489 0.79058 0.0" rot="-1.0 -90.0 0.0" dynamic="true">
-			<vox pos="-0.05 -0.7 -0.1" rot="0.0 -90.0 .0" density="0.01" strength="70000" prop="false" file="MOD/vox/supply_boxes.vox" object="general_large">
-				<vox pos="0.0 -0.1 0.0" rot="0.0 0.0 .0" density="5" strength="70000" prop="false" file="MOD/vox/supply_boxes.vox" object="general_large1"/>
+			<vox pos="-0.05 -0.7 -0.1" rot="0.0 -90.0 .0" density="0.01" strength="70000" prop="false" file="MOD/assets/vox/supply_boxes.vox" object="general_large">
+				<vox pos="0.0 -0.1 0.0" rot="0.0 0.0 .0" density="5" strength="70000" prop="false" file="MOD/assets/vox/supply_boxes.vox" object="general_large1"/>
 			</vox>
 			<joint tags="cargo4" pos="0.85 -0.6 0.7" rot="0.0 -90.0 0.0"/>
 			<joint tags="cargo4" pos="-0.85 -0.6 0.7" rot="0.0 -90.0 0.0"/>
 			<joint tags="cargo4" pos="-0.85 -0.6 -0.8" rot="0.0 -90.0 0.0"/>
 			<joint tags="cargo4" pos="0.85 -0.6 -0.8" rot="0.0 -90.0 0.0"/>
-			<script pos="-0.0 6.7 0.0" file="MOD/scripts/parachute.lua">
+			<script pos="-0.0 6.7 0.0" file="MOD/world/parachute.lua">
 				<body name="parachute" tags="chute" pos="0.0 0.1 0.0" dynamic="true">
-					<vox tags="del" pos="0.0 0.0 0.0" file="MOD/vox/parachute.vox" object="parachute panel">
-						<vox tags="del" pos="0.0 -1.0 -2.5" rot="-45" file="MOD/vox/parachute.vox" object="parachute panel"/>
+					<vox tags="del" pos="0.0 0.0 0.0" file="MOD/assets/vox/parachute.vox" object="parachute panel">
+						<vox tags="del" pos="0.0 -1.0 -2.5" rot="-45" file="MOD/assets/vox/parachute.vox" object="parachute panel"/>
 						<group name="ropes">
 							<rope pos="-1.5 -2.0 3.5" slack="0">
 								<location pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"/>
@@ -36,9 +36,9 @@
 								<location pos="0.75 -5.5 -2.9" rot="0.0 0.0 0.0"/>
 							</rope>
 						</group>
-						<vox tags="del" pos="-2.5 -1.0 0.0" rot="-45 90" file="MOD/vox/parachute.vox" object="parachute panel"/>
-						<vox tags="del" pos="2.5 -1.0 0.0" rot="-45 -90" file="MOD/vox/parachute.vox" object="parachute panel"/>
-						<vox tags="del" pos="0.0 -1.0 2.5" rot="-45 180" file="MOD/vox/parachute.vox" object="parachute panel"/>
+						<vox tags="del" pos="-2.5 -1.0 0.0" rot="-45 90" file="MOD/assets/vox/parachute.vox" object="parachute panel"/>
+						<vox tags="del" pos="2.5 -1.0 0.0" rot="-45 -90" file="MOD/assets/vox/parachute.vox" object="parachute panel"/>
+						<vox tags="del" pos="0.0 -1.0 2.5" rot="-45 180" file="MOD/assets/vox/parachute.vox" object="parachute panel"/>
 					</vox>
 				</body>
 			</script>

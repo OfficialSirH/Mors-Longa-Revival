@@ -1,11 +1,11 @@
--- Mock test: Procedural/RemoveRoad.lua and WaterMover.lua must never delete because no players were found
+-- Mock test: world/generation/RemoveRoad.lua and WaterMover.lua must never delete because no players were found
 -- (2026-11-07: a fresh game showed no world and an invisible gun). Run from the repo root with Lua 5.1:
 --   lua5.1 tools/porting/tests/test_removeroad.lua
 dofile("tools/porting/tests/mockengine.lua")
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
 local function setup(players)
-	local env = MockEngine.load("Procedural/RemoveRoad.lua")
+	local env = MockEngine.load("world/generation/RemoveRoad.lua")
 	env.PLAYERS, env.ORDER = {}, {}
 	for i, x in ipairs(players) do env.PLAYERS[i] = { pos = {x, 0, 0}, health = 1 } env.ORDER[i] = i end
 	local deleted = {}
@@ -30,7 +30,7 @@ check(#d == 0, "RemoveRoad: a straggler at x=-900 keeps that area")
 
 -- level.roadgen is a one-frame pulse: a pulse between two throttled passes must still trigger the next pass
 do
-	local env = MockEngine.load("Procedural/RemoveRoad.lua")
+	local env = MockEngine.load("world/generation/RemoveRoad.lua")
 	env.PLAYERS, env.ORDER = { { pos = {0, 0, 0}, health = 1 } }, { 1 }
 	local pulse, deleted = false, {}
 	env.def("GetBool", function(k) return k == "level.roadgen" and pulse end)

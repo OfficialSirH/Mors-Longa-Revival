@@ -1,0 +1,59 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/items/Loots/mag3-ar-556.xml" pos="1.6 1.3" rot="0">
+		<body tags="Loot=mag3-ar-556_Beta-C-Mag_100_100_5.56 interact=Beta-C-Mag unbreakable" pos="0 .15" dynamic="true">
+			<group prop0="color=.14 .14 .14" prop1="material=metal">
+				<voxbox pos="-.05 -.15 -.075" size="1 1 1"/>
+				<voxbox pos="-.05 -.15 -.025" size="1 1 1"/>
+				<group pos=".05 -.05 -.075" rot="10">
+					<voxbox pos="-.1" size="1 1 1"/>
+					<voxbox pos="-.1 0 .05" size="1 1 1"/>
+					<group pos=".05 .1 .05">
+						<voxbox pos=".05 .071 -.05" rot="180.0 180.0" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" size="1 1 1"/>
+						<voxbox pos="-.121 -.029 -.05" size="1 1 1"/>
+						<voxbox pos=".021 -.029 -.05" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos="-.05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="180.0 180.0" size="1 1 1"/>
+					</group>
+					<group pos=".05 .1 .1">
+						<voxbox pos=".05 .071 -.05" rot="180.0 180.0" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" size="1 1 1"/>
+						<voxbox pos="-.121 -.029 -.05" size="1 1 1"/>
+						<voxbox pos=".021 -.029 -.05" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos="-.05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="180.0 180.0" size="1 1 1"/>
+					</group>
+					<group pos="-.15 .1 .05">
+						<voxbox pos=".05 .071 -.05" rot="180.0 180.0" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" size="1 1 1"/>
+						<voxbox pos="-.121 -.029 -.05" size="1 1 1"/>
+						<voxbox pos=".021 -.029 -.05" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos="-.05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="180.0 180.0" size="1 1 1"/>
+					</group>
+					<group pos="-.15 .1 .1">
+						<voxbox pos=".05 .071 -.05" rot="180.0 180.0" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" size="1 1 1"/>
+						<voxbox pos="-.121 -.029 -.05" size="1 1 1"/>
+						<voxbox pos=".021 -.029 -.05" size="1 1 1"/>
+						<voxbox pos="-.05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 -.1 -.05" rot="0 0 45" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos="-.05 .142 -.05" rot="-180.0 -180.0 -45.0" size="1 1 1"/>
+						<voxbox pos=".05 .142 -.05" rot="180.0 180.0" size="1 1 1"/>
+					</group>
+				</group>
+			</group>
+		</body>
+	</group>
+</prefab>
+

@@ -1,0 +1,19 @@
+<prefab version="1.5.1">
+	<group name="instance=MOD/items/Loots/meds-stim-pz1.xml" pos="-5.392 0.687 -5.997" rot="0.0 -90.0 0.0">
+		<body tags="Loot=meds-stim-pz1_PZ1_1_1 interact=PZ1" pos="0 .05" dynamic="true">
+			<voxbox tags="invisible" pos="-0.319 -0.05 -0.05" rot="0.0 0.0 0.0" size="6 1 1" offset="-1.0 0.0 0.0" color=".76 .26 .22">
+				<vox tags="dipib" pos="0.216 0.013 0.051" rot="0.0 90.0 0.0" file="MOD/assets/vox/medical_injectors.vox" object="PZ1:main body" scale="0.1">
+					<vox pos="0.0 0.034 0.306" rot="0.0 0.0 0.0" file="MOD/assets/vox/medical_injectors.vox" object="needle" scale="0.01"/>
+					<vox pos="-0.002 0.076 0.004" rot="0.0 0.0 0.0" file="MOD/assets/vox/medical_injectors.vox" object="PZ1:logo" scale="0.05"/>
+					<vox pos="-0.038 0.039 -0.07" rot="0.0 360.0 90.0" file="MOD/assets/vox/medical_injectors.vox" object="label-text2" scale="0.023"/>
+					<vox pos="-0.039 0.04 0.11" rot="0.0 360.0 90.0" file="MOD/assets/vox/medical_injectors.vox" object="label-barcode" scale="0.02"/>
+					<vox pos="-0.04 0.054 0.035" rot="0.0 360.0 90.0" file="MOD/assets/vox/medical_injectors.vox" object="label-text3" scale="0.01"/>
+					<vox pos="-0.04 0.037 0.035" rot="0.0 360.0 90.0" file="MOD/assets/vox/medical_injectors.vox" object="label-text4" scale="0.017"/>
+					<vox pos="0.0 -0.01 -0.2" rot="0.0 0.0 0.0" file="MOD/assets/vox/medical_injectors.vox" object="PZ1:spring push" scale="0.1"/>
+					<vox pos="0.0 0.0 0.3" rot="0.0 0.0 0.0" file="MOD/assets/vox/medical_injectors.vox" object="PZ1:safety cap 2" scale="0.1"/>
+				</vox>
+			</voxbox>
+		</body>
+	</group>
+</prefab>
+

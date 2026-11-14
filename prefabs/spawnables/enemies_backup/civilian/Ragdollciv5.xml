@@ -1,8 +1,8 @@
 <prefab version="1.4.0">
 	<group name="instance=MOD/prefabs/spawnables/enemies/civilian/Ragdollciv5.xml" pos="4.0 0.0 0.0" rot="0.0 0.0 0.0">
-		<group prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit.vox" prop1="tags=Torso Attack bodypart spawn_team=civ">
+		<group prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit.vox" prop1="tags=Torso Attack bodypart spawn_team=civ">
 			<group name="instance=MOD/prefabs/assets/ragdoll components/Standard Ragdoll.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
-				<script tags=" " file="MOD/GoreNPCs/scripts/goreai_initializer.lua">
+				<script tags=" " file="MOD/npcs/GoreNPCs/scripts/goreai_initializer.lua">
 					<body name="Torso" pos="0.0 1.2 0.0" rot="0.0 0.0 0.0" dynamic="true">
 						<vox pos="0.05 -0.4 0.0" rot="0 180 " object="body">
 							<instance pos="0.05 0.15 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Ribs.xml"/>
@@ -18,7 +18,7 @@
 									<voxbox pos="-0.1 0.1 0.1" prop="true" size="1 1 1" material="plaster" color="0">
 										<joint tags="eye" pos="0.05 0.05" rotstrength="65535" rotspring="1"/>
 									</voxbox>
-									<vox tags="jaw" pos="0.0 0.0 0.1" rot="0.0 0.0 0.0" prop="true" file="MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox" object="jaw">
+									<vox tags="jaw" pos="0.0 0.0 0.1" rot="0.0 0.0 0.0" prop="true" file="MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox" object="jaw">
 										<joint tags="jaw" pos="0.2 0.1 -0.2" rot="0 90" type="hinge" limits="0 20"/>
 										<joint tags="jaw" pos="-0.1 0.1 -0.2" rot="0 90" type="hinge" limits="0 20"/>
 									</vox>
@@ -30,7 +30,7 @@
 							<instance pos="-0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm L.xml"/>
 							<instance pos="0.25 1.4 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Arm R.xml"/>
 						</group>
-						<group name="Legs" prop0="file=MOD/main/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox">
+						<group name="Legs" prop0="file=MOD/npcs/GoreRagdolls2/SnakeyWakey's ragdoll pack/vox/gore/Bandit2.vox">
 							<instance pos="-0.15 0.9 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Leg L.xml"/>
 							<instance pos="0.15 0.9 0.0" rot="0.0 0.0 0.0" file="MOD/prefabs/assets/ragdoll components/Standard Leg R.xml"/>
 						</group>
