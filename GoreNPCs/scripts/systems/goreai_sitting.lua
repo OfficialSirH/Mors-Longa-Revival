@@ -1,7 +1,7 @@
 -- (v2) NPC seating, hand-written (Phase 4, 2026-11-08; no longer patched by convert_goreai.py).
 -- v1: friendly NPCs sat in invisible lights tagged "seat" that only Vehiclewg30 had. v2: they use the vehicle's
 -- passenger seat rigs (<rig name="passenger"> with a "seat" location, added per vehicle by
--- tools/porting/patches/add_seats.py), the same seats players use. Players come first: an NPC never picks a seat
+-- tools/porting/add_seats.py), the same seats players use. Players come first: an NPC never picks a seat
 -- a player sits in, and an NPC whose seat a player takes moves to another free seat or gets out.
 -- npc.ai.sitting.sitLight now holds the seat's rig handle (name kept: goreai_health/_manage use it).
 -- Server: everything except draw_vehicle_empty_seats. Client: draw_vehicle_empty_seats, from shared.goreSeats.

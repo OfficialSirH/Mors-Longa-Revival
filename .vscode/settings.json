@@ -3,7 +3,6 @@
         "missing-parameter"
     ],
     "Lua.workspace.library": [
-        "C:\\Users\\Cheejins\\Documents\\Teardown\\mods\\..tdapi",
         "${3rd}/lfs/library"
     ],
 }

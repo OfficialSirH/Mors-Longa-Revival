@@ -23,7 +23,8 @@ Read next:
 * Only the host starts levels (the game reads the host's savegame for difficulty/rules/perks/garage).
 * Phases: 1) v2 in single-player ✔, 2) per-player state ✔, 3) world gen / NPCs / co-op logic ✔,
    4) vehicles: seats, mounted guns, helicopters (AS350) ✔,
-   **5) private Workshop upload for MP testing (MP only loads published mods), then publish.**
+   **5) polishing (2026-11-14): housekeeping, full reorganization, MP fixes, performance; then the Workshop
+   publish.** MP is tested locally: the in-game mod editor runs a host and a client window on the user's PC.
 
 ## Working with the user
 
@@ -38,10 +39,10 @@ Read next:
 ## Environment (gotchas, details in TECHNICAL_REFERENCE §2)
 
 * Repo `C:\Projects\Mors Longa`; Teardown install and Workshop mods are added as extra working directories.
-* No system Lua/Python: build Lua 5.1 with clang, use a scratchpad Python venv (commands in the tools README).
+* No system Lua: build Lua 5.1 with clang (commands in the tools README). Python 3.13 is installed (`python`).
 * Line endings: everything is LF (`.gitattributes`, normalized 2026-11-08); write LF.
-* Converters rebuild their files from git each run: **never hand-edit a converter-owned file** – put the change in
-  the converter, run it fully, compare md5 before/after.
+* Converters are frozen (2026-11-14, `tools/porting/history/`): their output files are ordinary source, edit them
+  directly. Never re-run a rebuild converter (it would overwrite those edits).
 * API reference: `Teardown/data/script_defs.lua`, engine scripts in `Teardown/data/script/`, `data/ui/hud.lua`.
 
 ## Current state (2026-11-13)
@@ -51,7 +52,7 @@ Read next:
 * Phase 4 (vehicles), all verified in SP unless noted:
   * Seats for every drivable vehicle in use (status table: TECHNICAL_REFERENCE §6); friendly NPCs ride in them.
     New vehicles: measure in Blender (`tools/porting/blender_vehicle.py`, Blender MCP), add the layout to
-    `tools/porting/patches/add_seats.py`, check with the mannequin, then the user tests (rules: §6).
+    `tools/porting/add_seats.py`, check with the mannequin, then the user tests (rules: §6).
   * Small vehicle scripts v2 (doors, Cadillac / LeBoat joints, semis' toggles, GAZ-24 EVF, JetBus).
   * Mounted guns: own `scripts/MountedGun.lua` + AVF's shell code ported (`port_avf.py` → `scripts/avf/`, credit
     AVF / elboydo) + `Immersive_Tank.lua`; machine guns, cannons, tanks (gunner place + driver fallback), launchers,
@@ -68,7 +69,24 @@ Read next:
 
 ## Next
 
-1. Phase 5: the user puts their author name in `info.txt` (AUTHOR_NAME), runs
-   `python tools/porting/make_release.py`, uploads "Mors Longa Revival (Release)" from the game's mod manager as a
-   private item, then MP tests (list in TECHNICAL_REFERENCE §10).
-2. Later (user): a seat-switch key (players cannot switch seats; §10), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.
+Phase 5 polishing, in order (each part ends at a commit point, the user commits):
+0. Local MP baseline: first test done (2026-11-14) → three bugs, fixed (step 3).
+1. Housekeeping ✔ (2026-11-14): converters frozen to `tools/porting/history/`, dead files deleted, `.gitignore`,
+   release leaves out the root test levels.
+2. Full reorganization by system: the relocation tool is built and tested (`tools/relocate/`, README there:
+   rewrites every path reference, proves it, rolls back on failure). Draft layout `tools/relocate/moves.txt`
+   (levels/, lib/, ui/, game/, world/, player/, weapons/, items/, npcs/, vehicles/, assets/, dev/; main/ and
+   prefabs/ stay) plans clean (4251 files moved, 42481 references rewritten, 0 errors). moves.txt approved by the
+   user (no garage migration needed); to apply on a clean tree (commit first), then make_release excludes `dev/`.
+3. MP fixes (§8 "MP fixes"): remote players' new run (starter loadout, vitals, perks, bounty, difficulty, money on
+   Try Again) and game rules synced: verified. To re-test: vanilla tools (levels load `scripts/MLSandbox.lua`, the
+   engine's sandbox.lua without its MP tool enabling), remote tool bar, other players' guns (gunnet part sync).
+   Open: world-shift jank / NPCs / stuck car for non-hosts (§10). Still open (survey leads, §10):
+   permadeath host-only, fuel perks / money, debug-menu toggles from non-hosts, cultist ambush, server-only
+   effects, server bullet gravity; then the §10 MP checklist.
+4. Performance: measure first (debug perf overlay with frame-time spikes tagged by event, per-system kill switches,
+   mock call counts), then the candidates: inventory `SaveInventory()` every client tick, gun scripts' per-frame
+   registry reads, segment-spawn burst (RemoveRoad full scans, BuildingGrassRemover), NPC per-tick tag writes, Fuel.
+5. Docs: folder map, TECHNICAL_REFERENCE split.
+
+Later (user): a seat-switch key (players cannot switch seats; §10), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.

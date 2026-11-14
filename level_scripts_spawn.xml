@@ -1,6 +1,6 @@
 <prefab version="1.3.0">
 	<group name="instance=MOD/level_scripts_spawn.xml" pos="-28.0 2.5 70.9" rot="0.0 0.0 0.0">
-		<script file="sandbox.lua"/>
+		<script file="MOD/scripts/MLSandbox.lua"/>
 		<group name="MorsLonga" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" layer="-MorsLonga">
 			<script file="MOD/scripts/newLeveltoLEVEL.lua"/>
 			<script file="MOD/scripts/Radio.lua"/>

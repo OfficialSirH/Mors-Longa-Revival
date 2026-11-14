@@ -1580,7 +1580,7 @@
 		</group>
 	</group>
 	<group name="Scripts">
-		<script file="sandbox.lua"/>
+		<script file="MOD/scripts/MLSandbox.lua"/>
 		<group name="MorsLonga">
 			<script file="MOD/scripts/Game/Blood/bloodpool.lua"/>
 			<script file="MOD/scripts/pauseMenu.lua"/>

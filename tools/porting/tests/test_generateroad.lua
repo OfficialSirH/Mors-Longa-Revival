@@ -29,6 +29,8 @@ function GetBodyTransform(b) return Transform(BODIES[b] or Vec()) end
 function SetBodyTransform(b, t) BODIES[b] = t.pos end
 function SetBodyVelocity() end
 function SetBodyAngularVelocity() end
+function IsMultiplayer() return #ORDER > 1 end
+function IsHandleValid(h) return h ~= 0 end
 
 local src = io.open("Procedural/GenerateRoad.lua", "rb"):read("*a"):gsub("\r", "")
 src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)

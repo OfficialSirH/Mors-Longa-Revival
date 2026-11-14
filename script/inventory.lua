@@ -1226,12 +1226,18 @@ function client.init()
 	thermalrange = 50
 	playerthermalrange = Vec(30,30,30)
 	------VITALS SYSTEM------
-	if GetString("savegame.mod.difficulty") == "hardcore" then 
-		hunger = GetFloat("savegame.mod.hunger") or math.random(50,100)
-		thirst = GetFloat("savegame.mod.thirst") or math.random(50,100)
+	-- (v2, MP 2026-11-14) GetFloat returns 0 for a missing key, never nil, so v1's `or 100` never applied: a
+	-- savegame without these keys (a remote player's first run) started at 0 hunger / thirst and starved.
+	local function vital(key, default)
+		if HasKey(key) then return GetFloat(key) end
+		return default
+	end
+	if GetString("savegame.mod.difficulty") == "hardcore" then
+		hunger = vital("savegame.mod.hunger", math.random(50,100))
+		thirst = vital("savegame.mod.thirst", math.random(50,100))
 	else
-		hunger = GetFloat("savegame.mod.hunger") or 100
-		thirst = GetFloat("savegame.mod.thirst") or 100
+		hunger = vital("savegame.mod.hunger", 100)
+		thirst = vital("savegame.mod.thirst", 100)
 	end
 
 	devmultiplier = 1
@@ -2466,6 +2472,10 @@ end
 
 function client.tick(dt)
 	InvInteractive = false
+	-- (2026-11-14) The Extinguisher in tool slot 4 with the Place / Welding tools, as v1 meant with
+	-- `game.tool.extinguisher.index = 4`: in 2.x the slot is `.group` and `.index` only orders a slot
+	-- (data/ui/hud.lua), so it sat in slot 1 over the primary gun. Set on each machine (the bar reads its own registry).
+	if GetInt("game.tool.extinguisher.group") ~= 4 then SetInt("game.tool.extinguisher.group", 4) end
 	if InputDown("e") and InputDown("r") and InputPressed("o") then
 		LETITERROR = not LETITERROR
 	end
@@ -3093,6 +3103,7 @@ function client.tick(dt)
 		end
 		InvToolEnable(gun2, true)
 		InvToolEnable(melee, true)
+		InvCycleSlot4()
 
 
 		for i = 1,#gunslist do
@@ -5690,6 +5701,40 @@ function InvToolEnable(id, on)
 	if id and id ~= "" then InvToolWanted[id] = on end
 end
 
+-- (2026-11-14) Key 4 cycles the tools the bar shows in slot 4 (Place Tool, Welding Tool, Extinguisher), in the bar's
+-- order. The engine's own key 4 and mouse wheel use the built-in slots, where the Extinguisher stays in slot 1 even
+-- with game.tool.extinguisher.group = 4 (client.tick; user's test), so key 4 never reached it.
+InvPrevTool = ""
+InvSlot4Last, InvSlot4Time = nil, -100
+function InvCycleSlot4()
+	local held = GetPlayerTool()
+	if InputPressed("4") then
+		local list = {}
+		for _, id in ipairs(ListKeys("game.tool")) do
+			if GetInt("game.tool."..id..".group") == 4 and IsToolEnabled(id) then
+				list[#list + 1] = { id = id, index = GetInt("game.tool."..id..".index") }
+			end
+		end
+		if #list > 0 then
+			table.sort(list, function(a, b)
+				if a.index ~= b.index then return a.index < b.index end
+				return a.id < b.id
+			end)
+			-- the tool before this press: the engine may already have switched this frame, and our own pick takes a
+			-- moment to come back from the server
+			local cur = (GetTime() - InvSlot4Time < 1.5 and InvSlot4Last) or InvPrevTool
+			local pick = list[1].id
+			for i, t in ipairs(list) do
+				if t.id == cur then pick = list[i % #list + 1].id break end
+			end
+			InvSlot4Last, InvSlot4Time = pick, GetTime()
+			InvSetTool(pick)
+			held = pick
+		end
+	end
+	InvPrevTool = held
+end
+
 function InvSetTool(id)
 	InvToolSelect = id or ""
 end
@@ -5747,7 +5792,6 @@ end
 function server.init()
 	Init_Settings()
 	InvWanted = {}   -- [player][tool] = enabled, as reported by that player's inventory
-	InvApplied = {}  -- [player][tool] = what this script last applied with SetToolEnabled
 end
 
 -- Pickup arbitration: the first request wins, the item is deleted and only that player gets it.
@@ -5786,9 +5830,12 @@ function server.invSetTool(p, id)
 end
 
 -- Per player: tool enabled = "enable all tools" setting, or always-allowed (not in the tutorial), or wanted by
--- that player's inventory. Applied with SetToolEnabled only when it changes.
+-- that player's inventory. Checked against the engine's state every tick (2026-11-14, MP): in multiplayer the
+-- engine's sandbox.lua enabled every registered tool for every player each tick, so a change-only apply left all
+-- vanilla tools on for everyone. The levels now load scripts/MLSandbox.lua (sandbox.lua without that); the
+-- per-tick check stays as a guard against anything else re-enabling tools.
 function server.tick(dt)
-	SetInt("game.tool.extinguisher.index", 4) -- as ToolManager did
+	SetInt("game.tool.extinguisher.group", 4, true) -- slot 4 (see client.tick, which also sets it on each machine)
 	local all = Settings.game.enable_tools.value
 	local tutorial = GetBool("level.tutorial")
 	-- Every tool we know of: the engine's tool list, plus every tool any inventory has asked about, plus the
@@ -5801,18 +5848,14 @@ function server.tick(dt)
 	for _, wanted in pairs(InvWanted) do for id in pairs(wanted) do addTool(id) end end
 	for p in Players() do
 		local wanted = InvWanted[p] or {}
-		local applied = InvApplied[p] or {}
-		InvApplied[p] = applied
 		for _, id in ipairs(tools) do
 			local on = (all or (not tutorial and INV_ALWAYS_ALLOWED[id]) or wanted[id] == true) and true or false
-			if applied[id] ~= on then
-				applied[id] = on
+			if IsToolEnabled(id, p) ~= on then
 				SetToolEnabled(id, on, p)
 			end
 		end
 	end
 	for p in PlayersRemoved() do
 		InvWanted[p] = nil
-		InvApplied[p] = nil
 	end
 end

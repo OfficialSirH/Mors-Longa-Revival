@@ -9,7 +9,7 @@
 -- non-upright axis, pointing to the "mainCannon_emitter" side; muzzle = its end (MG_MeasureBarrel).
 -- Both are measured once by the server in gun-body space and shared (a late joiner's guns may already be turned).
 -- (AVF's barrels[1] offsets are in a shape-corner frame: they pointed the wrong way here.) Gunner: the rig tagged "gunner"
--- (a standing place under the vehicle's body, added by tools/porting/patches/add_seats.py; not a vehicle seat).
+-- (a standing place under the vehicle's body, added by tools/porting/add_seats.py; not a vehicle seat).
 --
 -- Network (co-op, gunner trusted like the hand guns, TECHNICAL_REFERENCE §5/§7):
 --   gunner's client: aim point from its camera -> server.mgAim; fires the rounds through gunnet.lua (GunNet_Fire:

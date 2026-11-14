@@ -104,6 +104,7 @@ function MockEngine.load(path, opts)
 	env.def("GetPlayerVehicle", function() return 0 end)
 	env.def("GetLocalPlayer", function() return env.LOCAL end)
 	env.def("IsPlayerHost", function(p) return p == 1 end)
+	env.def("IsMultiplayer", function() return #env.ORDER > 1 end)
 
 	-- registry
 	env.R = {}

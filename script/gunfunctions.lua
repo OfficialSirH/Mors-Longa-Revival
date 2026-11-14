@@ -1395,16 +1395,42 @@ end
 -- (v2 note 2026-11-07) Original-mod behaviour: an EMPTY gun with unlimited ammo turned on gets 1 round in a 1-round
 -- "Infinite" mag, but no bullet type for it (bullettable / item field 10 stay empty). FireRound then looked up type
 -- "nil" and errored on every shot; GunPerkFor (gunperks.lua) now fires such a round as the calibre's default.
+-- (2026-11-14, original-mod bug, same in 9dde6dd) With Infinite Ammo on, an empty gun gets a fake "Infinite" magazine
+-- holding 1 round, but v1 left the bullet list (item field 10, `bullettable`) as it was. That magazine is saved with
+-- the inventory: with Infinite Ammo off later, the first shot removed bullet 1 from a longer list and the gun's
+-- write-back (table.concat of the list) failed on the hole, every shot, before the shot cooldown was set: error
+-- spam and very fast fire (user, MP test, PP19.lua:475). Now the fake magazine holds exactly one bullet, and a fake
+-- magazine left over while Infinite Ammo is off is emptied (the gun is unloaded, as after its last round).
+-- Field 10 is only touched where the item has it (RPG: no bullet list).
 function checkUnlimitedBulletsValid()
+	local key = "inventory.guns."..GetInt("inventory.curprimary")..".item"
 	if unlimitedammo and ammo == 0 then
 		name = "Infinite"
-		local guninfo = Split(GetString("inventory.guns."..GetInt("inventory.curprimary")..".item"), "_")
+		local guninfo = Split(GetString(key), "_")
 		guninfo[3] = ""
 		guninfo[4] = name
 		guninfo[5] = 1
 		guninfo[6] = 1
-		SetString("inventory.guns."..GetInt("inventory.curprimary")..".item", IDBuilder(guninfo))
+		local last = type(bullettable) == "table" and bullettable[#bullettable] or nil
+		if guninfo[10] ~= nil then guninfo[10] = last or "" end
+		if type(bullettable) == "table" then bullettable = { last or "" } end
+		SetString(key, IDBuilder(guninfo))
 		SetBool("inventory.update", true)
 		ammo = 1
+	elseif not unlimitedammo then
+		local item = GetString(key)
+		if not item:find("_Infinite_", 1, true) then return end   -- (every gun script runs this every frame)
+		local guninfo = Split(item, "_")
+		if guninfo[4] == "Infinite" and guninfo[3] == "" and tonumber(guninfo[5]) ~= 0 then
+			guninfo[4] = "Unloaded"
+			guninfo[5] = 0
+			guninfo[6] = 0
+			if guninfo[10] ~= nil then guninfo[10] = "" end
+			SetString(key, IDBuilder(guninfo))
+			SetBool("inventory.update", true)
+			name = "Unloaded"
+			ammo = 0
+			if type(bullettable) == "table" then bullettable = {} end
+		end
 	end
 end

@@ -1,0 +1,160 @@
+# Phase 5 reorganization (draft 2026-11-14, for the user's review): `old -> new`, files or whole folders.
+# Applied with: python tools/relocate/relocate.py apply tools/relocate/moves.txt
+# Stays where it is: the engine-fixed root files (info.txt, id.txt, preview.jpg, options.lua, spawn.txt, main.xml,
+# main.lua), main/ (main.xml's LEVEL folder: terrain, buildings, props), prefabs/ (spawn code builds
+# "MOD/prefabs/" .. name, so it moves only as a whole), docs/, tools/.
+
+# --- levels
+level.xml -> levels/level.xml
+level_no_shadow.xml -> levels/level_no_shadow.xml
+level_instance.xml -> levels/level_instance.xml
+level_scripts.xml -> levels/level_scripts.xml
+level_scripts_spawn.xml -> levels/level_scripts_spawn.xml
+level_tutorial.xml -> levels/level_tutorial.xml
+level_horde.xml -> levels/level_horde.xml
+main_christmas.xml -> levels/main_christmas.xml
+
+# --- shared libraries
+Config.lua -> lib/Config.lua
+Settings.lua -> lib/Settings.lua
+Settings_Table.lua -> lib/Settings_Table.lua
+ModConfig.lua -> lib/ModConfig.lua
+Automatic.lua -> lib/Automatic.lua
+scripts/TDSU -> lib/TDSU
+scripts/masterScriptRemover.lua -> lib/masterScriptRemover.lua
+scripts/masterScriptRemoverAPI.lua -> lib/masterScriptRemoverAPI.lua
+scripts/missing_script_stub.lua -> lib/missing_script_stub.lua
+scripts/savegamePatchHandler.lua -> lib/savegamePatchHandler.lua
+scripts/Tools/DevShortcuts.lua -> lib/DevShortcuts.lua
+script/utility.lua -> lib/utility.lua
+
+# --- menus and UI
+scripts/UI/MainMenu -> ui/MainMenu
+scripts/UI/SpawnMenu.lua -> ui/SpawnMenu.lua
+scripts/UI/Book.lua -> ui/Book.lua
+scripts/ConfigMenu.lua -> ui/ConfigMenu.lua
+scripts/pauseMenu.lua -> ui/pauseMenu.lua
+scripts/debugScreen.lua -> ui/debugScreen.lua
+scripts/FramePlayer -> ui/FramePlayer
+scripts/RotateScene.lua -> ui/RotateScene.lua
+menu_update_log_data.lua -> ui/menu_update_log_data.lua
+
+# --- game rules, economy, tutorial
+scripts/Gamerule.lua -> game/Gamerule.lua
+scripts/MLSandbox.lua -> game/MLSandbox.lua
+scripts/newLeveltoLEVEL.lua -> game/newLeveltoLEVEL.lua
+scripts/perkTable.lua -> game/perkTable.lua
+scripts/Radio.lua -> game/Radio.lua
+scripts/Game/PerkMachine.lua -> game/PerkMachine.lua
+scripts/Game/ParkingSpot.lua -> game/ParkingSpot.lua
+scripts/Game/SafeZone.lua -> game/SafeZone.lua
+scripts/Game/ToolManager.lua -> game/ToolManager.lua
+scripts/Game/script.lua -> game/LootOutline.lua
+scripts/Tools/PrefabTester.lua -> game/PrefabTester.lua
+scripts/Game/randomdelete.lua -> game/randomdelete.lua
+script/shop.lua -> game/shop.lua
+scripts/Tutorial -> game/Tutorial
+
+# --- world: generation, environment, events
+Procedural -> world/generation
+scripts/Game/daynight -> world/daynight
+scripts/weather.lua -> world/weather.lua
+scripts/window.lua -> world/window.lua
+scripts/door_global.lua -> world/door_global.lua
+scripts/automatic_doors.lua -> world/automatic_doors.lua
+scripts/tree.lua -> world/tree.lua
+scripts/pine.lua -> world/pine.lua
+scripts/ground.lua -> world/ground.lua
+scripts/Binge.lua -> world/Binge.lua
+scripts/simplerotate.lua -> world/simplerotate.lua
+scripts/WarehouseCollapse.lua -> world/WarehouseCollapse.lua
+scripts/Game/WarehouseScript_Cultist.lua -> world/WarehouseScript_Cultist.lua
+scripts/Debri.lua -> world/Debri.lua
+scripts/loreDocs.lua -> world/loreDocs.lua
+scripts/engineprops.lua -> world/engineprops.lua
+scripts/parachute.lua -> world/parachute.lua
+scripts/Game/AC130.lua -> world/AC130.lua
+
+# --- player: health, inventory, hitboxes, view
+HealthSystem -> player/HealthSystem
+script/inventory.lua -> player/inventory.lua
+script/inv-desc.lua -> player/inv-desc.lua
+script/inv-items.lua -> player/inv-items.lua
+script/gunxmlbuilder.lua -> player/gunxmlbuilder.lua
+script/weapon_wheel.lua -> player/weapon_wheel.lua
+script/meds.lua -> player/meds.lua
+scripts/PlayerHitboxes.lua -> player/PlayerHitboxes.lua
+script/Lean.lua -> player/Lean.lua
+script/3rd Person Remover.lua -> player/3rd Person Remover.lua
+script/PlayerID.lua -> player/PlayerID.lua
+script/RemoveVehiclePlayerModel.lua -> player/RemoveVehiclePlayerModel.lua
+
+# --- weapons: guns (scripts + tool prefabs), melee, explosives, tools
+script -> weapons/guns
+scripts/Weapons/Melee -> weapons/melee
+scripts/Grenades.lua -> weapons/Grenades.lua
+scripts/Game/mine.lua -> weapons/mine.lua
+scripts/Game/PlaceTool -> weapons/PlaceTool
+
+# --- items: loot
+Loots -> items/Loots
+script/randomloot.lua -> items/randomloot.lua
+scripts/LootChance.lua -> items/LootChance.lua
+
+# --- NPCs
+GoreNPCs -> npcs/GoreNPCs
+main/GoreRagdolls2 -> npcs/GoreRagdolls2
+scripts/Cultist Spawner.lua -> npcs/Cultist Spawner.lua
+scripts/Game/Blood.lua -> npcs/Blood.lua
+scripts/Game/Blood -> npcs/Blood
+
+# --- vehicles: cars, armed vehicles, mounted guns, enemy drivers, aircraft
+Vehicles -> vehicles/cars
+avf -> vehicles/avf
+scripts/avf -> vehicles/avf_port
+scripts/MountedGun.lua -> vehicles/MountedGun.lua
+scripts/SteeringWheel.lua -> vehicles/SteeringWheel.lua
+scripts/bike.lua -> vehicles/bike.lua
+scripts/vehicle_checker.lua -> vehicles/vehicle_checker.lua
+scripts/Game/Fuel.lua -> vehicles/Fuel.lua
+scripts/Game/CarAlarm.lua -> vehicles/CarAlarm.lua
+scripts/Game/ShootFromCar.lua -> vehicles/ShootFromCar.lua
+scripts/Game/PlayerVehicleSeat -> vehicles/PlayerVehicleSeat
+scripts/vehicleOperatorCoop.lua -> vehicles/operators/vehicleOperatorCoop.lua
+scripts/chaseOperator.lua -> vehicles/operators/chaseOperator.lua
+scripts/chaseOperatorTransport.lua -> vehicles/operators/chaseOperatorTransport.lua
+scripts/ConvoyOperations.lua -> vehicles/operators/ConvoyOperations.lua
+scripts/ConvoyOperatorTransport.lua -> vehicles/operators/ConvoyOperatorTransport.lua
+main/AS350 -> vehicles/aircraft/AS350
+main/Boeing_CH47-C -> vehicles/aircraft/Boeing_CH47-C
+main/Mil-Mi-35P-Hind -> vehicles/aircraft/Mil-Mi-35P-Hind
+main/UH-1H -> vehicles/aircraft/UH-1H
+main/CRJ-200 -> vehicles/aircraft/CRJ-200
+scripts/heliCrashSmoke.lua -> vehicles/aircraft/heliCrashSmoke.lua
+
+# --- shared assets (moved whole: scripts build "MOD/snd/" .. name, "MOD/img/icon/" .. id)
+vox -> assets/vox
+snd -> assets/snd
+img -> assets/img
+brush -> assets/brush
+Skybox -> assets/skybox
+
+# --- dev only (left out of the release)
+test.xml -> dev/levels/test.xml
+test_misc.xml -> dev/levels/test_misc.xml
+test_npc.xml -> dev/levels/test_npc.xml
+test_vehicle.xml -> dev/levels/test_vehicle.xml
+lol.xml -> dev/levels/lol.xml
+test.lua -> dev/levels/test.lua
+scripts/Tools -> dev/tools
+scripts/&T8yh9o12.lua -> dev/scripts/&T8yh9o12.lua
+scripts/test spawning.lua -> dev/scripts/test spawning.lua
+scripts/SaveFileSystemTest.lua -> dev/scripts/SaveFileSystemTest.lua
+scripts/PrefabAnalyzer.lua -> dev/scripts/PrefabAnalyzer.lua
+scripts/nothing.xml -> dev/scripts/nothing.xml
+
+# --- run-time path prefixes that cover the whole mod ("MOD/" .. path), checked by hand:
+ack scripts/TDSU/umf.lua:MOD/
+ack tools/porting/blender_vehicle.py:MOD/
+ack tools/porting/fix_missing_scripts.py:MOD/
+ack .github/ISSUE_TEMPLATE/bug_report.md:MOD/

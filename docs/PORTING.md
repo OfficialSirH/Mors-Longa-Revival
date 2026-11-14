@@ -43,6 +43,6 @@ Short checklist for converting one script. Why and the details: `docs/TECHNICAL_
 
 1. `check.lua` and `toplevel.lua` on the file; a mock test in `tools/porting/tests/` (two players, the
    non-host player doing the thing, no wrong-side calls); run all tests.
-2. Put the edits in a converter (or say it is hand-written) and log the change in TECHNICAL_REFERENCE (§7 system,
-   §8 if it fixes an original bug or changes behaviour).
+2. Log the change in TECHNICAL_REFERENCE (§7 system, §8 if it fixes an original bug or changes behaviour). The
+   converters are frozen (`tools/porting/history/`): edit files directly.
 3. Tell the user exactly what to test in-game, with in-game names.

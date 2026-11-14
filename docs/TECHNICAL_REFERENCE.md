@@ -37,16 +37,26 @@ Best primary sources, in order:
    gun template), `lasergun` (vox tool), `vehiclepack`.
 4. Workshop MP mods: 3621598329 Multiplayer C4 (prefab tool, `invisible` tag), 3662075963 Tripmine (minimal tool
    prefab), 3625899189 Zombiedown (mplib survival, NPCs), 3668043935 GYMP Ragdoll Framework (v2 ragdolls; no AI).
+   Suggested by the user 2026-11-14: 3813115423 Halo: Firefight (2-4 player co-op with AI and vehicles; its notes:
+   each machine keeps its own `savegame.mod`, the server's registry is the host's, server writes clients read go
+   out with the sync flag, per-player settings are sent by that player's client); 3406671087 Metal Softball Bat
+   (client-side objects simulated in Lua without server authority, the server only forwards messages; clock sync
+   by Cristian's algorithm, RTT, fast-forwarding; `GetTime()` is not synced between machines; its notes say that
+   since patch 21900075 `ServerCall` must name its function as a string literal in the call itself, so a
+   reassigned ServerCall or a variable name fails; ours all use literals); 3775653892 Castdown (a global gamemode:
+   `gamemodes.txt` with `path = castdown.lua`; the official `mods/contentgamemodeexample` shows a content gamemode,
+   `layers = race`, and notes that sandbox.lua disables itself while a gamemode runs). Official docs:
+   teardowngame.com/modding, /modding-mp (registry, savegame and tools in MP are not covered there).
 5. mplib: https://github.com/tuxedolabsorg/mplib. The API web page truncates in WebFetch; use script_defs.lua.
 
 ---
 
 ## 2. Workflow
 
-* Agent runs on the user's PC: Git Bash + PowerShell, no system Lua or Python. Per session:
+* Agent runs on the user's PC: Git Bash + PowerShell, no system Lua. Per session:
   * Lua 5.1: build from `https://github.com/lua/lua` (`git checkout v5.1.1`;
     `clang -O1 -w -o lua51.exe $(ls *.c | grep -vE '^(luac|print|ltests)\.c$')`, LLVM is installed).
-  * Python: a venv in the session scratchpad (`python -m venv`); `python3` is not on PATH.
+  * Python 3.13 is installed (`python`; `python3` is not on PATH).
   * Blender 5.2 with Blender MCP (`mcp-for-blender`, server registered in the repo's `.mcp.json`, telemetry off):
     the user starts it in Blender (N panel → "MCP for Blender" → Start MCP Server). Used for vehicle seats (§6).
 * **Line endings**: the repo is **LF** since 2026-11-08 (`.gitattributes`: `* text=auto eol=lf`, assets binary; one
@@ -57,10 +67,9 @@ Best primary sources, in order:
   python edit scripts to a file with the Write tool, or use the Edit tool. `md5sum $VAR` with an empty variable waits
   on stdin forever → add `< /dev/null`. A python `open(..., 'wb')` on a file the user has open can fail with
   "Invalid argument" (the file stays intact): retry with the Edit tool.
-* Converters (`tools/porting/patches/convert_*.py`) rebuild their files from a git base each run and assert every
-  edit. **Hand edits to a converter-owned file are lost on the next full run**: put every change into the converter
-  (happened twice: sprint fix in AdvancedHealthScript, infinite-ammo note in gunfunctions). After changing a
-  converter, run it fully and compare md5 of all its files before/after.
+* Converters (`tools/porting/history/`) are **frozen since 2026-11-14**: during Phases 1-4 the rebuild converters
+  regenerated their files from a git base each run (hand edits were lost on the next run); now their output files
+  are ordinary source and edited directly. Never re-run a rebuild converter. `add_seats.py` is still used.
 * Tools and mock tests: `tools/porting/README.md`. Run all tests from the repo root after every change.
 * `#include` lines are handled by Teardown before Lua parses the file: an include inside a `--[[ ]]` comment still
   loads, and one naming a missing file keeps the whole script from loading (the WMIK and GMG offroad configs never
@@ -314,7 +323,7 @@ queued in `Melee_Functions.lua` and sent once per frame to `server.meleeOps(ops,
   angle; fixed, toes now follow the feet): seat layouts didn't depend on it (backrest, head, hands, feet). `merc(root, rig)`: the Friendly Merc ragdoll
   (Ragdollsecurity2.xml) posed exactly as goreai_sitting.lua + npc_pose_ragdoll do (Python copies `npc_head`,
   `npc_pose`, `player_seat`), to compare merc and player on the same seat.
-* Measure → layout in `tools/porting/patches/add_seats.py` (`driver`, `passenger(yaw, legroom, floor)`,
+* Measure → layout in `tools/porting/add_seats.py` (`driver`, `passenger(yaw, legroom, floor)`,
   `shifted`) → `add_seats.py --replace` (patches the prefab and every embedded `instance=` copy) → mannequin check →
   user test.
 * Copies of Teardown 1.x vehicles (sportscar, SUV, saloon, boxtruck, dumptruck, crane, tractor, ...): the
@@ -535,7 +544,7 @@ gunner places (§6 "AVF"); the Kornet / AGS-30 tripods are no longer vehicles (g
   * Retirement (`MG_GunUnusable`): gun under 25 % of its voxels, a joint broken, gun off its turret or turret off the
     vehicle (distances + 1 m) → `MG_Retire` once: gunner off, the gunner rig deleted, prompt removed (its debug line
     removed 2026-11-13, user). (IsShapeBroken / origin-distance checks retired working guns.)
-  * AVF shells: `tools/porting/patches/port_avf.py` (rebuild; base `tools/porting/avf_base/` = AVF V-3.0.2,
+  * AVF shells: `tools/porting/history/port_avf.py` (rebuild; base `tools/porting/history/avf_base/` = AVF V-3.0.2,
     unmodified) → `scripts/avf/AVF_Shells.lua` (AVF's common, ammo, weapons, globalConfig, handlers; server simulation;
     client visuals); hand-written `scripts/avf/AVF_Glue.lua`. Server: flight, penetration, payloads, spall / shrapnel,
     world effects, NPC damage (AVF's `mors_longa_damage` registry hook), player damage. Clients: shells drawn from
@@ -676,8 +685,9 @@ level script `scripts/ConfigMenu.lua`), `Automatic.lua`.
   the limp sitters they turn into (`main/AS350/Gore Ragdolls 2/scripts/gorefunctions.lua`, v2 2026-11-13,
   test_sitter.lua: ragdoll logic on the server, bleeding particles from `shared.bl<body>` on the clients; P and the
   kill-all key for any player; verified SP).
-* Edits live in `patches/convert_goreai.py` (base 6c28435); hand-written: goreai_main, killcam, players, netview,
-  controller, sitting. The converter also owns gunfunctions.lua, Melee_Functions.lua and AdvancedHealthScript.lua edits.
+* Converted by `tools/porting/history/convert_goreai.py` (base 6c28435, frozen; also gunfunctions.lua,
+  Melee_Functions.lua and AdvancedHealthScript.lua edits); hand-written: goreai_main, killcam, players, netview,
+  controller, sitting.
 
 ### Player: health, inventory, hitboxes (Phase 2 design, verified)
 * Health (`HealthSystem/AdvancedHealthScript.lua`) and inventory (`script/inventory.lua`) run on each player's
@@ -949,6 +959,52 @@ Behaviour changes decided by the user:
   * Rotated med used on a body part (original-mod bug, same six lines in 9dde6dd): `placeItem` put the med back as
     `{item, {origx, origy}, w, h}` without `rotation` and with w/h of the drag rotation: drawn unrotated on rotated
     cells. Now put back with the slot's own rotation and size.
+* MP fixes from the first local MP test (user, 2026-11-14; mock tests test_newlevel.lua, test_invtools.lua; to be
+  re-tested in local MP):
+  * Vanilla tools on for every player in MP: our levels loaded the engine's `sandbox.lua`, whose `server.tick` in
+    multiplayer only enables every registered tool for every player each tick; the inventory's server.tick applied
+    its per-player list only when it changed (`InvApplied` cache), so after the first tick sandbox won. First fix:
+    re-apply every tick against `IsToolEnabled` (worked, but the two fought every tick). Now the game levels load
+    `scripts/MLSandbox.lua` instead: the engine's sandbox.lua with only that SetToolEnabled removed (spawn /
+    respawn, name tags, damage indicators, death fade, weather, map markers, unlimited ammo unchanged); the per-tick
+    check stays as a guard. (A gamemode would also stop sandbox.lua, `contentgamemodeexample/race.lua`, but takes
+    those features with it.)
+  * Extinguisher in slot 1 over the primary gun (user's MP screenshots; behaviour change): v1 put it in slot 4 with
+    `game.tool.extinguisher.index = 4`, but in 2.x the tool bar's slot is `game.tool.<id>.group` and `.index` only
+    orders tools inside a slot (`data/ui/hud.lua`), so neither the sync flag nor a client-side write moved it. Now
+    `.group = 4` (with the Place / Welding tools), set on the server and on each machine (inventory client.tick).
+    That only moves it on the bar: the engine's own key 4 and mouse wheel use the built-in slot (1), so key 4 never
+    reached it (user's test). Key 4 is now handled by the inventory (`InvCycleSlot4`, user's choice): it cycles the
+    enabled slot-4 tools in the bar's order (Place Tool → Welding Tool → Extinguisher). The mouse wheel stays the
+    engine's (reaches the Extinguisher next to the slot-1 guns). test_slot4.lua.
+  * Other players' guns drawn as loose parts (every part in its build lane, arms floating): the gun scripts place,
+    animate and hide the parts of the local player's tool body only. `gunnet.lua` now sends the holder's part
+    transforms (changed parts, <= 10/s, all every 2 s and on a tool change) and every other machine applies them
+    to that player's tool body each frame in `client.render` (as the official `snowball.lua`), first-person arms /
+    hands (the gun script's hand1/hand2/arm1/arm2) hidden there. test_gunparts.lua. Verified (user, 2026-11-14):
+    other players' guns look whole. Left as it is for now (user): in third person every gun sits offset from the
+    hand and is very large next to the character, because the prefabs are built at first-person viewmodel scale
+    and position (original mod; resizing would change the first-person look).
+  * Hardcore "Try Again" resets the other players' money too (user, 2026-11-14).
+  * Leftover "Infinite" magazine (original-mod bug, same code in 9dde6dd; found in the MP test, not MP-specific):
+    with Infinite Ammo on, an empty gun gets a fake 1-round "Infinite" magazine (`gunfunctions.lua
+    checkUnlimitedBulletsValid`, all guns) that kept the old bullet list and is saved with the inventory. With
+    Infinite Ammo off later, the first shot left a hole in the list and the gun's write-back (`table.concat`,
+    PP19.lua:475) failed every shot before the shot cooldown was set: error spam and very fast, endless fire. Now
+    the fake magazine holds exactly one bullet, and a leftover one is emptied while Infinite Ammo is off (the gun
+    needs a reload). test_infinitemag.lua.
+  * Remote players: no starter loadout and 0 hunger / thirst (starved at once). The main menu's new-game reset
+    (`savegame.mod.inventory.init`, perks, bounty board) is written in the host's savegame only. Now the menu also
+    writes a new `savegame.mod.runid`; `newLeveltoLEVEL.lua` publishes it (`level.runid`, synced) with the host's
+    difficulty (`level.difficulty`); each non-host client that sees a run id it hasn't played does the per-player
+    reset in its own savegame (inventory.init -> loadout and full vitals; perks; bounty board; money kept, as the
+    host's on New Save) and mirrors the host's difficulty into its savegame every level (health / NPC / hunger rules
+    read it on each machine). A save from before run ids gets one at its next level start.
+  * `inventory.lua` vitals (original-mod bug, also v1): `GetFloat("savegame.mod.hunger") or 100` never used the
+    default (GetFloat returns 0 for a missing key): a savegame without the keys started at 0. Now `HasKey`.
+  * Game rules on remote clients: `newLeveltoLEVEL.lua` copied `savegame.mod.newLevel.*` to `level.*` without the
+    sync flag, so `level.gamerule.*` (god, armored, helicopter, nhat, keepinv, permadeath) read as off on remote
+    machines. Now synced.
 
 ---
 
@@ -983,13 +1039,32 @@ Behaviour changes decided by the user:
   other guns. Its gun weighs ~1e-7 kg (see the freeze in §10).
 * Test-only levels stay v1: test.xml, lol.xml, test_*.xml, procgen and gore-map test levels, `main.lua`.
   `prefabs/other/Credits.xml` (thiccparticle.lua) is never spawned. `script/craftingrecipes.lua` has a syntax
-  error and is never loaded. ~478 Lua files exist, ~316 reachable; `unused/` is dead.
+  error and is never loaded. ~478 Lua files existed, ~316 reachable; dead files (`unused/`, `_WORKSHOP/`, the
+  Teardown-Totally-Documented dump, `*_old` / `- Copy` leftovers, editor stubs) deleted 2026-11-14 (in git history).
 
 ---
 
 ## 10. Open questions and known gaps
 
-MP-only (need the Phase 5 private Workshop upload):
+MP-only (tested locally since 2026-11-14: the in-game mod editor runs a host and a client window on one PC):
+* Found in the first local MP test and fixed, to re-test (§8 "MP fixes"): vanilla tools on for everyone, remote
+  players without starter gear and at 0 hunger / thirst: verified fixed in the third test (the second one had run
+  the stale release copy). Third test (2026-11-14) → other players' guns as loose parts, remote tool bar
+  overlap: fixed, to re-test (§8). The host runs at about half the client's FPS (21-30 vs 57-60): the host is
+  server and client (expected to cost more; part of the performance work).
+* World shift in MP (user, 2026-11-14, second local test; causes not verified): for non-hosts everything is thrown
+  around for a moment at each shift and then corrects itself; NPCs sometimes struggle to stand for non-hosts while
+  driving through generation / shifts; a non-host driving through a generation hitch: the car stopped, after the
+  non-host got out the host was in the driver's seat but couldn't drive, and after the host got out nobody could
+  get back in. The shift moves every body and trigger 200 m with SetBodyTransform in one server tick
+  (`GenerateRoad.lua ReturnToShadowVolume`); there is no API to move bodies without the network smoothing. A host
+  readout in the third test (both players in one car): the car moved exactly -200 m and kept driving (+10 m in
+  the next second), so the server's car is not put back by a client; the stuck car did not happen that time. Leads from a code survey, not yet seen in-game: permadeath
+  watches only the host (`Gamerule.lua`), fuel perks / fuel money on the host's savegame (`Fuel.lua`), debug-menu
+  toggles read on the server (do nothing from a non-host), cultist ambush only around the host, effects started
+  only on the server (RPG rocket, GAZ doors, car radio, JetBus, convoy sirens), server bullets without gravity
+  (`gravity` nil in the gun server realm), per-bullet network traffic. On Hardcore "Try Again" the host's money is
+  reset, the other players' is not (open: reset theirs too?).
 * Pause button primary slot shared with other mods; main menu for non-hosts; straggler teleport.
 * Server-side sounds/particles/tracers reaching remote clients; `shared` nested tables on remote clients; entity
   handles sent client→server referring to the same entity (melee, PlaceTool, Weld, NPC controller).

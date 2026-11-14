@@ -1,7 +1,7 @@
 #version 2
 #include "script/include/player.lua"
 -- (v2 operator) SERVER only: AI driving (DriveVehicle), damage, explosions, sounds, siren/lights. Targets the
--- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/patches/convert_operators.py.
+-- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/history/convert_operators.py.
 #include "masterScriptRemoverAPI.lua"
 #include "vehicleOperatorCoop.lua"
 --debug toggle

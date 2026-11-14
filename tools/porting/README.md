@@ -7,7 +7,7 @@ engine facts: `docs/TECHNICAL_REFERENCE.md`. Run everything from the repo root.
 
 * Lua 5.1: clone `https://github.com/lua/lua`, `git checkout v5.1.1`, then (Git Bash, LLVM installed)
   `clang -O1 -w -o lua51.exe $(ls *.c | grep -vE '^(luac|print|ltests)\.c$')`.  No Lua at all: `texlua` (TeX Live, Lua 5.3) runs `check.lua` and `toplevel.lua`.
-* Python: a venv in the session scratchpad (`python -m venv venv`); `python3` is not on PATH on the user's PC.
+* Python: `python` (3.13) is installed on the user's PC (`python3` is not on PATH).
 
 ## Analysis
 
@@ -18,10 +18,17 @@ engine facts: `docs/TECHNICAL_REFERENCE.md`. Run everything from the repo root.
   (`#include x.lua`) are not followed: run it on those files directly.
 * `sides.py` – per-function report of server-only / client-only / UI / registry calls (how to split a script).
 
-## Converters (`patches/`)
+## Vehicle seats
 
-Two kinds. **Rebuild** converters regenerate their files from a git base on every run (re-runnable; never hand-edit
-those files, put changes in the converter). **In-place** converters convert a v1 file once (they assert v1).
+`add_seats.py [--dry-run] [--replace]` (idempotent; still in use for new vehicles): details in the table row below.
+Its `EMPLACEMENTS` (Kornet / AGS-30 tripods) are rebuilt from git `cfa00f1` on `--replace`.
+
+## Converters (`history/`, frozen 2026-11-14)
+
+The conversion is done: the converters are **no longer run** and the files they produced are ordinary source, edited
+directly. They stay in `history/` as a record of what each conversion changed (see `history/README.md`; running a
+rebuild converter now would overwrite every edit made since). **Rebuild** converters regenerated their files from a
+git base; **in-place** converters converted a v1 file once.
 
 | Converter | Kind | Files |
 |---|---|---|
@@ -36,12 +43,13 @@ those files, put changes in the converter). **In-place** converters convert a v1
 | `convert_horde.py` | rebuild (base 6c28435) | WaveHandler, HordePlaceTool (horde shelved) |
 | `add_seats.py [--dry-run] [--replace]` | idempotent | seat rigs per vehicle (VEHICLES table) into the prefab and its embedded copies (`instance=` groups, or a `path=MOD/...` tag on the `<vehicle>`; key `file#name` = that file's `<vehicle name="name">`); skips vehicles with rigs unless `--replace`. Layouts: `driver(...)`, `driver_standing(stand, wheel, radius)`, `passenger(..., yaw=, legroom=, floor=, head=)`, `gunner_seated(seat, feet_y, legroom=, yaw=)` (seated gunner place, ZU-23 mount / BMP / tank turrets), `gunner(sort, stand, grip, yaw=)` (standing mounted-gun place, rig tags `gunner relative_parent sort=99`, written under the vehicle's first `<body>`; the engine still counts it as the last seat; scripts/MountedGun.lua) (`head`: ik_head offset, default 0.8 up; low cabs as official pickup_red: (0, 0.55, 0.25), tilt 70-80), `shifted(layout, dy=)`, `official(prefab, shift=, seat=, move=, keep=)` (copies an official 2.x vehicle's rigs; `seat`/`move` move single locations, `keep` filters rigs), `heli_pilot(seat, feet_y, legroom)` (AS350 pilot facing +z). `WRAP_VEHICLE` (script marker → `<vehicle>` tag): first wraps those scripts' content in a `<vehicle>` (AS350, which had none), idempotent |
 | `port_immersive.py` | rebuild (base git 9dde6dd) | `avf/scripts/Immersive_Tank.lua`: logic on the server, effects on the clients (one event each), test `test_immersive_tank.lua` |
-| `port_avf.py` | rebuild (base `tools/porting/avf_base/`, AVF V-3.0.2, credited) | `scripts/avf/AVF_Shells.lua`: AVF's shell code split server (simulation, world effects, damage) / client (visuals from events); glue by hand in `scripts/avf/AVF_Glue.lua`; test `test_avf_cannon.lua`; cost profile `tests/profile_avf_foliage.lua` (real quaternion maths, counts engine calls per shell) |
+| `port_avf.py` | rebuild (base `tools/porting/history/avf_base/`, AVF V-3.0.2, credited) | `scripts/avf/AVF_Shells.lua`: AVF's shell code split server (simulation, world effects, damage) / client (visuals from events); glue by hand in `scripts/avf/AVF_Glue.lua`; test `test_avf_cannon.lua`; cost profile `tests/profile_avf_foliage.lua` (real quaternion maths, counts engine calls per shell) |
 | `heli_variants.py` | rebuild (base: the current `main/AS350/AS350_{MILITARY,INSURGENT}.xml`, run after `add_seats.py`) | `AS350_*_PARKED.xml`: spawn-menu copies tagged `parked` (no enemy AI) |
 | `convert_steering.py [--dry-run]` | idempotent | fake-wheel steering wheels (UAZ-452 ×5) → `steer`-tagged body part + `<script file="MOD/scripts/SteeringWheel.lua">` around the vehicle |
 | `gunfunctions.py` | history | the projectile world/fx split as applied to gunfunctions.lua |
 
-All converters write LF (the repo is LF since 2026-11-08); inputs read from old commits may be CRLF.
+All converters wrote LF (the repo is LF since 2026-11-08); inputs read from old commits may be CRLF. `add_seats.py`
+is the only one of this table still run (from `tools/porting/`).
 
 ## Mock tests (`tests/`)
 
@@ -53,13 +61,16 @@ All converters write LF (the repo is LF since 2026-11-08); inputs read from old 
   `HasTag`/`IsHandleValid`/`InputPressed` etc. to false where a test depends on it.
 * Tests: `test_compat`, `test_gunnet`, `test_goreai`, `test_npcview`, `test_generateroad`, `test_removeroad`,
   `test_travel`, `test_operators`, `test_vehicleevents`, `test_props`, `test_shop`, `test_tutorial`, `test_menu`,
-  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`. Run all after every change:
+  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`, `test_newlevel` (MP new run), `test_invtools` (per-player tools vs sandbox.lua), `test_gunparts` (other players' guns), `test_infinitemag` (fake Infinite magazine), `test_slot4` (key 4 cycles slot 4). Run all after every change:
   `for t in tools/porting/tests/test_*.lua; do lua5.1 $t || echo "FAIL $t"; done`.
 
 ## Other tools
 
+* `../relocate/relocate.py` – the Phase 5 reorganization: moves files and rewrites every path reference,
+  provably (README in `tools/relocate/`).
+
 * `make_release.py [--dry-run] [--dest <folder>]` – Phase 5: copies only the files the game loads (no .git,
-  tools, docs, unused/, dev files) into `Documents/Teardown/mods/Mors Longa Revival (Release)`, the folder to
+  tools, docs, dev files, root test levels) into `Documents/Teardown/mods/Mors Longa Revival (Release)`, the folder to
   upload (the dev mod folder is a junction to the repo). Refuses while `info.txt` says AUTHOR_NAME; keeps the
   release's own `id.txt` (its Workshop item after the first upload); empties only a folder it made itself.
 * `make_tool_prefab.py <GUN> [camo...]` – builds `script/Weapons/<GUN> Tool.xml` for LoadTool guns (reverse part

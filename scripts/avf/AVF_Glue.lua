@@ -1,5 +1,5 @@
 -- AVF_Glue.lua (Mors Longa Revival, Phase 4 step 3, cannons) - hand-written v2 glue around the generated
--- AVF_Shells.lua (AVF by elboydo, Workshop 2400346027: credit, see tools/porting/avf_base/README.md).
+-- AVF_Shells.lua (AVF by elboydo, Workshop 2400346027: credit, see tools/porting/history/avf_base/README.md).
 -- Included by scripts/MountedGun.lua. Design: TECHNICAL_REFERENCE §6 "Cannon port plan".
 --
 -- Server: AVF_ServerInit / AVF_ServerTick run AVF's shells; AVF_PushShell fires one (AVF's pushProjectile);

@@ -6,5 +6,5 @@
         "C:/Program Files (x86)/Steam/steamapps/common/Teardown/data/voxscript_defs.lua"
     ],
     "diagnostics.disable": ["missing-parameter"],
-    "workspace.ignoreDir": ["unused", "Teardown-Totally-Documented-main"]
+    "workspace.ignoreDir": ["tools/porting/history"]
 }

@@ -263,3 +263,123 @@ function client.gunRemoteGrenade(playerId, data)
 	if IsPlayerLocal(playerId) then return end
 	GunNet_AddShell(client.gunGrenades, GunNet_UnpackShell(data, playerId, false, true))
 end
+
+------------------------------------------------------------------
+-- Other players' guns (MP 2026-11-14)
+------------------------------------------------------------------
+-- The gun scripts place, animate and hide the parts of the LOCAL player's tool body only (client-side
+-- SetShapeLocalTransform; see GunNet_FixToolParts), so the other machines showed the raw tool prefab: every part
+-- still in its build lane (tools/porting/make_tool_prefab.py), arms included. Now the holder's machine sends its
+-- parts' local transforms (only the changed ones, at most GUNNET_PARTS_RATE apart, all of them every
+-- GUNNET_PARTS_FULL seconds and on a tool change) and every other machine applies them to that player's tool body
+-- each frame, as the official snowball tool does with its tool (data/script/snowball.lua client.render). The
+-- first-person arms and hands (the gun script's hand1 / hand2 / arm1 / arm2) are hidden on the other machines:
+-- the player's character holds the gun there.
+-- Uses the gun script's global `body` (its tool body while it is the held tool), so only the script of the held
+-- gun sends; the ClientCall reaches the same gun script on the other machines.
+
+GUNNET_PARTS_RATE = 0.1
+GUNNET_PARTS_FULL = 2.0
+
+client.gunPartsSent = {}     -- [part index] = what was last sent for it
+client.gunPartsNext = 0
+client.gunPartsFull = 0
+client.gunPartsTool = nil
+client.gunRemoteParts = {}   -- [player] = { tool = id, parts = { [i] = Transform }, hidden = { [i] = true } }
+
+local function gunNetPartStr(t)
+	return string.format("%.3f,%.3f,%.3f,%.4f,%.4f,%.4f,%.4f",
+		t.pos[1], t.pos[2], t.pos[3], t.rot[1], t.rot[2], t.rot[3], t.rot[4])
+end
+
+-- "i=x,y,z,qx,qy,qz,qw;..." plus "|h=i,i,i" (hidden parts)
+function GunNet_PackParts(shapes, sent, full, hiddenSet)
+	local out, changed = {}, false
+	for i = 1, #shapes do
+		local s = gunNetPartStr(GetShapeLocalTransform(shapes[i]))
+		if full or sent[i] ~= s then
+			out[#out + 1] = i .. "=" .. s
+			sent[i] = s
+			changed = true
+		end
+	end
+	local h = {}
+	for i in pairs(hiddenSet) do h[#h + 1] = i end
+	table.sort(h)
+	return changed, table.concat(out, ";") .. "|h=" .. table.concat(h, ",")
+end
+
+function GunNet_UnpackParts(data, entry)
+	local partsStr, hiddenStr = data:match("^(.-)|h=(.*)$")
+	for i, x, y, z, a, b, c, d in (partsStr or ""):gmatch("(%d+)=([^,;]+),([^,;]+),([^,;]+),([^,;]+),([^,;]+),([^,;]+),([^,;]+)") do
+		entry.parts[tonumber(i)] = Transform(Vec(tonumber(x), tonumber(y), tonumber(z)),
+			Quat(tonumber(a), tonumber(b), tonumber(c), tonumber(d)))
+	end
+	entry.hidden = {}
+	for i in (hiddenStr or ""):gmatch("%d+") do entry.hidden[tonumber(i)] = true end
+end
+
+function GunNet_SendParts()
+	local b = GetToolBody()
+	if b == 0 or b ~= body then return end
+	local shapes = GetBodyShapes(b)
+	if #shapes <= 8 then return end   -- still being built
+	local now = GetTime()
+	local tool = GetPlayerTool()
+	local full = tool ~= client.gunPartsTool or now >= client.gunPartsFull
+	if not full and now < client.gunPartsNext then return end
+	if full then
+		client.gunPartsSent = {}
+		client.gunPartsFull = now + GUNNET_PARTS_FULL
+		client.gunPartsTool = tool
+	end
+	local hidden, index = {}, {}
+	for i = 1, #shapes do index[shapes[i]] = i end
+	for _, h in pairs({ hand1, hand2, arm1, arm2 }) do   -- pairs: any of them may be nil
+		if h and index[h] then hidden[index[h]] = true end
+	end
+	local changed, data = GunNet_PackParts(shapes, client.gunPartsSent, full, hidden)
+	if changed then
+		client.gunPartsNext = now + GUNNET_PARTS_RATE
+		ServerCall("server.gunParts", GetLocalPlayer(), tool, full, data)
+	end
+end
+
+function server.gunParts(playerId, tool, full, data)
+	ClientCall(0, "client.gunParts", playerId, tool, full, data)
+end
+
+function client.gunParts(playerId, tool, full, data)
+	if IsPlayerLocal(playerId) then return end
+	local entry = client.gunRemoteParts[playerId]
+	if full or not entry or entry.tool ~= tool then
+		entry = { tool = tool, parts = {}, hidden = {} }
+		client.gunRemoteParts[playerId] = entry
+	end
+	GunNet_UnpackParts(data, entry)
+end
+
+function GunNet_ApplyRemoteParts()
+	for p in Players() do
+		local entry = client.gunRemoteParts[p]
+		if entry and not IsPlayerLocal(p) and GetPlayerTool(p) == entry.tool then
+			local b = GetToolBody(p)
+			if b ~= 0 then
+				local shapes = GetBodyShapes(b)
+				for i, t in pairs(entry.parts) do
+					if shapes[i] then SetShapeLocalTransform(shapes[i], t) end
+				end
+				for i = 1, #shapes do
+					if entry.hidden[i] then SetTag(shapes[i], "invisible") end
+				end
+			end
+		end
+	end
+	for p in PlayersRemoved() do client.gunRemoteParts[p] = nil end
+end
+
+-- After the gun scripts' client.tick (where they move the local parts), before rendering.
+function client.render(dt)
+	GunNet_SendParts()
+	GunNet_ApplyRemoteParts()
+end

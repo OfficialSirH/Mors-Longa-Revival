@@ -1,7 +1,7 @@
 #version 2
 -- (v2, Phase 4, hand-written) Steering wheels that turn with the vehicle's steering.
 --
--- Usage (tools/porting/patches/convert_steering.py does this): wrap the <vehicle> in
+-- Usage (tools/porting/history/convert_steering.py does this): wrap the <vehicle> in
 --   <script file="MOD/scripts/SteeringWheel.lua"> ... </script>
 -- and make the steering wheel a plain <vox tags="steer"> part of the vehicle body (not a <wheel>: the original UAZ
 -- built it as a fifth road wheel, which the physics spun freely after crashes).

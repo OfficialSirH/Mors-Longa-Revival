@@ -158,6 +158,10 @@ function playCharacter(char)
 	if not MenuIsHost() then return end -- (v2) only the host starts the game
 	SetBool("savegame.mod.continue",true)
 	SetBool("savegame.mod.inventory.init", true)
+	-- (v2, MP 2026-11-14) a new run id: the other players reset their own inventory/perks when they first see it
+	-- (scripts/newLeveltoLEVEL.lua client.tick)
+	SetString("savegame.mod.runid", string.format("%d-%d", math.floor(GetTime() * 1000) % 1000000000, math.random(100000, 999999)))
+	SetBool("savegame.mod.runresetmoney", false)
 
 	for i=1,4 do
 		SetBool("savegame.mod.bountyboard."..i, false)
