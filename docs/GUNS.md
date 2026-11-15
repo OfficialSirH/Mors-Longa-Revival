@@ -51,6 +51,9 @@ Marks: **[verified in-game]**, **[official source]**, **[unverified]**.
   * parts tagged `ml_toolpart unbreakable`, skipped by `GunRaycast`; Base.xml parts without `file=` get the
     wrapper's vox filled in.
   * Camo variants are generated but not registered (known gap).
+* Third person (other players, or the holder in third person; 2026-11-15): the tool is hidden and a local copy at
+  0.4 scale is posed in the character's hands (`gunnet.lua` "Third-person guns", `Gun3P_*`; [CHANGES](CHANGES.md)).
+  Tuning: `GUN3P_SCALE`, `GUN3P_HAND` (right hand in the override frame), `GUN3P_HAND_R` / `_L` (hand rotations).
 * Debug overlay (any v2 gun): **Ctrl+O** part index labels, **Ctrl+L** part table (local pos, voxel size, rot).
   Offline render: `tools/porting/render_gun.py`.
 * RPG-7: hand-converted `weapons/guns/RPG.lua`; the rocket (`weapons/guns/grenade.lua`) is spawned by the server ([SYSTEMS](SYSTEMS.md) "Other converted systems").

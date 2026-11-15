@@ -91,7 +91,8 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
    jank measured (shift probe), no fix (a hold of player cars made them flip: never retry). MP crash: no trace yet.
    Verified in MP (2026-11-15 evening): other players' melee weapons (posed, swings, sounds, crouch), vehicle
    events (cleanup grace), ambush NPCs and server-side sounds on a client (NPC sync readout, sound test). Missing
-   sound files from the log fixed (pistol / MK36 NPCs audible now, user OK; docs/CHANGES.md).
+   sound files from the log fixed (pistol / MK36 NPCs audible now, user OK; docs/CHANGES.md). Third-person guns
+   (local 0.4-scale copy, engine rifle poses, scopes switch to first person) and scope overlay alignment: verified.
 4. Performance (plan agreed 2026-11-14; user: segment spawns freeze 1-several s, shifts hitch a little, many NPCs
    cost a lot): order = generation first, then NPCs, then the world shift (rarer / faded) last.
    Done, to test in-game (docs/PERFORMANCE.md "Segment weight"): debug-menu "Performance tests" (left column)

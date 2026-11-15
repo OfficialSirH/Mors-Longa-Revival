@@ -222,6 +222,44 @@ Behaviour changes decided by the user:
     other players' guns look whole. Left as it is for now (user): in third person every gun sits offset from the
     hand and is very large next to the character, because the prefabs are built at first-person viewmodel scale
     and position (original mod; resizing would change the first-person look).
+    Fixed 2026-11-15 (user: "fix these massive guns", screenshots: ~2.5x size, fake first-person arms visible in
+    the holder's own third person): `gunnet.lua` "Third-person guns". Each machine spawns its own small copy of
+    the held gun (one shape per tool part at `GUN3P_SCALE` = 0.4 of its voxel size, voxels and colours copied
+    from the tool's parts), poses it every frame from the tool parts (positions x 0.4, so reload animations
+    carry over), hides the tool and the fake arms, and puts the character's hands on the fake hands' grip points
+    with the engine rifle's third-person hand placement (`data/prefab/tool/rifle.xml`). Used for other players
+    and for the holder in third person; first person unchanged. The holder also sends which parts are its fake
+    hands (`|g=` in the parts message). Test: `test_gun3p.lua`. Unverified in-game: that a client's Spawn stays
+    local and that a copied shape keeps its own voxel size (if not, the gun stays big). Not changed: remote
+    tracers still start at the holder's first-person muzzle point.
+    First test (user): both confirmed (small gun in the other player's hands) **[verified in-game]**. Two fixes: a
+    piece floating behind the player (MC308: parts the script never moves stay where the .vox puts them, 22 m
+    behind / 5.6 m ahead) -> copy parts outside a box around the gun are hidden (`GUN3P_BOX_MIN` / `_MAX`); the
+    copy didn't follow the player (a static body took only its first placement, cause not verified) -> dynamic
+    body, gravity off, velocity zeroed every frame.
+    Second round (user: "aiming in 3rd person just moves the player's hands to the left"; aim like other games /
+    the base game): the pose is now the engine's own third-person rifle animation (`toolanimation.lua`
+    tickToolAnimator, poses from `data/prefab/tool/rifle.xml`): low "run" pose when idle, shouldered "action" pose
+    while aiming (right mouse, read per player) or for 2 s after a shot (`client.gunRemoteFire`), turned toward what
+    the crosshair hits (10 m camera ray, yaw clamped as the engine does), crouch variants, arm pitch about the neck,
+    the engine's blend rates. The holder's own third person no longer overrides the tool: the gun script keeps
+    placing the hidden tool as in first person (bullets unchanged) and the hands are converted into its frame (the
+    aiming offset had dragged them left, because they were given relative to that tool).
+    Third round (user: long delay back to idle after aiming; SV-98 scope view not lined up in third person): the
+    shouldered pose now ends 0.15 s after aim is released (`GUN3P_AIM_HOLD`) and 1 s after a shot
+    (`GUN3P_SHOT_HOLD`), not the engine's 2 s. Scope overlays (reticle + see-through outline, projected from the
+    first-person tool) switch the view to first person while they show: the 26 gun scripts that draw
+    `reticleoutline.png` call `Gun3P_ScopeOverlay()` there, `GunNet_ClientTick` then calls `RequestFirstPerson(true)`
+    (the engine's view-finder pattern); the view returns to third person when the scope is lowered.
+    Third-person guns after the third round **[verified in-game]** (user, 2026-11-15: "all good").
+* Scope overlay alignment (user 2026-11-15, SV-98, first and third person: "glass and reticle unaligned, sway in
+  opposite directions, the glass moves faster when turning"). Original design, same code in 9dde6dd: the reticle
+  is drawn where the barrel points (500 m ray), the see-through outline (`reticleoutline.png`) at the mirror image
+  of the scope's rear lens about the screen centre (41 draws) or at the rear lens itself (6: CZ-1012, MP43, P90,
+  Qasira, PKM, Bauer-553). Any sway or lag of the tool behind the camera moved them apart; the rear lens, close to
+  the camera, moved most. Now the outline is centred on the reticle's point in all 47 draws (26 scripts), with
+  the original's limits (x within 200 px of the centre, at most 100 px below it); both still sway with the gun.
+  **[verified in-game]** (user, 2026-11-15).
   * Hardcore "Try Again" resets the other players' money too (user, 2026-11-14).
 * MP fixes, second round (2026-11-14, user's decisions; test_mpleads.lua, test_newlevel.lua; to re-test in MP):
   * Perks are the host's for everyone: a pickup (`server.invTake`) raises the perk in the host's savegame (before:
