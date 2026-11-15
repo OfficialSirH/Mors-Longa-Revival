@@ -1,9 +1,10 @@
 #version 2
 #include "script/include/player.lua"
+#include "SpawnSlot.lua"
 -- (v2) server: spawns random loot at generated locations.
 #include "SpawnRefrenceTable.lua"
 
-local disable_spawning = "savegame.mod.procedural.disable.spawn_roadblocks"
+local disable_spawning = "savegame.mod.procedural.disable.spawn_loot" -- (2026-11-14) v1 read spawn_roadblocks here
 
 
 function server.init()
@@ -20,12 +21,14 @@ function server.init()
 	luck = HasKey('level.gamerule.lrarity') and GetFloat('level.gamerule.lrarity') or 1
 end
 function server.tick()
+	if GetBool("level.segment.loading") then return end -- (2026-11-14) a segment's parts are still spawning (GenerateRoad QueueDecor)
 
 	if GetBool(disable_spawning) then
 		return
 	end
 
 	local Locations = FindLocations("RandomLoot",true)
+	if #Locations > 0 and not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 		local Location = Locations[1]
 		if IsHandleValid(Location)then
 			local chance = 0.01*(tonumber(GetTagValue(Location, "chance")) or 100)
@@ -73,6 +76,8 @@ function SpawnRandomLoot(Type, t)
 	local lootXML = "MOD/prefabs/spawnables/loots/"..lootToSpawn
 	if HasFile(lootXML)then
 		local spawnEntities=Spawn(lootXML, t, true)
+		SetString("level.debug.what.loot", lootXML)
+		SetFloat("level.debug.spawned.loot", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 
 		SetSpawnedEntityTags(spawnEntities)
 	

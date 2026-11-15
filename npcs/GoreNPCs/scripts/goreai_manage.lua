@@ -4,6 +4,11 @@
 --- Run the tick() callback functions for all npcs.
 function tick_npcs(dt)
 
+    -- (2026-11-15) a hit reported since the last tick? (goreai_health.lua npc_process_shield) Taken and cleared HERE,
+    -- before the npcs, so a hit written later in this tick (npc bullets, other scripts) is read on the next one.
+    DamagePending = GetBool("level.goreai.damage_pending")
+    if DamagePending then SetBool("level.goreai.damage_pending", false) end
+
     local aliveNPCs = {}
     local deadNPCs = {}
 
@@ -20,11 +25,17 @@ function tick_npcs(dt)
 
             npc.headshot     = false
 
+            -- (2026-11-15, NPC performance) v1 recounted mass and voxels of every body / shape of every npc each
+            -- tick. Mass is read nowhere after init (goreai_init.lua): no recount. Voxels feed only the health of
+            -- LIVING npcs (goreai_health.lua: damage = voxels lost since last tick): counted for those only.
             npc.mass_last    = npc.mass
-            npc.mass         = npc_get_mass(npc)
-
             npc.voxels_last    = npc.voxels
-            npc.voxels         = npc_get_voxels(npc)
+            -- (2026-11-15, user OK) and only every 3rd tick per npc (staggered): voxel loss between counts adds up and is
+            -- applied at the next count (up to 2 ticks later); GYMP recounts every 10th update
+            npc.voxelTick = (npc.voxelTick or ((tonumber(npc.id) or 0) % 3)) + 1
+            if not npc.dead and (npc.voxels == nil or npc.voxelTick % 3 == 0) then
+                npc.voxels         = npc_get_voxels(npc)
+            end
 
 
             if not npc.dead then

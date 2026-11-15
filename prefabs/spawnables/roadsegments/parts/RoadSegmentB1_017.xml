@@ -1,0 +1,6 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="decor" pos="105.95 0.41 0.0" rot="0.0 0.0 0.0" prop0="texture=19 0.5" prop1="tags=veg" prop2="collide=false">
+		</group>
+</group>
+</prefab>

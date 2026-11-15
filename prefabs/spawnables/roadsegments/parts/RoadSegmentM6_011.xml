@@ -1,0 +1,92 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="town">
+				<group name="compound" pos="82.3 0.7 37.7">
+					<voxbox pos="1.1 0.0 -0.1" rot="0.0 -90.0 0.0" texture="3, 0.5" size="36 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<voxbox pos="1.1 0.0 7.1" rot="0.0 -90.0 0.0" size="40 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="0.6 0.0 -0.2" rot="0.0 -180.0 0.0" texture="3, 0.5" size="119 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<voxbox pos="-13.1 0.0 7.2" rot="0.0 -180.0 0.0" size="79 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall" offset="-30"/>
+					<voxbox pos="-12.9 0.0 14.8" rot="0.0 180.0 0.0" size="27 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="-18.59999 0.0 16.6" rot="0.0 180.0 0.0" size="24 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="-18.49999 0.0 16.1" rot="0.0 90.0 0.0" size="12 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="-16.2 2.1 14.7" rot="0.0 180.0 0.0" size="18 2 2" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="log1"/>
+					<voxbox pos="0.6 0.0 14.8" rot="0.0 -180.0 0.0" size="99 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall" offset="0"/>
+					<voxbox pos="-11.4 0.0 -0.1" rot="0.0 -100.0 0.0" texture="3, 0.5" size="70 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<voxbox pos="-12.6 0.0 7.3" rot="0.0 -90.0 0.0" size="22 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="-12.5 0.0 6.8" size="14 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="-7.0 0.0 6.8" size="28 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<vox pos="-10.3 0.0 7.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall-dest1"/>
+					<vox pos="-7.6 0.0 7.0" rot="0.0 -180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall-dest2"/>
+					<vox pos="0.9 0.0 12.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall-dest3"/>
+					<vox pos="0.9 0.0 -0.4" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<vox pos="-11.6 0.0 -0.4" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<vox pos="-12.8 0.0 7.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="-18.3 0.0 14.6" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="-18.3 0.0 16.4" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="-15.9 0.0 14.6" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="0.9 0.0 14.6" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="-1.6 0.0 5.3" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1w">
+						<vox pos="0.0 0.05 0.3" rot="0.0 0.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/carpet_1.vox"/>
+					</vox>
+					<vox pos="-31.2 0.0 23.9" rot="0.0 -90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2wg"/>
+					<vox pos="-31.2 0.0 27.3" rot="0.0 -90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2wgc"/>
+					<voxagon name="farm" pos="-43.2 0.0 8.2" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="farm1" extrude="2">
+						<vertex pos="-10.2 -3.2"/>
+						<vertex pos="5.4 -3.2"/>
+						<vertex pos="5.4 4.4"/>
+						<vertex pos="3.0 4.4"/>
+						<vertex pos="3.0 25.3"/>
+						<vertex pos="-10.2 25.3"/>
+					</voxagon>
+					<voxagon name="farm" pos="-38.4 0.0 47.9" rot="0.0 20.0 0.0" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="farm1" extrude="2">
+						<vertex pos="-10.2 -9.2"/>
+						<vertex pos="2.5 -4.4"/>
+						<vertex pos="2.5 16.2"/>
+						<vertex pos="-16.9 9.1"/>
+					</voxagon>
+					<voxbox pos="23.3 0.0 -2.5" rot="0.0 -180.0 0.0" size="46 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox pos="18.6 0.0 -2.4" rot="0.0 -90.0 0.0" size="181 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall" offset="20"/>
+					<vox pos="18.4 0.0 -2.7" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="-21.9 0.0 31.4" rot="0.0 20.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<voxbox pos="-22.113 0.0 31.691" rot="0.0 -160.0 0.0" texture="3, 0.5" size="119 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<vox pos="-33.64616 0.0 35.67525" rot="0.0 20.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<voxbox pos="-33.9 0.0 35.5" rot="0.0 90.0 0.0" texture="3, 0.5" size="64 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<voxbox pos="-33.9 0.0 22.1" rot="0.0 90.0 0.0" size="12 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<vox pos="-33.7 0.0 20.6" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<voxbox pos="-33.4 0.0 20.4" texture="3, 0.5" size="101 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw"/>
+					<voxbox pos="1.6 0.0 20.3" size="6 13 6" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<voxagon pos="1.7 0.0 20.9" rot="-90.0 -90.0 0.0" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wallw" axis="y" extrude="4">
+						<vertex pos="0.0 0.0"/>
+						<vertex pos="6.8 0.0"/>
+						<vertex pos="6.8 2.1"/>
+						<vertex pos="5.9 2.1"/>
+						<vertex pos="5.8 1.7"/>
+						<vertex pos="5.5 1.6"/>
+						<vertex pos="5.4 1.3"/>
+						<vertex pos="4.7 1.2"/>
+						<vertex pos="4.6 1.6"/>
+						<vertex pos="4.3 1.7"/>
+						<vertex pos="4.2 2.1"/>
+						<vertex pos="1.9 2.1"/>
+						<vertex pos="1.8 1.7"/>
+						<vertex pos="1.4 1.6"/>
+						<vertex pos="1.3 1.2"/>
+						<vertex pos="0.0 1.3"/>
+					</voxagon>
+					<vox pos="1.9 0.0 28.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillarw"/>
+					<vox pos="-32.3 3.0 7.4" rot="0.0 91.0 0.0" texture="8 .8" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+					<vox pos="-30.5 3.0 7.3" rot="0.0 -89.0 0.0" texture="8 .8" file="MOD/assets/vox/sandbags.vox" object="sandbags2"/>
+					<vox pos="-28.7 3.0 7.4" rot="0.0 91.0 0.0" texture="8 .8" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+					<vox pos="-9.28633 1.6 0.85182" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox pos="-8.78633 0.0 0.85182" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="3"/>
+					<vox pos="-7.58631 1.6 0.85182" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox pos="-7.08631 0.0 0.85182" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+					<vox pos="-5.88632 1.6 0.85182" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox pos="-5.38632 0.0 0.85181" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					<vox pos="-10.48631 0.0 0.85182" rot="0.0 85.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="1"/>
+</group>
+</group>
+</group>
+</group>
+</prefab>

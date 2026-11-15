@@ -747,4 +747,17 @@
 		<instance pos="-2.5831 0.8 31.77397" rot="0.0 123.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml"/>
 	</group>
 	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/RoadSegment1.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/decor/RoadSegment1_left.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/decor/RoadSegment1_right.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_001.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_002.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_003.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_004.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_005.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_006.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_007.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_008.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_009.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_010.xml"/>
+	<instance pos="0.0 156.5 -21.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawnables/roadsegments/parts/RoadSegment1_011.xml"/>
 </scene>

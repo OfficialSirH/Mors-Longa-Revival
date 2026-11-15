@@ -1,0 +1,473 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="camp" pos="9.2 0.7 -41.3">
+				<group name="hesco wall" pos="-0.2 0.0 -0.1" rot="0.0 0.0 0.0">
+					<group name="wall" pos="-61.0 0.0 -27.00001" rot="0.0 -180.0 0.0">
+						<voxbox pos="5.59996 0.0 -0.79994" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="240 16 16" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+					</group>
+					<group name="concrete wall" pos="-1.0 0.0 -19.0">
+						<group name="instance=MOD/prefabs/assets/ballistic wall high expandable.xml" pos="-28.2 -0.1 -0.3" rot="0.0 0.0 0.0">
+							<compound pos="0.0 0.5 0.5" rot="-25">
+								<voxbox name="concrete" pos="1.0 0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="2.1 0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="3.2 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="4.3 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="5.4 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="6.5 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="7.6 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="8.7 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="9.8 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="10.9 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="12.0 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="13.1 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="14.2 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="15.3 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="16.4 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="17.5 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="18.6 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="19.7 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="20.8 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="21.9 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="23.0 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="24.1 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="25.2 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="26.3 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="27.4 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="28.5 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="29.6 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="30.7 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="31.8 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="32.9 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="34.0 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="35.10001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="36.2 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="37.3 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="38.4 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="39.50001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="40.6 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="41.7 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="42.8 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="43.9 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="45.0 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="46.10001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="47.2 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="48.30001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="49.4 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="50.5 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="51.60001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="52.70001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="53.80001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="54.90001 -0.0 0.0" rot="0.0 -180.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+							</compound>
+							<compound pos="0.0 0.5 -0.2" rot="25">
+								<voxbox name="concrete" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="1.1 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="2.2 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="3.3 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="4.4 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="5.5 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="6.6 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="7.7 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="8.8 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="9.9 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="11.0 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="12.1 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="13.2 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="14.3 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="15.4 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="16.5 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="17.6 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="18.7 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="19.8 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="20.9 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="22.0 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="23.1 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="24.2 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="25.3 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="26.4 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="27.5 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="28.6 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="29.7 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="30.8 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="31.9 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="33.0 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="34.1 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="35.2 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="36.3 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="37.4 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="38.5 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="39.6 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="40.7 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="41.8 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="42.9 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="44.0 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="45.1 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="46.2 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="47.3 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="48.4 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="49.5 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="50.6 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="51.7 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="52.8 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="53.9 0.0 0.0" rot="0.0 0.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+							</compound>
+							<compound pos="0.5 0.0 0.2">
+								<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+								<voxbox name="concrete" pos="-0.6 0.0 -0.1" size="1 28 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+								<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								<group pos="1.1 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="2.2 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="3.3 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="4.4 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="5.5 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="6.6 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="7.7 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="8.8 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="9.9 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="11.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="12.1 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="13.2 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="14.3 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="15.4 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="16.5 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="17.6 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="18.7 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="19.8 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="20.9 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="22.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="23.1 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="24.2 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="25.3 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="26.4 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="27.5 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="28.6 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="29.7 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="30.8 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="31.9 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="33.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="34.1 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="35.2 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="36.3 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="37.4 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="38.5 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="39.6 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="40.7 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="41.8 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="42.9 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="44.0 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="45.1 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="46.2 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="47.3 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="48.4 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="49.5 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="50.6 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="51.7 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="52.8 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+								<group pos="53.9 0.0 0.0" rot="0.0 0.0 0.0">
+									<voxbox name="concrete" pos="-0.5 0.0 0.1" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.4" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="0.5 0.0 -0.2" size="1 28 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="0.5 0.0 0.0" size="1 28 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="concrete" pos="-0.5 0.0 -0.2" size="10 29 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="0 -9 0"/>
+									<voxbox name="concrete" pos="-0.6 0.0 -0.2" rot="0.0 0.0 0.0" size="1 28 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic"/>
+									<voxbox name="metal" pos="-0.4 0.1 -0.1" size="8 27 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement"/>
+								</group>
+							</compound>
+						</group>
+					</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

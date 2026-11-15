@@ -67,7 +67,10 @@ function npc_find_random_enemy(npc, include_player)
 
     -- Find a random heli enemy if one exists
     local selectedHeli = nil
-    local helis = FindBodies("Heli", true) --todo optimize
+    -- (2026-11-15, NPC performance) v1 searched the whole level for "Heli" bodies once per call (per npc); once
+    -- per tick is the same list (goreai_main.lua clears GoreHelisTick each tick)
+    if not GoreHelisTick then GoreHelisTick = FindBodies("Heli", true) end
+    local helis = GoreHelisTick
     if #helis >= 1 then
         for index, body in ipairs(helis) do
             if not HasTag(body, "dead") and npc.ai.teams.team ~= GetTagValue(body, "team") then

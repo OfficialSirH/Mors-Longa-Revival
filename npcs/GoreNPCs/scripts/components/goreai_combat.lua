@@ -895,6 +895,7 @@ function npc_projectile_operations(npc, projectile)
             local path_damage = "level.goreai.body_damage_npc." .. hitBody
             local damage = tonumber(GetFloat(path_damage)) + damage_from_player_gun
             SetFloat(path_damage, damage) -- Specific damage to each body by handle.
+            SetBool("level.goreai.damage_pending", true) -- (2026-11-15) npcs read body damage only when a hit is pending (goreai_health.lua)
             Blood_Pop(hitPos, 5, 7)
             projectile.hit_npc = true
         end

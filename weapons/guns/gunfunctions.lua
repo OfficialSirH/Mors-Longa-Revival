@@ -15,6 +15,13 @@ local gunImpactSoundsLoaded = false
 -- (v2, Phase 2) gun scripts are static now (always loaded): a gun only runs its tool logic / HUD while it is in one
 -- of this player's inventory slots. v1 deleted the script when the gun left its slot; without this the HUD read the
 -- wrong slot's data for the few frames until the server switched the tool away.
+-- GunIdleNote (2026-11-15, performance): every gun script is a tool script that ticks every frame whether its gun is
+-- held or not, and Teardown's profiler showed 0.2-0.5 ms per idle gun script (52 of them: most of the 10 ms of client
+-- script time with nothing going on). Each gun's client.tick now returns right after GunNet_ClientTick (other
+-- players' shots, debug keys) and WeaponBackgroundTick (its own shots still in flight) when the gun is not in this
+-- player's inventory: everything after only concerns a gun the player has (current-primary item, tool / inventory
+-- block, held block; checkUnlimitedBulletsValid edits the CURRENT primary gun's item, so idle scripts running it was
+-- wrong anyway).
 function GunInInventory(id)
 	for i = 1, 4 do
 		local item = GetString("inventory.guns." .. i .. ".item")
@@ -286,6 +293,7 @@ function ProjectileOperations(projectile)
 			local path_damage = "level.goreai.body_damage_player." .. hitBody
 			local damage = GetFloat(path_damage) + damage_from_player_gun
 			SetFloat(path_damage, damage) -- Specific damage to each body by handle.
+			SetBool("level.goreai.damage_pending", true) -- (2026-11-15) npcs read body damage only when a hit is pending (goreai_health.lua)
 
 			SetFloat("level.goreai.body_damage_player_x", hitPos[1])
 			SetFloat("level.goreai.body_damage_player_y", hitPos[2])

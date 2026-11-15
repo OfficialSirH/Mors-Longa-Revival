@@ -1,0 +1,12 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment1.xml" pos="-60.7 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="signs" prop0="texture=8">
+				<vox pos="11.6 0.7 0.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="100speedsignD"/>
+				<vox pos="11.6 0.7 18.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="100speedsign"/>
+				<vox pos="184.2 0.7 -22.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="100speedsignD"/>
+				<vox pos="184.2 0.7 -3.7" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="100speedsign"/>
+			</group>
+</group>
+</group>
+</prefab>

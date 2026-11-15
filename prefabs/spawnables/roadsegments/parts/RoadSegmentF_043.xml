@@ -1,0 +1,51 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Tunnel" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<group name="walls">
+				<voxbox tags="unbreakable" pos="2.7 0.1 39.8" rot="0.0 -90.0 0.0" size="166 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="5.5 0.1 39.8" rot="0.0 -90.0 0.0" size="166 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="2.7 0.1 -3.1" rot="0.0 -90.0 0.0" size="100 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="5.5 0.1 -5.9" rot="0.0 -90.0 0.0" size="451 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox name="window" pos="4.9 3.2 39.2" rot="-90.0 90.0 0.0" size="96 22 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox tags="unbreakable" pos="2.7 0.1 29.6" rot="0.0 -90.0 0.0" size="96 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-6.0 0.1 7.5" rot="0.0 -90.0 0.0" size="215 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="2.1 0.1 -2.5" rot="0.0 -180.0 0.0" size="137 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-12.2 0.1 -2.5" rot="0.0 90.0 0.0" size="162 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="4.9 0.1 -5.3" rot="0.0 180.0 0.0" size="76 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-2.7 0.1 -5.9" rot="0.0 90.0 0.0" size="151 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox name="hole" pos="5.5 0.1 11.00001" rot="0.0 -90.0 0.0" size="14 27 6" brush="hole"/>
+				<voxbox tags="unbreakable" pos="5.3 0.1 9.9" size="223 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="27.6 -1.6 10.5" rot="0.0 90.0 0.0" size="449 50 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="27.6 0.1 -33.8" rot="0.0 180.0 0.0" size="145 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="13.7 0.1 -33.8" rot="0.0 -90.0 0.0" size="101 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="10.9 0.1 -36.6" rot="0.0 -90.0 0.0" size="101 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="31.0 0.1 -36.6" rot="0.0 180.0 0.0" size="207 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="30.4 -1.6 13.3" rot="0.0 90.0 0.0" size="141 50 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="30.4 0.1 -21.6" rot="0.0 90.0 0.0" size="150 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="30.4 -1.6 -1.4" size="123 50 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="42.1 -1.6 -1.4" rot="0.0 90.0 0.0" size="195 50 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="5.3 0.1 12.7" size="251 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="11.5 0.1 13.3" rot="0.0 -90.0 0.0" size="105 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="22.8 0.1 23.8" rot="0.0 -180.0 0.0" size="113 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="23.4 0.1 13.3" rot="0.0 -90.0 0.0" size="105 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-5.5 0.1 -18.1" rot="0.0 -180.0 0.0" size="61 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-5.5 0.1 -3.1" rot="0.0 90.0 0.0" size="179 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="-5.5 0.1 -12.6" rot="0.0 180.0 0.0" size="46 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox name="hole" pos="-5.5 0.1 -3.4" rot="0.0 90.0 0.0" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="-5.5 0.1 -16.2" rot="0.0 90.0 0.0" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="3.0 0.1 56.40001" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="3.54276 3.93293 33.27251" rot="28.3 137.60001 -29.5" size="12 12 14" brush="hole"/>
+				<voxbox name="hole" pos="3.54276 3.63293 31.47251" rot="28.3 -22.4 -29.5" size="12 12 14" brush="hole"/>
+				<voxbox tags="unbreakable" pos="27.6 0.1 -23.1" rot="0.0 180.0 0.0" size="210 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox tags="unbreakable" pos="10.9 0.1 -25.9" rot="0.0 -180.0 0.0" size="43 33 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="dark_metal"/>
+				<voxbox name="hole" pos="28.2 0.1 -25.59999" rot="0.0 -90.0 0.0" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="14.0 0.1 -34.39999" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="11.8 0.1 12.70001" size="16 28 6" brush="hole"/>
+				<voxbox name="hole" pos="39.5 -1.5 -10.3" rot="0.0 90.0 20.0" size="49 15 6" brush="hole"/>
+				<vox name="doorframe" pos="3.8 0.1 7.2" rot="0.0 -180.0 0.0" file="MOD/assets/vox/metal_door.vox" object="frame"/>
+				<vox name="doorframe" pos="3.8 0.1 29.3" file="MOD/assets/vox/metal_door.vox" object="frame"/>
+				<vox name="doorframe" pos="3.8 0.1 39.4" rot="0.0 180.0 0.0" file="MOD/assets/vox/metal_door.vox" object="frame"/>
+</group>
+</group>
+</group>
+</prefab>

@@ -70,6 +70,9 @@ function Init_Settings_Table()
 				no_shadow              = st_object_checkbox("Disable Shadows", false), -- Don’t teleport everything back to shadow volume
 				reduce_render_distance = st_object_checkbox("Reduce Render Distance", false), --* Connected in Gamerule.lua -- Cull all shapes
 				foliage_percentage     = st_object_range("Foliage Density", 0.2, 0, 1, 0.01),
+				-- (2026-11-14) roadside rocks at half resolution: much shorter hitches while road segments spawn
+				-- (world/generation/GenerateRoad.lua LowDetailRocks, per rock piece of tools/porting/segment_pieces.py); the host's choice
+				low_detail_rocks       = st_object_checkbox("Low Detail Rocks", true, "Blockier rocks, smoother road generation"),
 			},
 
 			physical = {

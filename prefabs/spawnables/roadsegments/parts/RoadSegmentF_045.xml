@@ -1,0 +1,14 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Tunnel" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<group name="details">
+				<voxbox name="pipe" pos="-6.0 2.5 7.5" size="9 9 215" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+				<voxbox name="pipe" pos="-6.0 1.5 7.5" size="9 9 215" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="mediumpipe-straight-plain"/>
+				<vox pos="2.6 2.6 -0.5" rot="0.0 360.0 -90.0" prop="false" file="MOD/assets/vox/lee_AC_unit.vox"/>
+				<voxbox name="ventilation rusty" pos="0.7 2.3 29.0" rot="0.0 90.0 0.0" size="182 9 11" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+				<vox name="intake" pos="1.3 2.1 9.59999" rot="0.0 90.0 0.0" file="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+				<voxbox name="ventilation rusty" pos="0.7 2.3 8.3" rot="0.0 90.0 0.0" size="8 9 11" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			</group>
+</group>
+</group>
+</prefab>

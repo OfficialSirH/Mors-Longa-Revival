@@ -71,6 +71,10 @@ end
 function GunNet_ServerInit()
 	server.gunShells = {}
 	server.gunGrenades = {}
+	-- (2026-11-14) the server's copy of each bullet (holes, NPC damage) fell with the global `gravity`, which the gun
+	-- scripts set only in client.init / ProjectileHandlerInit: nil on the server, so it flew without drop while every
+	-- client's tracer fell. Every gunnet gun uses (0, -10, 0) there.
+	if gravity == nil then gravity = Vec(0, -10, 0) end
 end
 
 function GunNet_ServerTick(dt)

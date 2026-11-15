@@ -1,0 +1,15 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="overhead sign" pos="22.05 0.6 9.72" rot="0.0 0.0 0.0" prop0="rotstrength=3" prop1="collide=true" prop2="texture=8 0.5">
+					<vox pos="0.0 6.6 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+						<vox pos="-4.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<light tags="night" pos="0.05 0.2 -0.05" rot="-60.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="1" size="0.3"/>
+</vox>
+</vox>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,0 +1,16 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="gate">
+				<group name="wall" pos="2.5 0.0 1.0" prop0="texture=8 0.3">
+					<group name="hescos" pos="77.3 0.7 5.4">
+						<vox pos="-1.7 0.5 -24.8" rot="0.0 0.0 0.0" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-0.9 0.5 -25.0" rot="0.0 180.0 0.0" prop="true" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-1.3 1.0 -24.7" rot="180.0 91.0 0.0" texture="8 .35" blendtexture="3 .2" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+						<vox pos="-1.2 0.1 -22.9" rot="0.0 -90.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags2"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

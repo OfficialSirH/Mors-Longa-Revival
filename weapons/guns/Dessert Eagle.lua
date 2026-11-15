@@ -654,6 +654,7 @@ end
 function client.tick(dt)
 	GunNet_ClientTick(dt)
 	WeaponBackgroundTick(dt)
+	if not GunInInventory("gun-deagle") then return end -- (2026-11-15, performance) idle gun: nothing more to do (gunfunctions.lua GunIdleNote)
 
     unlimitedammo = GetBool("savegame.mod.unlimitedammo")
     checkUnlimitedBulletsValid()

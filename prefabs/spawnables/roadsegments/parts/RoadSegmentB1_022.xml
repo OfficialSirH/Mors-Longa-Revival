@@ -1,0 +1,13 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="gate">
+				<group name="wall" pos="2.5 0.0 1.0" prop0="texture=8 0.3">
+					<vox pos="79.8 0.7 19.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
+						<vox pos="1.5 3.1 -2.4" rot="0.0 160.0 0.0" file="MOD/assets/warzone/CCTV.vox"/>
+</vox>
+</group>
+</group>
+</group>
+</group>
+</prefab>

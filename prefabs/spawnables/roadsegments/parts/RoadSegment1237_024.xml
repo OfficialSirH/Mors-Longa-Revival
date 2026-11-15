@@ -1,0 +1,34 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment1237.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="ground" prop0="texture=19 0.5">
+				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 18.4" size="2000 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal">
+					<voxbox pos="73.3 0.0 53.2" rot="0.0 0.0 0.0" size="14 1 14" brush="hole"/>
+				</voxbox>
+				<voxbox name="unbreakable ground" tags="unbreakable" pos="0.0 0.5 -100.0" rot="0.0 0.0 0.0" size="2000 1 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal">
+					<voxbox pos="73.3 0.0 171.60001" rot="0.0 0.0 0.0" size="14 1 14" brush="hole"/>
+				</voxbox>
+				<vox pos="26.6 0.7 -49.2" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="63.0 0.7 -79.6" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="175.5 0.7 -57.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="174.60001 0.7 -28.2" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="181.90001 0.7 48.4" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="37.7 0.7 51.4" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="31.1 0.7 54.3" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="41.3 0.7 36.1" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="101.7 0.7 75.5" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<voxbox pos="188.2859 0.7 69.40298" rot="0.0 100.0 0.0" size="89 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall">
+					<vox pos="22.7 0.0 0.20007" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="-0.3 0.0 0.1998" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="9.2 0.0 0.19979" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="12.8 0.0 0.19979" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<voxbox pos="13.1 0.0 0.0001" rot="0.0 0.0 0.0" size="93 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall"/>
+				</voxbox>
+				<voxbox pos="184.38589 0.7 47.20298" rot="0.0 170.0 0.0" size="167 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall">
+					<vox pos="17.0 0.0 0.20007" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				</voxbox>
+</group>
+</group>
+</group>
+</prefab>

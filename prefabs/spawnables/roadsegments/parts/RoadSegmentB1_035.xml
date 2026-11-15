@@ -1,0 +1,82 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="inner compound">
+				<group name="Bunker" pos="94.2 0.7 -16.2">
+					<group name="Vox" pos="0.0 2.1 0.0">
+						<group name="Bunker" pos="-1.4 -8.9 0.0" prop0="texture=7 0.5">
+							<group name="props">
+								<vox pos="-14.5 0.4 -25.49282" rot="0.0 110.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="5.7 0.4 -5.6" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box3"/>
+								<vox pos="2.9 3.6 2.8" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box3"/>
+								<vox pos="-8.2 0.4 -21.60001" rot="0.0 -80.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box3"/>
+								<vox pos="1.3 0.4 -17.1" rot="0.0 -97.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="box2"/>
+								<vox pos="-14.63892 0.4 -26.28066" rot="0.0 100.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-12.8 0.4 -23.2" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="3.9 0.4 -17.5" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="shelf2">
+									<vox pos="0.24905 0.0 -0.26071" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+									<vox pos="0.14487 0.0 0.33017" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+									<vox pos="0.05804 0.0 0.82257" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="0.05804 0.8 0.82257" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+									<vox pos="0.01166 1.3 0.50977" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="-0.23169 1.3 0.16223" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="-0.04068 1.3 -0.92106" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+									<vox pos="-0.0578 1.8 0.90369" rot="0.0 -140.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+								</vox>
+								<vox pos="-4.70001 0.4 -17.5" rot="0.0 90.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="shelf2">
+									<vox pos="0.0 1.3 -0.2" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+									<vox pos="0.0 1.8 0.6" rot="0.0 -110.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+									<vox pos="0.05804 0.0 0.82257" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="0.05804 0.8 0.82257" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box3"/>
+									<vox pos="0.2 0.0 -0.5" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="0.0 0.0 -1.0" rot="0.0 -70.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box2"/>
+									<vox pos="-0.04068 1.3 -0.92106" rot="0.0 30.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box5"/>
+									<vox pos="-0.1 0.8 -0.8" rot="0.0 -140.0 0.0" prop="false" file="MOD/assets/vox/small_boxes.vox" object="box1"/>
+								</vox>
+								<vox pos="-4.9 0.4 -5.0" rot="0.0 177.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+								<vox pos="4.8 3.6 3.3" rot="0.0 177.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+								<vox pos="-3.5 0.4 -5.0" rot="0.0 -179.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+								<vox pos="-2.09999 0.4 -5.0" rot="0.0 180.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+								<vox pos="1.66493 0.9 -10.72365" rot="0.0 -54.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+								<vox pos="1.19999 0.9 -11.90003" rot="0.0 -49.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+								<vox pos="-14.1 0.8 -10.6" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_9.vox"/>
+								<vox pos="-14.1 0.8 -12.2" rot="0.0 88.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_9.vox"/>
+								<vox pos="1.41497 2.0 -11.25989" rot="0.0 -34.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+								<vox pos="-3.59999 1.2 -5.0" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+								<vox pos="-3.59999 0.5 -5.0" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+								<vox pos="-2.39998 0.5 -5.0" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+								<vox pos="-2.61506 0.4 -8.53835" rot="0.0 60.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-2.68566 1.1 -8.53713" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-1.72265 0.4 -8.23399" rot="0.0 -50.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+								<vox pos="-0.58385 0.4 -7.70897" rot="0.0 140.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+								<vox pos="-3.46207 0.4 -9.69432" rot="0.0 -120.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-2.9 0.4 -16.8" rot="0.0 -100.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="6.2 0.4 -7.0" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-13.1309 0.4 -17.67111" rot="0.0 170.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-8.3309 0.4 -18.07112" rot="0.0 -178.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="large"/>
+								<vox pos="-8.8 1.7 -18.2" rot="0.0 180.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-3.10381 0.4 -7.75482" rot="0.0 180.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="-14.46545 0.9 -17.23556" rot="0.0 -69.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+								<vox pos="-14.26545 0.9 -15.93556" rot="0.0 -99.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+								<vox pos="2.4 0.9 -19.2" rot="0.0 91.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+								<vox tags="fxbreak=l2black" pos="-5.5686 0.3 8.68764" rot="0.0 -159.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+								<vox tags="fxbreak=l2black" pos="-6.7686 0.3 8.68764" rot="0.0 -113.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+								<vox tags="fxbreak=l2black" pos="-7.8686 0.3 8.68764" rot="0.0 -80.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+								<vox pos="-8.89997 0.3 8.59998" rot="0.0 -6.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_mili_crate_1.vox"/>
+								<vox pos="-10.8 0.4 -5.8" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/pallets.vox" object="medium"/>
+								<vox pos="-9.3 0.4 -6.8" rot="0.0 -143.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/toolbox.vox"/>
+								<vox pos="-9.2 0.4 -5.8" rot="0.0 -129.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/cabledrum.vox"/>
+								<vox pos="-7.9 0.4 -6.1" rot="0.0 -139.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/cabledrum.vox"/>
+								<vox pos="-12.4 0.4 -6.0" rot="0.0 -93.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/pallets.vox" object="medium"/>
+								<vox pos="4.8 3.6 -0.7" rot="0.0 -30.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+								<vox pos="6.2 3.6 -0.8" rot="0.0 160.0 0.0" prop="false" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+								<vox pos="3.85759 3.6 -0.48327" rot="0.0 -90.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+								<vox pos="3.07406 3.6 -0.87202" rot="0.0 150.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,0 +1,12 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM4.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="coarse:unbreakable ground" pos="0.00002 0.5 -21.60001" rot="0.0 0.0 0.0">
+			<vox pos="12.5 0 12.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_250x250x1.vox" tags="unbreakable"/>
+			<vox pos="12.5 0 32.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_250x150x1.vox" tags="unbreakable"/>
+			<vox pos="37.5 0 12.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_250x250x1.vox" tags="unbreakable"/>
+			<vox pos="37.5 0 32.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_250x150x1.vox" tags="unbreakable"/>
+			<vox pos="61.9 0 12.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_238x250x1.vox" tags="unbreakable"/>
+			<vox pos="61.9 0 32.5" file="MOD/assets/vox/terrainpieces/tiles/plate_84_238x150x1.vox" tags="unbreakable"/>
+		</group>
+</group>
+</prefab>

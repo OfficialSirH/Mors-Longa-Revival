@@ -1,0 +1,192 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentS1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="ground" prop0="texture=19 0.5">
+				<voxbox name="sand:normal" pos="0.0 0.6 -100.0" size="2000 1 784" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 18.4" size="2000 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<vox pos="26.6 0.7 -49.2" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="55.2 0.7 -79.6" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="175.5 0.7 -57.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="174.60001 0.7 -28.2" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="181.90001 0.7 48.4" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="37.7 0.7 51.4" rot="0.0 -60.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="31.1 0.7 54.3" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="41.3 0.7 36.1" rot="0.0 -40.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="101.7 0.7 75.5" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="36.7 0.701 -57.7" rot="0.0 -130.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1w"/>
+				<vox pos="180.0 0.701 60.3" rot="0.0 110.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1"/>
+				<voxbox pos="188.2859 0.7 69.40298" rot="0.0 100.0 0.0" size="89 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall">
+					<vox pos="22.7 0.0 0.20007" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="-0.3 0.0 0.1998" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="9.2 0.0 0.19979" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<vox pos="12.8 0.0 0.19979" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<voxbox pos="13.1 0.0 0.0001" rot="0.0 0.0 0.0" size="93 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall"/>
+				</voxbox>
+				<voxbox pos="184.38589 0.7 47.20298" rot="0.0 170.0 0.0" size="167 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall">
+					<vox pos="17.0 0.0 0.20007" rot="0.0 180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				</voxbox>
+				<group name="Dunes 1" pos="90.8 0.7 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="0.4 0.0 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 -0.1 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 0.0 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 -0.1 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 0.0 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 -0.1 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -25.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.1 0.0 -28.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="1.5 -0.1 -13.9" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -26.6" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 0.0 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.0 -0.1 -28.0" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.3 0.0 -29.8" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+					</compound>
+				</group>
+				<group name="Dunes 2" pos="72.9 0.7 0.0" rot="0.0 180.0 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -25.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -25.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.1 0.0 -28.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 -14.5" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 -14.5" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -26.6" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -26.6" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 0.0 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.0 -0.1 -28.0" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.3 0.0 -29.8" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+					</compound>
+				</group>
+				<group name="Dunes 3" pos="116.0 0.7 0.0" rot="0.0 180.0 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="0.4 0.0 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 -0.1 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 0.0 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 -0.1 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="1.5 -0.1 -13.9" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 -0.1 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+					</compound>
+				</group>
+				<group name="Dunes 4" pos="137.3 0.7 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="0.4 0.0 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 -0.1 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 0.0 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 -0.1 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 0.0 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 -0.1 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.0 0.0 -21.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.5 0.0 -23.2" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="1.5 -0.1 -13.9" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+					</compound>
+				</group>
+				<group name="Dunes 5" pos="50.6 0.7 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="-3.6 0.0 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 0.0 11.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-3.6 -0.1 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 0.0 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 -0.1 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -25.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.1 0.0 -28.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="1.5 -0.1 -13.9" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -26.6" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 0.0 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.0 -0.1 -28.0" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.3 0.0 -29.8" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+					</compound>
+				</group>
+				<group name="Dunes 1" pos="166.80002 0.7 0.0">
+					<compound name="hill1" pos="7.1 0.0 59.9">
+					</compound>
+					<compound name="hill2" pos="-7.2 0.0 -59.9" rot="0.0 180.0 0.0">
+					</compound>
+					<compound name="Dunes" pos="0.6 0.1 -15.9" rot="0.0 180.0 0.0">
+						<vox pos="0.4 0.0 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 -0.1 -10.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 0.0 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="-3.6 -0.1 2.1" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="0.4 0.0 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.4 -0.1 0.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 0.0 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.7 -0.1 -15.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -25.6" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="-0.1 -0.1 -41.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="-1.1 0.0 -28.4" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad2"/>
+						<vox pos="1.5 -0.1 -13.9" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+						<vox pos="0.9 0.0 -26.6" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 0.0 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.9 -0.1 -31.4" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.0 -0.1 -28.0" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad1"/>
+						<vox pos="0.3 0.0 -29.8" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="sandoverroad3"/>
+					</compound>
+				</group>
+			</group>
+			<group name="road" prop0="texture=16">
+				<voxbox name="highway road l edge" pos="200.0 0.6 -21.6" rot="0.0 -90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+				<voxbox name="highway road l" pos="0.0 0.6 -4.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:left road" offset="0 5"/>
+				<voxbox name="highway road r" pos="0.0 0.6 17.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:right road" offset="0 5"/>
+				<voxbox name="highway road r edge" pos="0.0 0.6 18.4" rot="0.0 90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+			</group>
+			<group name="terrain" pos="168.39999 0.0 -53.0">
+			</group>
+			<group pos="184.10001 0.7 -13.0" rot="0.0 -180.0 0.0">
+				<vox pos="-0.1 0.0 -9.0" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="unevensign"/>
+				<vox pos="-0.1 0.0 8.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="unevensign"/>
+			</group>
+			<group pos="10.0 0.7 9.3" rot="0.0 0.0 0.0" prop0="texture=8">
+				<vox pos="-0.1 0.0 -8.5" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="unevensign"/>
+				<vox pos="-0.1 0.0 9.2" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="unevensign"/>
+			</group>
+			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+			</group>
+			<group name="Power Lines" pos="95.5 -0.1 94.6">
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+			</group>
+</group>
+</group>
+</prefab>

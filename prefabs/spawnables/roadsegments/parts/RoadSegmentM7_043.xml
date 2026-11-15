@@ -1,0 +1,29 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="base" pos="155.0 0.7 38.9" rot="0.0 0.0 0.0">
+			<vox pos="12.09995 0.0 35.29998" rot="0.0 90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="building4">
+				<group name="props">
+					<vox pos="4.7 1.5 1.2" rot="0.0 57.0 0.0" texture="8 .4" prop="false" file="MOD/assets/props/toolbox.vox"/>
+					<vox pos="4.7 0.4 5.2" rot="0.0 -87.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox pos="4.7 0.4 3.4" rot="0.0 -89.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+					<vox pos="5.3 2.9 -2.1" rot="0.0 0.0 90.0" texture="8 .4" prop="false" file="MOD/assets/vox/Props/MISC/poster.vox"/>
+					<vox pos="5.3 2.3 -6.2" rot="0.0 0.0 90.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_medkit.vox"/>
+					<vox pos="4.8 0.4 1.5" rot="0.0 -90.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/kitchen_appartment.vox" object="counter"/>
+					<vox pos="4.8 0.4 -0.3" rot="0.0 -90.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/kitchen_appartment.vox" object="counter"/>
+					<vox pos="2.6 0.31 -3.6" texture="8 .4" file="MOD/assets/vox/Props/MISC/oil_spill.vox"/>
+					<vox pos="4.7 1.2 5.2" rot="0.0 -93.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard4"/>
+					<vox pos="4.0 0.8 2.7" rot="0.0 -75.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+					<vox pos="4.0 0.4 2.7" rot="0.0 -63.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard1"/>
+					<vox pos="-0.3 0.6 -6.0" rot="0.0 -110.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+					<vox pos="-0.5 0.6 -4.8" rot="0.0 100.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="barrel1"/>
+					<vox pos="-0.5 0.4 -5.4" rot="0.0 87.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/pallets.vox" object="medium"/>
+					<vox pos="-0.4 0.4 -7.5" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/props/pallets.vox" object="medium"/>
+					<vox pos="-0.4 1.1 -8.0" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="-0.56545 0.9 -3.13556" rot="0.0 81.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+					<vox pos="-4.4 0.4 2.8" rot="0.0 -10.0 0.0" prop="false" file="MOD/assets/vox/crates.vox" object="tiny"/>
+					<vox pos="-4.3 0.4 -1.6" rot="0.0 92.0 0.0" prop="true" file="MOD/assets/vox/crates.vox" object="large"/>
+</group>
+</vox>
+</group>
+</group>
+</prefab>

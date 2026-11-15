@@ -1,0 +1,12 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Factory" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<group name="walls5">
+				<group name="door" pos="38.7 3.5 52.0" rot="0.0 180.0 0.0">
+					<vox name="doorframe" rot="0.0 180.0 0.0" file="MOD/assets/vox/metal_door.vox" object="frame"/>
+					<vox name="door" pos="0.0 0.1 0.2" prop="true" file="MOD/assets/vox/metal_door.vox" object="door"/>
+</group>
+</group>
+</group>
+</group>
+</prefab>

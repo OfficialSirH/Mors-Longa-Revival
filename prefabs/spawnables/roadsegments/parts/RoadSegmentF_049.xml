@@ -1,0 +1,68 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Factory" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<group name="lights">
+				<vox name="light" pos="3.8 3.2 46.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="8"/>
+				</vox>
+				<vox name="light" pos="3.8 3.2 24.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="8"/>
+				</vox>
+				<vox name="light" pos="3.8 3.2 18.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="8"/>
+				</vox>
+				<vox name="light" pos="3.8 3.2 12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="8"/>
+				</vox>
+				<vox name="light" pos="3.8 3.2 0.3" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="8"/>
+				</vox>
+				<vox name="light" pos="-1.9 9.4 89.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="-1.9 9.4 79.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="-1.9 9.4 69.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="-1.9 9.4 59.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="-1.9 9.4 49.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="4.1 9.4 49.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="4.1 9.4 89.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="4.1 9.4 69.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="10.1 9.4 89.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="10.1 9.4 79.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="10.1 9.4 59.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="21.7 9.4 49.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="21.7 9.4 89.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="21.7 9.4 79.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+				<vox name="light" pos="21.7 9.4 69.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/lamps.vox" object="ceiling-fixed">
+					<light pos="0.0 -0.05 -0.05" color="1 1 0.8" reach="15"/>
+				</vox>
+</group>
+</group>
+</group>
+</prefab>

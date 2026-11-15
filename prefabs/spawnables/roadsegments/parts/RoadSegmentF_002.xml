@@ -1,0 +1,19 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="ground" prop0="texture=19 0.5">
+				<voxbox name="sand:normal" pos="0.0 0.6 -100.0" size="2000 1 784" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 18.4" size="331 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="176.8 0.6 18.4" size="232 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="116.10002 0.6 18.4" size="607 1 158" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+			</group>
+			<group name="road" prop0="texture=16">
+				<voxbox name="highway road l edge" pos="200.0 0.6 -21.6" rot="0.0 -90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+				<voxbox name="highway road l" pos="0.0 0.6 -4.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:left road" offset="0 5"/>
+				<voxbox name="highway road r" pos="0.0 0.6 17.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:right road" offset="0 5"/>
+				<voxbox name="highway road r edge" pos="0.0 0.6 18.4" rot="0.0 90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+			</group>
+</group>
+</group>
+</prefab>

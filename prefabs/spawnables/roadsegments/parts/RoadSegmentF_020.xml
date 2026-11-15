@@ -1,0 +1,19 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Factory 2" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<group name="large props">
+				<group name="Regal_Big" pos="19.4 3.5 -31.5" rot="0.0 90.0 0.0" prop0="collide=true">
+					<vox pos="0.0 0.0 0.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.0 0.0 3.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.2 2.0 1.5" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Brett.vox"/>
+					<vox pos="0.0 2.2 0.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.0 2.2 3.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.2 4.2 1.5" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Brett.vox"/>
+					<vox pos="0.0 4.4 0.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.0 4.4 3.1" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Bein_Gros.vox"/>
+					<vox pos="0.2 6.4 1.5" collide="true" prop="true" file="MOD/Voxel/probs/Regal/Regal_Brett.vox"/>
+</group>
+</group>
+</group>
+</group>
+</prefab>

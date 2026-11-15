@@ -1,0 +1,47 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="barricades">
+					<vox pos="0.1 0.7 18.5" rot="0.0 -90.0 0.0" texture="8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint signD"/>
+					<vox pos="199.89998 0.7 -21.7" rot="0.0 90.0 0.0" texture="8" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign"/>
+					<group name="hedges and mines?" pos="44.4 0.7 -23.5">
+						<vox pos="-0.2 0.1 0.6" rot="44.0 130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.7 0.1 -2.5" rot="44.0 60.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-2.1 0.1 -7.9" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -4.8" rot="44.0 -70.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -15.4" rot="44.0 150.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -9.9" rot="44.0 -130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-3.2 0.1 -13.0" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.1 0.1 -18.4" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -21.7" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-2.4 0.1 -24.8" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.7 0.1 -29.6" rot="44.0 -180.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -27.1" rot="44.0 -140.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -43.00001" rot="44.0 -130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.2 0.1 -32.2" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="1.1 0.1 -35.3" rot="44.0 -150.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.7 0.1 -40.7" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 79.8" rot="44.0 130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.6 0.1 76.7" rot="44.0 60.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-2.0 0.1 71.3" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 74.40001" rot="44.0 -70.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 63.8" rot="44.0 150.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 69.3" rot="44.0 -130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-3.1 0.1 66.2" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.0 0.1 60.8" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 57.5" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-2.3 0.1 54.4" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.6 0.1 49.6" rot="44.0 -180.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 52.1" rot="44.0 -140.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 86.59998" rot="44.0 -130.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-0.1 0.1 47.0" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="1.2 0.1 43.9" rot="44.0 -150.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+						<vox pos="-1.6 0.1 83.2" rot="44.0 -170.0 36.0" density="15" prop="true" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					</group>
+					<vox pos="15.9 1.7 2.7" rot="0.0 250.0 90.0" prop="true" file="MOD/assets/vox/militarybase.vox" object="trailer1"/>
+</group>
+</group>
+</group>
+</group>
+</prefab>

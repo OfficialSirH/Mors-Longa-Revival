@@ -1,0 +1,53 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="town">
+				<group name="compound" pos="82.3 0.7 37.7">
+					<group name="props" pos="28.6 0.0 5.1">
+						<vox pos="4.6 1.2 2.4" rot="0.0 95.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="5.5 0.4 2.4" rot="0.0 95.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="3.1 0.4 2.4" rot="0.0 85.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="6.83057 1.5 6.70607" rot="0.0 7.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="6.79584 1.3 6.50911" rot="0.0 -169.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="6.90003 0.0 7.09999" rot="0.0 14.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_mili_crate_1.vox"/>
+						<vox pos="6.44236 1.3 7.38378" rot="0.0 -70.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="9.8 1.1 7.3" rot="0.0 0.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="10.5 1.1 6.9" rot="0.0 100.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="10.0 1.3 7.0" rot="0.0 -150.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/airbasevox/airbase_sandbag.vox"/>
+						<vox pos="8.38127 0.0 1.22387" rot="0.0 114.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+						<vox pos="9.78127 0.0 0.82387" rot="0.0 94.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+						<vox pos="8.40769 0.0 6.02503" rot="0.0 -136.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+						<vox tags="fxbreak=l2black" pos="3.57622 0.0 7.33366" rot="0.0 30.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+						<vox tags="fxbreak=l2black" pos="3.2 0.0 6.3" rot="0.0 -3.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+						<vox tags="fxbreak=l2black" pos="2.78958 0.0 5.17237" rot="0.0 -49.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+						<vox pos="5.5 1.2 3.5" rot="0.0 -75.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="5.5 0.4 3.5" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="-30.2 1.2 -4.7" rot="0.0 95.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-31.7 0.4 -4.7" rot="0.0 85.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-29.3 0.4 -4.7" rot="0.0 95.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-29.3 0.4 -3.6" rot="0.0 -94.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="-39.6 0.4 -2.4" rot="0.0 -15.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="-39.8 0.4 -0.9" rot="0.0 -95.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="-39.8 1.2 -1.7" rot="0.0 -105.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_9.vox"/>
+						<vox pos="-35.8 0.0 1.0" rot="0.0 -26.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+						<vox tags="fxbreak=l2black" pos="-34.4 1.3 1.1" rot="0.0 -80.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+						<vox tags="fxbreak=l2black" pos="-33.5 0.0 7.1" rot="0.0 -80.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+						<vox tags="fxbreak=l2black" pos="-31.1 0.0 2.8" rot="0.0 10.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+						<vox tags="fxbreak=l2black" pos="-29.9 0.0 2.6" rot="0.0 90.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+						<vox tags="fxbreak=l2black" pos="-30.8 1.3 2.7" rot="0.0 -50.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_2.vox"/>
+						<vox tags="fxbreak=l2black" pos="-33.9 0.0 1.1" rot="0.0 -30.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_1.vox"/>
+						<vox tags="fxbreak=l2black" pos="-34.9 0.0 1.0" rot="0.0 -140.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_barrel_3.vox"/>
+						<vox pos="-33.59771 0.5 4.4877" rot="0.0 -99.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+						<vox pos="-34.2 1.6 5.6" rot="0.0 -19.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_4.vox"/>
+						<vox pos="-33.8 0.5 -0.2" rot="0.0 -104.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+						<vox pos="-34.20002 0.5 5.6" rot="0.0 -104.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_5.vox"/>
+						<vox pos="-29.0 0.3 8.8" rot="0.0 -7.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+						<vox pos="-34.9 1.9 6.5" rot="0.0 -17.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+						<vox pos="-35.0 0.4 6.45" rot="0.0 70.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+						<vox pos="-35.0 1.2 6.5" rot="0.0 75.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_10.vox"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,0 +1,47 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="town">
+				<group name="compound" pos="115.9 0.7 66.7" rot="0.0 20.0 0.0">
+					<group name="house eidit" pos="-0.3 0.0 6.4">
+						<group pos="4.79999 0.0 0.00002" rot="0.0 -90.0 0.0">
+							<group name="floor" pos="-1.0 0.0 0.1" rot="0.0 0.0 0.0" prop0="texture=1 0.9" prop1="tags=nocull">
+								<voxagon name="floor" pos="12.4 0.0 6.3" rot="0.0 0.0 0.0" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="floor" extrude="2">
+									<vertex pos="-20.6 0.0"/>
+									<vertex pos="-20.6 -12.7"/>
+									<vertex pos="0.0 -12.7"/>
+									<vertex pos="0.0 -4.5"/>
+									<vertex pos="-6.8 -4.5"/>
+									<vertex pos="-6.8 0.0"/>
+								</voxagon>
+								<voxbox name="floor" pos="-7.7 3.2 0.4" rot="57.0 90.0 0.0" size="34 3 36" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling"/>
+								<voxbox name="floor" pos="-7.7 3.2 -3.0" rot="49.0 90.0 0.0" size="29 3 40" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling"/>
+								<voxagon name="floor" pos="12.4 0.2 6.3" rot="0.0 0.0 0.0" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris" extrude="1">
+									<vertex pos="-20.2 -0.4"/>
+									<vertex pos="-20.2 -3.7"/>
+									<vertex pos="-17.7 -3.8"/>
+									<vertex pos="-17.4 -4.0"/>
+									<vertex pos="-17.5 -5.7"/>
+									<vertex pos="-20.2 -5.8"/>
+									<vertex pos="-20.2 -12.3"/>
+									<vertex pos="-16.0 -12.3"/>
+									<vertex pos="-16.0 -5.8"/>
+									<vertex pos="-16.9 -3.3"/>
+									<vertex pos="-18.2 -2.1"/>
+									<vertex pos="-17.6 -0.4"/>
+								</voxagon>
+								<voxagon name="floor" pos="-9.3 0.0 6.3" rot="0.0 -94.0 0.0" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="debris" extrude="1">
+									<vertex pos="-2.2 2.0"/>
+									<vertex pos="-3.6 1.1"/>
+									<vertex pos="-3.4 0.2"/>
+									<vertex pos="0.6 -0.3"/>
+									<vertex pos="0.4 1.4"/>
+								</voxagon>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

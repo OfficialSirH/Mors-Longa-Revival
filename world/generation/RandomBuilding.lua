@@ -1,5 +1,6 @@
 #version 2
 #include "script/include/player.lua"
+#include "SpawnSlot.lua"
 -- (v2) server: spawns random buildings at generated road locations.
 --[[
 #include "EnemySpawnsProcessor.lua"
@@ -52,6 +53,7 @@ function server.init()
 end
 
 function server.tick()
+	if GetBool("level.segment.loading") then return end -- (2026-11-14) a segment's parts are still spawning (GenerateRoad QueueDecor)
 
 	DistanceProgressed = GetFloat("savegame.mod.distanceProgressed")
 	LastSpawnedWarehouseDist = GetFloat("savegame.mod.LastSpawnedWarehouseDist")
@@ -72,12 +74,13 @@ function server.tick()
 	-- 	DrawShapeOutline(value, 1,0,1, 1)
 	-- end
 
-	local hasBigRoadBlock=false
+	-- (2026-11-14) BigRoadBlock: global, the building markers may be handled in a later frame (SpawnSlot.lua)
 	local multiplier = GetInt("level.difficultycoef")
 
 	local roadBlockLocations = FindLocations("RandomRoadblock", true)
 	if #roadBlockLocations > 0 then
 		for i=1,#roadBlockLocations do
+			if not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 			local roadBlockLocation = roadBlockLocations[i]
 
 			local chance = tonumber(GetTagValue(roadBlockLocation, "chance"))or 50
@@ -98,7 +101,7 @@ function server.tick()
 				SetSpawnedEntitiesBodyNotActive(entities)
 				ManageDetailDeleting(entities)
 				if sapwnedXML == "MOD/prefabs/spawnables/roadblocks/roadblock3.xml" then
-					hasBigRoadBlock = true
+					BigRoadBlock = true
 				end
 			end
 			Delete(roadBlockLocation)
@@ -107,7 +110,8 @@ function server.tick()
 
 	local buildingLocations = FindLocations("RandomBuilding",true)
 	for i=1,#buildingLocations do
-		if not hasBigRoadBlock then
+		if not BigRoadBlock then
+			if not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 			local buildingLocation = buildingLocations[i]
 
 			local chance = tonumber(GetTagValue(buildingLocation, "chance")) or 50
@@ -131,6 +135,7 @@ function server.tick()
 			Delete(buildingLocations[i])
 		end
 	end
+	BigRoadBlock = false -- every building marker handled
 
 end
 
@@ -143,6 +148,8 @@ function SpawnRandomBlock(Type, t)
 	local whichone = math.random(1, differentRoadBlocks[Type])
 	local roadBlockXML = "MOD/prefabs/spawnables/roadblocks/roadblock" .. Type .. whichone ..".xml"
 	local entities = Spawn(roadBlockXML, t, true)
+	SetString("level.debug.what.roadblock", roadBlockXML)
+	SetFloat("level.debug.spawned.roadblock", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 
 	ProcessEnemySpawns(entities)
 	return entities, roadBlockXML
@@ -181,6 +188,8 @@ function SpawnRandomBuilding(Type, t)
 	end
 
 	local entities = Spawn(buildingXML, t, true)
+	SetString("level.debug.what.building", buildingXML)
+	SetFloat("level.debug.spawned.building", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 
 	if Settings.performance.spawn_less_objects then
 		print("spawn_less_objects")

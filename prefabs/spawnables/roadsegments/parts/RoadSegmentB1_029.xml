@@ -1,0 +1,15 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="gate">
+				<group name="gate">
+					<voxbox name="track" pos="114.59999 0.7 13.4" rot="0.0 90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
+						<voxbox name="gate" pos="7.1 0.2 0.0" rot="0.0 0.0 0.0" prop="true" size="80 35 7" brush="MOD/assets/vox/militarybase.vox" object="gate">
+							<vox pos="4.0 1.9 -0.1" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag"/>
+						</voxbox>
+</voxbox>
+</group>
+</group>
+</group>
+</group>
+</prefab>

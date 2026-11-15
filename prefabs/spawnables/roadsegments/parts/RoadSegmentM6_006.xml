@@ -1,0 +1,105 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="ground" prop0="texture=19 0.5">
+				<group name="coarse:bedrock" pos="54.5 0.4 18.4" rot="0 0 0">
+					<vox pos="-2.8 0 1.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_4x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.7 0 1.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_6x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.6 0 1.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_10x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.5 0 1.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_12x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.4 0 1.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_15x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.3 0 2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_18x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.2 0 2.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_21x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2.1 0 2.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_24x1x2.vox" tags="unbreakable"/>
+					<vox pos="-2 0 2.3" file="MOD/assets/vox/terrainpieces/tiles/plate_85_26x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.9 0 2.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_29x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.8 0 2.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_32x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.7 0 2.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_35x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.6 0 2.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_37x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.5 0 2.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_41x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.4 0 2.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_43x1x2.vox" tags="unbreakable"/>
+					<vox pos="-1.3 0 3.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_46x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.4 0 3.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_47x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.4 0 3.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_48x2x2.vox" tags="unbreakable"/>
+					<vox pos="-1.5 0 3.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_49x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.5 0 4.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_50x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.6 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_51x2x2.vox" tags="unbreakable"/>
+					<vox pos="-1.6 0 4.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_52x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.7 0 5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_53x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.7 0 5.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_54x2x2.vox" tags="unbreakable"/>
+					<vox pos="-1.8 0 5.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_55x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.8 0 5.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_56x3x2.vox" tags="unbreakable"/>
+					<vox pos="-1.9 0 6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_57x2x2.vox" tags="unbreakable"/>
+					<vox pos="-1.9 0 6.3" file="MOD/assets/vox/terrainpieces/tiles/plate_85_58x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2 0 6.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_59x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2 0 6.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_60x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.1 0 7.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_61x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.1 0 7.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_62x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.2 0 7.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_63x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.2 0 7.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_64x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.3 0 8.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_65x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.3 0 8.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_66x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.4 0 8.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_67x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.4 0 9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_68x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.5 0 9.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_69x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.5 0 9.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_70x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.6 0 9.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_71x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.6 0 10" file="MOD/assets/vox/terrainpieces/tiles/plate_85_72x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.7 0 10.3" file="MOD/assets/vox/terrainpieces/tiles/plate_85_73x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.7 0 10.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_74x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.8 0 10.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_75x2x2.vox" tags="unbreakable"/>
+					<vox pos="-2.8 0 11.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_76x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.9 0 11.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_77x3x2.vox" tags="unbreakable"/>
+					<vox pos="-2.9 0 11.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_78x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3 0 11.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_79x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3 0 12.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_80x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.1 0 12.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_81x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.1 0 12.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_82x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.2 0 13" file="MOD/assets/vox/terrainpieces/tiles/plate_85_83x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.2 0 13.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_84x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.3 0 13.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_85x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.3 0 13.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_86x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.4 0 14" file="MOD/assets/vox/terrainpieces/tiles/plate_85_87x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.4 0 14.3" file="MOD/assets/vox/terrainpieces/tiles/plate_85_88x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.5 0 14.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_89x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.5 0 14.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_90x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.6 0 15.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_91x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.6 0 15.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_92x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.7 0 15.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_93x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.7 0 15.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_94x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.8 0 16.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_95x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.8 0 16.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_96x2x2.vox" tags="unbreakable"/>
+					<vox pos="-3.9 0 16.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_97x3x2.vox" tags="unbreakable"/>
+					<vox pos="-3.9 0 17" file="MOD/assets/vox/terrainpieces/tiles/plate_85_98x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4 0 17.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_99x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4 0 17.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_100x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.1 0 17.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_101x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.1 0 18" file="MOD/assets/vox/terrainpieces/tiles/plate_85_102x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4.2 0 18.3" file="MOD/assets/vox/terrainpieces/tiles/plate_85_103x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.2 0 18.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_104x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.3 0 18.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_105x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4.3 0 19.1" file="MOD/assets/vox/terrainpieces/tiles/plate_85_106x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.4 0 19.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_107x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.4 0 19.6" file="MOD/assets/vox/terrainpieces/tiles/plate_85_108x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4.5 0 19.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_109x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.5 0 20.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_110x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.6 0 20.4" file="MOD/assets/vox/terrainpieces/tiles/plate_85_111x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4.6 0 20.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_112x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.7 0 21" file="MOD/assets/vox/terrainpieces/tiles/plate_85_113x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.7 0 21.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_114x2x2.vox" tags="unbreakable"/>
+					<vox pos="-4.8 0 21.5" file="MOD/assets/vox/terrainpieces/tiles/plate_85_115x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.8 0 21.8" file="MOD/assets/vox/terrainpieces/tiles/plate_85_116x3x2.vox" tags="unbreakable"/>
+					<vox pos="-4.9 0 22" file="MOD/assets/vox/terrainpieces/tiles/plate_85_117x2x2.vox" tags="unbreakable"/>
+					<vox pos="-25.3 0 22.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_250x1x2.vox" tags="unbreakable"/>
+					<vox pos="-5.9 0 22.2" file="MOD/assets/vox/terrainpieces/tiles/plate_85_138x1x2.vox" tags="unbreakable"/>
+					<vox pos="-25.4 0 34.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_250x250x2.vox" tags="unbreakable"/>
+					<vox pos="-25.4 0 59.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_250x250x2.vox" tags="unbreakable"/>
+					<vox pos="-25.4 0 76.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_250x94x2.vox" tags="unbreakable"/>
+					<vox pos="-6 0 34.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_139x250x2.vox" tags="unbreakable"/>
+					<vox pos="-6 0 59.7" file="MOD/assets/vox/terrainpieces/tiles/plate_85_139x250x2.vox" tags="unbreakable"/>
+					<vox pos="-6 0 76.9" file="MOD/assets/vox/terrainpieces/tiles/plate_85_139x94x2.vox" tags="unbreakable"/>
+				</group>
+</group>
+</group>
+</group>
+</prefab>

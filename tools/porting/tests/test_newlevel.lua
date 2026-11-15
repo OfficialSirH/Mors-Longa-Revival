@@ -1,5 +1,6 @@
 -- Mock test for game/newLeveltoLEVEL.lua (MP fixes 2026-11-14): game rules synced, a remote player's own new
--- run (starter loadout via inventory.init, perks, bounty board), the host's difficulty mirrored.
+-- run (starter loadout via inventory.init, bounty board), the host's difficulty, perks and debug-menu settings
+-- mirrored (perks are the host's for everyone, the debug menu is host-only: user, 2026-11-14).
 -- Run from the repo root with Lua 5.1: lua5.1 tools/porting/tests/test_newlevel.lua
 dofile("tools/porting/tests/mockengine.lua")
 
@@ -44,6 +45,8 @@ host.R["savegame.mod.newLevel.gamerule.keepinv"] = "1"
 host.R["savegame.mod.newLevel.gamerule.nhat"] = "1"
 host.R["savegame.mod.difficulty"] = "peaceful"
 host.R["savegame.mod.runid"] = "111-222"
+host.R["savegame.mod.perks.ricochet"] = 2
+host.R["savegame.mod.unlimitedammo"] = true
 host.side = "server"
 host.server.init()
 check(host.synced["level.gamerule.keepinv"] == "1" and host.synced["level.gamerule.nhat"] == "1",
@@ -53,12 +56,25 @@ check(host.R["savegame.mod.lastLevel.gamerule.keepinv"] == "1" and host.synced["
 check(host.R["savegame.mod.newLevel.gamerule.keepinv"] == nil, "server: savegame.mod.newLevel cleared")
 check(host.synced["level.runid"] == "111-222" and host.synced["level.difficulty"] == "peaceful",
 	"server: run id and difficulty published (synced)")
+check(host.synced["level.host.perks.ricochet"] == 2 and host.synced["level.host.perks.fuelthief"] == -1,
+	"server: host's perks published (-1 = the host doesn't have it)")
+check(host.synced["level.host.cfg.unlimitedammo"] == true and host.synced["level.host.cfg.god"] == false,
+	"server: host's debug-menu settings published")
+host.synced = {}
+host.server.tick(0.6)
+check(next(host.synced) == nil, "server: nothing re-sent while unchanged")
+host.R["savegame.mod.perks.junkie"] = 1
+host.server.tick(0.6)
+check(host.synced["level.host.perks.junkie"] == 1, "server: a new perk is published")
+host.synced = {}
+host.server.init()
 check(next(host.violations) == nil, "server: no client-only calls")
 
 -- 2. a remote player with an old savegame of their own (last run's inventory, perks, bounty, hard difficulty)
 local client = machine(2)
 client.R["savegame.mod.difficulty"] = "hardcore"
-client.R["savegame.mod.perks.medic"] = 3
+client.R["savegame.mod.perks.ricochet"] = 3
+client.R["savegame.mod.perks.fuelthief"] = 5
 client.R["savegame.mod.bountyboard.cultist"] = true
 client.R["savegame.mod.player.money"] = 500
 client.side = "client"
@@ -67,8 +83,11 @@ check(client.R["savegame.mod.inventory.init"] == nil, "client: nothing before th
 sync(host, client)
 client.client.tick()
 check(client.R["savegame.mod.inventory.init"] == true, "client: new run -> inventory.init (starter loadout, full vitals)")
-check(client.R["savegame.mod.perks.medic"] == 0 and client.R["savegame.mod.bountyboard.cultist"] == false,
-	"client: own perks and bounty board reset")
+check(client.R["savegame.mod.bountyboard.cultist"] == false, "client: own bounty board reset")
+check(client.R["savegame.mod.perks.ricochet"] == 2 and client.R["savegame.mod.perks.fuelthief"] == nil,
+	"client: the host's perks (own ones replaced, ones the host lacks cleared)")
+check(client.R["savegame.mod.unlimitedammo"] == true and not client.R["savegame.mod.config.game.god"],
+	"client: the host's debug-menu settings")
 check(client.R["savegame.mod.player.money"] == 500, "client: money kept (as the host's on New Save)")
 -- Hardcore "Try Again": the host's money was reset, so the other players' is too
 local host3 = machine(1)
@@ -90,19 +109,17 @@ check(next(client.violations) == nil, "client: no server-only calls")
 local client2 = machine(2)
 for k, v in pairs(client.R) do client2.R[k] = v end
 client2.R["savegame.mod.inventory.init"] = false   -- the inventory consumed it
-client2.R["savegame.mod.perks.medic"] = 1          -- earned during the run
 sync(host, client2)
 client2.side = "client"
 client2.client.tick()
-check(client2.R["savegame.mod.inventory.init"] == false and client2.R["savegame.mod.perks.medic"] == 1,
-	"client: same run again -> keeps inventory and perks")
+check(client2.R["savegame.mod.inventory.init"] == false, "client: same run again -> keeps inventory")
 
 -- 4. the host's own client never resets itself (the main menu did that)
 host.side = "client"
-host.R["savegame.mod.perks.medic"] = 2
+host.R["savegame.mod.perks.ricochet"] = 4   -- the host's own savegame is the source, never overwritten
 host.client.tick()
-check(host.R["savegame.mod.inventory.init"] == nil and host.R["savegame.mod.perks.medic"] == 2,
-	"host client: no reset from the run id")
+check(host.R["savegame.mod.inventory.init"] == nil and host.R["savegame.mod.perks.ricochet"] == 4,
+	"host client: no reset from the run id, own perks untouched")
 
 -- 5. an old host save without a run id gets one
 local old = machine(1)

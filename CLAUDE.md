@@ -76,16 +76,35 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
    release leaves out the root test levels.
 2. Full reorganization ✔ (2026-11-14, applied and verified by `tools/relocate/`: 4252 files moved, 42504
    references rewritten; mock tests, syntax of all game Lua, XML parse, release dry run checked). Folder map:
-   `docs/LAYOUT.md`. The release leaves out `dev/`. To verify in-game (SP smoke run + local MP run).
+   `docs/LAYOUT.md`. The release leaves out `dev/`. Verified in-game by the user and committed (2026-11-14).
 3. MP fixes (§8 "MP fixes"): remote players' new run (starter loadout, vitals, perks, bounty, difficulty, money on
    Try Again) and game rules synced: verified. To re-test: vanilla tools (levels load `game/MLSandbox.lua`, the
    engine's sandbox.lua without its MP tool enabling), remote tool bar, other players' guns (gunnet part sync).
-   Open: world-shift jank / NPCs / stuck car for non-hosts (§10). Still open (survey leads, §10):
-   permadeath host-only, fuel perks / money, debug-menu toggles from non-hosts, cultist ambush, server-only
-   effects, server bullet gravity; then the §10 MP checklist.
-4. Performance: measure first (debug perf overlay with frame-time spikes tagged by event, per-system kill switches,
-   mock call counts), then the candidates: inventory `SaveInventory()` every client tick, gun scripts' per-frame
-   registry reads, segment-spawn burst (RemoveRoad full scans, BuildingGrassRemover), NPC per-tick tag writes, Fuel.
+   Second round (2026-11-14, user: perks are the host's for everyone, debug menu host-only), to re-test: host
+   perks / settings mirrored to every machine, perk pickups, fuel money to the seller, ambush around any player on
+   foot, server bullet gravity, permadeath (any player's death ends a Hardcore run). Open: world-shift jank / NPCs /
+   stuck car for non-hosts, server-only effects (check in MP), bullet network traffic; then the §10 MP checklist.
+4. Performance (plan agreed 2026-11-14; user: segment spawns freeze 1-several s, shifts hitch a little, many NPCs
+   cost a lot): order = generation first, then NPCs, then the world shift (rarer / faded) last.
+   Done, to test in-game (TECHNICAL_REFERENCE §7 "Segment weight"): debug-menu "Performance tests" (left column)
+   pinned the freeze on the segment's hidden bedrock floor > terrain (rocks) > sand, not the decor / spawners /
+   RemoveRoad. Fixes: decor split out (`split_decor.py`), hidden floors -> 40 cm plates and hills/dunes -> tiles
+   (`lighten_terrain.py`), terrain/background pieces split out (`split_heavy.py`); all spawned one prefab per
+   frame after the segment, marker spawners wait (`level.segment.loading`). Rocks still hurt: their cost follows
+   box cells (hollow didn't help, half resolution did) → option "Low Detail Rocks" (on by default). Lag stretches
+   followed the parts (debug "spawn activity" readout) → rocks / hills cut per model, parts cut into ~2200 pieces
+   spawned under a per-frame cell budget (`split_heavy.py` → `vox_pieces.py` → `segment_pieces.py`), spawners one
+   spawn per frame (`SpawnSlot.lua`); placement verified by the user. Hidden floors back to 10 cm (40 cm plates let
+   players fall through; `lighten_terrain.py --replate`), streamed first as pieces; to re-test. Scripts cannot
+   time freezes (frame time capped at 1/30 s; use Teardown's built-in profiler SHIFT+ALT+F3, per-script ms).
+   Performance step DONE (2026-11-15, TECHNICAL_REFERENCE §7): generation gradual (all static geometry streamed
+   nearest-first as pieces, then the segment file, then decor; queued at 300 m; duplicate-segment bug fixed),
+   cleanup a continuous region sweep, NPC rate tiers (damage on hit, ground rays every 2nd step, sight 5x/s,
+   voxel recount every 3rd tick; user OK), idle gun scripts exit early, inventory / daynight / sandbox / reject
+   loops cut. Measured: no NPCs CPU ~13 ms; 10 NPCs goreai_main ~5 ms (profiler, 1 update / frame).
+   User decisions: NO far-NPC rest (immersion), no shift fade, no longer play area. Tools: debug "spawn activity",
+   "NPC / inventory call profile" (lib/CallProfiler.lua), tools/porting/tick_audit.py.
+   Other candidates: inventory `SaveInventory()` every client tick, gun scripts' per-frame registry reads, Fuel.
 5. Docs: folder map, TECHNICAL_REFERENCE split.
 
 Later (user): a seat-switch key (players cannot switch seats; §10), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.

@@ -1,0 +1,81 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment4.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="terrain">
+				<group pos="185.40001 -16.9 -43.30001" rot="0.0 110.0 0.0">
+					<vox pos="-6.90006 13.6 0.59998" rot="-0.2 -152.10001 49.9" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<vox pos="13.8 11.5 1.20006" rot="123.6 -127.0 -47.2" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+					<group name="tiled:MorsLongaHill.vox" pos="4.8 17.6 -1.9" rot="0.0 180.0 0.0">
+						<vox pos="-7.9 0 6.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_00.vox"/>
+						<vox pos="-8.7 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_01.vox"/>
+						<vox pos="-8.7 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_02.vox"/>
+						<vox pos="-7.6 0 -1.9" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_03.vox"/>
+						<vox pos="-5.5 0 6.6" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_00.vox"/>
+						<vox pos="-5.5 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_01.vox"/>
+						<vox pos="-5.5 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_02.vox"/>
+						<vox pos="-5.5 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_03.vox"/>
+						<vox pos="-4.5 0 -4.1" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_04.vox"/>
+						<vox pos="-2.3 0 6.8" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_00.vox"/>
+						<vox pos="-2.3 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_01.vox"/>
+						<vox pos="-2.3 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_02.vox"/>
+						<vox pos="-2.3 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_03.vox"/>
+						<vox pos="-2.3 0 -5.1" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_04.vox"/>
+						<vox pos="0.9 0 7.6" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_00.vox"/>
+						<vox pos="0.9 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_01.vox"/>
+						<vox pos="0.9 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_02.vox"/>
+						<vox pos="0.9 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_03.vox"/>
+						<vox pos="0.9 0 -5.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_04.vox"/>
+						<vox pos="0.3 0 -8" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_05.vox"/>
+						<vox pos="3.3 0 7.3" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_00.vox"/>
+						<vox pos="4.1 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_01.vox"/>
+						<vox pos="4.1 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_02.vox"/>
+						<vox pos="4.1 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_03.vox"/>
+						<vox pos="4.1 0 -5" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_04.vox"/>
+						<vox pos="6.2 0 3.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_01.vox"/>
+						<vox pos="7.3 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_02.vox"/>
+						<vox pos="6.3 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_03.vox"/>
+						<vox pos="6.5 0 -4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_04.vox"/>
+						<vox pos="9.6 0 0.3" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_06_02.vox"/>
+					</group>
+					<group name="tiled:MorsLongaHill.vox" pos="-4.0 17.15 0.8" rot="0.0 -100.0 0.0">
+						<vox pos="-7.9 0 6.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_00.vox"/>
+						<vox pos="-8.7 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_01.vox"/>
+						<vox pos="-8.7 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_02.vox"/>
+						<vox pos="-7.6 0 -1.9" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_00_03.vox"/>
+						<vox pos="-5.5 0 6.6" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_00.vox"/>
+						<vox pos="-5.5 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_01.vox"/>
+						<vox pos="-5.5 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_02.vox"/>
+						<vox pos="-5.5 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_03.vox"/>
+						<vox pos="-4.5 0 -4.1" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_01_04.vox"/>
+						<vox pos="-2.3 0 6.8" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_00.vox"/>
+						<vox pos="-2.3 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_01.vox"/>
+						<vox pos="-2.3 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_02.vox"/>
+						<vox pos="-2.3 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_03.vox"/>
+						<vox pos="-2.3 0 -5.1" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_02_04.vox"/>
+						<vox pos="0.9 0 7.6" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_00.vox"/>
+						<vox pos="0.9 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_01.vox"/>
+						<vox pos="0.9 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_02.vox"/>
+						<vox pos="0.9 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_03.vox"/>
+						<vox pos="0.9 0 -5.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_04.vox"/>
+						<vox pos="0.3 0 -8" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_03_05.vox"/>
+						<vox pos="3.3 0 7.3" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_00.vox"/>
+						<vox pos="4.1 0 4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_01.vox"/>
+						<vox pos="4.1 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_02.vox"/>
+						<vox pos="4.1 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_03.vox"/>
+						<vox pos="4.1 0 -5" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_04_04.vox"/>
+						<vox pos="6.2 0 3.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_01.vox"/>
+						<vox pos="7.3 0 1.2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_02.vox"/>
+						<vox pos="6.3 0 -2" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_03.vox"/>
+						<vox pos="6.5 0 -4.4" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_05_04.vox"/>
+						<vox pos="9.6 0 0.3" file="MOD/assets/vox/terrainpieces/tiles/MorsLongaHill_06_02.vox"/>
+					</group>
+					<vox pos="12.0 16.8 -0.9" rot="0.0 20.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
+					<vox pos="6.99997 18.1 0.40001" rot="0.0 -130.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
+					<vox pos="-3.00001 17.0 3.60001" rot="0.0 90.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="large"/>
+					<vox pos="-5.5 17.6 -8.79998" rot="0.0 46.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="small-1"/>
+					<vox pos="-7.50042 17.6 10.60002" rot="0.0 -34.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="small-1"/>
+				</group>
+</group>
+</group>
+</group>
+</prefab>

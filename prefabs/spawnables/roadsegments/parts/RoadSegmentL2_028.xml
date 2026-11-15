@@ -1,0 +1,66 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="Fence" pos="46.7 0.7 23.9" prop0="texture=8 0.8">
+					<group name="1" pos="0.4 0.0 0.0">
+						<compound pos="0.0 0.0 0.0">
+							<vox pos="0.0 0.0 -3.0" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 2.8" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 8.6" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 14.4" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 20.2" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 26.0" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 31.8" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 37.6" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<voxbox pos="-0.1 0.0 -23.4" size="2 40 30" brush="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<voxbox pos="-0.1 0.0 -8.6" size="2 40 27" brush="MOD/main/Building Components/fences/Military Fence.vox" object="frame">
+								<vox pos="-0.0 1.7 1.4" rot="0.0 -90.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag"/>
+							</voxbox>
+						</compound>
+						<group pos="-0.4 3.9 0.0" rot="0.0 0.0 0.0">
+							<vox pos="0.43 0.03 2.8" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 -3.0" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 14.4" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 8.6" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 26.0" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 20.2" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 37.59999" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 31.8" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<voxbox pos="0.501 0.101 -20.4" rot="0.0 180.0 -45.0" size="2 11 30" brush="MOD/main/Building Components/fences/Military Fence.vox" object="support" offset="0 0 "/>
+							<voxbox pos="0.50071 0.10071 -5.9" rot="0.0 -180.0 -45.0" size="2 11 27" brush="MOD/main/Building Components/fences/Military Fence.vox" object="support" offset="0 0 3"/>
+						</group>
+					</group>
+					<group name="2" pos="0.4 0.0 -85.7">
+						<compound pos="0.0 0.0 0.0">
+							<vox pos="0.0 0.0 -3.0" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 2.8" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 8.6" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 14.4" rot="0.0 -180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 20.2" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 26.0" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 31.8" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<vox pos="0.0 0.0 37.6" rot="0.0 180.0 0.0" texture="8 0.8" density="2" collide="true" file="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<voxbox pos="-0.1 0.0 55.10001" rot="0.0 0.0 0.0" size="2 40 30" brush="MOD/main/Building Components/fences/Military Fence.vox" object="frame"/>
+							<voxbox pos="0.1 0.0 43.3" rot="0.0 -180.0 0.0" size="2 40 27" brush="MOD/main/Building Components/fences/Military Fence.vox" object="frame">
+								<vox pos="0.3 1.6 1.4" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag"/>
+							</voxbox>
+						</compound>
+						<group pos="-0.4 3.9 0.0" rot="0.0 0.0 0.0">
+							<vox pos="0.43 0.03 2.8" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 -3.0" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 14.4" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 8.6" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 26.0" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 20.2" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 37.59999" rot="0.0 180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<vox pos="0.43 0.03 31.8" rot="0.0 -180.0 -45.0" texture="8 0.8" file="MOD/main/Building Components/fences/Military Fence.vox" object="support"/>
+							<voxbox pos="0.501 0.101 43.3" rot="0.0 -180.0 -45.0" size="2 11 27" brush="MOD/main/Building Components/fences/Military Fence.vox" object="support" offset="0 0 "/>
+							<voxbox pos="0.501 0.101 58.1" rot="0.0 180.0 -45.0" size="2 11 30" brush="MOD/main/Building Components/fences/Military Fence.vox" object="support" offset="0 0 "/>
+						</group>
+					</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

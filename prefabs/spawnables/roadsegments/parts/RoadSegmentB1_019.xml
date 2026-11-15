@@ -1,0 +1,14 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="mines">
+				<vox pos="59.3 0.2 27.9" rot="3.5 159.7 9.4" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+				<vox pos="76.1 0.4 19.7" rot="3.5 119.7 9.4" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+				<vox pos="56.2 -0.1 36.7" rot="-4.7 169.60001 -5.6" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+				<vox pos="51.2 0.1 62.8" rot="4.7 -169.8 -2.2" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+				<vox pos="50.6 0.1 79.60001" rot="-9.4 163.89999 18.8" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+				<vox pos="50.6 0.2 96.50002" rot="-1.5 174.5 -2.1" file="MOD/assets/vox/barricades.vox" object="sign:mines"/>
+</group>
+</group>
+</group>
+</prefab>

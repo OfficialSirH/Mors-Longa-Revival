@@ -109,6 +109,10 @@ function npc_robot_update(npc, dt)
 	UPRIGHT_BASE 		= 1 * npc.proficiency	-- Fraction of max spring force to always apply (less springy)
 
 	npc.robot.transform = GetBodyTransform(npc.Torso)
+	-- (2026-11-15, performance, user OK) the ground raycasts of hoverUpdate / feetUpdate run every 2nd physics update
+	-- per npc; between them the hover distance follows the torso's movement and the foot candidates are kept. The
+	-- forces / constraints still run every update.
+	npc.robot.raySkip = not npc.robot.raySkip
 
 	if not IsControllerNPC(npc) then
 		if npc.running then
@@ -195,7 +199,14 @@ function robotUpdate(npc, dt)
 	end
 
 	--Evaluate mass every frame since robots can break
-	npc.robot.mass = npc_get_mass(npc)*2 --= Keeps relative velocity constraint consistent.
+	-- (2026-11-15, performance) v1 summed every body's mass on every physics update (155 engine calls per frame with 8
+	-- npcs). Mass only changes when voxels are lost or a part is gone, which changes npc.voxels (counted each tick):
+	-- recomputed then, and at least once a second.
+	if npc.robot.massVoxels ~= npc.voxels or GetTime() >= (npc.robot.massAt or 0) then
+		npc.robot.massVoxels = npc.voxels
+		npc.robot.massAt = GetTime() + 1
+		npc.robot.mass = npc_get_mass(npc)*2 --= Keeps relative velocity constraint consistent.
+	end
 
 	npc.robot.bodyCenter = TransformToParentPoint(npc.robot.transform, GetBodyCenterOfMass(npc.robot.body))
 	npc.robot.navigationCenter = TransformToParentPoint(npc.robot.transform, Vec(0, -npc.hover.distTarget, 0))
@@ -382,6 +393,13 @@ function hoverUpdate(npc, dt)
 	-- samples[#samples+1] = Vec(0,0,-BALANCE_RADIUS)
 	local castRadius = 0.1
 	local maxDist = npc.hover.distTarget + npc.hover.distPadding
+	local L = npc.hover.lastRay
+	if npc.robot.raySkip and L and (L.shape == 0 or IsHandleValid(L.shape)) then
+		-- (2026-11-15) no raycast this update: the last measurement, moved with the torso along its up axis since
+		-- (the ground is assumed unchanged for one physics step)
+		hit, shape, normal = L.hit, L.shape, VecCopy(L.normal)
+		dist = (L.dist + VecDot(VecSub(npc.robot.transform.pos, L.pos), npc.robot.axes[2])) * #samples
+	else
 	for i=1, #samples do
 		QueryRequire("physical large")
 		RejectAllBodies(npc.robot.allBodies)
@@ -409,6 +427,9 @@ function hoverUpdate(npc, dt)
 		else
 			dist = dist + maxDist
 		end
+	end
+	npc.hover.lastRay = { hit = hit, shape = shape, normal = VecCopy(normal), dist = dist / #samples,
+		pos = VecCopy(npc.robot.transform.pos) }
 	end
 
 	--Use average of rays to determine contact and height
@@ -586,7 +607,7 @@ function feetUpdate(npc, dt)
 	for i=1, #npc.feet do
 		local foot = npc.feet[i]
 
-		if not inStep then
+		if not inStep and not (npc.robot.raySkip and foot.candidateTransform) then -- (2026-11-15) every 2nd update
 			--Find candidate footstep
 			local tPredict = TransformCopy(npc.robot.transform)
 			tPredict.pos = VecAdd(tPredict.pos, VecScale(VecLerp(VecScale(npc.robot.dir, npc.robot.speed), vel, 0.5), stepTime*1.5))

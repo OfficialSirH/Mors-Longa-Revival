@@ -1,0 +1,17 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="Fence" pos="157.0 0.7 23.9" prop0="texture=8 0.8">
+					<group name="Checkpoint Out" pos="3.39996 -0.1 -25.90001" rot="0.0 -90.0 0.0">
+						<group name="Door" pos="1.4 0.7 2.8" rot="0.0 -180.0 0.0">
+							<voxbox name="metal" pos="0.6 -0.0 0.2" rot="-90.0 90.0 0.0" texture="2 1" size="4 1 22" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-0.4 -0.0 0.2" rot="-90.0 90.0 0.0" texture="2 1" size="4 1 22" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-0.4 2.1 0.2" rot="0.0 90.0 0.0" texture="2 1" size="4 1 9" material="metal" color="0.35 0.35 0.35"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,0 +1,114 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="Fence" pos="157.0 0.7 23.9" prop0="texture=8 0.8">
+					<group name="Checkpoint Out" pos="3.39996 -0.1 -25.90001" rot="0.0 -90.0 0.0">
+						<voxbox name="concrete wall" pos="2.4 0.7 2.6" rot="-90.0 90.0 0.0" texture="10 0.5" size="44 3 43" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.1 -0.1 0.0" rot="0.0 0.0 0.0" texture="2 0.5" size="46 1 43" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 0.0" rot="90.0 0.0 0.0" texture="7" size="44 30 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="-1.6 0.7 -1.8" rot="-90.0 -90.0 0.0" texture="10 0.5" size="44 3 9" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.1 -0.1 0.0" rot="0.0 0.0 0.0" texture="2 0.5" size="46 1 9" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="plaster" pos="-0.1 -0.1 0.9" rot="0.0 0.0 0.0" texture="2 0.5" size="4 1 13" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="plaster" pos="4.1 -0.1 0.9" rot="0.0 0.0 0.0" texture="2 0.5" size="4 1 13" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 0.0" rot="90.0 0.0 0.0" texture="7" size="44 9 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="-1.60001 2.9 -1.79999" rot="-90.0 -90.0 0.0" texture="10 0.5" size="44 3 8" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.1 -0.1 0.0" rot="0.0 0.0 0.0" texture="2 0.5" size="46 1 9" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 0.0" rot="90.0 0.0 0.0" texture="7" size="44 9 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="2.1 0.6 -2.1" rot="-90.0 -180.0 0.0" texture="10 0.5" size="34 3 10" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.1 -0.1 0.1" rot="0.0 0.0 0.0" texture="2 0.6" size="36 1 9" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="plaster" pos="-0.1 -0.1 1.0" rot="0.0 0.0 0.0" texture="2 0.6" size="4 1 13" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="plaster" pos="3.1 -0.1 1.0" rot="0.0 0.0 0.0" texture="2 0.6" size="4 1 13" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 -0.1" rot="90.0 0.0 0.0" texture="7" size="34 11 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="2.10001 2.9 -2.09998" rot="-90.0 -180.0 0.0" texture="10 0.5" size="34 3 11" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.10001 -0.09998 -0.0" rot="0.0 0.0 0.0" texture="2 0.6" size="36 1 10" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 -0.1" rot="90.0 0.0 0.0" texture="7" size="34 11 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="-1.3 0.6 2.9" rot="-90.0 0.0 0.0" texture="10 0.5" size="21 3 33" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="-0.1 -0.1 0.1" rot="0.0 0.0 0.0" texture="2 0.6" size="22 1 32" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.0 0.2 -0.1" rot="90.0 0.0 0.0" texture="7" size="21 31 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="0.8 3.0 2.9" rot="-90.0 0.0 0.0" texture="10 0.5" size="13 3 9" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="0.0 -0.1 -0.1" rot="0.0 0.0 0.0" texture="2 0.6" size="14 1 10" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.1 0.2 -0.1" rot="90.0 0.0 0.0" texture="7" size="12 10 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<voxbox name="concrete wall" pos="1.9 0.8 2.9" rot="-90.0 0.0 0.0" texture="10 0.5" size="3 3 9" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - basic">
+							<voxbox name="plaster" pos="0.0 -0.1 -0.1" rot="0.0 0.0 0.0" texture="2 0.6" size="3 1 22" material="plaster" pbr="0 0.25 0 0"/>
+							<voxbox name="metal reinforcement" pos="0.1 0.2 -0.1" rot="90.0 0.0 0.0" texture="7" size="2 10 1" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="metal reinfocement"/>
+						</voxbox>
+						<group name="concrete corner" pos="-1.5 0.2 -1.99999" rot="0.0 -90.0 0.0">
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -360.0 90.0" texture="10 0.5" size="36 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 0"/>
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -270.0 90.0" texture="10 0.5" size="36 2 2" offset="0 -1 0" material="masonry" color="0.6 0.6 0.6"/>
+							<voxbox name="concrete" pos="0.2 -0.1 0.2" rot="0.0 -90.0 90.0" texture="10 0.5" size="36 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -1 0"/>
+						</group>
+						<group name="concrete corner" pos="2.3 0.2 -2.00001" rot="0.0 180.0 0.0">
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -360.0 90.0" texture="10 0.5" size="49 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 0"/>
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -270.0 90.0" texture="10 0.5" size="36 2 2" offset="0 -1 0" material="masonry" color="0.6 0.6 0.6"/>
+							<voxbox name="concrete" pos="0.2 -0.1 0.2" rot="0.0 -90.0 90.0" texture="10 0.5" size="48 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -1 0"/>
+						</group>
+						<group name="concrete corner" pos="2.3 0.2 2.8" rot="0.0 90.0 0.0">
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -360.0 90.0" texture="10 0.5" size="48 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 0"/>
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -270.0 90.0" texture="10 0.5" size="36 2 2" offset="0 -1 0" material="masonry" color="0.6 0.6 0.6"/>
+							<voxbox name="concrete" pos="0.2 -0.1 0.2" rot="0.0 -90.0 90.0" texture="10 0.5" size="48 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -1 0"/>
+						</group>
+						<group name="concrete miscellaneous" pos="0.4 0.0 0.3">
+							<voxbox name="hor. concrete stripes" pos="-1.8 0.1 2.4" rot="0.0 0.0 0.0" texture="10 0.5" size="36 6 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 0 1"/>
+							<voxbox name="hor. concrete stripes" pos="1.9 0.1 2.4" rot="0.0 90.0 0.0" texture="10 0.5" size="46 6 2" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 1"/>
+							<voxbox name="hor. concrete stripes" pos="-1.9 0.1 -2.2" rot="0.0 -90.0 0.0" texture="10 0.5" size="46 6 2" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 1"/>
+							<voxbox name="hor. concrete stripes" pos="1.8 0.2 -2.3" rot="0.0 180.0 0.0" texture="10 0.5" size="36 6 2" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 0 1"/>
+							<voxbox name="concrete foundation" pos="-1.8 -0.0 -2.2" rot="0.0 0.0 0.0" texture="10 0.5" size="36 7 46" material="masonry" color="0.5 0.5 0.5"/>
+							<voxbox name="concrete foundation" pos="0.1 0.0 3.2" rot="0.0 0.0 0.0" texture="10 0.5" size="17 4 5" material="masonry" color="0.5 0.5 0.5"/>
+							<voxbox name="concrete foundation" pos="0.1 0.0 2.7" rot="0.0 0.0 0.0" texture="10 0.5" size="17 7 5" material="masonry" color="0.5 0.5 0.5"/>
+							<voxbox name="concrete foundation" pos="-1.7 3.4 -2.1" rot="0.0 0.0 0.0" texture="10 0.75" size="34 3 44" material="masonry" color="0.5 0.5 0.5"/>
+							<voxbox name="concrete foundation" pos="-1.7 3.7 2.7" rot="0.0 -180.0 0.0" texture="10 0.75" size="4 1 52" material="masonry" color="0.4 0.4 0.4"/>
+						</group>
+						<group name="concrete corner" pos="-1.5 0.2 2.8" rot="0.0 0.0 0.0">
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -360.0 90.0" texture="10 0.5" size="36 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -2 0"/>
+							<voxbox name="concrete" pos="0.0 -0.1 -0.2" rot="0.0 -270.0 90.0" texture="10 0.5" size="36 2 2" offset="0 -1 0" material="masonry" color="0.6 0.6 0.6"/>
+							<voxbox name="concrete" pos="0.2 -0.1 0.2" rot="0.0 -90.0 90.0" texture="10 0.5" size="36 2 3" brush="MOD/main\Building Components\walls\concrete/concrete_walls.vox" object="concrete wall - hor. split" offset="0 -1 0"/>
+						</group>
+						<group name="Windows" pos="0.0 1.0 0.0">
+							<voxbox name="metal" pos="-1.8 0.6 -1.5" rot="0.0 0.0 0.0" texture="2 1" size="5 1 38" material="metal" color="0.2 0.2 0.2"/>
+							<voxbox name="glass" pos="-1.6 0.7 -1.4" rot="0.0 0.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="glass" pos="-1.6 0.7 -0.5" rot="0.0 0.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="glass" pos="-1.6 0.7 1.4" rot="0.0 0.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="glass" pos="-1.6 1.0 0.4" rot="0.0 0.0 0.0" size="1 8 9" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="metal" pos="-1.6 0.7 1.4" rot="-90.0 0.0 0.0" texture="2 1" size="1 1 11" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.6 0.7 0.4" rot="-90.0 0.0 0.0" texture="2 1" size="1 1 11" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.6 0.7 -0.5" rot="-90.0 0.0 0.0" texture="2 1" size="1 1 11" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="0.9 0.7 -2.0" rot="-90.0 90.0 0.0" texture="2 1" size="1 1 11" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-0.0 0.7 -2.0" rot="-90.0 90.0 0.0" texture="2 1" size="1 1 11" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.6 0.9 0.4" rot="0.0 0.0 0.0" texture="2 1" size="1 1 9" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.7 0.7 -1.4" rot="-90.0 0.0 0.0" texture="2 1" size="4 1 12" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.7 0.7 2.3" rot="-90.0 0.0 0.0" texture="2 1" size="4 1 12" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.7 1.9 2.2" rot="-180.0 0.0 0.0" texture="2 1" size="4 1 36" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="-1.0 0.6 -1.8" rot="0.0 90.0 0.0" texture="2 1" size="5 1 28" material="metal" color="0.2 0.2 0.2"/>
+							<voxbox name="metal" pos="-0.9 0.7 -1.8" rot="-90.0 90.0 0.0" texture="2 1" size="4 1 12" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="1.79999 0.7 -1.8" rot="-90.0 90.0 0.0" texture="2 1" size="4 1 12" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="metal" pos="1.69999 1.9 -1.8" rot="180.0 90.0 0.0" texture="2 1" size="4 1 26" material="metal" color="0.35 0.35 0.35"/>
+							<voxbox name="glass" pos="1.7 0.7 -2.1" rot="0.0 -90.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="glass" pos="0.8 0.7 -2.1" rot="0.0 -90.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+							<voxbox name="glass" pos="-0.1 0.7 -2.1" rot="0.0 -90.0 0.0" size="1 11 8" brush="MOD/main\Building Components\windows\basic_windows.vox" object="glass material"/>
+						</group>
+						<vox name="chair" pos="0.1 0.7 -0.525" rot="0.0 -65.0 0.0" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="spinny chair"/>
+						<vox name="small crate" pos="-0.625 0.7 0.575" rot="0.0 95.0 0.0" prop="true" file="MOD/main/General/crates and ammo boxes/wooden_crates_and_ammo_boxes.vox" object="small wooden crate"/>
+						<vox name="computer screen" pos="-0.95 1.6 -1.425" rot="0.0 32.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="computer screen (off)"/>
+						<vox name="keyboard" pos="-0.899 1.6 -0.498" rot="0.0 80.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old keyboard"/>
+						<vox name="computer" pos="-0.1 1.6 -1.45" rot="0.0 -5.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old computer"/>
+						<vox name="mouse" pos="-0.7 1.6 -1.05" rot="0.0 50.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old mouse"/>
+						<vox name="printer" pos="1.625 2.1 -1.225" rot="0.0 -67.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old fax / printer"/>
+						<voxbox name="roof" pos="-1.94824 3.7 3.2" rot="-15.0 90.0 0.0" texture="2 1" size="56 2 48" brush="MOD/main/Building Components/ceilings + roofs/simple_metal_roof.vox" offset="2 0 0"/>
+						<vox pos="4.1 0.1 -3.5" rot="0.0 -170.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags2"/>
+						<vox pos="-1.2 0.1 -4.3" rot="0.0 -90.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+						<vox pos="0.6 0.9 -4.2" rot="0.0 90.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+						<vox pos="0.6 0.1 -4.3" rot="0.0 -90.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

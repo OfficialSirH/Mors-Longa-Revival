@@ -69,7 +69,9 @@ function server.tick(dt)
 		return
 	end
 
-	npc.navigation.GetPathState = GetPathState()
+	-- (2026-11-15, NPC performance) the path state is written to the registry only when it changes (v1: twice per
+	-- tick per npc); this script is its only writer, goreai_main only reads it
+	local state = PublishPathState()
 
 	if npc.navigation.input_AbortPath then
 		AbortPath()
@@ -77,7 +79,7 @@ function server.tick(dt)
 		return
 	end
 
-	if npc.navigation.GetPathState == "busy" then
+	if state == "busy" then
 		npc.navigation.timeSinceProgress = 0
 		npc.navigation.thinkTime = npc.navigation.thinkTime + GetTimeStep()
 		if npc.navigation.thinkTime > npc.navigation.timeout then
@@ -86,8 +88,8 @@ function server.tick(dt)
 		end
 	end
 
-	if npc.navigation.GetPathState ~= "busy" then
-		if npc.navigation.GetPathState == "done" or npc.navigation.GetPathState == "fail" then
+	if state ~= "busy" then
+		if state == "done" or state == "fail" then
 			if not npc.navigation.resultRetrieved then
 				npc.navigation.GetPathLength = GetPathLength()
 
@@ -140,8 +142,17 @@ function server.tick(dt)
 	end
 
 
-	npc.navigation.GetPathState = GetPathState()
+	PublishPathState()
 
+end
+
+function PublishPathState()
+	local s = GetPathState()
+	if s ~= LastPathState then
+		npc.navigation.GetPathState = s
+		LastPathState = s
+	end
+	return s
 end
 
 function apply_entity_ids(ID)

@@ -1,0 +1,38 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="hedgehogs" pos="33.9 -0.0 -10.5" rot="0.0 90.0 0.0" prop0="prop=false">
+				<vox pos="-5.19195 0.66468 9.33349" rot="32.8 -101.0 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.17812 0.66467 8.7291" rot="32.8 159.2 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-4.67899 0.66466 6.43436" rot="32.8 -90.9 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.57757 0.66468 5.02786" rot="32.8 19.0 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-5.13766 0.66468 11.09423" rot="32.8 -131.8 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="-6.30307 0.66465 12.32528" rot="32.8 9.0 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="9.49961 0.66466 18.10816" rot="32.8 -101.4 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="9.18873 0.66469 20.09844" rot="32.8 158.2 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="0.24859 0.66476 22.85921" rot="32.8 46.9 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				<vox pos="1.06562 0.66468 21.26245" rot="32.8 -131.2 -35.2" density="4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+			</group>
+			<group name="cinderblocks" pos="34.1 0.8 -9.2">
+				<vox pos="3.6 0.2 -2.1" rot="0.0 -90.0 0.0" density="3" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="3.6 1.0 -2.1" rot="0.0 90.0 0.0" density="3" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="3.9 0.2 -7.3" rot="0.0 -120.0 0.0" density="3" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+				<vox pos="4.7 0.2 -8.68564" rot="0.0 -120.0 0.0" density="3" file="MOD/assets/vox/barricades.vox" object="cinderblok_light"/>
+			</group>
+			<voxbox name="guardrail" pos="80.6 0.7 -3.9" rot="0.0 -90.0 0.0" size="9 16 1427" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="guardrail">
+				<vox pos="0.1 0.6 1.1" rot="0.0 0.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="guardrail:stop guard"/>
+				<vox pos="0.20001 0.6 141.7" rot="0.0 180.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="guardrail:stop guard"/>
+			</voxbox>
+			<vox pos="38.4 0.7 -12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="signsupport">
+				<vox pos="-0.05 4.9 -0.6" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign: STOP"/>
+			</vox>
+			<vox pos="33.2 0.7 -12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="roofsupport"/>
+			<vox pos="28.2 0.7 -12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="roofsupport"/>
+			<vox pos="23.2 0.7 -12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="roofsupport"/>
+			<vox pos="-0.39998 0.7 -12.80001" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="signsupport">
+				<vox pos="-6.35 5.1 -0.6" rot="0.0 180.0 0.0" texture="texture=8 0.5" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign2: infected combat damage"/>
+				<vox pos="1.25 5.1 -0.6" rot="0.0 0.0 0.0" texture="texture=8 0.5" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: quandale"/>
+			</vox>
+</group>
+</group>
+</prefab>

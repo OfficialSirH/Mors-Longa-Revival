@@ -1,0 +1,23 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM8.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="road" prop0="texture=16">
+				<voxbox name="highway road l edge" pos="200.0 0.6 -21.6" rot="0.0 -90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+				<voxbox name="highway road l" pos="0.0 0.6 -4.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:left road" offset="0 5"/>
+				<voxbox name="highway road r" pos="0.0 0.6 17.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:right road" offset="0 5"/>
+				<voxbox name="highway road r edge" pos="0.0 0.6 18.4" rot="0.0 90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+			</group>
+			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+			</group>
+			<group name="Power Lines" pos="95.5 -0.1 94.6">
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="35.19999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="66.39994 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+			</group>
+</group>
+</group>
+</prefab>

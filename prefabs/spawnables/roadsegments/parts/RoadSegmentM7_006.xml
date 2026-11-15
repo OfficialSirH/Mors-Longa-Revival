@@ -1,0 +1,89 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="ground" prop0="texture=19 0.5">
+				<voxbox name="sand:normal" pos="0.0 0.6 -100.0" size="2000 1 784" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 18.4" size="2000 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+			</group>
+			<group name="road" prop0="texture=16">
+				<voxbox name="highway road l edge" pos="200.0 0.6 -21.6" rot="0.0 -90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+				<voxbox name="highway road l" pos="0.0 0.6 -4.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:left road" offset="0 5"/>
+				<voxbox name="highway road r" pos="0.0 0.6 17.5" rot="0.0 90.0 0.0" size="162 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:right road" offset="0 5"/>
+				<voxbox name="highway road r edge" pos="0.0 0.6 18.4" rot="0.0 90.0 0.0" size="9 2 2000" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="highway:sand merge" offset="0 5"/>
+				<voxagon pos="105.3 0.62 35.4" rot="0.0 -90.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-8.6 1.5"/>
+					<vertex pos="-7.0 -0.1"/>
+					<vertex pos="-3.2 -0.1"/>
+					<vertex pos="-3.2 1.5"/>
+					<vertex pos="-4.8 3.1"/>
+					<vertex pos="-8.6 3.1"/>
+				</voxagon>
+				<voxagon pos="105.3 0.62 26.6" rot="0.0 -100.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-8.7 0.7"/>
+					<vertex pos="-6.5 -0.1"/>
+					<vertex pos="-1.4 -0.1"/>
+					<vertex pos="0.5 1.3"/>
+					<vertex pos="0.8 3.0"/>
+					<vertex pos="-8.3 3.1"/>
+				</voxagon>
+				<voxagon pos="113.9 0.62 25.2" rot="0.0 -55.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-10.5 2.2"/>
+					<vertex pos="-8.8 -0.1"/>
+					<vertex pos="-0.5 -0.1"/>
+					<vertex pos="0.3 1.6"/>
+					<vertex pos="-1.9 3.0"/>
+					<vertex pos="-8.6 3.1"/>
+				</voxagon>
+				<voxagon pos="102.3 0.62 32.4" rot="0.0 90.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-16.5 -0.1"/>
+					<vertex pos="-1.4 -0.1"/>
+					<vertex pos="0.2 1.5"/>
+					<vertex pos="0.2 3.1"/>
+					<vertex pos="-16.5 3.1"/>
+				</voxagon>
+				<voxagon pos="102.39999 0.62 28.3" rot="0.0 180.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-8.3 1.7"/>
+					<vertex pos="-8.6 -0.1"/>
+					<vertex pos="-3.0 -0.1"/>
+					<vertex pos="-1.4 1.5"/>
+					<vertex pos="-3.0 3.1"/>
+					<vertex pos="-7.9 3.1"/>
+					<vertex pos="-8.6 2.8"/>
+				</voxagon>
+				<voxagon pos="105.19998 0.62 30.7" rot="0.0 0.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-30.2 -0.1"/>
+					<vertex pos="-3.0 -0.1"/>
+					<vertex pos="-1.3 1.5"/>
+					<vertex pos="-3.0 3.1"/>
+					<vertex pos="-30.2 3.1"/>
+				</voxagon>
+				<voxagon pos="112.39998 0.62 28.0" rot="0.0 -170.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-10.3 -0.1"/>
+					<vertex pos="1.5 -0.1"/>
+					<vertex pos="1.6 1.7"/>
+					<vertex pos="1.0 2.7"/>
+					<vertex pos="-0.6 1.7"/>
+					<vertex pos="-1.8 3.1"/>
+					<vertex pos="-10.8 3.1"/>
+				</voxagon>
+				<voxagon pos="123.99998 0.62 26.2" rot="0.0 -180.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="road:dirt" offset="0 1" axis="z" extrude="1">
+					<vertex pos="-26.1 -0.1"/>
+					<vertex pos="1.5 -0.1"/>
+					<vertex pos="1.5 3.1"/>
+					<vertex pos="-26.1 3.1"/>
+				</voxagon>
+			</group>
+			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+			</group>
+			<group name="Power Lines" pos="95.5 -0.1 94.6">
+				<vox pos="-84.2 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-58.39999 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="-27.20002 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="4.0 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="34.3 1.0 0.0" rot="90.0 -170.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+				<vox pos="91.09998 0.8 0.00001" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/assets/vox/Props/USMIL/pole.vox" object="pole"/>
+			</group>
+</group>
+</group>
+</prefab>

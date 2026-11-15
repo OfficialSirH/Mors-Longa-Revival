@@ -1,0 +1,11 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="toll" pos="-3.9 -0.1 3.4" prop0="texture=10 .5">
+				<vox pos="45.19999 0.9 -17.5" rot="0.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="toll"/>
+				<vox pos="23.2 1.1 -17.5" rot="180.0 -90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="toll"/>
+				<voxbox name="roof" pos="42.3 5.9 -24.4" rot="0.0 -90.0 0.0" texture="2 1" size="164 2 154" brush="MOD/main/Building Components/ceilings + roofs/simple_metal_roof.vox" offset="2 0 0"/>
+</group>
+</group>
+</group>
+</prefab>

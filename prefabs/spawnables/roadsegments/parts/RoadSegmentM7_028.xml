@@ -1,0 +1,13 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="camp" pos="9.2 0.7 -41.3">
+				<group name="tent props" pos="-72.1 0.0 -9.5" rot="0.0 0.0 0.0" prop0="prop=true">
+					<group name="tent" pos="80.3 0.0 21.70001" rot="0.0 90.0 0.0">
+						<voxbox name="bed" pos="0.1 0.0 1.8" size="21 11 11" brush="MOD/assets/vox/airbasevox/airbase_bed.vox"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

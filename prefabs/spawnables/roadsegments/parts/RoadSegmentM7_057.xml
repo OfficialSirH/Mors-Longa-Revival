@@ -1,0 +1,13 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="base" pos="155.0 0.7 38.9" rot="0.0 0.0 0.0">
+			<vox pos="-18.5 0.0 -5.7" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/quarantine.vox" object="building3">
+				<voxbox name="roof" pos="5.9 4.3 10.09999" rot="0.0 -180.0 0.0" texture="2 1" size="118 2 202" brush="MOD/main/Building Components/ceilings + roofs/simple_metal_roof.vox" offset="2 0 0">
+					<voxbox name="lightbulb" pos="5.9 -0.5 16.15" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<light pos="0.05 0.1 0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0.1"/>
+</voxbox>
+</voxbox>
+</vox>
+</group>
+</group>
+</prefab>

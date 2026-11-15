@@ -1,0 +1,19 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="camp" pos="9.2 0.7 -41.3">
+				<group name="watch tower" pos="-35.5 0.0 -23.70001" rot="0.0 50.0 0.0">
+					<group name="hescos" pos="1.1 0.0 -0.2">
+						<voxbox pos="1.89998 0.0 -3.99994" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="32 16 80" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="0.30001 0.0 4.00007" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="48 16 32" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="-2.89999 0.0 4.00008" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="32 16 16" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="-1.30004 0.0 -7.19993" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="64 16 32" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="-2.1 1.6 -6.4" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="64 16 16" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="-0.5 1.6 4.8" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="48 16 16" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+						<voxbox pos="2.7 1.6 -4.79998" rot="0.0 0.0 0.0" texture="2 0.5" density="3" size="16 16 96" brush="MOD/assets/vox/airbasevox/airbase_hesco.vox" object="2"/>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

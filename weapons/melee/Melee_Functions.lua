@@ -93,6 +93,7 @@ function server.meleeOps(ops, playerId)
         elseif op.t == "npc" then
             local path_damage = "level.goreai.body_damage_player." .. op.body
             SetFloat(path_damage, GetFloat(path_damage) + op.damage) -- Specific damage to each body by handle.
+            SetBool("level.goreai.damage_pending", true) -- (2026-11-15) npcs read body damage only when a hit is pending (goreai_health.lua)
             SetFloat("level.goreai.body_damage_player_x", op.pos[1])
             SetFloat("level.goreai.body_damage_player_y", op.pos[2])
             SetFloat("level.goreai.body_damage_player_z", op.pos[3])

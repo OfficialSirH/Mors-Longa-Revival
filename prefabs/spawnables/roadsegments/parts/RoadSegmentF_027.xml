@@ -1,0 +1,170 @@
+<prefab version="1.2.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Factory" pos="76.79999 -2.8 74.60001" rot="0.0 90.0 0.0">
+			<voxbox name="Unbrakable ground" pos="-7.9 3.4 56.4" texture="7" size="100 1 330" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-7.9 3.4 89.4" texture="7" size="477 1 100" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="26.3 3.4 39.3" rot="0.0 90.0 0.0" texture="7" size="609 1 299" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="19.2 3.4 56.4" texture="7" size="206 1 330" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-7.9 3.4 56.4" rot="0.0 90.0 0.0" texture="7" size="171 1 477" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="26.3 3.4 29.0" rot="0.0 180.0 0.0" texture="7" size="395 1 215" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-13.8 3.4 79.30001" rot="0.0 -180.0 0.0" texture="7" size="262 1 497" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-13.8 3.4 17.80001" rot="0.0 -180.0 0.0" texture="7" size="262 1 103" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-25.5 5.7 6.9" rot="0.0 90.0 0.0" texture="7" size="279 4 117" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-25.5 9.6 6.9" rot="0.0 90.0 0.0" texture="7" size="279 4 117" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-25.5 13.5 6.9" rot="0.0 90.0 0.0" texture="7" size="279 4 117" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-25.5 13.8 6.9" rot="0.0 90.0 0.0" texture="8" size="279 1 117" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-40.0 13.6 29.00001" rot="0.0 90.0 0.0" texture="7" size="215 2 262" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-40.0 13.5 29.0" rot="0.0 90.0 0.0" texture="8" size="215 4 262" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-40.0 11.1 79.3" rot="0.0 90.0 0.0" texture="8" size="497 4 262" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-25.5 3.4 6.90001" rot="0.0 90.0 0.0" texture="7" size="279 1 117" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-13.8 8.1 29.6" rot="0.0 180.0 0.0" texture="7" size="262 4 118" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-13.8 4.7 29.6" rot="0.0 180.0 0.0" texture="7" size="262 4 118" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="-13.8 1.2 29.60001" rot="0.0 180.0 0.0" texture="7" size="262 5 118" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="56.2 3.4 -21.6" rot="0.0 180.0 0.0" texture="7" size="502 1 215" color=".5 .5 .5"/>
+			<voxbox name="Unbrakable ground" pos="6.0 3.4 -28.4" rot="0.0 180.0 0.0" texture="7" size="198 1 147" color=".5 .5 .5"/>
+			<group name="walls1" pos="-8.3 0.0 91.4">
+				<voxbox name="wall" tags="unbreakable" pos="-0.2 0.0 8.0" rot="0.0 90.0 0.0" size="596 129 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+			</group>
+			<group name="walls2" pos="40.1 0.0 91.4">
+				<voxbox name="wall" tags="unbreakable" pos="-0.3 0.0 8.0" rot="0.0 90.0 0.0" size="596 129 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+			</group>
+			<group name="walls3" pos="15.9 0.0 99.7">
+				<voxbox name="wall" tags="unbreakable" pos="-23.8 0.0 -0.3" size="477 106 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall" pos="-7.9 5.3 -0.3" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="hole" pos="-7.9 5.3 -0.3" size="53 41 6" brush="hole"/>
+				<voxbox name="hole" pos="2.7 5.3 -0.3" size="53 41 6" brush="hole"/>
+				<voxbox name="window" pos="2.7 5.3 -0.19999" size="53 41 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-2.6 5.3 -0.09999" rot="0.0 180.0 0.0" size="53 41 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="wall_corner" pos="24.5 0.1 0.3" rot="0.0 -180.0 0.0" size="6 128 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+				<voxbox name="wall_corner" pos="-24.4 0.1 0.3" rot="0.0 90.0 0.0" size="6 128 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+			</group>
+			<group name="walls4" pos="10.3 -1.8 81.10001">
+				<voxbox name="wall" tags="unbreakable" pos="-7.6 0.0 7.7" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall" tags="unbreakable" pos="-8.2 0.0 7.7" rot="0.0 90.0 0.0" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall" tags="unbreakable" pos="8.3 0.0 7.7" rot="0.0 90.0 0.0" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall_corner" tags="unbreakable" pos="-8.2 0.0 8.3" rot="0.0 90.0 0.0" size="6 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+				<voxbox name="wall_corner" tags="unbreakable" pos="8.9 0.0 8.3" rot="0.0 180.0 0.0" size="6 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+				<voxbox name="wall" tags="unbreakable" pos="-8.2 0.0 -8.2" rot="0.0 90.0 0.0" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall" tags="unbreakable" pos="8.3 0.0 -8.2" rot="0.0 90.0 0.0" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+				<voxbox name="wall_corner" tags="unbreakable" pos="-8.2 0.0 -24.7" size="6 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+				<voxbox name="wall_corner" tags="unbreakable" pos="8.9 0.0 -24.7" rot="0.0 -90.0 0.0" size="6 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+				<voxbox name="wall" tags="unbreakable" pos="8.3 0.0 -24.1" rot="0.0 180.0 0.0" size="159 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="wall"/>
+			</group>
+			<group name="large details">
+				<vox pos="5.5 0.1 88.1" file="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<vox pos="10.8 0.1 79.4" rot="0.0 -90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank1"/>
+				<vox pos="10.8 0.1 70.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank1"/>
+				<vox pos="10.8 0.1 62.2" rot="0.0 -90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank1"/>
+				<vox pos="37.0 3.5 65.9" rot="0.0 180.0 0.0" file="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="26.3 3.5 51.7" rot="0.0 90.0 0.0" size="24 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="26.3 3.5 49.3" rot="0.0 90.0 0.0" size="57 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<vox pos="-7.2 3.5 42.6" rot="0.0 -90.0 0.0" file="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="-7.9 3.5 39.2" rot="0.0 90.0 0.0" size="24 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="-7.9 3.5 36.8" rot="0.0 90.0 0.0" size="24 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="-7.9 3.5 34.4" rot="0.0 90.0 0.0" size="24 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<voxbox pos="-7.9 3.5 32.0" rot="0.0 90.0 0.0" size="24 44 15" brush="MOD/assets/vox/stairs.vox" object="stairs1"/>
+				<vox pos="-7.9 6.7 30.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<vox pos="-7.9 6.7 33.2" rot="0.0 90.0 0.0" file="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<vox pos="-7.9 6.7 35.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<vox pos="-7.9 6.7 38.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox name="rail" pos="2.8 3.3 57.00001" rot="0.0 -90.0 0.0" size="303 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox name="rail" pos="18.6 3.3 57.10001" rot="0.0 -180.0 0.0" size="158 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox name="rail" pos="18.5 3.3 88.80001" rot="0.0 90.0 0.0" size="317 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox name="rail" pos="18.5 3.3 88.80001" rot="0.0 180.0 0.0" size="133 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+				<voxbox name="hole" pos="2.7 3.8 72.7" rot="-20.0 0.0 0.0" size="6 17 20" brush="hole"/>
+				<voxbox name="hole" pos="3.3 3.8 62.4" rot="-20.0 180.0 0.0" size="6 17 20" brush="hole"/>
+				<voxbox name="hole" pos="8.7 3.6 57.1" rot="-20.0 90.0 0.0" size="1 17 20" brush="hole"/>
+				<voxbox name="hole" pos="7.2 4.5 57.1" rot="20.0 90.0 0.0" size="1 17 20" brush="hole"/>
+				<voxbox name="hole" pos="17.8 4.2 68.3" rot="18.9 18.9 6.7" size="6 17 20" brush="hole"/>
+				<voxbox name="rail" pos="-7.9 6.7 27.5" rot="0.0 -90.0 0.0" size="15 12 1" brush="MOD/assets/vox/stairs.vox" object="rail1"/>
+			</group>
+			<group name="roof">
+				<voxbox name="roof_slanted" pos="-7.9 10.6 89.60001" rot="-10.0 0.0 0.0" size="477 3 103" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="roof_slanted" pos="-7.9 10.6 79.60002" rot="-10.0 0.0 0.0" size="477 3 103" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="roof_slanted" pos="-7.9 10.6 69.60002" rot="-10.0 0.0 0.0" size="477 3 103" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="roof_slanted" pos="-7.9 10.6 59.60002" rot="-10.0 0.0 0.0" size="477 3 103" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="roof_slanted" pos="-7.9 10.6 49.60002" rot="-10.0 0.0 0.0" size="477 3 103" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="roof_slanted" pos="-7.9 10.548 39.305" rot="-10.0 0.0 0.0" size="477 3 106" brush="MOD/assets/brush/fundaments.vox" object="rock_dark"/>
+				<voxbox name="window" pos="-7.9 10.6 99.5" size="477 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-7.9 10.6 89.5" size="480 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-7.9 10.6 79.5" size="477 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-7.9 10.6 69.5" size="477 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-7.9 10.6 59.50001" size="477 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="window" pos="-7.9 10.6 49.50001" size="477 17 1" brush="MOD/assets/brush/gridded_window.vox"/>
+				<voxbox name="hole" pos="-2.8 10.6 76.09999" rot="0.0 30.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="-2.8 10.6 76.69998" rot="0.0 70.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="24.1 10.6 63.39998" rot="0.0 50.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="25.6 10.6 64.49998" rot="0.0 10.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="21.4 10.6 63.79998" rot="0.0 10.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="24.0 10.6 67.29998" rot="0.0 120.0 0.0" size="29 28 33" brush="hole"/>
+				<voxbox name="hole" pos="26.4 10.6 67.29998" rot="0.0 160.0 0.0" size="46 28 33" brush="hole"/>
+				<voxbox name="hole" pos="12.0 10.6 54.79998" rot="0.0 170.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="11.40912 10.6 54.90416" rot="0.0 130.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="12.0 10.6 77.49998" rot="0.0 -120.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="11.8958 10.6 78.09086" rot="0.0 -160.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="32.10418 10.6 92.68044" rot="0.0 20.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="32.56382 10.6 92.29478" rot="0.0 -20.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="2.6 10.6 45.69998" rot="0.0 140.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="2.3 10.6 45.59998" rot="0.0 100.0 0.0" size="16 28 21" brush="hole"/>
+				<voxbox name="hole" pos="1.90001 10.6 43.99999" rot="0.0 30.0 0.0" size="16 28 21" brush="hole"/>
+			</group>
+			<group name="roof beams">
+				<voxbox name="beam" pos="39.8 10.1 89.8" rot="-90.0 90.0 0.0" size="5 477 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="39.8 10.1 79.8" rot="-90.0 90.0 0.0" size="5 477 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="39.8 10.1 69.8" rot="-90.0 90.0 0.0" size="5 477 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="39.8 10.1 59.8" rot="-90.0 90.0 0.0" size="5 477 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="39.8 10.1 49.8" rot="-90.0 90.0 0.0" size="5 477 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="35.1 9.1 39.8" rot="-90.0 90.0 0.0" size="5 87 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="39.8 9.1 29.5" rot="-90.0 90.0 0.0" size="5 135 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="33.5 9.6 99.4" rot="-90.0 0.0 0.0" size="5 596 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="27.5 9.6 99.4" rot="-90.0 0.0 0.0" size="5 596 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="21.5 9.6 99.4" rot="-90.0 0.0 0.0" size="5 597 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="15.7 9.6 99.4" rot="-90.0 0.0 0.0" size="5 597 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="-2.1 9.6 99.4" rot="-90.0 0.0 0.0" size="5 597 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="9.90001 9.6 99.4" rot="-90.0 0.0 0.0" size="5 597 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<voxbox name="beam" pos="3.9 9.6 99.4" rot="-90.0 0.0 0.0" size="5 597 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				<group name="support column" pos="16.3 0.1 79.90002">
+					<voxbox name="wall_corner" pos="-0.9 0.0 -0.89999" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 0.20001" rot="0.0 180.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 -0.89999" rot="0.0 -90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="-0.9 0.0 0.20001" rot="0.0 90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="beam" pos="-0.6 5.3 -0.60001" size="5 42 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				</group>
+				<group name="support column" pos="16.3 0.1 89.90002">
+					<voxbox name="wall_corner" pos="-0.9 0.0 -0.89999" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 0.20001" rot="0.0 180.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 -0.89999" rot="0.0 -90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="-0.9 0.0 0.20001" rot="0.0 90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="beam" pos="-0.6 5.3 -0.60001" size="5 42 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				</group>
+				<group name="support column" pos="16.3 0.1 69.90002">
+					<voxbox name="wall_corner" pos="-0.9 0.0 -0.89999" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 0.20001" rot="0.0 180.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 -0.89999" rot="0.0 -90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="-0.9 0.0 0.20001" rot="0.0 90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="beam" pos="-0.6 5.3 -0.60001" size="5 42 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				</group>
+				<group name="support column" pos="28.1 0.1 39.90002">
+					<voxbox name="wall_corner" pos="-0.9 0.0 -0.89999" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 0.20001" rot="0.0 180.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 -0.89999" rot="0.0 -90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="-0.9 0.0 0.20001" rot="0.0 90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="beam" pos="-0.6 5.3 -0.60001" size="5 37 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				</group>
+				<group name="support column" pos="34.1 0.1 39.90002">
+					<voxbox name="wall_corner" pos="-0.9 0.0 -0.89999" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 0.20001" rot="0.0 180.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="0.2 0.0 -0.89999" rot="0.0 -90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="wall_corner" pos="-0.9 0.0 0.20001" rot="0.0 90.0 0.0" size="5 53 6" brush="MOD/assets/brush/plastered_cinderblock.vox" object="corner"/>
+					<voxbox name="beam" pos="-0.6 5.3 -0.60001" size="5 37 5" brush="MOD/assets/brush/i-beams.vox" object="beam1"/>
+				</group>
+			</group>
+			<group name="vents" pos="6.0 -0.1 0.0">
+				<voxbox name="ventilation rusty" pos="21.2 8.8 88.3" rot="0.0 90.0 0.0" size="243 9 11" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+				<vox name="intake" pos="21.8 8.4 89.59999" rot="0.0 90.0 0.0" file="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+				<vox name="intake" pos="21.8 8.4 62.79999" rot="0.0 90.0 0.0" file="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-intake-plain"/>
+				<voxbox name="ventilation rusty" pos="22.3 8.8 90.8" rot="0.0 -90.0 0.0" size="86 9 11" brush="MOD/assets/vox/pipes_and_ventilation.vox" object="ventilation-straight-rusty"/>
+			</group>
+</group>
+</group>
+</prefab>

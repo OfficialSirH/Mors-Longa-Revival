@@ -377,6 +377,7 @@ function ProjectileOperations(projectile)
             local path_damage = "level.goreai.body_damage_player." .. hitBody
             local damage = GetFloat(path_damage) + damage_from_player_gun
             SetFloat(path_damage, damage) -- Specific damage to each body by handle.
+            SetBool("level.goreai.damage_pending", true) -- (2026-11-15) npcs read body damage only when a hit is pending (goreai_health.lua)
 
             SetFloat("level.goreai.body_damage_player_x", hitPos[1])
             SetFloat("level.goreai.body_damage_player_y", hitPos[2])

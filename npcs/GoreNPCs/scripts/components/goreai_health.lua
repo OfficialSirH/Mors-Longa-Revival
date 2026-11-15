@@ -133,6 +133,20 @@ function npc_process_shield(npc)
     end
 
 
+    -- (2026-11-15, performance, user OK) the per-body-part damage values (2 registry reads + 2 resets per part per
+    -- tick: ~440 engine calls per frame with 8 npcs) are only read when a weapon reported a hit since the last tick:
+    -- every writer of level.goreai.body_damage_* also sets level.goreai.damage_pending (gunfunctions, melee, npc
+    -- bullets, AS350 / Hind weapons, AVF shells), taken and cleared at the start of tick_npcs (DamagePending).
+    -- Without a pending hit the loop below would find only zeros: what it still did then is kept (no damage flags,
+    -- the kill-credit timer advanced once per body part as in v1).
+    if DamagePending == false then
+        npc.shield.took_damage = false
+        npc.shield.took_damage_player = false
+        for _ = 1, #npc.bodyparts do TimerRunTime(npc.health_damage_taken_timer) end
+        npc.health_damage_taken_total = (npc.health_damage_taken_total or 0) + npc.health_damage_taken
+        return
+    end
+
     -- (v2 goreai) who shot (gunfunctions / melee write the shooter's id; unknown = host)
     local hitOwner = GoreAI_ResolvePlayer(GetInt("level.goreai.body_damage_player_owner"))
 

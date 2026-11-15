@@ -79,7 +79,11 @@ function server.tick()
     end
 
 
-    Campfires = FindLights("Campfire", true)
+    -- (2026-11-15, performance) the level-wide light search once a second instead of every tick
+    if GetTime() >= (CampfiresAt or 0) then
+        CampfiresAt = GetTime() + 1
+        Campfires = FindLights("Campfire", true)
+    end
     for i=1,#Campfires do
         CampfirePos = GetLightTransform(Campfires[i]).pos
         for p in Players() do
@@ -108,10 +112,11 @@ function server.tick()
     tickSandstorm()
 
 
-    SetInt("level.daynight.seconds", Seconds, true)
-    SetString("level.dayphase", GetDayPhaseTitle(), true)
-    SetFloat("level.daynight.days", Days, true)
-    SetString("level.daynight.time_formatted", GetTimeFormatted12H(Seconds), true)
+    -- (2026-11-15, performance) synced keys (sent to every client) written when they change, not every tick
+    DaynightSync("level.daynight.seconds", math.floor(Seconds), SetInt)
+    DaynightSync("level.dayphase", GetDayPhaseTitle(), SetString)
+    DaynightSync("level.daynight.days", Days, SetFloat)
+    DaynightSync("level.daynight.time_formatted", GetTimeFormatted12H(Seconds), SetString)
 
 
     -- Update daynight from other scripts through registry.
@@ -125,13 +130,26 @@ function server.tick()
 
 end
 
+DaynightSent = {}
+function DaynightSync(key, value, setter)
+    if DaynightSent[key] ~= value then
+        DaynightSent[key] = value
+        setter(key, value, true)
+    end
+end
+
 function client.init()
     initSandstormSounds()
 end
 
 function client.tick()
     tickSandstormSounds()
-    for _, light in ipairs(FindLights("Campfire", true)) do
+    -- (2026-11-15, performance) the level-wide light search once a second instead of every frame
+    if GetTime() >= (ClientCampfiresAt or 0) then
+        ClientCampfiresAt = GetTime() + 1
+        ClientCampfires = FindLights("Campfire", true)
+    end
+    for _, light in ipairs(ClientCampfires) do
         CampfirePos = GetLightTransform(light).pos -- global read by smoke()/fire()
         if VecLength(VecSub(GetPlayerTransform().pos, CampfirePos)) < 10 then
             smoke()

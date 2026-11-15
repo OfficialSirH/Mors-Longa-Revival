@@ -4,6 +4,7 @@ local function rec(name) return function(...) calls[name] = (calls[name] or 0) +
 for _, n in ipairs{"PlaySound","SpawnParticle","PointLight","DrawLine","MakeHole","Explosion","SpawnFire","ApplyBodyImpulse","PaintRGBA","ParticleReset","ParticleType","ParticleTile","ParticleSticky","ParticleRadius","ParticleAlpha","ParticleEmissive","ParticleColor","ParticleGravity","ParticleCollide","ParticleDrag","QueryRejectBody","QueryRejectShapes","Delete","SetBodyTransform","SetBodyVelocity","Spawn","SetPlayerTool"} do _G[n] = rec(n) end
 local R = {}
 function SetFloat(k,v) calls.SetFloat=(calls.SetFloat or 0)+1 R[k]=v end
+function SetBool(k,v) R[k]=v end -- (2026-11-15) damage writers raise level.goreai.damage_pending
 function GetFloat(k) return R[k] or 0 end
 function SetInt(k,v) R[k]=v end
 function GetInt(k) return R[k] or 0 end

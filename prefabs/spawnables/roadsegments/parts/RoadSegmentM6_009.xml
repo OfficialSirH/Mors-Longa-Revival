@@ -1,0 +1,44 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="road" prop0="texture=16">
+				<group name="vehicles">
+					<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclef34.xml" pos="87.30001 0.8 45.0" rot="0.0 20.0 0.0">
+						<group name="instance=MOD/vehicles/avf/prefabs/T-54 55/T-54-2 Destroyed Desert.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+							<vox pos="0.0 0.3 0.0" rot="0.0 180.0 2.5" texture="8" density="25" strength="5" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="hull T-54_2">
+								<group name="Plates" pos="-0.0 0.0 2.5">
+									<group name="Front" pos="0.1 0.3 0.0">
+										<vox pos="-0.1 0.326 0.021" rot="30.0 0.0 0.0" texture="8" strength="5" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="front.5"/>
+										<vox pos="-0.1 -0.075 0.415" rot="47.0 -180.0 0.0" texture="8" strength="5" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="front2.5"/>
+									</group>
+								</group>
+								<vox name="Engine" pos="0.1 0.1 -1.3" rot="0.0 0.0 0.0" texture="4 0.8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55.vox" object="engine"/>
+								<group name="Fuel Tanks" pos="1.1 0.9 1.1">
+									<vox pos="-1.7 -0.8 1.4" rot="0.0 0.0 0.0" strength="1000000" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55.vox" object="fuel_tank"/>
+								</group>
+								<vox pos="-0.3 0.8 1.6" rot="0.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55.vox" object="gas_tank"/>
+								<vox pos="-0.6 0.8 1.6" rot="0.0 0.0 0.0" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55.vox" object="gas_tank"/>
+								<vox pos="1.4049 -0.39966 0.2" rot="0.0 0.0 0.0" texture="8" density="1.89" strength="2" collide="false" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55.vox" object="tracks"/>
+								<group name="Left Wheels" pos="0.05 -0.3 0.1" rot="0.0 180.0 0.0">
+									<vox pos="-1.3 0.4 2.5" rot="0.0 -180.0 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="fl_sprocket"/>
+									<vox pos="-1.3 0.0 -2.0" rot="0.0 180.0 10.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="l_wheel1"/>
+									<vox pos="-1.3 0.0 0.0" rot="0.0 -180.0 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="l_wheel1"/>
+									<vox pos="-1.6 0.2 0.9" rot="0.0 180.0 -90.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="l_wheel1"/>
+									<vox pos="-1.3 0.0 1.8" rot="0.0 -140.0 0.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="l_wheel1"/>
+								</group>
+								<group name="Right Wheels" pos="-1.35 -0.3 0.1" rot="0.0 180.0 0.0">
+									<vox pos="0.1 0.4 -2.8" rot="0.0 180.0 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="fr_sprocket"/>
+									<vox pos="0.1 0.3 2.5" rot="0.0 -180.0 90.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="fr_sprocket"/>
+									<vox pos="0.1 0.0 -2.0" rot="0.0 160.0 0.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="r_wheel1"/>
+									<vox pos="0.1 0.0 -0.9" rot="0.0 -180.0 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="r_wheel1"/>
+									<vox pos="0.0 0.3 0.0" rot="0.0 -180.0 90.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="r_wheel1"/>
+									<vox pos="0.1 0.0 1.8" rot="0.0 160.0 -10.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="r_wheel1"/>
+								</group>
+</vox>
+</group>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

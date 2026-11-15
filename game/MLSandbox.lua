@@ -80,8 +80,12 @@ function server.tick(dt)
 	end
 	
 	spawnTick(dt)
-	
+
 	--Unlimited ammo
+	-- (Mors Longa, 2026-11-15, performance) every 0.5 s instead of every tick (listing every tool and setting its ammo
+	-- for every player each frame: 0.55 ms in Teardown's profiler); 9999 cannot run out in half a second
+	if GetTime() < (AmmoRefillAt or 0) then return end
+	AmmoRefillAt = GetTime() + 0.5
 	local tools = ListKeys("game.tool")
 	for i=1,#tools do
 

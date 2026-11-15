@@ -8,7 +8,7 @@
 #include "../../lib/Automatic.lua"
 ]]
 
-local disable_spawning = "savegame.mod.procedural.disable.spawn_roadblocks"
+local disable_spawning = "savegame.mod.procedural.disable.spawn_vehicle_events" -- (2026-11-14) v1: spawn_roadblocks
 
 
 function server.init()
@@ -164,6 +164,7 @@ function SpawnEventHeli(timerDiv, force)
 		xml = "MOD/vehicles/aircraft/AS350/AS350_MILITARY.xml"
 	end
 	local entities = Spawn(xml, Transform(Vec(200,50,3), QuatEuler(0,-90,0)))
+	SetString("level.debug.what.vehicle_event", xml) SetFloat("level.debug.spawned.vehicle_event", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 	addSpawnedVehicleXMLToRegistry(entities, xml)
 end
 
@@ -185,6 +186,7 @@ function SpawnEventAAF(timerDiv, force)
 	if whichone then
 		local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" .. whichone ..".xml"
 		local entities = Spawn(xml, Transform(Vec(-300, 4.5, 3), QuatEuler(0,-90,0)))
+		SetString("level.debug.what.vehicle_event", xml) SetFloat("level.debug.spawned.vehicle_event", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 		addSpawnedVehicleXMLToRegistry(entities, xml)
 	end
 end
@@ -193,6 +195,7 @@ function SpawnEventCiv()
 	local whichone = "D"..math.random(1,differentDvehicles)
 	local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" ..whichone..".xml"
 	local entities = Spawn(xml, Transform(Vec(-300, 4.5, math.random(-3, 3)), QuatEuler(0,-90,0)))
+	SetString("level.debug.what.vehicle_event", xml) SetFloat("level.debug.spawned.vehicle_event", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 	addSpawnedVehicleXMLToRegistry(entities, xml)
 end
 
@@ -200,6 +203,7 @@ function SpawnEventRefugee(opt_which) -- (v2) opt_which: debug menu "Refugee Van
 	local whichone = opt_which or math.random(1, differentCvehicles)
 	local xml = "MOD/prefabs/spawnables/enemy vehicles/VehicleC" ..whichone..".xml"
 	local entities = Spawn(xml, Transform(Vec(-300,4.5,3), QuatEuler(0,-90,0)))
+	SetString("level.debug.what.vehicle_event", xml) SetFloat("level.debug.spawned.vehicle_event", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 	addSpawnedVehicleXMLToRegistry(entities, xml)
 end
 
@@ -260,6 +264,7 @@ function SpawnRandomEnemyVehicle(opt_pos)
 
 	local xml = "MOD/prefabs/spawnables/enemy vehicles/Vehicle" ..whichone..".xml"
 	local entities = Spawn(xml, Transform(opt_pos or RandomizedPosition, RandomizedRotation or QuatEuler(0, math.random(-180, 180), 0)))
+	SetString("level.debug.what.vehicle_event", xml) SetFloat("level.debug.spawned.vehicle_event", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 	addSpawnedVehicleXMLToRegistry(entities, xml)
 
 end

@@ -17,6 +17,7 @@ function server.init()
 	Init_Settings()
 
 	currentFuel = 0
+	FuelMoney = {}   -- [player] = money earned selling fuel, not yet sent (see FlushFuelMoney)
 	infiniteFuel = HasKey('level.gamerule.infuel') and GetBool('level.gamerule.infuel') or false
 	SetBool('level.InfiniteFuel',infiniteFuel,true)
 
@@ -79,7 +80,7 @@ function server.tick(dt)
 			if target ~= 0 then
 				updateGasCanInteractText(gasCan,"Refuel")
 				if InputDown("interact", p) then
-					local fuelTransfered=refuel(gasCan,target)
+					local fuelTransfered=refuel(gasCan,target,nil,p)
 					if fuelTransfered~=0 then
 						updateGasCanInteractText(gasCan,"Refueling")
 					end
@@ -105,6 +106,23 @@ function server.tick(dt)
 			end
 		end
 	end
+	FlushFuelMoney()
+end
+
+-- whole dollars earned since the last send go to the seller's machine (at most one call per player per tick)
+function FlushFuelMoney()
+	for p, amount in pairs(FuelMoney) do
+		local whole = math.floor(amount)
+		if whole >= 1 then
+			ClientCall(p, "client.fuelMoney", whole)
+			FuelMoney[p] = amount - whole
+		end
+	end
+	for p in PlayersRemoved() do FuelMoney[p] = nil end
+end
+
+function client.fuelMoney(amount)
+	SetInt("savegame.mod.player.money", GetInt("savegame.mod.player.money") + amount)
 end
 
 -- client holds the siphon key while driving
@@ -340,7 +358,7 @@ function updateGasCanInteractText(can, t)
 	local fMAX=tonumber(GetTagValue(can,"fuelLevelMAX"))or 100
 	SetTag(can,"interact",round(f,.01).." / "..fMAX.." "..t)
 end
-function refuel(source,target,percent)
+function refuel(source,target,percent,seller)
 	local sourceFuelLevel = tonumber(GetTagValue(source, "fuelLevel"))or 0
 	local targetFuelLevel = tonumber(GetTagValue(target, "fuelLevel"))or 0
 	local sourceMaxFuelLevel = tonumber(GetTagValue(source, "fuelLevelMAX"))or 100
@@ -355,8 +373,9 @@ function refuel(source,target,percent)
 		fuelTransfered=math.min(.1,math.min(targetMaxFuelLevel-targetFuelLevel,sourceFuelLevel))
 		--SetTag(target,"fuelLevel",targetFuelLevel+(fuelTransfered*percent))
 		SetTag(source,"fuelLevel",sourceFuelLevel-fuelTransfered)
-		CurrentMoney = GetInt("savegame.mod.player.money")
-		SetInt("savegame.mod.player.money", CurrentMoney + fuelTransfered*30 )
+		-- (2026-11-14, MP) the money is the selling player's (their own savegame, on their machine); v1 wrote it here,
+		-- on the server, which in multiplayer is the host's savegame whoever sold
+		if seller then FuelMoney[seller] = (FuelMoney[seller] or 0) + fuelTransfered*30 end
 	end
 	-- (v2) the fuel line + sound are drawn by the client (client.tick)
 	return fuelTransfered

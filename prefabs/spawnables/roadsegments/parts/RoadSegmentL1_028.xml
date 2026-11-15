@@ -1,0 +1,56 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="highway lights" tags="night" prop0="texture=8 0.5">
+				<group name="lamp segment" pos="2.04 0.3 -1.95">
+					<vox pos="-0.00001 0.4 0.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 2 ways">
+						<light tags="night" pos="4.3 10.7 0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+						<light tags="night" pos="-4.3 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 19.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 -19.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+				</group>
+				<group name="lamp segment" pos="61.74 0.3 -1.95">
+					<vox pos="-0.00001 0.4 0.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 2 ways">
+						<light tags="night" pos="4.3 10.7 0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+						<light tags="night" pos="-4.3 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 19.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 -19.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+				</group>
+				<group name="lamp segment" pos="121.44 0.3 -1.95">
+					<vox pos="-0.00001 0.4 0.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 2 ways">
+						<light tags="night" pos="4.3 10.7 0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+						<light tags="night" pos="-4.3 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 19.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 -19.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+				</group>
+				<group name="lamp segment" pos="181.14101 0.3 -1.95">
+					<vox pos="-0.00001 0.4 0.0" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 2 ways">
+						<light tags="night" pos="4.3 10.7 0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+						<light tags="night" pos="-4.3 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 19.9" rot="0.0 90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+					<vox pos="-0.00001 0.4 -19.7" rot="0.0 -90.0 0.0" file="MOD/main/terrain/ground_building_assets_highway.vox" object="lamp post: 1 way">
+						<light tags="night" pos="2.1 10.7 -0.0" rot="90.0 0.0 0.0" type="area" color="0.97 0.82 0.38" scale="20" size="0.5"/>
+					</vox>
+				</group>
+			</group>
+</group>
+</group>
+</prefab>

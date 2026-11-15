@@ -1,0 +1,93 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="buildings" pos="95.9 0.0 0.0">
+					<group name="compound" pos="34.5 -0.0 -2.89999" rot="0.0 -180.0 0.0">
+						<vox pos="11.2 0.7 35.8" texture="8 0.3" file="MOD/assets/vox/militarybase.vox" object="building1">
+							<vox pos="-5.5 6.4 -6.7" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+							<vox pos="-5.4 6.4 -4.9" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags1"/>
+							<vox pos="-5.5 6.4 -3.1" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+							<vox pos="-5.5 6.4 -1.8" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="-5.4 6.8 -2.9" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="1.7 4.8 0.0" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+							<vox pos="3.5 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+							<vox pos="4.8 4.6 7.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="4.9 5.0 7.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="-4.6 6.8 -7.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+							<vox pos="5.8 4.6 5.4" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+							<vox pos="-5.9 1.6 -6.3" file="MOD/assets/vox/sandbags.vox" object="sandbags3"/>
+							<vox pos="5.8 4.6 2.4" file="MOD/assets/vox/sandbags.vox" object="sandbags4"/>
+							<vox pos="5.8 4.6 1.1" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="5.9 5.0 1.0" rot="0.0 -180.0 0.0" file="MOD/assets/vox/sandbags.vox" object="sandbags5"/>
+							<vox pos="5.2 1.0 9.2" rot="0.0 93.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+							<vox pos="5.2 0.3 9.2" rot="0.0 86.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox"/>
+							<vox pos="4.0 0.9 0.8" rot="0.0 176.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+							<vox pos="5.2 0.9 1.2" rot="0.0 -179.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+							<vox pos="4.7 2.0 0.8" rot="0.0 -164.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+							<vox pos="1.605 0.9 4.525" rot="0.0 -64.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+							<vox pos="1.051 0.9 3.286" rot="0.0 -59.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+							<vox pos="1.051 2.0 3.286" rot="0.0 -59.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+							<vox pos="1.56 2.0 4.467" rot="0.0 -59.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+							<vox pos="-0.8 3.4 6.9" rot="0.0 180.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+							<vox pos="-2.3 4.2 6.9" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard5"/>
+							<vox pos="-2.3 3.5 6.9" rot="0.0 -174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard2"/>
+							<vox pos="-1.1 3.5 6.9" rot="0.0 174.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_cardboard.vox" object="Cardboard6"/>
+							<vox pos="-3.6 3.4 6.9" rot="0.0 177.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+							<vox pos="-2.2 3.4 6.9" rot="0.0 -179.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+							<vox pos="-1.1 0.4 7.0" rot="0.0 -179.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox"/>
+							<vox pos="1.1 0.4 0.7" rot="0.0 0.0 0.0" texture="8 .8" prop="true" file="MOD/assets/vox/airbasevox/airbase_riflerack.vox"/>
+							<vox pos="-22.3 0.0 -4.8" rot="0.0 -166.0 0.0" texture="8 .6" prop="false" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox pos="-22.3 0.0 -2.9" rot="0.0 -126.0 0.0" texture="8 .6" prop="false" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox pos="-0.8 3.4 -7.1" rot="0.0 64.0 0.0" texture="8 .6" prop="false" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox pos="-0.47007 3.4 -5.22886" rot="0.0 24.0 0.0" texture="8 .6" prop="false" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox pos="4.0 3.9 0.7" rot="0.0 176.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+							<vox pos="5.2 3.9 1.1" rot="0.0 -179.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_4.vox"/>
+							<vox pos="4.7 5.0 0.7" rot="0.0 -164.0 0.0" texture="8 .4" prop="false" file="MOD/assets/vox/crate_5.vox"/>
+							<vox pos="2.3 6.4 5.8" rot="0.0 -46.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox pos="3.945 6.4 4.85" rot="0.0 -6.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_plasticchair.vox"/>
+							<vox name="computer" pos="-4.75003 1.3 -3.30001" rot="0.0 5.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old computer"/>
+							<vox name="computer screen" pos="-5.38303 1.3 -2.82801" rot="0.0 42.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="computer screen (off)"/>
+							<vox name="mouse" pos="-4.97102 1.3 -2.80201" rot="0.0 60.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old mouse"/>
+							<vox name="keyboard" pos="-5.27203 1.3 -2.22401" rot="0.0 60.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old keyboard"/>
+							<vox name="chair" pos="-4.69203 0.4 -2.12402" rot="0.0 -95.0 0.0" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="spinny chair"/>
+							<vox name="chair" pos="-4.19203 3.4 0.47599" rot="0.0 -95.0 0.0" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="spinny chair"/>
+							<vox name="chair" pos="-4.49203 3.4 -3.32401" rot="0.0 -95.0 0.0" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="spinny chair"/>
+							<vox name="chair" pos="-4.49203 3.4 -5.62401" rot="0.0 -95.0 0.0" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="spinny chair"/>
+							<vox name="computer" pos="-5.25003 4.6 -0.70001" rot="0.0 85.0 90.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old computer"/>
+							<vox name="computer screen" pos="-5.50607 4.3 0.47278" rot="0.0 82.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="computer screen (off)"/>
+							<vox name="mouse" pos="-5.12132 4.3 0.07387" rot="0.0 70.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old mouse"/>
+							<vox name="keyboard" pos="-5.07202 4.3 0.77599" rot="0.0 80.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old keyboard"/>
+							<vox name="keyboard" pos="-5.17203 4.3 -1.72401" rot="0.0 130.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old keyboard"/>
+							<vox name="mouse" pos="-5.12132 4.3 -2.72612" rot="0.0 100.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old mouse"/>
+							<vox name="computer screen" pos="-5.50607 4.3 -2.32723" rot="0.0 92.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="computer screen (off)"/>
+							<vox name="computer" pos="-5.25003 4.6 -3.50001" rot="0.0 85.0 90.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old computer"/>
+							<vox name="computer" pos="-5.25003 4.6 -6.60001" rot="0.0 85.0 90.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old computer"/>
+							<vox name="mouse" pos="-5.12132 4.3 -5.82612" rot="0.0 100.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old mouse"/>
+							<vox name="keyboard" pos="-5.17203 4.3 -4.82401" rot="0.0 130.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="old keyboard"/>
+							<vox name="computer screen" pos="-5.50607 4.3 -5.42722" rot="0.0 92.5 0.0" texture="7 0.5" prop="true" file="MOD/main/General/furniture collection/office_electronics.vox" object="computer screen (off)"/>
+							<voxbox name="wood" pos="-5.70002 4.2 1.69999" rot="0.0 90.0 0.0" texture="7 0.75" size="33 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 3.4 1.49999" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 3.4 -1.30001" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 3.4 -1.80001" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.70002 4.2 -1.60001" rot="0.0 90.0 0.0" texture="7 0.75" size="33 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 3.4 -4.50001" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 3.4 -4.90001" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.70002 4.2 -4.90001" rot="0.0 90.0 0.0" texture="7 0.75" size="27 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-2.20002 4.2 -6.80001" rot="0.0 -180.0 0.0" texture="7 0.75" size="27 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-2.40002 3.4 -7.60001" rot="0.0 -90.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.20002 0.4 -0.60001" rot="0.0 -180.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-5.70002 1.2 -0.40001" rot="0.0 90.0 0.0" texture="7 0.75" size="33 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<vox name="documents" pos="-3.90002 1.3 -3.50001" rot="0.0 170.0 0.0" desc="Operation PZ-1 [CLASSIFIED]" texture="7 0.5" prop="false" file="MOD/assets/vox/quarantine.vox" object="documents2">
+								<vox name="documents" pos="0.0 0.01 -0.05" rot="0.0 5.0 0.0" texture="7 0.5" prop="false" file="MOD/assets/vox/quarantine.vox" object="documents" scale="0.5"/>
+								<vox name="documents" pos="0.02 0.03 -0.06" rot="0.0 -5.0 0.0" texture="7 0.5" prop="false" file="MOD/assets/vox/quarantine.vox" object="documents" scale="0.5"/>
+							</vox>
+							<voxbox name="wood" pos="-3.60002 1.2 -2.90001" rot="0.0 -180.0 0.0" texture="7 0.75" size="13 1 8" material="wood" color="0.28 0.19 0.14" pbr="0 0.5 0 0"/>
+							<voxbox name="wood" pos="-3.80002 0.4 -3.70001" rot="0.0 -90.0 0.0" texture="7 0.75" size="5 8 1" material="wood" color="0.68 0.66 0.52" pbr="0 0.5 0 0"/>
+</vox>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,0 +1,15 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="toll+base" pos="98.4 0.0 -3.0" rot="0.0 180.0 0.0">
+			<group name="camp" pos="9.2 0.7 -41.3">
+				<group name="tent props" pos="-72.1 0.0 -9.5" rot="0.0 0.0 0.0" prop0="prop=true">
+					<group name="tent" pos="-3.9 0.0 22.5">
+						<voxbox name="lightbulb" pos="-0.05 3.0 0.2" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+							<light tags="fxflicker=7" pos="0.05 0.1 0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0.1"/>
+</voxbox>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

@@ -1,5 +1,6 @@
 #version 2
 #include "script/include/player.lua"
+#include "SpawnSlot.lua"
 -- (v2) server: spawns random road signs.
 function server.init()
 	differentblocks = 6
@@ -10,10 +11,12 @@ function server.init()
 	end
 end
 function server.tick()
+	if GetBool("level.segment.loading") then return end -- (2026-11-14) a segment's parts are still spawning (GenerateRoad QueueDecor)
 	local Locations = FindLocations("RandomRoadSign", true)
 
 	--local multiplier = GetInt("level.difficultycoef")
 	for i=1,#Locations do
+		if not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 		local Location = Locations[i]
 
 		local chance = 42
@@ -38,5 +41,6 @@ function SpawnRandomSign()
 	local whichone = math.random(1,differentblocks)
 
 	Spawn("MOD/prefabs/spawnables/roadsigns/roadsign" .. whichone ..".xml", Transform(RandomizedPosition, RandomizedRotation), true, true)
+	SetFloat("level.debug.spawned.roadsign", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 	--Spawn("MOD/prefabs/Vehicle1.xml", Transform(locTrans.pos))
 end

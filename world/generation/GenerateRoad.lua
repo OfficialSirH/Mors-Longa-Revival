@@ -8,6 +8,8 @@
 #include "../../lib/Settings.lua"
 #include "../../lib/TDSU/tdsu.lua"
 #include "EnemySpawnsProcessor.lua"
+#include "DecorParts.lua"
+#include "SegmentPieces.lua"
 ]]
 
 -- #include "GenerateRoad_Reuse.lua"
@@ -31,7 +33,7 @@ function server.init()
 	chanceformediumsegment = 31
 	chanceforsandegment = 6
 
-	Distfornewroad = 200
+	Distfornewroad = 300 -- (2026-11-15, gradual generation) v1: 200; a segment is queued earlier and fills in gradually
 	RoadSegments = 0
 	if GetString("savegame.mod.difficulty") == "hardcore" then
 		difficulty = 0.1
@@ -83,7 +85,12 @@ function server.update(dt)
 
 	local segmentType = ""
 
-	local NewRoads = FindTriggers("PuzzlePiece", true)
+	-- (2026-11-15 fix) a deleted trigger stays in FindTriggers until the end of the frame, and server.update runs 2-3
+	-- times per frame below 60 FPS. v1 raised level.roadgen right away, which skipped those extra updates; since
+	-- segments are queued (the pulse comes when the file spawns), they queued the SAME segment again: duplicate
+	-- segments, roadblocks piled on one spot (user screenshot), double enemies / vehicles. Triggers already used are
+	-- skipped until they are really gone (handles can be reused afterwards).
+	local NewRoads = UnusedPuzzlePieces()
 	if GetBool('Level.Debug')then
 		DebugWatch("#NewRoads", #NewRoads)
 	end
@@ -91,11 +98,16 @@ function server.update(dt)
 		for i=1, #NewRoads do
 			local NewRoadTrans = GetTriggerTransform(NewRoads[1])
 			local DistToPlayer = NewRoadTrans.pos[1] - GetGenerationPlayerPos()[1]
-			if DistToPlayer < Distfornewroad then
+			-- (2026-11-15) debug menu "generate ahead" (200 / 250 / 300 m) to compare FPS; default Distfornewroad
+			local ahead = GetInt("savegame.mod.debug.gen_ahead")
+			if DistToPlayer < (ahead > 0 and ahead or Distfornewroad) then
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." ----------SPAWNING SEGMENT----------")end
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." player at: "..VecStr(playerPos))end
+				UsedPuzzlePieces[NewRoads[i]] = true
 				Delete(NewRoads[i])
-				local spawnedEntities
+				-- (2026-11-15, gradual generation) the segment is QUEUED: its static pieces nearest-first, then its
+				-- file (markers, scripts, dynamic objects: after the ground under them), then the decor; the work
+				-- that followed the file's Spawn runs when the queue reaches it (SpawnSegmentFile)
 				local spawnCountOverride
 				if Roadsegmentz < chanceforsafe then
 					local Type=""
@@ -114,19 +126,18 @@ function server.update(dt)
 					segmentType = Type
 					local whichone = math.random(1,differentRoads[Type])
 					local roadXML = "MOD/prefabs/spawnables/roadsegments/RoadSegment" .. Type .. whichone ..".xml"
-					if GetString("savegame.mod.difficulty") ~= "nightmare" then
-						spawnedEntities = Spawn(roadXML, NewRoadTrans, true)
-					else
-						spawnedEntities = Spawn("MOD/prefabs/spawnables/roadsegments/RoadSegment2.xml", NewRoadTrans, true)
-					end
-					ManageVegDeleting(spawnedEntities)
 					if Type == "M" and whichone == 6 then
 						spawnCountOverride = 6
 					end
+					if GetString("savegame.mod.difficulty") ~= "nightmare" then
+						QueueSegment("RoadSegment" .. Type .. whichone, NewRoadTrans, { override = spawnCountOverride })
+					else
+						-- (2026-11-15 fix) Nightmare spawned only RoadSegment2's file: its floors / rocks / road pieces
+						-- were never queued (QueueDecor leaves out the decor on Nightmare)
+						QueueSegment("RoadSegment2", NewRoadTrans, { override = spawnCountOverride })
+					end
 				else
-					spawnedEntities = Spawn("MOD/prefabs/spawnables/roadsegments/RoadSegmentH.xml", NewRoadTrans, true)
-					SetBool("inventory.refreshshop", true, true)
-					ManageVegDeleting(spawnedEntities)
+					QueueSegment("RoadSegmentH", NewRoadTrans, { shop = true })
 					Roadsegmentz = 0
 					if GetString("savegame.mod.difficulty") == "hardcore" then
 						chanceforsafe = math.random(8,22)
@@ -134,21 +145,7 @@ function server.update(dt)
 						chanceforsafe = 10
 					end
 				end
-				if GetBool('Level.Debug')then DebugPrint(GetTime().." spawned segment")end
-	
-				for _, v in ipairs(FindLocations("special", true)) do
-					if GetTagValue(v, "special") == "town"
-					or GetTagValue(v, "special") == "um_base"
-					then
-						spawnCountOverride = math.random(4,6)
-					end
-				end
-	
-				RegisterSegmentScripts(spawnedEntities) -- (v2 perf) see TickSegmentScripts
-				ProcessEnemySpawns(spawnedEntities, spawnCountOverride)
-	
-				SetBool("level.roadgen", true)
-				if GetBool('Level.Debug')then DebugPrint(GetTime().." mark new segment spawned")end
+				if GetBool('Level.Debug')then DebugPrint(GetTime().." queued segment")end
 				--SetBool("level.spawnstuff", true)
 				--SetBool("level.fuelgen", true) --? Is this meant to be disabled? -- sake of supporting vehicle spawning from runtime, plus we have roadgen, so stop makig another 5 billion reg keys
 				RoadSegments = RoadSegments + 1
@@ -160,6 +157,13 @@ function server.update(dt)
 	else
 		if GetBool('Level.Debug') and GetBool('level.roadgen')then DebugPrint(GetTime().." -- Resetted segment spawn key --")end
 		SetBool("level.roadgen", false)
+	end
+	-- (2026-11-15) a queued segment's file was spawned (server.tick): raise the one-update "segment spawned" pulse
+	-- here, where v1 raised it, so every script's next tick sees it (mines, WaterMover, randomdelete)
+	if RoadgenPending then
+		RoadgenPending = false
+		SetBool("level.roadgen", true)
+		if GetBool('Level.Debug')then DebugPrint(GetTime().." mark new segment spawned")end
 	end
 
 	if not stopall then
@@ -218,6 +222,19 @@ function server.update(dt)
 end
 
 
+--- PuzzlePiece triggers not yet used for a segment (see the fix note in server.update)
+UsedPuzzlePieces = {}
+function UnusedPuzzlePieces()
+	for h in pairs(UsedPuzzlePieces) do
+		if not IsHandleValid(h) then UsedPuzzlePieces[h] = nil end
+	end
+	local out = {}
+	for _, h in ipairs(FindTriggers("PuzzlePiece", true)) do
+		if not UsedPuzzlePieces[h] then out[#out + 1] = h end
+	end
+	return out
+end
+
 function ReturnToShadowVolume()
 
 	local pointTrans = GetLocationTransform(point)
@@ -262,6 +279,8 @@ function ReturnToShadowVolume()
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." player "..p.." in vehicle, vehicle should be teleported with player")end
 			end
 		end
+		ShiftDecorQueue(shiftDist)   -- decor still waiting to spawn moves with the world
+		SetFloat("level.debug.spawned.world_shift", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 		Returns = Returns + 1
 		SetInt("level.world_shifts", GetInt("level.world_shifts") + 1, true) -- (v2) for movers (debug auto-travel)
 		-- (v2) positions read in the shift frame (and the next) can still be the unshifted ones, which made the
@@ -416,6 +435,122 @@ function TickSegmentScripts()
 			end
 			table.remove(SegmentGroups, i)
 		end
+	end
+end
+
+-- (2026-11-14, performance) Roadside decor: in most segments ~3300 of ~3400 shapes are bushes and rocks, and Spawn()
+-- builds a prefab in one frame, so a segment spawn froze the game for seconds. tools/porting/split_decor.py moved the
+-- decor into its own prefabs (DecorParts.lua); they are spawned one per tick after their segment, at its transform.
+-- Debug menu "spawn roadside decor" (savegame.mod.procedural.disable.spawn_decor) leaves them out.
+-- Nightmare deletes all veg-tagged shapes after spawning (ManageVegDeleting): its decor is not spawned at all.
+DecorQueue = {}
+DecorFrame = 0   -- server.tick count (once per frame; server.update can run several times in one frame)
+-- (2026-11-14) also the segment's heavy content: tools/porting/split_heavy.py moved the terrain / background groups
+-- and every rock / hill model into parts, tools/porting/segment_pieces.py cut those into ~2200 small pieces with
+-- their box-cell cost (SegmentPieces.lua; rocks and hills per model: tools/porting/vox_pieces.py). They come
+-- before the decor, as many per frame as fit in PieceBudget() cells (at least one), so the cost is spread evenly
+-- instead of one heavy part per frame. The Random* spawners wait while a segment is still loading
+-- (level.segment.loading) so nothing spawns where a rock is about to appear.
+PIECE_BUDGET_DEFAULT = 250000   -- box cells per frame; debug menu "piece budget" (savegame.mod.debug.piece_budget)
+function PieceBudget()
+	local b = GetInt("savegame.mod.debug.piece_budget")
+	return b > 0 and b or PIECE_BUDGET_DEFAULT
+end
+
+-- (2026-11-14, performance) Option "Low Detail Rocks" (Performance > Visual, the host's; on by default): a rock piece
+-- spawns from rock1_low (half resolution at twice the scale: 8x fewer cells; tools/porting/rock_variant.py).
+-- Read at each spawn (no restart).
+function LowDetailRocks()
+	local low = Settings and Settings.performance and Settings.performance.visual.low_detail_rocks
+	return low and low.value and true or false
+end
+
+-- (2026-11-15, gradual generation) A segment = its static pieces (since 2026-11-15 ALL its static geometry: road,
+-- sand, floors, walls, signs, rocks, hills; nearest-first, tools/porting/segment_pieces.py), then its file (what is
+-- left: markers, triggers, scripts, lights on joints, vehicles, dynamic bodies, which need the ground under them),
+-- then its decor. opts: override = enemy spawn count (RoadSegmentM6), shop = refresh the shop (RoadSegmentH).
+function QueueSegment(segment, transform, opts)
+	QueueDecor(segment, transform, { segment = segment, opts = opts or {},
+		xml = "MOD/prefabs/spawnables/roadsegments/" .. segment .. ".xml" })
+end
+
+function QueueDecor(segment, transform, fileEntry)
+	local function add(entry)
+		-- not in the segment's own frame: from the next frame on
+		entry.t = Transform(VecCopy(transform.pos), transform.rot)
+		entry.frame = DecorFrame + 1
+		DecorQueue[#DecorQueue + 1] = entry
+	end
+	for _, p in ipairs((SEGMENT_PIECES or {})[segment] or {}) do add({ piece = p }) end
+	if fileEntry then
+		fileEntry.file = true
+		add(fileEntry)
+	end
+	if not (GetBool("savegame.mod.procedural.disable.spawn_decor") or GetString("savegame.mod.difficulty") == "nightmare") then
+		for _, xml in ipairs((DECOR_PARTS or {})[segment] or {}) do add({ xml = xml, veg = true }) end
+	end
+	SetBool("level.segment.loading", #DecorQueue > 0)
+	SetInt("level.debug.parts_waiting", #DecorQueue)
+end
+
+--- The segment file's turn in the queue: what v1 did right after spawning a segment.
+function SpawnSegmentFile(d, entities)
+	SetString("level.debug.what.segment", d.xml)
+	SetFloat("level.debug.spawned.segment", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
+	ManageVegDeleting(entities)
+	local spawnCountOverride = d.opts.override
+	for _, v in ipairs(FindLocations("special", true)) do
+		if GetTagValue(v, "special") == "town"
+		or GetTagValue(v, "special") == "um_base"
+		then
+			spawnCountOverride = math.random(4,6)
+		end
+	end
+	if d.opts.shop then SetBool("inventory.refreshshop", true, true) end
+	RegisterSegmentScripts(entities) -- (v2 perf) see TickSegmentScripts
+	ProcessEnemySpawns(entities, spawnCountOverride)
+	RoadgenPending = true -- the "segment spawned" pulse, raised by the next server.update
+end
+
+-- xml and box-cell cost of a queue entry (a decor part: ~1600 small bushes, felt instant: costs a whole frame; the
+-- segment file: its own frame too)
+function QueueEntryXml(d)
+	local p = d.piece
+	if not p then return d.xml, PieceBudget() end
+	local h = p[1]
+	if p[4] and LowDetailRocks() then
+		return SEGMENT_PIECE_HEADS[h] .. p[4] .. SEGMENT_PIECE_TAILS[h], p[5]
+	end
+	return SEGMENT_PIECE_HEADS[h] .. p[2] .. SEGMENT_PIECE_TAILS[h], p[3]
+end
+
+function server.tick(dt)
+	DecorFrame = DecorFrame + 1
+	SetInt("level.frame", DecorFrame)   -- (2026-11-14) frame counter for the spawners' one-spawn-per-frame slot
+	local used = 0
+	while DecorQueue[1] and DecorFrame >= DecorQueue[1].frame do
+		local d = DecorQueue[1]
+		local xml, cost = QueueEntryXml(d)
+		if used > 0 and used + cost > PieceBudget() then break end
+		table.remove(DecorQueue, 1)
+		used = used + cost
+		local entities = Spawn(xml, d.t, true)
+		if d.file then
+			SpawnSegmentFile(d, entities)
+		else
+			SetFloat(d.veg and "level.debug.spawned.decor" or "level.debug.spawned.part", GetTime()) -- debug readout
+			-- the foliage setting thins veg-tagged shapes out as before (v1: decor and the segment file's own)
+			ManageVegDeleting(entities)
+		end
+	end
+	if used > 0 then SetString("level.debug.what.part", string.format("%.2fM cells", used / 1e6)) end -- debug readout
+	SetInt("level.debug.parts_waiting", #DecorQueue)
+	if #DecorQueue == 0 and GetBool("level.segment.loading") then SetBool("level.segment.loading", false) end
+end
+
+function ShiftDecorQueue(shiftDist)
+	for _, d in ipairs(DecorQueue) do
+		d.t.pos[1] = d.t.pos[1] - shiftDist
 	end
 end
 

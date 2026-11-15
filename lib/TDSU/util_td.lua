@@ -212,11 +212,19 @@ function GetEntityTransform(entity)
 
 end
 
+-- (2026-11-15, performance) one engine call for the whole list (v2 API) instead of one per handle: the NPC AI rejected
+-- every NPC body before each raycast, 8242 QueryRejectBody calls per frame with 10 NPCs (debug NPC call profile)
 ---@param bodies table
-function RejectAllBodies(bodies) for i=1, #bodies do QueryRejectBody(bodies[i]) end end
+function RejectAllBodies(bodies)
+	if QueryRejectBodies then QueryRejectBodies(bodies) return end
+	for i=1, #bodies do QueryRejectBody(bodies[i]) end
+end
 
 ---@param shapes table
-function RejectAllShapes(shapes) for i=1, #shapes do QueryRejectShape(shapes[i]) end end
+function RejectAllShapes(shapes)
+	if QueryRejectShapes then QueryRejectShapes(shapes) return end
+	for i=1, #shapes do QueryRejectShape(shapes[i]) end
+end
 
 
 function IsTickInterval(TICK, ticksPerSecond)

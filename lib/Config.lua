@@ -129,6 +129,13 @@ end
 
 function ConfigMenu_Tick()
 
+    -- (2026-11-14, user) the debug menu is the host's only; the settings in it that each machine reads (infinite
+    -- ammo, no hunger / thirst, god mode, placetool materials) are copied from the host to everyone
+    -- (game/newLeveltoLEVEL.lua MirrorHostState)
+    if not IsPlayerHost(GetLocalPlayer()) then
+        ShowDebugMod = false
+        return
+    end
     if InputPressed("backspace") then
         ShowDebugMod = not ShowDebugMod
     end
@@ -173,7 +180,8 @@ function ConfigMenu_Draw()
         UiAlign("right top")
         UiText(MOD_VERSION)
         margin(0, 26)
-        if not GetBool("level.inventory.open") and not GetBool("level.parkingSpot.garageUiShowing") then
+        if not GetBool("level.inventory.open") and not GetBool("level.parkingSpot.garageUiShowing")
+                and IsPlayerHost(GetLocalPlayer()) then   -- (2026-11-14) host only
             UiText("Press BACKSPACE to open debug menu.")
         end
         -- margin(0, 26)
@@ -486,7 +494,63 @@ function DrawConfigUi_mod()
         margin(0, MarginH)
     end
     margin(0, MarginH)
-    margin(0, MarginH)
+
+    -- (2026-11-14) Performance tests: one piece of a road segment's work per button (ui/ConfigMenu.lua
+    -- server.perfTest), two per row (the other columns are full)
+    margin(-MarginH, 0)
+    AutoText("Performance tests (40 m above you)")
+    margin(MarginH, MarginH)
+    local tests = {
+        { "npcs10", "10 NPCs ahead" }, { "probe", "probe ground (aim)" },
+        { "delete", "delete test spawns" },
+        { "activity", GetBool("savegame.mod.debug.activity") and "spawn activity: ON" or "spawn activity: off" },
+        { "budget", "piece budget: " .. math.floor((GetInt("savegame.mod.debug.piece_budget") > 0
+            and GetInt("savegame.mod.debug.piece_budget") or 250000) / 1000) .. "k" },
+        { "ahead", "generate ahead: " .. (GetInt("savegame.mod.debug.gen_ahead") > 0
+            and GetInt("savegame.mod.debug.gen_ahead") or 300) .. " m" },
+        { "npcprofile", GetBool("savegame.mod.debug.npcprofile") and "NPC call profile: ON" or "NPC call profile: off" },
+        { "invprofile", GetBool("savegame.mod.debug.invprofile") and "inventory call profile: ON" or "inventory call profile: off" },
+        { "shiftprobe", GetBool("savegame.mod.debug.shiftprobe") and "shift probe (all players): ON" or "shift probe (all players): off" },
+    }
+    for i = 1, #tests, 2 do
+        UiPush()
+            for j = i, math.min(i + 1, #tests) do
+                if AutoButton(tests[j][2], FontSize, 2, 2, true, 0) then
+                    if tests[j][1] == "probe" then
+                        -- (2026-11-14) every layer along the line of sight (ui/ConfigMenu.lua server.probeGround)
+                        local ct = GetPlayerCameraTransform()
+                        ServerCall("server.probeGround", ct.pos, TransformToParentVec(ct, Vec(0, 0, -1)))
+                    elseif tests[j][1] == "npcprofile" or tests[j][1] == "invprofile" or tests[j][1] == "shiftprobe" then
+                        -- (2026-11-15) shiftprobe: what each machine sees at a world shift (ui/ShiftProbe.lua)
+                        -- (2026-11-15) call-count profilers (lib/CallProfiler.lua): NPC manager / inventory
+                        local key = "savegame.mod.debug." .. tests[j][1]
+                        SetBool(key, not GetBool(key))
+                    elseif tests[j][1] == "ahead" then
+                        -- (2026-11-15) how far ahead a segment is queued (GenerateRoad; default 300, v1 200)
+                        local cur = GetInt("savegame.mod.debug.gen_ahead")
+                        if cur <= 0 then cur = 300 end
+                        SetInt("savegame.mod.debug.gen_ahead", cur == 300 and 200 or cur + 50)
+                    elseif tests[j][1] == "budget" then
+                        -- (2026-11-14) box cells of segment pieces spawned per frame (GenerateRoad PieceBudget)
+                        local steps, cur = { 100000, 250000, 500000, 1000000 }, GetInt("savegame.mod.debug.piece_budget")
+                        if cur <= 0 then cur = 250000 end
+                        local nxt = steps[1]
+                        for k = 1, #steps do if steps[k] == cur then nxt = steps[k % #steps + 1] end end
+                        SetInt("savegame.mod.debug.piece_budget", nxt)
+                    elseif tests[j][1] == "activity" then
+                        -- (2026-11-14) on-screen list of recent spawns (ui/ConfigMenu.lua TickActivity / DrawActivity)
+                        SetBool("savegame.mod.debug.activity", not GetBool("savegame.mod.debug.activity"))
+                    elseif tests[j][1] == "delete" then
+                        ServerCall("server.perfTestDelete")
+                    else
+                        ServerCall("server.perfTest", GetLocalPlayer(), tests[j][1])
+                    end
+                end
+                margin(UI_PANEL_W * 0.42, 0)
+            end
+        UiPop()
+        margin(0, MarginH)
+    end
 
 end
 
@@ -663,6 +727,9 @@ function DrawConfigUi_goreai()
     AutoText("NPC Weapon Sway = " .. sfn(config.goreai.weapon_sway) .. " (default = 1)")
     margin(-FontSize, FontSize)
     config.goreai.weapon_sway = AutoSlider(config.goreai.weapon_sway, 0, 2)
+
+    margin(0, FontSize * 2)
+    DrawConfigUi_procedural()
 
 end
 
@@ -901,6 +968,13 @@ function DrawConfigUi_spawn()
     margin(-MarginH, 0)
 
 
+
+end
+
+
+-- (2026-11-14) moved here from the end of the spawning column, which ran off the bottom of the screen; drawn under
+-- the Gore NPCs column (DrawConfigUi_goreai)
+function DrawConfigUi_procedural()
     margin(0, MarginH)
     AutoText("Procedural Spawning Controls")
     UiPush()
@@ -912,7 +986,10 @@ function DrawConfigUi_spawn()
         local reg_enemies             = "savegame.mod.procedural.disable.spawn_enemies"
         local reg_loot                = "savegame.mod.procedural.disable.spawn_loot"
         local reg_vehicles            = "savegame.mod.procedural.disable.spawn_vehicles"
-        local reg_roadblocks          = "savegame.mod.procedural.disable.spawn_roadblocks"
+        -- (2026-11-14) v1 had a "spawn roadblocks" switch read by the loot spawner and the vehicle events (its roadblock
+        -- spawner, RandomRoadBLock.lua, is v1 and only in dev test levels) and a "spawn loot" switch nothing read
+        local reg_vehicle_events      = "savegame.mod.procedural.disable.spawn_vehicle_events"
+        local reg_decor               = "savegame.mod.procedural.disable.spawn_decor" -- (2026-11-14) GenerateRoad QueueDecor
 
         if AutoToggleButton(not GetBool(reg_road_segments), "spawn road segments", FontSize, 2, 2, true, 0) then
             SetBool(reg_road_segments, not GetBool(reg_road_segments))
@@ -944,10 +1021,16 @@ function DrawConfigUi_spawn()
         end
         margin(0, MarginH)
 
-        if AutoToggleButton(not GetBool(reg_roadblocks), "spawn roadblocks", FontSize, 2, 2, true, 0) then
-            SetBool(reg_roadblocks, not GetBool(reg_roadblocks))
+        if AutoToggleButton(not GetBool(reg_vehicle_events), "spawn enemy vehicle events", FontSize, 2, 2, true, 0) then
+            SetBool(reg_vehicle_events, not GetBool(reg_vehicle_events))
         end
         margin(0, MarginH)
+
+        if AutoToggleButton(not GetBool(reg_decor), "spawn roadside decor", FontSize, 2, 2, true, 0) then
+            SetBool(reg_decor, not GetBool(reg_decor))
+        end
+        margin(0, MarginH)
+
 
     UiPop()
 

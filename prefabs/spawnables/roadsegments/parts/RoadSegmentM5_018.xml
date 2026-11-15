@@ -1,0 +1,683 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM5.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="overpass long" pos="88.6 -9.5 49.6" rot="0.0 0.0 0.0">
+			<group name="segments" pos="0.1 18.1 -30.3" prop0="rotstrength=3" prop1="density=10" prop2="rotspring=0.1">
+				<group name="real" pos="-0.8 0.0 -20.5">
+					<group name="segment" pos="0.0 0.0 -98.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -94.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -90.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -86.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -82.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -78.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -74.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -69.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 102.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 98.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 94.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -57.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -66.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -62.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -45.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -41.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -37.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -33.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -29.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -25.99999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -22.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -18.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -14.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -10.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -6.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -2.09999">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 1.90001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 6.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 10.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 14.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 18.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 22.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 26.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 30.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 34.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 38.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 42.20001">
+						<vox pos="4.1 1.028 -0.2" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.1" rot="0.0 -90.0 0.0" size="41 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.1" rot="0.0 -90.0 0.0" size="41 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.1" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 0.9" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.1" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 41" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 41" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="-4.2 0.0 -2.1" rot="0.0 0.0 0.0" size="84 10 1" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -54.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -50.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 82.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 90.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 86.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 70.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 78.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 74.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 58.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 66.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 62.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 46.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 6.1" rot="0.0 180.0 0.0" size="3 4 42" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 54.0">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 50.00001">
+						<vox pos="4.1 1.028 0.1" rot="0.0 -180.0 0.0" texture="16" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment">
+							<voxbox pos="-3.0 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<voxbox pos="4.1 -1.0 -2.0" rot="0.0 -90.0 0.0" size="40 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+							<vox pos="4.0 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="-4.1 0.8 1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<vox pos="4.0 0.8 -1.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+							<voxbox pos="-0.6 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+							<voxbox pos="1.1 1.1 2.0" rot="0.0 180.0 0.0" size="3 4 40" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+						</vox>
+					</group>
+				</group>
+			</group>
+		</group>
+		<group name="support pillars" pos="88.7 0.7 -1.2" rot="0.0 0.0 0.0" prop0="texture=16">
+			<voxbox pos="6.2 -0.07 -0.9" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 -0.9" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 20.3" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 20.3" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 42.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 42.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 64.60001" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 64.60001" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 86.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 86.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 -22.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 -22.5" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 -44.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 -44.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 -66.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 -66.7" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="6.2 -0.07 -88.89999" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="-0.8 -0.07 -88.89999" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+		</group>
+		<group name="nonphysical" pos="79.0 0.3 -1.3" rot="0.0 0.0 0.0" prop0="collide=false">
+			<voxbox pos="8.89999 0.3 -110.99998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -110.99998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -133.19998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -133.19998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -155.39998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -155.39998" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="17.2 9.3 -99.9" rot="0.0 180.0 0.0" size="84 11 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+			<voxbox pos="8.9 8.3 -99.9" rot="0.0 90.0 0.0" size="1013 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="16.0 8.3 -99.9" rot="0.0 90.0 0.0" size="1012 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="12.2 10.4 -99.9" rot="0.0 180.0 0.0" size="3 4 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="13.9 10.4 -99.9" rot="0.0 180.0 0.0" size="3 4 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="16.9 10.1 -201.10002" rot="0.0 0.0 0.0" size="3 15 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="8.8 10.1 -201.2" rot="0.0 0.0 0.0" size="3 15 1012" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="8.89999 0.3 109.00002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 109.00002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 131.20004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 131.20004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="12.2 10.4 203.7" rot="0.0 180.0 0.0" size="3 4 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="16.9 10.1 104.2" rot="0.0 0.0 0.0" size="3 15 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="13.9 10.4 203.7" rot="0.0 -180.0 0.0" size="3 4 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train rail"/>
+			<voxbox pos="8.8 10.1 104.2" rot="0.0 0.0 0.0" size="3 15 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:safety fence"/>
+			<voxbox pos="17.2 9.3 203.7" rot="0.0 -180.0 0.0" size="84 11 995" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:train segment"/>
+			<voxbox pos="16.0 8.3 203.7" rot="0.0 90.0 0.0" size="995 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="8.9 8.3 203.69997" rot="0.0 90.0 0.0" size="995 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			<voxbox pos="15.89999 0.3 -199.79999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -177.59999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 -177.59999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 -199.79999" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 131.20003" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 153.40004" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 175.60005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 153.40002" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 175.60005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="15.89999 0.3 197.80005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+			<voxbox pos="8.89999 0.3 197.80005" rot="0.0 0.0 0.0" size="11 80 11" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar lite"/>
+		</group>
+</group>
+</prefab>

@@ -61,10 +61,33 @@ is the only one of this table still run (from `tools/porting/`).
   `HasTag`/`IsHandleValid`/`InputPressed` etc. to false where a test depends on it.
 * Tests: `test_compat`, `test_gunnet`, `test_goreai`, `test_npcview`, `test_generateroad`, `test_removeroad`,
   `test_travel`, `test_operators`, `test_vehicleevents`, `test_props`, `test_shop`, `test_tutorial`, `test_menu`,
-  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`, `test_newlevel` (MP new run), `test_invtools` (per-player tools vs sandbox.lua), `test_gunparts` (other players' guns), `test_infinitemag` (fake Infinite magazine), `test_slot4` (key 4 cycles slot 4). Run all after every change:
+  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`, `test_newlevel` (MP new run), `test_invtools` (per-player tools vs sandbox.lua), `test_gunparts` (other players' guns), `test_infinitemag` (fake Infinite magazine), `test_slot4` (key 4 cycles slot 4), `test_mpleads` (host perks, fuel money, ambush target, server gravity), `test_decor` (segment pieces queue, spawn slot), `test_npcperf` (NPC per-tick cuts: bones, nav registry, path state, heli search; call profiler), `test_invsave` (inventory save cache), `test_shiftprobe` (debug shift probe: what a machine sees at a world shift). Run all after every change:
   `for t in tools/porting/tests/test_*.lua; do lua5.1 $t || echo "FAIL $t"; done`.
 
 ## Other tools
+
+* `lighten_terrain.py [--dry-run]` – road segments' hidden unbreakable floors -> 40 cm plates, MorsLongaHill /
+  MorsLongaDunes -> cropped tiles (`assets/vox/terrainpieces/tiles/`); checks placement and cover; re-runnable.
+* Segment heavy content, in this order (re-run all three after editing a segment, a part or a terrain model):
+  * `split_heavy.py [--dry-run]` – each child of a segment's `terrain` / `Background` groups and every rock / hill
+    reference -> its own prefab in `prefabs/spawnables/roadsegments/parts/` (the source for the next step, not
+    spawned as files); checked like split_decor; re-runnable.
+  * `vox_pieces.py` – rock1 / rock1_low / hill1 / hill1r / hill2 -> one file per placed model
+    (`assets/vox/terrainpieces/pieces/`, same scene transform), checked by reading back.
+  * `segment_pieces.py` – the parts cut into ~2200 pieces (groups into children, rocks / hills into their model
+    pieces, rock pieces with a low-detail version) with a box-cell cost -> `world/generation/SegmentPieces.lua`;
+    GenerateRoad spawns them under a per-frame budget. Checked (every element of every part once, with its chain).
+* `tick_audit.py [--top N] [--file path]` – lists scripts with per-frame callbacks and the costly calls in them and
+  in the same-file functions they call (level searches, ListKeys, queries, Spawn, string splits, registry
+  reads / writes, loops), times the number of XMLs that reference the script. A reading list; real times come
+  from Teardown's profiler (SHIFT+ALT+F3). Debug call profiles in game: `lib/CallProfiler.lua`.
+* `rock_variant.py hollow|half [src] [out]` – hollow / half-resolution copies of a TDCZ .vox; `half` made
+  `rock1_low.vox` (option "Low Detail Rocks"; even-grid blocks, checked against the reduced whole rock).
+* `perf_pieces.py [Segment]` – dev: cuts a segment into its content groups (`dev/perftest/`) for the debug menu's
+  "piece by piece" test.
+* `split_decor.py [--dry-run]` – moves each road segment's roadside decor (bushes, rocks: most of its shapes) into
+  `prefabs/spawnables/roadsegments/decor/` and writes `world/generation/DecorParts.lua`; proves every element keeps
+  its parent chain (placement, group defaults); re-runnable (split segments are skipped).
 
 * `../relocate/relocate.py` – the Phase 5 reorganization: moves files and rewrites every path reference,
   provably (README in `tools/relocate/`).

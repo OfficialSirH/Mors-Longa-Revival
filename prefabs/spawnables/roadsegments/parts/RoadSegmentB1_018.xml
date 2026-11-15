@@ -1,0 +1,191 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="Wall">
+			<group name="hedgehogs" pos="89.8 0.8 31.9">
+				<group name="line 1" pos="-10.0 -1.0 -8.4">
+					<vox pos="-0.81665 0.9 -2.66127" rot="47.7 -73.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-0.59583 0.9 -0.31986" rot="47.7 -173.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-0.61683 0.9 0.77035" rot="47.7 107.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="0.64 0.9 2.58" rot="47.7 -35.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.58 0.9 -4.2" rot="47.7 -155.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.03 0.9 4.7" rot="47.7 122.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-0.68142 0.9 6.77082" rot="47.7 -106.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.29281 0.9 7.67371" rot="47.7 -26.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.88604 0.9 9.43087" rot="47.7 74.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.83229 0.9 11.3005" rot="47.7 -8.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-4.85 0.9 13.55" rot="47.7 80.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-5.9766 0.9 15.32217" rot="47.7 -148.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.03511 0.9 15.58405" rot="47.7 -68.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-9.77488 0.9 16.50379" rot="47.7 61.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-10.14308 0.9 18.33758" rot="47.7 -21.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.06511 0.9 23.48405" rot="47.7 -18.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.58533 0.9 22.50485" rot="47.7 -98.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-14.12164 0.9 26.17404" rot="47.7 111.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.75872 0.9 20.50269" rot="47.7 130.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.95355 0.9 27.63482" rot="47.7 29.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.74308 0.9 31.22758" rot="47.7 -166.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-11.99287 0.9 32.94091" rot="47.7 -84.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.70962 0.9 35.2658" rot="47.7 147.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-14.42649 0.9 36.08745" rot="47.7 67.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.66355 0.9 43.59482" rot="47.7 46.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-14.20769 0.9 42.53939" rot="47.7 128.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.9838 0.9 39.65804" rot="47.7 -1.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.81128 0.9 38.58135" rot="47.7 -81.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.48962 0.9 53.0758" rot="47.7 139.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-11.46602 0.9 51.01246" rot="47.7 -92.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-11.97048 0.9 49.2114" rot="47.7 -174.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-11.67888 0.9 45.62432" rot="47.7 21.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.31 0.9 62.29" rot="47.7 -35.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.44 0.9 60.52" rot="47.7 97.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-12.45 0.9 57.21" rot="47.7 -83.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.23 0.9 55.51" rot="47.7 -165.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.23 0.9 59.45" rot="47.7 177.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.83 0.9 64.93999" rot="47.7 126.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.33783 0.9 66.98145" rot="47.7 -102.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-15.35152 0.9 69.7888" rot="47.7 78.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-15.16748 0.9 71.65013" rot="47.7 -4.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-16.57748 0.9 74.34013" rot="47.7 152.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-13.88473 0.9 67.92479" rot="47.7 -22.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-16.38473 0.9 75.38479" rot="47.7 -22.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.52583 1.0 -7.92986" rot="47.7 154.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.13721 1.0 -7.02697" rot="47.7 74.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.80583 1.0 -19.87986" rot="47.7 18.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.99324 1.0 -20.95405" rot="47.7 -62.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-3.66 0.9 -24.77" rot="47.7 149.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.28 0.9 -23.05243" rot="47.7 -69.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.14195 0.9 -27.00133" rot="47.7 -54.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.15583 1.0 -30.52986" rot="47.7 154.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.76721 1.0 -29.62697" rot="47.7 74.0 33.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				</group>
+				<group name="line 2" pos="-8.2 -0.7 17.4">
+					<vox pos="7.9 1.5 -17.6" rot="30.0 0.0 50.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="8.7 1.5 -18.8" rot="60.8 -94.3 42.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="8.5 1.1 -20.2" rot="51.9 160.7 24.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="9.4 1.1 -23.1" rot="35.5 31.1 51.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="9.3 1.1 -25.4" rot="56.0 -169.7 35.2" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="8.8 1.1 -24.4" rot="35.5 101.1 51.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="6.0 1.7 -14.8" rot="30.0 30.0 50.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="5.0 1.7 -11.8" rot="69.2 -166.3 19.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="4.7 1.7 -10.2" rot="81.6 -114.3 25.9" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="3.8 2.6 -8.3" rot="152.7 -118.3 -24.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="2.9 2.4 -7.6" rot="134.39999 -15.8 -10.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="1.6 2.4 -5.5" rot="134.39999 74.2 -10.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="1.7 1.6 -2.3" rot="-54.6 -18.4 60.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="5.9 1.4 -16.3" rot="5.1 127.8 40.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.83266 1.15 23.42038" rot="-54.6 -15.4 60.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.1 1.95 20.22999" rot="134.39999 77.2 -10.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-6.45 1.9 17.44" rot="137.10001 -13.2 -23.9" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-5.81 2.05 16.25" rot="152.7 -118.3 -24.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-4.55 1.0 14.32" rot="50.5 -98.4 34.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-3.93 1.0 12.79" rot="53.4 -161.10001 29.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.6 1.0 9.5" rot="53.0 6.0 35.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-2.3 0.8 8.3" rot="28.0 114.8 28.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-0.7 1.0 6.2" rot="30.0 0.0 50.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-0.3 1.3 5.0" rot="60.8 -94.3 42.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-1.0 1.1 3.3" rot="51.9 160.7 24.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="0.5 1.1 -1.5" rot="19.4 85.0 26.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="0.2 1.2 0.3" rot="23.3 40.3 45.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.28147 0.94 36.249" rot="49.9 59.7 31.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-6.13147 1.02 38.349" rot="53.9 -29.6 37.2" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.04239 0.8 35.30379" rot="38.8 161.89999 25.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.53321 1.0 32.28413" rot="47.7 2.2 44.8" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.47947 1.06 30.56036" rot="60.8 -56.3 42.7" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.62093 0.87 29.57916" rot="45.3 179.39999 24.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.29433 0.89 26.36461" rot="46.3 42.0 32.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.5021 0.89 24.55165" rot="36.1 93.4 28.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-8.4 1.88 47.83" rot="150.60001 -102.3 -33.6" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.59933 1.0 45.42595" rot="50.5 -81.4 34.0" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.45376 1.0 43.78152" rot="53.4 -144.10001 29.4" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-7.14377 1.0 40.24643" rot="53.0 23.0 35.3" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+					<vox pos="-9.5321 0.85 48.97165" rot="40.5 90.8 36.1" file="MOD/assets/vox/barricades.vox" object="hedgehog"/>
+				</group>
+			</group>
+			<group name="fence">
+				<vox pos="92.1 1.1 24.0" rot="-3.0 0.0 0.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.43 -0.38" rot="-90.0 90.0 -9" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+					<vox pos="0.2 1.35 1.74" rot="-90.0 90.0 -79.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="91.63 0.9 21.24" rot="-5.7 26.0 -1.3" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="short">
+					<vox pos="0.2 1.35 -0.04" rot="90.0 -90.0 -76.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="90.46999 0.7 19.97" rot="-4.8 61.0 -1.7" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="short">
+					<vox pos="0.2 1.35 -0.04" rot="-90.0 90.0 -76.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="92.1 1.36 27.9" rot="-5.0 0.0 0.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.43 0.4" rot="90 -90 -20.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="91.79 1.71 31.83" rot="-5.0 -8.0 0.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.17 0.4" rot="90 -90.0 0.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="91.25 2.13 35.66" rot="-4.0 -8.0 -0.1" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="90.7 2.26 39.51" rot="-2.0 -8.0 -0.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.23 -0.35" rot="90 -90.0 -4.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="89.81 2.42 43.33" rot="-2.0 -18.0 -0.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.41 1.14" rot="90.0 -90.0 86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+					<vox pos="0.2 1.35 -0.98" rot="90.0 -90.0 -64.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="88.84 2.59 47.17001" rot="-2.0 -11.0 -0.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.59 0.23" rot="90. -90.0 10.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="88.07999 2.73 51.05001" rot="-2.0 -11.0 -0.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="87.71 2.8 54.93" rot="0 0 0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 0.62" rot="-90.0 90.0 -86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="87.71 2.73 58.85" rot="2.0 0.0 0.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.29 -0.17" rot="90.0 -90.0 -10.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="87.71 2.53 62.74" rot="4.0 0.0 0.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="87.08 2.61 66.71001" rot="-4.6 -16.8 2.6" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.59 0.23" rot="90. -90.0 10.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="85.56 2.83 70.28001" rot="-1.9 -26.9 1.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="84.82 2.83 74.05001" rot="0.1 5.1 0.9" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="85.46 2.69 77.89001" rot="3.1 15.0 1.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.20001 1.42 -0.36" rot="90.0 -90.0 6.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="85.95 2.61 81.8" rot="1.2 -1.0 6.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="85.58 2.66 85.81001" rot="-2.9 -9.5 2.1" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 1.18" rot="-90.0 90.0 -86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="85.02 2.66 89.64001" rot="2.1 -3.7 1.8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.23 -0.13" rot="90.0 -90.0 -7.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="85.14 2.66 93.53001" rot="1.6 3.3 -6.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 0.62" rot="-90.0 90.0 -28.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="85.1552 2.63 97.39288" rot="-1.4 -6.0 -6.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="89.4 0.7 -52.85" rot="1.0 4.0 -0.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="89.01 0.85 -56.88" rot="2.7 8.9 2.1" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.17 0.4" rot="90.0 -90.0 5.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="88.15001 1.02 -60.81" rot="1.7 15.9 1.8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="86.82001 1.05 -64.60001" rot="0.8 22.9 1.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 1.18" rot="-90.0 90.0 -86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="85.28001 0.99 -68.26002" rot="-2.0 22.9 0.2" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.41 1.14" rot="90.0 -90.0 86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+					<vox pos="0.2 1.35 -0.98" rot="90.0 -90.0 -64.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="83.63 0.96 -71.85001" rot="-0.2 22.9 1.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.59 0.23" rot="90. -90.0 10.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="82.45 1.0 -75.74001" rot="1.8 10.9 1.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="81.82 1.1 -79.71001" rot="1.8 7.9 1.4" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.43 -0.38" rot="-90.0 90.0 -9" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="81.11 1.1 -83.66001" rot="0.5 11.8 -1.9" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+				<vox pos="80.87 1.1 -87.52001" rot="-0.3 3.8 2.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.17 0.4" rot="90 -90.0 0.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+				</vox>
+				<vox pos="80.16 1.08 -91.45001" rot="-0.3 15.8 2.0" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 0.62" rot="-90.0 90.0 -28.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="78.74001 1.25 -95.21001" rot="4.7 22.5 3.1" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+					<vox pos="0.2 1.35 1.18" rot="-90.0 90.0 -86.0" texture="8 .35" blendtexture="3 .2" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+				</vox>
+				<vox pos="77.01 1.21 -98.23" rot="-4.5 33.1 3.9" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+			</group>
+</group>
+</group>
+</prefab>

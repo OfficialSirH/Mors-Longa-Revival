@@ -45,6 +45,9 @@
 #include "systems/goreai_ragdoll_poser.lua"
 #include "systems/goreai_sounds.lua"
 #include "systems/goreai_spawner.lua"
+#include "systems/goreai_profiler.lua"
+#include "../../../lib/EngineApiNames.lua"
+#include "../../../lib/CallProfiler.lua"
 ]]
 
 
@@ -111,6 +114,7 @@ function server.init()
     GoreAI_UpdatePlayers() -- also maps the players' hitbox triggers (v1 init_player_hitboxes)
     init_controls()
     init_config()
+    config = MemoConfig(config) -- (2026-11-15) registry read once per frame per field (systems/goreai_profiler.lua)
     init_sounds()
     init_bosses()
     init_gun_prefabs()
@@ -131,9 +135,13 @@ function server.tick(dt)
     -- level scripts now (ui/ConfigMenu.lua; HealthSystem + player/PlayerHitboxes.lua, which sets
     -- level.healthScriptSpawned), and the health script is per player on the client.
 
+    ConfigMemoGen = ConfigMemoGen + 1 -- (2026-11-15) a new frame: config fields are read from the registry again
+
     if not config.goreai.isEnabled then
         return
     end
+
+    GoreProfile_Tick() -- (2026-11-15) debug call profiler, off unless the debug menu switch is on
 
     GoreAI_UpdatePlayers()
 
@@ -160,6 +168,8 @@ function server.tick(dt)
     PlaceToolPreviewBody    = GetInt("level.placetool.preview_body")
     FriendliesCount         = 0
     SelectingControllerNPC  = GetBool("level.npcs.selectingControllerNPC")
+
+    GoreHelisTick = nil -- (2026-11-15) per-tick cache of FindBodies("Heli") (goreai_targetting.lua)
 
     MapMoved              = GetBool("level.map_moved")
     MapMoveVec            = Vec(GetFloat("level.map_move_vec.1"), GetFloat("level.map_move_vec.2"), GetFloat("level.map_move_vec.3"))
@@ -224,12 +234,15 @@ end
 function client.init()
     Init_Settings()
     init_config()
+    config = MemoConfig(config) -- (2026-11-15) registry read once per frame per field (systems/goreai_profiler.lua)
     init_sounds()
     init_hitmarkers()
     init_music()
 end
 
 function client.tick(dt)
+
+    ConfigMemoGen = ConfigMemoGen + 1 -- (2026-11-15) a new frame for the config memo
 
     if not config.goreai.isEnabled then
         return
@@ -255,6 +268,7 @@ function client.draw()
         return
     end
 
+    GoreProfile_Draw() -- (2026-11-15) debug call profiler (host)
     draw_npc_controller()
     draw_npcs()
     debug_npcs()
@@ -328,6 +342,16 @@ function tick_cleanup_leaks()
             NPCs[id] = nil
             NPC_Torsos[npc.Torso] = nil
         end
+    end
+    -- (2026-11-15, performance) NPC_Bodies (rejected before most npc raycasts) only grew: every body of every npc
+    -- ever spawned, deleted ones included. Once a second, keep the bodies that still exist.
+    if GetTime() >= (NpcBodiesPruneAt or 0) then
+        NpcBodiesPruneAt = GetTime() + 1
+        local live = {}
+        for _, b in ipairs(NPC_Bodies) do
+            if IsHandleValid(b) then live[#live + 1] = b end
+        end
+        NPC_Bodies = live
     end
     NPCS_TO_DELETE = {}
     if spallHandler then spallHandler.shells = {} end

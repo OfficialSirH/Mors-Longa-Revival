@@ -1,0 +1,9 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment1237.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="terrain">
+				<vox pos="50.40001 3.5 76.50001" rot="0.0 0.0 -20.0" file="MOD/assets/vox/terrainpieces/rock1.vox"/>
+</group>
+</group>
+</group>
+</prefab>

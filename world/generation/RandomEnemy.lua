@@ -1,5 +1,6 @@
 #version 2
 #include "script/include/player.lua"
+#include "SpawnSlot.lua"
 -- (v2) server: spawns NPCs at generated locations.
 #include "../../lib/TDSU/tdsu.lua"
 
@@ -63,6 +64,7 @@ function server.init()
 end
 
 function server.tick()
+	if GetBool("level.segment.loading") then return end -- (2026-11-14) a segment's parts are still spawning (GenerateRoad QueueDecor)
 
 	if GetBool(disable_spawning) then
 		return
@@ -82,6 +84,7 @@ function server.tick()
 	-- local multiplier = GetInt("level.difficultycoef")
 	-- --multiplier = 100
 	for i = 1, #Locations do
+		if not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 
 		local Location = Locations[1]
 
@@ -237,10 +240,14 @@ function SpawnRandomRagdoll(location, tags)
 	local entities
 	if SpawnBoss then
 		entities = Spawn(bossPrefabs.bosses[Type], tr)
+		SetString("level.debug.what.enemy", tostring(bossPrefabs.bosses[Type]))
+		SetFloat("level.debug.spawned.enemy", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 		SpawnBoss = false
 		print("Spawned boss ", Type)
 	elseif whichone then
 		entities = Spawn("MOD/prefabs/spawnables/enemies/" .. whichone .. ".xml", tr)
+		SetString("level.debug.what.enemy", tostring(whichone))
+		SetFloat("level.debug.spawned.enemy", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 	end
 
 

@@ -44,8 +44,15 @@ function npc_navigation_update(npc, dt)
 
 	npc.navigation.timeSinceProgress = npc.navigation.timeSinceProgress or 0
 
-	setRegTable(npc.nav.reg.robot_pos, npc.robot.transform.pos)
-	setRegTable(npc.nav.reg.tb_startPos, npc.robot.transform.pos)
+	-- (2026-11-15, NPC performance) v1 serialized robot_pos and startPos into the registry every update (60 Hz per
+	-- npc). The path script (goreai_initializer.lua) reads robot_pos only when it starts a path and computes
+	-- startPos from it itself, so robot_pos is written when the npc moved 0.5 m (the path start is snapped to the
+	-- ground anyway) or after a world shift, and startPos not at all.
+	local p = npc.robot.transform.pos
+	if not npc.nav.robotPosSent or MapMoved or VecDist(npc.nav.robotPosSent, p) > 0.5 then
+		setRegTable(npc.nav.reg.robot_pos, p)
+		npc.nav.robotPosSent = VecCopy(p)
+	end
 
 	-- Reposition nav points if procedural scripts moves the map.
 	if MapMoved then

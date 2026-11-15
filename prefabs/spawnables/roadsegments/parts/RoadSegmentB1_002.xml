@@ -1,0 +1,14 @@
+<prefab version="1.4.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentB1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Background" pos="100.0 0.4 138.39999" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+				<group name="nonphysical" prop0="collide=false">
+					<vox pos="-45.60001 0.0 18.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/terrainpieces/hill1.vox" scale="2"/>
+					<vox pos="48.09999 0.0 3.4" rot="0.0 80.0 0.0" file="MOD/assets/vox/terrainpieces/hill1.vox" scale="2"/>
+					<vox pos="-13.1 0.0 -261.20001" rot="0.0 120.0 0.0" file="MOD/assets/vox/terrainpieces/hill2.vox" scale="2"/>
+					<vox pos="-22.11967 0.0 -317.16159" rot="0.0 10.0 0.0" file="MOD/assets/vox/terrainpieces/hill1.vox" scale="2"/>
+				</group>
+</group>
+</group>
+</group>
+</prefab>

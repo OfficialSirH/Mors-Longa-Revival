@@ -1,5 +1,6 @@
 #version 2
 #include "script/include/player.lua"
+#include "SpawnSlot.lua"
 -- (v2) server: spawns random vehicles at generated road locations.
 --[[
 #include "../../lib/TDSU/tdsu.lua"
@@ -39,6 +40,7 @@ function server.init()
 
 end
 function server.tick()
+	if GetBool("level.segment.loading") then return end -- (2026-11-14) a segment's parts are still spawning (GenerateRoad QueueDecor)
 
 	if GetBool(disable_spawning) then
 		return
@@ -48,6 +50,7 @@ function server.tick()
 
 	local multiplier = GetInt("level.difficultycoef")*5
 	for i=1,#Locations do
+		if not SpawnSlotFree() then return end -- (2026-11-14) one spawn per frame (SpawnSlot.lua)
 		local Location = Locations[i]
 
 		local chance = tonumber(GetTagValue(Location, "Chance"))or 50
@@ -93,6 +96,8 @@ function SpawnRandomVehicle(Type,t)
 	local whichone = Type..math.random(1,differentVehicles[Type])
 	local xml = "MOD/prefabs/spawnables/vehicles/Vehicle" .. whichone ..".xml"
 	local spawnEntities = Spawn(xml, t)
+	SetString("level.debug.what.vehicle", xml)
+	SetFloat("level.debug.spawned.vehicle", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 
 	-- Store spawn xml at vehicle handle number in registry.
 	for _, e in ipairs(spawnEntities) do

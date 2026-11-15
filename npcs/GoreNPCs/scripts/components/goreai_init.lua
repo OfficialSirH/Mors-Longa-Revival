@@ -173,7 +173,7 @@ function npc_init_ai(npc)
             -- reposition = TimerCreateSeconds(GetFloat("savegame.mod.config.goreai.reposition_timer") + math.random()),
             reposition = TimerCreateSeconds(2),
             reposition_attack = TimerCreateSeconds(RandomSpreadPercent25(6)),
-            check_see_player = TimerCreateSeconds(GetFloat("savegame.mod.config.goreai.see_timer") + math.random()),
+            check_see_player = TimerCreateSeconds((SEE_INTERVAL or 0.2) * math.random()), -- (2026-11-15) staggered start
             agro_shoot = TimerCreateSeconds(RandomSpreadPercent25(6)),
             agro_nav = TimerCreateSeconds(RandomSpreadPercent25(10)),
         },

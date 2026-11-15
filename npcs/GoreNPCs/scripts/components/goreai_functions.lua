@@ -254,19 +254,24 @@ function npc_process_vision(npc, Dists)
 end
 
 
+SEE_INTERVAL = 0.2 -- (2026-11-15) seconds between an npc's line-of-sight raycasts to its target
+
 function npc_process_distances(npc, Dists, targetDist)
 
     -- Process NPC distance states.
     if targetDist < Dists.attack then
 
         npc.ai.thinking.states.dist = "ATTACK"
-        npc.ai.timers.check_see_player.rpm = GetFloat("savegame.mod.config.goreai.see_timer") -- see timer
+        -- (2026-11-15, performance, user OK) v1 read the interval with GetFloat("savegame.mod.config.goreai.see_timer"),
+        -- a key that is never written (the 0.5 default lives in the config table only): 0, so every npc raycast its
+        -- line of sight every tick (~500 engine calls per frame). Now SEE_INTERVAL (5 checks per second).
+        npc.ai.timers.check_see_player.rpm = SEE_INTERVAL -- see timer
         npc_process_see_target(npc)
 
     elseif targetDist < Dists.hunt then
 
         npc.ai.thinking.states.dist = "HUNT"
-        npc.ai.timers.check_see_player.rpm = GetFloat("savegame.mod.config.goreai.see_timer") * 5 -- see timer
+        npc.ai.timers.check_see_player.rpm = SEE_INTERVAL -- see timer (v1 meant 5x the attack interval; see above)
         npc_process_see_target(npc)
 
     else
@@ -497,12 +502,17 @@ function npc_aiming_at_explosive(npc, Torso, maxAngle)
 
 end
 
+-- (2026-11-15, NPC performance) v1 re-tagged every bone of every npc each tick. Now an npc's bones are tagged when
+-- it first appears or the setting changes (npc.bonesSetting): the same tags, set once.
 function tick_bones()
 
-    if config.goreai.unbreakable_bones == 0 then
+    local setting = config.goreai.unbreakable_bones
+
+    if setting == 0 then
 
         for _, npc in pairs(NPCs) do
-            if npc.bones then
+            if npc.bones and npc.bonesSetting ~= setting then
+                npc.bonesSetting = setting
                 if #npc.bones >= 1 then
                     for _, s in ipairs(npc.bones) do
                         if HasTag(s, "bone") then RemoveTag(s, "unbreakable") end
@@ -513,10 +523,11 @@ function tick_bones()
         -- config.goreai.unbreakable_bones = 0
         -- print("bones set to: unbreakable")
 
-    elseif config.goreai.unbreakable_bones == 2 then
+    elseif setting == 2 then
 
         for _, npc in pairs(NPCs) do
-            if npc.bones then
+            if npc.bones and npc.bonesSetting ~= setting then
+                npc.bonesSetting = setting
                 if #npc.bones >= 1 then
                     for _, s in ipairs(npc.bones) do
                         if HasTag(s, "bone") then SetTag(s, "unbreakable") end

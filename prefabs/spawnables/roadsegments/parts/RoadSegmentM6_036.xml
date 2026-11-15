@@ -1,0 +1,39 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="town">
+			<group name="town">
+				<group name="compund" pos="141.5 0.0 35.7" rot="0.0 20.0 0.0">
+					<voxbox pos="-12.788 0.7 6.799" size="147 17 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall" offset="0 7"/>
+					<voxbox pos="-13.28805 0.7 -10.20149" rot="0.0 90.0 0.0" size="83 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+					<voxbox name="pillar" pos="1.912 0.7 6.698" size="6 19 6" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar" offset="0 7"/>
+					<voxbox pos="2.51193 0.7 6.79851" size="77 12 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall"/>
+					<voxbox name="pillar" pos="-13.388 0.7 6.699" size="6 19 6" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar" offset="0 7"/>
+					<vox pos="-13.08801 0.7 -18.80149" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+					<vox pos="10.51192 0.7 6.99851" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+					<voxbox pos="10.41193 0.7 6.79851" rot="0.0 50.0 0.0" size="105 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+					<vox pos="-6.4 0.7 0.9" rot="0.0 -90.0 0.0" texture="8 0.3" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building4"/>
+					<group pos="-29.00002 0.0 -20.19991" rot="0.0 -20.0 0.0">
+						<vox pos="-1.70498 0.7 1.66276" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2wg"/>
+						<vox pos="-5.105 0.7 1.663" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2wg"/>
+						<vox pos="-8.505 0.7 1.663" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building2wgc"/>
+						<voxbox pos="-12.6 0.7 -3.8" rot="0.0 -90.0 0.0" size="80 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+						<vox pos="-12.8 0.7 -4.1" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-pillar"/>
+						<voxbox pos="15.2 0.7 -3.9" rot="0.0 -180.0 0.0" size="279 24 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="high-wall"/>
+						<vox tags="explosive=5" pos="6.6 0.7 2.6" rot="0.0 -90.0 0.0" file="MOD/assets/vox/Props/MISC/propane_huge.vox" object="propanetank-huge"/>
+						<vox tags="fxbreak=l2black" pos="4.3 0.7 4.1" rot="0.0 -90.0 0.0" texture="8 .8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+							<vox pos="0.1 1.6 1.1" rot="-90.0 -90.0 85.0" texture="8 .35" blendtexture="3 .2" prop="false" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+						</vox>
+						<vox tags="fxbreak=l2black" pos="8.3 0.7 4.1" rot="0.0 -90.0 0.0" texture="8 .8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg"/>
+						<vox tags="fxbreak=l2black" pos="12.3 0.7 4.1" rot="0.0 -90.0 0.0" texture="8 .8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="reg">
+							<vox pos="0.1 1.0 -0.6" rot="90.0 90.0 -5.0" texture="8 .35" blendtexture="3 .2" prop="false" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong"/>
+						</vox>
+						<vox tags="fxbreak=l2black" pos="17.1 0.7 4.1" rot="0.0 -90.0 0.0" texture="8 .8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="short">
+							<vox pos="0.1 1.2 0.2" rot="90.0 90.0 85.0" texture="8 .35" blendtexture="3 .2" prop="false" file="MOD/assets/vox/mudbrick_buildings.vox" object="plateshort"/>
+						</vox>
+						<vox tags="fxbreak=l2black" pos="0.0 0.7 -2.9" rot="0.0 0.0 0.0" texture="8 .8" file="MOD/assets/vox/airbasevox/airbase_fence.vox" object="short"/>
+					</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

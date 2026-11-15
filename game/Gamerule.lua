@@ -6,7 +6,8 @@
 ]]
 
 
--- (v2) server: savegame bookkeeping, permadeath restart (StartLevel is server-only). Host health for now.
+-- (v2) server: savegame bookkeeping, permadeath restart (StartLevel is server-only).
+-- (2026-11-14, user) In co-op the run ends (Hardcore / permadeath) when ANY player dies, not only the host.
 function server.init()
 
 	init_config()
@@ -16,6 +17,8 @@ function server.init()
 	armorbuff = GetBool("savegame.mod.armorbbuff")
 
 	respawntim = 0
+	SeenAlive = {}        -- players seen with health > 0 this level (a player who just joined can read 0)
+	PermadeathWiped = false
 	if GetBool("savegame.mod.bountyboard.initialized") == false then
 		SetInt("savegame.mod.bountyboard.Military", 0)
 		SetInt("savegame.mod.bountyboard.bingus", 0)
@@ -46,16 +49,20 @@ end
 function server.tick(dt)
 	--wDebugPrint("Distance traveled: "..GetInt("level.distancetraveled"))
 	--DebugPrint("fuelthief perk level: "..GetInt("savegame.mod.perks.fuelthief"))
-	if permadeath and GetPlayerHealth() == 0 then
-		for i=1,#PERKORDER do
-			local perk=PERKORDER[i]
-			if HasKey("savegame.mod.perks."..perk)then
-				SetInt("savegame.mod.perks."..perk, 0)
+	if permadeath and (PermadeathWiped or AnyPlayerDied()) then   -- latched: a respawn doesn't cancel the restart
+		if not PermadeathWiped then
+			PermadeathWiped = true
+			for i=1,#PERKORDER do
+				local perk=PERKORDER[i]
+				if HasKey("savegame.mod.perks."..perk)then
+					SetInt("savegame.mod.perks."..perk, 0)
+				end
 			end
-		end
 
-		SetInt("savegame.mod.player.money", 0)
-		ClearKey("savegame.mod.parkingSpot")
+			SetInt("savegame.mod.player.money", 0)
+			ClearKey("savegame.mod.parkingSpot")
+			ClientCall(0, "client.permadeathWipe")   -- every other player's money is in their own savegame
+		end
 
 		if respawntim > 2 then
 			config.game.try_again.deaths = config.game.try_again.deaths + 1 -- Used to display try again button.
@@ -67,4 +74,23 @@ function server.tick(dt)
 		respawntim = respawntim + dt
 	end
 	--DebugPrint(GetBool("savegame.mod.bountyboard.BossUnis"))
+end
+
+-- (2026-11-14) any player who was alive this level is dead now
+function AnyPlayerDied()
+	local died = false
+	for p in Players() do
+		if GetPlayerHealth(p) > 0 then
+			SeenAlive[p] = true
+		elseif SeenAlive[p] then
+			died = true
+		end
+	end
+	for p in PlayersRemoved() do SeenAlive[p] = nil end
+	return died
+end
+
+-- the run is over: like the host's money above, each player's own money (perks are the host's, wiped above)
+function client.permadeathWipe()
+	SetInt("savegame.mod.player.money", 0)
 end

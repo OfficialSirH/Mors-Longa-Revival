@@ -8,6 +8,8 @@
 #include "../lib/TDSU/tdsu.lua"
 #include "../lib/Settings.lua"
 #include "../weapons/guns/gunperks.lua"
+#include "../lib/EngineApiNames.lua"
+#include "../lib/CallProfiler.lua"
 
 WeaponWheel = true
 
@@ -871,7 +873,19 @@ local gunScriptLookUp = {
 	["gun-m9"] = "M9",
 	["gun-pkm"] = "PKM", -- (v2 fix) was missing: picking up a PKM crashed tick() (scriptName nil)
 }
+-- (2026-11-15, performance) GetDimensions depends only on the item string (constant tables, attachment list parsed from
+-- the string), and SaveInventory's weight total called it for all 127 slots every frame (2 Split each: 260 string
+-- splits per frame, Lua garbage): each distinct item string is now worked out once.
+DimensionsCache = {}
 function GetDimensions(item)
+	local c = DimensionsCache[item]
+	if c then return c[1], c[2] end
+	local w, h = GetDimensionsUncached(item)
+	DimensionsCache[item] = { w, h }
+	return w, h
+end
+
+function GetDimensionsUncached(item)
 	local itemInfos = Split(item, "_") -- Gets item info by splitting it.
 	local id = itemInfos[1] -- Id is the first item info.
 	local idInfos = Split(id, "-")
@@ -1018,7 +1032,25 @@ function LoadInventory()
 	end
 end
 
+-- (2026-11-15, performance) SaveInventory runs EVERY frame (original: updateCounter stays 0 after the first save; the
+-- registry mirror "inventory.*" is what other scripts read), and rewrote ~240 slots' keys each time: 1.3 ms per
+-- frame, the most expensive script in Teardown's profiler. Now a slot's keys are written only when its item or
+-- rotation changed since the last write, and everything is rewritten once a second (so a key changed elsewhere is
+-- corrected as before, within a second).
+SaveSlotCache = {}
+SaveCacheFlushAt = 0
+local function slotChanged(key, item, rotation)
+	local sig = item .. "|" .. tostring(rotation)
+	if SaveSlotCache[key] == sig then return false end
+	SaveSlotCache[key] = sig
+	return true
+end
+
 function SaveInventory()
+	if GetTime() >= SaveCacheFlushAt then
+		SaveSlotCache = {}
+		SaveCacheFlushAt = GetTime() + 1
+	end
 	local pw=0
 	-- standard inv
 	for i = 1,8 do
@@ -1026,6 +1058,7 @@ function SaveInventory()
 			local invSlot = backpack[i][j]
 			local item = invSlot[1]
 			local rotation = invSlot.rotation
+			if slotChanged("b"..i.."_"..j, item, rotation) then
 			SetString("inventory.backpack."..i.."_"..j..".item", item)
 			if item==""then
 				ClearKey("savegame.mod.inventory.backpack."..i.."_"..j)
@@ -1037,6 +1070,7 @@ function SaveInventory()
 					SetInt("savegame.mod.inventory.backpack."..i.."_"..j..".rotation", rotation)
 				end
 			end
+			end
 			local w,h=GetDimensions(item)
 			pw=pw+w*h
 		end
@@ -1046,6 +1080,7 @@ function SaveInventory()
 			local invSlot = stash[i][j]
 			local item = invSlot[1]
 			local rotation = invSlot.rotation
+			if slotChanged("s"..i.."_"..j, item, rotation) then
 			SetString("inventory.stash."..i.."_"..j..".item", item)
 			if item==""then
 				ClearKey("savegame.mod.inventory.stash."..i.."_"..j)
@@ -1057,6 +1092,7 @@ function SaveInventory()
 					SetInt("savegame.mod.inventory.stash."..i.."_"..j..".rotation", rotation)
 				end
 			end
+			end
 		end
 	end
 	-- special inv, rotation ignored
@@ -1064,11 +1100,13 @@ function SaveInventory()
 		for j = 1,4 do
 			local invSlot = guns[i][j]
 			local item = invSlot[1]
+			if slotChanged("g"..j, item, nil) then
 			SetString("inventory.guns."..j..".item", item)
 			if item==""then
 				ClearKey("savegame.mod.inventory.guns."..j)
 			else
 				SetString("savegame.mod.inventory.guns."..j..".item", item)
+			end
 			end
 			local w,h=GetDimensions(item)
 			pw=pw+w*h
@@ -1078,17 +1116,21 @@ function SaveInventory()
 		for j = 1,3 do
 			local invSlot = armor[i][j]
 			local item = invSlot[1]
+			if slotChanged("a"..j, item, nil) then
 			SetString("inventory.armor."..j..".item", item)
 			if item==""then
 				ClearKey("savegame.mod.inventory.armor."..j)
 			else
 				SetString("savegame.mod.inventory.armor."..j..".item", item)
 			end
+			end
 			local w,h=GetDimensions(item)
 			pw=pw+w*h
 		end
 	end
+	if slotChanged("weight", tostring(pw), nil) then
 	SetInt("inventory.weight",pw) -- max is 159
+	end
 end
 
 function PlayBackpackSound()
@@ -2471,6 +2513,10 @@ function PlaceItemFromXML(Path, Amount)
 end
 
 function client.tick(dt)
+	-- (2026-11-15, DEBUG) debug menu "inventory call profile": engine calls of this script per frame, attributed to
+	-- its functions (lib/CallProfiler.lua); 1.3-1.85 ms in Teardown's profiler. Off = nothing wrapped.
+	local invProfile = GetBool("savegame.mod.debug.invprofile")
+	InvProfileReport = CallProfile_Tick(invProfile, function() return true end, nil) or (invProfile and InvProfileReport or nil)
 	InvInteractive = false
 	-- (2026-11-14) The Extinguisher in tool slot 4 with the Place / Welding tools, as v1 meant with
 	-- `game.tool.extinguisher.index = 4`: in 2.x the slot is `.group` and `.index` only orders a slot
@@ -3067,10 +3113,15 @@ function client.tick(dt)
 		--DebugWatch("SideArm","inventory.lua |"..GetString("inventory.guns.2.item"))
 		
 		
-		SetString("level.weapon_wheel.gun1", gun1) -- Reset weapon wheel item
-		SetString("level.weapon_wheel.gun2", gun2) -- Reset weapon wheel item
-		SetString("level.weapon_wheel.melee", melee) -- Reset weapon wheel item
-		SetString("level.weapon_wheel.gun4", gun4) -- Reset weapon wheel item
+		-- (2026-11-15, performance) written when they change (v1: every frame)
+		local wheel = gun1 .. "|" .. gun2 .. "|" .. melee .. "|" .. gun4
+		if wheel ~= InvWheelLast then
+			InvWheelLast = wheel
+			SetString("level.weapon_wheel.gun1", gun1) -- Reset weapon wheel item
+			SetString("level.weapon_wheel.gun2", gun2) -- Reset weapon wheel item
+			SetString("level.weapon_wheel.melee", melee) -- Reset weapon wheel item
+			SetString("level.weapon_wheel.gun4", gun4) -- Reset weapon wheel item
+		end
 
 		for i = 1, #gunslist do
 			InvToolEnable(gunslist[i], false)
@@ -3106,10 +3157,12 @@ function client.tick(dt)
 		InvCycleSlot4()
 
 
+		-- (2026-11-15, performance) the held tool read once (curtool, above) instead of once per gun not equipped (~50
+		-- engine calls per frame); InvSetTool only takes effect through the server, so it cannot change in these loops
 		for i = 1,#gunslist do
 			if gunslist[i] ~= gun1 and gunslist[i] ~= gun4 then
 				InvToolEnable(gunslist[i], false)
-				if GetPlayerTool() == gunslist[i] then
+				if curtool == gunslist[i] then
 					InvSetTool("")
 				end
 			end
@@ -3117,7 +3170,7 @@ function client.tick(dt)
 		for i = 1,#gunslist2 do
 			if gunslist2[i] ~= gun2 then
 				InvToolEnable(gunslist2[i], false)
-				if GetPlayerTool() == gunslist2[i] then
+				if curtool == gunslist2[i] then
 					InvSetTool("")
 				end
 			end
@@ -3125,7 +3178,7 @@ function client.tick(dt)
 		for i = 1,#meleelist do
 			if meleelist[i] ~= melee then
 				InvToolEnable(meleelist[i], false)
-				if GetPlayerTool() == meleelist[i] then
+				if curtool == meleelist[i] then
 					InvSetTool("")
 				end
 			end
@@ -3605,6 +3658,7 @@ function drawInv(invTable, w, h)
 end
 
 function client.draw()
+	if InvProfileReport then CallProfile_DrawReport(InvProfileReport, 20, 560, "inventory.lua (client)") end -- (2026-11-15, DEBUG)
 	if InvInteractive then UiMakeInteractive() end -- (v2) Ui* only works in draw; tick sets the flag
 	UiAlign("left top")
 
@@ -5417,19 +5471,17 @@ perkPickupQue={
 
 	} ]]
 }
-function perkUpgrade(perkID)
-	local perkLevel = GetInt("savegame.mod.perks."..perkID.."")
+-- (2026-11-14) the server already raised the host's perk level (server.invTake: perks are the host's for
+-- everyone); here only the picker's notice and, for a perk already at its maximum, the picker's $500
+function perkUpgrade(perkID, perkLevel, maxed)
 	perkPickupQue[#perkPickupQue+1]={
 		perkID = perkID,
 		perkLevel = perkLevel,
 		timer = 0,
 	}
-	if perkLevel < (PERKTABLE[perkID].perkMaxLevel or 10) then
-		SetInt("savegame.mod.perks."..perkID.."", perkLevel+1)
-	else
+	if maxed then
 		SetInt("savegame.mod.player.money", GetInt("savegame.mod.player.money") + 500)
 	end
-	
 end
 function displayQueedPerkInfos()
 	if #perkPickupQue==0 then return end
@@ -5756,7 +5808,7 @@ function client.postUpdate()
 end
 
 -- The server took the item for us (server.invTake). Same handling as the v1 pickup code.
-function client.invTaken(kind, value, interactName)
+function client.invTaken(kind, value, interactName, perkLevel, perkMaxed)
 	if kind == "Loot" then
 		local itemInfos = Split(value, "_")
 		if #Split(interactName, "_")==1 then
@@ -5782,7 +5834,7 @@ function client.invTaken(kind, value, interactName)
 		SetInt("savegame.mod.player.money", Money + AmountMoney)
 		PlayBackpackSound()
 	elseif kind == "PerkObject" then
-		perkUpgrade(value)
+		perkUpgrade(value, perkLevel, perkMaxed)
 		PlaySound(SOUNDS.perkPickup)
 	end
 end
@@ -5802,6 +5854,16 @@ function server.invTake(p, body)
 			local value = GetTagValue(body, kind)
 			local interactName = GetTagValue(body, "interact")
 			Delete(body)
+			if kind == "PerkObject" then
+				-- (2026-11-14, user: perks are the host's for everyone) the level goes up in the host's savegame
+				-- (the server's registry); game/newLeveltoLEVEL.lua copies it to every other machine
+				local key = "savegame.mod.perks." .. value
+				local level = GetInt(key)
+				local maxed = level >= ((PERKTABLE[value] and PERKTABLE[value].perkMaxLevel) or 10)
+				if not maxed then SetInt(key, level + 1) end
+				ClientCall(p, "client.invTaken", kind, value, interactName, level, maxed)
+				return
+			end
 			ClientCall(p, "client.invTaken", kind, value, interactName)
 			return
 		end

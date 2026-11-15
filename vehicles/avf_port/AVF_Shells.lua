@@ -5600,6 +5600,7 @@ function mors_longa_damage(projectile, hitshape,hitPos)
 		    local damage = GetFloat(path_damage) + gun_damage
 		    -- DebugPrint("damage done: "..damage)
 		    SetFloat(path_damage, damage) -- Specific damage to each body by handle.
+		    SetBool("level.goreai.damage_pending", true) -- (2026-11-15) npcs read body damage only when a hit is pending (goreai_health.lua)
 		    SetInt("level.goreai.body_damage_player_owner", projectile.ownerPlayer or 0) -- (v2) who fired
 
 		    SetFloat("level.goreai.body_damage_player_x", hitPos[1])

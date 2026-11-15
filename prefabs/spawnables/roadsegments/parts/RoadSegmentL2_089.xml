@@ -1,0 +1,17 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0">
+		<group pos="0.0 0.0 0.0">
+			<group name="Check point">
+				<group name="buildings" pos="95.9 0.0 0.0">
+					<group name="compound" pos="34.5 -0.0 -2.89999" rot="0.0 -180.0 0.0">
+						<vox pos="11.2 0.7 35.8" texture="8 0.3" file="MOD/assets/vox/militarybase.vox" object="building1">
+							<voxbox name="lightbulb" pos="3.0 5.5 3.3" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<light pos="0.05 0.1 0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0.1"/>
+</voxbox>
+</vox>
+</group>
+</group>
+</group>
+</group>
+</group>
+</prefab>

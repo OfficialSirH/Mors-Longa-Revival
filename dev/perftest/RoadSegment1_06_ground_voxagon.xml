@@ -1,0 +1,27 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment1.xml" pos="-60.7 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="ground" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+				<voxagon pos="54.5 0.6 18.4" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" extrude="1">
+					<vertex pos="-54.5 0.0"/>
+					<vertex pos="-1.5 0.0"/>
+					<vertex pos="145.5 0.0"/>
+					<vertex pos="145.5 5.1"/>
+					<vertex pos="144.60001 5.1"/>
+					<vertex pos="144.60001 1.4"/>
+					<vertex pos="65.9 1.4"/>
+					<vertex pos="65.9 5.1"/>
+					<vertex pos="91.7 5.1"/>
+					<vertex pos="91.7 81.6"/>
+					<vertex pos="2.2 81.6"/>
+					<vertex pos="2.2 5.1"/>
+					<vertex pos="23.7 5.1"/>
+					<vertex pos="23.7 1.4"/>
+					<vertex pos="-1.5 1.4"/>
+					<vertex pos="-1.5 81.6"/>
+					<vertex pos="-54.5 81.6"/>
+				</voxagon>
+</group>
+</group>
+</group>
+</prefab>

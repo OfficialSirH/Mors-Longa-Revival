@@ -1,0 +1,88 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegment3.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group>
+			<group name="ground" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" prop0="texture=19 0.5">
+				<voxbox name="sand:normal" pos="0.0 0.6 18.4" rot="0.0 0.0 0.0" size="2000 1 816" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxbox name="sand:normal" pos="0.0 0.6 -4.5" size="2000 1 58" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal"/>
+				<voxagon pos="54.5 0.6 -100.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:normal" extrude="1">
+					<vertex pos="-54.5 0.0"/>
+					<vertex pos="145.5 0.0"/>
+					<vertex pos="145.5 8.8"/>
+					<vertex pos="10.4 8.8"/>
+					<vertex pos="10.4 0.0"/>
+					<vertex pos="6.7 0.0"/>
+					<vertex pos="6.7 8.8"/>
+					<vertex pos="-1.3 8.8"/>
+					<vertex pos="-53.7 45.2"/>
+					<vertex pos="-51.4 48.5"/>
+					<vertex pos="-0.1 12.5"/>
+					<vertex pos="6.7 12.5"/>
+					<vertex pos="6.7 78.4"/>
+					<vertex pos="10.4 78.4"/>
+					<vertex pos="10.4 12.5"/>
+					<vertex pos="145.5 12.7"/>
+					<vertex pos="145.5 78.4"/>
+					<vertex pos="-54.5 78.4"/>
+				</voxagon>
+				<voxagon name="ditch" tags="unbreakable" pos="67.5 0.0 -87.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch" offset="0 4" extrude="6">
+					<vertex pos="-14.5 -4.2"/>
+					<vertex pos="-6.3 -4.2"/>
+					<vertex pos="-6.3 -3.3"/>
+					<vertex pos="-2.6 -3.3"/>
+					<vertex pos="-2.6 -4.2"/>
+					<vertex pos="131.60001 -4.2"/>
+					<vertex pos="131.60001 -0.5"/>
+					<vertex pos="-2.6 -0.5"/>
+					<vertex pos="-2.6 -1.4"/>
+					<vertex pos="-6.3 -1.4"/>
+					<vertex pos="-6.3 -0.5"/>
+					<vertex pos="-13.1 -0.5"/>
+					<voxbox tags="unbreakable" pos="-2.6 0.0 -1.4" rot="0.0 -90.0 0.0" size="9 6 37" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch intersection" offset="0 4"/>
+					<voxbox tags="unbreakable" pos="131.60001 0.0 -4.2" rot="0.0 0.0 0.0" size="9 6 37" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch end1" offset="0 4"/>
+					<voxbox tags="unbreakable" pos="-6.3 0.0 -3.3" rot="0.0 90.0 0.0" size="9 6 37" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch intersection" offset="0 4"/>
+				</voxagon>
+				<voxagon name="ditch" tags="unbreakable" pos="60.70001 0.0 -73.0" rot="0.0 -90.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch" offset="0 4" extrude="6">
+					<vertex pos="-14.5 -4.2"/>
+					<vertex pos="50.5 -4.2"/>
+					<vertex pos="50.5 -0.5"/>
+					<vertex pos="-14.5 -0.5"/>
+					<voxbox tags="unbreakable" pos="50.50001 0.0 -4.2" rot="0.0 0.0 0.0" size="9 6 37" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch end1" offset="0 4"/>
+					<voxbox tags="unbreakable" pos="-26.09999 0.1 -0.5" rot="0.0 180.0 0.0" size="9 6 37" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch end1" offset="0 4"/>
+				</voxagon>
+				<voxagon name="ditch" tags="unbreakable" pos="60.70001 0.0 -85.5" rot="0.0 -90.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch" offset="0 4" extrude="6">
+					<vertex pos="-14.5 -4.2"/>
+					<vertex pos="-5.7 -4.2"/>
+					<vertex pos="-5.7 -0.5"/>
+					<vertex pos="-14.5 -0.5"/>
+				</voxagon>
+				<voxagon name="ditch" tags="unbreakable" pos="52.2 0.0 35.9" rot="0.0 90.0 0.0" brush="MOD/main/terrain/ground_building_assets_highway.vox" object="sand:ditch" offset="0 4" extrude="6">
+					<vertex pos="-64.1 4.5"/>
+					<vertex pos="-64.1 0.8"/>
+					<vertex pos="16.1 0.8"/>
+					<vertex pos="12.5 4.5"/>
+				</voxagon>
+				<voxbox name="wall" pos="4.2 0.7 -51.8" rot="0.0 35.0 0.0" size="610 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="54.8 0.7 -86.8" rot="0.0 .0 0.0" size="52 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="66.40001 0.7 -86.8" rot="0.0 0.0 0.0" size="784 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<voxbox name="wall" pos="66.3 0.7 -86.3" rot="0.0 -90.0 0.0" size="639 9 4" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-wall-broken"/>
+				<vox pos="4.1 0.2 -51.5" rot="0.0 125.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="54.5 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="145.10001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="60.30001 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="66.1 0.2 -86.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="66.10001 0.2 -22.1" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="low-pillar"/>
+				<vox pos="59.4 0.7 -84.1" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="28.6 0.7 51.4" rot="0.0 -10.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="59.4 0.7 -68.5" rot="0.0 -30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="59.4 0.7 -63.4" rot="0.0 -70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -75.1" rot="0.0 80.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -26.4" rot="0.0 20.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="161.10001 0.7 69.7" rot="0.0 170.0 0.0" file="MOD/assets/vox/trees/Small 14.vox"/>
+				<vox pos="59.4 0.7 -32.4" rot="0.0 20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="59.4 0.7 -53.4" rot="0.0 -20.0 0.0" file="MOD/assets/vox/trees/Small 15.vox"/>
+				<vox pos="59.4 0.7 -47.6" rot="0.0 -130.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+				<vox pos="165.40001 0.7 40.8" rot="0.0 -180.0 0.0" file="MOD/assets/vox/trees/Small 13.vox"/>
+</group>
+</group>
+</group>
+</prefab>

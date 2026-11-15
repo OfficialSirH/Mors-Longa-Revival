@@ -1,0 +1,282 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM2.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="overpass" pos="83.8 -0.2 0.0">
+			<group name="overpass left" pos="9.6 -9.8 50.9">
+				<group name="segments" pos="0.1 18.1 -30.3" prop0="rotstrength=3" prop1="density=10" prop2="rotspring=0.1">
+					<group name="hook segment" pos="0.0 0.0 -1.0">
+						<voxbox pos="0.0 1.0 80.50002" rot="0.0 -180.0 0.0" texture="16" size="81 9 1024" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<voxbox pos="8.1 1.0 80.49998" rot="0.0 180.0 0.0" texture="16" size="81 9 1024" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<voxbox pos="8.10001 1.9 80.49998" rot="0.0 -180.0 0.0" size="5 27 1024" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-8.09999 1.9 -21.90002" rot="0.0 0.0 0.0" size="5 27 1024" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="0.0 1.0 -41.9" rot="0.0 180.0 0.0" texture="16" size="81 9 785" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<voxbox pos="8.1 1.0 -41.9" rot="0.0 180.0 0.0" texture="16" size="81 9 785" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<voxbox pos="8.1 1.9 -41.90003" rot="0.0 -180.0 0.0" size="5 27 785" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-8.1 1.9 -120.40004" rot="0.0 0.0 0.0" size="5 27 785" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<voxbox pos="-8.1 1.99 -42.61004" rot="15.0 0.0 0.0" size="5 27 22" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<voxbox pos="0.0 0.09 1.45997" rot="15.0 0.0 0.0" size="5 27 22" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+								<voxbox pos="0.0 -0.01 1.45997" rot="3.0 0.0 0.0" size="5 27 22" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+							</voxbox>
+						</voxbox>
+					</group>
+					<group name="hook segment" pos="0.0 0.0 -40.89999" rot="0.0 0.0 0.0">
+						<vox pos="4.1 0.8 0.0" rot="-5.0 180.0 -4.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+						<vox pos="-4.0 0.0 -0.4" rot="-30.0 180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+						<vox pos="0.0 -3.4 0.5" rot="10.0 -170.0 -30.0" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<vox pos="7.9 1.9 -1.0" rot="0.0 180.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<vox pos="7.9 1.9 1.0" rot="0.0 180.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+					<group name="segment" pos="0.0 0.0 -5.0" rot="0.0 0.0 0.0">
+						<voxbox pos="8.2 0.0 1.1" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 -2.9" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 -6.9" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 -10.9" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 -14.9" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+					</group>
+					<group name="segment" pos="0.0 0.0 -9.0" rot="0.0 0.0 0.0">
+						<voxbox pos="8.2 0.0 11.89999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 15.59999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 19.99999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 28.89999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 32.69999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 25.19999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 36.70001" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 41.79999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 45.49999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 49.29999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 53.30001" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.2 0.0 59.29999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 62.99999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 66.79998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 70.8" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 76.79999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 80.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 84.29996" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 88.29999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -45.10002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -48.80002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -41.40002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -37.60004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -65.00002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -61.30002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -57.60002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19998 0.0 -53.80004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -81.40002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -77.70004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -74.00002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -70.20004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -97.70002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -94.00003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -90.30002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -86.50004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -109.00003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -105.30002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						<voxbox pos="8.19999 0.0 -101.50004" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+					</group>
+					<group name="segment" pos="0.0 0.0 -25.0" rot="0.0 0.0 0.0">
+						<vox pos="-2.8 -4.96 0.3" rot="41.0 173.10001 -15.2" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<voxbox pos="-4.0 -1.0 -0.7" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 0.4 0.4" rot="20.0 -180.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-7.8 1.9 1.1" rot="0.0 180.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+							<vox pos="0.0 -0.14 1.47" rot="11.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+								<vox pos="0.0 -0.14 1.47" rot="11.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+									<vox pos="0.0 -0.14 1.47" rot="11.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence">
+										<vox pos="0.0 -0.14 1.47" rot="11.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+									</vox>
+								</vox>
+							</vox>
+						</vox>
+						<vox pos="8.1 1.7 1.5" rot="10.0 140.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+							<vox pos="15.57117 -7.63815 5.75108" rot="-90.0 -90.0 -85.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+								<vox pos="0.0 -0.1 1.8" rot="5.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+									<vox pos="0.0 -0.1 1.8" rot="5.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence">
+										<vox pos="0.0 -0.1 1.8" rot="5.0 0.0 0.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+									</vox>
+								</vox>
+							</vox>
+						</vox>
+					</group>
+					<group name="segment" pos="0.0 0.0 -37.00002" rot="0.0 0.0 0.0">
+						<vox pos="-3.1 -3.4 -2.3" rot="-40.0 160.0 -20.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+							<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="4.1 -0.6 -0.9" rot="-45.0 180.0 -4.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+							<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+						</vox>
+						<vox pos="-8.9 -7.4 -4.5" rot="10.0 -40.0 85.5" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:left ped safety fence"/>
+						<vox pos="10.2 -7.3 -4.5" rot="10.0 140.0 80.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+						<vox pos="10.9 -7.3 -6.2" rot="10.0 150.0 80.0" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+					</group>
+				</group>
+			</group>
+			<group name="support pillars" pos="9.7 0.4 0.1" prop0="texture=16">
+				<voxbox pos="9.1 2.5 -3.2" rot="88.9 169.39999 -2.1" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -2.8" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -2.8" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -2.8" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 18.2" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 18.2" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-0.7 0.5 18.2" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -25.1" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -25.1" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -25.1" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 -25.1" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -41.3" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -41.3" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -41.3" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 -41.3" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -57.5" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -57.5" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -57.5" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 -57.5" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -74.39999" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -74.39999" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -74.39999" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 -74.39999" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.9 0.5 -89.59998" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.4 0.5 -89.59998" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.4 0.5 -89.59998" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.9 0.5 -89.59998" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.5 32.80002" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.5 32.80002" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.5 32.80002" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.5 32.80002" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.5 49.10001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.5 49.10001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.5 49.10001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.5 49.10001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.5 66.50001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.5 66.50001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.5 66.50001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.5 66.50001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.5 83.80001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.5 83.80001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.5 83.80001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.5 83.80001" rot="0.0 0.0 0.0" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+			</group>
+			<group name="nonphysical" pos="9.7 0.9 136.8" rot="0.0 0.0 0.0" prop0="collide=false">
+				<voxbox pos="-7.89999 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="8.1 8.4 65.6" rot="0.0 180.0 0.0" texture="16" size="81 9 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+				<voxbox pos="8.1 9.3 65.6" rot="0.0 -180.0 0.0" texture="0" size="5 27 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+				<voxbox pos="0.0 8.4 65.6" rot="0.0 -180.0 0.0" texture="16" size="81 9 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+				<voxbox pos="-8.1 9.3 -36.7" rot="0.0 0.0 0.0" texture="0" size="5 27 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+				<voxbox pos="5.90001 0.0 50.90002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 50.90002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 50.90002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 50.90002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="8.19999 7.4 -2.40002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.2 7.4 -31.40002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -27.70002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -23.90003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -19.90001" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -13.90002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -10.20003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -6.40005" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 32.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.2 7.4 3.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 7.19998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 10.99997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 14.99999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 20.99998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 24.69997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 28.49995" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.2 7.4 37.99998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 41.69998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 45.49997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 49.5" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 55.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 59.19997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 62.99995" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</group>
+			<group name="nonphysical" pos="9.7 0.9 -137.49998" rot="0.0 -180.0 0.0" prop0="collide=false">
+				<voxbox pos="-7.89999 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -18.29998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -0.99998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 16.30002" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 33.60001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-7.89999 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 -35.59998" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-8.1 8.4 -36.7" rot="0.0 0.0 0.0" texture="16" size="81 9 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R"/>
+				<voxbox pos="8.1 9.3 65.6" rot="0.0 -180.0 0.0" size="5 27 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+				<voxbox pos="0.0 8.4 -36.7" rot="0.0 0.0 0.0" texture="16" size="81 9 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L"/>
+				<voxbox pos="-8.1 9.3 -36.7" rot="0.0 0.0 0.0" size="5 27 1023" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:right ped safety fence"/>
+				<voxbox pos="-7.89999 0.0 50.90001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="-3.39999 0.0 50.90001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="1.40001 0.0 50.90001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="5.90001 0.0 50.90001" rot="0.0 0.0 0.0" texture="16" size="20 84 20" brush="MOD/main/terrain/overpass_bridge.vox" object="support pillar"/>
+				<voxbox pos="8.2 7.4 -31.40002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -27.70002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -23.90003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -19.90001" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -13.90002" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -10.20003" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 -6.40005" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 32.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.2 7.4 3.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 7.19998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 10.99997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 14.99999" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 20.99998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 24.69997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 28.49995" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.2 7.4 37.99998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 41.69998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 45.49997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 49.5" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 55.49998" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 59.19997" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+				<voxbox pos="8.19999 7.4 62.99995" rot="0.0 180.0 0.0" size="163 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</group>
+		</group>
+		<group name="decor" pos="100.95 0.0 0.17" rot="0.0 0.0 0.0" prop0="texture=19 0.5" prop1="tags=veg" prop2="collide=false">
+		</group>
+		<group pos="87.8 -1.4 -11.0" rot="0.0 0.0 15.0">
+			<vox tags="unbreakable" pos="3.9 1.4 2.2" rot="0.0 0.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+				<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</vox>
+			<vox tags="unbreakable" pos="11.852 1.386 2.2" rot="0.0 0.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+				<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</vox>
+			<vox tags="unbreakable" pos="3.9 1.4 -1.8" rot="0.0 0.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side R">
+				<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</vox>
+			<vox tags="unbreakable" pos="11.852 1.386 -1.8" rot="0.0 0.0 0.0" texture="16" prop="false" file="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment side L">
+				<voxbox pos="-4.0 -1.0 -1.0" rot="0.0 0.0 0.0" size="81 10 10" brush="MOD/main/terrain/overpass_bridge.vox" object="overpass:segment under support"/>
+			</vox>
+		</group>
+</group>
+</prefab>

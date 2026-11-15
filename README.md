@@ -12,6 +12,10 @@
   <b><a href="https://steamcommunity.com/groups/OverdriveStudiosTD">Overdrive Studios Steam group</a></b>
 </p>
 
+## AI DISCLOSURE
+
+This project's whole porting process was done with Claude.
+
 ## About this port
 
 Mors Longa Revival brings the original to Teardown 2.x and its co-op multiplayer:

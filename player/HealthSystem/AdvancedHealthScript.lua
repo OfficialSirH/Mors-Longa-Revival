@@ -521,8 +521,10 @@ function client.tick(dt)
 	end
 	InPain = false
 
-	RLEGL = FindTrigger("localRLEG", true)
-	LLEGL = FindTrigger("localLLEG", true)
+	-- (2026-11-15, performance) v1 searched the whole level for these two triggers every tick: only again when the
+	-- handles are gone (the hitbox triggers were re-created)
+	if not (RLEGL and IsHandleValid(RLEGL)) then RLEGL = FindTrigger("localRLEG", true) end
+	if not (LLEGL and IsHandleValid(LLEGL)) then LLEGL = FindTrigger("localLLEG", true) end
 
 
 	-- local inHeli = false
