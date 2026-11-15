@@ -6,8 +6,10 @@ experience: explain Lua/Teardown specifics, not basics.
 
 Read next:
 1. `docs/LAYOUT.md` – which folder holds what (reorganized 2026-11-14).
-2. `docs/TECHNICAL_REFERENCE.md` – sources, workflow gotchas, v2 engine rules, error → cause table, guns, vehicles,
-   how each system works now, bugs fixed, shelved content, open questions.
+2. `docs/TECHNICAL_REFERENCE.md` – index of the technical reference (split 2026-11-15): `ENGINE.md` (sources,
+   workflow gotchas, v2 engine rules, error → cause table, server/client-only API), `GUNS.md`, `VEHICLES.md`,
+   `SYSTEMS.md` (how each system works now), `PERFORMANCE.md`, `CHANGES.md` (bugs fixed, behaviour changes),
+   `STATUS.md` (shelved content, open questions, history).
 3. `docs/PORTING.md` – checklist for converting one v1 script.
 4. `tools/porting/README.md` – converters, mock tests, helper tools.
 
@@ -30,14 +32,14 @@ Read next:
 ## Working with the user
 
 * The user tests in-game (SP for now) and sends screenshots of red error text. Keep rounds small, say exactly
-  what to test, use in-game names (gun table: TECHNICAL_REFERENCE §5).
+  what to test, use in-game names (gun table: docs/GUNS.md).
 * **Don't claim causes you haven't verified.** Ask, or gather data first (readouts, mock tests, overlays). Say
   "original-mod bug" only after checking the `original` branch (9dde6dd).
-* Ask before changing original behaviour or balance; list such changes in TECHNICAL_REFERENCE §8.
+* Ask before changing original behaviour or balance; list such changes in docs/CHANGES.md.
 * Git: work on branch **`revival`**; changes are left **uncommitted** – the user commits and pushes (SSH remote).
 * Never delete files in the user's folder without asking.
 
-## Environment (gotchas, details in TECHNICAL_REFERENCE §2)
+## Environment (gotchas, details in docs/ENGINE.md "Workflow")
 
 * Repo `C:\Projects\Mors Longa`; Teardown install and Workshop mods are added as extra working directories.
 * No system Lua: build Lua 5.1 with clang (commands in the tools README). Python 3.13 is installed (`python`).
@@ -48,25 +50,25 @@ Read next:
 
 ## Current state (2026-11-13)
 
-* Phases 1-3 done and verified in SP (MP-only checks: TECHNICAL_REFERENCE §10). Engine crash (Constrain* from tick)
+* Phases 1-3 done and verified in SP (MP-only checks: docs/STATUS.md "Open questions"). Engine crash (Constrain* from tick)
   and long-run slowdown fixed; ~30 NPCs at once still cost FPS as in v1.
 * Phase 4 (vehicles), all verified in SP unless noted:
-  * Seats for every drivable vehicle in use (status table: TECHNICAL_REFERENCE §6); friendly NPCs ride in them.
+  * Seats for every drivable vehicle in use (status table: docs/VEHICLES.md); friendly NPCs ride in them.
     New vehicles: measure in Blender (`tools/porting/blender_vehicle.py`, Blender MCP), add the layout to
-    `tools/porting/add_seats.py`, check with the mannequin, then the user tests (rules: §6).
+    `tools/porting/add_seats.py`, check with the mannequin, then the user tests (rules: docs/VEHICLES.md).
   * Small vehicle scripts v2 (doors, Cadillac / LeBoat joints, semis' toggles, GAZ-24 EVF, JetBus).
   * Mounted guns: own `vehicles/MountedGun.lua` + AVF's shell code ported (`port_avf.py` → `vehicles/avf_port/`, credit
     AVF / elboydo) + `Immersive_Tank.lua`; machine guns, cannons, tanks (gunner place + driver fallback), launchers,
-    coax, ATGMs, performance fixes. Converted configs: table in §6 "AVF". TABS can't be used (v1, licence).
-  * AS350 helicopter: a `<vehicle>` with seats, v2 port with a new mouse-aim player flight model (§7 "AS350
-    helicopter"); rockets on RMB shelved (the pilot leans out instead, §9).
+    coax, ATGMs, performance fixes. Converted configs: table in docs/VEHICLES.md "AVF". TABS can't be used (v1, licence).
+  * AS350 helicopter: a `<vehicle>` with seats, v2 port with a new mouse-aim player flight model (docs/VEHICLES.md
+    "AS350 helicopter"); rockets on RMB shelved (the pilot leans out instead, docs/STATUS.md).
   * v1 survey of normal play (2026-11-13): minivan helper, crew sitters, T-72A, GMG offroad, SPG-9 technical, Kornet /
     AGS-30 tripods converted and verified SP (tripods are gun emplacements now, not vehicles); spawn-menu entries
     added for testing; AVF body pushes capped (froze the game on the AGS-30's ~weightless gun).
-* Shelved (§9): guns PKM / M9 / Bauer-553 / MGL, horde mode, custom difficulty, Refugee Van event behaviour, AS350
+* Shelved (docs/STATUS.md): guns PKM / M9 / Bauer-553 / MGL, horde mode, custom difficulty, Refugee Van event behaviour, AS350
   rockets on RMB, AGS-30 aiming up / down.
-* Still v1 (dead in MP): CH-47 and Hind helicopters (user: later), `<screen>` scripts (§10), unreached AVF configs
-  and test levels (§6, §9).
+* Still v1 (dead in MP): CH-47 and Hind helicopters (user: later), `<screen>` scripts (docs/STATUS.md), unreached AVF configs
+  and test levels (docs/VEHICLES.md, docs/STATUS.md).
 
 ## Next
 
@@ -77,16 +79,22 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
 2. Full reorganization ✔ (2026-11-14, applied and verified by `tools/relocate/`: 4252 files moved, 42504
    references rewritten; mock tests, syntax of all game Lua, XML parse, release dry run checked). Folder map:
    `docs/LAYOUT.md`. The release leaves out `dev/`. Verified in-game by the user and committed (2026-11-14).
-3. MP fixes (§8 "MP fixes"): remote players' new run (starter loadout, vitals, perks, bounty, difficulty, money on
+3. MP fixes (docs/CHANGES.md "MP fixes"): remote players' new run (starter loadout, vitals, perks, bounty, difficulty, money on
    Try Again) and game rules synced: verified. To re-test: vanilla tools (levels load `game/MLSandbox.lua`, the
    engine's sandbox.lua without its MP tool enabling), remote tool bar, other players' guns (gunnet part sync).
    Second round (2026-11-14, user: perks are the host's for everyone, debug menu host-only), to re-test: host
    perks / settings mirrored to every machine, perk pickups, fuel money to the seller, ambush around any player on
    foot, server bullet gravity, permadeath (any player's death ends a Hardcore run). Open: world-shift jank / NPCs /
-   stuck car for non-hosts, server-only effects (check in MP), bullet network traffic; then the §10 MP checklist.
+   stuck car for non-hosts, server-only effects (check in MP), bullet network traffic; then the MP checklist in
+   docs/STATUS.md "Open questions". Third round (2026-11-15): starter kit seeded per run / player, Hardcore thirst
+   always drains, God Mode blocks bleed / fracture, casings capped at 60, debug "ambush now": to re-test. Shift
+   jank measured (shift probe), no fix (a hold of player cars made them flip: never retry). MP crash: no trace yet.
+   Verified in MP (2026-11-15 evening): other players' melee weapons (posed, swings, sounds, crouch), vehicle
+   events (cleanup grace), ambush NPCs and server-side sounds on a client (NPC sync readout, sound test). Missing
+   sound files from the log fixed (pistol / MK36 NPCs audible now, user OK; docs/CHANGES.md).
 4. Performance (plan agreed 2026-11-14; user: segment spawns freeze 1-several s, shifts hitch a little, many NPCs
    cost a lot): order = generation first, then NPCs, then the world shift (rarer / faded) last.
-   Done, to test in-game (TECHNICAL_REFERENCE §7 "Segment weight"): debug-menu "Performance tests" (left column)
+   Done, to test in-game (docs/PERFORMANCE.md "Segment weight"): debug-menu "Performance tests" (left column)
    pinned the freeze on the segment's hidden bedrock floor > terrain (rocks) > sand, not the decor / spawners /
    RemoveRoad. Fixes: decor split out (`split_decor.py`), hidden floors -> 40 cm plates and hills/dunes -> tiles
    (`lighten_terrain.py`), terrain/background pieces split out (`split_heavy.py`); all spawned one prefab per
@@ -97,7 +105,7 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
    spawn per frame (`SpawnSlot.lua`); placement verified by the user. Hidden floors back to 10 cm (40 cm plates let
    players fall through; `lighten_terrain.py --replate`), streamed first as pieces; to re-test. Scripts cannot
    time freezes (frame time capped at 1/30 s; use Teardown's built-in profiler SHIFT+ALT+F3, per-script ms).
-   Performance step DONE (2026-11-15, TECHNICAL_REFERENCE §7): generation gradual (all static geometry streamed
+   Performance step DONE (2026-11-15, docs/PERFORMANCE.md): generation gradual (all static geometry streamed
    nearest-first as pieces, then the segment file, then decor; queued at 300 m; duplicate-segment bug fixed),
    cleanup a continuous region sweep, NPC rate tiers (damage on hit, ground rays every 2nd step, sight 5x/s,
    voxel recount every 3rd tick; user OK), idle gun scripts exit early, inventory / daynight / sandbox / reject
@@ -105,6 +113,10 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
    User decisions: NO far-NPC rest (immersion), no shift fade, no longer play area. Tools: debug "spawn activity",
    "NPC / inventory call profile" (lib/CallProfiler.lua), tools/porting/tick_audit.py.
    Other candidates: inventory `SaveInventory()` every client tick, gun scripts' per-frame registry reads, Fuel.
-5. Docs: folder map, TECHNICAL_REFERENCE split.
+5. Docs ✔ (2026-11-15, user OK): TECHNICAL_REFERENCE split into ENGINE / GUNS / VEHICLES / SYSTEMS / PERFORMANCE /
+   CHANGES / STATUS (TECHNICAL_REFERENCE.md = index + old § map), folder map updated.
+6. Workshop publish: after the MP re-tests. `tools/porting/make_release.py` builds the release copy (dry run
+   2026-11-15: 6616 files, 551 MB); the user uploads it from the game's mod manager. Built 2026-11-15 (6617
+   files, no dev files, no Workshop id yet: the first upload creates the item).
 
-Later (user): a seat-switch key (players cannot switch seats; §10), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.
+Later (user): a seat-switch key (players cannot switch seats; docs/STATUS.md), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.

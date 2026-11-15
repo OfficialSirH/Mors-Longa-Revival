@@ -39,6 +39,7 @@ HOST_SETTINGS = {
 	{ key = "savegame.mod.config.game.inf_hunger", name = "inf_hunger" },
 	{ key = "savegame.mod.config.game.inf_thirst", name = "inf_thirst" },
 	{ key = "savegame.mod.config.game.god", name = "god" },
+	{ key = "savegame.mod.debug.healprobe", name = "healprobe" }, -- (2026-11-15) debug "healing readout"
 }
 
 function PublishHostState()

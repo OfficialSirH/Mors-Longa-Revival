@@ -111,3 +111,31 @@ do
   assert(T[5][2] == -1, "part moved by the gun script must be left alone")
   print("tool part fix-up tests passed")
 end
+-- (2026-11-15) spent casings: only the newest CASING_CAP stay, shared by every gun (tag), rockets never counted
+do
+  local live, tags, nextH, now = {}, {}, 100, 0
+  function Spawn(xml) nextH = nextH + 1 live[nextH] = xml return { nextH, nextH + 1000 } end -- a body and a shape
+  function GetEntityType(e) return e < 1000 and "body" or "shape" end
+  function SetBodyVelocity() end
+  function GetTime() return now end
+  function SetTag(h, t, v) tags[h] = tags[h] or {} tags[h][t] = v end
+  function GetTagValue(h, t) return tags[h] and tags[h][t] or "" end
+  function FindBodies(t) local out = {} for h in pairs(live) do if tags[h] and tags[h][t] then out[#out + 1] = h end end return out end
+  function Delete(h) live[h] = nil end
+  local first
+  for i = 1, 70 do
+    now = i * 0.1
+    server.gunSpawnCasing(i % 2 == 0 and "MOD/assets/vox/riflecasing.xml" or "MOD/assets/vox/pistolcasing.xml", {}, Vec())
+    first = first or nextH
+  end
+  local count = 0 for _ in pairs(live) do count = count + 1 end
+  assert(count == CASING_CAP and CASING_CAP == 60, "70 casings: the newest 60 stay")
+  assert(live[first] == nil and live[first + 9] == nil and live[first + 10] ~= nil, "the 10 oldest were deleted")
+  server.gunSpawnCasing("MOD/prefabs/rpg_rocket.xml", {}, Vec())
+  local rocket = nextH
+  for i = 1, 5 do now = 100 + i server.gunSpawnCasing("MOD/assets/vox/shotguncasing.xml", {}, Vec()) end
+  assert(live[rocket] and not (tags[rocket] and tags[rocket].ml_casing), "a rocket is neither tagged nor deleted")
+  count = 0 for h in pairs(live) do if h ~= rocket then count = count + 1 end end
+  assert(count == 60, "still 60 casings after more shots")
+  print("casing cap tests passed")
+end

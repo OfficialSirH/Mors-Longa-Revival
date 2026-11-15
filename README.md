@@ -29,7 +29,7 @@ Mors Longa Revival brings the original to Teardown 2.x and its co-op multiplayer
 - **Flyable AS350 helicopter** with seats and a mouse-aim flight model (the enemy helicopters keep their original
   AI).
 - Many original bugs fixed along the way. The full list of changes against the original is in
-  [docs/TECHNICAL_REFERENCE.md](docs/TECHNICAL_REFERENCE.md) §8, unfinished or set-aside content in §9.
+  [docs/CHANGES.md](docs/CHANGES.md), unfinished or set-aside content in [docs/STATUS.md](docs/STATUS.md).
 
 **Status:** everything is tested in single-player; multiplayer testing is next. Not yet in the port: the CH-47 and
 Hind helicopters (single-player only for now), horde mode (unfinished in the original too), the unfinished PKM, M9,
@@ -73,6 +73,6 @@ fractures. And lastly, kill anyone that means you harm.
 
 ## For developers
 
-Start with [CLAUDE.md](CLAUDE.md) (handoff notes), then [docs/TECHNICAL_REFERENCE.md](docs/TECHNICAL_REFERENCE.md),
+Start with [CLAUDE.md](CLAUDE.md) (handoff notes), then [docs/TECHNICAL_REFERENCE.md](docs/TECHNICAL_REFERENCE.md) (index of the technical docs),
 [docs/PORTING.md](docs/PORTING.md) and [tools/porting/README.md](tools/porting/README.md). The Workshop upload is built
 with `tools/porting/make_release.py` (a copy without the development files).

@@ -3,7 +3,7 @@
 Usage (repo root): python tools/porting/segment_pieces.py        (re-run after split_heavy.py / vox_pieces.py or
                                                                   after editing a part; re-runnable)
 
-Why: spawn cost follows box cells (TECHNICAL_REFERENCE §7) and Spawn() builds a prefab in one frame. One part per
+Why: spawn cost follows box cells (docs/PERFORMANCE.md) and Spawn() builds a prefab in one frame. One part per
 frame (split_heavy.py) still gave long stretches of slow frames: a low-detail rock part is ~0.9M cells, a hill
 5.85M. This cuts each part (prefabs/spawnables/roadsegments/parts/, the source; split_heavy.py writes them) into
 pieces of at most SPLIT cells where possible: a group (or a <compound>: the hills sit alone in one each, and each

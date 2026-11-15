@@ -2,7 +2,7 @@
 #include "script/include/player.lua"
 -- (v2) SERVER: militia GAZ-24 "radio" shape = siren switch: any player toggles it (v1: the host); click at the
 -- radio, the loop at its position. Hand-converted 2026-11-09. Siren path fixed (v1 "MOD/Vehicle/..." does not exist,
--- same in 9dde6dd: the siren never played; user OK 2026-11-09, TECHNICAL_REFERENCE §8).
+-- same in 9dde6dd: the siren never played; user OK 2026-11-09, docs/CHANGES.md).
 on = false
 function server.init()
 	--Find handle to radio

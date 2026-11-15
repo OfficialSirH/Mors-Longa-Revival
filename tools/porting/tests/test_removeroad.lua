@@ -62,6 +62,8 @@ local function world(players)
 	env.def("GetInt", function(k) return W.reg[k] or 0 end)
 	env.def("GetBool", function() return false end)
 	env.def("Delete", function(h) W.e[h].gone = true W.deleted[#W.deleted + 1] = h end)
+	env.def("GetShapeBody", function(h) return W.e[h] and W.e[h].body or 0 end)
+	env.def("GetTagValue", function(h, tag) local v = W.e[h] and W.e[h].tags and W.e[h].tags[tag] return type(v) == "string" and v or "" end)
 	env.server.init()
 	W.env = env
 	function W.frames(n) for i = 1, n do env.server.tick(1/60) end end
@@ -139,6 +141,21 @@ W.frames(W.env.SHIFT_WAIT_FRAMES)
 check(#W.deleted == 0, "right after a world shift: nothing deleted")
 W.frames(5)
 check(W.gone(101), "then the sweep goes on")
+
+-- (2026-11-15) vehicle events spawn at x -300, behind the line: kept for CLEANUP_GRACE s after they spawn
+W = world({ { x = 0 } })
+W.t = 100
+W.add(801, "body", -300, { tags = { ml_grace = "95.00" } })
+W.add(802, "shape", -300, { body = 801 })
+W.add(803, "trigger", -300, { tags = { ml_grace = "95.00" } })
+W.add(804, "shape", -300, { body = 805 })   -- an old road piece's shape, no grace
+W.add(805, "body", -300)
+W.frames(30)
+check(not W.gone(802) and not W.gone(803), "event spawn far behind: kept during its grace time")
+check(W.gone(804), "other far shapes still deleted")
+W.t = 95 + W.env.CLEANUP_GRACE + 1
+W.frames(60)
+check(W.gone(802) and W.gone(803), "after the grace time: deleted as before (still far behind)")
 
 -- WaterMover.lua: same no-player rule
 do

@@ -1,7 +1,7 @@
 # Porting tools
 
 Helpers for converting Mors Longa scripts to Teardown 2.x (`#version 2`). Rules: `docs/PORTING.md`; context and
-engine facts: `docs/TECHNICAL_REFERENCE.md`. Run everything from the repo root.
+engine facts: `docs/ENGINE.md` (index: `docs/TECHNICAL_REFERENCE.md`). Run everything from the repo root.
 
 ## Setup (per session, user's PC)
 
@@ -61,7 +61,7 @@ is the only one of this table still run (from `tools/porting/`).
   `HasTag`/`IsHandleValid`/`InputPressed` etc. to false where a test depends on it.
 * Tests: `test_compat`, `test_gunnet`, `test_goreai`, `test_npcview`, `test_generateroad`, `test_removeroad`,
   `test_travel`, `test_operators`, `test_vehicleevents`, `test_props`, `test_shop`, `test_tutorial`, `test_menu`,
-  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`, `test_newlevel` (MP new run), `test_invtools` (per-player tools vs sandbox.lua), `test_gunparts` (other players' guns), `test_infinitemag` (fake Infinite magazine), `test_slot4` (key 4 cycles slot 4), `test_mpleads` (host perks, fuel money, ambush target, server gravity), `test_decor` (segment pieces queue, spawn slot), `test_npcperf` (NPC per-tick cuts: bones, nav registry, path state, heli search; call profiler), `test_invsave` (inventory save cache), `test_shiftprobe` (debug shift probe: what a machine sees at a world shift). Run all after every change:
+  `test_horde`, `test_sitting`, `test_steeringwheel`, `test_door`, `test_vehiclescripts`, `test_evf`, `test_jet`, `test_mountedgun`, `test_avf_cannon`, `test_immersive_tank`, `test_heli`, `test_sitter`, `test_newlevel` (MP new run), `test_invtools` (per-player tools vs sandbox.lua), `test_gunparts` (other players' guns), `test_infinitemag` (fake Infinite magazine), `test_slot4` (key 4 cycles slot 4), `test_mpleads` (host perks, fuel money, ambush target, server gravity), `test_decor` (segment pieces queue, spawn slot), `test_npcperf` (NPC per-tick cuts: bones, nav registry, path state, heli search; call profiler), `test_invsave` (inventory save cache), `test_shiftprobe` (debug shift probe: what a machine sees at a world shift), `test_kitseed` (starter kit seed), `test_meleenet` (other players' melee weapons: pose, swing, sounds), `test_npcprobe` (debug NPC sync readout, server sound test). Run all after every change:
   `for t in tools/porting/tests/test_*.lua; do lua5.1 $t || echo "FAIL $t"; done`.
 
 ## Other tools
@@ -107,7 +107,7 @@ is the only one of this table still run (from `tools/porting/`).
   `td_pos(ob, part)` print marker positions relative to their part, ready to paste into the XML. Usage in its header.
   Checked: official seat markers land exactly on the seat cushions. Applies `.vox` node rotations (the UAZ body
   is stored turned 180°) and drops empty voxel layers around a shape like the engine (`crop_model`; found on the
-  Jeep and ZIL-131, TECHNICAL_REFERENCE §6). Group `prop0="file=..."` defaults are applied
+  Jeep and ZIL-131, docs/VEHICLES.md). Group `prop0="file=..."` defaults are applied
   to child assets/vox/voxbox (Volga). Measuring: `show_only`, `cutaway(root, y)`, `heightmap(...)`, `ray(...)`,
   `vehicle_markers`. `mannequin(root, "driver sort=0")` / `mannequins(root)`: the official player character
   (`data/prefab/player/player_sven_lagom.xml`) as an armature, pelvis on the seat point, Blender IK to the rig's

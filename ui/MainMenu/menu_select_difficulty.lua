@@ -12,9 +12,8 @@
 
 function client.init()
 
-	-- (v2) moved from load time (API calls are not allowed there)
-	sndnext = LoadSound("MOD/snd/ui_button_next.ogg")
-	sndback = LoadSound("MOD/snd/ui_button_back.ogg")
+	-- (2026-11-15) the "next" / "back" click sounds removed: MOD/snd/ui_button_next.ogg / _back.ogg never existed
+	-- (original-mod bug; silent then too, only a log error)
 
 	Init_Settings()
 
@@ -372,7 +371,6 @@ function client.draw()
 					UiAlign("right top")
 					UiTranslate(-Pad2, 0)
 					if UiTextButton("Back", 300, 80) then
-						PlaySound(sndback)
 						SetBool('level.UI.menu_select_difficulty',false)
 					end
 				UiPop() end

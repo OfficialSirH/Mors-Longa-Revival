@@ -7,7 +7,7 @@ the <vehicle> element (vehicle coordinates) in the prefab file itself and in eve
 (<group name="instance=MOD/...prefab.xml"> in spawn prefabs, road segments, levels). A vehicle that already has a
 <rig> is left alone, so the script can be re-run. Seat positions were measured in Blender with
 tools/porting/blender_vehicle.py; the body-pose points (feet, hands, head, steering wheel) are copied from the
-official suv_silver.xml, relative to the seat (format: docs/TECHNICAL_REFERENCE.md section 6).
+official suv_silver.xml, relative to the seat (format: docs/VEHICLES.md).
 """
 import os, re, sys
 
@@ -341,7 +341,7 @@ ZIL_FIRE = [
     passenger(3, (-0.4, 1.55, -0.25), feet_z=-0.6, feet_y=1.25),
 ]
 
-# ZIL-131 transport ("AAF Transport truck", ZIL131.xml; paths fixed 2026-11-08, see TECHNICAL_REFERENCE section 8):
+# ZIL-131 transport ("AAF Transport truck", ZIL131.xml; paths fixed 2026-11-08, see docs/CHANGES.md):
 # same cab as the fire truck's front row (driver cushion x -0.65..-0.15, passenger 0.05..0.55; cushions 1.5, backrest
 # face z -1.0, floor 1.2, same steering wheel). Open cargo bed: floor 1.3, long side benches 1.7 high (x -1.05..-0.85
 # and 0.75..0.95, z 0.05..3.05). Cargo players on the benches facing inward, like the Ural.
@@ -795,7 +795,7 @@ def official(prefab, shift=(0.0, 0.0, 0.0), seat=None, move=None, keep=None):
     Mors Longa cars are copies of Teardown 1.x vehicles). Official rigs are children of <body> (body space); the
     result is a function of the mod vehicle's <body pos>, called by patch_text, that returns them in vehicle space.
     shift: body-space offset between the two models (the official models were reworked for 2.x; found by voxel
-    overlap, scratchpad match2.py approach, documented in TECHNICAL_REFERENCE section 6). Friendly NPCs sit on
+    overlap, scratchpad match2.py approach, documented in docs/VEHICLES.md). Friendly NPCs sit on
     these like the player does (goreai_sitting.lua copies the engine's seated pose), so nothing NPC-specific.
     seat: (dx, dy, dz) moves only the "seat" location (rig frame), where the mod's cushion differs from the official
     model but the cab (steering wheel, pedals) matches. move: {location name: (dx, dy, dz)} for several locations.
@@ -964,7 +964,7 @@ VEHICLES = {
     "prefabs/spawnables/enemy vehicles/VehicleC1.xml": shifted(JEEP, dx=0.05, dy=0.1, dz=-0.1),
     "prefabs/spawnables/enemy vehicles/VehicleC2.xml": PAZ,
     "prefabs/spawnables/enemy vehicles/VehicleD8.xml": URAL,
-    # VehicleC3 (refugee UAZ event): its body was rebuilt from uaz452.xml on 2026-11-08 (TECHNICAL_REFERENCE section 8),
+    # VehicleC3 (refugee UAZ event): its body was rebuilt from uaz452.xml on 2026-11-08 (docs/CHANGES.md),
     # placed 0.25 lower and 0.05 back to keep the old cab position: the UAZ layout moved the same way (rays identical).
     "prefabs/spawnables/enemy vehicles/VehicleC3.xml": shifted(UAZ452, dy=-0.25, dz=0.05),
     # Chase / ambush cars (chaseOperator*): copies of the spawn-menu chase cars, the whole car moved inside the

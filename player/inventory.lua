@@ -1726,6 +1726,13 @@ function placeItem(invTable, grabinfo, i, j, gunslot)
 			w, h = itemW, itemH
 			if (invSlot.rotation or 0) % 2 == 1 then w, h = itemH, itemW end
 			local bodyPart = parts[targetY]
+			if GetBool("savegame.mod.debug.healprobe") then -- (2026-11-15, DEBUG) healing readout: this med use
+				local ok = bodyPart and IsHandleValid(bodyPart)
+				HealProbeMed = string.format("%.1f s  %s on slot %s: trigger %s (%s), its HP %s / %s, bleed %s, fracture %s",
+					GetTime(), tostring(id), tostring(targetY), tostring(bodyPart), ok and GetTagValue(bodyPart, "localhitbox") or "INVALID",
+					ok and GetTagValue(bodyPart, "CurrentHealth") or "-", ok and GetTagValue(bodyPart, "MaxHP") or "-",
+					tostring(ok and HasTag(bodyPart, "Bleed")), tostring(ok and HasTag(bodyPart, "Fracture")))
+			end
 			if idInfos[1]=="meds" then
 				local medTypes = idInfos
 
@@ -2472,8 +2479,10 @@ function client.update(dt)
 	if not GetBool("level.gamerule.nhat") then
 		if InputDown("shift") and GetPlayerVehicle() == 0 then
 			SprintMultiplier = 2.5
-		else 
-			SprintMultiplier = 0
+		else
+			-- (2026-11-15, user OK; original-mod bug, same in 9dde6dd) was 0: Hardcore thirst (the only use) drained
+			-- only while sprinting. 1 = always, 2.5x while sprinting (the init value is 1 too).
+			SprintMultiplier = 1
 		end
 		if GetString("savegame.mod.difficulty") == "hardcore" then
 			thirst = math.min(math.max(thirst - 0.005 * devmultiplier * SprintMultiplier, 0), 100)
@@ -2492,6 +2501,20 @@ function client.update(dt)
 	if GetBool("savegame.mod.config.game.inf_hunger") then hunger = 100 end
 	if GetBool("savegame.mod.config.game.inf_thirst") then thirst = 100 end
 
+end
+
+-- (2026-11-15, MP test: "the host gets the RPG kit as starter gear every time") The starter kit is picked with
+-- math.random, which nothing in the mod (nor v1) seeds, so a script whose generator starts the same way each launch
+-- picks the same kit. Seeded here from the run id (new on every New Game: the host's own and the one it publishes),
+-- this player's id and the time, so kits differ per run and per player.
+function InvSeedRandom()
+	if not math.randomseed then return end
+	local s = GetString("savegame.mod.runid") .. "|" .. GetString("level.runid") .. "|" .. tostring(GetLocalPlayer())
+		.. "|" .. tostring(math.floor(GetTime() * 1000))
+	local h = 5381
+	for i = 1, #s do h = (h * 33 + s:byte(i)) % 2147483647 end
+	math.randomseed(h)
+	for i = 1, 3 do math.random() end -- the first values after seeding follow the seed closely
 end
 
 function PlaceItemFromXML(Path, Amount)
@@ -2709,6 +2732,7 @@ function client.tick(dt)
 					["Med"] = {"Meds IFAK","Meds SPLINT","Meds STIM ADRENALINE","Meds AI2"},
 				},
 			}
+			InvSeedRandom() -- (2026-11-15) see InvSeedRandom
 			local Config = Loadouts.LoadoutConfig[math.random(1,#Loadouts.LoadoutConfig)]
 			local Loadout = Loadouts[math.random(1,#Loadouts)]
 			for i=1,#Config do 
@@ -3659,6 +3683,17 @@ end
 
 function client.draw()
 	if InvProfileReport then CallProfile_DrawReport(InvProfileReport, 20, 560, "inventory.lua (client)") end -- (2026-11-15, DEBUG)
+	if GetBool("savegame.mod.debug.healprobe") then -- (2026-11-15, DEBUG) healing readout, inventory side
+		local hs = {}
+		for k = 1, 6 do hs[k] = tostring(parts[k]) .. ((parts[k] and IsHandleValid(parts[k])) and "" or "!") end
+		UiPush()
+			UiFont("bold.ttf", 18) UiAlign("left top") UiTranslate(20, 640) UiTextShadow(0, 0, 0, 0.8, 1.5)
+			UiColor(1, 0.8, 0.6, 1)
+			UiText("inventory limb triggers (head torso larm rarm rleg lleg; ! = invalid): " .. table.concat(hs, " "))
+			UiTranslate(0, 20)
+			UiText("last med use: " .. (HealProbeMed or "none yet"))
+		UiPop()
+	end
 	if InvInteractive then UiMakeInteractive() end -- (v2) Ui* only works in draw; tick sets the flag
 	UiAlign("left top")
 

@@ -9,6 +9,7 @@
 -- sweep: every frame it checks up to SWEEP_SCAN objects of the current phase (shapes -> bodies -> triggers -> joints
 -- -> vehicles, each phase listed once with Find*) and deletes at most SWEEP_DELETE of them, so a far segment
 -- disappears a few objects per frame shortly after its parts cross the distance. Same rules as v1 per object:
+--   (2026-11-15) none of them while in its spawn grace time (InGrace: vehicle events)
 --   shape: not "nodelete", more than deletionDist behind (x) the rearmost player: its whole bounds (2026-11-15)
 --   body (not a vehicle's): not "nodelete", that far behind, and none of its shapes left
 --   vehicle: not "nodelete", every body without shapes, no player in it
@@ -21,6 +22,14 @@ SWEEP_SCAN = 200          -- objects checked per frame (600 cost 0.57 ms in Tear
                           -- shapes now takes ~50 frames, fine for things already 250 m behind)
 SWEEP_DELETE = 120        -- objects deleted per frame at most
 SHIFT_WAIT_FRAMES = 3     -- frames without deleting after a world shift
+CLEANUP_GRACE = 90        -- (2026-11-15) seconds a body / trigger tagged "ml_grace" (vehicle events, spawned behind
+                          -- and driving in: RandomVehicleEnemy.lua) is kept even when it is far behind
+
+--- true while h (body or trigger) is in its spawn grace time
+function InGrace(h)
+	if not HasTag(h, "ml_grace") then return false end
+	return GetTime() - (tonumber(GetTagValue(h, "ml_grace")) or 0) < CLEANUP_GRACE
+end
 
 function server.init()
 	deletionDist = 250
@@ -125,7 +134,7 @@ function SweepCheck(phase, h, rearmostX)
 	-- (2026-11-15) "behind" = the object's FAR end (bounds max x), not its origin: a 200 m road / sand box whose
 	-- origin is its back corner was deleted while its front end was 50 m behind the player, in sight (user)
 	if phase == "shapes" then
-		if HasTag(h, "nodelete") then return false end
+		if HasTag(h, "nodelete") or InGrace(GetShapeBody(h)) then return false end
 		local _, max = GetShapeBounds(h)
 		if rearmostX - max[1] > deletionDist then
 			Delete(h)
@@ -138,14 +147,14 @@ function SweepCheck(phase, h, rearmostX)
 			vList[v][h] = not isBodyValid(h)
 			return false
 		end
-		if HasTag(h, "nodelete") then return false end
+		if HasTag(h, "nodelete") or InGrace(h) then return false end
 		-- (a body is deleted only once its shapes are gone: its bounds mean nothing then, its position is v1's rule)
 		if rearmostX - GetBodyTransform(h).pos[1] > deletionDist and not isBodyValid(h) then
 			Delete(h)
 			return true
 		end
 	elseif phase == "triggers" then
-		if HasTag(h, "nodelete") then return false end
+		if HasTag(h, "nodelete") or InGrace(h) then return false end
 		local _, max = GetTriggerBounds(h)
 		if rearmostX - max[1] > deletionDist then
 			Delete(h)

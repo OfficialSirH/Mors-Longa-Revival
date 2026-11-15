@@ -99,11 +99,31 @@ function server.gunMakeHole(pos, r0, r1, r2)
 end
 
 -- Spawns a prefab (spent casing, RPG rocket, ...) and gives all its bodies a velocity.
+-- (2026-11-15, user OK) Spent casings (*casing.xml) are capped: only the newest CASING_CAP stay in the world, older ones
+-- are deleted (v1 kept every casing until RemoveRoad reached it 250 m behind). Each casing is a dynamic body that the
+-- server syncs to every player and that every world shift moves. Every gun script is its own Lua instance, so the
+-- count is shared through a tag on the bodies (value = spawn time) rather than a list here.
+CASING_CAP = 60
 function server.gunSpawnCasing(xml, transform, velocity)
-	local entities = Spawn(xml, transform)
+	local entities = Spawn(xml, transform) or {}
+	local casing = xml:find("casing%.xml$") ~= nil
 	for i = 1, #entities do
-		if GetEntityType(entities[i]) == "body" then SetBodyVelocity(entities[i], velocity) end
+		if GetEntityType(entities[i]) == "body" then
+			SetBodyVelocity(entities[i], velocity)
+			if casing then SetTag(entities[i], "ml_casing", string.format("%.3f", GetTime())) end
+		end
 	end
+	if casing then GunNet_CapCasings(CASING_CAP) end
+end
+
+--- Delete the oldest tagged casings beyond `cap`.
+function GunNet_CapCasings(cap)
+	local list = FindBodies("ml_casing", true)
+	if #list <= cap then return end
+	local aged = {}
+	for i = 1, #list do aged[i] = { body = list[i], t = tonumber(GetTagValue(list[i], "ml_casing")) or 0 } end
+	table.sort(aged, function(a, b) return a.t < b.t end)
+	for i = 1, #list - cap do Delete(aged[i].body) end
 end
 
 -- The tool body is owned by the server, so the weapon model (prefab parts

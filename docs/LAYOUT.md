@@ -17,7 +17,8 @@
 | `prefabs/` | Spawnable prefabs (road segments, buildings, enemies, vehicles, loot, bosses, perks, supply drops). Moves only as a whole: spawn code builds `"MOD/prefabs/" .. name` |
 | `assets/` | Shared assets: `vox/`, `snd/`, `img/`, `brush/`, `skybox/`, props. `snd/` and `img/` move only as a whole (paths built at run time) |
 | `dev/` | Test levels (`dev/levels/`), dev tools and scripts; left out of the release |
-| `docs/`, `tools/` | Documentation; porting tools, mock tests, relocation tool |
+| `docs/` | Documentation: `TECHNICAL_REFERENCE.md` (index), `ENGINE.md`, `GUNS.md`, `VEHICLES.md`, `SYSTEMS.md`, `PERFORMANCE.md`, `CHANGES.md`, `STATUS.md`, `PORTING.md`, this map |
+| `tools/` | Porting tools and mock tests (`porting/`), relocation tool (`relocate/`) |
 
 Moving files later: add lines to `tools/relocate/moves.txt` (or a new moves file) and run
 `python tools/relocate/relocate.py plan <moves>`, review `tools/relocate/out/plan.txt`, then `apply` with Teardown

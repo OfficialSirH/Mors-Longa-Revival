@@ -511,6 +511,10 @@ function DrawConfigUi_mod()
         { "npcprofile", GetBool("savegame.mod.debug.npcprofile") and "NPC call profile: ON" or "NPC call profile: off" },
         { "invprofile", GetBool("savegame.mod.debug.invprofile") and "inventory call profile: ON" or "inventory call profile: off" },
         { "shiftprobe", GetBool("savegame.mod.debug.shiftprobe") and "shift probe (all players): ON" or "shift probe (all players): off" },
+        { "ambush_now", "ambush now (a player on foot)" },
+        { "healprobe", GetBool("savegame.mod.debug.healprobe") and "healing readout (all players): ON" or "healing readout (all players): off" },
+        { "npcprobe", GetBool("savegame.mod.debug.npcprobe") and "NPC sync readout (all players): ON" or "NPC sync readout (all players): off" },
+        { "soundtest", "server sound test (all players)" },
     }
     for i = 1, #tests, 2 do
         UiPush()
@@ -520,7 +524,11 @@ function DrawConfigUi_mod()
                         -- (2026-11-14) every layer along the line of sight (ui/ConfigMenu.lua server.probeGround)
                         local ct = GetPlayerCameraTransform()
                         ServerCall("server.probeGround", ct.pos, TransformToParentVec(ct, Vec(0, 0, -1)))
-                    elseif tests[j][1] == "npcprofile" or tests[j][1] == "invprofile" or tests[j][1] == "shiftprobe" then
+                    elseif tests[j][1] == "npcprofile" or tests[j][1] == "invprofile" or tests[j][1] == "shiftprobe"
+                        or tests[j][1] == "healprobe" or tests[j][1] == "npcprobe" then
+                        -- (2026-11-15) npcprobe: NPC torsos on the server vs this machine (ui/NpcProbe.lua)
+                        -- (2026-11-15) healprobe: med use and the health script's response on screen (player/inventory.lua,
+                        -- player/HealthSystem/AdvancedHealthScript.lua; mirrored to every machine like God Mode)
                         -- (2026-11-15) shiftprobe: what each machine sees at a world shift (ui/ShiftProbe.lua)
                         -- (2026-11-15) call-count profilers (lib/CallProfiler.lua): NPC manager / inventory
                         local key = "savegame.mod.debug." .. tests[j][1]
@@ -540,6 +548,12 @@ function DrawConfigUi_mod()
                     elseif tests[j][1] == "activity" then
                         -- (2026-11-14) on-screen list of recent spawns (ui/ConfigMenu.lua TickActivity / DrawActivity)
                         SetBool("savegame.mod.debug.activity", not GetBool("savegame.mod.debug.activity"))
+                    elseif tests[j][1] == "ambush_now" then
+                        -- (2026-11-15) npcs/Cultist Spawner.lua: ambush on its next tick (needs a player on foot)
+                        SetBool("savegame.mod.debug.ambush_now", true)
+                    elseif tests[j][1] == "soundtest" then
+                        -- (2026-11-15) a sound played by server code at every player (ui/NpcProbe.lua)
+                        ServerCall("server.npcProbeSoundTest")
                     elseif tests[j][1] == "delete" then
                         ServerCall("server.perfTestDelete")
                     else

@@ -284,7 +284,16 @@ function HandleQuickload(cmd)
 end
 
 -- Store spawn xml at vehicle handle number in registry.
+-- (2026-11-15) Every event spawns through here: its bodies and triggers also get "ml_grace" = spawn time, so the
+-- cleanup sweep (RemoveRoad.lua CLEANUP_GRACE) leaves them alone at first. The convoy / chase events start at x -300,
+-- behind the deletion line whenever the rearmost player is past x ~ -45, and the continuous sweep deleted them
+-- within a second (user: debug vehicle events "just don't appear"); v1's cleanup ran only after a new segment.
 function addSpawnedVehicleXMLToRegistry(entities, xml)
+	local stamp = string.format("%.2f", GetTime())
+	for _, e in ipairs(entities) do
+		local kind = GetEntityType(e)
+		if kind == "body" or kind == "trigger" then SetTag(e, "ml_grace", stamp) end
+	end
 	for _, e in ipairs(entities) do
 		if GetEntityType(e) == "vehicle" then
 			SetString("level.spawnedVehicles." .. e, xml)

@@ -2,7 +2,7 @@
 
 Usage (repo root): python tools/porting/vox_pieces.py        (writes PIECE_MODELS, re-runnable)
 
-Why: a shape's spawn cost follows its box cells (TECHNICAL_REFERENCE §7) and Spawn() builds a whole prefab in one
+Why: a shape's spawn cost follows its box cells (docs/PERFORMANCE.md) and Spawn() builds a whole prefab in one
 frame. The terrain models below are several models placed by the file's scene graph (rock1.vox: one rock cut into
 8 octants; hill1/hill1r: 22 terrace layers; hill2: 7 layers placed twice, once mirrored). Each placed model
 (nTRN -> nSHP) becomes its own file under assets/vox/terrainpieces/pieces/ holding that model and a one-node scene

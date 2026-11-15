@@ -1,0 +1,306 @@
+# Mors Longa Revival — original-mod bugs fixed, behaviour changes
+
+Part of the technical reference (index and conventions: [TECHNICAL_REFERENCE.md](TECHNICAL_REFERENCE.md)).
+Marks: **[verified in-game]**, **[official source]**, **[unverified]**.
+
+Bugs fixed (all present in the original Workshop mod):
+* Guns: `Split(nil)` crash in client.init (RPG in sling); empty-mag / empty-tube HUD concat (all guns, N870, Mudafie,
+  Qasira); camo nil on gun switch (9 LoadTool guns); round without bullet type after turning on Unlimited Ammo with
+  an empty mag (`checkUnlimitedBulletsValid` → `GunPerkFor` falls back to the calibre's default round, all 35 guns);
+  Sawed Off gated on the MP43; Bauer-553 never called WeaponInit.
+* Inventory: `invSlot.rotation` nil for special slots; partial stack use not recounting; material deficit stored
+  under the wrong key; `clearItem` outside the grid when dying mid-heal; PKM missing from the script lookup.
+* Loot/spawn tables: 4GA ammo unreachable; broken entries (KS23 #2, .50BMG, P17 Grey); tutorial IFAK id
+  (`meds-bleed-general-ifak`).
+* ZIL-131 trucks: "AAF Transport truck" (spawn menu), Vehiclewg33, roadblock9 and test_npc pointed at
+  `MOD/Vehicles/ZIL131.xml` (it is in `vehicles/cars/Soviet Vehicles/`); ZIL131, ZIL131_ZSU23, VehicleAAF1 (both copies),
+  roadblock3, dev/levels/test.xml and the fire truck's steering wheel pointed at `MOD/vehicles/zil131.vox` (same folder). Paths
+  fixed 2026-11-08 (user OK); never tested in-game before.
+* Sounds pointing at files that never existed (found from MP log errors, 2026-11-15, user OK):
+  * NPC gunfire: guns tagged `gun=g17` (pistols, 79 gun prefabs) and `gun=m4` (MK36 rifles, 31) built
+    `MOD/assets/snd/g17.ogg` / `m4.ogg`, so those NPCs shot silently. Now `assets/snd/Weapons/g17/g17.ogg` +
+    `g17dist.ogg` and `Weapons/m4a1/m4a1_0.ogg` (`GOREAI_GUN_SHOT` / `GOREAI_GUN_DIST` in `goreai_combat.lua`); m4
+    has no distant sound, as before. Distant sounds still missing for m870, mp43, vector, vgo (close shot plays).
+  * NPC voice / distant-rifle sets trimmed to the files that exist (`goreai_sounds.lua`): English death voices 1-8
+    (the list said 12, a third of deaths were silent), `rifle_dist_far_6` dropped (1 in 6 silent).
+  * Removed without a change in what you hear (they never played): the player hit sound `hit_0.ogg`
+    (AdvancedHealthScript), the difficulty menu's next / back clicks.
+  * Left as is (log noise only): the rpg distant-sound slots are `LoadSound("")` (rpg has none), PlaceTool's
+    `vox/placer.vox` model, `levels/level_instance.xml` `skybox=" "` (the "DDS error in data/env/"; fixing it would
+    change the sky).
+* World: RandomVehicleEnemy `whichone` nil (AAF below 5000 m); military truck never spawning (order of distance
+  checks); Cultist ambushes never fired (`GetPlayerVehicle == 0`); pause button in an undrawn slot; parachute /
+  horde DebugPrint spam; StandingRagdoll undefined `fwd1` on death; heli crew quickload hook calling an undefined
+  function; npc_die reading a missing gun loot string (horde); NPC table / to-delete list / spall shell leaks.
+* Vehicles: spawn menu "Soviet ambulance" missing (`spawn.txt` entry started with `Mod/` instead of `MOD/`);
+  GAZ-24 sedan + VIP steering wheel turned with A/D while on foot and stayed centred while driving (`EVF.lua`
+  finds its car by `FindVehicle("vehicle")`; only the MP variant had the `vehicle` tag, so the others got 0 and
+  "player vehicle == 0" was true on foot) → tag added. Both verified in SP.
+* Spawn menu "Bad RV" (RV MethLab): the entry's path started with `/Vehicles/` instead of `MOD/vehicles/cars/` (same in
+  the original 9dde6dd, like the ambulance entry); fixed 2026-11-08.
+* Refugee UAZ event (`enemy vehicles/cars/VehicleC3.xml`): built for an older `uaz452.vox` (objects `body`, `door fl`,
+  `stearingwheel`...); the shipped file has the newer model (`Body`, `Door_FL`...), so in-game only its lights and
+  the two refugees showed (user, 2026-11-08; same XML in 9dde6dd). Its `<body>` was replaced by the working UAZ's
+  (`uaz452.xml`, in `uaz452.vox` colours, 0.25 lower / 0.05 back to keep the old cab spot); scripts, vehicle
+  settings, refugees, luggage and locations kept (scratchpad fix_c3.py). First also wrapped in SteeringWheel.lua:
+  removed again (user test: van zig-zagged, driver stand-in "dead" from the start, only the passenger got out); the
+  scripted wheel turns through the driver stand-in's legs (Blender overlap check; the bus driver overlaps only static
+  body voxels), likely breaking it. Not confirmed in-game.
+  Kept: the rebuilt body, no SteeringWheel.lua (as the bus), seats, refugee path fix, `locationspawn` moved from
+  x -1.2 to -2.3 (live refugees spawned 0.3 m from the van side and got stuck; bus 0.95, jeep 0.65), driver stand-in
+  `CivillianD` at (-0.3, 0.2, -1.75), passenger `CivillianP` on the rear floor. Tried and undone 2026-11-08: an 80 %
+  copy of the driver stand-in (fitted the cab in Blender, but in-game the driver was gone and the van still
+  zig-zagged). The event's behaviour is shelved ([STATUS](STATUS.md) "Shelved and dead content").
+  Refugee stand-ins re-placed for the new cab (user: "messily shoved" in): driver figure on the driver seat placed
+  like the Jeep/Bus drivers but 0.25 lower (these ragdolls sit ~1.3 m tall, the UAZ has 0.9 m headroom: its head still
+  pokes ~0.2 m through the roof); passenger figure on the floor in the back by the luggage (front seat would put its
+  head 0.45 m through the roof).
+* Refugee events (Civillian Jeep / Bus / Van, `vehicles/operators/ConvoyOperatorTransport.lua`): when the vehicle stopped near a
+  player the stand-ins were deleted and `enemies/refugee/Ragdollrefugee1.xml` spawned, but the folder is
+  `enemies/refugees/` (same in 9dde6dd): no live refugee ever got out. Path fixed in convert_operators.py
+  (2026-11-08). Ambushes (`chaseOperatorTransport.lua`, debug "Enemy Vehicle") spawn existing prefabs. Still open:
+  both scripts spawn `MOD/prefabs/Debri.xml` on destruction, which doesn't exist (not checked yet).
+* NPCs never shot after the split (aim alignment in draw) — port issue, fixed. Killcam missed single-shot kills
+  (head mark cleared one tick early).
+
+Behaviour changes decided by the user:
+* Own grenades hurt the player (v1: they did not).
+* Ordinary NPCs take explosion damage (v1: only boss shields); the RPG fires the loaded rocket type (v1: always PG-7V).
+* Enemy cars keep v1 explode rules ("always explode" was tried and reverted).
+* Cultist on-foot ambushes on.
+* UAZ-452 steering wheel no longer spins after crashes (scripted instead of a fake road wheel; user request).
+* Vehicles without modeled seats get seats anyway: cab players sit at normal height, cargo players stand or sit on
+  the floor (v1: the invisible driver had no visible pose).
+* Friendly NPCs ride in every vehicle with passenger seat rigs (v1: only Vehiclewg30's seat lights); players get
+  seats first; seat icons show only while a friendly NPC exists and are correct for every player (v1: always in
+  Vehiclewg30, "taken" state host-only).
+* Mod metadata (2026-11-13, Phase 5 prep; user: "Revival + credits"): `info.txt` name "Mors Longa Revival (dev)"
+  (the release copy drops " (dev)"), author "AUTHOR_NAME (co-op port), Overdrive Studios (original Mors Longa),
+  elboydo (AVF shell code)" (AUTHOR_NAME: to be filled in by the user), description prefixed with the co-op note
+  (`[noupload]` kept as in the original). `id.txt` no longer holds 2906369984, the original's Workshop item (an
+  upload would have tried to update Overdrive Studios' item): no id, so the first upload creates a new item.
+* Spawn menu additions (each user-approved; in v1 these were only road / roadside spawns, test levels or nowhere):
+  * Vehicles - Civillian: "Mobile Crane" (v1 only in dev/levels/test_vehicle.xml), "Dodge Monaco", "Dodge Monaco Police",
+    "Plymouth Fury", "Semi Flathead" (roadside Vehiclewb1/wb15), "Cement Truck" (wg42), "Volga" (wg18), "Microcar"
+    (wg38), "Ford Falcon" (wg21), "Small Boat" (`Based vehicles/cars/smallboat_red.xml`, vehicleS13) (2026-11-08).
+  * Vehicles - Insurgent: "BRDM-2" (the empty `brdm.xml`, v1 only in dev/levels/test_vehicle.xml; with crew it was already
+    VNPCs - Transports / Insurgent Ambush 7; 2026-11-09). Its `<instance file="MOD/prefabs/spawns/enemies/
+    EnemyCivSpawnVehicle.xml"/>` (`RandomRagdoll Type=civ chance=100`: a random civilian NPC at the car's centre, under
+    the hull; no other drivable vehicle has one) was removed; VehicleD7 keeps its copy (original event content).
+    "Insurgent Heli (parked, no AI)" (2026-11-13, below).
+  * Vehicles - Military: "Military Truck" (the plain `Milltary_Truck.xml`, v1 only in dev/levels/test_vehicle.xml; the
+    roadblocks use the UM Damaged one; 2026-11-08); "ZIS-151", "ZIS-151 Damaged", "Katyusha" (wg28 / wb26 /
+    VehicleM2), "Willys Jeep" (tutorial only), "BMP-1", "BMP-1P", "BMP-2" (VehicleM18-M20) (2026-11-09); "AAF Pickup
+    Truck ZU-23" (only dev/levels/test_npc.xml placed it; 2026-11-12); "AAF Heli (parked, no AI)", and for testing the
+    v1-survey batch "T-72A", "AAF Pickup Truck SPG-9", "GMG Offroad", "Kornet tripod", "AGS-30 tripod" (2026-11-13).
+  * Parked helis: `vehicles/aircraft/AS350/AS350_{MILITARY,INSURGENT}_PARKED.xml` (generated by `heli_variants.py`), the enemy
+    helis with the tag `parked` on body Heli, which Heli.lua reads as not hostile (the original's friendly mode:
+    stays landed, the pilot offers "Take a ride"). For testing seats and player flight.
+* Militia GAZ-24 siren (original-mod bug, same in 9dde6dd): `vehicles/cars/GAZ-24 (1968)/radio_car2.lua` loaded
+  `MOD/Vehicle/GAZ-24 (1968)/Sounds/Siren.ogg` (the folder is `Vehicles/`), so the "radio" switch never made a sound;
+  path fixed (user OK 2026-11-09).
+* BMP-3 driver eye point (`location tags="player"` in `vehicles/avf/prefabs/bmp/BMP-3 d.xml`): x -0.9 → -0.1 (the left front
+  seat → the middle one, where the controls and the new driver seat are; user request 2026-11-09).
+* Van PKM fire sound (original-mod bug): the config named `MOD/assets/snd/ak0.ogg` (missing: silent) → `MOD/assets/snd/Weapons/ak/
+  ak_0.ogg`; a missing mounted-gun sound now falls back to the M107 sound with a debug line.
+* WMIK Technical weapon (user, 2026-11-13: "MILAN missile"): in the original its AVF config never loaded (commented-out
+  includes of a missing file, [ENGINE](ENGINE.md) "Workflow"), so the external AVF mod fired its generic customcannon shell from the XML tags
+  (customShell: explosive, size 2). Now a MILAN guided missile. The template the
+  config named ("MILAN_02") never existed in the mod, so the numbers are new, built on AVF's Kornet shell: 115 mm,
+  velocity 55, no gravity, HEAT, explosion 1.0, maxPenDepth 1.8 (BMP Kornet configs: 2.0), 1 per load, 6 loads,
+  RPM 5, reload 5 s, AVF's atgm00 launch sound.
+* Cannon ammo names in the HUD (user, 2026-11-12): AVF showed internal names ("B_23mm_AA"); now a config
+  magazine's `displayName`, else "<calibre> mm <payload>" (MG_AmmoLabel; kinetic = APFSDS).
+* v1 survey batch (2026-11-13; user: "Yes, convert them"):
+  * GMG offroad (offroad_GMG.xml, road VehicleM22): its config never loaded in the original (as the WMIK) and the gun
+    shape has no AVF gun tags (`component=gun`, weaponType), so what the external AVF made of it is unknown; now an
+    AVF grenade machine gun (MK-19 values: 400 RPM, 60-grenade belt, reload 4, 30 mm HE shell). Kornet
+    / AGS-30 tripods fire AVF's 9M133 / grenades; SPG-9 technical PG-9 / OG-9; T-72A gun (all needed the external
+    AVF mod in v1).
+  * Freeze when an AGS-30 tripod was shot (user repro 2026-11-13: the game stalled for a while, then recovered): its
+    gun weighs ~1e-7 kg (density 1e-12, as in the original), AVF's body pushes (shell impact, explosion shockwave)
+    scale down only for heavy bodies (~1e8 m/s on it). AVF pushes go through `AVF_Impulse` (glue; speed change
+    capped at 30 m/s, port_avf.py); verified SP (no freeze). Whether it froze with the external AVF in v1: unknown.
+  * Kornet / AGS-30 tripods: a standing gunner place behind the gun ("Use mounted gun"; user 2026-11-13 "Stand at it").
+    Only that prompt (user request): the tripods are no longer vehicles (original: AVF vehicles the player could
+    enter), so the game's "Enter vehicle" is gone.
+    AVF's "mountedGun" prompt tag is removed from every gun without a gunner place (it did nothing without AVF).
+  * SPG-9 technical XML: the rear "mainCannon_backblast" location was tagged mainCannon_emitter (AVF: a second
+    barrel at the tube's rear end, every other shell from there) → tagged mainCannon_backblast (original-mod bug).
+  * Crew sitter ragdolls (gorefunctions.lua, v2): gore pieces / sounds / UI prefabs load from paths that never
+    existed (MOD/main/Gore Ragdolls 2/, MOD/prefab/; the files are in main/AS350/Gore Ragdolls 2/): still nothing
+    there (original-mod bug, not fixed), the spawns now skipped via HasFile. P (sit / stand) and the kill-all key
+    work for every player (v1: the one player).
+* AS350 (2026-11-13, [VEHICLES](VEHICLES.md) seats and "AS350 helicopter"), changes against the original:
+  * A `<vehicle>` with seats (user decision "Seat rigs"; v1 teleported the pilot every frame): the pilot seat gives
+    control (the dashboard "Control" prompt is gone), riders sit on the rear bench; "Fly helicopter" / "Enter
+    helicopter" prompts on the cabin doors; exit beside the pilot door. No car behaviour: `sound="0"`, topspeed /
+    acceleration 0 (values as Kooshing's MP helicopter), tags `player_nogears player_nosteeringwheel`, drive input held
+    at 0 while seated (player_locomotion.lua turns a driver's head back on reverse).
+  * Player flight: new mouse-aim model (user decision "Mouse-aim like reference"; the original drove its AI
+    autopilot with W/S/A/D speed targets and the camera heading; user: it flew badly). Controls: mouse steers,
+    W/S climb/descend, A/D sideways, LMB gun, RMB rockets (shelved: lean-out, [STATUS](STATUS.md) "Shelved and dead content"), wheel zoom, E leaves the seat. The
+    pilot can no longer shut the engine off while seated (v1: landing with Ctrl); leaving the seat on the ground
+    shuts it down. Hint list is new text.
+  * Gun / rockets aim at the point under the crosshair (v1: 4 m along the camera turned 10 degrees down / the camera
+    ray turned 3 degrees up); the player's bullets fly at that point while the gun points within ~8.5 degrees of it
+    (v1's AI-tuned 0.01-0.03 window, kept for the AI).
+  * Enemy AI: targets the nearest player it can see; leads that player's movement (v1 used the one player's speed,
+    also while hunting an NPC).
+  * Bullet impacts now play sounds: the original's bullet code used the impact sound globals of the player guns but
+    never loaded them (silent); same files as `GunFunctions_LoadSounds`.
+  * Bug fixes: `QueryRejectVehiclePlus` indexed a nil table when the body under the player had no joints; bullet
+    player damage errored without player hitboxes (`math.random(2, 0)`); `InternalVars` / `WorldXcontrol` read the
+    helicopter transform / ride state before they were set (nil arguments; v2 sets them first); `Axes[Up]` (undefined
+    `Up`) in the unused PointU/PointD; the ride ends with E only for the player riding (v1: E anywhere); "Take a ride"
+    on one shape (v1 tagged all `PilotHead` shapes: two prompts on the pilot, original-mod bug).
+* AVF spall only from metal (2026-11-13, user asked to cut the lag shooting into foliage, then rocks): AVF threw spall
+  fragments at every penetration, whatever the material; now only when the shell went through metal (armour,
+  vehicles). No spall from foliage, wood, plastic, glass, dirt, plaster, rock or masonry (their fragments' holes in
+  large rock shapes froze the game). Penetration path holes at least half a radius apart.
+* Immersive_Tank.lua port (2026-11-13): kill_tank set the cook-off origin to the hull's centre of mass, a bare
+  vector, which every later use treats as a transform; in the mock the cook-off then errored every tick inside
+  tick()'s pcall (whether the real engine errored or read it as the vehicle origin is not known). Made it a
+  transform at that point (`Transform(com)`), as evidently intended. Fire damage near a burning tank: per player,
+  only a lethal amount counts (as the original health script; same rule as AVF's shells).
+* AVF cannon port (2026-11-12, user chose to port AVF's shell system): behaviour kept as in v1 + AVF where the code
+  allowed it; differences listed in [VEHICLES](VEHICLES.md) ("AVF shells"). Player damage: AVF lowered only the local player's
+  engine health; the original health script reset that to 1 every tick (9dde6dd AdvancedHealthScript), so only a
+  hit worth the whole health at once mattered (it killed). Ported as exactly that, for every player, through the
+  torso hitbox (QueriedDamage 10000); no partial damage from shells (as in v1). AVF's apply_impact_impulse read the
+  undefined globals point2 / dist1: ported as an impulse at the shell's position.
+* Fixes from the 2026-11-12 playtest (each checked against 9dde6dd):
+  * Sandstorm countdown (original-mod bug, same lines in 9dde6dd): `sandstorm.lua` rolls `math.random(0, chance)`
+    with `chance` one lower each tick; a hit while `savegame.mod.config.daynight.sandstorms` reads false neither
+    started a storm nor restarted the countdown, so after 100000 ticks every tick raised "bad argument #2 to
+    'random' (interval is empty)". With the option on, a storm starts before that with probability 100000/100001,
+    so the error means the option read off in that run. Now a hit restarts the countdown either way and no range
+    goes below 1.
+  * Sandstorms never started (original-mod bug, same in 9dde6dd): the debug menu's "Sandstorms" button shows the
+    `util.structured_table` default (true) while the key was never written, but `sandstorm.lua` read it with
+    `GetBool`, which is false for a missing key; storms only came after toggling the button off and on (user's menu
+    showed it on, 2026-11-12). Now read as `not HasKey(k) or GetBool(k)`, like the menu. Behaviour change: storms
+    happen by default, as the menu says. (Other raw `GetBool` reads of default-true keys, e.g.
+    `map.spawnTileContent` in procgen.lua, not checked.)
+  * Simonov-9 magazines under two names (original-mod, user chose 2026-11-12): magazines out of the gun
+    (`weapons/guns/PP19.lua`, also a `convert_gun.py` FIXUP) and the shop's gun item were `Simonov-9`, loot ones
+    `Simonov-9-Mag`, so they did not stack. All are `Simonov-9-Mag` now; magazines already held keep the old name.
+  * NPC feet panel (port regression): Ctrl+F with debug mode on opens `npc_debug_feet` (client draw), `FeetData`
+    exists only on the server (`init_controls`): "attempt to index global 'FeetData'" every frame. The panel now
+    stays closed on the client (it tuned server-side stepping; not rebuilt).
+  * Loot table (original-mod bug): `{"Mag MC9 #3.xml", 2}` in `SpawnRefrenceTable.lua` names a prefab that never
+    existed; the spawner printed "... Does not exist, loot spawn failed, trying again." and rerolled. Entry removed
+    (same outcome as the reroll, no message).
+  * Simonov-9 magazine description (original-mod bug): no `mag0-ak-9x19` entry in `inv-desc.lua` / `inv-items.lua`
+    ("Unknown item: mag0-ak-9x19"); entry added in the wording of the MC9 one.
+  * Rotated med used on a body part (original-mod bug, same six lines in 9dde6dd): `placeItem` put the med back as
+    `{item, {origx, origy}, w, h}` without `rotation` and with w/h of the drag rotation: drawn unrotated on rotated
+    cells. Now put back with the slot's own rotation and size.
+* MP fixes from the first local MP test (user, 2026-11-14; mock tests test_newlevel.lua, test_invtools.lua; to be
+  re-tested in local MP):
+  * Vanilla tools on for every player in MP: our levels loaded the engine's `sandbox.lua`, whose `server.tick` in
+    multiplayer only enables every registered tool for every player each tick; the inventory's server.tick applied
+    its per-player list only when it changed (`InvApplied` cache), so after the first tick sandbox won. First fix:
+    re-apply every tick against `IsToolEnabled` (worked, but the two fought every tick). Now the game levels load
+    `game/MLSandbox.lua` instead: the engine's sandbox.lua with only that SetToolEnabled removed (spawn /
+    respawn, name tags, damage indicators, death fade, weather, map markers, unlimited ammo unchanged); the per-tick
+    check stays as a guard. (A gamemode would also stop sandbox.lua, `contentgamemodeexample/race.lua`, but takes
+    those features with it.)
+  * Extinguisher in slot 1 over the primary gun (user's MP screenshots; behaviour change): v1 put it in slot 4 with
+    `game.tool.extinguisher.index = 4`, but in 2.x the tool bar's slot is `game.tool.<id>.group` and `.index` only
+    orders tools inside a slot (`data/ui/hud.lua`), so neither the sync flag nor a client-side write moved it. Now
+    `.group = 4` (with the Place / Welding tools), set on the server and on each machine (inventory client.tick).
+    That only moves it on the bar: the engine's own key 4 and mouse wheel use the built-in slot (1), so key 4 never
+    reached it (user's test). Key 4 is now handled by the inventory (`InvCycleSlot4`, user's choice): it cycles the
+    enabled slot-4 tools in the bar's order (Place Tool → Welding Tool → Extinguisher). The mouse wheel stays the
+    engine's (reaches the Extinguisher next to the slot-1 guns). test_slot4.lua.
+  * Other players' guns drawn as loose parts (every part in its build lane, arms floating): the gun scripts place,
+    animate and hide the parts of the local player's tool body only. `gunnet.lua` now sends the holder's part
+    transforms (changed parts, <= 10/s, all every 2 s and on a tool change) and every other machine applies them
+    to that player's tool body each frame in `client.render` (as the official `snowball.lua`), first-person arms /
+    hands (the gun script's hand1/hand2/arm1/arm2) hidden there. test_gunparts.lua. Verified (user, 2026-11-14):
+    other players' guns look whole. Left as it is for now (user): in third person every gun sits offset from the
+    hand and is very large next to the character, because the prefabs are built at first-person viewmodel scale
+    and position (original mod; resizing would change the first-person look).
+  * Hardcore "Try Again" resets the other players' money too (user, 2026-11-14).
+* MP fixes, second round (2026-11-14, user's decisions; test_mpleads.lua, test_newlevel.lua; to re-test in MP):
+  * Perks are the host's for everyone: a pickup (`server.invTake`) raises the perk in the host's savegame (before:
+    the picker's own; a maxed perk still gives the picker $500); `game/newLeveltoLEVEL.lua` publishes the host's
+    perks (`level.host.perks.*`, synced, -1 = none) and every other machine copies them into its own savegame, so
+    the health, fuel and helicopter perk checks and the perk list read the same levels on every machine.
+  * Debug menu host-only (`lib/Config.lua`: Backspace and its hint only on the host). Its settings that each
+    machine reads (Infinite Ammo, Infinite Placetool Materials, No Hunger, No Thirst, God Mode) are the host's for
+    everyone (`level.host.cfg.*`, copied like the perks); Heal / Die / overlays act on the host only.
+  * Fuel-sale money goes to the player who sells (`vehicles/Fuel.lua`: summed per player, whole dollars sent with
+    `client.fuelMoney`); before, the server wrote it into the host's money whoever sold.
+  * Cultist ambush: a random living player on foot (`npcs/Cultist Spawner.lua`); before, only the host, and only
+    while the host was on foot. Debug menu "ambush now" (2026-11-15, host; `savegame.mod.debug.ambush_now`) forces it on the next
+    tick with a player on foot (normally every 5-27 min).
+  * Server bullets fall again (`weapons/guns/gunnet.lua GunNet_ServerInit`): `gravity` was nil in the gun scripts'
+    server realm, so the server's copy of each bullet (holes, NPC hits) flew without drop while the tracers fell
+    (also in single-player, since the port's gun split). Restores v1.
+  * Permadeath (Hardcore) in co-op: the run ends when ANY player dies (user, 2026-11-14; before: only the host's
+    death, `GetPlayerHealth()` without an id). `game/Gamerule.lua`: a player counts once seen alive this level (a
+    joining player can read health 0), the wipe runs once (host's perks, money, garage; `client.permadeathWipe`
+    zeroes every player's own money) and the return to the main menu is latched (a respawn doesn't cancel it).
+  * Leftover "Infinite" magazine (original-mod bug, same code in 9dde6dd; found in the MP test, not MP-specific):
+    with Infinite Ammo on, an empty gun gets a fake 1-round "Infinite" magazine (`gunfunctions.lua
+    checkUnlimitedBulletsValid`, all guns) that kept the old bullet list and is saved with the inventory. With
+    Infinite Ammo off later, the first shot left a hole in the list and the gun's write-back (`table.concat`,
+    PP19.lua:475) failed every shot before the shot cooldown was set: error spam and very fast, endless fire. Now
+    the fake magazine holds exactly one bullet, and a leftover one is emptied while Infinite Ammo is off (the gun
+    needs a reload). test_infinitemag.lua.
+  * Remote players: no starter loadout and 0 hunger / thirst (starved at once). The main menu's new-game reset
+    (`savegame.mod.inventory.init`, perks, bounty board) is written in the host's savegame only. Now the menu also
+    writes a new `savegame.mod.runid`; `newLeveltoLEVEL.lua` publishes it (`level.runid`, synced) with the host's
+    difficulty (`level.difficulty`); each non-host client that sees a run id it hasn't played does the per-player
+    reset in its own savegame (inventory.init -> loadout and full vitals; perks; bounty board; money kept, as the
+    host's on New Save) and mirrors the host's difficulty into its savegame every level (health / NPC / hunger rules
+    read it on each machine). A save from before run ids gets one at its next level start.
+  * `inventory.lua` vitals (original-mod bug, also v1): `GetFloat("savegame.mod.hunger") or 100` never used the
+    default (GetFloat returns 0 for a missing key): a savegame without the keys started at 0. Now `HasKey`.
+  * Game rules on remote clients: `newLeveltoLEVEL.lua` copied `savegame.mod.newLevel.*` to `level.*` without the
+    sync flag, so `level.gamerule.*` (god, armored, helicopter, nhat, keepinv, permadeath) read as off on remote
+    machines. Now synced.
+  * Other players' melee weapons (2026-11-15, **[verified in-game]** by the user after the fourth round): the swing animation, its sounds and the hit particles
+    ran only on the holding player's machine (v1 had one player), so the others heard nothing and saw the weapon
+    in the engine's default third-person place: the handle's end at eye height pointing straight ahead, the hands
+    reaching for nothing (user screenshot, all melee weapons). `weapons/melee/Melee_Functions.lua`:
+    * Every machine poses each other player's melee weapon every tick, as the engine's own tools do
+      (`data/script/toolanimation.lua`, `snowball.lua`): `SetToolTransformOverride` + `SetToolHandPoseLocalTransform`
+      per player. The grip (`MELEE_GRIPS`, read off the .vox models: handle end at the origin, 0.05 m voxels) goes
+      in the right hand at chest height (`MELEE_HAND`), tilted up 60 deg like the first-person view; two-handed
+      weapons (Baseball Bat, Fire Axe, Katana, Damned Scythe) put the left hand further up the handle.
+    * The holding client also queues "swing" (start, chop or sweep, the script's own time until it lands: Knife
+      0.1 s ... Bat / Fire Axe 0.9 s) and "fx" (landed: hit or not, up to 8 hit points, hit colour) with its other
+      melee ops; the server forwards them (`client.meleeRemoteOps`). The others play the swing / hit sound at the
+      swinger, spawn the same particles, and swing the pose about the right hand (chop: raised to 110 deg, down to
+      -20; sweep: right to left near level; the arm follows 0.2 m forward).
+    * Each melee script: `MeleeNet_RemoteTick(dt)` at the start of client.tick, `MeleeNet_SwingStart` in Smash(),
+      `MeleeNet_SwingFx` after its swing sound. Poses and grip points are first guesses from the model files.
+      Second round (user screenshots): the fists sat beside the handle and the sweep led with the flat side; hand
+      frames now turned as on the engine's sledgehammer (`data/prefab/tool/sledge.xml`: right (0, 90, -90), left
+      (-90, 0, -60); two-handed: left hand at the handle's end, right further up), sweep rolled -90 deg about the handle.
+      Third round: the hands still sat one handle-width to the character's right of the handle, and with the axe
+      upright at the right side the left arm went through the body. Grips now on the model's centre line (x 0: the
+      model is centred sideways, as far as the screenshots show), and two-handed weapons rest across the chest
+      (`MELEE_HAND_2H`, rolled `MELEE_REST_ROLL_2H` = -35 deg: head up right, handle end down left).
+      Fourth round: the weapon stayed at standing height when the player crouched (the override frame is fixed at
+      standing eye height). The pose now adds the animated right shoulder's offset, as the engine's own tools do
+      (`MeleeNet_ShoulderOffset`, from toolanimation.lua); it also carries the walk bob.
+      Test: `test_meleenet.lua`.
+* Spent casings capped (user decision 2026-11-15): only the newest 60 player-gun casings stay in the world, older
+  ones are deleted (v1 kept every casing until RemoveRoad reached it 250 m behind). Each was a dynamic body synced to
+  every player and moved by every world shift. `weapons/guns/gunnet.lua` `server.gunSpawnCasing` tags casing bodies
+  `ml_casing` = spawn time (shared across the gun scripts) and `GunNet_CapCasings` deletes the oldest; prefabs not
+  ending in `casing.xml` (RPG rockets) are not counted. Test: `test_gunnet.lua`.
+* Starter kit seeded (MP test 2026-11-15: "the host gets the RPG kit every time"; original code, unseeded
+  math.random): `player/inventory.lua InvSeedRandom` seeds the kit pick from the run id (host's own and published),
+  the player id and the time. Test: `test_kitseed.lua`.
+* Hardcore thirst (user OK 2026-11-15; original-mod bug, same in 9dde6dd): `inventory.lua client.update` set
+  `SprintMultiplier = 0` when not sprinting, and Hardcore thirst is multiplied by it, so it drained only while
+  sprinting. Now 1 (always), 2.5 while sprinting: 100 -> 0 in ~5.5 min standing, ~2 min sprinting. Other
+  difficulties unchanged (they ignore the multiplier).
+* God Mode blocks bleeding and fractures too (user OK 2026-11-15; v1 blocked only damage and healing):
+  `AdvancedHealthScript.lua` clears both tags on the local hitboxes every tick in God Mode and doesn't set them
+  (hits, falls; no bone-snap sound). Healing stays blocked in God Mode as in v1.

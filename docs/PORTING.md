@@ -1,7 +1,7 @@
 # Mors Longa Revival – porting checklist (v1 → Teardown 2.x co-op)
 
-Short checklist for converting one script. Why and the details: `docs/TECHNICAL_REFERENCE.md` (§3 engine rules,
-§4 server/client-only API lists). Tools: `tools/porting/README.md`.
+Short checklist for converting one script. Why and the details: `docs/ENGINE.md` ("v2 engine rules",
+"Server-only / client-only API" lists; index of all technical docs: `docs/TECHNICAL_REFERENCE.md`). Tools: `tools/porting/README.md`.
 
 ## Before
 
@@ -43,6 +43,7 @@ Short checklist for converting one script. Why and the details: `docs/TECHNICAL_
 
 1. `check.lua` and `toplevel.lua` on the file; a mock test in `tools/porting/tests/` (two players, the
    non-host player doing the thing, no wrong-side calls); run all tests.
-2. Log the change in TECHNICAL_REFERENCE (§7 system, §8 if it fixes an original bug or changes behaviour). The
+2. Log the change in the docs (`SYSTEMS.md` / `GUNS.md` / `VEHICLES.md` for the system, `CHANGES.md` if it fixes an
+   original bug or changes behaviour). The
    converters are frozen (`tools/porting/history/`): edit files directly.
 3. Tell the user exactly what to test in-game, with in-game names.

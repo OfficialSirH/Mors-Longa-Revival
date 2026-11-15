@@ -43,6 +43,11 @@ function AmbushTarget()
 end
 
 function server.tick(dt)
+	-- (2026-11-15) debug menu "ambush now" (host): the next tick with a player on foot ambushes for sure
+	if GetBool("savegame.mod.debug.ambush_now") then
+		SetBool("savegame.mod.debug.ambush_now", false)
+		AmbushTime, TimeWithoutAmbush = -1, 3
+	end
 	AmbushTime = AmbushTime - dt
 	local number = math.random()
 	local target = AmbushTime < 0 and AmbushTarget() or nil

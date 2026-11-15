@@ -77,7 +77,7 @@
 -- records in shared.goreNpcs and each client rebuilds its own NPCs table from them (systems/goreai_netview.lua,
 -- systems/goreai_controller.lua). Host server/client do not share Lua globals, so client NPCs ≠ server NPCs.
 -- Constrain* calls must stay in server.update (update_npcs): v1 pointed/held the gun from tick, which crashed the
--- v2 engine on a worker thread (2026-11-07, see docs/TECHNICAL_REFERENCE.md).
+-- v2 engine on a worker thread (2026-11-07, see docs/ENGINE.md "Hard-won rules").
 --================================================================
 
 

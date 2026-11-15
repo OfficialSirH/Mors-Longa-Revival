@@ -39,7 +39,10 @@ function client.init()
 end
 
 function Smash()
-	if smashTimer == 0 then smashTimer = 0.1 end
+	if smashTimer == 0 then
+		smashTimer = 0.1
+		MeleeNet_SwingStart(spinsmash, 0.9) -- (2026-11-15, MP) for the others; lands after 0.9 s (timer 0.1, dt/9)
+	end
 end
 
 -- (v2) unused; SetPlayerVelocity is server-only, needs a ServerCall if this is ever used
@@ -66,6 +69,7 @@ function Spin()
 end
 
 function client.tick(dt)
+	MeleeNet_RemoteTick(dt) -- (2026-11-15, MP) other players holding this weapon (Melee_Functions.lua)
 	if not GetPlayerCanUseTool() then
 		cycled = false
 		spinsmash = false
@@ -197,6 +201,7 @@ function client.tick(dt)
     					end
 				end
 				PlaySound(swingsound, GetPlayerTransform().pos, 0.6)
+				MeleeNet_SwingFx(hitcount, holeposes, r, g, b) -- (2026-11-15, MP) sounds + particles for the others
 				smashTimer = 0
 				spinsmash = false
 			end

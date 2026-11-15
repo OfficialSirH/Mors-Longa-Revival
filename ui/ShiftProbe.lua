@@ -1,6 +1,6 @@
 -- (2026-11-15, MP) Debug menu "shift probe" (savegame.mod.debug.shiftprobe, host; published to every machine as
 -- level.debug.shiftprobe). For the report "for non-hosts everything is thrown around for a moment at each world
--- shift" (TECHNICAL_REFERENCE §10): the shift (GenerateRoad.lua ReturnToShadowVolume) moves every body 200 m back
+-- shift" (docs/STATUS.md): the shift (GenerateRoad.lua ReturnToShadowVolume) moves every body 200 m back
 -- in one server tick, and nothing in the docs says how that reaches a client. Each machine watches up to
 -- SHIFT_PROBE_MAX bodies around its own player and, from the frame a shift shows up (the synced shift counter
 -- changes or a watched body jumps over 100 m), records SHIFT_PROBE_FRAMES frames: per frame, how many bodies of

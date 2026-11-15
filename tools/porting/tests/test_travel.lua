@@ -3,7 +3,7 @@
 dofile("tools/porting/tests/mockengine.lua")
 local function check(cond, msg) if not cond then error("FAIL: " .. msg, 2) end print("ok  " .. msg) end
 
-local env = MockEngine.load("ui/ConfigMenu.lua", { preload = { "ui/ShiftProbe.lua" } }) -- (2026-11-15) its #include
+local env = MockEngine.load("ui/ConfigMenu.lua", { preload = { "ui/ShiftProbe.lua", "ui/NpcProbe.lua" } }) -- (2026-11-15) its #includes
 env.PLAYERS[1].pos = {0, 4, 3}
 env.def("IsPlayerValid", function() return true end)
 local road = true

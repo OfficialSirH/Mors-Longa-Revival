@@ -89,6 +89,18 @@ do
 	inVehicle[1] = 0
 	env.PLAYERS[1].health = 0
 	check(env.AmbushTarget() == nil, "a dead player on foot is not a target")
+	-- (2026-11-15) debug "ambush now": the next tick ambushes the player on foot (ground 2 m below the drop point)
+	env.PLAYERS[1].health = 1
+	env.server.init()
+	env.def("QueryRaycast", function() return true, 98 end)
+	env.def("GetString", function() return "Day" end)
+	local spawns = 0
+	env.def("Spawn", function() spawns = spawns + 1 return {} end)
+	env.server.tick(1 / 60)
+	check(spawns == 0, "no ambush before its time")
+	env.R["savegame.mod.debug.ambush_now"] = true
+	env.server.tick(1 / 60)
+	check(spawns >= 3 and env.R["savegame.mod.debug.ambush_now"] == false, "debug ambush now: 3-7 soldiers spawned, flag cleared")
 end
 
 -- 4. server bullets fall (weapons/guns/gunnet.lua)

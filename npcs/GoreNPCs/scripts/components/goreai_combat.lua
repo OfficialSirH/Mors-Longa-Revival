@@ -8,6 +8,17 @@ NPC_AIM_SWAY_DIST_MIN = 5 -- Clamp the lower part of the full range.
 NPC_AIM_SWAY_DIST_MAX = 70 -- Clamp the upper part of the full range. --todo use for smgs vs snipers
 
 
+-- (2026-11-15, user OK) NPC gun sounds are "MOD/assets/snd/<gun tag>.ogg" / "<gun tag>dist.ogg". For the tags
+-- g17 (pistols, 79 gun prefabs) and m4 (MK36 rifles, 31) those files never existed, so those NPCs shot silently
+-- (original-mod bug). These point them at the mod's own sounds; m4 has no distant sound (stays as before).
+GOREAI_GUN_SHOT = {
+    g17 = "MOD/assets/snd/Weapons/g17/g17.ogg",
+    m4  = "MOD/assets/snd/Weapons/m4a1/m4a1_0.ogg",
+}
+GOREAI_GUN_DIST = {
+    g17 = "MOD/assets/snd/Weapons/g17/g17dist.ogg",
+}
+
 NPC_AIM_SPREAD_SHOTGUN = 0.2 -- Shotgun barrel spread.
 NPC_TARGET_HIT_DIST = 1.3 -- Dist from aimpos to shootPosOffset. Checks if bullet will hit near player.
 NPC_AIM_MIN_ALIGN = 0.4 -- Linked to npc.aim.torso
@@ -141,9 +152,12 @@ function npc_init_weapon_properties(npc)
         npc.sounds = {}
         npc.sounds.rpghit = LoadSound("MOD/assets/snd/rpghit.ogg")
         npc.sounds.rpghitdist = LoadSound("MOD/assets/snd/rpghitdist.ogg")
-        npc.sounds.gunshot = LoadSound("MOD/assets/snd/"..GetTagValue(npc.barrel, "gun")..".ogg")
-        npc.sounds.rpgGunshot = LoadSound("MOD/assets/snd/"..GetTagValue(npc.barrel, "gun").."dist.ogg")
-        npc.sounds.DistGunShot = LoadSound("MOD/assets/snd/"..GetTagValue(npc.barrel, "gun").."dist.ogg")
+        local gunTag = GetTagValue(npc.barrel, "gun")
+        local shotPath = GOREAI_GUN_SHOT[gunTag] or ("MOD/assets/snd/"..gunTag..".ogg")
+        local distPath = GOREAI_GUN_DIST[gunTag] or ("MOD/assets/snd/"..gunTag.."dist.ogg")
+        npc.sounds.gunshot = LoadSound(shotPath)
+        npc.sounds.rpgGunshot = LoadSound(distPath)
+        npc.sounds.DistGunShot = LoadSound(distPath)
         -- npc.shoot = LoadSound("MOD/assets/snd/"..GetTagValue(npc.barrel, "gun")..".ogg")
 
 

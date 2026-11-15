@@ -45,7 +45,8 @@ function init_sounds()
             hit = CreateSoundSet("MOD/npcs/GoreNPCs/snd/voice/ar/hit/hit_", 35),
         },
         en = {
-            death = CreateSoundSet("MOD/npcs/GoreNPCs/snd/voice/en/death/death_", 12),
+            -- (2026-11-15) 8, not 12: death_9..12 never existed (original-mod bug, a third of deaths were silent)
+            death = CreateSoundSet("MOD/npcs/GoreNPCs/snd/voice/en/death/death_", 8),
             hard = CreateSoundSet("MOD/npcs/GoreNPCs/snd/voice/en/hard/hard_", 12),
             hit = CreateSoundSet("MOD/npcs/GoreNPCs/snd/voice/en/hit/hit_", 23),
         },
@@ -137,6 +138,7 @@ function init_gun_dist_sounds()
                 LoadSound(""),
             }
         },
+        -- (2026-11-15) rifle_dist_far_6 dropped from both lists: it never existed (original-mod bug, 1 in 6 silent)
         rifle = {
             med = {
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_1.ogg"),
@@ -144,7 +146,6 @@ function init_gun_dist_sounds()
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_3.ogg"),
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_4.ogg"),
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_5.ogg"),
-                LoadSound("MOD/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_6.ogg"),
             },
             far = {
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_1.ogg"),
@@ -152,7 +153,6 @@ function init_gun_dist_sounds()
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_3.ogg"),
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_4.ogg"),
                 LoadSound("MOD/npcs/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_5.ogg"),
-                LoadSound("MOD/GoreNPCs/snd/gun_dist_sounds/rifle_dist_far_6.ogg"),
             }
         },
         sniper = {

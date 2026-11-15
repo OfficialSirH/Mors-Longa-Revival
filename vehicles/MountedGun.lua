@@ -11,7 +11,7 @@
 -- (AVF's barrels[1] offsets are in a shape-corner frame: they pointed the wrong way here.) Gunner: the rig tagged "gunner"
 -- (a standing place under the vehicle's body, added by tools/porting/add_seats.py; not a vehicle seat).
 --
--- Network (co-op, gunner trusted like the hand guns, TECHNICAL_REFERENCE §5/§7):
+-- Network (co-op, gunner trusted like the hand guns, docs/GUNS.md / docs/VEHICLES.md):
 --   gunner's client: aim point from its camera -> server.mgAim; fires the rounds through gunnet.lua (GunNet_Fire:
 --     server = world effects and NPC damage, every client = tracer / sound), ammo and reload, HUD.
 --   server: turns the turret / gun joints toward the aim, holds them when nobody mans the gun, keeps the ammo in

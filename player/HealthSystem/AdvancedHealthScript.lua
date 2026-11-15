@@ -554,7 +554,7 @@ function client.tick(dt)
 		SetTag(LLEGL, "QueriedDamage", Falling*FallDamage)
 		SetTag(LLEGL, "S", 1)
 
-		if Falling > DamageValues[1] then
+		if Falling > DamageValues[1] and not Godmode then -- (2026-11-15, user OK) no fractures in God Mode
 		SetTag(RLEGL, "Fracture")
 		SetTag(LLEGL, "Fracture")
 		PlaySound(Sounds.boneSnap, GetPlayerCameraTransform().pos, 20)
@@ -591,6 +591,12 @@ function client.tick(dt)
 			RemoveTag(Hitbox, "Bleed")
 			SetTag(Hitbox, "S", 0)
 		end
+		-- (2026-11-15, user OK; original-mod gap) God Mode blocked damage but not bleeding / fractures: clear them
+		-- (also any present when God Mode is switched on)
+		if Godmode then
+			RemoveTag(Hitbox, "Bleed")
+			RemoveTag(Hitbox, "Fracture")
+		end
 
 		QueriedDamage = tonumber(GetTagValue(Hitbox, "QueriedDamage")) -- Gets damage done to player
 		if QueriedDamage == nil then
@@ -607,6 +613,11 @@ function client.tick(dt)
 		CHP = tonumber(Health[CurrentBodypart]["CurrentHealth"]) -- health for bodypart
 		CAL = tonumber(Health[CurrentBodypart]["Armor"]) or 0 -- armor level for bodypart
 		CAHP = tonumber(Health[CurrentBodypart]["ArmorHealth"])
+		-- (2026-11-15, DEBUG) healing readout: a heal (negative damage) arriving at this limb, and the state it meets
+		if QueriedDamage and QueriedDamage < 0 and GetBool("savegame.mod.debug.healprobe") then
+			HealProbeLast = { t = GetTime(), limb = CurrentBodypart, trigger = Hitbox, q = QueriedDamage, chp = CHP,
+				max = tonumber(Health[CurrentBodypart]["MaxHP"]), god = Godmode, armored = Armored }
+		end
 
 		if TimerConsumed(HeadshotTimer) then
 			TimerResetTime(HeadshotTimer)
@@ -628,7 +639,9 @@ function client.tick(dt)
 		end
 
 
-		if tonumber(GetTagValue(Hitbox, "QueriedDamage")) >= 1 then PlaySound(LoadSound("MOD/snd/Projectiles/Impacts/Player/Limbs/hit_0.ogg")) end
+		-- (2026-11-15) a hit sound was loaded and played here on every damaging hit, from
+		-- MOD/snd/Projectiles/Impacts/Player/Limbs/hit_0.ogg, which never existed (original-mod bug): silent, one log
+		-- error per hit. Removed; the player_impact_limbs_* sounds elsewhere in this script are unchanged.
 
 		SetTag(Hitbox, "QueriedDamage", 0) -- makes sure the damage doesnt apply again
 		SetTag(Hitbox, "S", 0)
@@ -798,12 +811,12 @@ function client.tick(dt)
 				end
 				if CurrentBodypart ~= "HEAD" and QueriedDamage > 1 then
 					local bleedChance = math.random(0,100)/100 -- Bleed randomizer
-					if bleedChance < C4B * Pen and CHP < tonumber(Health[CurrentBodypart]["MaxHP"]) then -- Checks if bleed should apply
+					if not Godmode and bleedChance < C4B * Pen and CHP < tonumber(Health[CurrentBodypart]["MaxHP"]) then -- Checks if bleed should apply (2026-11-15: not in God Mode)
 						SetTag(Hitbox, "Bleed", true)
 					end
 					if CurrentBodypart ~= "TORSO" then
 						local fractureChance = math.random(0,100)/100 -- Fracture randomizer
-						if fractureChance < C4F * Pen and CHP < tonumber(Health[CurrentBodypart]["MaxHP"]) and QueriedDamage > 4 then -- Checks if fracture should apply
+						if not Godmode and fractureChance < C4F * Pen and CHP < tonumber(Health[CurrentBodypart]["MaxHP"]) and QueriedDamage > 4 then -- Checks if fracture should apply (2026-11-15: not in God Mode)
 							SetTag(Hitbox, "Fracture", true)
 						end
 					end
@@ -1361,7 +1374,28 @@ end
 
 
 function client.draw(dt)
-	
+	-- (2026-11-15, DEBUG) healing readout, health side: this script's limb triggers and the last heal it received
+	if GetBool("savegame.mod.debug.healprobe") then
+		local hs = {}
+		for k = 1, #Hitboxes do hs[k] = GetTagValue(Hitboxes[k], "localhitbox") .. "=" .. tostring(Hitboxes[k]) end
+		local h = HealProbeLast
+		local inLevel = #FindTriggers("localhitbox", true)
+		UiPush()
+			UiFont("bold.ttf", 18) UiAlign("left top") UiTranslate(20, 700) UiTextShadow(0, 0, 0, 0.8, 1.5)
+			UiColor(0.6, 1, 0.6, 1)
+			UiText(string.format("health limb triggers (%d, %d localhitbox in level): %s", #Hitboxes, inLevel,
+				table.concat(hs, " ")))
+			UiTranslate(0, 20)
+			if h then
+				UiText(string.format("last heal received: %.1f s  %s (trigger %s) %.1f, limb HP then %.1f / %.1f, now %.1f; god %s, armored %s",
+					h.t, h.limb, tostring(h.trigger), h.q, h.chp or -1, h.max or -1,
+					tonumber(Health[h.limb]["CurrentHealth"]) or -1, tostring(h.god), tostring(h.armored)))
+			else
+				UiText("last heal received: none yet")
+			end
+		UiPop()
+	end
+
 	
 	
 	
