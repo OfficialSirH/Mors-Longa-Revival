@@ -117,7 +117,7 @@ Phase 5 polishing, in order (each part ends at a commit point, the user commits)
 5. Docs ✔ (2026-11-15, user OK): TECHNICAL_REFERENCE split into ENGINE / GUNS / VEHICLES / SYSTEMS / PERFORMANCE /
    CHANGES / STATUS (TECHNICAL_REFERENCE.md = index + old § map), folder map updated.
 6. Workshop publish: after the MP re-tests. `tools/porting/make_release.py` builds the release copy (dry run
-   2026-11-15: 6616 files, 551 MB); the user uploads it from the game's mod manager. Built 2026-11-15 (6617
-   files, no dev files, no Workshop id yet: the first upload creates the item).
+   2026-11-15: 6616 files, 551 MB); the user uploads it from the game's mod manager. Rebuilt 2026-11-15 with the
+   third-person guns (6618 files, no dev files, no Workshop id yet: the first upload creates the item).
 
 Later (user): a seat-switch key (players cannot switch seats; docs/STATUS.md), CH-47 / Hind, AS350 rockets on RMB, AGS-30 pitch.

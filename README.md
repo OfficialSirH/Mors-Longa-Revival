@@ -20,20 +20,17 @@ This project's whole porting process was done with Claude.
 
 Mors Longa Revival brings the original to Teardown 2.x and its co-op multiplayer:
 
-- **Co-op for up to 4 players.** Each player has their own inventory, health, injuries, guns and money; the road is
-  generated ahead of the player furthest along, and players left behind are brought along. Only the host starts a
-  run (the host's difficulty, rules, perks and garage apply).
+- **Co-op for up to 4 players.** Each player has their own inventory, health, injuries, guns and money; the road is generated ahead of the player furthest along, and players left behind are brought along. Only the host starts a run (the host's difficulty, rules, perks and garage apply).
 - **Vehicles with seats.** Every drivable vehicle has seats; friendly NPCs ride along too.
-- **Mounted guns without the separate AVF mod.** Technicals, tanks, BMPs, the Katyusha, the Kornet / AGS-30 tripods
-  and the other armed vehicles work on their own: a gunner place and AVF's shells, ported with credit.
-- **Flyable AS350 helicopter** with seats and a mouse-aim flight model (the enemy helicopters keep their original
-  AI).
+- **Mounted guns without the separate AVF mod.** Technicals, tanks, BMPs, the Katyusha, the Kornet / AGS-30 tripods and the other armed vehicles work on their own: a gunner place and AVF's shells, ported with credit.
+- **Flyable AS350 helicopter** with seats and a mouse-aim flight model (the enemy helicopters keep their original AI).
 - Many original bugs fixed along the way. The full list of changes against the original is in
   [docs/CHANGES.md](docs/CHANGES.md), unfinished or set-aside content in [docs/STATUS.md](docs/STATUS.md).
 
-**Status:** everything is tested in single-player; multiplayer testing is next. Not yet in the port: the CH-47 and
-Hind helicopters (single-player only for now), horde mode (unfinished in the original too), the unfinished PKM, M9,
-Bauer-553 and MGL guns, and the AGS-30 aiming up and down.
+**Status:** Everything is tested in single-player. Multiplayer has been tested to a limited extent
+with two players within the local multiplayer. There's a rare crash where the game closes without an error, cause not found yet.
+Not yet in the port: the CH-47 and Hind helicopters (single-player only for now), horde mode (unfinished in the original too),
+the unfinished PKM, M9, Bauer-553 and MGL guns, and the AGS-30 aiming up and down.
 
 ## Story
 
