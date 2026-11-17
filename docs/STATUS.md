@@ -103,6 +103,27 @@ MP-only (tested locally since 2026-11-14: the in-game mod editor runs a host and
   client height within 0.2 m, all standing, same handles) **[verified in-game]**; server sound test heard on the
   client, so server-side PlaySound reaches clients **[verified in-game]**. Not reproduced since; cause of the first
   report unknown. The readout and sound test stay in the debug menu.
+* Buildings missing for non-hosts (user, post-release MP test with a friend 2026-11-16: "some cases where other
+  players may not see a building the host sees"). Causes not known: buildings and roadblocks are spawned by server
+  code only (`world/generation/RandomBuilding.lua`, synced like every server spawn), their prefabs have no scripts,
+  and nothing else deletes them per machine. Lead, not verified: the spawner puts their bodies to sleep
+  (`SetSpawnedEntitiesBodyNotActive`) and the world shift moves them with SetBodyTransform; whether a sleeping
+  body's move reaches clients is unknown. Debug menu (host): "building sync readout (all players)"
+  (`ui/BuildingProbe.lua`, test_buildprobe.lua): the last 8 buildings / roadblocks spawned, per machine: handle
+  known here, apart from the server's place, voxels, body shapes, asleep. To test: when a building is missing for
+  the non-host, both players read the line for it.
+  First use (user screenshot 2026-11-16, ~2.85 km driven): a stretch of the road ahead missing for the non-host
+  (flat ground there), the host had it. The listed buildings were all behind (deleted on the server), so the list
+  couldn't say. Added the aim check: Ctrl+J on any machine (readout on) casts the camera ray there and on the
+  server and compares the hits (NOT HERE / apart). Next test: the non-host aims at the gap and presses Ctrl+J.
+  **Cause found (2026-11-17, MCP bridge two-window test, level scan):** pieces spawned around a world shift end up
+  200 m off on the client (world body race); fixed by the shift re-sync, see [CHANGES](CHANGES.md) "Buildings / road
+  missing for non-hosts". Still open after the fix: one 13,692-voxel static piece near x -107 sits ~40 m apart in z on
+  the client, the same in two runs (not along the shift axis; not looked into).
+* Local two-window MP test (MCP bridge, 2026-11-16/17): with default options the test windows closed 4 times in a
+  row around 1 km of travel (no dump, no Windows event; host log just stops; free RAM down to ~300 MB at times). User:
+  most likely the single PC's resources (never crashed with a friend on the published version). With "Reduce Number
+  of Objects" on and "Segment Loading Pace" 3, two full 2 km runs (10 shifts each) ran without a crash.
 * MP crash (user, 2026-11-15): "quite early" (~13 min into a session), a game window just closes; no Teardown
   crash dump (newest 02:45, the SP driving crash), both logs simply stop, no Windows application error / display
   reset at that time. Unknown. Two more the same evening (18:2x, testing NPCs / vehicle events, ~7 min in): the

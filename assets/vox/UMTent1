@@ -1,22 +1,22 @@
 <prefab version="1.2.0">
 	<group name="instance=MOD/vox/UMTent1" pos="9.1 0.0 9.8" rot="0.0 0.0 0.0">
 		<group name="tent" prop0="texture=2 0.5">
-			<vox pos="-0.6 0.0 0.0" file="MOD/vox/quarantine.vox" object="tent entrance">
-				<voxbox pos="3.35 -0.1 -0.1" rot="0.0 0.0 20.0" size="1 28 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="2.5 2.45 -0.1" rot="0.0 0.0 70.0" size="1 27 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="-2.5 2.45 0.0" rot="0.0 -180.0 70.0" size="1 27 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="-3.35 -0.1 0.0" rot="0.0 180.0 20.0" size="1 28 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
+			<vox pos="-0.6 0.0 0.0" file="MOD/assets/vox/quarantine.vox" object="tent entrance">
+				<voxbox pos="3.35 -0.1 -0.1" rot="0.0 0.0 20.0" size="1 28 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="2.5 2.45 -0.1" rot="0.0 0.0 70.0" size="1 27 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="-2.5 2.45 0.0" rot="0.0 -180.0 70.0" size="1 27 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="-3.35 -0.1 0.0" rot="0.0 180.0 20.0" size="1 28 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
 			</vox>
-			<vox pos="-0.6 0.0 6.6" file="MOD/vox/quarantine.vox" object="tent back">
-				<voxbox pos="3.35 -0.1 -0.1" rot="0.0 0.0 20.0" size="1 28 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="2.5 2.45 -0.1" rot="0.0 0.0 70.0" size="1 27 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="-2.5 2.45 0.0" rot="0.0 -180.0 70.0" size="1 27 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
-				<voxbox pos="-3.35 -0.1 0.0" rot="0.0 180.0 20.0" size="1 28 1" brush="MOD/vox/quarantine.vox" object="angled piece"/>
+			<vox pos="-0.6 0.0 6.6" file="MOD/assets/vox/quarantine.vox" object="tent back">
+				<voxbox pos="3.35 -0.1 -0.1" rot="0.0 0.0 20.0" size="1 28 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="2.5 2.45 -0.1" rot="0.0 0.0 70.0" size="1 27 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="-2.5 2.45 0.0" rot="0.0 -180.0 70.0" size="1 27 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
+				<voxbox pos="-3.35 -0.1 0.0" rot="0.0 180.0 20.0" size="1 28 1" brush="MOD/assets/vox/quarantine.vox" object="angled piece"/>
 			</vox>
-			<vox pos="2.3 1.3 3.3" rot="0.0 0.0 -70.0" file="MOD/vox/quarantine.vox" object="tent side 3"/>
-			<vox pos="0.6 2.95 3.3" rot="0.0 0.0 -20.0" file="MOD/vox/quarantine.vox" object="tent side 1"/>
-			<vox pos="-1.8 2.95 3.2" rot="0.0 -180.0 -20.0" file="MOD/vox/quarantine.vox" object="tent side 1"/>
-			<vox pos="-3.5 1.3 3.2" rot="0.0 -180.0 -70.0" file="MOD/vox/quarantine.vox" object="tent side 3"/>
+			<vox pos="2.3 1.3 3.3" rot="0.0 0.0 -70.0" file="MOD/assets/vox/quarantine.vox" object="tent side 3"/>
+			<vox pos="0.6 2.95 3.3" rot="0.0 0.0 -20.0" file="MOD/assets/vox/quarantine.vox" object="tent side 1"/>
+			<vox pos="-1.8 2.95 3.2" rot="0.0 -180.0 -20.0" file="MOD/assets/vox/quarantine.vox" object="tent side 1"/>
+			<vox pos="-3.5 1.3 3.2" rot="0.0 -180.0 -70.0" file="MOD/assets/vox/quarantine.vox" object="tent side 3"/>
 		</group>
 	</group>
 </prefab>

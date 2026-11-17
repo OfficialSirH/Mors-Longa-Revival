@@ -1,6 +1,7 @@
 name = Mors Longa Revival (dev)
 author = officialsirh (co-op port), Overdrive Studios (original Mors Longa), elboydo (AVF shell code)
-tags = Map,Tool,Vehicle,Gameplay,Multiplayer
+tags = Map, Tool, Vehicle, Gameplay, Multiplayer
 version = 2
 preview = preview.jpg
+
 description =[noupload]Co-op port (up to 4 players, Teardown 2.x) of Mors Longa by Overdrive Studios. You're stuck in Alashya and your task is to escape. Fight your way through insurgents, Alashyan Armed Forces, and cultists while you scavenge for food, water, medical supplies and ammunition. Will you make it out? Or will you succumb to the various dangers in your path?

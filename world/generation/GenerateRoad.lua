@@ -10,6 +10,7 @@
 #include "EnemySpawnsProcessor.lua"
 #include "DecorParts.lua"
 #include "SegmentPieces.lua"
+#include "SpawnSlot.lua"
 ]]
 
 -- #include "GenerateRoad_Reuse.lua"
@@ -280,6 +281,7 @@ function ReturnToShadowVolume()
 			end
 		end
 		ShiftDecorQueue(shiftDist)   -- decor still waiting to spawn moves with the world
+		ShiftResync_Start()
 		SetFloat("level.debug.spawned.world_shift", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 		Returns = Returns + 1
 		SetInt("level.world_shifts", GetInt("level.world_shifts") + 1, true) -- (v2) for movers (debug auto-travel)
@@ -524,9 +526,28 @@ function QueueEntryXml(d)
 	return SEGMENT_PIECE_HEADS[h] .. p[2] .. SEGMENT_PIECE_TAILS[h], p[3]
 end
 
+-- (2026-11-17, user) Option "Segment Loading Pace" (Performance > Physical, the host's): the generation spawns only
+-- every SpawnGap() frames (segment pieces, segment files, decor here; buildings, enemies, loot, vehicles, signs through
+-- SpawnSlot.lua, which reads level.spawn.gap). Above 1 the pieces also share the spawners' slot, so a frame has at most
+-- one of the two. 1 = every frame, as before. Read every tick (no restart).
+SPAWN_GAP_MAX = 6
+
+function SpawnGap()
+	local o = Settings and Settings.performance and Settings.performance.physical
+		and Settings.performance.physical.spawn_pace
+	local g = o and math.floor((tonumber(o.value) or 1) + 0.5) or 1
+	return math.max(1, math.min(SPAWN_GAP_MAX, g))
+end
+
 function server.tick(dt)
+	ShiftResync_Tick()
 	DecorFrame = DecorFrame + 1
 	SetInt("level.frame", DecorFrame)   -- (2026-11-14) frame counter for the spawners' one-spawn-per-frame slot
+	local gap = SpawnGap()
+	if GetInt("level.spawn.gap") ~= gap then SetInt("level.spawn.gap", gap) end
+	if gap > 1 then
+		if not SpawnSlotFree() then return end
+	end
 	local used = 0
 	while DecorQueue[1] and DecorFrame >= DecorQueue[1].frame do
 		local d = DecorQueue[1]
@@ -543,9 +564,74 @@ function server.tick(dt)
 			ManageVegDeleting(entities)
 		end
 	end
+	if used > 0 and gap > 1 then TakeSpawnSlot() end
 	if used > 0 then SetString("level.debug.what.part", string.format("%.2fM cells", used / 1e6)) end -- debug readout
 	SetInt("level.debug.parts_waiting", #DecorQueue)
 	if #DecorQueue == 0 and GetBool("level.segment.loading") then SetBool("level.segment.loading", false) end
+end
+
+-- (MP fix 2026-11-16, measured with the MCP bridge's two-window test) "Other players may not see a building / a
+-- stretch of road the host sees": static prefabs (no <body>) are spawned into the world body, which the world shift
+-- moves (SetBodyTransform above). A shape spawned after that move, before a client has applied it, is placed against
+-- the client's old world-body position: permanently 200 m off there (missing in front of the player, a copy one shift
+-- behind). Test: a box spawned before the move in the same tick was right on the client, boxes spawned after it (same
+-- tick, ~1 s later) were off by the move; the client had the move within 3 s. A changed shape local transform is
+-- synced (re-setting the same value is not), so after a shift every world-body shape newer than the mark (handles
+-- grow; GetBodyShapes lists them in ascending order) is nudged 1 mm and set back: each client gets the server's
+-- local transform again. Second in-game run: pieces spawned shortly BEFORE a shift were also off on the client
+-- (one shift ahead: the client built them after it had the move), so the mark is the newest world-body shape
+-- SHIFT_RESYNC_BEFORE s before the shift (recorded every second), and a late pass covers pieces a client builds late.
+SHIFT_RESYNC_AFTER = { 1, 5, 10 }
+SHIFT_RESYNC_BEFORE = 10
+ShiftResyncHistory = {}   -- { { time, newest world-body shape }, ... } once a second, the last SHIFT_RESYNC_BEFORE s
+
+local function newestWorldShape()
+	local shapes = GetBodyShapes(GetWorldBody())
+	return shapes[#shapes] or 0
+end
+
+-- One job per shift, each with its own mark (2026-11-17: a single job that kept the oldest mark while shifts came
+-- every ~8 s never moved its mark on: passes grew to 12000 shapes). Jobs due in the same tick share one pass.
+ShiftResyncJobs = {}
+
+function ShiftResync_Start()
+	local h = ShiftResyncHistory
+	local mark = h[1] and h[1][2] or newestWorldShape()   -- the oldest record: ~SHIFT_RESYNC_BEFORE s ago
+	ShiftResyncJobs[#ShiftResyncJobs + 1] = { mark = mark, at = GetTime(), step = 1 }
+end
+
+function ShiftResync_Tick()
+	local now = GetTime()
+	local h = ShiftResyncHistory
+	if not h[#h] or now - h[#h][1] >= 1 then
+		h[#h + 1] = { now, newestWorldShape() }
+		while h[2] and now - h[2][1] >= SHIFT_RESYNC_BEFORE do table.remove(h, 1) end
+	end
+	local mark, due = nil, {}
+	for _, r in ipairs(ShiftResyncJobs) do
+		if now >= r.at + SHIFT_RESYNC_AFTER[r.step] then
+			due[#due + 1] = r
+			if not mark or r.mark < mark then mark = r.mark end
+		end
+	end
+	if not mark then return end
+	local n, first, last = 0, 0, 0
+	for _, s in ipairs(GetBodyShapes(GetWorldBody())) do
+		if s > mark then
+			local lt = GetShapeLocalTransform(s)
+			SetShapeLocalTransform(s, Transform(VecAdd(lt.pos, Vec(0, 0.001, 0)), lt.rot))
+			SetShapeLocalTransform(s, lt)
+			n = n + 1
+			if first == 0 then first = s end
+			last = s
+		end
+	end
+	SetString("level.debug.shift_resync", string.format("%.1f: mark %d, %d shapes, %d job(s) due (#%d..#%d)", now,
+		mark, n, #due, first, last))
+	for _, r in ipairs(due) do r.step = r.step + 1 end
+	for i = #ShiftResyncJobs, 1, -1 do
+		if not SHIFT_RESYNC_AFTER[ShiftResyncJobs[i].step] then table.remove(ShiftResyncJobs, i) end
+	end
 end
 
 function ShiftDecorQueue(shiftDist)

@@ -261,6 +261,78 @@ Behaviour changes decided by the user:
   the original's limits (x within 200 px of the centre, at most 100 px below it); both still sway with the gun.
   **[verified in-game]** (user, 2026-11-15).
   * Hardcore "Try Again" resets the other players' money too (user, 2026-11-14).
+* RPG-7 for other players (user, post-release MP test with a friend 2026-11-16: "RPGs don't render for other players
+  nor their sounds of shooting"; to re-test). Launch sound and backblast smoke: `RPG.lua` made them only on the
+  shooter's machine (the RPG fires no shell, so `GunNet_Fire`'s remote sound never ran); now `server.rpgLaunch` /
+  `client.rpgLaunch` play them at the launcher on the other machines (`RpgLaunchEffects`). Launcher: the
+  third-person copy's box test read a part's local position, one corner of its voxel grid; the launcher tube's
+  corner is its rear end (model file: 40 voxels long; the corner is 0.85-1.7 m behind the grip for 0.05-0.1 m
+  voxels), outside the box (z <= 0.5), so the copy left the tube out while the real tool was hidden. The box now
+  tests each part's centre (`Gun3P_PartCentre`; test_gun3p.lua). The rocket in flight is a server body (synced);
+  its flame trail is server particles, whether those reach clients is still unverified.
+  Second round (user screenshot 2026-11-16: launcher now shown; "too small, and should be held over the shoulder
+  when aimed"): `GUN3P_TOOL["gun-rpg"]`: the copy is scaled so its longest part (the tube) is 1.0 m (a real RPG-7:
+  0.95 m) instead of 0.4 x the model; the RPG's model is a .vox registered directly, not a gun prefab the 0.4 was
+  chosen for. While aiming / after a shot the tube's axis rests on the right shoulder beside the head (own action
+  pose) instead of the rifle's grip pose; idle it is carried low like the rifles. To test.
+  Third round (user 2026-11-16: size, pose and sound good; "the rocket seems to spawn several metres in front of
+  the RPG", seen by the other player): cause not verified. Two parts are known: the rocket spawns ~2 m ahead of the
+  shooter's first-person launcher (unchanged, v1), and the other machines get the new server body some frames later
+  (120 m/s = 2 m per frame). The other machines now draw a smoke trail from just in front of the shooter's eye
+  along the shot (`RpgLaunchTrail`), and with the debug building sync readout on they print where the rocket first
+  showed up there (`RpgProbeTick`: distance from the shooter's eye, delay, spawn distance; removed after the
+  measurement below).
+  Readout (user 2026-11-16, 15 shots): spawned 2.4 m from the eye, first seen on the other machine 3.3 m (3 of 15:
+  5.3 m) after 0.02-0.05 s: the spawn point is most of the gap, the network 1-3 m. Behaviour change (user OK): the
+  rocket now spawns `RPG_SPAWN_DIST` = 1.2 m from the eye on the same line (v1: 2.4 m); the point-blank check
+  stays. To test.
+* Seat camera (user, MP 2026-11-16: "if a seat gets destroyed while you're in it, the camera goes far off the map;
+  exiting puts player and camera back next to the car"; the player is moved to the next free seat, user: keep that,
+  no ejecting). `vehicles/ShootFromCar.lua` `DriveByTick` (server, the RMB drive-by script) called
+  `SetPlayerVehicle(vehicle)` every tick while the player was in a vehicle and not holding the drive-by key (v1; a
+  no-op while seated). Exiting is what ends those calls. Likely cause (not verified): the engine takes the player
+  out of the broken seat and this put them back every tick, each re-entry resetting the vehicle camera. Now it
+  calls it only to put a drive-by shooter back (repeated for 0.5 s while the engine settles), and once if the player
+  is taken out some other way (the engine picks a free seat); taken out again within 2 s = left out. The host's
+  screen prints "player N taken out of the vehicle while seated: re-seated once" when that happens. A camera guard
+  tried first (client, placing the camera while it was far from the vehicle, three rounds) only covered the
+  symptom (user: "it should fix once and be done") and is removed. Test: the line appeared once, the player stayed
+  in, the camera was still under the map; the player sits in another, working seat (user). Guess (not verified):
+  the re-seat came in the same tick as the engine's ejection, so the client never saw the player leave and kept the
+  broken seat for its camera; exiting and entering is a change it does see. Round 2: the player stays out for
+  0.3 s before the one re-seat. While the debug sync readout is on, the host prints the server's seat (rig handle)
+  before / after, and every machine prints its own player's vehicle and seat when they change (different handles =
+  the client kept the old seat). **[verified in-game]** (user, 2026-11-16: "the camera seems to be fine now"; client
+  log: seat 11303 (broken) → vehicle 0 → seat 11296; host: taken out of seat 11303, re-seated after 0.3 s).
+* Buildings / road missing for non-hosts (user, post-release MP test 2026-11-16; found 2026-11-17 with the MCP
+  bridge's two-window test). Static prefabs (no `<body>`) are spawned into the world body, which the world shift moves
+  200 m (`SetBodyTransform`). Test with boxes: a box spawned before the move (same tick) sat right on the client;
+  boxes spawned after it (same tick, ~1 s later) were off by the move on the client, permanently; the client had the
+  move within 3 s. In the travel, pieces were also off the other way (spawned just before a shift, built by the
+  client after the move). So the non-host sees a gap (road, building, hill) and a copy one shift away. A changed
+  shape local transform is synced (re-setting the same value is not, tested), so `GenerateRoad.lua`
+  `ShiftResync_*`: at each shift a job marks the newest world-body shape from 10 s before (recorded every second);
+  1, 5 and 10 s after the shift every newer world-body shape is moved 1 mm and set back, which sends the server's
+  placement to every client (test_generateroad.lua). Measured: 200-11,000 shapes per pass. In-game (two 2 km runs):
+  misplaced pieces seen right after a shift are back in place once its passes ran; 4 of 493 cells still differ at the
+  end, all from one piece unrelated to the shift ([STATUS](STATUS.md)). Network cost with a remote player: unmeasured.
+  To test with a friend.
+* Debug building sync readout, level scan (2026-11-16): the server publishes per 20 m cell (grid offset 7.3 m) the
+  count and voxels of its static shapes (players' held tools left out); every machine lists the cells that differ
+  and asks the server which shapes are in the worst one (`ui/BuildingProbe.lua`, test_buildprobe.lua). The readout
+  now also switches on from `level.debug.buildprobe_on` (set by a test tool).
+* Tent prefabs (2026-11-16): `assets/vox/UMTent1/2/3` (prefabs without a file extension) still pointed at
+  `MOD/vox/quarantine.vox`; the reorganization's path rewrite skipped them (log: "File not found .../vox/quarantine.vox").
+  Now `MOD/assets/vox/quarantine.vox`. A check of every `MOD/` path in all text files found no other path the
+  reorganization broke (403 dead paths, all already dead in 9dde6dd).
+* Option "Reduce Number of Objects" (2026-11-17): `RandomBuilding.lua` read `Settings.performance.spawn_less_objects`
+  (always nil; same in 9dde6dd: original-mod bug), so the option never removed buildings' detail shapes. Now
+  `Settings.performance.physical.spawn_less_objects.value` (default off: no change unless switched on).
+* New option "Segment Loading Pace" (Performance > Physical, 1-6, default 1 = as before; user request 2026-11-17):
+  the road generation spawns only every Nth frame: segment pieces, segment files and decor (`GenerateRoad.lua`
+  `SpawnGap`) and the spawners through `SpawnSlot.lua` (`level.spawn.gap`); above 1 the pieces share the spawners'
+  slot. Less data per frame for host and clients; the road appears more slowly (pace 3 at 25 m/s: the traveller
+  waited for road 72 ticks in 2 km). test_decor.lua.
 * MP fixes, second round (2026-11-14, user's decisions; test_mpleads.lua, test_newlevel.lua; to re-test in MP):
   * Perks are the host's for everyone: a pickup (`server.invTake`) raises the perk in the host's savegame (before:
     the picker's own; a maxed perk still gives the picker $500); `game/newLeveltoLEVEL.lua` publishes the host's

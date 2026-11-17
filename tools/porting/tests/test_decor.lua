@@ -18,6 +18,8 @@ function GetInt(k) return R[k] or 0 end
 function SetInt(k, v) R[k] = v end
 function SetFloat(k, v) R[k] = v end
 function GetTime() return 0 end
+function GetWorldBody() return 1 end      -- (2026-11-16) the shift re-sync's once-a-second record
+function GetBodyShapes() return {} end
 function DebugPrint() end
 function GetEntityType() return "shape" end
 function HasTag() return false end
@@ -193,4 +195,32 @@ TakeSpawnSlot()
 check(not SpawnSlotFree(), "slot taken this frame")
 R["level.frame"] = 8
 check(SpawnSlotFree(), "next frame: free again")
+
+-- (2026-11-17) option "Segment Loading Pace": spawns only every Nth frame, pieces and spawners share the slot
+check(SpawnGap() == 1, "no pace option: every frame")
+Settings.performance.physical = { spawn_pace = { value = 3 } }
+check(SpawnGap() == 3, "pace 3")
+Settings.performance.physical.spawn_pace.value = 40
+check(SpawnGap() == SPAWN_GAP_MAX, "pace clamped to the maximum")
+Settings.performance.physical.spawn_pace.value = 3
+R["level.spawn.slot"] = nil
+spawned = {}
+QueueDecor("RoadSegment4", Transform(Vec(0, 0, 0)))
+local spawnFrames = {}
+for i = 1, 60 do
+	local before = #spawned
+	server.tick(1/60)
+	if #spawned > before then spawnFrames[#spawnFrames + 1] = R["level.frame"] end
+end
+local spaced = #spawnFrames >= 2
+for i = 2, #spawnFrames do if spawnFrames[i] - spawnFrames[i - 1] < 3 then spaced = false end end
+check(R["level.spawn.gap"] == 3 and spaced, "pace 3: pieces spawn at least 3 frames apart (" .. #spawnFrames .. " spawn frames)")
+R["level.spawn.slot"] = R["level.frame"]
+R["level.frame"] = R["level.frame"] + 2
+check(not SpawnSlotFree(), "pace 3: a spawner waits 2 frames after a spawn")
+R["level.frame"] = R["level.frame"] + 1
+check(SpawnSlotFree(), "pace 3: free on the 3rd frame")
+Settings.performance.physical.spawn_pace.value = 1
+server.tick(1/60)
+check(R["level.spawn.gap"] == 1, "back to 1: every frame again")
 print("all segment piece tests passed")

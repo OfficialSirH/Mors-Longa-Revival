@@ -28,7 +28,8 @@ local function machine(localPlayer)
 	env.def("SetShapeLocalTransform", function(s, t) env.local_t[s] = t end)
 	env.def("SetTag", function(s, tag) env.tags[s] = env.tags[s] or {} env.tags[s][tag] = true end)
 	env.def("RemoveTag", function(s, tag) if env.tags[s] then env.tags[s][tag] = nil end end)
-	env.def("GetShapeSize", function() return 10, 10, 10, 0.1 end)
+	env.sizes = {}
+	env.def("GetShapeSize", function(s) local z = env.sizes[s] or 10 return 10, 10, z, 0.1 end)
 	env.def("GetEntityType", function(e) return env.types[e] end)
 	env.def("IsHandleValid", function(h) return env.valid[h] == true or (h >= 100 and h < 300) end)
 	env.def("Delete", function(h) env.valid[h] = nil env.deleted = (env.deleted or 0) + 1 end)
@@ -73,7 +74,9 @@ holder.hand1, holder.hand2, holder.arm1 = 111, 110, 112
 for i = 1, 12 do holder.local_t[100 + i] = holder.Transform(holder.Vec(0.2, -0.5, -0.1 * i)) end
 holder.local_t[105] = holder.Transform(holder.Vec(0, -200, 0))   -- a part parked away (hideTrans)
 holder.local_t[104] = holder.Transform(holder.Vec(1.2, -0.2, 22.4))   -- never moved by the script (MC308's stick)
+holder.local_t[106] = holder.Transform(holder.Vec(0.2, -0.5, -5.0))   -- a 4 m tube: its corner outside the box, its centre inside (RPG-7)
 for i = 1, 12 do viewer.local_t[100 + i] = viewer.Transform(viewer.Vec(24 * i, 0, 0)) end
+viewer.sizes[106] = 40
 
 local function relay()
 	local n = 0
@@ -104,6 +107,7 @@ check(near(p3.pos[1], 0.08) and near(p3.pos[3], -0.12) and not hidden(viewer, 10
 check(hidden(viewer, 1011) and hidden(viewer, 1012), "first-person hand / arm not copied")
 check(hidden(viewer, 1005), "parked part hidden in the copy")
 check(hidden(viewer, 1004), "part left behind the first-person camera hidden in the copy")
+check(not hidden(viewer, 1006), "a long part whose corner is outside the box but its centre inside is shown (RPG-7 tube)")
 check(viewer.spawnXml:match('dynamic="true"') and viewer.calls.SetBodyGravityScale == 1 and viewer.calls.SetBodyVelocity == 1,
 	"copy body dynamic without gravity, held still each frame")
 local gripR = viewer.Vec(0.2, -0.5, -1.0)   -- part 10 = hand2: nearer the stock than part 11
@@ -156,6 +160,31 @@ check(viewer.calls.RequestFirstPerson == 1, "overlay gone: no more requests (the
 viewer.tool[1] = "sledge"
 viewer.client.render(1/60)
 check(viewer.client.gun3p[1] == nil and viewer.valid[1000] == nil, "player switched tool: copy deleted")
+
+-- player 1 takes the RPG-7: the copy is scaled so its longest part (part 6, 40 voxels = 4 m) is GUN3P_TOOL's length,
+-- and while aiming the tube's axis point goes to the shouldered pose
+holder.tool[1], viewer.tool[1] = "gun-rpg", "gun-rpg"
+holder.T = holder.T + 3
+holder.client.render(1/60)
+relay()
+viewer.inputs.grab = nil
+viewer.client.render(1/60)
+local r = viewer.client.gun3p[1]
+local spec = viewer.GUN3P_TOOL["gun-rpg"]
+check(r and not r.failed and near(r.scale, spec.length / 4.0), "RPG copy scaled to " .. spec.length .. " m long (scale " .. tostring(r and r.scale) .. ")")
+check(viewer.spawnXml:match('scale="0%.2500"'), "RPG copy parts at that scale")
+viewer.inputs.grab = true
+for _ = 1, 120 do viewer.client.render(1/60) end
+local tp, ax, ap = viewer.POSE[1].pos, spec.axis, spec.action.pos
+check(near(tp[2] + ax[2] * r.scale, ap[2]) and near(tp[3] + ax[3] * r.scale, ap[3]) and near(tp[1] + ax[1] * r.scale, ap[1]),
+	"RPG aimed: the tube's axis on the shoulder (the RPG's own action pose)")
+viewer.inputs.grab = nil
+viewer.T = viewer.T + 3
+for _ = 1, 120 do viewer.client.render(1/60) end
+check(near(r.pose.pos[2], run[2]), "RPG not aimed: the rifles' low pose")
+viewer.tool[1] = "sledge"
+viewer.client.render(1/60)
+holder.tool[1] = "gun-akm"
 
 -- the holder in third person: its own gun copied, its tool hidden; back to first person restores it
 holder.R["game.thirdperson"] = true

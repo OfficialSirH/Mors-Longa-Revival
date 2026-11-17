@@ -91,6 +91,17 @@ function GetPlayerTransformWithPitch(p) return GetPlayerTransform(p) end
 function SetPlayerTransformWithPitch() end
 function FindBodies() return {} end function FindTriggers() return {} end
 function GetPlayerVelocity() return Vec() end function SetBodyTransform() end
+-- world body (handle 1): shapes 10, 11 exist at the shift, 12 and 13 are spawned after it
+local WORLD_SHAPES = { 10, 11 }
+local LOCAL = {}
+local setLog = {}
+function GetWorldBody() return 1 end
+function GetBodyShapes(b) return b == 1 and WORLD_SHAPES or {} end
+function GetShapeLocalTransform(s) return Transform(LOCAL[s] or Vec(s, 0, 0)) end
+function SetShapeLocalTransform(s, t) LOCAL[s] = t.pos setLog[#setLog + 1] = s end
+local NOW = 0
+function GetTime() return NOW end
+ShiftResyncJobs, ShiftResyncHistory = {}, {}
 ReturnToShadowVolume()
 check(DistanceProgressed == 150, "shift frame with a stale position: no +200 jump")
 check(INTS["level.world_shifts"] == 1, "world shift counter published (for movers)")
@@ -100,6 +111,46 @@ ReturnToShadowVolume() ReturnToShadowVolume()
 PLAYERS[1].pos = Vec(-40,0,0)
 ReturnToShadowVolume()
 check(DistanceProgressed == 160, "after the shift the counter keeps counting continuously (+10 m)")
+
+-- shift re-sync: world-body shapes spawned after the shift get their local transform re-sent at +1 s and +5 s
+check(#ShiftResyncJobs == 1 and ShiftResyncJobs[1].mark == 11, "shift remembers the newest world-body shape (11)")
+WORLD_SHAPES[3], WORLD_SHAPES[4] = 12, 13
+NOW = 0.5 ShiftResync_Tick()
+check(#setLog == 0, "nothing re-sent before 1 s")
+NOW = 1.0 ShiftResync_Tick()
+check(#setLog == 4 and setLog[1] == 12 and setLog[3] == 13, "at 1 s: shapes 12 and 13 nudged and set back, 10 / 11 untouched")
+check(LOCAL[12][1] == 12 and LOCAL[12][2] == 0 and LOCAL[13][2] == 0, "local transforms end where they were")
+NOW = 4.9 ShiftResync_Tick()
+check(#setLog == 4, "second pass waits for 5 s")
+NOW = 5.0 ShiftResync_Tick()
+check(#setLog == 8 and #ShiftResyncJobs == 1, "at 5 s: second pass")
+NOW = 10.0 ShiftResync_Tick()
+check(#setLog == 12 and #ShiftResyncJobs == 0, "at 10 s: late pass, then done")
+-- two shifts 8 s apart: separate jobs with their own marks; passes due together run once with the lower mark
+ShiftResyncJobs = { { mark = 11, at = 3, step = 2 } }    -- older job: its 5 s pass is due at 8
+ShiftResyncHistory = { { 0, 12 } }
+NOW = 7 ShiftResync_Start()                               -- newer job, mark 12: its 1 s pass is due at 8
+check(#ShiftResyncJobs == 2 and ShiftResyncJobs[2].mark == 12, "a new shift adds its own job (mark 12)")
+setLog = {}
+NOW = 8 ShiftResync_Tick()
+check(#setLog == 4 and setLog[1] == 12 and ShiftResyncJobs[1].step == 3 and ShiftResyncJobs[2].step == 2,
+	"both due at 8: one pass from the lower mark (12, 13), both jobs advance")
+NOW = 17 ShiftResync_Tick()
+check(#ShiftResyncJobs == 1 and ShiftResyncJobs[1].mark == 12, "the older job is done after its late pass")
+ShiftResyncJobs = {}
+-- the mark is the newest world-body shape ~10 s before the shift: shapes spawned just before it are covered too
+ShiftResyncHistory = {}
+WORLD_SHAPES = { 10, 11 }
+for t = 20, 40 do
+	NOW = t
+	if t == 31 then WORLD_SHAPES[3] = 20 end   -- spawned 9 s before the shift at 40
+	ShiftResync_Tick()
+end
+check(ShiftResyncHistory[1][1] == 30 and ShiftResyncHistory[1][2] == 11, "history keeps the record from 10 s ago")
+ShiftResync_Start()
+check(ShiftResyncJobs[1].mark == 11, "shift at 40: shape 20 (spawned at 31) is newer than the mark")
+ShiftResyncJobs, ShiftResyncHistory = {}, {}
+function GetTime() return 0 end
 
 -- segment scripts are deleted once every world object of their segment is gone (2026-11-07 perf)
 do

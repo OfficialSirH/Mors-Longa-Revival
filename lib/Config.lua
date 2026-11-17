@@ -515,6 +515,7 @@ function DrawConfigUi_mod()
         { "healprobe", GetBool("savegame.mod.debug.healprobe") and "healing readout (all players): ON" or "healing readout (all players): off" },
         { "npcprobe", GetBool("savegame.mod.debug.npcprobe") and "NPC sync readout (all players): ON" or "NPC sync readout (all players): off" },
         { "soundtest", "server sound test (all players)" },
+        { "buildprobe", GetBool("savegame.mod.debug.buildprobe") and "building sync readout (all players): ON" or "building sync readout (all players): off" },
     }
     for i = 1, #tests, 2 do
         UiPush()
@@ -525,7 +526,8 @@ function DrawConfigUi_mod()
                         local ct = GetPlayerCameraTransform()
                         ServerCall("server.probeGround", ct.pos, TransformToParentVec(ct, Vec(0, 0, -1)))
                     elseif tests[j][1] == "npcprofile" or tests[j][1] == "invprofile" or tests[j][1] == "shiftprobe"
-                        or tests[j][1] == "healprobe" or tests[j][1] == "npcprobe" then
+                        or tests[j][1] == "healprobe" or tests[j][1] == "npcprobe" or tests[j][1] == "buildprobe" then
+                        -- (2026-11-16) buildprobe: the last spawned buildings on the server vs this machine (ui/BuildingProbe.lua)
                         -- (2026-11-15) npcprobe: NPC torsos on the server vs this machine (ui/NpcProbe.lua)
                         -- (2026-11-15) healprobe: med use and the health script's response on screen (player/inventory.lua,
                         -- player/HealthSystem/AdvancedHealthScript.lua; mirrored to every machine like God Mode)

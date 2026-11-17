@@ -458,6 +458,23 @@ GUN3P_BOX_MIN = Vec(-1.5, -2.0, -4.5)
 GUN3P_BOX_MAX = Vec(1.5, 1.0, 0.5)
 GUN3P_GRIP_R = Vec(0.275, -0.95, -0.85)        -- fallbacks (AKM's hand positions) for a gun without fake hands
 GUN3P_GRIP_L = Vec(0.175, -0.8, -1.9)
+-- (2026-11-16, user: "the RPG is too small, and should be held over the shoulder when aimed") Tools that don't
+-- fit the rifle defaults:
+-- * length: the copy is scaled so its longest part is this long (metres), instead of GUN3P_SCALE. The RPG-7 is a
+--   .vox registered directly (RegisterTool), not one of the gun prefabs the 0.4 was chosen for; a real RPG-7 is
+--   0.95 m.
+-- * axis: a point on the tube's axis, tool coordinates (first-person scale). While in action this point is put
+--   at the pose's position instead of the grip at the rifle's grip (RPG.lua: rocket at 0.225 -0.475 -2,
+--   backblast at 0.075 -0.4 1.75, pistol grip hand at z -0.6; the shoulder rests just behind the grip).
+-- * action / action_crouch: replace GUN3P_POSE's; here the tube on top of the right shoulder, beside the head.
+GUN3P_TOOL = {
+	["gun-rpg"] = {
+		length = 1.0,
+		axis = { 0.15, -0.45, -0.2 },
+		action        = { pos = { 0.2, -0.15, 0.05 }, rot = { 0, 0, 0 } },
+		action_crouch = { pos = { 0.2, -0.15, 0.05 }, rot = { 0, 0, 0 } },
+	},
+}
 
 client.gun3p = {}   -- [player] = { src = tool body, n = parts, body = copy body, shapes = { copy parts }, pose state }
 client.gun3pFired = {}   -- [player] = time of the last shot seen (client.gunRemoteFire)
@@ -544,8 +561,10 @@ function Gun3P_Animate(p, c, dt, frame, gripR)
 	local action = Gun3P_Action(p, c)
 	local crouch = Gun3P_Crouch(p)
 	local target
-	if action then target = g3pMix(g3pPose(GUN3P_POSE.action), g3pPose(GUN3P_POSE.action_crouch), crouch)
-	else target = g3pMix(g3pPose(GUN3P_POSE.run), g3pPose(GUN3P_POSE.crouch), crouch) end
+	local spec = c.spec or {}
+	local function pose(name) return g3pPose(spec[name] or GUN3P_POSE[name]) end
+	if action then target = g3pMix(pose("action"), pose("action_crouch"), crouch)
+	else target = g3pMix(pose("run"), pose("crouch"), crouch) end
 	local a = g3pDamp(action and 60 or 20, dt)
 	c.pose = c.pose and g3pMix(c.pose, target, a) or target
 	local t = Transform(VecAdd(c.pose.pos, Gun3P_ShoulderOffset(p)), c.pose.rot)
@@ -565,8 +584,15 @@ function Gun3P_Animate(p, c, dt, frame, gripR)
 	end
 	c.toolRot = c.toolRot and QuatSlerp(c.toolRot, rot, b) or rot
 	t.rot = QuatRotateQuat(c.toolRot, t.rot)
-	local rh = Vec(GUN3P_RH_POS[1], GUN3P_RH_POS[2], GUN3P_RH_POS[3])
-	local tool = TransformToParentTransform(t, Transform(VecSub(rh, VecScale(gripR, GUN3P_SCALE))))
+	-- what lands at the pose's position: the grip at the rifle's grip, or (in action) the tube's axis (GUN3P_TOOL)
+	local off
+	if action and spec.axis then
+		off = VecScale(Vec(spec.axis[1], spec.axis[2], spec.axis[3]), -c.scale)
+	else
+		off = VecSub(Vec(GUN3P_RH_POS[1], GUN3P_RH_POS[2], GUN3P_RH_POS[3]), VecScale(gripR, c.scale))
+	end
+	c.off = c.off and VecLerp(c.off, off, a) or off
+	local tool = TransformToParentTransform(t, Transform(c.off))
 	local lh = action and GUN3P_HAND_L.action or GUN3P_HAND_L.run
 	return tool, QuatEuler(lh[1], lh[2], lh[3])
 end
@@ -596,15 +622,26 @@ function Gun3P_Delete(p)
 end
 
 function Gun3P_Build(p, src, shapes)
+	local toolId = GetPlayerTool(p)
+	local spec = GUN3P_TOOL[toolId]
+	local scale = GUN3P_SCALE
+	if spec and spec.length then
+		local longest = 0
+		for i = 1, #shapes do
+			local sx, sy, sz, vs = GetShapeSize(shapes[i])
+			longest = math.max(longest, math.max(sx, sy, sz) * (vs or 0.1))
+		end
+		if longest > 0 then scale = spec.length / longest end
+	end
 	local xml = {}
 	for i = 1, #shapes do
 		local _, _, _, vs = GetShapeSize(shapes[i])
 		if not vs or vs <= 0 then vs = 0.1 end
-		xml[i] = string.format('<vox file="%s" scale="%.4f" collide="false"/>', GUN3P_CELL, vs * GUN3P_SCALE / 0.1)
+		xml[i] = string.format('<vox file="%s" scale="%.4f" collide="false"/>', GUN3P_CELL, vs * scale / 0.1)
 	end
 	-- dynamic: a static body took its first placement but didn't follow the player (user, 2026-11-15)
 	local ents = Spawn('<body dynamic="true" tags="ml_gun3p">' .. table.concat(xml) .. '</body>', Transform(), true) or {}
-	local c = { src = src, n = #shapes, body = 0, shapes = {} }
+	local c = { src = src, n = #shapes, body = 0, shapes = {}, toolId = toolId, spec = spec, scale = scale }
 	for _, e in ipairs(ents) do
 		local kind = GetEntityType(e)
 		if kind == "body" then c.body = e elseif kind == "shape" then c.shapes[#c.shapes + 1] = e end
@@ -627,6 +664,14 @@ end
 function Gun3P_InBox(p)
 	return p[1] >= GUN3P_BOX_MIN[1] and p[1] <= GUN3P_BOX_MAX[1] and p[2] >= GUN3P_BOX_MIN[2] and p[2] <= GUN3P_BOX_MAX[2]
 		and p[3] >= GUN3P_BOX_MIN[3] and p[3] <= GUN3P_BOX_MAX[3]
+end
+
+-- (MP fix 2026-11-16) The box test uses a part's centre, not its local position (= one corner of its voxel grid):
+-- the RPG-7's launcher tube (40 voxels long) has that corner at its rear end, behind z 0.5, so the whole tube was
+-- left out of the copy while the real tool was hidden, and other players saw no launcher.
+function Gun3P_PartCentre(shape, t)
+	local sx, sy, sz, scale = GetShapeSize(shape)
+	return TransformToParentPoint(t, Vec(sx * scale * 0.5, sy * scale * 0.5, sz * scale * 0.5))
 end
 
 -- Right / left grip in tool coordinates: the fake hand nearer the stock holds the grip.
@@ -673,7 +718,7 @@ function Gun3P_Update(dt)
 				Gun3P_Delete(p)
 			end
 		else
-			if not c or c.src ~= src or c.n ~= #shapes then
+			if not c or c.src ~= src or c.n ~= #shapes or c.toolId ~= GetPlayerTool(p) then
 				Gun3P_Delete(p)
 				c = Gun3P_Build(p, src, shapes)
 				client.gun3p[p] = c
@@ -682,8 +727,8 @@ function Gun3P_Update(dt)
 				local gripR, gripL = Gun3P_Grips(shapes, grip)
 				local frame = Gun3P_Frame(p)
 				local tool, lhRot = Gun3P_Animate(p, c, dt, frame, gripR)
-				local handR = Transform(VecScale(gripR, GUN3P_SCALE), QuatEuler(GUN3P_HAND_R[1], GUN3P_HAND_R[2], GUN3P_HAND_R[3]))
-				local handL = gripL and Transform(VecScale(gripL, GUN3P_SCALE), lhRot) or nil
+				local handR = Transform(VecScale(gripR, c.scale), QuatEuler(GUN3P_HAND_R[1], GUN3P_HAND_R[2], GUN3P_HAND_R[3]))
+				local handL = gripL and Transform(VecScale(gripL, c.scale), lhRot) or nil
 				c.tool, c.override = tool, not IsPlayerLocal(p)
 				if c.override then
 					c.handR, c.handL = handR, handL
@@ -700,11 +745,11 @@ function Gun3P_Update(dt)
 					local t = GetShapeLocalTransform(shapes[i])
 					SetTag(shapes[i], "invisible")
 					local part = c.shapes[i]
-					if skip[i] or not Gun3P_InBox(t.pos) then
+					if skip[i] or not Gun3P_InBox(Gun3P_PartCentre(shapes[i], t)) then
 						SetTag(part, "invisible")
 					else
 						RemoveTag(part, "invisible")
-						SetShapeLocalTransform(part, Transform(VecScale(t.pos, GUN3P_SCALE), t.rot))
+						SetShapeLocalTransform(part, Transform(VecScale(t.pos, c.scale), t.rot))
 					end
 				end
 				SetBodyTransform(c.body, TransformToParentTransform(frame, tool))

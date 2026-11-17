@@ -3,6 +3,7 @@
 #include "../lib/Config.lua"
 #include "ShiftProbe.lua"
 #include "NpcProbe.lua"
+#include "BuildingProbe.lua"
 
 -- (v2) The Mors Longa debug menu (BACKSPACE) and version text, formerly Config.lua's own init/tick/draw.
 -- UI + input on the client; objects the menu spawns are created by the server (ConfigSpawn in Config.lua).
@@ -160,6 +161,7 @@ function server.tick(dt)
     TickActivity()
     ShiftProbe_ServerTick()
     NpcProbe_ServerTick()
+    BuildingProbe_ServerTick()
 end
 
 -- (2026-11-14, performance) Debug menu "spawn activity" (savegame.mod.debug.activity, host): an on-screen list of
@@ -363,13 +365,14 @@ function TickTravel(dt)
 end
 
 function client.init() ConfigMenu_Init() end
-function client.tick() ConfigMenu_Tick() ShiftProbe_ClientTick() NpcProbe_ClientTick() end
+function client.tick() ConfigMenu_Tick() ShiftProbe_ClientTick() NpcProbe_ClientTick() BuildingProbe_ClientTick() end
 function client.draw()
     ConfigMenu_Draw()
     DrawActivity()
     DrawProbe()
     ShiftProbe_Draw()
     NpcProbe_Draw()
+    BuildingProbe_Draw()
     local tr = shared.travel
     if tr then -- (v2) auto-travel progress
         UiPush()

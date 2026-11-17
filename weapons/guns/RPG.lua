@@ -23,6 +23,8 @@ zoomLevel = 0
 zoomMultiplier = 1.5
 
 
+RPG_SPAWN_DIST = 1.2   -- metres from the eye where the rocket is spawned (see the fire code)
+
 fuze_time = 4
 fuze_reliability = 0.25
 
@@ -40,6 +42,60 @@ end
 function server.tick(dt)
 	-- (v2, Phase 2) tools are enabled per player by inventory.lua (server)
 	GunNet_ServerTick(dt)
+end
+
+-- (MP fix 2026-11-16) The launch sound and backblast smoke were made only on the shooter's machine (the other guns
+-- send theirs with GunNet_Fire; the RPG fires no shell). Now the shooter's machine also sends them, through the
+-- server, to this script on the other machines.
+function server.rpgLaunch(playerId, pos, vec)
+	ClientCall(0, "client.rpgLaunch", playerId, pos, vec)
+end
+
+function client.rpgLaunch(playerId, pos, vec)
+	if IsPlayerLocal(playerId) then return end
+	if client.gun3pFired then client.gun3pFired[playerId] = GetTime() end   -- third-person pose: shooting
+	RpgLaunchEffects(pos, vec, true)
+	RpgLaunchTrail(playerId, vec)
+end
+
+-- (2026-11-16, user: "the rocket is shot several metres in front of the RPG" as seen by the other player) On the
+-- other machines, a short smoke trail from just in front of the shooter's eye along the shot, so the rocket's path
+-- starts at the launcher there too. Measured (debug readout, removed): the rocket spawned 2.4 m from the eye was
+-- first seen 3.3-5.3 m away on the other machine, 0.02-0.05 s late (120 m/s = 2 m per frame); now it spawns at
+-- RPG_SPAWN_DIST.
+function RpgLaunchTrail(playerId, vec)
+	local dir = VecScale(VecNormalize(vec), -1)
+	local start = VecAdd(GetPlayerEyeTransform(playerId).pos, VecScale(dir, 0.8))
+	ParticleReset()
+	ParticleType("smoke")
+	ParticleRadius(0.15, 0.4)
+	ParticleAlpha(0.6, 0)
+	ParticleColor(0.9, 0.88, 0.85)
+	ParticleGravity(0.1)
+	ParticleDrag(0.5)
+	ParticleCollide(0)
+	for i = 0, 24 do
+		SpawnParticle(VecAdd(start, VecScale(dir, i * 0.4)), rndVec(0.3), 1.0 + math.random())
+	end
+end
+
+-- Launch sound and backblast smoke at the launcher's rear (`vec` points backwards). The shooter hears the sound
+-- unpositioned, as before; other players hear it at the launcher.
+function RpgLaunchEffects(pos, vec, remote)
+	if remote then PlaySound(gunsound, pos) else PlaySound(gunsound) end
+	ParticleReset()
+	ParticleType("smoke")
+	ParticleTile(0)
+	ParticleSticky(0)
+	ParticleRadius(0.7, 0.2)
+	ParticleAlpha(1, 0)
+	ParticleColor(1, 0.95, 0.9, 1, 0.25, 0.25)
+	ParticleGravity(-0.4)
+	ParticleDrag(0.2)
+	ParticleCollide(0)
+	for i = 1, math.random(12, 20) do
+		SpawnParticle(pos, VecAdd(vec,VecScale(Vec(math.random()-0.5,math.random()-0.5,math.random()-0.5),6)), math.random()*8)
+	end
 end
 
 function client.init()
@@ -194,26 +250,13 @@ function client.tick(dt)
 					SetBool("inventory.update", true)
 					ammo = 0
 
-					PlaySound(gunsound)
 					ShakeCamera(0.5)
 
 					local exaust_pos = TransformToParentPoint(GetBodyTransform(GetToolBody()),Vec(0.075,-0.4,1.75))
 					local exaust_rear = TransformToParentPoint(GetBodyTransform(GetToolBody()),Vec(0.075,-0.4,5))
 					local exaust_vec = VecSub(exaust_rear,exaust_pos)
 
-			        ParticleReset()
-			        ParticleType("smoke")
-			        ParticleTile(0)
-			        ParticleSticky(0)
-			        ParticleRadius(0.7, 0.2)
-			        ParticleAlpha(1, 0)
-			        ParticleColor(1, 0.95, 0.9, 1, 0.25, 0.25)
-			        ParticleGravity(-0.4)
-			        ParticleDrag(0.2)
-			        ParticleCollide(0)
-			        for i = 1, math.random(12, 20) do
-			          	SpawnParticle(exaust_pos, VecAdd(exaust_vec,VecScale(Vec(math.random()-0.5,math.random()-0.5,math.random()-0.5),6)), math.random()*8)
-			        end
+					RpgLaunchEffects(exaust_pos, exaust_vec, false)
 
 			        GunNet_MakeHole(exaust_pos, 1) -- (v2) backblast hole on the server
 
@@ -228,6 +271,11 @@ function client.tick(dt)
 					local vel = VecScale(norm,120)
 					-- (v2 fix 2026-11-07) point blank: the rocket spawns ~2 m in front of the launcher; if something is
 					-- closer than that, spawn it just in front of that instead of inside / behind it (it never exploded)
+					-- (2026-11-16, user OK) the rocket spawns RPG_SPAWN_DIST from the eye, along the same line (v1: the
+					-- tool point above, 2.4 m from the eye in front of the first-person launcher): other players saw it
+					-- appear ~2.5 m ahead of the launcher on the shoulder (debug readout: first seen 3.3 m from the eye)
+					local eye = GetPlayerEyeTransform().pos
+					grenade_pos = VecAdd(eye, VecScale(VecNormalize(VecSub(grenade_pos, eye)), RPG_SPAWN_DIST))
 					local toSpawn = VecSub(grenade_pos, player_pos.pos)
 					QueryRejectBody(GetToolBody())
 					local blocked, blockedDist = QueryRaycast(player_pos.pos, VecNormalize(toSpawn), VecLength(toSpawn) + 0.5)
@@ -238,6 +286,8 @@ function client.tick(dt)
 					-- it once (level.rpg.next_rocket). v1 never passed it on, so every rocket was the PG-7V.
 					ServerCall("server.rpgNextRocket", rockettype)
 					GunNet_SpawnCasing(xml, Transform(grenade_pos,GetBodyTransform(GetToolBody()).rot), vel)
+					-- (MP 2026-11-16) launch effects for the other players
+					ServerCall("server.rpgLaunch", GetLocalPlayer(), exaust_pos, exaust_vec)
 					reload_value = 0
 					throw_force = 0.5
 					cook_time = 0

@@ -79,6 +79,10 @@ function Init_Settings_Table()
 
 				spawn_less_objects = st_object_checkbox("Reduce Number of Objects" , false), --* Connected in RandomBuilding.lua
 				debri_cleaner      = st_object_checkbox("Remove Small Objects",      false), -- Built-in autocleaner, Based on min shape size.
+				-- (2026-11-17, user) road generation spawns only every Nth frame (1 = every frame, as before): less data
+				-- per frame for the host and the other players; the road appears more slowly. The host's choice
+				-- (world/generation/GenerateRoad.lua SpawnGap, SpawnSlot.lua).
+				spawn_pace         = st_object_range("Segment Loading Pace", 1, 1, 6, struct_table_increments._1),
 
 			},
 

@@ -1,6 +1,7 @@
 #version 2
 #include "script/include/player.lua"
 #include "SpawnSlot.lua"
+#include "../../ui/BuildingProbe.lua"
 -- (v2) server: spawns random buildings at generated road locations.
 --[[
 #include "EnemySpawnsProcessor.lua"
@@ -100,6 +101,7 @@ function server.tick()
 				local entities, sapwnedXML = SpawnRandomBlock(Type, RandomizedTransform)
 				SetSpawnedEntitiesBodyNotActive(entities)
 				ManageDetailDeleting(entities)
+				BuildingProbe_Record(entities, sapwnedXML) -- (2026-11-16) debug building sync readout (ui/BuildingProbe.lua)
 				if sapwnedXML == "MOD/prefabs/spawnables/roadblocks/roadblock3.xml" then
 					BigRoadBlock = true
 				end
@@ -191,8 +193,10 @@ function SpawnRandomBuilding(Type, t)
 	SetString("level.debug.what.building", buildingXML)
 	SetFloat("level.debug.spawned.building", GetTime()) TakeSpawnSlot() -- (2026-11-14) readout; SpawnSlot.lua
 
-	if Settings.performance.spawn_less_objects then
-		print("spawn_less_objects")
+	-- (2026-11-17) option "Reduce Number of Objects": v1 read Settings.performance.spawn_less_objects (always nil),
+	-- so the option never did anything for buildings (original-mod bug, same line in 9dde6dd); now its real path.
+	local less = Settings.performance.physical and Settings.performance.physical.spawn_less_objects
+	if less and less.value then
 		for index, e in ipairs(entities) do
 			if HasTag(e, "detail") then
 				-- print("Deleted detail shape")
@@ -202,6 +206,7 @@ function SpawnRandomBuilding(Type, t)
 	end
 
 	ProcessEnemySpawns(entities)
+	BuildingProbe_Record(entities, buildingXML) -- (2026-11-16) debug building sync readout (ui/BuildingProbe.lua)
 
 
 	return entities, buildingXML
