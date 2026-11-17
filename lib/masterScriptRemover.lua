@@ -5,27 +5,19 @@ function server.tick(dt)
 	handleDeletionQueue()
 end
 
+-- (2026-11-17) used again: finished spawned scripts queue their own handle (lib/ScriptSelfDelete.lua); a script must
+-- not delete itself (that crashed the game), this one deletes them from its own tick. v1 cleared the key named by
+-- the handle instead of the queue index (entries piled up) and printed every removal to the log.
 function handleDeletionQueue()
 	local queueCount = GetInt("level.script_remover.queue.count")
+	if queueCount <= 0 then return end
 	for i=1, queueCount do
-		local handle = GetInt("level.script_remover.queue."..i)
-		if GetEntityType(handle)=="script"then
-			if IsHandleValid(handle)then
-				Delete(handle)
-				local msg = "Correctly removed script: "..handle
-				--DebugPrint(msg)
-				print(msg)
-			else
-				local msg = "Script is already removed wtf: "..handle
-				--DebugPrint(msg)
-				print(msg)
-			end
-		else
-			local msg = "Entity incorrectly marked for removal: "..handle.." ("..GetEntityType(handle)..")"
-			--DebugPrint(msg)
-			print(msg)
+		local key = "level.script_remover.queue."..i
+		local handle = GetInt(key)
+		if handle ~= 0 and IsHandleValid(handle) and GetEntityType(handle) == "script" then
+			Delete(handle)
 		end
-		ClearKey("level.script_remover.queue."..handle)
+		ClearKey(key)
 	end
 	SetInt("level.script_remover.queue.count",0)
 end

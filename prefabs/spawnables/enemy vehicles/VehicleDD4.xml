@@ -65,7 +65,7 @@
 		</group>
 		<group name="Structure" pos="4.29999 -0.9 -6.1" rot="0.0 50.0 0.0">
 			<group name="Tent">
-				<vox pos="0.0 0.9 4.9" texture="12" file="MOD//Vox/tent.vox" object="TENT">
+				<vox pos="0.0 0.9 4.9" texture="12" file="MOD/assets/vox/tent.vox" object="TENT">
 					<rope pos="0.4 3.3 -3.45" slack="-2">
 						<location/>
 						<location pos="4.25 -4.1 -1.3"/>
@@ -86,10 +86,10 @@
 						<location/>
 						<location pos="4.25 -3.7 1.05"/>
 					</rope>
-					<vox pos="0.95 0.1 1.35" rot="0.0 175.0 0.0" prop="false" file="MOD//Vox/sleepinbag.vox" object="Normal"/>
+					<vox pos="0.95 0.1 1.35" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Normal"/>
 					<vox pos="1.15 0.1 -1.85" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Normal"/>
-					<vox pos="-1.05 0.1 0.65" rot="0.0 175.0 0.0" prop="false" file="MOD//Vox/sleepinbag.vox" object="Normal"/>
-					<vox pos="-0.95 0.1 -1.85" rot="0.0 175.0 0.0" prop="false" file="MOD//Vox/sleepinbag.vox" object="Normal"/>
+					<vox pos="-1.05 0.1 0.65" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Normal"/>
+					<vox pos="-0.95 0.1 -1.85" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Normal"/>
 				</vox>
 				<vox pos="0.0 2.8 1.3" texture="12" prop="true" file="MOD/assets/vox/tent.vox" object="TENT DOOR">
 					<joint pos="1.2 0.2 0.20001"/>
@@ -121,26 +121,26 @@
 						<location/>
 						<location pos="4.25 -3.7 1.05"/>
 					</rope>
-					<vox pos="1.15 0.1 0.95" rot="0.0 -175.0 0.0" prop="false" file="MOD//Vox/sleepinbag.vox" object="Burnt"/>
+					<vox pos="1.15 0.1 0.95" rot="0.0 -175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Burnt"/>
 					<vox pos="1.35 0.1 -1.95" rot="0.0 -175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Burnt 3"/>
-					<vox pos="-0.95 0.1 1.05" rot="0.0 175.0 0.0" prop="false" file="MOD//Vox/sleepinbag.vox" object="Burnt 2"/>
+					<vox pos="-0.95 0.1 1.05" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Burnt 2"/>
 					<vox pos="-0.85 0.1 -1.95" rot="0.0 175.0 0.0" prop="false" file="MOD/assets/vox/sleepinbag.vox" object="Burnt 4"/>
 					<instance pos="0.1 0.0 0.6" rot="90.0 -140.0 0.0" file="MOD/prefabs/spawnables/deceased/DeceasedBurnt2.xml"/>
 					<instance pos="1.0 0.0 -2.70001" rot="90.0 10.0 0.0" file="MOD/prefabs/spawnables/deceased/DeceasedBurnt3.xml"/>
 					<instance pos="0.10001 0.0 1.5" rot="90.0 -40.0 0.0" file="MOD/prefabs/spawnables/deceased/DeceasedBurnt3.xml"/>
 				</vox>
 			</group>
-			<vox pos="2.1 2.2 -6.0" rot="67.0 -90.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken a">
-				<vox pos="-3.2 -2.238 0.256" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
-				<vox pos="-3.2 -2.67 0.507" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
+			<vox pos="2.1 2.2 -6.0" rot="67.0 -90.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken a">
+				<vox pos="-3.2 -2.238 0.256" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
+				<vox pos="-3.2 -2.67 0.507" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
 				<vox pos="3.2 -2.369 0.309" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
-				<vox pos="3.2 -2.801 0.56" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
+				<vox pos="3.2 -2.801 0.56" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
 			</vox>
 			<vox pos="-1.9 2.2 -6.0" rot="67.0 90.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken a">
-				<vox pos="-3.2 -2.238 0.256" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
-				<vox pos="-3.2 -2.67 0.507" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
+				<vox pos="-3.2 -2.238 0.256" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
+				<vox pos="-3.2 -2.67 0.507" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
 				<vox pos="3.2 -2.369 0.309" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
-				<vox pos="3.2 -2.801 0.56" rot="-30.0 0.0 0.0" file="MOD//Vox/tents.vox" object="tent6 broken leg"/>
+				<vox pos="3.2 -2.801 0.56" rot="-30.0 0.0 0.0" file="MOD/assets/vox/tents.vox" object="tent6 broken leg"/>
 			</vox>
 			<vox pos="-4.44 0.9 1.142" rot="0.0 -130.0 0.0" prop="true" file="MOD/assets/vox/small_props.vox" object="shelf2"/>
 			<vox pos="-4.4 0.9 1.5" rot="0.0 130.0 0.0" prop="true" file="MOD/assets/vox/small_boxes.vox" object="box1"/>

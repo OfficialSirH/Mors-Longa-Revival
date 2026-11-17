@@ -1,6 +1,6 @@
 <prefab version="1.6.0">
 	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentH.xml" pos="-102.10001 0.1 0.0" rot="0.0 0.0 0.0">
-		<script file="MOD/game/SafeZone.lua">
+		<group>
 			<group name="decor" prop0="texture=19 0.5" prop2="tags=veg">
 				<group name="right" pos="102.85001 0.6 -66.0">
 					<group name="group 1" pos="-72.93001 0.0 25.27999" rot="0.0 171.0 0.0">
@@ -1960,6 +1960,6 @@
 					</group>
 				</group>
 </group>
-</script>
+</group>
 </group>
 </prefab>

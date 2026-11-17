@@ -155,7 +155,41 @@ function server.configTravel(p, meters)
     }
 end
 
+-- (2026-11-17) Test-tool hook: a tool (the MCP bridge) sets level.debug.perftest_request to a perf test kind, to
+-- "file:<prefab path>" (any MOD/ prefab, spawned like the kinds above), or to "delete"; it runs once and is cleared.
+-- The result lands in level.debug.perftest_result. A bridge script can't spawn this mod's prefabs itself (MOD/ is the
+-- spawning script's mod).
+function TickPerfTestRequest()
+    local req = GetString("level.debug.perftest_request")
+    if req == "" then return end
+    SetString("level.debug.perftest_request", "")
+    if req == "delete" then server.perfTestDelete() SetString("level.debug.perftest_result", "deleted") return end
+    -- (2026-11-17) "fileground:<prefab path>": on the ground 15 m in front of the host, facing the same way (vehicles)
+    local groundPath = req:match("^fileground:(.+)$")
+    if groundPath then
+        local t = GetPlayerTransform()
+        local fwd = TransformToParentVec(t, Vec(0, 0, -1))
+        fwd = VecNormalize(Vec(fwd[1], 0, fwd[3]))
+        local from = VecAdd(VecAdd(t.pos, VecScale(fwd, 15)), Vec(0, 30, 0))
+        local hit, dist = QueryRaycast(from, Vec(0, -1, 0), 80)
+        local pos = hit and VecAdd(from, Vec(0, -dist + 0.1, 0)) or VecAdd(t.pos, VecScale(fwd, 15))
+        local e = Spawn(groundPath, Transform(pos, QuatLookAt(pos, VecAdd(pos, fwd))), true)
+        SetString("level.debug.perftest_result", string.format("%.2f fileground: %d entities", GetTime(), #e))
+        return
+    end
+    local path = req:match("^file:(.+)$")
+    if path then
+        PERFTEST.file = path
+        req = "file"
+    end
+    local before = #FindShapes("perftest", true)
+    server.perfTest(0, req)
+    local added = #FindShapes("perftest", true) - before
+    SetString("level.debug.perftest_result", string.format("%.2f %s: %d shapes", GetTime(), req, added))
+end
+
 function server.tick(dt)
+    TickPerfTestRequest()
     TickTravel(dt)
     TickPerfPieces()
     TickActivity()

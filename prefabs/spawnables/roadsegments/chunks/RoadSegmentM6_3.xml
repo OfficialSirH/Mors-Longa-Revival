@@ -1,0 +1,30 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><group name="Loot"><group name="Weapons">
+				<instance pos="77.2 6.5 60.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="81.9 6.7 61.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="75.6 5.6 61.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="77.2 2.2 56.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="73.2 1.6 60.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="77.5 2.3 59.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="77.5 2.0 50.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="118.0 2.0 50.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="120.0 1.4 37.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="77.1 1.8 42.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="114.2 1.7 69.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="67.9 2.3 60.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="66.9 0.8 59.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="61.4 2.1 58.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="60.3 1.9 60.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="64.6 4.7 62.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/BanditWeaponLootSpawn.xml" />
+				<instance pos="101.5 7.5 57.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="99.2 8.8 54.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="102.9 11.6 55.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="101.9 11.6 54.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="73.7 9.1 78.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="173.5 0.8 55.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="170.7 0.8 53.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="170.7 0.8 53.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="92.0 1.3 57.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="93.2 1.3 57.1" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+				<instance pos="95.3 1.0 60.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+			</group>
+			</group></group></prefab>

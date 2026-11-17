@@ -1,0 +1,227 @@
+<prefab version="1.4.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><group name="base" pos="155.0 0.7 38.9" rot="0.0 0.0 0.0">
+			<vox pos="-18.5 0.0 -5.7" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/quarantine.vox" object="building3">
+				<voxbox name="roof" pos="5.9 4.3 10.09999" rot="0.0 -180.0 0.0" texture="2 1" size="118 2 202" brush="MOD/main/Building Components/ceilings + roofs/simple_metal_roof.vox" offset="2 0 0">
+					<voxbox name="lightbulb" pos="5.9 -0.5 16.15" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 3.75" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 6.85" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 9.95" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 13.05" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+				</voxbox>
+			</vox>
+			<vox pos="-18.5 0.0 8.6" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/quarantine.vox" object="building3">
+				<voxbox name="roof" pos="5.9 4.3 10.09999" rot="0.0 -180.0 0.0" texture="2 1" size="118 2 202" brush="MOD/main/Building Components/ceilings + roofs/simple_metal_roof.vox" offset="2 0 0">
+					<voxbox name="lightbulb" pos="5.9 -0.5 3.75" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 6.85" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 9.95" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 13.05" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+					<voxbox name="lightbulb" pos="5.9 -0.5 16.15" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+						<rope name="cable" pos="0.05 -0.2 0.05">
+							<location pos="0.0 0.4 0.0" />
+							<location pos="0.0 0.65 0.0" />
+						</rope>
+					</voxbox>
+				</voxbox>
+				<group name="props">
+					<instance pos="2.7 0.4 8.2" rot="0.0 170.0 0.0" file="MOD/assets/vox/ummilitarycrate.xml" />
+					<instance pos="2.7 1.1 8.2" rot="0.0 175.0 0.0" file="MOD/assets/vox/ummilitarycrate.xml" />
+					<instance pos="3.1 1.2 -9.0" rot="-60.0 -180.0 0.0" file="MOD/assets/vox/ummilitarycrate.xml" />
+					<instance pos="-1.7 1.2 -9.0" rot="-60.0 -180.0 0.0" file="MOD/assets/vox/ummilitarycrate.xml" />
+				</group>
+			</vox>
+			<vox pos="12.09995 0.0 35.29998" rot="0.0 90.0 0.0" file="MOD/assets/vox/quarantine.vox" object="building4">
+				<group name="props">
+					<instance pos="-4.3 0.4 1.2" rot="0.0 160.0 0.0" file="MOD/assets/vox/ummilitarycrate.xml" />
+				</group>
+				<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclewg29.xml" pos="2.65 0.4 -5.0" rot="0.0 0.0 0.0">
+					<group name="instance=MOD/vehicles/avf/prefabs/humvee/umhummer.xml" pos="0.0 -0.0 0.0" rot="0.0 0.0 0.0">
+						<script file="MOD/vehicles/cars/!library/scripts/door.lua">
+							<vehicle name="Hummer" tags="Door path=MOD/vehicles/avf/prefabs/humvee/umhummer.xml" driven="false" sound="military .75" spring=".8" damping=".5" topspeed="138" acceleration="0.4" strength="6" antiroll="0.2" difflock="1" steerassist=".3">
+								<body pos="0.0 0.55 -0.55" dynamic="true">
+									<vox pos="0.0 -0.1 0.45" rot="0 180 0" texture="8 .3" blendtexture="3 .4" density="1.2" strength="2" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="body">
+										<location tags="exhaust" pos="-1.05 0.25 -2.6" rot="180" />
+										<location tags="vital" pos="0.0 0.7 1.8" />
+										<location tags="player" pos="0.65 1.35 0.25" />
+										<location tags="camera" pos="0.0 1.65 0.0" />
+										<location tags="exit" pos="1.6 0.5 0.2" />
+										<light pos="-0.6 0.8 2.5" rot="0.0 0 0.0" type="cone" color="1 .9 .8" scale="20" angle="90" penumbra="30" size="0.1" unshadowed="0.2" glare="0.3" />
+										<light pos="0.6 0.8 2.5" rot="0.0 0 0.0" type="cone" color="1 .9 .8" scale="20" angle="90" penumbra="30" size="0.1" unshadowed="0.2" glare="0.3" />
+									</vox>
+									<vox pos="0.0 0.7 2.35" rot="0 180 0" texture="8 .3" blendtexture="3 .1" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="trunk">
+										<joint pos="-0.5 0.7 0.6" rot="0.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="false" limits="0, 110" sound="true" />
+										<joint pos="0.5 0.7 0.6" rot="0.0 90.0 0.0" type="hinge" rotstrength=".1" rotspring="0" collide="false" limits="0, 110" sound="true" />
+									</vox>
+									<vox pos="1.2 0.4 -0.05" rot="0 180 0" texture="8 .3" blendtexture="3 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorf">
+										<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true" />
+										<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true" />
+									</vox>
+									<vox pos="1.2 0.4 0.85" rot="0 180 0" texture="8 .3" blendtexture="3 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorb">
+										<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true" />
+										<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="0, 100" sound="true" />
+									</vox>
+									<vox pos="-1.1 0.4 0.85" rot="0 180 0" texture="8 .3" blendtexture="3 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorb">
+										<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true" />
+										<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0-100, 0-100, 0" sound="true" />
+									</vox>
+									<vox pos="-1.1 0.4 -0.05" rot="0 180 0" texture="8 .3" blendtexture="3 .3" density="1.2" strength="2" prop="true" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="doorf">
+										<joint tags="door" pos="0.05 0.6 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true" />
+										<joint pos="0.05 0.2 0.3" rot="-90.0 90.0 0.0" type="hinge" rotstrength="0.01" rotspring="0" collide="false" limits="-100, 0" sound="true" />
+									</vox>
+									<wheel name="fr" pos="-0.9 -0.05 -1.4" drive="1" steer="1">
+										<vox pos="-0.2 -0.5 0.0" blendtexture="3 .45" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fr" />
+									</wheel>
+									<wheel name="br" pos="-0.9 -0.05 2.2" drive="1" steer="0">
+										<vox pos="-0.2 -0.5 0.0" blendtexture="3 .45" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_br" />
+									</wheel>
+									<wheel name="bl" pos="0.9 -0.05 2.2" drive="1" steer="0">
+										<vox pos="0.2 -0.5 0.0" blendtexture="3 .45" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_bl" />
+									</wheel>
+									<wheel name="fl" pos="0.9 -0.05 -1.4" drive="1" steer="1">
+										<vox pos="0.2 -0.5 0.0" blendtexture="3 .45" file="MOD/vehicles/avf/prefabs/humvee/umhumvee.vox" object="wheel_fl" />
+									</wheel>
+								</body>
+								<rig name="driver" tags="driver sort=0" pos="-0.7 1.2 -0.45">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50" />
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50" />
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" />
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.15 0.3 -0.2" rot="0.0 90 0.0" />
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.3 -0.2" rot="0.0 90 0.0" />
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.1" rot="0.0 90 0.0" />
+									<location name="steeringwheel" tags="steeringwheel" pos="0.05 0.3 -0.2" rot="0.0 -180 0.0" />
+								</rig>
+								<rig name="passenger" tags="sort=1" pos="0.7 1.2 -0.45">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.5" rot="0.0 90 50" />
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.5" rot="0.0 90 50" />
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" />
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0" />
+								</rig>
+								<rig name="passenger" tags="sort=2" pos="0.7 1.2 0.35">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50" />
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50" />
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" />
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0" />
+								</rig>
+								<rig name="passenger" tags="sort=3" pos="-0.7 1.2 0.35">
+									<location name="ik_foot_l" tags="ik_foot_l" pos="-0.15 -0.1 -0.3" rot="0.0 90 50" />
+									<location name="ik_foot_r" tags="ik_foot_r" pos="0.15 -0.1 -0.3" rot="0.0 90 50" />
+									<location name="seat" tags="seat" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" />
+									<location name="ik_hand_l" tags="ik_hand_l" pos="-0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_hand_r" tags="ik_hand_r" pos="0.25 0.0 -0.05" rot="0.0 90 -30" />
+									<location name="ik_head" tags="ik_head" pos="0.0 0.8 0.15" rot="0.0 90 0.0" />
+								</rig>
+							</vehicle>
+						</script>
+					</group>
+					<instance pos="0.2 1.3 2.2" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml" />
+					<instance pos="-0.1 1.4 0.5" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml" />
+					<instance pos="-0.4 1.3 1.8" file="MOD/prefabs/spawns/loots/WorkingGCarLootSpawn.xml" />
+				</group>
+			</vox>
+			<vox tags="explosive=5" pos="-15.7 0.0 50.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank2">
+				<body tags="GasCan RNDfuelLevel=5 fuelLevelMAX=500" pos="1.5 0.7 4.0" dynamic="true">
+					<vox pos="-0.7 0.0 -0.3" file="MOD/assets/vox/tanks.vox" object="pump" />
+					<joint pos="0.05 2.15 -0.3" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+					<joint pos="-1.45 3.8 -0.75" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+				</body>
+			</vox>
+			<vox tags="explosive=5" pos="-15.7 0.0 44.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank2">
+				<body tags="GasCan RNDfuelLevel=5 fuelLevelMAX=500" pos="1.5 0.7 4.0" dynamic="true">
+					<vox pos="-0.7 0.0 -0.3" file="MOD/assets/vox/tanks.vox" object="pump" />
+					<joint pos="0.05 2.15 -0.3" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+					<joint pos="-1.45 3.8 -0.75" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+				</body>
+			</vox>
+			<vox tags="explosive=5" pos="-15.7 0.0 37.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/tanks.vox" object="tank2">
+				<body tags="GasCan RNDfuelLevel=5 fuelLevelMAX=500" pos="1.5 0.7 4.0" dynamic="true">
+					<vox pos="-0.7 0.0 -0.3" file="MOD/assets/vox/tanks.vox" object="pump" />
+					<joint pos="0.05 2.15 -0.3" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+					<joint pos="-1.45 3.8 -0.75" rot="0.0 -90.0 0.0" type="hinge" rotstrength="0" rotspring="0" collide="true" limits="0.01 -0.01" />
+				</body>
+			</vox>
+		</group>
+		<group name="Loot" pos="98.40001 0.0 -3.0" rot="0.0 -180.0 0.0"><group name="Weapons" pos="-77.1 0.7 -43.3">
+				<instance pos="2.2 0.1 -1.8" rot="0.0 110.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-0.7 1.3 1.7" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-2.3 0.8 1.3" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="46.0 1.0 -2.6" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="44.8 1.0 -2.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="39.6 0.5 -2.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="36.1 0.5 -2.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="46.8 0.4 -4.9" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="47.7 1.5 -6.2" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="41.2 0.5 -5.1" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="30.9 1.7 -4.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-3.3 0.1 -8.8" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-3.4 0.6 -9.6" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="1.7 0.0 -9.0" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="0.7 0.1 14.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="0.6 0.6 13.8" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="0.4 1.1 12.1" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="1.7 1.5 17.3" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="4.8 0.8 17.2" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="8.5 1.3 17.3" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="10.2 0.1 17.1" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="12.1 1.7 16.2" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-3.5 4.5 10.9" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="-5.3 5.4 11.2" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="50.2 4.5 -20.8" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="83.2 0.6 5.2" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="88.2 0.6 5.4" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="7.7 1.1 -37.7" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="72.8 1.6 33.0" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="73.1 1.1 33.3" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="77.1 1.4 37.3" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="78.3 1.4 38.5" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="112.3 0.3 32.1" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+				<instance pos="112.2 0.3 25.6" rot="0.0 -20.0 0.0" file="MOD/prefabs/spawns/loots/UMWeaponLootSpawn.xml" />
+			</group>
+			<group name="General"><instance pos="-74.9 1.5 -45.4" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+				</group></group></group></prefab>

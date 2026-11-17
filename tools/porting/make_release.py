@@ -8,6 +8,7 @@ default Documents/Teardown/mods/Mors Longa Revival (Release); upload that one fr
 
 * Left out: EXCLUDE_DIRS / EXCLUDE_FILES / EXCLUDE_EXT below (git, tools, docs, dev/, dev notes, editor files).
 * info.txt: the repo's, with " (dev)" taken off the name; refuses to build while it still says AUTHOR_NAME.
+* levels/*.xml: lines loading a script from MOD/dev/ (left out) are dropped from the release copy.
 * id.txt: the Workshop item the upload updates. The repo's has no id (the original mod's item 2906369984 was
   removed, 2026-11-13: an upload would have tried to update Overdrive Studios' item). After the first upload the
   game writes the new item's id into the release folder's id.txt: a rebuild keeps that file.
@@ -79,6 +80,15 @@ def main():
         os.makedirs(os.path.dirname(out), exist_ok=True)
         shutil.copy2(src, out)
     open(os.path.join(dest, "info.txt"), "w", encoding="utf-8", newline="\n").write(info)
+    # (2026-11-17) level XML lines that load a script from MOD/dev/ (left out above, e.g. the RegistryWatcher in
+    # levels/level_scripts.xml) are dropped from the release copy, which would otherwise load a missing script
+    for rel in [r for _, r in files if r.endswith(".xml") and r.replace("\\", "/").startswith("levels/")]:
+        p = os.path.join(dest, rel)
+        text = open(p, encoding="utf-8").read()
+        kept = "\n".join(l for l in text.split("\n") if 'file="MOD/dev/' not in l)
+        if kept != text:
+            open(p, "w", encoding="utf-8", newline="\n").write(kept)
+            print("dropped MOD/dev/ script lines from %s" % rel)
     if keep_id is None:
         shutil.copy2(os.path.join(REPO, "id.txt"), os.path.join(dest, "id.txt"))
     open(os.path.join(dest, MARKER), "w").write("made by tools/porting/make_release.py; rebuilt (emptied) on each run\n")

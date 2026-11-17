@@ -259,9 +259,11 @@ do
 		local e = src:find("\nfunction ", s + 1) or #src
 		return (src:sub(s, e):gsub("%-%-[^\n]*", "")) -- without comments
 	end
-	local tick, update = body("tick_npcs"), body("update_npcs")
+	local tick, update, full = body("tick_npcs"), body("update_npcs"), body("update_npcs_full")
 	check(not tick:find("npc_point_gun%(") and not tick:find("npc_hold_gun%("), "gun constraints not called from tick_npcs")
-	check(update:find("npc_point_gun%(") and update:find("npc_hold_gun%("), "gun constraints called from update_npcs")
+	-- (2026-11-17) update_npcs runs update_npcs_full on a frame's first step (goreai_stepreplay.lua)
+	check(update:find("update_npcs_full") and full:find("npc_point_gun%(") and full:find("npc_hold_gun%("),
+		"gun constraints called from update_npcs (via update_npcs_full)")
 end
 
 print("all goreai tests passed")

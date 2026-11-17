@@ -3,6 +3,7 @@
 #include "../../../lib/TDSU/tdsu.lua"
 #include "./systems/goreai_API_nav.lua"
 #include "../../../lib/masterScriptRemoverAPI.lua"
+#include "../../../lib/ScriptSelfDelete.lua"
 ]]
 
 
@@ -60,12 +61,14 @@ function server.tick(dt)
 	if Finished then return end
 	if GetBool("level.goreai.api.npcs.dead_id." .. ID) then
 		Finished = true
+		ScriptSelfDelete() -- (2026-11-17) no longer stay loaded (lib/ScriptSelfDelete.lua)
 		return
 	end
 	-- (v2 perf 2026-11-07) also stop once the npc's torso is gone (RemoveRoad deleted it behind the players);
 	-- v1 kept these scripts reading/writing the registry every tick for the rest of the run.
 	if MyTorso ~= 0 and not IsHandleValid(MyTorso) then
 		Finished = true
+		ScriptSelfDelete()
 		return
 	end
 

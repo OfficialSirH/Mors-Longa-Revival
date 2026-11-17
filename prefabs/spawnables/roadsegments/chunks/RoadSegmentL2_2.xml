@@ -1,0 +1,34 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0"><trigger tags="PuzzlePiece" pos="200.0 0.0 0.0" size="0.1" />
+		<group name="Spawns">
+			<instance pos="123.8 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="194.8 0.8 -12.9" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="1.4 0.8 -12.8" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="61.6 0.8 -12.8" rot="0.0 110.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="190.8 0.8 9.6" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="5.6 0.8 11.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.7 -67.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="187.3 0.7 -81.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.7 -63.5" rot="0.0 110.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="96.2 0.7 -35.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="135.2 0.7 -12.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="20.3 0.7 -32.9" rot="0.0 70.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="91.4 0.7 -12.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="97.5 0.7 14.0" rot="0.0 110.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.7 36.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.7 36.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="139.39999 0.7 29.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.7 27.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="116.5 0.7 57.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.7 57.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="71.8 0.7 81.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="8.5 0.8 32.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemy vehicles/EnemyCarSpawn.xml" />
+			<instance pos="22.9 0.7 -12.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadsigns/NormSignSpawnLeft.xml" />
+			<instance pos="180.79999 0.7 9.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadsigns/NormSignSpawnRight.xml" />
+			<instance pos="80.80001 0.7 49.1" file="MOD/prefabs/spawns/buildings/NormBuildingSpawn.xml" />
+			<instance pos="76.5 0.7 -49.9" file="MOD/prefabs/spawns/buildings/NormBuilding180Spawn.xml" />
+			<instance pos="-30.0 63.19999 1.4" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadblocks/Cargo.xml" />
+			<instance pos="80.2 0.8 9.5" rot="0.0 90.0 0.0" file="MOD/prefabs/spawns/vehicles/MilCarSpawn.xml" />
+			<instance pos="46.02696 1.6 -0.70101" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+		</group>
+	</group></prefab>

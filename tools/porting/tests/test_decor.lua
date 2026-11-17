@@ -19,6 +19,7 @@ function SetInt(k, v) R[k] = v end
 function SetFloat(k, v) R[k] = v end
 function GetTime() return 0 end
 function GetWorldBody() return 1 end      -- (2026-11-16) the shift re-sync's once-a-second record
+function IsMultiplayer() return false end  -- (2026-11-17) the re-sync runs only with other players
 function GetBodyShapes() return {} end
 function DebugPrint() end
 function GetEntityType() return "shape" end
@@ -68,7 +69,8 @@ end
 check(missing == 0 and npieces > 1000, "every piece / decor file exists (" .. npieces .. " pieces)")
 
 local pieces1 = SEGMENT_PIECES["RoadSegment1"]
-check(#pieces1 > 0 and #DECOR_PARTS["RoadSegment1"] == 2 and DECOR_PARTS["RoadSegmentF"] == nil, "RoadSegment1 has pieces and 2 decor parts")
+check(#pieces1 > 0 and #DECOR_PARTS["RoadSegment1"] > 2 and DECOR_PARTS["RoadSegmentF"] == nil,
+	"RoadSegment1 has pieces and decor chunks (chunk_decor.py, 2026-11-17)")
 
 -- budget: each frame spawns pieces up to PieceBudget() cells (at least one)
 local budget = PieceBudget()
@@ -88,10 +90,33 @@ while #spawned < #pieces1 and frame < 5000 do
 end
 check(ok, "every frame spawns >= 1 piece and stays within the budget (" .. frame .. " frames)")
 check(first.pos[1] == 150 and first.xml:find("^<prefab") ~= nil, "pieces spawn at the segment as full prefab xml")
-frames(1)
-check(spawned[#pieces1 + 1].xml:find("RoadSegment1_left"), "then the decor")
-frames(1)
-check(#spawned == #pieces1 + 2 and R["level.segment.loading"] == false and R["level.debug.parts_waiting"] == 0, "all in: segment loaded")
+check(R["level.segment.loading"] == false, "pieces in: segment loaded (spawners need not wait for the decor)")
+local nd = #DECOR_PARTS["RoadSegment1"]
+local most = 0
+for _ = 1, nd + 2 do
+	local before = #spawned
+	frames(1)
+	most = math.max(most, #spawned - before)
+end
+check(spawned[#pieces1 + 1].xml:find("RoadSegment1_left_1") ~= nil, "then the decor, first chunk")
+check(most <= 2, "at most two decor chunks per frame")
+check(#spawned == #pieces1 + nd and R["level.debug.parts_waiting"] == 0, "all in")
+-- (2026-11-17) the next segment's ground goes before the previous segment's decor still waiting
+spawned = {}
+QueueDecor("RoadSegment1", Transform(Vec(0, 0, 0)))
+while #spawned < #pieces1 do frames(1) end
+check(#VegQueue > 0, "segment 1's decor still waiting")
+QueueDecor("RoadSegment2", Transform(Vec(200, 0, 0)))
+local before = #spawned
+local decorWhilePieces = false
+while #DecorQueue > 0 do
+	frames(1)
+	for k = before + 1, #spawned do if spawned[k].xml:find("/decor/") and #DecorQueue > 0 then decorWhilePieces = true end end
+	before = #spawned
+end
+check(not decorWhilePieces and #VegQueue > 0, "a new segment's pieces go before the old decor still waiting")
+frames(3000)
+VegQueue = {}
 
 -- a world shift while entries wait
 spawned = {}
@@ -128,20 +153,45 @@ FindLocations = function() return {} end
 GetTagValue = function() return "" end
 local registered, enemies = 0, nil
 RegisterSegmentScripts = function() registered = registered + 1 end
-ProcessEnemySpawns = function(e, override) enemies = override or "none" end
+local fileEntities
+ProcessEnemySpawns = function(e, override) enemies = override or "none" fileEntities = #e end
 SetFloat = function(k, v) R[k] = v end
+local realSpawn = Spawn
+Spawn = function(xml, t) realSpawn(xml, t) return { #spawned * 10, #spawned * 10 + 1 } end -- two entities each
 spawned = {}
 QueueSegment("RoadSegment1", Transform(Vec(0, 0, 0)), { override = 6 })
 frames(3000)
-local fileAt, lastPiece, firstDecor
+SEGMENT_FILE_CHUNKS = SEGMENT_FILE_CHUNKS or {}   -- (2026-11-17) chunking is off in game: the whole file
+local isChunk = { ["MOD/prefabs/spawnables/roadsegments/RoadSegment1.xml"] = true }
+local firstChunk, lastChunk, nChunks, lastPiece, firstDecor = nil, nil, 0, 0, nil
 for k, s in ipairs(spawned) do
-	if s.xml == "MOD/prefabs/spawnables/roadsegments/RoadSegment1.xml" then fileAt = k
+	if isChunk[s.xml] then firstChunk = firstChunk or k lastChunk = k nChunks = nChunks + 1
 	elseif s.xml:find("/decor/") then firstDecor = firstDecor or k
 	else lastPiece = k end
 end
-check(fileAt and fileAt == #SEGMENT_PIECES["RoadSegment1"] + 1 and lastPiece < fileAt and firstDecor > fileAt,
-	"segment: all its static pieces, then its file, then its decor")
+check(nChunks == 1 and firstChunk == #SEGMENT_PIECES["RoadSegment1"] + 1
+	and lastPiece < firstChunk and firstDecor > lastChunk, "segment: all its static pieces, then its file chunks, then its decor")
 check(registered == 1 and enemies == 6 and RoadgenPending == true, "the file's turn: scripts registered, enemies with the override, pulse pending")
+check(fileEntities == 2 * nChunks, "the after-spawn work gets every chunk's entities (" .. nChunks .. " chunks)")
+-- a segment cut into several chunks: one chunk per frame, the work once, after the last
+do
+	local saved = SEGMENT_FILE_CHUNKS["RoadSegment1"]
+	SEGMENT_FILE_CHUNKS["RoadSegment1"] = { "<prefab>c1</prefab>", "<prefab>c2</prefab>", "<prefab>c3</prefab>" }
+	local savedPieces = SEGMENT_PIECES["RoadSegment1"]
+	SEGMENT_PIECES["RoadSegment1"] = nil
+	R["savegame.mod.procedural.disable.spawn_decor"] = true
+	spawned, registered, fileEntities = {}, 0, nil
+	QueueSegment("RoadSegment1", Transform(Vec(0, 0, 0)), {})
+	frames(1)
+	check(#spawned == 1 and spawned[1].xml == "<prefab>c1</prefab>" and registered == 0, "chunk 1 in the first frame, no work yet")
+	frames(1)
+	check(#spawned == 2 and registered == 0, "chunk 2 in the next frame")
+	frames(1)
+	check(#spawned == 3 and registered == 1 and fileEntities == 6, "last chunk: the work, with all 6 entities")
+	SEGMENT_FILE_CHUNKS["RoadSegment1"], SEGMENT_PIECES["RoadSegment1"] = saved, savedPieces
+	R["savegame.mod.procedural.disable.spawn_decor"] = false
+end
+Spawn = realSpawn
 R["savegame.mod.difficulty"] = "nightmare"
 spawned = {}
 QueueSegment("RoadSegment2", Transform(Vec(0, 0, 0)))
@@ -203,6 +253,8 @@ check(SpawnGap() == 3, "pace 3")
 Settings.performance.physical.spawn_pace.value = 40
 check(SpawnGap() == SPAWN_GAP_MAX, "pace clamped to the maximum")
 Settings.performance.physical.spawn_pace.value = 3
+LEADER_X = -1000   -- the segment 1000 m ahead: no hurry
+GetGenerationPlayerPos = function() return Vec(LEADER_X, 0, 0) end
 R["level.spawn.slot"] = nil
 spawned = {}
 QueueDecor("RoadSegment4", Transform(Vec(0, 0, 0)))
@@ -215,6 +267,17 @@ end
 local spaced = #spawnFrames >= 2
 for i = 2, #spawnFrames do if spawnFrames[i] - spawnFrames[i - 1] < 3 then spaced = false end end
 check(R["level.spawn.gap"] == 3 and spaced, "pace 3: pieces spawn at least 3 frames apart (" .. #spawnFrames .. " spawn frames)")
+-- (2026-11-17) the ground in front of the player ignores the pace
+LEADER_X = -50     -- the waiting segment starts 50 m ahead
+local frames0 = 0
+for i = 1, 6 do
+	local before = #spawned
+	server.tick(1/60)
+	if #spawned > before then frames0 = frames0 + 1 end
+end
+check(GroundUrgent() and frames0 == 6, "pace 3, segment 50 m ahead: the ground spawns every frame")
+LEADER_X = -1000
+frames(3000)
 R["level.spawn.slot"] = R["level.frame"]
 R["level.frame"] = R["level.frame"] + 2
 check(not SpawnSlotFree(), "pace 3: a spawner waits 2 frames after a spawn")

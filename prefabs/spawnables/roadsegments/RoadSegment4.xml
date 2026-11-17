@@ -63,7 +63,6 @@
 			<instance pos="80.80001 0.7 42.1" file="MOD/prefabs/spawns/buildings/NormBuildingSpawn.xml"/>
 			<instance pos="90.4 0.7 -49.9" file="MOD/prefabs/spawns/buildings/NormBuilding180Spawn.xml"/>
 		</group>
-		<instance file="MOD"/>
 	</group>
 </prefab>
 

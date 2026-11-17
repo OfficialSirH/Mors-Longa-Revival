@@ -164,7 +164,7 @@
 					<group name="Desk">
 						<vox name="desk" pos="-3 .2 2.5" texture="7 .5" file="MOD/main/gas station/gas station props.vox" object="desk"/>
 						<vox name="monitor" pos="-2.9 1.2 1.9" rot="0 170" texture="7 .3" prop="true" file="MOD/main/gas station/gas station props.vox" object="monitor">
-							<screen tags="name=voxbox amount=1 " pos="0 .6 -.1" rot="0 180" size="1.06 .65" bulge="0" resolution="2048 1536" enabled="true" interactive="false" emissive=".2">
+							<screen script="MOD/game/BlankScreen.lua" tags="name=voxbox amount=1 " pos="0 .6 -.1" rot="0 180" size="1.06 .65" bulge="0" resolution="2048 1536" enabled="true" interactive="false" emissive=".2">
 								<light type="area" color=".04 0 1" scale="1" size="1.06 .65" fogscale="0" fogiter="0"/>
 							</screen>
 						</vox>
@@ -182,7 +182,7 @@
 					</group>
 					<group name="CCTV" pos="-4.7 4.15 -.05" rot="-20 -130">
 						<vox name="cctv" pos="0 -.35 -.3" texture="7 .3" prop="false" file="MOD/main/gas station/gas station props.vox" object="cctv">
-							<screen tags="name=cctv amount=1 " pos="0 .4 -.4" rot="0 180" size="1.06 .65" bulge="0" resolution="1261 712" enabled="true" interactive="false" emissive=".2"/>
+							<screen script="MOD/game/BlankScreen.lua" tags="name=cctv amount=1 " pos="0 .4 -.4" rot="0 180" size="1.06 .65" bulge="0" resolution="1261 712" enabled="true" interactive="false" emissive=".2"/>
 						</vox>
 					</group>
 					<group name="Security Cams">

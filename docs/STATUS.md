@@ -18,11 +18,10 @@ Marks: **[verified in-game]**, **[official source]**, **[unverified]**.
   stop sits in an unused `layer="horde"` of main.xml). The v2 conversion exists (`convert_horde.py`, test_horde.lua:
   WaveHandler → `shared.horde`, per-player HordePlaceTool) but is not exposed.
 * Custom difficulty (also an unused menu layer, code commented out).
-* **AS350 rockets on RMB** (user decision 2026-11-13, revisit later): in the pilot seat RMB leans the player out of
-  the helicopter (the same lean-out as aiming out of a car) instead of firing rockets, also with empty hands (so
-  emptying the pilot's hands, kept as in v1, does not stop it). Where the lean-out is implemented was not found
-  (not `player/Lean.lua`, not the gun scripts' vehicle checks; the 1.x update log lists "New improved vehicle leaning,
-  you can now drive as you lean out"). Options when revisited: find and suppress it for the pilot, or another key.
+* ~~AS350 rockets on RMB~~ DONE 2026-11-17 (user request): the lean-out was the mod's own drive-by
+  (`vehicles/ShootFromCar.lua`, key "Drive By Shooting", default "grab" = RMB). Vehicles tagged `nodriveby_driver`
+  (all six AS350 prefabs) skip it for the driver / pilot; passengers still lean out. Verified in local MP (host as
+  pilot: RMB fired 2 rockets, the pilot stayed seated).
 * **AGS-30 tripod aiming up / down** (user decision 2026-11-13, "Shelve and clean up"): its gun does not pitch, also
   as the unchanged original vehicle under our script (user test with a temporary copy); whether the external AVF of
   v1 could pitch it is unknown. Yaw and firing work. Tried, none moved it (readouts of hinge angle / aim error):

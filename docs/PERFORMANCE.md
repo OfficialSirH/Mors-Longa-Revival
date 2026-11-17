@@ -168,6 +168,33 @@ Phase 5 step 4 (2026-11-14/15). How generation and NPCs work otherwise: [SYSTEMS
 * New option "Low Detail Rocks" (Performance > Visual, on by default, user decision 2026-11-14): the road segments'
   rocks at half resolution (20 / 60 cm / 1.2 m voxels instead of 10 / 30 / 60 cm), blockier and breaking in
   coarser chunks; off = the original rocks. The host's setting decides for everyone (the server spawns the world).
+* Real frame time from a script (2026-11-17, MCP bridge): `GetFps()` follows the real frame time (it read 0.2-1 during
+  multi-second freezes; matched frames / wall clock at idle), unlike `GetTimeStep()` (capped at 1/30 s). A per-frame
+  `GetFps() < 15` log next to the debug "spawn activity" keys (`level.debug.spawned.*`) names what each slow frame
+  spawned. SP run at 25 m/s after the shift re-sync cost fix ([CHANGES](CHANGES.md) "Buildings / road missing"):
+  idle 50-57 FPS, moving 40-65; slowest frames: road segment ~0.4 s (2.3-4.9 FPS), vehicle 0.15-0.3 s, the shift
+  itself 0.13-0.26 s, each roadside decor part ~0.2 s (2 per segment), 1.6M-cell parts ~90 ms. Local MP (two windows on
+  one PC) closed itself twice during such runs (no dump): measure in SP.
+* Segment file and decor chunks (2026-11-17, [CHANGES](CHANGES.md)): measured the segment files' content one subtree
+  at a time (a test hook in `ui/ConfigMenu.lua`: `level.debug.perftest_request` = a kind or `file:<prefab or xml>`,
+  for tools that cannot spawn this mod's prefabs themselves): RoadSegmentH's static ground under its script 0.23 s,
+  M6 town 2354 shapes, M7 toll+base 0.35 s, M3's train 0.2 s. After decor + segment chunks, first km at 25 m/s: no
+  frame under 5 FPS (before: a 0.2-0.5 s frame every few segments). Throughput: a segment is ~100-600 spawn frames of
+  pieces (`SegmentPieces.lua`, 250k cells each); at pace > 1 the ground needs the urgent rule (CHANGES).
+* Crashes during these runs (2026-11-17; crash dumps, `%LOCALAPPDATA%/Teardown/crash/`; every callstack starts in the
+  crash handler's `strncpy`, the first game frame tells them apart). Type A (`0x2dd27`): also on 2026-11-15, before
+  today's changes; normal play with a full world; three of four had the shadow volume's "Max Size" at 1.7-4.5 GB
+  (normal ~280 MB), the last one did not. Type B (`0x15b6b4` / `0x15c200`): three times, each with an almost empty
+  world (5-114 KB spawned voxels): the road had fallen behind or ended. Not caused by a death restart (tested: a
+  death does not restart the level). Lead, unverified: every crash log shows `Could not find prefab: <mod folder>`
+  and `Script not found: data` about once a minute, the latter right before two of three Type A crashes. Both
+  sources found and fixed ([CHANGES](CHANGES.md) "Empty prefab instance", "Screens without a script"); whether the
+  crashes stop with them is untested. The game's log.txt is buffered: it is written at level changes / crashes, not
+  live (read it after a reload_scene).
+  Long run after both fixes and the SafeZone fix (2026-11-17, SP, 25 m/s, pace 3): 9.9 km in ~400 s with no crash
+  (earlier runs crashed at 1.5-5.5 km). Average 34 FPS; frames under 3 FPS: 9, 3-6 FPS: 41. Remaining slowest:
+  RoadSegmentM6 chunk #2 (its town, joints keep it whole) ~0.4 s, M7 #3 (camp) ~0.4 s, H #6 (the shop) ~0.25 s,
+  world shifts 0.2-0.25 s each. One run is not proof the crash is gone.
 
 ## NPCs
 * NPC cost (Phase 5 step after generation, 2026-11-15). Survey of the per-tick Lua work (server, per NPC):
@@ -273,6 +300,120 @@ Phase 5 step 4 (2026-11-14/15). How generation and NPCs work otherwise: [SYSTEMS
   (tick 3.2 + update 4.0 avg in the profiler's one-update-per-frame mode; in play below 60 FPS the update runs
   2-3 times per frame). Physics 3.6 ms with 1086 bodies in that fight (debris, ragdoll parts). Declined by the
   user: far-NPC rest (immersion). The remaining NPC cost is the AI's real work (thinking, standing, aiming joints).
+* NPCs vs the game's own robots (2026-11-17, user request: mimic the robots if they are much cheaper). Robots: the
+  built-in Robot Showcase "Basic mech" (data/script/robot.lua, 6 bodies), spawnable from any mod script as
+  `Spawn("builtin-robotshowcase:spawn/mech-basic.xml", ...)` (an inline `<instance file="builtin-...">` spawns
+  nothing). Deleting only a robot's script leaves its legs / feet / head; deleting only its "body" leaves its script
+  running (~0.1 ms each): delete every entity Spawn returned. Same spot on the road, 15 s windows (GetFps):
+  nothing 55.5 / 56.2 FPS; 10 robots +4.6 / +5.4 ms; 8-9 NPCs +6.3 / +12.4 ms (the second round with leftover robot
+  scripts and debris). Profiler (1 update per frame): physics about equal (robots 2.2-3.2 ms with 95 simulated
+  bodies, NPCs 1.2-2.2 ms with 96); script: robot.lua 2.0-2.8 ms for 10 (~0.25 ms each), goreai_main ~0.35 ms per
+  living NPC (tick ~0.11, update ~0.25). So a living NPC costs ~1.5x a robot in Lua (it also has guns, melee, part
+  damage, gore, more states): copying the robots would gain little. Per-function cost with the debug switch
+  `level.goreai.skip` (systems/goreai_skip.lua: listed global functions do nothing; DEBUG ONLY, changes behaviour
+  while set), read in the profiler's goreai_main Tick / Update averages with 14 NPCs: whole tick_npcs 1.4 ms;
+  npc_process_target, npc_manage_gun, health + shield each within noise (~0.4 ms); those plus voxels, stun and
+  sway together ~0.5 ms. The rest was DEAD npcs: they stay in NPCs (and in tick_npcs, tick_npcs_info,
+  update_npcs) until RemoveRoad deletes their torso; deleting 12 dead torsos took tick from 2.59 to 1.48 ms
+  (~0.09 ms per dead npc per frame: validity checks over all body parts twice, transform / bounds, target-player
+  pick with raycasts, light, loot tag write every step). Fix: settled dead npcs take `npc_rest_dead_tick`
+  (docs/CHANGES.md). After: tick 0.87 / 0.88 / 0.95 ms with 10 settled dead npcs vs 0.14 with none (~0.07 ms each,
+  was ~0.09). The light path itself is cheap (skipping it: -0.1 ms for 10; skipping API_npcs_dead: no change), but
+  skipping the whole tick_npcs still gives 0.33: ~0.4 ms of the dead npcs' cost inside tick_npcs is not explained
+  yet (open; possibly garbage collection from per-tick tables). Movement code (npc_robot_update) off with 10 living
+  npcs: update 2.16 -> 1.64 ms, but the baseline then drifted to 1.36 (npcs falling / fighting): profiler averages
+  swing ~0.8 ms with npc state, so readings below ~0.5 ms are not reliable this way.
+* NPC manager garbage (2026-11-17). The unexplained part was garbage collection. Debug tools in
+  systems/goreai_skip.lua (all off unless set): `level.goreai.alloc_probe` stops the collector every other second
+  and writes the allocation rate to level.debug.npc_alloc and the live heap to level.debug.npc_heap;
+  `level.goreai.alloc_fns` (list of global function names) adds per-function allocation to level.debug.npc_alloc_fns;
+  `level.goreai.gc_off` stops the collector; level.debug.npc_table (always, 1/s) counts npc records by state and
+  their projectile records. Numbers are exact (no frame-time noise). Findings:
+  - 10 living npcs: ~21-25 MB/s of garbage (~2 MB/s each), live heap only ~2.3 MB: many full collector cycles
+    per second. kB/s by function: npc_robot_update 5270, npc_process_thinking 3312, npc_point_gun 3089, tick_npcs
+    3074, npc_constrain_head_towards_target 2053, npc_hold_gun 1014, npc_constrain_jaw 993 (mostly Vec / Quat /
+    Transform tables). Collector on vs off (5 s windows, GetFps): 22.8 vs 21.2 ms per frame, ~1.5 ms (noisy).
+  - Settled dead npcs (16): 2.8 MB/s, heap +114 kB each (150 deep-copied projectile records per npc);
+    tick_npc_aim_alignment alone 1.4 MB/s for dead npcs. After the fixes (docs/CHANGES.md "Settled dead NPCs"):
+    no npcs 293 kB/s / 1389 kB heap; 10 settled dead 865 kB/s / 1980 kB: ~57 kB/s and ~60 kB per dead npc
+    (was ~156 kB/s and ~114 kB).
+  - Living npcs' garbage: unused per-update values removed (robotUpdate: playerPos, blocked, navigationCenter,
+    distToPlayer / dirToPlayer; npc_turn_towards: unused GetQuatEuler dir; npc_hold_gun: unused gun transform;
+    npc_point_gun: unused left arm, torso read once instead of 3x; feetUpdate: the step's torso transform reused,
+    each foot read once, constant ray samples): ~48-50 -> ~45 kB per living npc per tick (~8%). The rest is vector
+    maths the code needs; cutting it further means a broad rewrite.
+  - Collector pause (`collectgarbage("setpause", n)`, debug `level.goreai.gc_pause`), profiler goreai_main tick +
+    update with 6-7 living npcs: 200 (Lua default) 3.26 / 2.85 ms, 1000 2.47 / 2.54 ms, 500 2.32 ms (heap ~10 MB
+    instead of ~2-6). goreai_main now sets 500 in server.init (GORE_GC_PAUSE).
+  - Other scripts (2026-11-17, lib/GcProbe.lua: included by gunfunctions.lua, inventory.lua and
+    AdvancedHealthScript.lua; wraps server.tick / client.tick; `level.debug.gc_probe` writes per-script garbage
+    rate and live heap to level.debug.gc.<label>.<side><id>, `level.debug.gc_pause` sets their collector pause; off
+    unless set). Idle player, no fight: gun scripts (38 client / 37 server) 2.3 MB/s and 20 kB/s in total (~60 kB/s
+    each against ~0.9 MB live: a collector cycle every ~15 s per script), health client 1.5 MB/s on 0.7 MB live
+    (~2 cycles/s), inventory server 0.6 MB/s on 0.9 MB, client 0.1 MB/s. So the ~12 ms of client scripts is their
+    own code, not the collector (goreai_main: 20+ MB/s on ~2.3 MB, ~10 cycles/s); a pause change would gain little
+    there. Not measured while firing guns.
+  - Many small scripts (2026-11-17): the main level runs 119 script entities (level_scripts.xml: 39 guns, 8 melee,
+    12 generation, ...), each with a server and a client half. Engine cost of a script by itself: 200 copies of
+    dev/perf/empty_tick.lua (empty server.tick / client.tick, spawned through the ConfigMenu "file:" hook) took the
+    frame from 14.9 to 15.8 ms with no npcs, ~5 us per script per frame: the script count costs ~0.6 ms, merging
+    scripts would gain little. An idle gun still runs every frame: GunNet_ClientTick (two shell lists, 3P pose, scope
+    check, debug keys), WeaponBackgroundTick (a loop over its 200 projectile slots), GunInInventory in tick and draw
+    (4 registry reads + string building each), client.render's Gun3P_Update, server GunNet_ServerTick.
+  - Idle weapons, measured (2026-11-17, GcProbe skip switch `level.debug.skip_scripts` = "gun,melee", 5 s GetFps
+    windows alternated, no npcs): profiler open 18.1 vs 17.3 ms; profiler closed 16.1-16.9 vs 14.1-14.5 ms (~2.3 ms
+    for the 47 weapon scripts). Fix in gunfunctions.lua: the 200-slot projectile / grenade scan is skipped while
+    nothing is in flight and shellNum has not moved (every gun's FireRound / ShootGrenade fills shells[shellNum]
+    and then advances it: checked in all 38 guns), and GunInInventory reads the registry once per frame per gun.
+    Old vs new code alternated live (debug `level.debug.gun_old`): 15.0 / 17.7 / 18.3 / 14.3 vs 13.5 / 14.6 / 16.2 /
+    12.8 ms, ~2 ms per frame, new faster in all 4 pairs (tools/porting/tests/test_gunidle.lua). Melee scripts are
+    already close to the engine floor when idle.
+  - Bigger scripts ranked (2026-11-17, GcProbe labels in RemoveRoad, daynight_main, Convoy / chaseOperatorTransport,
+    LootOutline, MLSandbox, GenerateRoad + inventory / health; each skipped against a base window, 2 rounds, no
+    npcs, profiler closed; round 2 had +-6 ms swings for daynight / chase / sandbox / generateroad, not usable):
+    consistent were LootOutline 0.82 / 0.87 ms, inventory 1.03 / 0.38, RemoveRoad 0.76 / 0.42, convoy 1.15 / 0.50.
+    - LootOutline searched every "Loot" body in the world and measured it each frame (outlines only show within
+      8 m): now the bodies within 20 m are collected 4x a second and the per-frame checks run on those. After:
+      skipping it saves nothing measurable (4 rounds: -0.88 -0.99 0.34 -0.55 ms), i.e. ~0.85 ms gained.
+    - inventory (client): 128 engine calls per frame (call profiler, `level.debug.invprofile` now also switches it),
+      its busiest Lua functions (GetDimensions, InvToolEnable) are already cached / trivial: cost spread out, left.
+    - RemoveRoad: the sweep checks 200 objects per frame by design (cleanup speed); left as is.
+  - Long run (2026-11-17, scratch long_run.lua: host moved along +x at 25 m/s, God Mode, per 250 m: mean / worst
+    frame, npcs, bodies, shapes, scripts; summaries also saved to the bridge's savegame). Run 1 (before the script
+    fix): 25.5 ms per frame over the first 250 m, rising to 46-58 ms from 1.5 km on, also stretches with no npcs and
+    fewer shapes than at the start; script entities 114 -> 153 (171 at 3.2 km); 70 frames under 10 FPS in 2.9 km;
+    standing at the end 48.7 ms. Profiler there: server scripts 10.35 ms (top 10 only half of it);
+    goreai_initializer.lua had 38 instances (one per npc ever spawned, ~34 MB of Lua memory). Cause: finished spawned
+    scripts never went away. v1 removed them with masterScriptRemoverAPI's pause-menu trick, which does not work on
+    the v2 server, so they only went idle (goreai_initializer, enemy / convoy operators) and stayed loaded and called.
+    Bodies have no parent entities in the scene (GetEntityParent = 0), so the script <-> object link cannot be read
+    from outside; the profiler's script list (click "..." while paused, click a name: "Instances N") can.
+    Fix (lib/ScriptSelfDelete.lua): a finished script queues GetScriptId() (undocumented, returns the calling
+    script's entity) and lib/masterScriptRemover.lua deletes it from its own tick. A script deleting ITSELF in its
+    own tick crashed the game (exception in a lock on a worker thread, right after 11 npcs died): never do that.
+    Checked: 14 npcs killed -> 14 initializer scripts gone, corpses stay, no crash. Run 2 (same distance, fresh
+    level, with this fix and the idle gun / loot outline fixes): 24.8 / 29.5 / 30.2 / 26.9 / 19.9 / 17.0 / 15.1 /
+    19.1 / 33.5 / 25.0 ms per 250 m, scripts 131-143, 36 frames under 10 FPS; standing at the end 16.7 ms
+    (13 npcs, 151 awake bodies). The worlds are random (npc counts differ), but the climb is gone.
+    Still open: RemoveRoad makes ~4.2 MB/s of garbage on 151 kB live late in a run (its sweep lists); ParkingSpot
+    stays loaded after it stops (kept: it still draws its garage message); stalls on segment / part / vehicle spawns.
+  - Native code: not possible for mods (checked in game: Lua 5.1, no LuaJIT / ffi; require, package, loadlib, io,
+    os, debug are nil). Only the game's own native functions are available.
+* NPC step replay (2026-11-17, user request "NPC holds once per frame"; `systems/goreai_stepreplay.lua`,
+  test_stepreplay.lua). Profiler (SHIFT+ALT+F3, which runs ONE physics update per frame) with 12 npcs vs none:
+  goreai_main 3.9 vs 1.25 ms, physics 3.8 vs 1.1 ms, client scripts 11-12.6 ms either way (~90 scripts: ~50 gun
+  scripts, melee, inventory, UI; each 0.1-0.3 ms), Book.lua (the instruction book while open) 0.6-1.3 ms. Outside the
+  profiler server.update runs once per 1/60 s step, 2-3 times per slow frame, and update_npcs ran in full each time.
+  Now the frame's first step runs it and records its Constrain* calls; the other steps re-apply them (body's own
+  point / rotation refreshed); skipped time goes into the next full run (GetTimeStep() inside update_npcs returns
+  it); the thinking's re-navigate check is 4x per second of game time (was every 15th step). Off switch
+  `level.goreai.no_step_replay`, readout `level.debug.npc_steps`. Measured (SP, ~20 npcs, alternating 12 s windows):
+  replay on 30.2 / 36.1 / 34.5 FPS, off 29.0 / 31.1 / 34.0 (avg +2.2 FPS, ~2 ms per frame); ~45% of steps replayed
+  at ~30 FPS. Standing: 10 fresh npcs fully upright for 12 s with replay on (falls came with a fight, also with it
+  off). User play test: npcs look and act the same. The game's own robot (data/script/robot.lua) runs everything every step and moves heavy parts to native
+  helpers (RobotProcessSamplesCPP, RobotFootStepCPP, RobotSetFootConstraintsCPP, RobotHoverUprightCPP,
+  RobotAimUpdateCPP, ...); our robot movement is a retuned Lua port, so only the foot holds match a helper exactly.
+  The rest of the npc cost is physics (constraint solving, awake ragdolls), native already.
 * NPC rate tiers (2026-11-15, all four approved by the user; GYMP-style):
   1. Damage only when hit: npc_process_shield reads / resets the per-body-part damage values only when
      level.goreai.damage_pending is set; all 7 writers of level.goreai.body_damage_* set it (gunfunctions, melee,

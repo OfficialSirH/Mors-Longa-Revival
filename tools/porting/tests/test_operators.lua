@@ -76,6 +76,14 @@ local function run(path)
 	env.DriveVehicle = function(v, drive, steer, brake) drives[#drives + 1] = { drive, steer } end
 	env.server, env.client = {}, {}
 	env.TableShuffleInPlace = function(tb) return tb end -- TDSU (included in-game)
+	-- (2026-11-17) lib/ScriptSelfDelete.lua: the script's own entity is 900
+	env.deleted, env.reg = {}, {}
+	env.GetScriptId = function() return 900 end
+	env.GetEntityType = function(h) return h == 900 and "script" or "body" end
+	env.IsHandleValid = function(h) return not env.deleted[h] end
+	env.Delete = function(h) env.deleted[h] = true end
+	env.GetInt = function(k) return env.reg[k] or 0 end
+	env.SetInt = function(k, v) env.reg[k] = v end
 
 	local src = io.open(path, "rb"):read("*a"):gsub("\r", "")
 	-- inline the includes this test needs (Teardown's preprocessor does this in-game)
@@ -86,7 +94,7 @@ local function run(path)
 	end
 	-- Teardown processes #include lines even inside a --[[ ]] block at the top of a file; unwrap that block here
 	src = src:gsub("\n%-%-%[%[\n(#include[^%]]-)\n%]%]\n", "\n%1\n")
-	for _, name in ipairs({ "masterScriptRemoverAPI.lua", "vehicleOperatorCoop.lua" }) do
+	for _, name in ipairs({ "masterScriptRemoverAPI.lua", "vehicleOperatorCoop.lua", "ScriptSelfDelete.lua" }) do
 		src = src:gsub('#include "([^"]*' .. name:gsub("%.", "%%.") .. ')"', function(rel) return inline(rel) end)
 	end
 	src = src:gsub("([^\n]*)", function(l) if l:match("^%s*#") then return "" end return l end)
@@ -114,5 +122,7 @@ for _, f in ipairs({ "vehicles/operators/chaseOperator.lua", "vehicles/operators
 	local before = #drives
 	env.server.tick(1/60) env.server.update(1/60)
 	check(#drives == before and env.OpFinished, f .. ": idle after queueRemoval")
+	check(not env.deleted[900] and env.reg["level.script_remover.queue.count"] == 1
+		and env.reg["level.script_remover.queue.1"] == 900, f .. ": queues its own script entity (never deletes itself)")
 end
 print("all operator tests passed")

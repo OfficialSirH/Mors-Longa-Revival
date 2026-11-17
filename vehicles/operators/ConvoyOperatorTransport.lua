@@ -1,9 +1,13 @@
 #version 2
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = "convoy"
 -- (v2 operator) SERVER only: AI driving (DriveVehicle), damage, explosions, sounds, siren/lights. Targets the
 -- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/history/convert_operators.py.
 #include "../../lib/masterScriptRemoverAPI.lua"
 #include "vehicleOperatorCoop.lua"
+#include "../../lib/ScriptSelfDelete.lua"
 --debug toggle
 debug = false
 

@@ -183,20 +183,10 @@ function robotUpdate(npc, dt)
 
 	robotSetAxes(npc)
 
-	npc.robot.playerPos = GetPlayerCameraTransform(GoreP).pos -- (v2 goreai) target player
-
+	-- (2026-11-17, performance) removed per-update values nothing reads (each made new Vec / Transform tables, ~12 per
+	-- npc per update, garbage the collector has to clear): robot.playerPos (only headUpdate, never called),
+	-- robot.blocked, robot.navigationCenter, robot.distToPlayer / dirToPlayer.
 	local vel = GetBodyVelocity(npc.robot.body)
-	local fwdSpeed = VecDot(vel, npc.robot.dir)
-	local blocked = 0
-	if npc.robot.speed > 0 and fwdSpeed > -0.1 then
-		blocked = 1.0 - clamp(fwdSpeed/0.5, 0.0, 1.0)
-	end
-	npc.robot.blocked = npc.robot.blocked * 0.95 + blocked * 0.05
-
-	--Always blocked if fall is detected
-	if npc.sensor.detectFall > 0 then
-		npc.robot.blocked = 1.0
-	end
 
 	--Evaluate mass every frame since robots can break
 	-- (2026-11-15, performance) v1 summed every body's mass on every physics update (155 engine calls per frame with 8
@@ -209,7 +199,6 @@ function robotUpdate(npc, dt)
 	end
 
 	npc.robot.bodyCenter = TransformToParentPoint(npc.robot.transform, GetBodyCenterOfMass(npc.robot.body))
-	npc.robot.navigationCenter = TransformToParentPoint(npc.robot.transform, Vec(0, -npc.hover.distTarget, 0))
 
 	--Handle break all
 	npc.robot.breakAllTimer = math.max(0.0, npc.robot.breakAllTimer - dt)
@@ -226,12 +215,6 @@ function robotUpdate(npc, dt)
 		npc.robot.breakAll = false
 	end
 
-	--Distance and direction to player
-	local pp = VecAdd(GetPlayerTransform(GoreP).pos, Vec(0, 1, 0))
-	local d = VecSub(pp, npc.robot.bodyCenter)
-	npc.robot.distToPlayer = VecLength(d)
-	npc.robot.dirToPlayer = VecScale(d, 1.0/npc.robot.distToPlayer)
-
 	--Sense player if player is close and there is nothing in between
 	-- npc.robot.canSensePlayer = false
 	-- if npc.robot.distToPlayer < 3.0 then
@@ -244,7 +227,7 @@ function robotUpdate(npc, dt)
 	--Robot body sounds
 	if npc.robot.enabled and npc.hover.contact > 0 then
 		local vol
-		vol = clamp(VecLength(GetBodyVelocity(npc.robot.body)) * 0.4, 0.0, 1.0)
+		vol = clamp(VecLength(vel) * 0.4, 0.0, 1.0) -- (2026-11-17) same step's velocity, read once
 		if vol > 0 then
 			PlayLoop(walkLoop, npc.robot.transform.pos, vol)
 		end
@@ -376,6 +359,7 @@ end
 
 
 BALANCE_RADIUS = 0.5
+HOVER_SAMPLES = { Vec(0,0,0) }
 function hoverUpdate(npc, dt)
 
 	local dir = VecScale(npc.robot.axes[2], -1)
@@ -385,8 +369,7 @@ function hoverUpdate(npc, dt)
 	local dist = 0
 	local normal = Vec(0,0,0)
 	local shape = 0
-	local samples = {}
-	samples[#samples+1] = Vec(0,0,0)
+	local samples = HOVER_SAMPLES -- (2026-11-17) constant, was rebuilt every update (only read below)
 	-- samples[#samples+1] = Vec(-BALANCE_RADIUS,0,0)
 	-- samples[#samples+1] = Vec(BALANCE_RADIUS,0,0)
 	-- samples[#samples+1] = Vec(0,0,BALANCE_RADIUS)
@@ -571,10 +554,12 @@ function feetUpdate(npc, dt)
 		local subY = 0
 		local nextPathPoint = AutoVecSubsituteY(npc.nav.path[1], subY)
 
+		-- (2026-11-17, performance) the torso transform robotSetAxes read in this same step (robot.body is the torso)
+		local torsoTr = npc.robot.transform
 		ang = npc_movement_check_alignment(
 			-- AutoVecSubsituteY(GetBodyVelocity(npc.Torso), subY),
-			AutoVecSubsituteY(quat_to_dir(GetBodyTransform(npc.Torso).rot), subY),
-			quat_to_dir(QuatLookAt(GetBodyTransform(npc.Torso).pos, nextPathPoint)))
+			AutoVecSubsituteY(quat_to_dir(torsoTr.rot), subY),
+			quat_to_dir(QuatLookAt(torsoTr.pos, nextPathPoint)))
 
 		ang = (ang + 1) / 2
 		ang = (ang * 0.5) + 0.5
@@ -639,8 +624,9 @@ function feetUpdate(npc, dt)
 					PlaySound(stepSound, p, 0.5, false)
 				end
 			end
-			ConstrainPosition(foot.body, npc.robot.body, GetBodyTransform(foot.body).pos, foot.worldTransform.pos, 8, foot.linForce)
-			ConstrainOrientation(foot.body, npc.robot.body, GetBodyTransform(foot.body).rot, foot.worldTransform.rot, 16, foot.angForce)
+			local footTr = GetBodyTransform(foot.body) -- (2026-11-17) read once for both holds
+			ConstrainPosition(foot.body, npc.robot.body, footTr.pos, foot.worldTransform.pos, 8, foot.linForce)
+			ConstrainOrientation(foot.body, npc.robot.body, footTr.rot, foot.worldTransform.rot, 16, foot.angForce)
 
 			-- DebugLine(npc.robot.transform.pos, foot.worldTransform.pos, 1,1,0, 1) --##
 			-- DebugLine(npc.robot.transform.pos, foot.candidateTransform.pos, 1,0,0, 1) --##

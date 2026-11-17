@@ -69,7 +69,10 @@ function DriveByTick(p, dt)
 		end
 		s.cycled = true
 
-		if keyDown and s.vehicle ~= 0 and not HasTag(s.vehicle, "cfg") and not HasTag(s.vehicle, "planeVehicle") then
+		-- (2026-11-17, user request) vehicles tagged "nodriveby_driver" (AS350): no lean-out for the driver / pilot, whose
+		-- drive-by key (default "grab" = RMB) is the helicopter's rocket key; passengers still lean out
+		local noDriveBy = HasTag(s.vehicle, "nodriveby_driver") and IsPlayerVehicleDriver(s.vehicle, p)
+		if keyDown and s.vehicle ~= 0 and not noDriveBy and not HasTag(s.vehicle, "cfg") and not HasTag(s.vehicle, "planeVehicle") then
 			local RegisteredVehicle = s.vehicle
 			local drive = InputValue("up", p) - InputValue("down", p)
 			local turn = InputValue("left", p) - InputValue("right", p)

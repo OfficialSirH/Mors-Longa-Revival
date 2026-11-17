@@ -1,0 +1,12 @@
+<prefab version="1.4.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><trigger tags="PuzzlePiece" pos="200.0 0.0 0.0" size="0.1" />
+		<group name="Spawns">
+			<instance pos="62.5 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="62.5 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="106.7 0.7 -12.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadsigns/NormSignSpawnLeft.xml" />
+		</group>
+		</group></prefab>

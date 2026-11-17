@@ -317,6 +317,16 @@ Behaviour changes decided by the user:
   misplaced pieces seen right after a shift are back in place once its passes ran; 4 of 493 cells still differ at the
   end, all from one piece unrelated to the shift ([STATUS](STATUS.md)). Network cost with a remote player: unmeasured.
   To test with a friend.
+  * Cost fix (2026-11-17, measured in SP with the MCP bridge): those passes froze the game 0.5-5 s, 1, 2 and 5 s after
+    every shift, in SP too. Each `SetShapeLocalTransform` on a world-body shape costs ~0.28 ms (3000 shapes moved and
+    back in one frame: 1.7 s; 100 per frame: ~75 ms every frame; one set each: half). Now: no passes without other
+    players; only shapes of 500+ voxels (of 10,000 recent world shapes, 8,900 were bush pieces / bits of ~13 voxels,
+    ~1,070 road, rocks, terrain); one set per shape and pass (1 mm up, the next pass back down: never more than 1 mm
+    off); a pass is queued and worked off 25 shapes per frame. Behaviour change for non-hosts: small pieces (under 500
+    voxels, e.g. bush parts) spawned around a shift are no longer corrected, so a few may still sit 200 m off. SP run at
+    25 m/s: frames under 3 FPS 20 in 1.6 km before, 2 in 2.2 km after (both road-segment spawns, ~0.4 s). MP cost
+    (estimate, not measured): ~1,000 shapes per pass ≈ 0.3 s of work spread over ~40 frames (~7 ms each). To test with
+    a friend: buildings / road in place for the non-host, and no hitch after shifts.
 * Debug building sync readout, level scan (2026-11-16): the server publishes per 20 m cell (grid offset 7.3 m) the
   count and voxels of its static shapes (players' held tools left out); every machine lists the cells that differ
   and asks the server which shapes are in the worst one (`ui/BuildingProbe.lua`, test_buildprobe.lua). The readout
@@ -333,6 +343,86 @@ Behaviour changes decided by the user:
   `SpawnGap`) and the spawners through `SpawnSlot.lua` (`level.spawn.gap`); above 1 the pieces share the spawners'
   slot. Less data per frame for host and clients; the road appears more slowly (pace 3 at 25 m/s: the traveller
   waited for road 72 ticks in 2 km). test_decor.lua.
+  * Change (2026-11-17, after an in-game run at 25 m/s, pace 3: up to 425 entries waiting, the road ahead missing, the
+    player fell through the gaps): the pace never holds back the ground in front of the players. When the next waiting
+    ground entry's segment starts less than 100 m ahead of the generation player (`GroundUrgent`, `PACE_URGENT_DIST`),
+    the ground spawns every frame whatever the pace; spawners and decor keep it. Verified: 2.9 km at pace 3 with the
+    world full the whole way. Note: the user's Workshop copy has pace 6 saved, the local dev copy 3.
+* Empty prefab instance removed (2026-11-17, original-mod bug, in 9dde6dd): RoadSegment1237 / 4 / 5 each held a bare
+  `<instance file="MOD"/>` (an editor leftover) that spawned nothing and logged `Could not find prefab: <mod folder>`
+  every time one of these segments spawned. Found by listing every XML `file=` path without `MOD/` / `LEVEL/` (user's
+  idea).
+* NPC step replay (2026-11-17, performance, user request): below 60 FPS the npc logic (thinking, navigation,
+  movement, holds) runs once per frame instead of once per physics step; the frame's extra steps re-apply the holds
+  it set, and their time is carried into the next run, so npcs keep their pace. Timing change: npc decisions are
+  made once per frame (at 30 FPS: 30 times a second instead of 60). +2 FPS measured with ~20 npcs; npcs stood fully
+  upright in the test. Verified in play by the user (2026-11-17): npcs look and act the same.
+  Details: [PERFORMANCE](PERFORMANCE.md) "NPC step replay".
+* Settled dead NPCs (2026-11-17, performance, user OK): a dead npc stays in the NPC loops until the road cleanup
+  deletes its torso; past its 3 s dead window it now takes a light path (`npc_rest_dead_tick` in goreai_manage.lua):
+  all body parts and the position read once a second (the torso handle every tick), no target-player pick, light
+  written only when day / night changes, its 150 projectile records freed once none is in flight; no aim alignment
+  for dead npcs (tick_npc_aim_alignment), no per-step head transform for settled ones (the killcam reads the head
+  when it fires). Still listed as dead, killcam and loot tag unchanged. No gameplay change intended. Measured per
+  dead npc: garbage ~156 -> ~57 kB/s, heap ~114 -> ~60 kB (tools/porting/tests/test_restdead.lua).
+* NPC manager garbage (2026-11-17, performance, user request): unused per-update values removed from the movement,
+  turning, gun-holding and gun-pointing code (no effect on behaviour: nothing read them), and the script's Lua
+  garbage collector pause raised from 200 to 500 (the heap may grow to ~5x its live size, ~10 MB, before a cycle).
+  Measured: ~8% less garbage per living npc; goreai_main ~3.06 -> ~2.32 ms with 6-7 npcs (profiler).
+  Details: [PERFORMANCE](PERFORMANCE.md) "NPC manager garbage".
+* Idle guns (2026-11-17, performance, user request): every gun script scanned its 200 projectile slots and read the
+  inventory 8 times per frame even when nobody held it. Now the scan is skipped while nothing is in flight and no
+  new shot was fired, and the inventory check is read once per frame. No behaviour change intended; measured ~2 ms
+  per frame with no npcs. Details: [PERFORMANCE](PERFORMANCE.md) "Idle weapons".
+* AS350 rockets on RMB (2026-11-17, user request): the pilot no longer leans out of the helicopter on the drive-by
+  key (default RMB, the rocket key); ShootFromCar.lua skips the driver of vehicles tagged `nodriveby_driver` (all
+  AS350 prefabs). Passengers still lean out. Verified in local MP.
+* Finished scripts are removed (2026-11-17, performance, our v2 bug since the port): per-npc initializer scripts and
+  enemy / convoy vehicle scripts used to stay loaded (idle) after their npc died or their job ended, piling up over
+  a run (38 initializers after 3 km, frame time doubling). They now queue themselves and lib/masterScriptRemover.lua
+  deletes them (its v1 bugs fixed: wrong key cleared, a log line per removal). Corpses and vehicles stay as before.
+  Measured: standing at ~2.9 km 48.7 ms -> 16.7 ms per frame. Verified in local MP (10 npcs killed: host and client
+  both 111 -> 102 scripts, same corpses, no errors). Details: [PERFORMANCE](PERFORMANCE.md) "Long run".
+* Loot outlines (2026-11-17, performance): the outline script searched every loot body in the world each frame;
+  now it collects the ones within 20 m 4x a second and checks those each frame (outlines still show within 8 m as
+  before). ~0.85 ms per frame measured. Details: [PERFORMANCE](PERFORMANCE.md) "Bigger scripts ranked".
+* Paths with `MOD//` missed by the reorganization (2026-11-17, our bug since 2026-11-14): `Vehiclewg3.xml` (the
+  good-condition VW Beetle) pointed at `MOD//Vehicles/1963 VW Beetle/...` and `VehicleDD4.xml` (the camp) at 13
+  `MOD//Vox/...` tents / sleeping bags; the double slash hid them from `tools/relocate`, so the Beetle spawned
+  nothing and the camp had no tents. Now `MOD/vehicles/cars/1963 VW Beetle/...` and `MOD/assets/vox/...`. Found in
+  the log of a 10 km run. Still missing, original-mod bugs (never existed in 9dde6dd): constructionCivillian8's
+  `assets/industrial/lamp-ceiling-fixed.xml` / `lamp-wall-fluorecent-short.xml`, VehicleDD4's
+  `loots/military20.xml`.
+* Extra SafeZone scripts in the shop's decor (2026-11-17, our bug since 2026-11-14 `split_decor.py`): RoadSegmentH's
+  roadside decor sat under its `SafeZone.lua` script, and each decor part copied the full parent chain, script
+  included: every shop spawned 2 more SafeZone scripts (22 with the decor chunks). Each raises
+  `level.safezoneLoadCount`, which `game/ParkingSpot.lua` reads as "the next shop has loaded" (`STOP_newSafezone`),
+  so the shop's own decor most likely switched its parking spot off (inferred from the code, not tested in play).
+  Now the decor parts and chunks carry that wrapper as a plain `<group>` (same placement: the script had no pos /
+  rot); `split_decor.py` and `chunk_decor.py` turn script wrappers into groups (pos / rot kept). Verified with the
+  MCP bridge: spawning an H decor part or chunk leaves the count at 0, the whole RoadSegmentH raises it to 1.
+* Screens without a script (2026-11-17, original-mod bug): the gas station's two monitors (RoadSegmentH) and the ones
+  in constructionCivillian4 (1), constructionCivillian8 (2) and construction4 (2) pointed at
+  `MOD/script/infoscreen.lua`, which never existed (9dde6dd); Phase 3 removed the dead path, and a `<screen>` without
+  a script logs `Script not found: data` every time one spawns (the "data" is the empty path resolved in the game's
+  data folder). Found by spawning RoadSegmentH's parts one by one with the MCP bridge (the gas station alone gave the
+  error twice, one per screen); now `script="MOD/game/BlankScreen.lua"` (a v1 screen script that draws nothing,
+  same look). Verified: the same spawn no longer logs it. Also measured: an unprefixed `<script file="fx.lua">` (AVF
+  tanks) does find the game's `data/script/fx.lua` (no error).
+* Roadside decor in chunks, its own queue (2026-11-17, performance): `tools/porting/chunk_decor.py` cuts each decor
+  part (~1600 shapes, ~0.2 s in one frame) into chunks of ~200 shapes (`roadsegments/decor/chunks/`, 316 files;
+  every bush keeps its parent chain, the tool checks it; the original part files stay for the horde level, the
+  credits and the debug tests). The decor waits in `VegQueue`, served only with what a frame has left after the
+  ground and the segment file (two chunks fit in a frame), and the spawners no longer wait for it
+  (`level.segment.loading` = ground only): with ~20 entries per segment one shared queue fell behind at driving
+  speed. Behaviour change: bushes can appear a little after the road at speed. test_decor.lua.
+* Segment files in chunks (2026-11-17, performance): `tools/porting/chunk_segments.py` cuts each segment's own file
+  into up to 7 chunks (`roadsegments/chunks/`, 45 files, `SegmentFileChunks.lua`), spawned one per frame; the last
+  chunk runs the after-spawn work (enemy spawns, scripts, veg thinning) with every chunk's entities. Lifts the static
+  ground left under RoadSegmentH's SafeZone script (~4.6M cells, 0.23 s) into its own chunks; bodies, scripts,
+  instances and groups holding joints / ropes stay whole. ENGINE: a prefab spawns only the FIRST child of `<prefab>`
+  (measured: a chunk with three root groups lost its PuzzlePiece trigger and the road ended), so every chunk has one
+  root. Verified 5.5 km at 25 m/s (every segment, H included). Still one frame each: M6's town, B1's wall, M7's camp.
 * MP fixes, second round (2026-11-14, user's decisions; test_mpleads.lua, test_newlevel.lua; to re-test in MP):
   * Perks are the host's for everyone: a pickup (`server.invTake`) raises the perk in the host's savegame (before:
     the picker's own; a maxed perk still gives the picker $500); `game/newLeveltoLEVEL.lua` publishes the host's

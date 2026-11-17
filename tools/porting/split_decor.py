@@ -91,12 +91,32 @@ def chains(xml_text):
     out = Counter()
 
     def walk(e, prefix):
-        me = prefix + ((e.tag, tuple(sorted(e.attrib.items()))),)
+        me = prefix + (ident(e),)
         out[me] += 1
         for c in e:
             walk(c, me)
     walk(root, ())
     return out
+
+
+def ident(e):
+    """An element's identity for the placement check. A <script> counts as a group with its pos / rot: parts carry
+    script ancestors as plain groups (wrapper_open), which places their children the same way."""
+    if e.tag == "script":
+        return ("group", tuple(sorted((k, v) for k, v in e.attrib.items() if k in ("pos", "rot"))))
+    return (e.tag, tuple(sorted(e.attrib.items())))
+
+
+def wrapper_open(text, a):
+    """An ancestor's opening tag for a part. A <script> becomes a <group> with only its pos / rot (2026-11-17):
+    RoadSegmentH's decor sat under its SafeZone script, and each part spawned another SafeZone script, which raised
+    level.safezoneLoadCount and stopped the shop's parking spot (game/ParkingSpot.lua STOP_newSafezone)."""
+    line = text[line_start(text, a.start):a.open_end]
+    if a.name != "script":
+        return line
+    indent = line[:len(line) - len(line.lstrip())]
+    attrs = "".join(' %s="%s"' % (k, a.get(k)) for k in ("pos", "rot") if a.get(k) is not None)
+    return "%s<group%s>" % (indent, attrs)
 
 
 def split_text(text, seg_name):
@@ -122,10 +142,10 @@ def split_text(text, seg_name):
         key = re.sub(r"[^A-Za-z0-9_-]", "_", child.get("name") or str(i + 1))
         while key in parts:
             key += "_"
-        head = "".join(text[line_start(text, a.start):a.open_end] + "\n" for a in ancestors)
+        head = "".join(wrapper_open(text, a) + "\n" for a in ancestors)
         head += text[line_start(text, decor.start):decor.open_end] + "\n"
         body = text[line_start(text, child.start):line_end(text, child.end)]
-        tail = "".join("</%s>\n" % a.name for a in [decor] + ancestors[::-1])
+        tail = "".join("</%s>\n" % ("group" if a.name == "script" else a.name) for a in [decor] + ancestors[::-1])
         parts[key] = head + body + tail
     # cut the moved children out of the segment (the decor group stays: the derricks, or empty)
     new_text, pos = [], 0
@@ -149,7 +169,7 @@ def check(original, new_seg, parts):
     decor_paths = set()
 
     def walk(e, prefix):
-        me = prefix + ((e.tag, tuple(sorted(e.attrib.items()))),)
+        me = prefix + (ident(e),)
         if e.tag == "group" and e.attrib.get("name") == "decor":
             p = ()
             for step in me:

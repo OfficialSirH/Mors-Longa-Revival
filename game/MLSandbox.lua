@@ -8,6 +8,9 @@
 #include "script/weather.lua"
 #include "script/toolutilities.lua"
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
+#include "../lib/GcProbe.lua"
+GCP_LABEL = "sandbox"
 
 dieFade = 0
 respawnFadeInTime = 4

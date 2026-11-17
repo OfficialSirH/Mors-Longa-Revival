@@ -1,0 +1,174 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL1.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><group>
+			<group name="overhead sign" pos="0.65 0.6 10.32" prop0="rotstrength=3" prop1="collide=true" prop2="texture=8 0.5">
+				<vox pos="0.0 6.6 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+					<joint pos="10.0 1.5 0.4" rot="0.0 180.0 0.0" rotstrength="5" />
+					<joint pos="-9.9 1.5 0.4" rot="0.0 0.0 0.0" rotstrength="5" />
+					<vox pos="-0.3 0.9 -0.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign: STOP">
+						<joint pos="8.94 3.6 0.1" rot="0.0 0.0 0.0" />
+						<joint pos="8.95 0.7 0.1" rot="0.0 0.0 0.0" />
+						<joint pos="-8.86 3.6 0.1" rot="0.0 0.0 0.0" />
+						<joint pos="-8.86 0.7 0.1" rot="0.0 0.0 0.0" />
+					</vox>
+					<vox pos="10.0 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+						<joint rotstrength="20" />
+					</vox>
+					<vox pos="-9.9 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+						<joint rotstrength="20" />
+					</vox>
+					<vox pos="5.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="3.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="1.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-0.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-2.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-4.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+				</vox>
+			</group>
+			<group name="overhead sign" pos="198.21001 0.6 -12.48" rot="0 180 0" prop0="rotstrength=3" prop1="collide=true" prop2="texture=8 0.5">
+				<vox pos="0.0 6.6 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+					<joint pos="10.0 1.5 0.4" rot="0.0 180.0 0.0" rotstrength="5" />
+					<joint pos="-9.9 1.5 0.4" rot="0.0 0.0 0.0" rotstrength="5" />
+					<vox pos="-0.3 0.9 0.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign: STOP DAMAGED">
+						<joint pos="8.94 3.6 -0.1" rot="0.0 0.0 0.0" />
+						<joint pos="8.95 0.7 -0.1" rot="0.0 0.0 0.0" />
+						<joint pos="-8.86 3.6 -0.1" rot="0.0 0.0 0.0" />
+						<joint pos="-8.86 0.7 -0.1" rot="0.0 0.0 0.0" />
+					</vox>
+					<vox pos="10.0 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+						<joint rotstrength="20" />
+					</vox>
+					<vox pos="-9.9 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+						<joint rotstrength="20" />
+					</vox>
+					<vox pos="5.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="3.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="1.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-0.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-2.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+					<vox pos="-4.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+						<joint tags="night" pos="0.05 0.0 -0.05" />
+					</vox>
+				</vox>
+			</group>
+			<group name="Enemies" pos="119.80001 0.9 -2.7" rot="0.0 -180.0 0.0">
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="109.9 0.3 -5.2" rot="0.0 -80.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="103.3 0.5 21.7" rot="0.0 0.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="106.9 0.6 -23.2" rot="0.0 -180.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="98.39999 0.3 -16.60002" rot="0.0 -90.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="110.3 0.3 3.0" rot="0.0 -80.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="96.89999 0.3 13.69998" rot="0.0 -80.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="-28.40002 0.3 -7.80001" rot="0.0 -80.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="-34.80001 0.5 21.7" rot="0.0 0.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 cover" pos="-31.20001 0.6 -23.2" rot="0.0 -180.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="-39.70003 0.3 -16.60002" rot="0.0 -90.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="-24.50002 0.3 5.39999" rot="0.0 -80.0 0.0" />
+				<location tags="RandomRagdoll Type=mil chance=100 " pos="-37.60003 0.3 14.49998" rot="0.0 -80.0 0.0" />
+			</group>
+		</group>
+		<trigger tags="PuzzlePiece" pos="200.0 0.0 0.0" size="0.1" />
+		<group name="HEAVY STRUCTURE BORDER" pos="31.5 0.5 -12.6" prop0="texture=6 0.5">
+			<group name="extra barricades" pos="-3.8 0.0 -6.3">
+				<group name="left side" pos="4.2 -0.1 3.4">
+					<group name="high" pos="-8.3 0.4 -3.7">
+						<instance pos="-3.8 0.0 0.2" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="5.4 0.0 0.2" rot="0.0 -50.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="-3.9 0.0 12.7" rot="0.0 -10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="4.9 0.0 12.9" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="10.0 0.0 12.7" rot="0.0 -10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="17.7 0.0 12.9" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					</group>
+					<group name="low" pos="-12.8 0.3 -3.4">
+						<instance pos="0.3 0.1 1.0" rot="0.0 -85.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="0.10001 0.1 13.60001" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-9.99999 0.1 12.20001" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-11.19999 0.1 13.80001" rot="0.0 -125.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-11.19999 0.1 -1.09999" rot="0.0 115.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-11.4 0.0 -3.2" rot="0 95 -4" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-13.5 0.0 -3.1" rot="0.0 -175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-9.99999 0.1 0.80001" rot="0.0 -175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					</group>
+					<vox name="boom barrier" pos="-19.2 0.35 -3.5" rot="0.0 -90.0 0.0" texture="8 0.5" file="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier mechanism">
+						<voxbox name="pole" pos="-0.2 1.05 0.3" texture="6 0.5" density="3" prop="true" size="122 3 2" brush="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier pole">
+							<joint pos="0.15 0.15 0.0" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.02" limits="0 90" />
+						</voxbox>
+					</vox>
+				</group>
+				<group name="right side" pos="4.2 -0.1 25.5" rot="0.0 0.0 0.0">
+					<group name="high" pos="-8.3 0.3 -3.7">
+						<instance pos="5.40001 0.1 0.20002" rot="0.0 -50.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="-3.79999 0.1 0.20002" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="4.90001 0.1 12.90002" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="-3.89999 0.1 12.70002" rot="0.0 -10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="17.70001 0.1 12.90002" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						<instance pos="10.00001 0.1 12.70002" rot="0.0 -10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					</group>
+					<group name="low" pos="-12.8 0.3 -3.4">
+						<instance pos="0.30001 0.1 1.00001" rot="0.0 -85.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="0.10001 0.1 13.60001" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-9.99999 0.1 12.20001" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-11.19999 0.1 13.80001" rot="0.0 -125.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-11.19999 0.1 -1.09999" rot="0.0 115.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						<instance pos="-9.99999 0.1 0.80001" rot="0.0 -175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					</group>
+					<vox name="boom barrier" pos="-14.5 0.35 9.2" rot="0.0 90.0 0.0" texture="8 0.5" file="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier mechanism">
+						<voxbox name="pole" pos="-0.2 1.05 0.3" texture="6 0.5" density="3" prop="true" size="122 3 2" brush="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier pole">
+							<joint pos="0.15 0.15 0.0" rot="0.0 0.0 0.0" type="hinge" rotstrength="0.02" limits="0 90" />
+						</voxbox>
+					</vox>
+				</group>
+				<group name="flood lights" pos="26.49998 1.5 -1.2" rot="0.0 0.0 0.0">
+					<group name="big flood light" pos="2.62 -1.3 13.9" rot="0.0 -60.0 0.0">
+						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+						</vox>
+					</group>
+					<group name="big flood light" pos="-29.08 -1.3 -0.1" rot="0.0 130.0 0.0">
+						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+						</vox>
+					</group>
+					<group name="big flood light" pos="2.02 -1.3 36.0" rot="0.0 -50.0 0.0">
+						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+						</vox>
+					</group>
+					<group name="big flood light" pos="-29.67324 -1.3 37.61583" rot="0.0 60.0 0.0">
+						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+						</vox>
+					</group>
+				</group>
+				<instance pos="-14.7 0.2 39.1" file="MOD/prefabs/assets/checkpoint shack.xml" />
+				<instance pos="-11.1 0.2 -5.1" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/checkpoint shack.xml" />
+				<instance pos="27.0 0.2 -5.1" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/checkpoint shack.xml" />
+				<instance pos="23.4 0.2 39.1" file="MOD/prefabs/assets/checkpoint shack.xml" />
+			</group>
+			<group name="Defense Weaponry" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+				<instance pos="-21.7 0.0 -7.1" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml" />
+				<instance pos="-21.7 0.0 29.1" rot="0.0 80.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/Kornet.xml" />
+				<instance pos="-26.5 0.0 32.54002" rot="0.0 83.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml" />
+				<instance pos="-26.5 0.0 -10.59998" rot="0.0 100.0 0.0" file="MOD/vehicles/avf/prefabs/turrets/ags30.xml" />
+			</group>
+		</group>
+		</group></prefab>

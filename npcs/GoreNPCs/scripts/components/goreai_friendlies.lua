@@ -1,7 +1,8 @@
 --- Query global npc data before processing npcs.
 function tick_npcs_info()
     for key, npc in pairs(NPCs) do
-        if npc_is_valid(npc) then
+        -- (2026-11-17) a settled dead npc's validity is kept by npc_rest_dead_tick (goreai_manage.lua)
+        if (npc.restDead and npc.isValid) or (not npc.restDead and npc_is_valid(npc)) then
             if NPC_TEAMS[npc.ai.teams.team] == PlayerTeam then
                 FriendliesCount = FriendliesCount + 1
                 npc.isFriendly = true

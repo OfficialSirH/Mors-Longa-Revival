@@ -69,4 +69,5 @@ end
 --- trick does not work on the server. The script now just goes idle (server callbacks check OpFinished).
 function queueRemoval()
 	OpFinished = true
+	ScriptSelfDelete() -- (2026-11-17) now possible: GetScriptId() (lib/ScriptSelfDelete.lua)
 end

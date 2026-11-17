@@ -63,7 +63,6 @@
 			<instance pos="80.80001 0.7 42.1" file="MOD/prefabs/spawns/buildings/NormBuildingSpawn.xml"/>
 			<instance pos="90.4 0.7 -49.9" file="MOD/prefabs/spawns/buildings/NormBuilding180Spawn.xml"/>
 		</group>
-		<instance file="MOD"/>
 		<group name="instance=MOD/prefabs/spawnables/buildings/constructionCivillian20.xml" pos="73.7 0.5 71.8" rot="0.0 0.0 0.0">
 			<group name="building" pos="5.2 0.2 -5.5">
 				<body pos="-4.8 -5.0 6.0" dynamic="true">

@@ -1,5 +1,8 @@
 #version 2
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = "removeroad"
 -- (v2) server: deletes what is far behind the REARMOST player (nothing near any player), never a car a player is in.
 -- Scripts that came with deleted road segments are removed by GenerateRoad (TickSegmentScripts): in v2 a script
 -- cannot be linked to its objects (GetEntityChildren / GetEntityParent return nothing for scripts, 2026-11-07).

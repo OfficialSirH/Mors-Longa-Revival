@@ -437,8 +437,7 @@ end
 function npc_hold_gun(npc) --- Constrain npc gun position to hand
 
     local handleTr = GetLightTransform(npc.Gun.handle)
-    local gunTr = GetBodyTransform(npc.Gun.body)
-    gunTr.pos = VecAdd(gunTr.pos, VecSub(gunTr.pos, handleTr.pos))
+    -- (2026-11-17, performance) removed an unused gunTr (GetBodyTransform + VecAdd + VecSub per update)
 
     ConstrainPosition(npc.Gun.body, 0, handleTr.pos, npc_get_hand_pos(npc.hands.right))
 
@@ -479,14 +478,15 @@ function npc_point_gun(npc)
         return
     end
 
-    local l_armTr           = GetBodyTransform(npc.L_ARM)
+    -- (2026-11-17, performance) the torso transform read once (was 3x in the same step); unused l_armTr removed
     local r_armTr           = GetBodyTransform(npc.R_ARM)
     local r_upper_armTr     = GetBodyTransform(npc.RR_ARM)
     local gunTr             = GetBodyTransform(npc.Gun.body)
-    local torsoFwdPos       = TransformToParentPoint(GetBodyTransform(npc.Torso), Vec(0, 0, -100))
+    local torsoTr           = GetBodyTransform(npc.Torso)
+    local torsoFwdPos       = TransformToParentPoint(torsoTr, Vec(0, 0, -100))
 
-    local shoulderPos               = TransformToParentPoint(GetBodyTransform(npc.Torso), Vec(0.3, 0.6, 0.1))
-    local hipPos                    = TransformToParentPoint(GetBodyTransform(npc.Torso), Vec(0.3, 0, -0.2))
+    local shoulderPos               = TransformToParentPoint(torsoTr, Vec(0.3, 0.6, 0.1))
+    local hipPos                    = TransformToParentPoint(torsoTr, Vec(0.3, 0, -0.2))
     local rightHandShootAlignedPos  = VecAdd(VecScale(DirLookAt(shoulderPos, npc.ai.shootPosOffset), 0.5), shoulderPos)
 
 
@@ -1359,7 +1359,9 @@ end
 --- Also clears the debug hit list, which v1 cleared in debug_npcs (draw).
 function tick_npc_aim_alignment()
     for key, npc in pairs(NPCs) do
-        if npc.Gun and npc.aim and npc.torsoTr and npc.ai.targeting.target and npc.ai.lookPos and npc.ai.shootPos then
+        -- (2026-11-17, performance) not for dead npcs: only npc_point_gun / npc_manage_shooting read npc.aim (living
+        -- npcs); with 16 dead npcs this loop made 1.4 MB/s of garbage (QuatLookAt / QuatDiff tables)
+        if not npc.dead and npc.Gun and npc.aim and npc.torsoTr and npc.ai.targeting.target and npc.ai.lookPos and npc.ai.shootPos then
             local gun_tr = GetBodyTransform(npc.Gun.body)
             local torso_align = 100 - QuatDiff(npc.torsoTr.rot, QuatLookAt(npc.torsoTr.pos, AutoVecSubsituteY(npc.ai.lookPos, npc.torsoTr.pos[2])))
             torso_align = torso_align/100

@@ -1,0 +1,40 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM4.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><trigger tags="PuzzlePiece" pos="200.0 0.0 0.0" size="0.1" />
+		<group name="Spawns">
+			<instance pos="169.60001 0.7 -54.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/buildings/NormBuilding180Spawn.xml" />
+			<instance pos="62.5 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="110.0 0.8 26.9" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="117.1 0.8 41.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="89.5 0.8 -38.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="74.2 0.8 -66.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="62.5 0.8 -12.8" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="181.8 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="123.8 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="24.9 0.8 8.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+			<instance pos="8.5 0.8 27.5" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/enemy vehicles/EnemyCarSpawn.xml" />
+			<instance pos="61.59998 0.8 1.39999" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadblocks/RoadBlockSpawn.xml" />
+		</group>
+		<trigger tags="WaterSource size=100,400 depth=1 wave=0 ripple=.1 motion=1 foam=0 color=.7,.52,.52" pos="100.0 -2.8 0.0" size="0.1">
+			<water type="box" size="100 400" depth="1" wave="0" ripple=".1" motion="1" foam="0" color="0.7 0.52 0.52" />
+		</trigger>
+		<instance pos="147.3 0.7 -12.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadsigns/NormSignSpawnLeft.xml" />
+		<instance pos="71.3 0.7 9.3" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/roadsigns/NormSignSpawnRight.xml" />
+		<instance pos="87.5 -2.5 -12.1" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+		<instance pos="92.4 -2.5 9.7" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+		<instance pos="134.2 -2.5 9.7" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+		<instance pos="129.3 -2.5 -12.1" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+		<vox pos="86.7 -1.8 -37.0" rot="90.0 -50.0 0.0" file="MOD/assets/vox/cargo_wagon_insulated.vox" object="wagon">
+			<instance pos="-7.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+			<instance pos="-5.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+			<instance pos="-3.4 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+			<instance pos="-1.8 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+			<instance pos="0.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+			<instance pos="1.6 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+			<instance pos="3.0 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+			<instance pos="4.4 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+			<instance pos="6.2 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+			<instance pos="8.1 2.2 0.2" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+		</vox>
+	</group></prefab>

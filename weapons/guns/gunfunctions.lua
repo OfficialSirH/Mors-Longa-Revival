@@ -4,6 +4,9 @@
 #include "../../lib/Settings.lua"
 #include "../../lib/Automatic.lua"
 #include "../../lib/TDSU/tdsu.lua"
+-- (2026-11-17, DEBUG) collector probe, off unless level.debug.gc_* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = GCP_LABEL or "gun"
 
 
 
@@ -22,7 +25,19 @@ local gunImpactSoundsLoaded = false
 -- player's inventory: everything after only concerns a gun the player has (current-primary item, tool / inventory
 -- block, held block; checkUnlimitedBulletsValid edits the CURRENT primary gun's item, so idle scripts running it was
 -- wrong anyway).
+-- (2026-11-17, performance) asked in tick and draw of every gun script each frame: the answer is kept for the frame
+-- (GetTime() is the same within one frame; inventory changes show on the next frame at the latest)
+local invCheck = {}
 function GunInInventory(id)
+	local now = GetTime()
+	local c = invCheck[id]
+	if c and c.at == now and not GcProbeOld then return c.result end
+	if not c then c = {} invCheck[id] = c end
+	c.at, c.result = now, GunInInventory_Read(id)
+	return c.result
+end
+
+function GunInInventory_Read(id)
 	for i = 1, 4 do
 		local item = GetString("inventory.guns." .. i .. ".item")
 		if item == id or item:sub(1, #id + 1) == id .. "_" then return true end
@@ -84,17 +99,26 @@ function WeaponTick(dt)
 	end
 end
 
+-- (2026-11-17, performance) Every gun script runs this each frame, held or not, and scanned all 200 projectile slots
+-- (38 guns: ~7600 loop steps per frame). A shot always fills shells[shellNum] and then advances shellNum (here and
+-- in each gun's own FireRound / ShootGrenade), and only ProjectileOperations / GrenadeOperations end a shell. So once
+-- a scan found nothing in flight, the next scans are skipped until shellNum moves.
+local function stepShells(handler, op)
+	if not handler.idleScan or handler.idleScan ~= handler.shellNum or GcProbeOld then
+		local live = false
+		for key, shell in ipairs(handler.shells) do
+			if shell.active then
+				op(shell)
+				live = live or shell.active
+			end
+		end
+		handler.idleScan = (not live) and handler.shellNum or nil
+	end
+end
+
 function WeaponBackgroundTick(dt)
-	for key, shell in ipairs(projectileHandler.shells) do
-		if shell.active then
-			ProjectileOperations(shell)
-		end
-	end
-	for key, shell in ipairs(grenadeHandler.shells) do
-		if shell.active then
-			GrenadeOperations(shell)
-		end
-	end
+	stepShells(projectileHandler, ProjectileOperations)
+	stepShells(grenadeHandler, GrenadeOperations)
 	if shootTimer > 0 or ammo == 0 then
 		shootTimer = shootTimer - dt
 	end

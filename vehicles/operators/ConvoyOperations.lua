@@ -4,6 +4,7 @@
 -- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/history/convert_operators.py.
 #include "../../lib/masterScriptRemoverAPI.lua"
 #include "vehicleOperatorCoop.lua"
+#include "../../lib/ScriptSelfDelete.lua"
 --debug toggle
 debug = false
 

@@ -461,9 +461,7 @@ function npc_turn_towards(npc, pos)
 		AutoVecSubsituteY(pos or Vec(0,0,0), tr.pos[2]))
 
 
-	local dir = Vec(GetQuatEuler(rot)) --todo Make slight dynamic bobbing
-	dir[1] = 0
-	dir[3] = 0
+	-- (2026-11-17, performance) removed an unused `dir` (Vec(GetQuatEuler(rot)), a new table per call)
 
 	ConstrainOrientation(npc.Torso, 0, tr.rot, rot, 10)
 

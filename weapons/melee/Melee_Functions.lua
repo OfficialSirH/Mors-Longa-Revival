@@ -1,3 +1,6 @@
+-- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = GCP_LABEL or "melee"
 local sc = 1
 
 MeleeWeapons = {

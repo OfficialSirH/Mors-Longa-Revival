@@ -16,7 +16,12 @@ function tick_npcs(dt)
 
     for _, npc in pairs(NPCs) do
 
-        if npc_is_valid(npc) then
+        if npc.restDead then
+
+            -- (2026-11-17, performance) a dead npc past its 3 s window (npc_rest_dead_tick)
+            npc_rest_dead_tick(npc, deadNPCs)
+
+        elseif npc_is_valid(npc) then
 
             npc.torsoTr      = GetBodyTransform(npc.Torso)
             npc.torsoPos     = AabbGetBodyCenterPos(npc.Torso)
@@ -82,7 +87,7 @@ function tick_npcs(dt)
 
                 if npc.deadTime > 3 then -- Uninstantiate.
                     npc_mark_for_removal(npc)
-                    if IsGoreMap then npc_delete_entities(npc) end
+                    if IsGoreMap then npc_delete_entities(npc) else npc.restDead = true end
                 end
 
                 npc.deadTime = npc.deadTime + GetTimeStep()
@@ -123,8 +128,82 @@ function tick_npcs(dt)
 end
 
 
+--- (2026-11-17, performance, user OK) A dead npc stays in NPCs until RemoveRoad deletes its torso behind the players
+--- (tick_cleanup_leaks). Measured: each one still cost ~0.09 ms per frame in tick (all body parts checked twice per
+--- tick, transform / bounds, the target-player pick with its raycasts, the light). Once past its 3 s dead window it
+--- takes this path instead: same results for everything that reads it (in the deadNPCs list, torsoTr / torsoPos kept
+--- current, deadTime, marked for removal, light follows day / night), but the full body-part check runs once a
+--- second (the torso every tick), no target player is picked (nothing reads it for a dead npc) and the light is
+--- only written when day / night changes. update_npcs_full's dead branch (killcam, loot tag) is unchanged.
+function npc_rest_dead_tick(npc, deadNPCs)
+    local now = GetTime()
+    if not IsHandleValid(npc.Torso) then
+        npc.isValid = false
+    elseif now >= (npc.restCheckAt or 0) then
+        npc.restCheckAt = now + 1
+        -- position too only once a second: every reader of torsoTr / torsoPos works on its own (living) npc, and
+        -- control of an npc ends 3 s after its death (goreai_controller.lua); per tick it was most of this path's
+        -- garbage (~680 kB/s with 16 dead npcs)
+        if npc_is_valid(npc) then
+            npc.torsoTr  = GetBodyTransform(npc.Torso)
+            npc.torsoPos = AabbGetBodyCenterPos(npc.Torso)
+        end
+        -- a dead npc no longer shoots: free its 150 projectile records once none is in flight (heap the garbage
+        -- collector walks on every cycle)
+        if not npc.restShellsFreed then
+            local active = false
+            for _, shell in ipairs(npc.projectileHandler.shells) do
+                if shell.active then active = true break end
+            end
+            if not active then
+                npc.projectileHandler.shells = {}
+                npc.restShellsFreed = true
+            end
+        end
+    end
+    if npc.isValid then
+        npc.headshot = false
+        table.insert(deadNPCs, npc)
+        npc_mark_for_removal(npc)
+        npc.deadTime = npc.deadTime + GetTimeStep()
+        local night = DayPhase == "Night"
+        if npc.restLight ~= night then
+            npc.restLight = night
+            SetLightEnabled(npc.Light, night)
+        end
+    end
+    npc.health_damage_taken = 0
+    for _, shell in ipairs(npc.projectileHandler.shells) do
+        if shell.active then npc_projectile_operations(npc, shell) end
+    end
+end
+
+
 --- Run the update() callback functions for all npcs.
 function update_npcs(dt)
+
+    -- (2026-11-17) the frame's first physics step runs everything, the others re-apply its holds (goreai_stepreplay.lua)
+    local frame = ConfigMemoGen
+    if not StepReplayBegin(dt, frame) then
+        for index, npc in pairs(NPCs) do
+            if npc.isValid and not npc.dead and npc.replayFrame == frame and npc.replay then
+                StepReplayApply(npc.replay)
+            end
+        end
+        return
+    end
+    dt = GoreFrameDt
+    local realTimeStep = GetTimeStep
+    GetTimeStep = function() return GoreFrameDt end   -- per-step timers advance by the time this run covers
+    local probe = GoreAlloc and GoreAlloc.stopped and collectgarbage("count") -- (2026-11-17, DEBUG) goreai_skip.lua
+    local ok, err = pcall(update_npcs_full, dt, frame)
+    if probe then GoreAllocFull = (GoreAllocFull or 0) + collectgarbage("count") - probe if not ok then GoreAllocErr = err end end
+    GetTimeStep = realTimeStep
+    StepReplayList = nil
+    if not ok then error(err, 0) end
+end
+
+function update_npcs_full(dt, frame)
 
     for index, npc in pairs(NPCs) do
 
@@ -132,7 +211,11 @@ function update_npcs(dt)
 
             GoreAI_SetContext(npc)
 
+            StepReplayList = nil
             if not npc.dead then
+                StepReplayList = {}
+                npc.replay = StepReplayList
+                npc.replayFrame = frame
 
                 npc.HT = GetBodyTransform(npc.Head)
 
@@ -180,7 +263,9 @@ function update_npcs(dt)
 
                 set_lock_cam(npc) -- (v2) the killer's client checks its own killcam setting
 
-                npc.HT = GetBodyTransform(npc.Head)
+                -- (2026-11-17, performance) only the killcam reads npc.HT and it reads the head itself now
+                -- (goreai_killcam.lua): a settled dead npc skips the per-step transform
+                if not npc.restDead then npc.HT = GetBodyTransform(npc.Head) end
                 SetTag(npc.Loot, "interact", npc.enemyweapontag)
 
             end

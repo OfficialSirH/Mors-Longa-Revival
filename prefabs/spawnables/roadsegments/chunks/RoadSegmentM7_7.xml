@@ -1,0 +1,64 @@
+<prefab version="1.4.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM7.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><group name="Enemies" pos="98.40001 0.0 -3.0" rot="0.0 -180.0 0.0">
+			<group name="UM Cover" pos="0.0 0.0 0.0">
+				<instance pos="35.9 1.0 -11.2" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="35.4 1.0 -17.2" rot="0.0 -120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="33.8 1.0 -17.1" rot="0.0 -150.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-3.9 0.7 -24.6" rot="0.0 150.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-13.2 0.7 -25.2" rot="0.0 -140.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<group name="instance=MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" pos="33.2 3.9 -27.5" rot="0.0 -70.0 0.0">
+					<location tags="RandomRagdoll Type=um chance=75 cover ranged" />
+				</group>
+				<group name="instance=MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" pos="33.2 3.9 -25.9" rot="0.0 -120.0 0.0">
+					<location tags="RandomRagdoll Type=um chance=75 cover ranged" />
+				</group>
+				<instance pos="1.7 0.8 -9.5" rot="0.0 -50.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="0.7 0.8 -10.3" rot="0.0 -30.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance pos="5.8 0.8 -7.1" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="8.0 0.8 -6.0" rot="0.0 -30.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-25.9 6.5 -64.4" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-27.2 6.5 -65.3" rot="0.0 10.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-26.3 6.5 -64.9" rot="0.0 -40.0 0.0" file="MOD/prefabs/spawns/enemies/EnemySpesSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-27.8 5.2 -63.7" rot="0.0 160.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-81.5 6.5 -31.4" rot="0.0 150.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-26.0 4.4 -21.1" rot="0.0 150.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-27.6 4.4 -21.1" rot="0.0 150.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-80.8 5.2 -33.2" rot="0.0 -50.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-82.5 6.5 -32.5" rot="0.0 -80.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 cover" pos="-76.4 0.7 -32.6" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawn.xml" />
+			</group>
+			<group name="UM Outside" pos="0.0 0.0 0.0">
+				<instance pos="53.6 0.8 -5.3" rot="0.0 -60.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="49.0 1.0 -12.0" rot="0.0 -80.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="50.8 1.0 -18.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="18.9 0.7 -34.4" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="1.1 0.7 -55.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-27.2 0.7 -27.5" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="4.5 0.7 -46.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="4.5 0.7 -27.9" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="4.5 0.7 -11.8" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="4.5 0.7 -15.7" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-52.5 0.7 -35.0" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-52.5 0.7 -52.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-33.9 0.7 -57.7" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-41.7 0.7 -73.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-45.4 0.7 -73.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-71.60001 0.7 -89.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-71.60001 1.3 -78.5" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-67.70001 1.3 -78.5" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-74.70001 1.3 -76.7" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="15.7 0.7 -34.2" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-8.7 0.7 -26.6" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-65.1 0.7 -38.5" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+				<instance tags="RandomRagdoll Type=um chance=75 outside" pos="-63.2 0.7 -57.0" rot="0.0 -100.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyUMSpawnOutside.xml" />
+			</group>
+			<group name="Pur" pos="0.0 0.0 0.0">
+				<instance pos="23.8 0.7 -33.8" rot="0.0 80.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+				<instance tags="RandomRagdoll type=um chance=75" pos="-1.1 0.7 -33.0" rot="0.0 120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+				<instance tags="RandomRagdoll type=um chance=75" pos="8.5 0.7 -37.1" rot="0.0 -120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+				<instance tags="RandomRagdoll type=um chance=75" pos="-18.1 0.7 -32.4" rot="0.0 -120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+				<instance tags="RandomRagdoll type=um chance=75" pos="-14.0 0.7 -37.2" rot="0.0 -120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+				<instance tags="RandomRagdoll type=um chance=75" pos="-15.7 0.7 -41.2" rot="0.0 -120.0 0.0" file="MOD/prefabs/spawns/enemies/EnemyPurSpawn.xml" />
+			</group>
+		</group>
+		<location tags="special=um_base" />
+	</group></prefab>

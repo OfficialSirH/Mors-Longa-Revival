@@ -1,5 +1,8 @@
 #version 2
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = "generateroad"
 -- (v2) server: road generation, world shift (moves ALL players), distance; registry keys read by clients are synced.
 -- (v2, Phase 3) Co-op: the FURTHEST living player drives generation, the world shift and the distance counter
 -- (GetGenerationPlayerPos); players far behind are teleported up to the leader (TeleportStragglers).
@@ -10,6 +13,7 @@
 #include "EnemySpawnsProcessor.lua"
 #include "DecorParts.lua"
 #include "SegmentPieces.lua"
+#include "SegmentFileChunks.lua"
 #include "SpawnSlot.lua"
 ]]
 
@@ -446,6 +450,11 @@ end
 -- Debug menu "spawn roadside decor" (savegame.mod.procedural.disable.spawn_decor) leaves them out.
 -- Nightmare deletes all veg-tagged shapes after spawning (ManageVegDeleting): its decor is not spawned at all.
 DecorQueue = {}
+-- (2026-11-17) Roadside decor waits in its own queue, served only with what a frame has left after DecorQueue (the
+-- ground, the segment file): with the decor cut into ~20 chunks per segment (chunk_decor.py) one shared queue fell
+-- behind at driving speed (in-game run at 25 m/s: up to 425 entries waiting, the road ahead missing, the spawners
+-- held). Decor does not collide, so the spawners (level.segment.loading) do not wait for it.
+VegQueue = {}
 DecorFrame = 0   -- server.tick count (once per frame; server.update can run several times in one frame)
 -- (2026-11-14) also the segment's heavy content: tools/porting/split_heavy.py moved the terrain / background groups
 -- and every rock / hill model into parts, tools/porting/segment_pieces.py cut those into ~2200 small pieces with
@@ -471,33 +480,45 @@ end
 -- sand, floors, walls, signs, rocks, hills; nearest-first, tools/porting/segment_pieces.py), then its file (what is
 -- left: markers, triggers, scripts, lights on joints, vehicles, dynamic bodies, which need the ground under them),
 -- then its decor. opts: override = enemy spawn count (RoadSegmentM6), shop = refresh the shop (RoadSegmentH).
+-- (2026-11-17, performance) The file itself is streamed too: SEGMENT_FILE_CHUNKS (tools/porting/chunk_segments.py)
+-- cuts it into chunks spawned one per frame (it cost 0.2-0.5 s in one frame on H, M3, M5, M6, M7: ground left under
+-- a script, a town, trains); the last chunk is the "file" and its after-spawn work gets every chunk's entities.
 function QueueSegment(segment, transform, opts)
-	QueueDecor(segment, transform, { segment = segment, opts = opts or {},
-		xml = "MOD/prefabs/spawnables/roadsegments/" .. segment .. ".xml" })
+	local path = "MOD/prefabs/spawnables/roadsegments/" .. segment .. ".xml"
+	local chunks = (SEGMENT_FILE_CHUNKS or {})[segment]
+	local entries = {}
+	if chunks and #chunks > 0 then
+		local group = { entities = {} }
+		for i, xml in ipairs(chunks) do
+			entries[i] = { xml = xml, chunk = group, name = path .. " #" .. i }
+		end
+		local last = entries[#entries]
+		last.segment, last.opts, last.file = segment, opts or {}, true
+	else
+		entries[1] = { segment = segment, opts = opts or {}, xml = path, name = path, file = true }
+	end
+	QueueDecor(segment, transform, entries)
 end
 
-function QueueDecor(segment, transform, fileEntry)
-	local function add(entry)
+function QueueDecor(segment, transform, fileEntries)
+	local function add(entry, queue)
 		-- not in the segment's own frame: from the next frame on
 		entry.t = Transform(VecCopy(transform.pos), transform.rot)
 		entry.frame = DecorFrame + 1
-		DecorQueue[#DecorQueue + 1] = entry
+		queue[#queue + 1] = entry
 	end
-	for _, p in ipairs((SEGMENT_PIECES or {})[segment] or {}) do add({ piece = p }) end
-	if fileEntry then
-		fileEntry.file = true
-		add(fileEntry)
-	end
+	for _, p in ipairs((SEGMENT_PIECES or {})[segment] or {}) do add({ piece = p }, DecorQueue) end
+	for _, e in ipairs(fileEntries or {}) do add(e, DecorQueue) end
 	if not (GetBool("savegame.mod.procedural.disable.spawn_decor") or GetString("savegame.mod.difficulty") == "nightmare") then
-		for _, xml in ipairs((DECOR_PARTS or {})[segment] or {}) do add({ xml = xml, veg = true }) end
+		for _, xml in ipairs((DECOR_PARTS or {})[segment] or {}) do add({ xml = xml, veg = true }, VegQueue) end
 	end
 	SetBool("level.segment.loading", #DecorQueue > 0)
-	SetInt("level.debug.parts_waiting", #DecorQueue)
+	SetInt("level.debug.parts_waiting", #DecorQueue + #VegQueue)
 end
 
 --- The segment file's turn in the queue: what v1 did right after spawning a segment.
 function SpawnSegmentFile(d, entities)
-	SetString("level.debug.what.segment", d.xml)
+	SetString("level.debug.what.segment", d.name or d.xml)
 	SetFloat("level.debug.spawned.segment", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
 	ManageVegDeleting(entities)
 	local spawnCountOverride = d.opts.override
@@ -518,6 +539,7 @@ end
 -- segment file: its own frame too)
 function QueueEntryXml(d)
 	local p = d.piece
+	if d.veg then return d.xml, PieceBudget() / 2 end -- a decor chunk (~200 shapes, ~25 ms): two fit in a frame
 	if not p then return d.xml, PieceBudget() end
 	local h = p[1]
 	if p[4] and LowDetailRocks() then
@@ -539,25 +561,52 @@ function SpawnGap()
 	return math.max(1, math.min(SPAWN_GAP_MAX, g))
 end
 
+-- (2026-11-17) The pace never holds back the ground in front of the players: a segment is about 100-600 spawn frames
+-- of pieces (SegmentPieces.lua at the 250k-cell budget), so at pace 3-6 the road could not keep up with a car (in-game
+-- run at 25 m/s, pace 3: up to 425 entries waiting, the player fell where the road was missing). When the next waiting
+-- ground entry's segment starts less than PACE_URGENT_DIST ahead of the generation player, the ground spawns every
+-- frame whatever the pace; the spawners and the decor keep the pace.
+PACE_URGENT_DIST = 100
+
+function GroundUrgent()
+	local d = DecorQueue[1]
+	if not d then return false end
+	return d.t.pos[1] - GetGenerationPlayerPos()[1] < PACE_URGENT_DIST
+end
+
 function server.tick(dt)
 	ShiftResync_Tick()
 	DecorFrame = DecorFrame + 1
 	SetInt("level.frame", DecorFrame)   -- (2026-11-14) frame counter for the spawners' one-spawn-per-frame slot
 	local gap = SpawnGap()
 	if GetInt("level.spawn.gap") ~= gap then SetInt("level.spawn.gap", gap) end
-	if gap > 1 then
+	if gap > 1 and not GroundUrgent() then
 		if not SpawnSlotFree() then return end
 	end
 	local used = 0
-	while DecorQueue[1] and DecorFrame >= DecorQueue[1].frame do
-		local d = DecorQueue[1]
+	while true do
+		-- the ground / file queue first; decor only with what the frame has left
+		local queue = (DecorQueue[1] and DecorFrame >= DecorQueue[1].frame) and DecorQueue
+			or (not DecorQueue[1] or used > 0) and VegQueue[1] and DecorFrame >= VegQueue[1].frame and VegQueue
+		if not queue then break end
+		local d = queue[1]
 		local xml, cost = QueueEntryXml(d)
 		if used > 0 and used + cost > PieceBudget() then break end
-		table.remove(DecorQueue, 1)
+		table.remove(queue, 1)
 		used = used + cost
 		local entities = Spawn(xml, d.t, true)
+		if d.chunk then
+			-- a chunk of the segment file: collected, the last chunk ("file") does the after-spawn work for all
+			local all = d.chunk.entities
+			for i = 1, #entities do all[#all + 1] = entities[i] end
+			entities = all
+			SetFloat("level.debug.spawned.segment", GetTime()) -- debug readout
+			SetString("level.debug.what.segment", d.name)
+		end
 		if d.file then
 			SpawnSegmentFile(d, entities)
+		elseif d.chunk then
+			-- nothing more until the last chunk
 		else
 			SetFloat(d.veg and "level.debug.spawned.decor" or "level.debug.spawned.part", GetTime()) -- debug readout
 			-- the foliage setting thins veg-tagged shapes out as before (v1: decor and the segment file's own)
@@ -566,7 +615,7 @@ function server.tick(dt)
 	end
 	if used > 0 and gap > 1 then TakeSpawnSlot() end
 	if used > 0 then SetString("level.debug.what.part", string.format("%.2fM cells", used / 1e6)) end -- debug readout
-	SetInt("level.debug.parts_waiting", #DecorQueue)
+	SetInt("level.debug.parts_waiting", #DecorQueue + #VegQueue)
 	if #DecorQueue == 0 and GetBool("level.segment.loading") then SetBool("level.segment.loading", false) end
 end
 
@@ -581,9 +630,19 @@ end
 -- local transform again. Second in-game run: pieces spawned shortly BEFORE a shift were also off on the client
 -- (one shift ahead: the client built them after it had the move), so the mark is the newest world-body shape
 -- SHIFT_RESYNC_BEFORE s before the shift (recorded every second), and a late pass covers pieces a client builds late.
+-- (2026-11-17 performance, measured in SP with the MCP bridge) Each SetShapeLocalTransform on a world-body shape costs
+-- ~0.28 ms whether it is spread or not; a pass over ~10000 shapes froze the game 2-5 s, 1, 2 and 5 s after every shift.
+-- Now: no passes without other players; only shapes of SHIFT_RESYNC_MIN_VOXELS or more (of 10000 recent world shapes,
+-- 8900 were bush pieces / bits of ~13 voxels, ~1070 the road, rocks, terrain); one set per shape and pass (toggled
+-- 1 mm up / back down, ResyncUp); a pass is queued and worked off SHIFT_RESYNC_PER_FRAME shapes per frame.
 SHIFT_RESYNC_AFTER = { 1, 5, 10 }
 SHIFT_RESYNC_BEFORE = 10
+SHIFT_RESYNC_MIN_VOXELS = 500
+SHIFT_RESYNC_PER_FRAME = 25
 ShiftResyncHistory = {}   -- { { time, newest world-body shape }, ... } once a second, the last SHIFT_RESYNC_BEFORE s
+ShiftResyncQueue = {}     -- shapes waiting for their set, in order; ShiftResyncQueued[s] = true while queued
+ShiftResyncQueued = {}
+ResyncUp = {}             -- shapes currently 1 mm up (the next set moves them back down)
 
 local function newestWorldShape()
 	local shapes = GetBodyShapes(GetWorldBody())
@@ -595,12 +654,34 @@ end
 ShiftResyncJobs = {}
 
 function ShiftResync_Start()
+	if not IsMultiplayer() then return end
 	local h = ShiftResyncHistory
 	local mark = h[1] and h[1][2] or newestWorldShape()   -- the oldest record: ~SHIFT_RESYNC_BEFORE s ago
 	ShiftResyncJobs[#ShiftResyncJobs + 1] = { mark = mark, at = GetTime(), step = 1 }
 end
 
+--- One set per shape: 1 mm up, or back down if it is up. Any change is synced, and a shape is never more than 1 mm off.
+local function resyncShape(s)
+	if not IsHandleValid(s) then ResyncUp[s] = nil return end
+	local lt = GetShapeLocalTransform(s)
+	local dy = ResyncUp[s] and -0.001 or 0.001
+	SetShapeLocalTransform(s, Transform(VecAdd(lt.pos, Vec(0, dy, 0)), lt.rot))
+	if ResyncUp[s] then ResyncUp[s] = nil else ResyncUp[s] = true end
+end
+
 function ShiftResync_Tick()
+	-- the queue first: a pass is worked off SHIFT_RESYNC_PER_FRAME shapes per frame
+	local q = ShiftResyncQueue
+	if #q > 0 then
+		local n = math.min(#q, SHIFT_RESYNC_PER_FRAME)
+		for i = 1, n do
+			resyncShape(q[i])
+			ShiftResyncQueued[q[i]] = nil
+		end
+		for i = 1, #q - n do q[i] = q[i + n] end
+		for i = #q, #q - n + 1, -1 do q[i] = nil end
+	end
+	if not IsMultiplayer() then return end
 	local now = GetTime()
 	local h = ShiftResyncHistory
 	if not h[#h] or now - h[#h][1] >= 1 then
@@ -615,19 +696,26 @@ function ShiftResync_Tick()
 		end
 	end
 	if not mark then return end
-	local n, first, last = 0, 0, 0
+	ResyncUpPasses = (ResyncUpPasses or 0) + 1
+	if ResyncUpPasses % 20 == 0 then -- drop deleted shapes that were left 1 mm up
+		for s in pairs(ResyncUp) do if not IsHandleValid(s) then ResyncUp[s] = nil end end
+	end
+	local n, skipped, first, last = 0, 0, 0, 0
 	for _, s in ipairs(GetBodyShapes(GetWorldBody())) do
 		if s > mark then
-			local lt = GetShapeLocalTransform(s)
-			SetShapeLocalTransform(s, Transform(VecAdd(lt.pos, Vec(0, 0.001, 0)), lt.rot))
-			SetShapeLocalTransform(s, lt)
-			n = n + 1
-			if first == 0 then first = s end
-			last = s
+			if GetShapeVoxelCount(s) < SHIFT_RESYNC_MIN_VOXELS then
+				skipped = skipped + 1
+			elseif not ShiftResyncQueued[s] then
+				q[#q + 1] = s
+				ShiftResyncQueued[s] = true
+				n = n + 1
+				if first == 0 then first = s end
+				last = s
+			end
 		end
 	end
-	SetString("level.debug.shift_resync", string.format("%.1f: mark %d, %d shapes, %d job(s) due (#%d..#%d)", now,
-		mark, n, #due, first, last))
+	SetString("level.debug.shift_resync", string.format("%.1f: mark %d, %d shapes queued, %d small skipped, %d job(s) due (#%d..#%d)",
+		now, mark, n, skipped, #due, first, last))
 	for _, r in ipairs(due) do r.step = r.step + 1 end
 	for i = #ShiftResyncJobs, 1, -1 do
 		if not SHIFT_RESYNC_AFTER[ShiftResyncJobs[i].step] then table.remove(ShiftResyncJobs, i) end
@@ -635,8 +723,10 @@ function ShiftResync_Tick()
 end
 
 function ShiftDecorQueue(shiftDist)
-	for _, d in ipairs(DecorQueue) do
-		d.t.pos[1] = d.t.pos[1] - shiftDist
+	for _, q in ipairs({ DecorQueue, VegQueue }) do
+		for _, d in ipairs(q) do
+			d.t.pos[1] = d.t.pos[1] - shiftDist
+		end
 	end
 end
 

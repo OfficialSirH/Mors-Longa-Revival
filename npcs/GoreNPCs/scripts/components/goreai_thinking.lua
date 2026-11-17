@@ -60,7 +60,7 @@ function npc_process_thinking(npc, dt)
                 npc.running = true
                 npc.ai.moving = true
 
-            elseif not pathBusy and IsTickInterval(UPDATE, 0.25) then -- npc needs to navigate.
+            elseif not pathBusy and GoreNavInterval then -- npc needs to navigate. ((2026-11-17) 4x per second of game time, set per frame in goreai_stepreplay.lua; v1: IsTickInterval(UPDATE, 0.25) = every 15th physics step)
 
                 npc.ai.thinking.state = "Needs to navigate"
                 npc_reposition_normal(npc, npc.ai.aimPos)

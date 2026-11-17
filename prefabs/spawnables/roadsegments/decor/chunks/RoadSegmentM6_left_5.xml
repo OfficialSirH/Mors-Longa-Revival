@@ -1,0 +1,276 @@
+<prefab version="1.3.0">
+	<group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+		<group name="decor" pos="105.95 0.41 0.0" prop0="texture=19 0.5" prop1="tags=veg" prop2="collide=false">
+			<group name="left" pos="-5.7 0.2 59.2">
+				<group name="group 5" pos="-0.416 0.0 11.98101" rot="0.0 158.0 0.0">
+					<group name="dried grass" pos="1.15 0.0 -2.01">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="4.85005 0.0 12.79">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="6.75006 0.0 16.99" rot="0.0 -110.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="12.05011 0.0 30.29" rot="0.0 -150.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="16.55012 0.0 32.89" rot="0.0 160.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="21.45011 0.0 30.39001" rot="0.0 120.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="40.25009 0.0 19.69002" rot="0.0 120.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="41.75008 0.0 10.69002" rot="0.0 120.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="22.05009 0.0 12.09002" rot="0.0 70.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="-2.96 0.0 -2.59">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="2.95 0.0 1.11">
+						<vox pos="-0.48 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.45 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.45 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.41 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.41 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.45 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.46 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.47 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.4 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.36 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.37 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.37 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.48 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.44 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.44 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.46 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.38 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<group name="dried grass" pos="-4.27 0.0 -0.15" rot="0.0 39.0 0.0">
+						<vox pos="-0.12 0.1 -0.03" rot="0.0 0.0 25.0" file="MOD/main/terrain/shrub.vox" object="4" />
+						<vox pos="-0.09 0.1 -0.1" rot="-32.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="1" />
+						<vox pos="-0.09 0.05 -0.03" rot="31.0 0.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="31.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.05 0.05 0.01" rot="58.0 56.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.09 0.05 0.01" rot="58.0 27.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.1 0.05 -0.02" rot="58.0 -10.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.11 0.05 -0.1" rot="58.0 -54.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.04 0.05 -0.15" rot="58.0 -111.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="0.0 0.05 -0.09" rot="58.0 -161.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 144.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.01 0.05 -0.06" rot="58.0 99.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.12 0.05 -0.09" rot="31.0 -49.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.05 -0.18" rot="31.0 -125.0 0.0" file="MOD/main/terrain/shrub.vox" object="2" />
+						<vox pos="-0.08 0.1 -0.05" rot="0.0 0.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.1 0.1 -0.11" rot="0.0 -114.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+						<vox pos="-0.02 0.1 -0.11" rot="0.0 116.0 -27.0" file="MOD/main/terrain/shrub.vox" object="3" />
+					</group>
+					<vox pos="-0.78 0.1 -0.19" rot="0.0 -82.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="shrubbery-small" />
+					<vox pos="-19.0 0.1 -6.3" rot="0.0 -152.0 0.0" file="MOD/main/terrain/bushes_desert.vox" object="shrubbery-medium" />
+					<vox pos="1.18 0.1 0.09" rot="0.0 46.0 0.0" file="MOD/main/terrain/BM_Desert_Bush.vox" object="DryLeaves3" />
+					<vox pos="-3.39 0.1 -1.17" rot="0.0 105.0 0.0" file="MOD/main/terrain/BM_Desert_Bush.vox" object="DryLeaves3" />
+					<vox pos="-2.0 0.1 1.14" rot="0.0 -54.0 0.0" file="MOD/main/terrain/BM_Desert_Bush.vox" object="DryLeaves2" />
+					<vox pos="-1.51 0.1 -0.73" rot="0.0 49.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="DwayneStack5" />
+					<vox pos="-0.38 0.1 -2.43" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne2" />
+					<vox pos="-0.95 0.1 -1.88" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne3" />
+					<vox pos="1.0 0.1 2.7" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne3" />
+					<vox pos="0.64 0.1 -2.43" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="0.64 0.1 -1.35" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="2.2 0.1 -1.35" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="1.85 0.1 -0.62" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="1.75 0.1 -1.74" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="0.02 0.1 -0.66" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="0.02 0.1 1.9" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="1.04999 0.1 0.83" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="-0.06001 0.1 0.83" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="-1.49001 0.1 2.74001" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne4" />
+					<vox pos="0.81 0.1 -3.16" rot="0.0 -12.0 0.0" file="MOD/main/terrain/rocks_desert.vox" object="SmolDwayne5" />
+					<vox pos="-2.9 0.1 50.59999" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox" />
+					<vox pos="1.1 0.1 127.0" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 13.vox" />
+					<vox pos="-55.9 0.1 49.0" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 15.vox" />
+					<vox pos="-56.5 0.1 36.8" rot="0.0 120.0 0.0" file="MOD/assets/vox/trees/Small 13.vox" />
+					<vox pos="-45.79999 0.1 12.6" rot="0.0 10.0 0.0" file="MOD/assets/vox/trees/Small 13.vox" />
+					<vox pos="-3.6 0.1 23.0" rot="0.0 30.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="-15.3 0.1 -6.5" rot="0.0 -50.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="4.0 0.1 138.2" rot="0.0 -50.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="-2.0 0.1 -2.7" rot="0.0 -150.0 0.0" file="MOD/assets/vox/trees/Small 15.vox" />
+					<vox pos="-20.3 0.1 133.10001" rot="0.0 -150.0 0.0" file="MOD/assets/vox/trees/Small 15.vox" />
+					<vox pos="99.7 0.1 130.5" rot="0.0 -150.0 0.0" file="MOD/assets/vox/trees/Small 15.vox" />
+					<vox pos="35.7 0.1 4.3" rot="0.0 70.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="46.0 0.1 -16.8" rot="0.0 10.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="69.3 0.1 -24.7" rot="0.0 10.0 0.0" file="MOD/assets/vox/trees/Small 13.vox" />
+					<vox pos="60.4 0.1 7.6" rot="0.0 40.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="22.9 0.1 36.9" rot="0.0 -50.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="104.8 0.1 104.6" rot="0.0 -50.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+					<vox pos="72.2 0.1 -16.3" rot="0.0 20.0 0.0" file="MOD/assets/vox/trees/Small 14.vox" />
+				</group>
+			</group>
+		</group>
+	</group>
+</prefab>

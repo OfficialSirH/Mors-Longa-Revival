@@ -1,5 +1,8 @@
 #version 2
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe, off unless level.debug.gc_* is set (lib/GcProbe.lua)
+#include "../lib/GcProbe.lua"
+GCP_LABEL = "inventory"
 #include "inv-desc.lua"
 #include "weapon_wheel.lua"
 #include "../game/shop.lua"
@@ -2538,7 +2541,7 @@ end
 function client.tick(dt)
 	-- (2026-11-15, DEBUG) debug menu "inventory call profile": engine calls of this script per frame, attributed to
 	-- its functions (lib/CallProfiler.lua); 1.3-1.85 ms in Teardown's profiler. Off = nothing wrapped.
-	local invProfile = GetBool("savegame.mod.debug.invprofile")
+	local invProfile = GetBool("savegame.mod.debug.invprofile") or GetBool("level.debug.invprofile") -- level key: test tools
 	InvProfileReport = CallProfile_Tick(invProfile, function() return true end, nil) or (invProfile and InvProfileReport or nil)
 	InvInteractive = false
 	-- (2026-11-14) The Extinguisher in tool slot 4 with the Place / Welding tools, as v1 meant with

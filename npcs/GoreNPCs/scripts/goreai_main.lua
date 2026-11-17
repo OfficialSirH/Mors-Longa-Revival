@@ -40,12 +40,14 @@
 #include "systems/goreai_sitting.lua"
 #include "systems/goreai_killcam.lua"
 #include "systems/goreai_music.lua"
+#include "systems/goreai_stepreplay.lua"
 #include "systems/goreai_players.lua"
 #include "systems/goreai_prefabs.lua"
 #include "systems/goreai_ragdoll_poser.lua"
 #include "systems/goreai_sounds.lua"
 #include "systems/goreai_spawner.lua"
 #include "systems/goreai_profiler.lua"
+#include "systems/goreai_skip.lua"
 #include "../../../lib/EngineApiNames.lua"
 #include "../../../lib/CallProfiler.lua"
 ]]
@@ -106,6 +108,13 @@ PlayerPos = Vec() -- (v2) set per npc by GoreAI_SetContext
 
 function server.init()
 
+    -- (2026-11-17, performance) Lua's collector starts a cycle each time the heap doubles (pause 200). This script
+    -- keeps only ~2-3 MB live but makes ~2 MB of garbage per living npc per second (Vec / Quat / Transform tables),
+    -- so it ran many full cycles per second. Pause 500 (heap grows to 5x live, ~10 MB) measured in the profiler with
+    -- 6-7 npcs: goreai_main tick + update 3.26 / 2.85 ms at 200 -> 2.32 at 500 (2.47 / 2.54 at 1000). Debug override:
+    -- level.goreai.gc_pause (systems/goreai_skip.lua).
+    if collectgarbage then collectgarbage("setpause", GORE_GC_PAUSE) end
+
     SetBool("level.goreai_script_exists", true)
 
     IsHardcore = GetString("savegame.mod.difficulty") == "hardcore"
@@ -142,6 +151,7 @@ function server.tick(dt)
     end
 
     GoreProfile_Tick() -- (2026-11-15) debug call profiler, off unless the debug menu switch is on
+    GoreSkip_Tick() -- (2026-11-17) debug: level.goreai.skip turns listed functions off (systems/goreai_skip.lua)
 
     GoreAI_UpdatePlayers()
 

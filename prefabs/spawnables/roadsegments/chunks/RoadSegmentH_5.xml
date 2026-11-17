@@ -1,0 +1,53 @@
+<prefab version="1.6.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentH.xml" pos="-102.10001 0.1 0.0" rot="0.0 0.0 0.0"><group><group name="Safehouse" pos="86.99999 0.6 51.5"><group name="props" pos="-1.4 0.0 0.5" rot="0.0 -30.0 0.0"><vox pos="9.09001 1.3 2.67" rot="-180.0 33.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/USMIL/helmet.vox" />
+					<group pos="7.6 0.2 -0.217" rot="0.0 0.0 0.0"><vox pos="-1.0 0.1 -0.0" rot="90.0 90.0 26.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/1911.vox" object="1911" />
+						<vox pos="-0.7 0.1 -0.0" rot="90.0 90.0 26.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/1911.vox" object="1911" />
+						<vox pos="-0.4 0.1 -0.0" rot="90.0 90.0 26.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/1911.vox" object="1911" />
+						<vox pos="-0.1 0.1 -0.0" rot="90.0 90.0 26.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/1911.vox" object="1911" />
+						<vox pos="0.3 0.155 0.1" rot="90.0 90.0 -56.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+						<vox pos="0.6 0.155 0.1" rot="90.0 90.0 -56.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+						<vox pos="0.9 0.155 0.1" rot="90.0 90.0 -56.0" texture="8 .6" prop="true" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+					</group><vox pos="9.5 1.8 0.583" rot="21.0 -132.7 -1.4" texture="8 .6" file="MOD/assets/props/CCTV.vox" />
+					<vox pos="9.8 0.3 5.983" rot="0.0 0.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/Armor/Gzhel.vox" />
+					<vox pos="5.1 0.3 5.083" rot="0.0 -180.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/Armor/Altyn.vox" />
+					<vox pos="8.8 0.2 5.983" rot="0.0 0.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/Armor/Killa.vox" />
+					<vox pos="8.9 1.5 5.283" rot="0.0 23.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/military/ammobox.vox" />
+					<vox pos="9.0 1.0 1.6" rot="0.0 172.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/military/nvg.vox" object="light" />
+					<voxbox pos="-4.24 3.59 -2.45" rot="-180.0 90.0 -16.0" size="48 1 49" brush="MOD/assets/vox/Props/USMIL/ghillie_netting.vox" />
+					<vox pos="5.976 0.2 3.883" rot="0.0 88.0 0.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_armory_shelf.vox" />
+					<vox pos="9.7 1.6 1.4" rot="90.0 -90.0 90.0" texture="8 .6" prop="true" file="MOD/assets/vox/airbasevox/airbase_medkit.vox" />
+					<vox pos="-2.26077 0.5 -2.24904" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox" />
+					<vox pos="9.03923 0.7 3.45096" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox" />
+					<vox pos="8.939 0.3 3.251" rot="0.0 -179.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox" />
+					<vox pos="-2.44737 0.5 -4.47224" rot="0.0 90.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox" />
+					<vox pos="-2.33397 1.2 -3.37583" rot="0.0 87.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox" />
+					<vox pos="-6.7 0.2 2.2" rot="0.0 90 0.0" texture="8 .4" file="MOD/assets/vox/tents.vox" object="tent4" />
+					<vox pos="-5.433 0.1 -2.096" rot="0.0 -1.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="10.5 2.8 6.6" rot="0.0 39.0 0.0" texture="6" file="MOD/assets/vox/satelite_dish.vox" />
+					<vox pos="-2.4 3.2 -4.2" rot="0.0 -61.0 0.0" texture="6" file="MOD/assets/vox/antenna.vox" object="antenna1" />
+					<vox pos="4.4 2.9 1.6" rot="0.0 90.0 0.0" texture="6" file="MOD/assets/vox/ventilation.vox" object="vents1" />
+					<vox pos="4.4 3.3 -2.9" rot="0.0 -180.0 0.0" texture="6" file="MOD/assets/vox/ventilation.vox" object="vents3" />
+					<vox pos="10.50001 1.5 2.6" rot="0.0 0.0 0.0" texture="6" file="MOD/assets/vox/ventilation.vox" object="4ac" />
+					<vox pos="3.3 3.3 -2.9" rot="0.0 -180.0 0.0" texture="6" file="MOD/assets/vox/ventilation.vox" object="vents3" />
+					<voxbox pos="2.8 1.5 6.0" rot="0.0 90.0 0.0" size="20 14 21" brush="MOD/assets/vox/ventilation.vox" object="side1" offset="0.0 0.0 0.0" />
+					<vox pos="-3.811 0.1 -3.379" rot="0.0 89.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-3.868 0.1 -5.992" rot="0.0 89.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-2.412 0.1 -6.717" rot="0.0 -1.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="0.081 0.1 -6.87" rot="0.0 9.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-8.033 0.1 -2.196" rot="0.0 -11.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-10.57 0.1 -1.959" rot="0.0 29.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-11.79 0.1 3.728" rot="20.0 99.1 -0.3" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="-11.406 0.6 8.192" rot="-93.0 50.0 0.0" texture="6" strength="2" prop="true" file="MOD/assets/vox/airbasevox/airbase_blockade_1.vox" />
+					<vox pos="6.93923 0.7 5.55096" rot="0.0 1.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/crate_6.vox" />
+					<vox pos="7.139 0.3 5.151" rot="0.0 91.0 0.0" texture="8 .4" prop="true" file="MOD/assets/vox/airbasevox/airbase_pallet.vox" />
+					<vox pos="-9.2 0.2 1.3" rot="0.0 -3.0 .0" prop="true" file="MOD/assets/vox/Furniture/hub_bedside_table.vox" />
+					<vox pos="-6.5 1.2 -0.8" rot="0.0 -140.0 0.0" prop="true" file="MOD/assets/vox/Furniture/hollowrock_TV_3.vox" />
+					<vox pos="-6.8 0.2 -1.0" rot="0.0 10.0 0.0" prop="true" file="MOD/assets/vox/Furniture/lee_desk.vox" />
+					<vox pos="-4.0 0.2 -0.7" rot="0.0 40.0 0.0" prop="true" file="MOD/assets/vox/plasticcan.vox" />
+					<vox pos="7.6 0.2 3.5" rot="0.0 -60.0 0.0" prop="true" file="MOD/assets/vox/Furniture/office_chair.vox" />
+					<vox pos="8.22 2.34 5.8" rot="0.0 270.0 -90.0" texture="8 .6" file="MOD/assets/vox/Props/GUNS/ak.vox" object="reg" />
+					<vox pos="9.32 2.19 5.8" rot="0.0 270.0 -90.0" texture="8 .6" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+					<vox pos="9.32 2.57 5.8" rot="0.0 270.0 -90.0" texture="8 .6" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+					<vox pos="9.32 2.93 5.8" rot="0.0 270.0 -90.0" texture="8 .6" file="MOD/assets/vox/Props/GUNS/tt33.vox" />
+					<vox pos="7.14 2.76 5.8" rot="0.0 270.0 -90.0" texture="8 .6" file="MOD/assets/vox/Props/GUNS/svd.vox" object="svd" />
+					<voxbox pos="-4.43 0.1 -7.07001" rot="0.0 0.0 0.0" size="2 22 1" brush="MOD/assets/vox/tents.vox" object="tent5_broke2" />
+					</group></group></group></group></prefab>

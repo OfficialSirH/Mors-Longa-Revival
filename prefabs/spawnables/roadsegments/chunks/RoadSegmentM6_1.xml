@@ -1,0 +1,562 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentM6.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0"><group name="town">
+			<group name="ground" prop0="texture=19 0.5">
+				<trigger tags="WaterSource size=50,100 depth=1 wave=0 foam=.1 color=.4,.35,.2" pos="30.0 0.3 50.0" size=".1">
+					<water size="50 100" depth="1" wave="0" foam=".1" color="0.4 0.35 0.2" />
+				</trigger>
+			</group>
+			<group name="road" prop0="texture=16">
+				<group name="vehicles">
+					<instance pos="142.89999 0.8 46.7" rot="0.0 160.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef9.xml" />
+					<instance pos="151.2 0.8 44.8" rot="0.0 -70.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef12.xml" />
+					<instance pos="135.69998 0.8 51.1" rot="0.0 -60.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef10.xml" />
+					<instance pos="94.2 0.6 42.6" rot="0.0 160.0 0.0" file="MOD/prefabs/spawnables/vehicles/Vehiclef14.xml" />
+					<instance pos="109.4 0.7 61.2" rot="2 -69.7 -5.4" file="MOD/prefabs/spawnables/vehicles/Vehiclef25.xml" />
+					<instance pos="63.7 0.6 68.9" rot=".0 80.3 -5.4" file="MOD/prefabs/spawnables/vehicles/Vehiclef28.xml" />
+					<group name="instance=MOD/prefabs/spawnables/vehicles/Vehiclef34.xml" pos="87.30001 0.8 45.0" rot="0.0 20.0 0.0">
+						<group name="instance=MOD/vehicles/avf/prefabs/T-54 55/T-54-2 Destroyed Desert.xml" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0">
+							<vox pos="0.0 0.3 0.0" rot="0.0 180.0 2.5" texture="8" density="25" strength="5" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="hull T-54_2">
+								<group name="Hatches" pos="-0.0 0.8 -2.6">
+									<vox name="engine Hatch" pos="0.0 0.1 0.6" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="engine_hatch">
+										<joint pos="-0.2 0.2 0.3" rot="0.0 90.0 0.0" type="hinge" size="0.1" rotstrength="0.01" rotspring="0.0" limits="0 120" sound="true" />
+										<joint pos="0.2 0.2 0.3" rot="0.0 90.0 0.0" type="hinge" size="0.1" rotstrength="0.01" rotspring="0.0" limits="0 120" sound="true" />
+									</vox>
+								</group>
+								<vox pos="0.7 1.0 1.8" rot="0.0 0.0 0.0" texture="8 0.5" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="drivers_hatch">
+									<joint pos="0.1 0.1 -0.35" rot="-90.0 80.0 0.0" type="hinge" size="0.15" rotstrength="0.02" rotspring="0.0" limits="0 100" sound="true" autodisable="false" />
+								</vox>
+								<body name="Turret" pos="-0.0 -0.2 2.2" rot="0.0 0.0 0.0" dynamic="true">
+									<vox pos="0.0 0.3 -1.9" rot="0.0 -20.0 0.0" texture="8" density="10" strength="5" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="turret2">
+										<vox pos="-0.2 0.85 0.35" rot="5.0 0.0 0.0" texture="8" density="10" strength="5" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="gun/breach">
+											<joint name="gunJoint" pos="0.4 0.55 0.65" rot="0 90 0" type="hinge" size=".1" rotstrength="0" rotspring="0.0" collide="false" limits="-17 4" sound="true" />
+											<joint pos="-0.1 0.55 0.65" rot="0 90 0" type="hinge" size=".1" rotstrength="0" rotspring="0.0" collide="false" limits="-17 4" sound="true" />
+											<group name="Barrel" pos="0.15 0.445 3.4">
+												<vox pos="0.033 0.04 0.0" rot="0.5 -0.5" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="barrel" />
+												<vox pos="0.033 -0.03 0.0" rot="-0.5 -0.5 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="barrel" />
+												<vox pos="-0.033 -0.03 0.0" rot="-0.5 0.5 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="barrel" />
+												<vox pos="-0.033 0.04 0.0" rot="0.5 0.5 0.0" texture="8" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="barrel" />
+											</group>
+										</vox>
+										<vox pos="0.59999 1.82 -0.7" rot="0.0 0.0 0.0" texture="8" prop="true" file="MOD/vehicles/avf/prefabs/T-54 55/T-54 55 Desert.vox" object="commanders_hatch">
+											<joint pos="0.05 0.05 0.25" rot="180.0 90.0 0.0" type="hinge" size="0.2" rotstrength="0.01" rotspring="0.0" limits="0 95" sound="true" />
+										</vox>
+									</vox>
+								</body>
+							</vox>
+						</group>
+						<instance pos="0.7 2.4 -1.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+					</group>
+					<instance pos="93.0 0.55 56.2" rot="0.0 -150.0 0.0" file="MOD/vehicles/aircraft/UH-1H/huey_un_wreck.xml" />
+				</group>
+				<group name="props" pos="129.3 0.8 51.5">
+					<instance pos="4.9 0.0 -3.2" rot="0.0 -65.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					<instance pos="-5.7 -0.1 -4.0" rot="0.0 -55.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					<instance pos="-44.2 0.0 -10.4" rot="0.0 15.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					<instance pos="-42.1 0.0 -10.6" rot="0.0 5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					<instance pos="-8.4 -0.5 -1.7" rot="0.0 20.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
+					<instance pos="-5.3 -0.5 -3.0" rot="0.0 20.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
+					<instance pos="-13.5 -0.1 0.5" rot="0.0 -150.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					<instance pos="-12.47 -0.1 0.12" rot="0.0 -160.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					<instance pos="-11.37 -0.1 -0.28" rot="0.0 -160.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					<instance pos="-9.17 -0.1 -1.08" rot="0.0 -160.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+					<instance pos="-10.27 -0.1 -0.68" rot="0.0 -160.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+				</group>
+			</group>
+			<group name="town">
+				<group name="compound" pos="82.3 0.7 37.7">
+					<vox pos="-11.1 0.0 12.1" rot="0.0 -180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1">
+						<voxbox name="lightbulb" pos="0.0 2.2 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+							<rope name="cable" pos="0.05 0.2 0.05">
+								<location pos="0.0 0.0 0.0" />
+								<location pos="0.0 0.3 0.0" />
+							</rope>
+						</voxbox>
+					</vox>
+					<vox pos="-4.9 0.0 24.2" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building4">
+						<group name="props" pos="0.0 18.5 0.0">
+							<instance pos="6.9 -18.4 5.3" rot="0.0 65.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="6.06436 -18.4 7.05263" rot="0.0 25.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						</group>
+						<voxbox name="lightbulb" pos="1.0 1.8 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+							<rope name="cable" pos="0.05 0.2 0.05">
+								<location pos="0.0 0.0 0.0" />
+								<location pos="0.0 0.3 0.0" />
+							</rope>
+						</voxbox>
+					</vox>
+					<vox pos="-18.5 0.0 24.7" rot="0.0 90.0 0.0" texture="8 0.3" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building5">
+						<body pos="4.1 2.7 -3.4" rot="0.0 180.0 0.0" dynamic="true">
+							<voxbox name="concrete" pos="-0.26851 0.5 0.51172" rot="25.0 95.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="0.34168 0.5 -0.54548" rot="25.0 -85.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="-0.2 0.0 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="6 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" />
+							<voxbox name="concrete" pos="-0.2 0.6 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="7 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="3 0 0" />
+							<voxbox name="concrete" pos="0.07393 1.2 0.98367" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="-0.00948 1.2 -1.11705" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="-0.20872 1.2 -1.09962" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="-0.26851 0.0 0.51172" rot="0.0 95.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="concrete" pos="0.34168 0.0 -0.54548" rot="0.0 -85.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+							<voxbox name="metal" pos="-0.09166 0.1 -0.9091" rot="0.0 95.0 90.0" texture="7" size="11 18 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement" />
+						</body>
+						<group name="props" pos="0.0 18.5 0.0">
+							<instance pos="2.9 -15.8 4.4" rot="0.0 -5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="0.9 -15.8 0.5" rot="0.0 5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						</group>
+					</vox>
+					<voxagon name="farm" pos="-3.7 0.0 -16.3" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="farm1" extrude="2">
+						<group pos="3.2 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="1.3 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-0.5 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-2.2 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-4.2 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+					</voxagon>
+					<voxagon name="farm" pos="-17.7 0.0 -16.3" rot="0.0 -20.0 0.0" brush="MOD/assets/vox/mudbrick_buildings_2.vox" object="farm1" extrude="2">
+						<group pos="3.2 -0.5 8.0" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="1.3 -0.5 8.8" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-0.5 -0.5 9.5" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-2.3 -0.5 10.4" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-4.1 -0.5 11.1" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-5.9 -0.5 11.8" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-7.60001 -0.5 12.5" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="-9.60001 -0.5 13.0" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+						<group pos="5.0 -0.5 7.6" prop0="collide=false">
+							<instance pos="-0.06 0.0 -3.19" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -5.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -7.29" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06001 0.0 -9.39" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 -1.09" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.06 0.0 1.01" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 3.21" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 5.11" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 7.31" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+							<instance pos="-0.05999 0.0 9.41" rot="0.0 -170.0 0.0" file="MOD/assets/vox/trees/grass.xml" />
+						</group>
+					</voxagon>
+					<instance pos="29.5 0.0 2.0" rot="0.0 -90.0 0.0" file="MOD/prefabs/spawnables/buildings/constructionCivillian10.xml" />
+					<group name="instance=MOD/prefabs/spawnables/buildings/constructionCivillian10.xml" pos="-27.2 0.0 11.7" rot="0.0 -90.0 0.0">
+						<group name="building">
+							<vox pos="1.6 0.0 2.1" rot="0.0 180.0 0.0" texture="7 .35" blendtexture="3 .1" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="stabledoor">
+								<joint pos="0.05 0.9 -0.7" collide="true" />
+								<joint pos="0.05 0.3 -0.7" collide="true" />
+							</vox>
+							<vox pos="1.6 0.0 -3.9" rot="0.0 180.0 0.0" texture="7 .35" blendtexture="3 .1" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="stabledoor">
+								<joint pos="0.05 0.9 -0.7" collide="true" />
+								<joint pos="0.05 0.3 -0.7" collide="true" />
+							</vox>
+							<vox pos="-1.6 0.0 -5.3" texture="7 .35" blendtexture="3 .1" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="stabledoor">
+								<joint pos="0.05 0.9 -0.7" collide="true" />
+								<joint pos="0.05 0.3 -0.7" collide="true" />
+							</vox>
+							<vox pos="-1.5 0.0 2.1" rot="0.0 180.0 0.0" texture="7 .35" blendtexture="3 .1" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="stabledoor">
+								<joint pos="0.05 0.9 -0.7" collide="true" />
+								<joint pos="0.05 0.3 -0.7" collide="true" />
+							</vox>
+						</group>
+						<group name="Loot">
+							<instance pos="-2.24999 0.1 -0.9" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+							<instance pos="2.60001 0.1 -4.1" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml" />
+							<instance pos="-3.44999 0.1 0.75" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml" />
+							<instance pos="-0.44999 0.2 -4.75" file="MOD/prefabs/spawns/loots/HiddenFoodLootSpawn.xml" />
+							<instance pos="2.80001 0.1 -2.1" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+							<instance pos="-2.44999 0.1 -5.05" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+							<instance pos="0.15001 0.1 5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-2.44999 0.1 4.7" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-3.49999 0.1 -1.75" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="2.8 3.1 -2.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+							<instance pos="-2.8 3.1 4.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+							<instance pos="-0.1 0.8 -3.2" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml" />
+							<instance pos="-1.6 0.0 -0.7" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml" />
+							<instance pos="2.0 0.0 2.0" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml" />
+							<instance pos="1.9 0.0 -4.6" rot="0.0 0.0 0.0" file="MOD/prefabs/spawns/loots/MedicalLootSpawn.xml" />
+							<instance pos="-2.8 3.5 -4.0" rot="0.0 60.0 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+						</group>
+					</group>
+					<group name="compound" pos="25.5 0.0 13.3" rot="0.0 20.0 0.0">
+						<group name="water tower" pos="-6.7 0.0 1.7" rot="0.0 0.0 0.0">
+							<voxbox name="support" pos="-1.8 2.8 -1.7" rot="0.0 -180.0 0.0" texture="3, 0.5" prop="true" size="5 39 5" brush="MOD/assets/vox/tanks.vox" object="tanksupport1">
+								<joint pos="0.25 0.0 0.25" size="0.2" rotstrength="0.5" />
+								<voxbox name="beam" pos="0.5 3.9 0.5" rot="0.0 -270.0 -90.0" prop="true" size="5 52 5" brush="MOD/assets/brush/i-beams.vox" object="beam1">
+									<joint pos="0.45 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.15 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.45 4.45 0.0" rotstrength="0.5" />
+									<joint pos="0.15 4.45 0.0" rotstrength="0.5" />
+								</voxbox>
+								<voxbox name="support" pos="0.4 0.229 0.047" rot="48.0 -180.0 0.0" texture="3, 0.5" prop="true" size="3 48 3" brush="MOD/assets/vox/tanks.vox" object="tanksupport2">
+									<joint pos="0.15 4.8 0.15" size="0.2" rotstrength="0.5" />
+									<joint pos="0.14999 0.0 0.15001" size="0.2" rotstrength="0.5" />
+								</voxbox>
+							</voxbox>
+							<voxbox name="support" pos="-1.8 2.8 2.0" rot="0.0 -90.0 0.0" texture="3, 0.5" prop="true" size="5 39 5" brush="MOD/assets/vox/tanks.vox" object="tanksupport1">
+								<joint pos="0.25 0.0 0.25" size="0.2" rotstrength="0.5" />
+								<voxbox name="support" pos="0.4 0.229 0.047" rot="48.0 -180.0 0.0" texture="3, 0.5" prop="true" size="3 48 3" brush="MOD/assets/vox/tanks.vox" object="tanksupport2">
+									<joint pos="0.15 4.8 0.15" size="0.2" rotstrength="0.5" />
+									<joint pos="0.14999 0.0 0.15001" size="0.2" rotstrength="0.5" />
+								</voxbox>
+								<voxbox name="beam" pos="0.5 3.9 0.5" rot="0.0 -270.0 -90.0" prop="true" size="5 52 5" brush="MOD/assets/brush/i-beams.vox" object="beam1">
+									<joint pos="0.45 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.15 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.45 4.45 0.0" rotstrength="0.5" />
+									<joint pos="0.15 4.45 0.0" rotstrength="0.5" />
+								</voxbox>
+							</voxbox>
+							<voxbox name="support" pos="1.90001 2.8 2.0" rot="0.0 0.0 0.0" texture="3, 0.5" prop="true" size="5 39 5" brush="MOD/assets/vox/tanks.vox" object="tanksupport1">
+								<joint pos="0.25 0.0 0.25" size="0.2" rotstrength="0.5" />
+								<voxbox name="beam" pos="0.5 3.9 0.5" rot="0.0 -270.0 -90.0" prop="true" size="5 52 5" brush="MOD/assets/brush/i-beams.vox" object="beam1">
+									<joint pos="0.45 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.15 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.45 4.45 0.0" rotstrength="0.5" />
+									<joint pos="0.15 4.45 0.0" rotstrength="0.5" />
+									<voxbox pos="0.1 0.6 0.5" rot="0.0 -20.0 0.0" prop="true" size="24 11 1" brush="MOD/assets/vox/stairs.vox" offset="0 33 14">
+										<joint pos="0.0 -0.0 0.0" rot="0.0 0.0 0.0" rotstrength="0.5" />
+										<joint pos="0.0 1.1 0.00003" rot="0.0 0.0 0.0" rotstrength="0.5" />
+									</voxbox>
+								</voxbox>
+								<voxbox name="support" pos="0.4 0.229 0.047" rot="48.0 -180.0 0.0" texture="3, 0.5" prop="true" size="3 48 3" brush="MOD/assets/vox/tanks.vox" object="tanksupport2">
+									<joint pos="0.15 4.8 0.15" size="0.2" rotstrength="0.5" />
+									<joint pos="0.14999 0.0 0.15001" size="0.2" rotstrength="0.5" />
+								</voxbox>
+							</voxbox>
+							<voxbox name="support" pos="1.9 2.8 -1.7" rot="0.0 90.0 0.0" texture="3, 0.5" prop="true" size="5 39 5" brush="MOD/assets/vox/tanks.vox" object="tanksupport1">
+								<joint pos="0.25 0.0 0.25" rot="0.0 0.0 0.0" size="0.2" rotstrength="0.5" />
+								<voxbox name="beam" pos="0.5 3.9 0.5" rot="0.0 -270.0 -90.0" prop="true" size="5 52 5" brush="MOD/assets/brush/i-beams.vox" object="beam1">
+									<joint pos="0.45 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.15 0.25 0.00001" rotstrength="0.5" />
+									<joint pos="0.45 4.45 0.0" rotstrength="0.5" />
+									<joint pos="0.15 4.45 0.0" rotstrength="0.5" />
+								</voxbox>
+								<voxbox name="support" pos="0.4 0.229 0.047" rot="48.0 -180.0 0.0" texture="3, 0.5" prop="true" size="3 48 3" brush="MOD/assets/vox/tanks.vox" object="tanksupport2">
+									<joint pos="0.15 4.8 0.15" size="0.2" rotstrength="0.5" />
+									<joint pos="0.14999 0.0 0.15001" size="0.2" rotstrength="0.5" />
+								</voxbox>
+							</voxbox>
+							<voxbox pos="-3.0 6.7 -1.7" rot="0.0 90.7 0.0" prop="true" size="8 1 62" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.9" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.9" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-2.99998 6.7 -0.8" rot="0.0 90.0 0.0" prop="true" size="8 1 62" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.9" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.9" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-3.0 6.7 0.2" rot="0.0 90.3 0.0" prop="true" size="8 1 62" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.9" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.9" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-3.0 6.7 1.1" rot="0.0 89.7 0.0" prop="true" size="8 1 57" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.4" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.4" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-3.0 6.7 2.1" rot="0.0 90.5 0.0" prop="true" size="8 1 56" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.4" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.4" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-3.0 6.7 3.0" rot="0.0 91.0 0.0" prop="true" size="8 1 62" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.15 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.65 0.0 5.9" rotstrength="0.5" />
+								<joint pos="0.15 0.0 5.9" rotstrength="0.5" />
+							</voxbox>
+							<group name="props" pos="0.10001 6.8 -0.0" rot="0.0 0.0 0.0">
+								<body pos="-2.8 0.0 0.7" dynamic="true">
+									<voxbox name="concrete" pos="-0.26851 0.5 0.51172" rot="25.0 95.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="0.34168 0.5 -0.54548" rot="25.0 -85.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="-0.2 0.0 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="6 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" />
+									<voxbox name="concrete" pos="-0.2 0.6 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="7 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="3 0 0" />
+									<voxbox name="concrete" pos="0.07393 1.2 0.98367" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="-0.00948 1.2 -1.11705" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="-0.20872 1.2 -1.09962" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="-0.26851 0.0 0.51172" rot="0.0 95.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="concrete" pos="0.34168 0.0 -0.54548" rot="0.0 -85.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+									<voxbox name="metal" pos="-0.09166 0.1 -0.9091" rot="0.0 95.0 90.0" texture="7" size="11 18 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement" />
+								</body>
+							</group>
+						</group>
+					</group>
+					<vox pos="12.4 0.0 -0.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1">
+						<voxbox name="lightbulb" tags="fxflicker=6" pos="0.0 2.2 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+							<rope name="cable" pos="0.05 0.2 0.05">
+								<location pos="0.0 0.0 0.0" />
+								<location pos="0.0 0.3 0.0" />
+							</rope>
+						</voxbox>
+					</vox>
+					<group name="props" pos="28.6 0.0 5.1">
+						<instance pos="-34.6 0.0 3.9" rot="0.0 65.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+					</group>
+					<instance pos="-21.7 3.1 7.15" rot="0.0 .0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+				</group>
+				<group name="compund" pos="137.10001 0.0 57.2" rot="0.0 20.0 0.0">
+					<instance pos="28.9 -2.6 -5.2" rot="-3.5 -39.7 6.4" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="14.69995 -2.6 12.60003" rot="-3.5 60.3 6.4" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-17.80004 0.1 -14.09989" rot="-3.5 100.3 6.4" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-58.00005 -2.1 -27.29978" rot="-3.5 -149.7 6.4" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<group name="house edit" pos="4.50005 0.7 4.0" rot="0.0 -90.0 0.0">
+						<group name="Enemies">
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="0.0 0.6 -2.1" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="1.7 0.6 -4.5" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-2.8 0.6 -4.5" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-2.2 0.6 2.8" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="6.2 0.6 1.5" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="6.6 0.6 -2.1" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="5.5 0.6 -5.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover ranged stationary" pos="12.40001 1.1 -1.5" rot="0.0 -40.0 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover ranged " pos="13.10001 1.1 1.4" rot="0.0 -150.0 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover ranged " pos="0.49993 1.4 -15.8" rot="0.0 -20.0 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover ranged " pos="-0.90007 1.4 -15.80001" rot="0.0 50.0 0.0" />
+						</group>
+						<group name="others">
+							<trigger tags="vegRemove" pos="1.7 0.0 -1.3" type="box" size="13.8 2 13.0" />
+						</group>
+						<group name="props">
+							<instance pos="-13.19999 0.0 -0.09998" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="-12.09999 0.0 1.50003" rot="0.0 -55.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="-12.09998 0.0 1.80001" rot="0.0 -165.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+						</group>
+						<group name="Loot">
+							<instance pos="1.85001 0.3 3.9" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+							<instance pos="1.25001 0.3 3.4" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+							<instance pos="2.75001 1.9 3.4" file="MOD/prefabs/spawns/loots/NormGeneralLootSpawn.xml" />
+							<instance pos="3.25 1.9 4.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="10.15 2.5 -4.9" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="9.25 3.3 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-2.15 1.4 4.0" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-1.35 1.7 1.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="4.15 1.4 -16.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="3.15 1.4 -16.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="2.25 1.4 -16.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="0.25 0.1 -15.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.15 0.3 -3.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.15 1.7 -3.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.15 1.7 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.15 0.9 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.15 0.2 -5.2" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.25 3.9 -6.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="11.25 3.9 -6.6" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="6.45 0.4 3.1" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="5.85 0.4 1.4" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="4.45 0.4 -1.7" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="4.45 1.9 -0.3" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="4.45 1.9 -1.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-4.35 1.9 -1.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-4.35 1.1 -1.8" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="-4.45 1.1 -0.1" file="MOD/prefabs/spawns/loots/NormMiliLootSpawn.xml" />
+							<instance pos="1.25 1.1 -5.6" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+							<instance pos="0.45 1.1 -5.5" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+							<instance pos="0.75 0.3 -4.7" file="MOD/prefabs/spawns/loots/NormFoodLootSpawn.xml" />
+						</group>
+					</group>
+				</group>
+				<group name="mosque" pos="72.8 0.7 85.6" rot="0.0 -170.0 0.0">
+					<vox pos="0.34 0.0 -1.25" texture="8 0.3" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="mosque">
+						<group name="props" pos="-0.34 -0.0 1.25" rot="0.0 0.0 0.0">
+							<body pos="2.60001 8.4 7.4" rot="0.0 90.0 0.0" dynamic="true">
+								<voxbox name="concrete" pos="-0.26851 0.5 0.51172" rot="25.0 95.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="0.34168 0.5 -0.54548" rot="25.0 -85.0 0.0" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="-0.2 0.0 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="6 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" />
+								<voxbox name="concrete" pos="-0.2 0.6 -1.0" rot="0.0 95.0 90.0" texture="10 0.5" size="7 20 3" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - slab" offset="3 0 0" />
+								<voxbox name="concrete" pos="0.07393 1.2 0.98367" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="-0.00948 1.2 -1.11705" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="-0.20872 1.2 -1.09962" rot="-180.0 -85.0 0.0" texture="10 0.5" size="1 12 1" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="-0.26851 0.0 0.51172" rot="0.0 95.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="concrete" pos="0.34168 0.0 -0.54548" rot="0.0 -85.0 0.0" texture="10 0.5" size="10 5 2" brush="MOD/main/terrain/concrete_walls.vox" object="concrete wall - basic" />
+								<voxbox name="metal" pos="-0.09166 0.1 -0.9091" rot="0.0 95.0 90.0" texture="7" size="11 18 1" brush="MOD/main/terrain/concrete_walls.vox" object="metal reinfocement" />
+							</body>
+							<voxbox pos="-1.0 1.1 8.15" rot="0.0 90.0 90.0" prop="true" size="4 1 28" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.05 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.00001 2.6" rotstrength="0.5" />
+								<joint pos="0.05 0.00001 2.6" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-1.0 1.7 8.15" rot="90.0 0.0 87.0" prop="true" size="4 1 28" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.05 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.00001 2.6" rotstrength="0.5" />
+								<joint pos="0.05 0.00001 2.6" rotstrength="0.5" />
+							</voxbox>
+							<voxbox pos="-1.05 2.2 8.15" rot="90.0 0.0 91.0" prop="true" size="4 1 28" brush="MOD/assets/vox/beams.vox" object="wood-dark-4x4">
+								<joint pos="0.05 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.0 0.2" rotstrength="0.5" />
+								<joint pos="0.35 0.00001 2.6" rotstrength="0.5" />
+								<joint pos="0.05 0.00001 2.6" rotstrength="0.5" />
+							</voxbox>
+						</group>
+					</vox>
+					<instance pos="18.509 -2.9 8.752" rot="4.7 -101.7 -4.8" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="9.70897 -1.4 28.35201" rot="4.7 8.3 -4.8" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="5.702 -2.7 10.855" rot="0.0 100.0 5.0" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-5.72188 0.0 10.56694" rot="0.0 170.0 0.0" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-16.06933 -2.0 6.5943" rot="6.0 -110.2 -12.8" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-24.66636 -0.9 -2.92775" rot="-7.7 50.4 6.4" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+					<instance pos="-28.51353 -0.0 -8.17553" rot="0.0 20.0 0.0" file="MOD/assets/vox/Props/nature/palm tree.xml" />
+				</group>
+				<group name="compound" pos="115.9 0.7 66.7" rot="0.0 20.0 0.0">
+					<group name="house eidit" pos="-0.3 0.0 6.4">
+						<group pos="4.79999 0.0 0.00002" rot="0.0 -90.0 0.0">
+							<group name="floor" pos="-1.0 0.0 0.1" rot="0.0 0.0 0.0" prop0="texture=1 0.9" prop1="tags=nocull">
+								<voxbox name="floor" pos="5.6 2.9 1.3" rot="0.0 90.0 0.0" size="72 3 63" brush="MOD/main/abandoned places/vox/abandoned_places.vox" object="ceiling">
+									<voxbox name="lightbulb" pos="3.8 -0.5 2.7" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+										<rope name="cable" pos="0.05 0.2 0.05">
+											<location pos="0.0 0.0 0.0" />
+											<location pos="0.0 0.3 0.0" />
+										</rope>
+									</voxbox>
+								</voxbox>
+							</group>
+						</group>
+						<group name="Enemies" pos="7.19999 0.0 3.30002" rot="0.0 90.0 0.0">
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="0.0 0.6 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-3.7 0.6 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="2.1 0.6 -5.2" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover ranged" pos="-3.6 0.6 -11.4" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-5.7 0.6 -8.1" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="-0.4 0.6 -16.3" rot="0.0 80.0 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover " pos="6.5 0.6 -13.2" rot="0.0 80.0 0.0" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="6.7 0.6 -5.2" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="6.7 0.6 0.9" />
+							<location tags="RandomRagdoll Type=civ chance=75 cover" pos="1.6 0.6 0.9" />
+							<location tags="RandomRagdoll Type=civ chance=75 stationary ranged" pos="-6.9 3.3 -2.7" />
+							<location tags="RandomRagdoll Type=civ chance=75 stationary ranged" pos="-5.1 3.3 -2.7" />
+							<location tags="RandomRagdoll Type=civ chance=75 stationary ranged" pos="-6.7 3.3 -0.5" />
+						</group>
+					</group>
+				</group>
+				<group name="compund" pos="141.5 0.0 35.7" rot="0.0 20.0 0.0">
+					<vox pos="-11.39995 0.7 -7.60002" rot="0.0 -180.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1">
+						<voxbox name="lightbulb" tags="fxflicker=4" pos="0.0 2.2 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+							<rope name="cable" pos="0.05 0.2 0.05">
+								<location pos="0.0 0.0 0.0" />
+								<location pos="0.0 0.3 0.0" />
+							</rope>
+						</voxbox>
+					</vox>
+				</group>
+			</group>
+		</group>
+		</group></prefab>

@@ -35,7 +35,8 @@ function set_lock_cam(npc)
 	if p then
 		Killcam_Data._player_damaged[npc.Head] = nil -- once (update can run several times per tick)
 		Killcam_Data._player_damaged_recent[npc.Head] = nil
-		local camPos = VecAdd(npc.HT.pos, Vec(math.random(-3,3), math.random(0,3), math.random(-3,3)))
+		-- (2026-11-17) the head's current position (npc.HT is no longer kept for settled dead npcs)
+		local camPos = VecAdd(GetBodyTransform(npc.Head).pos, Vec(math.random(-3,3), math.random(0,3), math.random(-3,3)))
 		Killcam_Server = { player = GoreAI_ResolvePlayer(p), bodyparts = npc.bodyparts, on = false, time = 0 }
 		GoreAI_ClientCall(p, "client.goreKillcam", npc.Head, camPos, npc.bodyparts)
 	end

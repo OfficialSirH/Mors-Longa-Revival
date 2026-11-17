@@ -1,5 +1,8 @@
 #version 2
 #include "script/include/player.lua"
+-- (2026-11-17, DEBUG) collector probe, off unless level.debug.gc_* is set (lib/GcProbe.lua)
+#include "../../lib/GcProbe.lua"
+GCP_LABEL = "health"
 --[[
 #include "script/common.lua"
 #include "UiHealthOverlay_Draw.lua"

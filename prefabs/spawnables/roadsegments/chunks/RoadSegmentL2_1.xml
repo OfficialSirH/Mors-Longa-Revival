@@ -1,0 +1,633 @@
+<prefab version="1.3.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentL2.xml" pos="0.0 5.0 0.0" rot="0.0 0.0 0.0"><group pos="0.0 0.0 0.0">
+			<group name="ground" prop0="texture=19 0.5">
+				<vox pos="180.0 0.7 60.3" rot="0.0 110.0 0.0" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="building1">
+					<body pos="0.0 2.4 0.0" rot="0.0 -180.0 0.0" dynamic="true">
+						<vox pos="-0.05 -0.1 0.05" texture="8 0.9" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4a">
+							<light tags="night randomdelete" pos="0.05 0.15 -0.05" color="1 1 0.6" scale="1" size="0.1" unshadowed="0" />
+						</vox>
+						<vox pos="0.00001 -0.05 0.0" rot="0.0 0.0 0.0" texture="8 0.9" collide="true" file="MOD/assets/vox/Furniture/lights.vox" object="light4b" />
+						<voxbox pos="-0.05 -0.0 -0.05" rot="0.0 0.0 0.0" texture="8 0.9" collide="true" size="0.1" material="metal" color="1 .7 .4" pbr="32 32 32 32" />
+						<joint pos="0.0 0.3 0.0" size="0.1" collide="true" />
+					</body>
+					<body pos="0.1 0.1 2.5" dynamic="true">
+						<vox pos="-0.1 0.0 0.1" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="door">
+							<joint pos="0.5 0.2 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130" />
+							<joint pos="0.5 1.7 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130" />
+						</vox>
+					</body>
+					<body pos="1.7 0.1 -0.89999" rot="0.0 90.0 0.0" dynamic="true">
+						<vox pos="-0.1 0.0 0.1" file="MOD/assets/vox/mudbrick_buildings_2.vox" object="door">
+							<joint pos="0.5 0.2 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130" />
+							<joint pos="0.5 1.7 0.0" rot="-90.0 -180.0 0.0" type="hinge" rotstrength="0.001" rotspring="0" limits="0 130" />
+						</vox>
+					</body>
+				</vox>
+			</group>
+			<group name="Check point">
+				<group name="Fence" pos="46.7 0.7 23.9" prop0="texture=8 0.8">
+					<group name="Gate" pos="0.4 0.1 -14.5">
+						<body pos="0.1 0.1 3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -3.0" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 5.9" rot="90.0 90.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 5.9" rot="90.0 -90.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="0.1 0.1 -3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -2.9" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="-0.1 0.9 0.0" dynamic="true">
+							<vox pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="lock">
+								<joint pos="0.05 0.4 0.1" rot="0.0 180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" limits="0 90" />
+								<joint pos="0.05 0.4 -0.2" rot="0.0 -180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" limits="0 90" />
+							</vox>
+							<vox pos="0.1 0.5 0.0" rot="0.0 0.0 0.0" density="100" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="chain" />
+						</body>
+					</group>
+					<group name="Gate" pos="0.4 0.1 -36.5" rot="0.0 -180.0 0.0">
+						<body pos="0.1 0.1 3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -3.0" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 5.9" rot="90.0 90.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 5.9" rot="90.0 -90.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="0.1 0.1 -3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -2.9" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="-0.1 0.9 0.0" dynamic="true">
+							<vox pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="lock">
+								<joint pos="0.05 0.4 0.1" rot="0.0 180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+								<joint pos="0.05 0.4 -0.2" rot="0.0 -180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+							</vox>
+							<vox pos="0.1 0.5 0.0" rot="0.0 0.0 0.0" density="100" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="chain" />
+						</body>
+					</group>
+					<group name="Checkpoint Out" pos="-2.60004 -0.1 -25.10001" rot="0.0 90.0 0.0">
+						<instance pos="0.4 0.1 0.4" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/checkpoint shack.xml" />
+					</group>
+				</group>
+				<group name="Fence" pos="157.0 0.7 23.9" prop0="texture=8 0.8">
+					<group name="Gate" pos="0.4 0.1 -36.5" rot="0.0 -180.0 0.0">
+						<body pos="0.1 0.1 3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -3.0" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 5.9" rot="90.0 90.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 5.9" rot="90.0 -90.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="0.1 0.1 -3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -2.9" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="-0.1 0.9 0.0" dynamic="true">
+							<vox pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="lock">
+								<joint pos="0.05 0.4 0.1" rot="0.0 180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+								<joint pos="0.05 0.4 -0.2" rot="0.0 -180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+							</vox>
+							<vox pos="0.1 0.5 0.0" rot="0.0 0.0 0.0" density="100" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="chain" />
+						</body>
+					</group>
+					<group name="Gate" pos="0.4 0.1 -14.5">
+						<body pos="0.1 0.1 3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -3.0" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 5.9" rot="90.0 90.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 5.9" rot="90.0 -90.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="0.1 0.1 -3.0" dynamic="true">
+							<voxbox pos="-0.2 0.0 -2.9" rot="0.0 0.0 0.0" density="0.5" strength="1" size="2 39 59" brush="MOD/main/Building Components/fences/Military Fence.vox" object="Gate">
+								<joint pos="0.2 0.1 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+								<joint pos="0.2 3.8 0.0" rot="-90.0 0.0 0.0" type="hinge" />
+							</voxbox>
+						</body>
+						<body pos="-0.1 0.9 0.0" dynamic="true">
+							<vox pos="-0.1 0.1 0.05" rot="0.0 0.0 0.0" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="lock">
+								<joint pos="0.05 0.4 0.1" rot="0.0 180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+								<joint pos="0.05 0.4 -0.2" rot="0.0 -180.0 -90.0" type="hinge" size="0.1" rotstrength="1" rotspring="1" collide="true" />
+							</vox>
+							<vox pos="0.1 0.5 0.0" rot="0.0 0.0 0.0" density="100" strength="0.5" file="MOD/main/Building Components/fences/Military Fence.vox" object="chain" />
+						</body>
+					</group>
+					<group name="Checkpoint Out" pos="3.39996 -0.1 -25.90001" rot="0.0 -90.0 0.0">
+						<group name="Interior" pos="0.3 2.6 0.3">
+							<voxbox name="lightbulb" pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<rope name="cable" pos="0.05 0.2 0.05">
+									<location pos="0.0 0.0 0.0" rot="0.0 0.0 0.0" />
+									<location pos="0.0 0.65 0.0" rot="0.0 0.0 0.0" />
+								</rope>
+							</voxbox>
+						</group>
+						<group name="Door" pos="1.4 0.7 2.8" rot="0.0 -180.0 0.0">
+							<voxbox name="door" pos="-0.4 0.1 -0.3" rot="0.0 0.0 0.0" texture="5 0.5" prop="true" size="9 20 3" brush="MOD/main\Building Components\doors/metal_doors.vox" object="metal door with window" material="metal">
+								<joint pos="-0.0 0.3 0.1" rot="90.0 0.0 0.0" type="hinge" collide="false" limits="0 130" />
+								<joint pos="-0.0 1.6 0.1" rot="90.0 0.0 0.0" type="hinge" collide="false" limits="0 130" />
+							</voxbox>
+						</group>
+						<vox name="file cabinet" pos="1.6 0.7 -1.25" rot="0.0 -2.5 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+							<vox name="drawer" pos="0.0 0.1 0.4" texture="7 0.75" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+								<joint pos="0.0 0.0 -0.5" rot="0.0 0.0 0.0" type="prismatic" limits="-0.3 0.5" />
+							</vox>
+							<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+								<joint pos="0.0 0.1 -0.5" rot="0.0 0.0 0.0" type="prismatic" limits="0 0.8" />
+							</vox>
+							<vox name="drawer" pos="0.0 0.9 0.2" texture="7 0.75" prop="true" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+								<joint pos="0.0 0.4 -0.5" rot="0.0 0.0 0.0" type="prismatic" limits="-0.1 0.7" />
+							</vox>
+						</vox>
+						<vox name="wooden crate" pos="-0.499 0.7 1.927" rot="0.0 -180.0 0.0" texture="7 0.5" file="MOD/main/General/crates and ammo boxes/wooden_crates_and_ammo_boxes.vox" object="reinforced wooden crate (bottom)">
+							<vox name="wooden crate top" pos="0.001 0.7 -0.098" rot="0.0 0.0 0.0" texture="7 0.5" prop="true" file="MOD/main/General/crates and ammo boxes/wooden_crates_and_ammo_boxes.vox" object="reinforced wooden crate (top)">
+								<joint pos="-0.15 0.0 -0.5" rot="0.0 -90.0 0.0" type="hinge" collide="true" />
+								<joint pos="0.25 0.0 -0.5" rot="0.0 -90.0 0.0" type="hinge" collide="true" />
+							</vox>
+							<instance pos="0.0 0.3 0.0" file="MOD/prefabs/spawns/loots/HiddenMiliLootSpawn.xml" />
+						</vox>
+					</group>
+				</group>
+				<group name="barricades">
+					<group name="flood lights" pos="79.59998 1.5 -20.2" rot="0.0 0.0 0.0">
+						<group name="big flood light" pos="-29.08 -1.3 -0.1" rot="0.0 130.0 0.0">
+							<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+								<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+							</vox>
+						</group>
+						<group name="big flood light" pos="-29.67324 -1.3 37.61583" rot="0.0 60.0 0.0">
+							<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+								<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+							</vox>
+						</group>
+						<group name="big flood light" pos="74.52 -1.3 37.5" rot="0.0 -50.0 0.0">
+							<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+								<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+							</vox>
+						</group>
+						<group name="big flood light" pos="75.11324 -1.3 -0.21582" rot="0.0 -120.0 0.0">
+							<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
+								<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
+							</vox>
+						</group>
+					</group>
+					<group pos="21.5 0.6 7.1">
+						<group name="1" pos="8.6 -0.2 -8.3">
+							<instance pos="12.3 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.1 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="8.7 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.9 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="7.4 0.2 3.2" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="5.0 0.6 2.7" rot="-98.7 -29.6 5.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-15.8 0.2 5.5" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-14.9 0.2 6.3" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-13.1 0.2 7.9" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-14.0 0.2 7.1" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-11.8 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-10.596 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-8.189 0.2 8.01" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-9.393 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-4.493 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-6.9 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-5.696 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-3.289 0.2 8.01" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-11.8 0.2 17.3" rot="0.0 -170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-10.596 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-8.189 0.6 17.31" rot="-95.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-9.393 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-4.493 0.2 17.3" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-6.9 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-5.696 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-3.289 0.2 17.31" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.5 0.4 2.9" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 2.9" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="14.5 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="12.3 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="10.1 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="14.5 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="12.3 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="10.1 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="6.8 0.2 -5.3" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="8.1 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.304 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.711 0.2 -5.19" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="10.507 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="15.407 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="13.0 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.204 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="16.611 0.2 -5.19" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="7.90542 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.10942 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.51642 0.2 -17.30646" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="10.312 0.9 -17.316" rot="95.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="15.21242 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="12.80542 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.00942 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="16.41643 0.2 -17.30646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						</group>
+						<group name="1" pos="152.90001 -0.2 -9.1" rot="0.0 -180.0 0.0">
+							<instance pos="12.3 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.1 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="8.7 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.9 0.2 3.2" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="7.4 0.2 3.2" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="5.0 0.6 2.7" rot="-98.7 -29.6 5.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-15.8 0.2 5.5" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-14.9 0.2 6.3" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-13.1 0.2 7.9" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-14.0 0.2 7.1" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-11.8 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-10.596 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-8.189 0.2 8.01" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-9.393 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-4.493 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-6.9 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-5.696 0.2 8.0" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-3.289 0.2 8.01" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-11.8 0.2 17.3" rot="0.0 -170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-10.596 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-8.189 0.6 17.31" rot="-95.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-9.393 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-4.493 0.2 17.3" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-6.9 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-5.696 0.2 17.3" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="-3.289 0.2 17.31" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.5 0.4 2.9" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 2.9" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="14.5 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="12.3 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="10.1 0.4 7.3" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="16.7 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="14.5 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="12.3 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="10.1 0.4 13.6" rot="0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							<instance pos="6.8 0.2 -5.3" rot="0.0 140.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="8.1 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.304 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.711 0.2 -5.19" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="10.507 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="15.407 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="13.0 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.204 0.2 -5.2" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="16.611 0.2 -5.19" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="7.90542 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="9.10942 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="11.51642 0.2 -17.30646" rot="0.0 170.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="10.312 0.9 -17.316" rot="95.0 -180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="15.21242 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="12.80542 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="14.00942 0.2 -17.31646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							<instance pos="16.41643 0.2 -17.30646" rot="0.0 180.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+						</group>
+					</group>
+				</group>
+				<group name="overhead sign" pos="22.05 0.6 9.72" rot="0.0 0.0 0.0" prop0="rotstrength=3" prop1="collide=true" prop2="texture=8 0.5">
+					<vox pos="0.0 6.6 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+						<joint pos="10.0 1.5 0.4" rot="0.0 180.0 0.0" rotstrength="5" />
+						<joint pos="-9.9 1.5 0.4" rot="0.0 0.0 0.0" rotstrength="5" />
+						<vox pos="-0.3 0.9 0.0" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign: STOP DAMAGED">
+							<joint pos="8.94 3.6 -0.1" rot="0.0 0.0 0.0" />
+							<joint pos="8.95 0.7 -0.1" rot="0.0 0.0 0.0" />
+							<joint pos="-8.86 3.6 -0.1" rot="0.0 0.0 0.0" />
+							<joint pos="-8.86 0.7 -0.1" rot="0.0 0.0 0.0" />
+						</vox>
+						<vox pos="10.0 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+							<joint rotstrength="20" />
+						</vox>
+						<vox pos="-9.9 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+							<joint rotstrength="20" />
+						</vox>
+						<vox pos="5.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="3.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="1.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-0.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-2.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-4.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+					</vox>
+				</group>
+				<group name="overhead sign" pos="181.25002 0.6 -12.88" rot="0.0 -180.0 0.0" prop0="rotstrength=3" prop1="collide=true" prop2="texture=8 0.5">
+					<vox pos="0.0 6.6 0.0" rot="0.0 90.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: sign support full">
+						<joint pos="10.0 1.5 0.4" rot="0.0 180.0 0.0" rotstrength="5" />
+						<joint pos="-9.9 1.5 0.4" rot="0.0 0.0 0.0" rotstrength="5" />
+						<vox pos="-0.3 0.9 -0.0" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="checkpoint sign: STOP">
+							<joint pos="8.94 3.6 0.1" rot="0.0 0.0 0.0" />
+							<joint pos="8.95 0.7 0.1" rot="0.0 0.0 0.0" />
+							<joint pos="-8.86 3.6 0.1" rot="0.0 0.0 0.0" />
+							<joint pos="-8.86 0.7 0.1" rot="0.0 0.0 0.0" />
+						</vox>
+						<vox pos="10.0 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+							<joint rotstrength="20" />
+						</vox>
+						<vox pos="-9.9 -6.5 0.4" rot="0.0 180.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: support pole">
+							<joint rotstrength="20" />
+						</vox>
+						<vox pos="5.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="3.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="1.1 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-0.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-2.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+						<vox pos="-4.9 0.4 -0.6" rot="0.0 0.0 0.0" prop="true" file="MOD/main/terrain/ground_building_assets_highway.vox" object="exit sign: lighting">
+							<joint tags="night" pos="0.05 0.0 -0.05" />
+						</vox>
+					</vox>
+				</group>
+				<group name="buildings" pos="95.9 0.0 0.0">
+					<group name="compound" pos="34.5 -0.0 -2.89999" rot="0.0 -180.0 0.0">
+						<vox pos="11.2 0.7 35.8" texture="8 0.3" file="MOD/assets/vox/militarybase.vox" object="building1">
+							<voxbox name="lightbulb" pos="-3.0 5.5 -3.1" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<rope name="cable" pos="0.05 -0.2 0.05">
+									<location pos="0.0 0.4 0.0" />
+									<location pos="0.0 0.65 0.0" />
+								</rope>
+							</voxbox>
+							<voxbox name="lightbulb" pos="-3.0 5.5 3.3" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<rope name="cable" pos="0.05 -0.2 0.05">
+									<location pos="0.0 0.4 0.0" />
+									<location pos="0.0 0.65 0.0" />
+								</rope>
+							</voxbox>
+							<voxbox name="lightbulb" pos="0.2 2.5 1.8" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<rope name="cable" pos="0.05 -0.2 0.05">
+									<location pos="0.0 0.4 0.0" />
+									<location pos="0.0 0.65 0.0" />
+								</rope>
+							</voxbox>
+							<voxbox name="lightbulb" pos="3.0 5.5 3.3" rot="0.0 0.0 0.0" texture="2 1" prop="true" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
+								<rope name="cable" pos="0.05 -0.2 0.05">
+									<location pos="0.0 0.4 0.0" />
+									<location pos="0.0 0.65 0.0" />
+								</rope>
+							</voxbox>
+							<vox name="file cabinet" pos="-5.25003 3.4 5.09999" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+							<vox name="file cabinet" pos="-5.25003 3.4 5.79998" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+							<vox name="file cabinet" pos="-5.25003 3.4 2.29999" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+							<vox name="file cabinet" pos="-5.25003 3.4 2.99998" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+							<vox name="file cabinet" pos="-5.25003 3.4 3.69999" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+							<vox name="file cabinet" pos="-5.25003 3.4 4.39999" rot="0.0 90.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
+								<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
+								</vox>
+								<vox name="drawer" pos="0.0 0.5 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.1 -0.5" type="prismatic" limits="0 0.8" />
+								</vox>
+								<vox name="drawer" pos="-0.0 0.9 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
+									<joint pos="0.0 0.4 -0.5" type="prismatic" limits="-0.1 0.7" />
+								</vox>
+							</vox>
+						</vox>
+						<group name="props" pos="15.4 -2.7 -13.3" rot="0.0 -90.0 0.0">
+							<group name="military crate" pos="34.39999 3.4 28.7" rot="0.0 175.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="43.2 3.4 11.0" rot="0.0 -95.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="43.2 4.1 11.0" rot="0.0 -105.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="35.51777 3.4 26.96777" rot="0.0 95.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="43.1 4.1 16.4" rot="0.0 95.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="43.1 3.4 16.4" rot="0.0 95.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="45.4 9.8 8.7" rot="0.0 85.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="55.2 9.8 6.0" rot="0.0 5.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="42.0 9.8 7.0" rot="0.0 5.0 0.0">
+								<joint pos="-0.37412 0.5 0.45341" collide="true" />
+								<joint pos="-0.37412 0.5 -0.54659" collide="true" />
+							</group>
+							<group name="military crate" pos="55.7 4.4 -1.0" rot="0.0 85.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="55.7 3.8 -1.0" rot="0.0 85.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="51.9 7.4 -1.0" rot="0.0 85.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+							<group name="military crate" pos="51.9 6.8 -1.0" rot="0.0 85.0 0.0">
+								<joint pos="-0.4 0.5 0.55" collide="true" />
+								<joint pos="-0.4 0.5 -0.45" collide="true" />
+							</group>
+						</group>
+						<group name="military crate" pos="-2.5 0.7 37.9" rot="0.0 -95.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="10.79999 0.8 26.4" rot="0.0 15.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="10.7015 1.5 26.41737" rot="0.0 5.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="12.27749 1.4 31.29304" rot="0.0 -5.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="8.27749 1.1 28.99304" rot="0.0 -75.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="12.21168 0.7 31.38701" rot="0.0 -175.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<group name="military crate" pos="11.69539 0.8 27.22489" rot="0.0 55.0 0.0">
+							<joint pos="-0.4 0.5 0.55" collide="true" />
+							<joint pos="-0.4 0.5 -0.45" collide="true" />
+						</group>
+						<instance pos="-9.4 0.8 39.1" rot="0.0 -90.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/offroad-open.xml" />
+						<instance pos="-9.4 0.8 42.1" rot="0.0 -80.0 0.0" file="MOD/vehicles/avf/prefabs/technicals/offroad.xml" />
+						<instance pos="-28.80001 4.4 6.09999" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+						<instance pos="-27.70002 4.4 15.3" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+						<instance pos="-29.30001 4.4 10.89999" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+						<instance pos="-42.90001 4.4 10.89999" file="MOD/prefabs/spawns/vehicles/NormCarSpawn.xml" />
+						<group name="left side" pos="-3.9 -0.1 3.4" prop0="texture=10 .5">
+							<group name="high" pos="-8.3 0.9 -3.7">
+								<instance pos="10.10001 0.0 -5.79998" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="11.50001 0.0 -5.59998" rot="0.0 -50.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="2.30001 -0.1 -5.59998" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="1.90001 -0.1 -4.29998" rot="0.0 80.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-4.59999 -0.1 20.60002" rot="0.0 10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-5.69999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-6.89999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-9.09999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-7.99999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-11.29999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-10.19999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-13.49999 -0.1 20.40002" rot="0.0 -10.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="-12.39999 -0.1 20.60002" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.954 -0.1 34.3" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.95414 -0.1 33.23708" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.95414 -0.1 32.13708" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.95413 -0.1 31.03709" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.95413 -0.1 29.93709" rot="0.0 100.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.75414 -0.1 28.83709" rot="0.0 120.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="28.15413 -0.1 27.73709" rot="0.0 120.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="27.55414 -0.1 26.73709" rot="0.0 120.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 8.56932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 7.46932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 6.36932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 5.26932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 4.16932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+								<instance pos="36.00979 0.0 3.06932" rot="0.0 90.0 0.0" file="MOD/prefabs/assets/ballistic wall high.xml" />
+							</group>
+							<group name="low" pos="10.0 0.9 -3.4">
+								<instance pos="-20.0 0.0 16.4" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="5.5 6.3 36.5" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="8.1 6.3 36.5" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="10.1 6.3 37.2" rot="0.0 85.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="10.1 6.3 39.3" rot="0.0 85.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="10.1 6.3 41.9" rot="0.0 15.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="8.0 6.3 42.5" rot="0.0 -5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="5.6 6.3 42.5" rot="0.0 -5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="3.4 6.3 42.5" rot="0.0 -5.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="0.3 6.3 40.3" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-17.5 0.0 16.7" rot="0.0 165.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="17.4 0.0 18.4" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="17.6 0.0 16.3" rot="0.0 -105.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-25.6 0.0 16.3" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-26.8 0.0 17.9" rot="0.0 -125.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-29.2 0.0 18.3" rot="0.0 -85.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-16.7 0.0 1.8" rot="0.0 105.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="-15.84816 0.0 3.87951" rot="0.0 175.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="55.5 0.0 -4.6" rot="0.0 -95.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="55.69999 0.0 -6.7" rot="0.0 -105.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="56.9 0.0 -16.3" rot="0.0 -65.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+								<instance pos="56.0232 0.0 -18.21865" rot="0.0 -75.0 0.0" file="MOD/prefabs/assets/ballistic wall low.xml" />
+							</group>
+							<vox name="boom barrier" pos="8.2 0.35 15.50001" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier mechanism">
+								<voxbox name="pole" pos="-0.2 1.05 0.3" rot="0.0 0.0 30.0" texture="6 0.5" density="3" prop="true" size="122 3 2" brush="MOD/main/General/mechanism/boom_barrier.vox" object="boom barrier pole">
+									<joint pos="0.15 0.15 0.0" type="hinge" rotstrength="0.02" limits="0 90" />
+								</voxbox>
+							</vox>
+						</group>
+						<group name="hesco wall" pos="5.1 0.7 34.3" rot="0.0 -90.0 0.0">
+							<instance pos="0.3 0.0 -9.6" rot="0.0 -90.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
+						</group>
+					</group>
+				</group>
+				<group name="Enemies" pos="132.90001 0.9 -2.8" rot="0.0 -180.0 0.0">
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="-21.5 3.0 26.4" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 outside" pos="-0.6 1.5 -7.7" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 " pos="95.39999 0.3 -7.20002" rot="0.0 -80.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="14.9 0.4 37.6" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="12.1 3.5 37.1" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="11.4 3.5 30.9" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="11.4 6.4 34.9" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="10.1 0.4 42.8" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 stationary" pos="-16.3 0.1 17.5" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover" pos="-27.1 0.6 -1.4" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="-6.0 0.0 0.1" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="-8.40001 3.0 46.7" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="22.89999 2.9 23.50001" rot="0.0 -90.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="11.4 6.4 29.4" rot="0.0 0.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 stationary" pos="10.3 0.4 30.8" rot="0.0 120.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 inside" pos="16.8 0.4 28.6" rot="0.0 20.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="82.6 2.9 27.0" rot="0.0 -90.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover ranged" pos="82.6 2.9 -26.7" rot="0.0 -90.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 cover" pos="88.1 0.6 -0.7" />
+					<location tags="RandomRagdoll Type=mil chance=100 " pos="98.39999 0.3 -16.60002" rot="0.0 -90.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 " pos="98.19999 0.3 5.39998" rot="0.0 -80.0 0.0" />
+					<location tags="RandomRagdoll Type=mil chance=100 " pos="96.89999 0.3 14.49998" rot="0.0 -80.0 0.0" />
+				</group>
+			</group>
+		</group>
+		</group></prefab>
