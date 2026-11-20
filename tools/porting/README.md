@@ -85,6 +85,15 @@ is the only one of this table still run (from `tools/porting/`).
   `rock1_low.vox` (option "Low Detail Rocks"; even-grid blocks, checked against the reduced whole rock).
 * `perf_pieces.py [Segment]` – dev: cuts a segment into its content groups (`dev/perftest/`) for the debug menu's
   "piece by piece" test.
+* Joints and the splits (2026-11-20): a joint / rope only attaches to shapes of its own Spawn call. Check with the
+  debug hook `level.debug.perftest_request = "jointcheck:<path>|<path>..."` (ui/ConfigMenu.lua; spawn order like
+  GenerateRoad, prints loose joints by index) against the segment file + parts + decor in one prefab.
+  * `joint_anchors.py list <Segment>` / `apply joint_anchors.json` – hidden 1-voxel static anchors at joints whose
+    static partner was moved out (joint positions from the XML transforms, Teardown's Euler order checked in game).
+  * `merge_joint_parts.py <spec.json>` – puts parts back into the segment where a moving partner (door, plank,
+    pipe) was moved out; merged parts are listed in `parts_merged.txt` and skipped by `segment_pieces.py`.
+  * `chunk_segments.py` keeps groups holding joints (and their subgroups) together.
+  Re-check after re-running split_heavy / segment_pieces / chunk_segments.
 * `split_decor.py [--dry-run]` – moves each road segment's roadside decor (bushes, rocks: most of its shapes) into
   `prefabs/spawnables/roadsegments/decor/` and writes `world/generation/DecorParts.lua`; proves every element keeps
   its parent chain (placement, group defaults); re-runnable (split segments are skipped).

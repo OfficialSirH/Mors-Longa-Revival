@@ -534,6 +534,7 @@
 							<vox pos="-12.3 0.0 4.5" prop="false" file="MOD/main/gas station/gas station store.vox" object="blight6"/>
 						</group>
 						<group pos="7.4 -0.1 13.6">
+							<voxbox tags="invisible unbreakable joint_anchor" pos="0.0027 0.1500 1.6196" size="1 1 1" color="0.3 0.3 0.3" />
 							<vox name="desk" pos="0.0 0.1 0.0" texture="7 0.5" prop="true" file="MOD/main/gas station/gas station props.vox" object="desk"/>
 							<vox name="monitor" pos="0.1 1.1 -0.6" rot="0 180" texture="7 0.3" prop="true" file="MOD/main/gas station/gas station props.vox" object="monitor">
 								<screen script="MOD/game/BlankScreen.lua" tags="name=voxbox amount=1 " pos="0.0 0.6 -0.1" rot="0 180" size="1.06 0.65" bulge="0" resolution="2048 1536" enabled="true" interactive="false" emissive="0.2">
@@ -556,6 +557,8 @@
 							<screen script="MOD/game/BlankScreen.lua" tags="name=cctv amount=1 " pos="0.0 0.4 -0.4" rot="0 180" size="1.06 0.65" bulge="0" resolution="1261 712" enabled="true" interactive="false" emissive="0.2"/>
 						</vox>
 						<group name="security cams" pos="-12.0 3.6 14.8">
+							<voxbox tags="invisible unbreakable joint_anchor" pos="-0.1469 0.3593 0.2884" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="20.2846 0.4960 0.3451" size="1 1 1" color="0.3 0.3 0.3" />
 							<vox name="cam" pos="0.0 0.2 0.1" rot="-23 -45" prop="true" file="MOD/main/gas station/gas station props.vox" object="security cam">
 								<joint pos="0.1 0.1 0.3" size="0.13" rotstrength="0.5"/>
 							</vox>
@@ -579,6 +582,8 @@
 							<vox name="display" pos="-2.02 0.1 -1.8" rot="0 180" prop="true" file="MOD/main/gas station/gas station props.vox" object="display"/>
 						</group>
 						<group name="toilet" pos="11.0 0.2 12.4">
+							<voxbox tags="invisible unbreakable joint_anchor" pos="-0.6500 0.2500 -0.0900" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="-0.6500 2.0500 -0.0900" size="1 1 1" color="0.3 0.3 0.3" />
 							<vox name="toilet door" pos="0.1 0.0 -0.04" rot="0 180" prop="true" file="MOD/main/first stores building/store building.vox" object="in door">
 								<joint pos="0.7 0.3 0.0" rot="90 180" type="hinge" rotstrength="0.05" rotspring="0.04" limits="-140 "/>
 								<joint pos="0.7 2.1 0.0" rot="90 180" type="hinge" rotstrength="0.05" rotspring="0.04" limits="-140 "/>

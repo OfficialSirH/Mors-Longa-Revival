@@ -1,0 +1,39 @@
+<prefab version="1.2.0"><group name="instance=MOD/prefabs/spawnables/roadsegments/RoadSegmentF.xml" pos="100.0 0.0 0.0" rot="0.0 0.0 0.0"><group name="Enemies">
+			<instance pos="52.9 0.7 63.5" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="47.4 0.7 52.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="49.9 4.1 44.1" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="41.1 4.1 41.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="59.4 0.7 30.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="71.2 0.7 20.8" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="89.6 0.7 24.3" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="96.3 0.7 30.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="94.8 0.7 39.1" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="103.3 4.1 45.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="113.9 0.7 39.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="112.5 0.7 44.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="125.7 4.1 47.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="136.60001 0.7 51.5" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="123.4 0.7 49.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="123.0 0.7 57.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="122.3 0.7 66.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="130.2 0.7 78.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="168.5 0.7 70.1" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="168.90001 0.7 55.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="149.10001 0.7 43.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="142.7 4.1 35.9" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="134.40001 4.1 37.8" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="138.7 4.1 45.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="74.4 4.1 41.5" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="78.7 4.1 45.2" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="79.9 0.7 57.1" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="66.9 0.7 60.5" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="63.2 0.7 67.7" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="59.9 7.5 86.0" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="43.7 0.7 80.4" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="37.5 0.7 82.5" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="52.1 8.9 89.6" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="52.2 8.9 100.4" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="35.1 8.9 90.3" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+			<instance pos="34.1 8.9 99.8" file="MOD/prefabs/spawns/enemies/EnemyCivSpawn.xml" />
+		</group>
+	</group></prefab>

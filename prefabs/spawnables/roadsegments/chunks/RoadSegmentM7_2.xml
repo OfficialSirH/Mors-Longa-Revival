@@ -618,6 +618,7 @@
 			</group>
 			<group name="Checkpoint Out" pos="-3.4 0.5 -9.4" rot="0.0 -90.0 0.0" prop0="texture=13">
 				<group name="Interior" pos="0.3 2.8 0.3" rot="0.0 0.0 0.0">
+					<voxbox tags="invisible unbreakable joint_anchor" pos="0.0000 0.8000 0.0000" size="1 1 1" color="0.3 0.3 0.3" />
 					<voxbox name="lightbulb" texture="2 1" prop="false" size="1 2 1" material="glass" color="1 1 .5" pbr="0 0 0 2">
 						<rope name="cable" pos="0.05 0.2 0.05">
 							<location />

@@ -320,7 +320,14 @@ def main():
     heads, head_index = [], {}
     table = {}
     stats = Counter()
+    # (2026-11-20) parts put back into their segment by merge_joint_parts.py (joints need them in the same spawn)
+    merged_path = os.path.join("tools", "porting", "parts_merged.txt")
+    merged = set()
+    if os.path.exists(merged_path):
+        merged = {l.strip() for l in open(merged_path, encoding="utf-8") if l.strip() and not l.startswith("#")}
     for path in sorted(p.replace("\\", "/") for p in glob.glob(PART_DIR + "/*.xml")):
+        if os.path.basename(path) in merged:
+            continue
         seg = re.match(r".*/(RoadSegment\w+?)_\d{3}\.xml$", path).group(1)
         text = open(path, encoding="utf-8").read()
         out, _ = pieces_of_part(text, pieces_by_model)

@@ -169,6 +169,321 @@
 			</group>
 			<group name="gate">
 				<group name="wall" pos="2.5 0.0 1.0" prop0="texture=8 0.3">
+					<voxbox name="wall" pos="86.354 0.7 18.046" rot="0.0 -150.0 0.0" size="58 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3" />
+					<voxbox name="wall" pos="86.7 0.7 17.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<voxbox name="wall" pos="93.7 0.7 17.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<voxbox name="wall" pos="78.3 0.7 18.4" rot="0.0 90.0 0.0" size="34 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="31 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="31 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="1.8 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="3.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<voxbox name="wall" pos="78.3 0.7 12.7" rot="0.0 90.0 0.0" size="6 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3" />
+					<voxbox name="wall" pos="78.3 0.7 4.7" rot="0.0 90.0 0.0" size="70 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.6 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.9 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<voxbox name="wall" pos="78.3 0.7 -2.9" rot="0.0 90.0 0.0" size="70 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.7 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.9 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="86.4 0.7 17.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="93.4 0.7 17.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 11.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 13.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar">
+						<voxbox name="wall" pos="-0.3 2.0 0.3" rot="-90.0 90.0 0.0" size="6 11 6" brush="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					</vox>
+					<vox pos="78.5 0.7 -20.5" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar">
+						<voxbox name="wall" pos="-0.3 2.0 0.3" rot="-90.0 90.0 0.0" size="6 11 6" brush="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					</vox>
+					<vox pos="78.5 0.7 14.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 5.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 -2.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 -10.2" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="78.3 0.7 -20.8" rot="0.0 90.0 0.0" size="29 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="-2.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="53 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="53 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="0.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="2.8 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<voxbox name="wall" pos="78.3 0.7 -24.3" rot="0.0 90.0 0.0" size="62 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="78.5 0.7 -17.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="78.5 0.7 -24.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="78.3 0.7 -31.1" rot="0.0 90.0 0.0" size="63 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="78.5 0.7 -30.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="78.3 0.7 -38.0" rot="0.0 90.0 0.0" size="63 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="78.5 0.7 -37.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="111.8 0.7 -9.60001" rot="0.0 -90.0 0.0" size="57 36 7" brush="MOD/assets/vox/militarybase.vox" object="wall2" />
+					<vox pos="111.4 0.7 -10.10002" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="112.4 0.8 -18.1" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="107.7 0.7 -18.00002" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="80.4 0.7 4.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="79.5 0.7 12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="94.4 0.7 12.8" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="80.4 0.7 -10.1" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="79.5 0.8 -18.1" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<voxbox name="wall" pos="108.2 0.7 -18.40002" rot="0.0 0.0 0.0" size="38 36 7" brush="MOD/assets/vox/militarybase.vox" object="wall2" />
+					<voxbox name="wall" pos="80.8 0.7 -9.6" rot="0.0 -90.0 0.0" size="140 36 7" brush="MOD/assets/vox/militarybase.vox" object="wall2" />
+					<voxbox name="wall" pos="80.0 0.7 12.5" rot="0.0 0.0 0.0" size="140 36 7" brush="MOD/assets/vox/militarybase.vox" object="wall2" />
+					<vox pos="100.4 0.7 17.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="78.79999 0.7 -51.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="78.49998 0.7 -44.6" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="78.3 0.7 -44.9" rot="0.0 90.0 0.0" size="63 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="78.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="100.7 0.7 17.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="107.4 0.7 17.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="107.7 0.7 17.7" rot="0.0 0.0 0.0" size="55 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="55 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="55 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="1.8 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="3.5 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="5.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.5 0.7 17.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="85.79999 0.7 -51.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="85.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="99.79999 0.7 -51.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="99.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="92.79999 0.7 -51.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="92.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.69999 0.7 -51.2" rot="0.0 -90.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="106.79999 0.7 -51.7" rot="0.0 0.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="106.49998 0.7 -51.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.69999 0.7 -44.2" rot="0.0 -90.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49998 0.7 -44.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.69999 0.7 -37.2" rot="0.0 -90.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49998 0.7 -37.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.69999 0.7 -30.2" rot="0.0 -90.0 0.0" size="64 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="64 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.2 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49998 0.7 -30.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.69999 0.7 -23.2" rot="0.0 -90.0 0.0" size="59 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="59 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="59 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="1.9 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="5.8 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49998 0.7 -23.5" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="113.49998 0.7 -17.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.3 0.7 -2.9" rot="0.0 90.0 0.0" size="70 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.7 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.9 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49999 0.7 -10.2" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="113.49999 0.7 -2.6" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.3 0.7 4.7" rot="0.0 90.0 0.0" size="70 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.0 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="70 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="4.6 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="6.9 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+					<vox pos="113.49999 0.7 5.0" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="113.49999 0.7 11.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="111.4 0.7 4.79998" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<vox pos="112.4 0.7 12.79998" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall2_pillar" />
+					<voxbox name="wall" pos="111.8 0.7 -1.30001" rot="0.0 -90.0 0.0" size="57 36 7" brush="MOD/assets/vox/militarybase.vox" object="wall2" />
+					<voxbox name="wall" pos="78.3 0.7 -17.3" rot="0.0 90.0 0.0" size="12 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3" />
+					<vox pos="78.5 0.7 -18.8" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<vox pos="113.5 0.7 16.7" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar">
+						<voxbox name="wall" pos="-0.3 2.0 0.3" rot="-90.0 90.0 0.0" size="6 11 6" brush="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					</vox>
+					<voxbox name="wall" pos="113.7 0.7 17.0" rot="0.0 -90.0 0.0" size="6 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3" />
+					<vox pos="113.5 0.7 15.0" rot="0.0 -90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wall3_pillar" />
+					<voxbox name="wall" pos="113.7 0.7 12.10001" rot="0.0 -90.0 0.0" size="26 26 4" brush="MOD/assets/vox/militarybase.vox" object="wall3">
+						<vox pos="0.3 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support">
+							<voxbox pos="0.0 0.5 0.1" rot="0.0 0.0 0.0" size="52 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" />
+							<voxbox pos="0.0 0.3 -0.4" rot="90.0 0.0 0.0" size="52 3 3" brush="MOD/assets/vox/militarybase.vox" object="barbed wire" offset="20" />
+						</vox>
+						<vox pos="2.5 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+						<vox pos="5.4 2.75 -0.1" rot="45.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="wire support" />
+					</voxbox>
+
+					<vox pos="79.8 0.7 19.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
+						<vox pos="0.05 6.0 0.05" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="flagpole">
+							<vox pos="0.1 2.2 -1.3" rot="0.0 90.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+</vox>
+</vox>
+
+					<vox pos="79.8 0.7 19.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
+						<vox pos="1.5 3.1 -2.4" rot="0.0 160.0 0.0" file="MOD/assets/warzone/CCTV.vox" />
+</vox>
+
+					<vox pos="89.4 3.3 76.0" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1">
+						<vox pos="0.05 6.0 -0.05" rot="0.0 -180.0 0.0" file="MOD/assets/vox/militarybase.vox" object="flagpole">
+							<vox pos="0.1 2.2 -1.3" rot="0.0 90.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+</vox>
+</vox>
+
+					<vox pos="110.3 0.7 -2.6" rot="0.0 -180.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
+						<vox pos="-0.05 6.0 0.05" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybase.vox" object="flagpole">
+							<vox pos="0.1 2.2 -1.3" rot="0.0 90.0 0.0" texture="8 0.5" prop="true" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+</vox>
+</vox>
+
+					<vox pos="110.3 0.7 -2.6" rot="0.0 -180.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
+						<vox pos="2.25 3.1 -1.8" rot="0.0 120.0 0.0" file="MOD/assets/warzone/CCTV.vox" />
+</vox>
+
+					<voxbox tags="invisible unbreakable joint_anchor" pos="79.7500 9.9500 19.8000" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="79.7500 8.9500 19.8000" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="89.3500 12.5500 76.1000" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="89.3500 11.5500 76.1000" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="110.2500 9.9500 -2.5000" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="110.2500 8.9500 -2.5000" size="1 1 1" color="0.3 0.3 0.3" />
 					<vox pos="79.8 0.7 19.7" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="tower1_2">
 						<vox pos="0.05 6.0 0.05" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybase.vox" object="flagpole">
 							<joint pos="0.05 3.3 -0.2" rot="0.0 0.0 0.0" />
@@ -197,6 +512,11 @@
 						<instance pos="-4.0 0.0 0.0" rot="0.0 -90.0 0" file="MOD/prefabs/assets/hesco.xml" />
 					</group>
 					<group name="hescos" pos="77.3 0.7 5.4">
+						<vox pos="-1.7 0.5 -24.8" rot="0.0 0.0 0.0" prop="true" file="MOD/assets/vox/crate_10.vox" />
+						<vox pos="-0.9 0.5 -25.0" rot="0.0 180.0 0.0" prop="true" file="MOD/assets/vox/crate_10.vox" />
+						<vox pos="-1.3 1.0 -24.7" rot="180.0 91.0 0.0" texture="8 .35" blendtexture="3 .2" prop="true" file="MOD/assets/vox/mudbrick_buildings.vox" object="platelong" />
+						<vox pos="-1.2 0.1 -22.9" rot="0.0 -90.0 0.0" density="4" file="MOD/assets/vox/sandbags.vox" object="sandbags2" />
+
 						<instance pos="0.0 0.0 -13.5" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
 						<instance pos="0.0 0.0 -11.79999" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
 						<instance pos="0.0 0.0 -10.20001" rot="0.0 -180.0 0.0" file="MOD/prefabs/assets/hesco.xml" />
@@ -250,6 +570,34 @@
 				</group>
 				<group name="gate">
 					<voxbox name="track" pos="81.7 0.7 13.4" rot="0.0 90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
+						<voxbox name="gate" pos="7.1 0.2 0.0" rot="0.0 0.0 0.0" prop="true" size="80 35 7" brush="MOD/assets/vox/militarybase.vox" object="gate">
+							<vox pos="4.0 1.9 -0.1" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+						</voxbox>
+</voxbox>
+
+					<voxbox name="track" pos="82.39999 0.7 -16.6" rot="0.0 -90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
+						<voxbox name="gate" pos="0.0 0.2 0.0" rot="0.0 0.0 0.0" prop="true" size="80 35 7" brush="MOD/assets/vox/militarybase.vox" object="gate">
+							<vox pos="4.0 1.9 0.8" rot="0.0 0.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+						</voxbox>
+</voxbox>
+
+					<voxbox name="track" pos="114.59999 0.7 13.4" rot="0.0 90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
+						<voxbox name="gate" pos="7.1 0.2 0.0" rot="0.0 0.0 0.0" prop="true" size="80 35 7" brush="MOD/assets/vox/militarybase.vox" object="gate">
+							<vox pos="4.0 1.9 -0.1" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+						</voxbox>
+</voxbox>
+
+					<voxbox name="track" pos="115.29998 0.7 -16.60001" rot="0.0 -90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
+						<voxbox name="gate" pos="0.0 0.2 0.0" rot="0.0 0.0 0.0" prop="true" size="80 35 7" brush="MOD/assets/vox/militarybase.vox" object="gate">
+							<vox pos="4.0 1.9 -0.1" rot="0.0 180.0 0.0" texture="8 0.5" file="MOD/assets/vox/militarybase.vox" object="alashyan_flag" />
+						</voxbox>
+</voxbox>
+
+					<voxbox tags="invisible unbreakable joint_anchor" pos="82.2500 1.0500 -16.5500" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="81.7500 1.0500 -16.5500" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="115.1500 1.0500 -16.5500" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox tags="invisible unbreakable joint_anchor" pos="114.6500 1.0500 -16.5500" size="1 1 1" color="0.3 0.3 0.3" />
+					<voxbox name="track" pos="81.7 0.7 13.4" rot="0.0 90.0 0.0" size="150 4 7" brush="MOD/assets/vox/militarybase.vox" object="gate_track">
 						<joint pos="0.1 0.4 0.1" rot="0.0 90.0 0.0" type="prismatic" />
 						<joint pos="0.1 0.4 0.6" rot="0.0 90.0 0.0" type="prismatic" />
 					</voxbox>
@@ -283,6 +631,10 @@
 						<group name="Building1" pos="4.2 -2.5 -18.4" prop0="texture=13 0.5">
 							<group name="props" pos="-2.5 -3.2 25.2" rot="0.0 -90.0 0.0">
 								<group name="Office" pos="-22.1 3.6 2.9">
+									<voxbox tags="invisible unbreakable joint_anchor" pos="-10.9000 2.6000 -0.4000" size="1 1 1" color="0.3 0.3 0.3" />
+									<voxbox tags="invisible unbreakable joint_anchor" pos="-10.9000 2.6000 4.7000" size="1 1 1" color="0.3 0.3 0.3" />
+									<voxbox tags="invisible unbreakable joint_anchor" pos="1.6000 2.6000 1.8000" size="1 1 1" color="0.3 0.3 0.3" />
+									<voxbox tags="invisible unbreakable joint_anchor" pos="-6.2000 2.6000 4.7000" size="1 1 1" color="0.3 0.3 0.3" />
 									<vox name="file cabinet" pos="-3.65004 -0.00001 6.39999" rot="0.0 -180.0 0.0" texture="7 0.75" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet">
 										<vox name="drawer" pos="-0.0 0.1 0.1" texture="7 0.75" prop="false" file="MOD/main/General/furniture collection/office_furniture.vox" object="file cabinet drawer">
 											<joint pos="0.0 0.0 -0.5" type="prismatic" limits="-0.3 0.5" />
@@ -399,6 +751,14 @@
 							</group>
 						</group>
 						<group name="Bunker" pos="-1.4 -8.9 0.0" prop0="texture=7 0.5">
+							<voxbox tags="invisible unbreakable joint_anchor" pos="0.4000 2.6000 -26.4500" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="0.5000 2.6000 -26.4500" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="4.5500 2.7000 -28.1000" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="4.5500 2.7000 -28.0000" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="0.5000 2.6000 -18.8500" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="0.4000 2.6000 -18.8500" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="-9.5000 2.7000 20.3500" size="1 1 1" color="0.3 0.3 0.3" />
+							<voxbox tags="invisible unbreakable joint_anchor" pos="-9.4000 2.7000 20.3500" size="1 1 1" color="0.3 0.3 0.3" />
 							<body name="generator" tags="fuelLevel=0 fuelLevelMAX=40 nofuel" pos="-2.7 1.3 -24.5" dynamic="true">
 								<vox pos="1.0 -0.9 -0.9" rot="0.0 90.0 0.0" file="MOD/assets/vox/militarybunker.vox" object="generator_closed">
 									<vox pos="-1.3 0.7 -0.1" rot="0.0 0.0 0.0" file="MOD/assets/vox/militarybunker.vox" object="generator_intake" />

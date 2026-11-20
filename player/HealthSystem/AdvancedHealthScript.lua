@@ -610,7 +610,10 @@ function client.tick(dt)
 			QueriedDamage = tonumber(GetTagValue(Hitbox, "QueriedDamage")) / 4
 		end
 
-		Pen = tonumber(GetTagValue(Hitbox, "S"))
+		-- (2026-11-20, original-mod gap, seen on an MP client) a hitbox without an "S" tag yet (it is reset to 0 further
+		-- down each frame, but read here first) gave nil and the damage line errored ("arithmetic on global 'Pen'");
+		-- 0 is the script's own default
+		Pen = tonumber(GetTagValue(Hitbox, "S")) or 0
 		CurrentBodypart = GetTagValue(Hitbox, "localhitbox")
 		TotalHealth = TotalHealth + Health[CurrentBodypart]["CurrentHealth"]
 		CHP = tonumber(Health[CurrentBodypart]["CurrentHealth"]) -- health for bodypart

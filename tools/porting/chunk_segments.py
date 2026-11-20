@@ -19,7 +19,8 @@ How a file is cut (every piece keeps its ancestor chain with all attributes, so 
    ancestors below the segment's group are only <group> / <script> elements without tags props other than "veg".
    A <script> ancestor becomes a <group> with the script's pos / rot in the lifted copy (the script itself stays in
    the rest of the file). These go into chunks of at most STATIC_CELLS box cells / STATIC_SHAPES shapes, spawned
-   first, so whatever is jointed to them later finds them in place.
+   first. Nothing is lifted out of a group / script that holds a joint or rope: a joint only attaches to shapes of
+   its own Spawn call (2026-11-20: the gas station's tank cover came loose; the first version assumed otherwise).
 2. The rest is cut into whole subtrees: a <group> heavier than REST_WEIGHT is opened into its children unless it
    holds a joint or a rope (those attach to whatever touches them at spawn, so they stay with their neighbours);
    bodies, vehicles, scripts, instances and everything else stay whole. Document order is kept; the last chunk is
@@ -134,13 +135,38 @@ def cut(path):
     # 1. lift static shapes
     lifted = []
 
+    # (2026-11-20 fix) a joint / rope attaches only to shapes spawned in the SAME Spawn call: the gas station's tank
+    # cover (RoadSegmentH, hinge on a static shape in its group) came loose when that static shape was lifted into an
+    # earlier chunk. A group / script holding a joint or rope anywhere below keeps its static shapes (no lifting in
+    # it); step 2 keeps such groups whole as before.
+    def joint_scope(el):
+        """A joint / rope in el itself or inside its non-group children (bodies, shapes, ...), not in a nested group /
+        script: el is the group that holds the jointed object and the shapes it is meant to attach to."""
+        stack = list(el)
+        while stack:
+            e = stack.pop()
+            if e.tag in ("joint", "rope"):
+                return True
+            if e.tag not in ("group", "script"):
+                stack.extend(list(e))
+        return False
+
+    def joints_only(g):
+        """a group holding nothing but joints / ropes (RoadSegmentF's pipes: "lower joints" next to the pipe groups)"""
+        kids = list(g)
+        return g.tag == "group" and kids and all(
+            k.tag in ("joint", "rope") or "joint_anchor" in (k.get("tags") or "") for k in kids)   # anchors: joint_anchors.py
+
     def walk(el, chain, liftable):
+        liftable_here = liftable and not joint_scope(el) and not any(joints_only(c) for c in el)
         for c in list(el):
-            if c.tag in SHAPES and liftable and len(list(c)) == 0 and tags_ok(c):
+            if c.tag in SHAPES and liftable_here and len(list(c)) == 0 and tags_ok(c):
                 lifted.append((chain + [el], c))
                 el.remove(c)
             elif c.tag in ("group", "script"):
-                walk(c, chain + [el], liftable and tags_ok(c))
+                # below a group holding a joint nothing is lifted either (a door's hinge attaches to the frame in
+                # its "doorframe" subgroup)
+                walk(c, chain + [el], liftable_here and tags_ok(c))
 
     for top in tops:
         walk(top, [], True)

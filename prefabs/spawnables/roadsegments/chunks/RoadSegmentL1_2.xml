@@ -52,21 +52,25 @@
 				</group>
 				<group name="flood lights" pos="26.49998 1.5 -1.2" rot="0.0 0.0 0.0">
 					<group name="big flood light" pos="-6.48 -1.3 13.9" rot="0.0 -60.0 0.0">
+						<voxbox tags="invisible unbreakable joint_anchor" pos="0.4386 1.9700 -0.6339" size="1 1 1" color="0.3 0.3 0.3" />
 						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
 							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
 						</vox>
 					</group>
 					<group name="big flood light" pos="-29.08 -1.3 -0.1" rot="0.0 130.0 0.0">
+						<voxbox tags="invisible unbreakable joint_anchor" pos="0.4386 1.9700 -0.6339" size="1 1 1" color="0.3 0.3 0.3" />
 						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
 							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
 						</vox>
 					</group>
 					<group name="big flood light" pos="-6.98 -1.3 36.0" rot="0.0 -50.0 0.0">
+						<voxbox tags="invisible unbreakable joint_anchor" pos="0.4386 1.9700 -0.6339" size="1 1 1" color="0.3 0.3 0.3" />
 						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
 							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
 						</vox>
 					</group>
 					<group name="big flood light" pos="-29.67324 -1.3 37.61583" rot="0.0 60.0 0.0">
+						<voxbox tags="invisible unbreakable joint_anchor" pos="0.4386 1.9700 -0.6339" size="1 1 1" color="0.3 0.3 0.3" />
 						<vox name="electrical box door" pos="0.48 1.5 -0.9" rot="0.0 110.0 0.0" texture="8 0.5" prop="true" file="MOD/main/General/lighting/flood_lights.vox" object="electrical box (door)">
 							<joint pos="-0.3 0.52 -0.1" rot="-90.0 0.0 0.0" type="hinge" collide="true" />
 						</vox>

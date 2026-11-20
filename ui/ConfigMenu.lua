@@ -164,6 +164,80 @@ function TickPerfTestRequest()
     if req == "" then return end
     SetString("level.debug.perftest_request", "")
     if req == "delete" then server.perfTestDelete() SetString("level.debug.perftest_result", "deleted") return end
+    -- (2026-11-20) "jointcheck:<path>|<path>|...": spawns the files one Spawn call each (like GenerateRoad's chunks)
+    -- 400 m above the host, counts their joints / ropes and how many are attached to fewer than 2 shapes, deletes
+    -- everything spawned (scripts too, before they start). Compare a segment file whole vs its chunks.
+    local jointList = req:match("^jointcheck:(.+)$")
+    if jointList then
+        local base = VecAdd(GetPlayerTransform().pos, Vec(0, 400, 0))
+        local all, joints, loose, kinds, idx = {}, 0, 0, {}, {}
+        for path in string.gmatch(jointList, "[^|]+") do
+            for _, e in ipairs(Spawn(path, Transform(base), true)) do all[#all + 1] = e end
+        end
+        for _, e in ipairs(all) do
+            if GetEntityType(e) == "joint" then
+                joints = joints + 1
+                local n = #GetJointShapes(e)
+                if n < 2 then
+                    loose = loose + 1
+                    local k = GetJointType(e) .. n
+                    kinds[k] = (kinds[k] or 0) + 1
+                    idx[#idx + 1] = joints
+                end
+            end
+        end
+        local kl = {}
+        for k, v in pairs(kinds) do kl[#kl + 1] = k .. "=" .. v end
+        table.sort(kl)
+        for i = #all, 1, -1 do if IsHandleValid(all[i]) then Delete(all[i]) end end
+        SetString("level.debug.perftest_result", string.format("%.2f jointcheck: %d joints, %d attached to < 2 shapes (%s) #%s",
+            GetTime(), joints, loose, table.concat(kl, " "), table.concat(idx, ",")))
+        return
+    end
+    -- (2026-11-20) "ropeends:<path>#<i>,<i>,...": spawns the file 400 m above the host, and for the listed joint
+    -- indices (spawn order, ropes with one shape attached) says which end lies in the attached shape's bounds
+    -- ("first" / "last"), i.e. the other end is the loose one (tools/porting/joint_anchors.py rope_ends)
+    local rePath, reList = req:match("^ropeends:([^#]+)#(.+)$")
+    if rePath then
+        local base = VecAdd(GetPlayerTransform().pos, Vec(0, 400, 0))
+        local all, js = Spawn(rePath, Transform(base), true), {}
+        for _, e in ipairs(all) do if GetEntityType(e) == "joint" then js[#js + 1] = e end end
+        local out = {}
+        for s in string.gmatch(reList, "%d+") do
+            local j = js[tonumber(s)]
+            local res = "?"
+            if j and GetJointType(j) == "rope" then
+                local shapes = GetJointShapes(j)
+                local n = GetRopeNumberOfPoints(j)
+                -- point indices: 0-based or 1-based is not documented; take whichever answers
+                local a = GetRopePointPosition(j, 0) or GetRopePointPosition(j, 1)
+                local b = GetRopePointPosition(j, n - 1) or GetRopePointPosition(j, n)
+                local function inside(p, sh)
+                    local mi, ma = GetShapeBounds(sh)
+                    local m = 0.15
+                    return p[1] >= mi[1] - m and p[1] <= ma[1] + m and p[2] >= mi[2] - m and p[2] <= ma[2] + m
+                        and p[3] >= mi[3] - m and p[3] <= ma[3] + m
+                end
+                if a and b then
+                    local fa, fb = false, false
+                    for _, sh in ipairs(shapes) do fa = fa or inside(a, sh) fb = fb or inside(b, sh) end
+                    res = (fa and "first" or "") .. (fb and "last" or "") .. "/" .. #shapes
+                elseif shapes[1] then
+                    -- no rope points right after the spawn: the attached shape's bounds relative to the spawn point
+                    -- instead (joint_anchors.py compares them with the rope's <location> ends)
+                    local mi, ma = GetShapeBounds(shapes[1])
+                    mi, ma = VecSub(mi, base), VecSub(ma, base)
+                    res = string.format("%.2f,%.2f,%.2f,%.2f,%.2f,%.2f", mi[1], mi[2], mi[3], ma[1], ma[2], ma[3])
+                else
+                    res = "noshape"
+                end
+            end
+            out[#out + 1] = s .. "=" .. res
+        end
+        for i = #all, 1, -1 do if IsHandleValid(all[i]) then Delete(all[i]) end end
+        SetString("level.debug.perftest_result", string.format("%.2f ropeends: %s", GetTime(), table.concat(out, " ")))
+        return
+    end
     -- (2026-11-17) "fileground:<prefab path>": on the ground 15 m in front of the host, facing the same way (vehicles)
     local groundPath = req:match("^fileground:(.+)$")
     if groundPath then

@@ -374,6 +374,19 @@ Behaviour changes decided by the user:
   inventory 8 times per frame even when nobody held it. Now the scan is skipped while nothing is in flight and no
   new shot was fired, and the inventory check is read once per frame. No behaviour change intended; measured ~2 ms
   per frame with no npcs. Details: [PERFORMANCE](PERFORMANCE.md) "Idle weapons".
+* Loose jointed objects on road segments (2026-11-20, our bug since the 2026-11-14/15/17 performance splits; user
+  report: the gas station's fuel tank cover could be carried away). A joint / rope only attaches to shapes of its
+  own Spawn call; the splits moved partners into separately spawned pieces / chunks. Measured per segment with the
+  debug hook "jointcheck:" (ui/ConfigMenu.lua) against the original single spawn (file + parts + decor): 286 extra
+  loose joints in B1, F, H (chunks), L1, L2, M5, M6, M7 (doors, gates, signs, flood lights, cables, pipes, the
+  tank cover). Fixed: 319 hidden 1-voxel static anchors at joints whose static partner moved
+  (tools/porting/joint_anchors.py), 27 parts put back into B1 / F / L2 where a moving partner moved
+  (tools/porting/merge_joint_parts.py, tools/porting/parts_merged.txt), chunk_segments.py no longer lifts static
+  shapes out of a group holding joints. After: every segment's loose joints equal the original's, whole and chunked.
+* AdvancedHealthScript "attempt to perform arithmetic on global 'Pen'" (2026-11-20, original-mod gap, seen on an MP
+  client): a hitbox without an "S" tag yet gave nil; now 0, the script's own default.
+* Release build (2026-11-20, user): the debug probe include (lib/GcProbe.lua) and level lines loading MOD/dev/ scripts
+  are dropped from the release copy (tools/porting/make_release.py).
 * AS350 rockets on RMB (2026-11-17, user request): the pilot no longer leans out of the helicopter on the drive-by
   key (default RMB, the rocket key); ShootFromCar.lua skips the driver of vehicles tagged `nodriveby_driver` (all
   AS350 prefabs). Passengers still lean out. Verified in local MP.

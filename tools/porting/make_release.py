@@ -9,6 +9,7 @@ default Documents/Teardown/mods/Mors Longa Revival (Release); upload that one fr
 * Left out: EXCLUDE_DIRS / EXCLUDE_FILES / EXCLUDE_EXT below (git, tools, docs, dev/, dev notes, editor files).
 * info.txt: the repo's, with " (dev)" taken off the name; refuses to build while it still says AUTHOR_NAME.
 * levels/*.xml: lines loading a script from MOD/dev/ (left out) are dropped from the release copy.
+* *.lua: "#include ... GcProbe.lua" lines (debug probe) are dropped from the release copy.
 * id.txt: the Workshop item the upload updates. The repo's has no id (the original mod's item 2906369984 was
   removed, 2026-11-13: an upload would have tried to update Overdrive Studios' item). After the first upload the
   game writes the new item's id into the release folder's id.txt: a rebuild keeps that file.
@@ -89,6 +90,19 @@ def main():
         if kept != text:
             open(p, "w", encoding="utf-8", newline="\n").write(kept)
             print("dropped MOD/dev/ script lines from %s" % rel)
+    # (2026-11-20, user) debug-only script probes are not shipped: "#include ... GcProbe.lua" lines are dropped from the
+    # release copy (lib/GcProbe.lua stays as a file; GCP_LABEL assignments are plain globals, unused without it)
+    stripped = 0
+    for rel in [r for _, r in files if r.endswith(".lua")]:
+        p = os.path.join(dest, rel)
+        text = open(p, encoding="utf-8", errors="surrogateescape").read()
+        if "GcProbe.lua" not in text or rel.replace("\\", "/").endswith("lib/GcProbe.lua"):
+            continue
+        kept = "\n".join(l for l in text.split("\n") if not (l.lstrip().startswith("#include") and "GcProbe.lua" in l))
+        if kept != text:
+            open(p, "w", encoding="utf-8", errors="surrogateescape", newline="").write(kept)
+            stripped += 1
+    print("debug probe include dropped from %d scripts" % stripped)
     if keep_id is None:
         shutil.copy2(os.path.join(REPO, "id.txt"), os.path.join(dest, "id.txt"))
     open(os.path.join(dest, MARKER), "w").write("made by tools/porting/make_release.py; rebuilt (emptied) on each run\n")

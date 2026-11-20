@@ -111,6 +111,7 @@
 						</group>
 					</body>
 					<group name="Nav Computers">
+						<voxbox tags="invisible unbreakable joint_anchor" pos="-6.2006 -0.1500 0.2719" size="1 1 1" color="0.3 0.3 0.3" />
 						<vox pos="-6.0 -0.7 -0.2" rot="0.0 -4.0 0.0" prop="true" file="MOD/assets/vox/BT_train_interior/lee_filing_cabinet.vox">
 							<rope pos="-0.4 0.1 -0.6" maxstretch="0.05">
 								<location/>
