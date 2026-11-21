@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "main_menu"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "menu_main.lua"
 

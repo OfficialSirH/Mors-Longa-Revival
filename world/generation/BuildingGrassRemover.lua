@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "BuildingGrassRemover"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: removes grass inside buildings.
 function server.tick()

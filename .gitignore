@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 tools/relocate/out/
+
+# Engine / API notes for the Teardown MCP project (read by that session, not part of the mod)
+TEARDOWN_ENGINE_NOTES.md

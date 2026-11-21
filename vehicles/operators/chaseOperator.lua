@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "chaseOperator"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2 operator) SERVER only: AI driving (DriveVehicle), damage, explosions, sounds, siren/lights. Targets the
 -- nearest living player; helpers in vehicleOperatorCoop.lua. Converted by tools/porting/history/convert_operators.py.

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "WaterMover"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: water volumes follow their sources; removed when far from the NEAREST player.
 WATERPROPERTIES = {

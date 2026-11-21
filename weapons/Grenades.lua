@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Grenades"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 --[[
 (v2) removed the include of npcs/GoreNPCs/scripts/systems/goreai_grenades.lua: nothing in it is used here and its

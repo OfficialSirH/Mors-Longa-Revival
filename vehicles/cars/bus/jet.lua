@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "jet"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) JetBus jet (Shift boost). SERVER: throttle from the DRIVER (idle 0.1 while driving, 1 with Shift held; v1: the
 -- host whenever in the bus), push, turbine, smoke, engine loop, damage / explosion. CLIENT: the throttle bar for

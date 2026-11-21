@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Heli"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "common.lua"
 #include "Inputs.lua"

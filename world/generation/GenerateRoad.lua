@@ -2,6 +2,8 @@
 #include "script/include/player.lua"
 -- (2026-11-17, DEBUG) collector probe / skip switch, off unless level.debug.* is set (lib/GcProbe.lua)
 #include "../../lib/GcProbe.lua"
+DL_LABEL = "GenerateRoad"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 GCP_LABEL = "generateroad"
 -- (v2) server: road generation, world shift (moves ALL players), distance; registry keys read by clients are synced.
 -- (v2, Phase 3) Co-op: the FURTHEST living player drives generation, the world shift and the distance counter
@@ -284,6 +286,7 @@ function ReturnToShadowVolume()
 				if GetBool('Level.Debug')then DebugPrint(GetTime().." player "..p.." in vehicle, vehicle should be teleported with player")end
 			end
 		end
+		if DeleteLogNote then DeleteLogNote("WORLDSHIFT" .. #bodies) end -- (2026-11-20) crash breadcrumb (lib/DeleteLog.lua)
 		ShiftDecorQueue(shiftDist)   -- decor still waiting to spawn moves with the world
 		ShiftResync_Start()
 		SetFloat("level.debug.spawned.world_shift", GetTime()) -- (2026-11-14) debug menu "spawn activity" readout
@@ -413,8 +416,8 @@ end
 --- segment's scripts and world objects (from Spawn's result); once none of its bodies / shapes / vehicles / triggers
 --- is left, delete its scripts. Works however the scripts are nested in the prefab xml.
 SegmentGroups = {}
-function RegisterSegmentScripts(entities)
-	local group = { scripts = {}, anchors = {} }
+function RegisterSegmentScripts(entities, name)
+	local group = { scripts = {}, anchors = {}, name = name }   -- name: crash breadcrumb (lib/DeleteLog.lua), 2026-11-20
 	for _, e in ipairs(entities or {}) do
 		local t = GetEntityType(e)
 		if t == "script" then
@@ -436,6 +439,9 @@ function TickSegmentScripts()
 			if IsHandleValid(a) then alive = true break end
 		end
 		if not alive then
+			if DeleteLogNote then -- (2026-11-20) crash breadcrumb: which segment's scripts go now
+				DeleteLogNote("SEGSCRIPTS-" .. tostring(group.name or "?") .. "-" .. #group.scripts .. "-" .. tostring(group.scripts[1]))
+			end
 			for _, s in ipairs(group.scripts) do
 				if IsHandleValid(s) then Delete(s) end
 			end
@@ -530,7 +536,7 @@ function SpawnSegmentFile(d, entities)
 		end
 	end
 	if d.opts.shop then SetBool("inventory.refreshshop", true, true) end
-	RegisterSegmentScripts(entities) -- (v2 perf) see TickSegmentScripts
+	RegisterSegmentScripts(entities, string.match(d.name or d.xml or "?", "([^/]+)%.xml$") or d.name) -- (v2 perf) see TickSegmentScripts
 	ProcessEnemySpawns(entities, spawnCountOverride)
 	RoadgenPending = true -- the "segment spawned" pulse, raised by the next server.update
 end

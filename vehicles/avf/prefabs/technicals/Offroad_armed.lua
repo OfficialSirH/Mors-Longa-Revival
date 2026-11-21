@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Offroad_armed"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2, 2026-11-13) armed offroads (offroad_GMG / GPMG / NSV / m2.xml; only the GMG one is reached in play: road spawn

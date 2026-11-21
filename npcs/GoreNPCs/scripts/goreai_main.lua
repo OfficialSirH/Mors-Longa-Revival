@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "goreai_main"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../lib/DeleteLog.lua"
 --[[
 #include "../../../lib/Config.lua"
 #include "../../Blood/Blood.lua"

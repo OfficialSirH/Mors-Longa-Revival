@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Gamerule"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 --[[
 #include "../lib/Config.lua"

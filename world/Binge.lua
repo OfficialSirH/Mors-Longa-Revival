@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Binge"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: shrine; any player can pray (interact); its 2D sounds play on every client.
 function server.init()

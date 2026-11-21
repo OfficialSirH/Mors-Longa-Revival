@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "ingame_settings"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "menu_main.lua"
 

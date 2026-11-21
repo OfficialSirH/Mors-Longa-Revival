@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "masterScriptRemover"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: deletes scripts queued for removal by other scripts (level.script_remover.queue).
 function server.tick(dt)
@@ -15,6 +17,7 @@ function handleDeletionQueue()
 		local key = "level.script_remover.queue."..i
 		local handle = GetInt(key)
 		if handle ~= 0 and IsHandleValid(handle) and GetEntityType(handle) == "script" then
+			if DeleteLogNote then DeleteLogNote("SCRIPTDEL-" .. GetString(key .. ".label") .. "-" .. handle) end -- (2026-11-20)
 			Delete(handle)
 		end
 		ClearKey(key)

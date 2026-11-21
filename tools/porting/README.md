@@ -81,6 +81,10 @@ is the only one of this table still run (from `tools/porting/`).
   in the same-file functions they call (level searches, ListKeys, queries, Spawn, string splits, registry
   reads / writes, loops), times the number of XMLs that reference the script. A reading list; real times come
   from Teardown's profiler (SHIFT+ALT+F3). Debug call profiles in game: `lib/CallProfiler.lua`.
+* `add_delete_log.py [--dry-run] [--remove]` – (2026-11-20) puts the crash-breadcrumb log `lib/DeleteLog.lua` into
+  every `#version 2` script that deletes entities or changes the scene's structure (its own text or its includes call
+  `Delete(`, `Spawn(`, `MakeHole(`, ... : the list in the tool); `--remove` takes it
+  out again. Re-runnable. Reading the lines: docs/STATUS.md "Engine crash in physics".
 * `rock_variant.py hollow|half [src] [out]` – hollow / half-resolution copies of a TDCZ .vox; `half` made
   `rock1_low.vox` (option "Low Detail Rocks"; even-grid blocks, checked against the reduced whole rock).
 * `perf_pieces.py [Segment]` – dev: cuts a segment into its content groups (`dev/perftest/`) for the debug menu's

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "AK74"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "gunfunctions.lua"
 #include "gunperks.lua"

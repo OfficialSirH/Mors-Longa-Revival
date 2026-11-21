@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "mine"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: mines go off when any player is within 1 m; explosion sounds on every client
 function server.init()

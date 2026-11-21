@@ -16,5 +16,7 @@ function ScriptSelfDelete()
 	ScriptSelfDeleted = true
 	local n = GetInt("level.script_remover.queue.count") + 1
 	SetInt("level.script_remover.queue." .. n, id)
+	-- (2026-11-20) crash breadcrumb: who asked (lib/masterScriptRemover.lua logs it with lib/DeleteLog.lua)
+	SetString("level.script_remover.queue." .. n .. ".label", DL_LABEL or GCP_LABEL or SSD_LABEL or "script")
 	SetInt("level.script_remover.queue.count", n)
 end

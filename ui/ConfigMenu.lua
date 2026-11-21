@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "ConfigMenu"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../lib/Config.lua"
 #include "ShiftProbe.lua"
@@ -164,6 +166,13 @@ function TickPerfTestRequest()
     if req == "" then return end
     SetString("level.debug.perftest_request", "")
     if req == "delete" then server.perfTestDelete() SetString("level.debug.perftest_result", "deleted") return end
+    -- (2026-11-20) "travel:<km>": the debug menu's Auto Travel for the host (0 stops it), for long crash-hunt runs
+    local km = tonumber(req:match("^travel:([%d%.]+)$") or "")
+    if km then
+        server.configTravel(1, km * 1000)
+        SetString("level.debug.perftest_result", string.format("%.2f travel %.1f km", GetTime(), km))
+        return
+    end
     -- (2026-11-20) "jointcheck:<path>|<path>|...": spawns the files one Spawn call each (like GenerateRoad's chunks)
     -- 400 m above the host, counts their joints / ropes and how many are attached to fewer than 2 shapes, deletes
     -- everything spawned (scripts too, before they start). Compare a segment file whole vs its chunks.

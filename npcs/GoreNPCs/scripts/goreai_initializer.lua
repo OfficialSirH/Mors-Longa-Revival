@@ -1,8 +1,11 @@
 #version 2
+DL_LABEL = "goreai_initializer"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../lib/DeleteLog.lua"
 --[[
 #include "../../../lib/TDSU/tdsu.lua"
 #include "./systems/goreai_API_nav.lua"
 #include "../../../lib/masterScriptRemoverAPI.lua"
+SSD_LABEL = "goreai_initializer"  -- (2026-11-20) names this script in the crash breadcrumbs (lib/ScriptSelfDelete.lua)
 #include "../../../lib/ScriptSelfDelete.lua"
 ]]
 

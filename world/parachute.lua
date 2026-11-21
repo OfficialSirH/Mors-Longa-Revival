@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "parachute"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: supply-drop parachute drag; removed near the ground.
 function server.init()

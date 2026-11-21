@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "t72A"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2, 2026-11-13) T-72A, desert (road spawn VehicleM14): main gun on our own mounted-gun script with AVF's shells

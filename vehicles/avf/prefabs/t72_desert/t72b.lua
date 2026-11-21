@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "t72b"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) T-72B family, desert (spawn menu "T-72" = T72B3_mod_2016): main gun on our own mounted-gun script with AVF's shells ported (scripts/avf; v1 included

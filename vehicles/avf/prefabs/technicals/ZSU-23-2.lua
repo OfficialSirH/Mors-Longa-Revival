@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "ZSU-23-2"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) ZU-23-2 (technical_ZU_23.xml = spawn menu "AAF Pickup Truck ZU-23" (added 2026-11-12); ZIL131_ZSU23.xml = spawn menu "AAF Truck Technical"): runs on our own

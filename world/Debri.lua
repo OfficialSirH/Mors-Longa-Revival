@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Debri"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: burning debris thrown from wrecked cars, explodes after a while.
 function server.init()

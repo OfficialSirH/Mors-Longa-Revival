@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "HordePlaceTool"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) horde place tool, per player (client: aim, money, menu; server: preview bodies, spawning).
 #include "../../lib/Settings.lua"

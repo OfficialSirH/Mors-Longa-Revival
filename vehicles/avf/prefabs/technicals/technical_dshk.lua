@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "technical_dshk"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) DShK on the AAF Pickup Truck technical (technical_DSHK.xml + copies in roadblock3, test.xml): runs on our own mounted-gun script (vehicles/MountedGun.lua) instead of the external AVF mod

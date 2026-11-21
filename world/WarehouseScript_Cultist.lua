@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "WarehouseScript_Cultist"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: cultist warehouse; the boss ambush triggers when ANY player enters.
 #include "../lib/masterScriptRemoverAPI.lua"

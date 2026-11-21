@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "grenade"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: RPG-7 rocket (player RPG and NPC RPGs): thrust, fuse, explosion, fire; proximity fuse for ANY player.
 globalConfig = {

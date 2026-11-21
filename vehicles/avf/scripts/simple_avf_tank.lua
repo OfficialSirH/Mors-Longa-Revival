@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "simple_avf_tank"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../MountedGun.lua"
 -- (v2, 2026-11-13) AVF's "simple" config: no gun settings of its own, the gun is AVF's weapon type named by the gun

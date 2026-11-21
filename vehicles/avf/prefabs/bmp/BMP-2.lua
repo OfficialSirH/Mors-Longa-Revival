@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "BMP-2"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) BMP-2 (spawn menu "BMP-2"): main gun on our own mounted-gun script with AVF's shells ported (scripts/avf;

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "randomdelete"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: deletes/keeps tagged level entities once per generated road piece
 function server.tick()

@@ -517,3 +517,8 @@ Behaviour changes decided by the user:
 * God Mode blocks bleeding and fractures too (user OK 2026-11-15; v1 blocked only damage and healing):
   `AdvancedHealthScript.lua` clears both tags on the local hitboxes every tick in God Mode and doesn't set them
   (hits, falls; no bone-snap sound). Healing stays blocked in God Mode as in v1.
+* Crash breadcrumbs in the log (user OK 2026-11-20, "Yes, add the log"; widened 2026-11-21): scripts that delete or
+  change the scene's structure write one `Couldn't find sound bank .../DL/...ogg` line per callback with what they
+  deleted / spawned / changed into the game's log (also on clients), so a crash report shows the last frames. No
+  gameplay change; take it out again with `tools/porting/add_delete_log.py --remove` once the physics crash is found
+  (docs/STATUS.md "Engine crash in physics").

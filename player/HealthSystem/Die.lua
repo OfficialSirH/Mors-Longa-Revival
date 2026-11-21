@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Die"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: spawns the death ragdoll. Reads the v1 health system's registry flag, host only for now
 -- (per-player health is Phase 2).

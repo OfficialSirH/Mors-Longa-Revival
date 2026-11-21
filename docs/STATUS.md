@@ -127,6 +127,28 @@ MP-only (tested locally since 2026-11-14: the in-game mod editor runs a host and
   crash dump (newest 02:45, the SP driving crash), both logs simply stop, no Windows application error / display
   reset at that time. Unknown. Two more the same evening (18:2x, testing NPCs / vehicle events, ~7 min in): the
   host window closed (client log: "Disconnect from host"), again no dump, no log error, no Windows event.
+* **Engine crash in physics (open, 2026-11-20/21):** every Teardown crash dump since 2026-11-17 (SP 11-17 twice, MP
+  host 11-19 and 11-20, a friend's MP client 11-20) is an access violation inside the engine's physics step
+  (`PhysicsUpdate` -> `ShapeInterpTransform` -> 0x2dd27 for the host ones; the client one a different path in
+  `PhysicsUpdate`). The registers held text (inventory item names such as "P17-Drum"): the engine read a freed object
+  whose memory was reused. The 11-20 crashes ran a release without the debug probes (`make_release.py` strips them).
+  The exe is encrypted on disk, so the dumps cannot be disassembled.
+  **Breadcrumbs:** `lib/DeleteLog.lua` (in the 131 scripts that delete or change the scene's structure,
+  `tools/porting/add_delete_log.py`) writes one log line per callback with what that callback deleted, spawned or
+  changed, plus event lines (`WORLDSHIFT`, `SEGSCRIPTS-<segment>`, `SCRIPTDEL-<requester>`); format and codes in the
+  file. A crash report's `log.txt` ends with the last frames of every script, also on clients (the server's lines are
+  replicated). A mod script's `print()` never reaches the log (measured). Next: read those lines in the next real
+  crash report and compare two or three.
+  **Local hunt 2026-11-20/21 (MCP bridge, two-window MP test, debug auto-travel started with the ConfigMenu hook
+  `level.debug.perftest_request = "travel:<km>"`):** the test windows close without a dump (`teardown_modtest.exe`
+  writes none), at random times from ~30 s to 25 min, whatever was switched off; free RAM was often 100-500 MB (two
+  windows use 10-12 GB), so part of it may be the setup. Tried, each still crashing: joints deleted with their shapes,
+  the cleanup off (memory grew without bound), ShiftResync off, the original one-pass cleanup (one run clean 15 min,
+  the next crashed after 1 min), a bisect over 11-17 / 11-18 (single runs; changes that cannot run during auto-travel
+  also "crashed", so the results were luck). Direct repros that did NOT crash (host + client): deleting shapes / bodies
+  under ropes, hinges, ball joints and `jointExisting` joints, a car's shapes / joints / vehicle (also next to the
+  client), shapes of 400 bodies moved 200 m (same / next frame), 300 static shapes moved 1 mm then deleted (same /
+  next frame), a screen's shape, segment scripts. One run per build cannot tell a cause from luck here.
 * Log errors seen in that session (not crashes): all files that never existed in the original mod (checked against
   9dde6dd), not reorganization misses. Fixed 2026-11-15 ([CHANGES](CHANGES.md) "Sounds pointing at files that never
   existed"; pistol and MK36 NPCs now audible). "Script not found:" (empty) follows the engine's "Single player script

@@ -2,6 +2,8 @@
 #include "script/include/player.lua"
 -- (2026-11-17, DEBUG) collector probe, off unless level.debug.gc_* is set (lib/GcProbe.lua)
 #include "../lib/GcProbe.lua"
+DL_LABEL = "inventory"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 GCP_LABEL = "inventory"
 #include "inv-desc.lua"
 #include "weapon_wheel.lua"

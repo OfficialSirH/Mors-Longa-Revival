@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "AC130"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: supply plane flies over, drops crates when the NEAREST player is within 300 m, despawns.
 function server.init()

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "RandomVehicle"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "SpawnSlot.lua"
 -- (v2) server: spawns random vehicles at generated road locations.

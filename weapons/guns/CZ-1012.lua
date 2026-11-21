@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "CZ-1012"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "gunfunctions.lua"
 #include "gunperks.lua"

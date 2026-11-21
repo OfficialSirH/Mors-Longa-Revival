@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "SleepingRagdoll"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: sleeping NPC wakes when ANY player is near, standing still-ish and not crouching.
 sleeptypes = { "heavy", "light", "normal" }

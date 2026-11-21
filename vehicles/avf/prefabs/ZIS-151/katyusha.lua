@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "katyusha"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) Katyusha (ZIS-151_Katyusha.xml, spawn menu "Katyusha"): the BM-13 rocket launcher on our own mounted-gun

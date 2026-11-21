@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "RandomVehicleEnemy"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: timed enemy/civilian/refugee/helicopter vehicle spawns.
 -- Debug menu: ui/ConfigMenu.lua writes level.debug.vehicle_event (+ _x/_y/_z); handled in HandleDebugVehicleEvent.

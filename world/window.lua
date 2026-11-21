@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "window"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 -- (v2) the whole script was already commented out in the original
 --[[function init()
 end

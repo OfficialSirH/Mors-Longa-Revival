@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "tutMakeHoleAtLocation"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 -- (v2) server: MakeHole is server-only.
 function server.init()
 	locations = FindLocations('makeHole',true)

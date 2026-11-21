@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Cultist Spawner"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server. (2026-11-14, MP) The ambush comes for a random living player on foot (v1 / before: only the host,
 -- and only while the host was on foot); with nobody on foot it waits, as v1 waited for its one player.

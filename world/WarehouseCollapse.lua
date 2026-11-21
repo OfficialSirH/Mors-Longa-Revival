@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "WarehouseCollapse"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: warehouse roof may collapse when ANY player enters the trigger.
 function server.init()

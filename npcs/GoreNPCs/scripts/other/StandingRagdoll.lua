@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "StandingRagdoll"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: shop trader; looks at the nearest player; killing it halves the NEAREST player's money (their savegame, via ClientCall).
 function server.init()

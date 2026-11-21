@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Willys Jeep 50 Cal"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) M2 .50 cal on the Hummer With 50 Cal and the Willys in VehicleM7: runs on our own mounted-gun script (vehicles/MountedGun.lua) instead of the external AVF mod

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "tutRemoverTriggerWhenTrigger"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: a "tutTrigRemove" trigger is removed as soon as ANY player enters it (v1: the one player).
 function server.init()

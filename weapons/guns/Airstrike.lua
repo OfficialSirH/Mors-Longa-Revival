@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Airstrike"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 --[[
 #include ../../lib/Settings.lua

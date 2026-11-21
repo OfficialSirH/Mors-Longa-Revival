@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "ParkingSpot"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) Garage / parking spot (shop segment). ONE shared garage, saved in the host's savegame
 -- (savegame.mod.parkingSpot.*), run by the SERVER: saved vehicles are respawned at each new shop, any player's vehicle

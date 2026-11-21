@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "PerkMachine"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) Perk machine ($500 per perk; lever = "supercharge": buy all remaining perks at once).
 -- Money is per player (each player's own savegame, as in the inventory), so:

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "rocket"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- AS350 rocket (rocket_small.xml; also the Hind's rocket.xml), v2 port 2026-11-13 (hand-written; original: git
 -- 9dde6dd vehicles/aircraft/AS350/script/rocket.lua). Server: thrust, guidance (ConstrainOrientation: server.update only),

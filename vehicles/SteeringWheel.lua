@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "SteeringWheel"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../lib/DeleteLog.lua"
 -- (v2, Phase 4, hand-written) Steering wheels that turn with the vehicle's steering.
 --
 -- Usage (tools/porting/history/convert_steering.py does this): wrap the <vehicle> in

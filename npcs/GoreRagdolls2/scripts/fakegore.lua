@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "fakegore"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: vehicle crew ragdoll (neck motor; full ragdoll spawned when a body part breaks).
 LAYER_A = 1 -- Default

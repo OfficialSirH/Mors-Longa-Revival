@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Offroad_WMIK"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) WMIK Technical (offroad_WMIK_MILAN.xml, spawn menu "WMIK Technical"): MILAN on our own mounted-gun script with

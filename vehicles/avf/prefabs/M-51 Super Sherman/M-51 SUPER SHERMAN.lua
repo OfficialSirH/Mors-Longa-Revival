@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "M-51 SUPER SHERMAN"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) M-51 Super Sherman (spawn menu "M-51 Sherman"): main gun on our own mounted-gun script with AVF's shells ported (scripts/avf; v1 included

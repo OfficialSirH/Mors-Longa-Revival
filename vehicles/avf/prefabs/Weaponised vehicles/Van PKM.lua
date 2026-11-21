@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Van PKM"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2) PKM on the Van Modified: runs on our own mounted-gun script (vehicles/MountedGun.lua) instead of the external AVF mod

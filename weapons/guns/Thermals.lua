@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "Thermals"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../npcs/Blood/Blood.lua"
 

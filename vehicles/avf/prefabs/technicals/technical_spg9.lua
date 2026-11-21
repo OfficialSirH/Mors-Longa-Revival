@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "technical_spg9"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "../../../MountedGun.lua"
 -- (v2, 2026-11-13) SPG-9 technical (technical_SPG9.xml, road spawn VehicleM4): recoilless gun on our own mounted-gun

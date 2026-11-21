@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "gorefunctions"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../../../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 #include "UiHealthOverlay.lua"
 -- (v2, 2026-11-13; hand-converted from git 9dde6dd) "Gore Ragdolls 2" crew sitter (Sitters/*.xml, spawned by

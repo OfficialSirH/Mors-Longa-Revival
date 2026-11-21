@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "WaveHandler"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) horde waves (server); wave UI, outlines and prize money on every client.
 function server.init()

@@ -1,4 +1,6 @@
 #version 2
+DL_LABEL = "heliCrashSmoke"  -- crash breadcrumbs (lib/DeleteLog.lua)
+#include "../../lib/DeleteLog.lua"
 #include "script/include/player.lua"
 -- (v2) server: heli wreck smoke, scorch paint and fire loop.
 --[[
